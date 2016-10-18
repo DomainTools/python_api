@@ -1,4 +1,4 @@
-![domaintools](https://gitlab.vm.domaintools.net/external/python-api/raw/master/artwork/logo.png)
+![domaintools](https://github.com/DomainTools/python_api/raw/master/artwork/logo.png)
 ===================
 
 [![PyPI version](https://badge.fury.io/py/domaintools.svg)](http://badge.fury.io/py/domaintools)
@@ -8,7 +8,7 @@
 
 DomainTool's Official Python API
 
-![domaintools Example](https://gitlab.vm.domaintools.net/external/python-api/raw/master/artwork/example.gif)
+![domaintools Example](https://github.com/DomainTools/python_api/raw/master/artwork/example.gif)
 
 
 Installing the DomainTool's API
@@ -142,7 +142,7 @@ api.domain_profile('google.com').status == 200
 Using the API Asynchronously
 ===================
 
-![domaintools Async Example](https://gitlab.vm.domaintools.net/external/python-api/raw/master/artwork/example_async.gif)
+![domaintools Async Example](https://github.com/DomainTools/python_api/raw/master/artwork/example_async.gif)
 
 If you are running on Python 3.5+ the DomainTool's API automatically supports async usage:
 
@@ -175,7 +175,7 @@ title = profile['website_data']['title']
 Interacting with the API via the command line client
 ===================
 
-![domaintools CLI Example](https://gitlab.vm.domaintools.net/external/python-api/raw/master/artwork/example_cli.gif)
+![domaintools CLI Example](https://github.com/DomainTools/python_api/raw/master/artwork/example_cli.gif)
 
 Immediately after installing `domaintools_api` with pip, a `domaintools` command line client will become available to you:
 
