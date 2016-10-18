@@ -1,9 +1,9 @@
 ![domaintools](https://github.com/DomainTools/python_api/raw/master/artwork/logo.png)
 ===================
 
-[![PyPI version](https://badge.fury.io/py/domaintools.svg)](http://badge.fury.io/py/domaintools)
-[![Coverage Status](https://coveralls.io/repos/timothycrosley/python_api/badge.svg?branch=master&service=github)](https://coveralls.io/github/timothycrosley/python_api?branch=master)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools/)
+[![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools)
+[![Coverage Status](https://coveralls.io/repos/domaintools/python_api/badge.svg?branch=master&service=github)](https://coveralls.io/github/timothycrosley/python_api?branch=master)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 [![Join the chat at https://gitter.im/DomainTools/api-python](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DomainTools/api-python?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 DomainTool's Official Python API
