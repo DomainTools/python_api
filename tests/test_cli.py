@@ -2,42 +2,24 @@
 import pytest
 
 from domaintools import cli, __version__
-from tests.settings import vcr, api
 
 
-@vcr.use_cassette
-def test_version(capsys):
-    with pytest.raises(SystemExit):
-        cli.run(api, ['-v'])
-    out, err = capsys.readouterr()
-    assert __version__ in out or __version__ in err
+def test_domain_search():
+    (out_file, out_format, arguments) = cli.parse(['domain_search', 'google', '--anchor-right', 'true'])
+    assert out_format == 'json'
+    assert arguments['api_call'] == 'domain_search'
+    assert arguments['query'] == 'google'
+    assert arguments['anchor_right'] == 'true'
 
 
-@vcr.use_cassette
-def test_help(capsys):
-    with pytest.raises(SystemExit):
-        cli.run(api, ['--help'])
-    out, err = capsys.readouterr()
-    assert 'DomainTools' in out
+def test_not_authenticated():
+    (out_file, out_format, arguments) = cli.parse(args=['-c', 'non-existent', 'domain_search', 'google',
+                                                        '--max-length', '100'])
+    assert out_format == 'json'
+    assert not arguments.get('user', None)
+    assert not arguments.get('key', None)
 
 
-@vcr.use_cassette
-def test_domain_search(capsys):
-    cli.run(api, ['domain_search', 'google', '--anchor-right', 'true'])
-    out, err = capsys.readouterr()
-    assert 'google' in out and 'com' in out
-
-
-@vcr.use_cassette
-def test_not_authenticated(capsys):
-    with pytest.raises(SystemExit):
-        cli.run(args=['-c', 'non-existent', 'domain_search', 'google', '--max-length', '100'])
-
-    out, err = capsys.readouterr()
-    assert 'Credentials are required' in err
-
-
-@vcr.use_cassette
-def test_stream_in(capsys):
+def test_stream_in():
     with pytest.raises((OSError, IOError)):
-        cli.run(args=['domain_search', 'google', '--max-length', '-'])
+        cli.parse(['domain_search', 'google', '--max-length', '-'])

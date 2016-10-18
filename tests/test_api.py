@@ -336,8 +336,11 @@ def test_rate_limiting():
 
 @vcr.use_cassette
 def test_no_https():
-    no_https_api = API(environ.get('TEST_USER', 'test_user'), environ.get('TEST_KEY', 'test_key'), https=False)
-    assert no_https_api.domain_search('google').data()
+    try:
+        no_https_api = API(environ.get('TEST_USER', 'test_user'), environ.get('TEST_KEY', 'test_key'), https=False)
+        assert no_https_api.domain_search('google').data()
+    except exceptions.NotAuthorizedException:
+        pass
 
 
 @vcr.use_cassette

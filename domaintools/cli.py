@@ -16,8 +16,8 @@ API_CALLS = tuple((api_call for api_call in dir(API) if not api_call.startswith(
                    callable(getattr(API, api_call, None))))
 
 
-def run(api=None, args=None):
-    """Defines how to start the CLI for the DomainTools API"""
+def parse(args=None):
+    """Defines how to parse CLI arguments for the DomainTools API"""
     parser = argparse.ArgumentParser(description='The DomainTools CLI API Client')
     parser.add_argument('-u', '--username', dest='user', default='', help='API Username')
     parser.add_argument('-k', '--key', dest='key', default='', help='API Key')
@@ -53,23 +53,13 @@ def run(api=None, args=None):
                                        default=default, nargs='*')
 
     arguments = vars(parser.parse_args(args) if args else parser.parse_args())
-    out_file = arguments.pop('out_file')
-    out_format = arguments.pop('format')
-
-    user, key = arguments.pop('user', None), arguments.pop('key', None)
-    if not user or not key:
+    if not arguments.get('user', None) or not arguments.get('key', None):
         try:
             with open(arguments.pop('credentials')) as credentials:
-                user, key = credentials.readline().strip(), credentials.readline().strip()
+                arguments['user'], arguments['key'] = credentials.readline().strip(), credentials.readline().strip()
         except Exception:
-            sys.stderr.write('Credentials are required to perform API calls.\n')
-            sys.exit(1)
+            pass
 
-    if not api: # pragma: no cover
-        api = API(user, key, https=arguments.pop('https'), verify_ssl=arguments.pop('verify_ssl'),
-                rate_limit=arguments.pop('rate_limit'))
-
-    command = getattr(api, arguments.pop('api_call'))
     for key, value in arguments.items():
         if value in ('-', ['-']):
             arguments[key] == (line.strip() for line in sys.stdin.readlines())
@@ -78,6 +68,19 @@ def run(api=None, args=None):
         elif type(value) == list and len(value) == 1:
             arguments[key] = value[0]
 
-    response = command(**arguments)
+    return (arguments.pop('out_file'), arguments.pop('format'), arguments)
+
+
+def run(): # pragma: no cover
+    """Defines how to start the CLI for the DomainTools API"""
+    out_file, out_format, arguments = parse()
+    user, key = arguments.pop('user', None), arguments.pop('key', None)
+    if not user or not key:
+        sys.stderr.write('Credentials are required to perform API calls.\n')
+        sys.exit(1)
+
+    api = API(user, key, https=arguments.pop('https'), verify_ssl=arguments.pop('verify_ssl'),
+              rate_limit=arguments.pop('rate_limit'))
+    response = getattr(api, arguments.pop('api_call'))(**arguments)
     output = str(getattr(response, out_format) if out_format != 'list' else response.as_list())
     out_file.write(output if output.endswith('\n') else output + '\n')
