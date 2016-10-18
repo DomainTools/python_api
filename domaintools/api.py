@@ -14,7 +14,7 @@ def delimited(items, character='|'):
 
 
 class API(object):
-    """Enables interacting with the DomainTool's API via Python:
+    """Enables interacting with the DomainTools' API via Python:
 
            from domaintools import API
 

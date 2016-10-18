@@ -1,4 +1,4 @@
-"""Tests the CLI interface for DomainTool's APIs"""
+"""Tests the CLI interface for DomainTools' APIs"""
 import pytest
 
 from domaintools import cli, __version__
