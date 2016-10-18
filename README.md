@@ -7,12 +7,12 @@
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 [![Join the chat at https://gitter.im/DomainTools/api-python](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DomainTools/api-python?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-DomainTool's Official Python API
+DomainTools' Official Python API
 
 ![domaintools Example](https://github.com/DomainTools/python_api/raw/master/artwork/example.gif)
 
 
-Installing the DomainTool's API
+Installing the DomainTools' API
 ===================
 
 To install the API run
@@ -145,7 +145,7 @@ Using the API Asynchronously
 
 ![domaintools Async Example](https://github.com/DomainTools/python_api/raw/master/artwork/example_async.gif)
 
-If you are running on Python 3.5+ the DomainTool's API automatically supports async usage:
+If you are running on Python 3.5+ the DomainTools' API automatically supports async usage:
 
 ```python
 
