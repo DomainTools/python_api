@@ -339,7 +339,7 @@ def test_no_https():
     try:
         no_https_api = API(environ.get('TEST_USER', 'test_user'), environ.get('TEST_KEY', 'test_key'), https=False)
         assert no_https_api.domain_search('google').data()
-    except NotAuthorizedException:
+    except exceptions.NotAuthorizedException:
         pass
 
 
