@@ -39,5 +39,5 @@ def test_not_authenticated(capsys):
 
 @vcr.use_cassette
 def test_stream_in(capsys):
-    with pytest.raises(OSError):
+    with pytest.raises((OSError, IOError)):
         cli.run(args=['domain_search', 'google', '--max-length', '-'])
