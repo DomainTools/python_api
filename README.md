@@ -2,6 +2,7 @@
 ===================
 
 [![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools)
+[![Build Status](https://travis-ci.org/domaintools/python_api.svg?branch=master)](https://travis-ci.org/domaintools/python_api)
 [![Coverage Status](https://coveralls.io/repos/domaintools/python_api/badge.svg?branch=master&service=github)](https://coveralls.io/github/timothycrosley/python_api?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 [![Join the chat at https://gitter.im/DomainTools/api-python](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DomainTools/api-python?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
