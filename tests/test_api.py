@@ -1,0 +1,349 @@
+"""Tests the Python interface for DomainTool's APIs"""
+from os import environ
+
+import pytest
+
+from domaintools import API, exceptions
+from tests.settings import vcr, api
+
+
+@vcr.use_cassette
+def test_account_information():
+    with api.account_information() as account_information:
+        assert 'products' in account_information
+        for product in account_information:
+            assert 'id' in product
+            assert 'per_month_limit' in product
+            assert 'absolute_limit' in product
+            assert 'usage' in product
+            assert 'expiration_date' in product
+
+
+@vcr.use_cassette
+def test_brand_monitor():
+    api_call = api.brand_monitor('google')
+    with api_call as response:
+        assert 'query' in response
+        assert 'limit' in response
+        assert 'total' in response
+        assert 'exclude' in response
+        assert 'new' in response
+        assert 'on-hold' in response
+        assert 'utf8' in response
+        assert 'date' in response
+
+        for alert in api_call:
+            assert 'domain' in alert
+            assert 'status' in alert
+
+
+@vcr.use_cassette
+def test_domain_profile():
+    with api.domain_profile('google.com') as response:
+        assert 'history' in response
+        assert 'server' in response
+        assert 'name_servers' in response
+        assert 'website_data' in response
+        assert 'seo' in response
+        assert 'registration' in response
+        assert 'registrant' in response
+
+        history = response['history']
+        assert 'whois' in history
+        assert 'registrar' in history
+        assert 'name_server' in history
+        assert 'ip_address' in history
+
+
+@vcr.use_cassette
+def test_domain_search():
+    api_call = api.domain_search('google')
+    with api_call as response:
+        assert 'results' in response
+        assert 'query_info' in response
+
+        for domain in api_call:
+            assert 'hashad_tlds' in domain
+            assert 'has_number' in domain
+            assert 'char_count' in domain
+            assert 'tlds' in domain
+            assert 'sld' in domain
+            assert 'has_deleted' in domain
+            assert 'has_active' in domain
+            assert 'has_hyphen' in domain
+            assert 'tlds_count' in domain
+
+
+@vcr.use_cassette
+def test_domain_suggestions():
+    api_call = api.domain_suggestions('google')
+    with api_call as response:
+        assert 'status_codes' in response
+        assert 'suggestions' in response
+        assert 'query' in response
+        assert 'tlds' in response
+
+        for suggestion in api_call:
+            assert 'domain' in suggestion
+            assert 'status' in suggestion
+
+
+@vcr.use_cassette
+def test_hosting_history():
+    api_call = api.hosting_history('google.com')
+    with api_call as result:
+        assert 'domain_name' in result
+        assert 'registrar_history' in result
+        assert 'nameserver_history' in result
+        assert 'ip_history' in result
+
+        for history_section, history_item in api_call:
+            assert str(history_section)
+            assert isinstance(history_item, dict)
+
+
+@vcr.use_cassette
+def test_ip_monitor():
+    api_call = api.ip_monitor('65.55.53.233')
+    with api_call as results:
+        assert results['ip_address'] == '65.55.53.233'
+        assert 'alerts' in results
+        assert 'date' in results
+        assert 'limit' in results
+        assert 'page' in results
+        assert 'page_count' in results
+        assert 'total' in results
+
+        for result in api_call:
+            assert result
+
+
+@vcr.use_cassette
+def test_name_server_monitor():
+    api_call = api.name_server_monitor('google.com')
+    with api_call as results:
+        assert 'limit' in results
+        assert 'date' in results
+        assert 'name_server' in results
+        assert 'total' in results
+        assert 'page' in results
+        assert 'alerts' in results
+
+        for alert in api_call:
+            assert alert
+
+
+@vcr.use_cassette
+def test_parsed_whois():
+    api_call = api.parsed_whois('google.com')
+    with api_call as result:
+        assert 'registrant' in result
+        assert 'registration' in result
+        assert 'name_servers' in result
+        assert 'whois' in result
+        assert 'parsed_whois' in result
+        assert 'record_source' in result
+
+        for key, value in api_call.items():
+            assert key
+
+        assert isinstance(result.flattened(), dict)
+
+
+@vcr.use_cassette
+def test_registrant_monitor():
+    api_call = api.registrant_monitor('google')
+    with api_call as result:
+        assert 'query' in result
+        assert 'limit' in result
+        assert 'total' in result
+        assert 'date' in result
+        assert 'alerts' in result
+
+        for alert in api_call:
+            assert 'domain' in alert
+            assert 'match_type' in alert
+            assert 'current_owner' in alert
+            assert 'created' in alert
+            assert 'modified' in alert
+            assert 'last_owner' in alert
+
+
+@vcr.use_cassette
+def test_ip_registrant_monitor():
+    api_call = api.ip_registrant_monitor('google.com')
+    with api_call as result:
+        assert 'page' in result
+        assert result['query'] == 'google.com'
+        assert type(result['removed']) == list
+        assert type(result['added']) == list
+        assert type(result['modified']) == list
+        for modification in result['modified']:
+            assert 'new' in modification
+            assert 'old' in modification
+            assert 'changed' in modification
+
+
+@vcr.use_cassette
+def test_reputation():
+    api_call = api.reputation('google.com')
+    with api_call as risk_data:
+        assert risk_data['risk_score'] == 0
+        assert risk_data['domain'] == 'google.com'
+        assert int(api_call) == 0
+        assert float(api_call) == 0.0
+
+
+@vcr.use_cassette
+def test_reverse_ip():
+    with api.reverse_ip('google.com') as results:
+        assert 'ip_addresses' in results
+
+
+@vcr.use_cassette
+def test_host_domains():
+    with api.host_domains(ip='199.30.228.112') as results:
+        assert 'ip_addresses' in results
+
+
+@vcr.use_cassette
+def test_reverse_ip_whois():
+    api_call = api.reverse_ip_whois(query='Domain Tools')
+    with api_call as results:
+        assert 'page' in results
+        assert 'has_more_pages' in results
+        assert 'record_count' in results
+        assert 'records' in results
+
+        for record in api_call:
+            assert 'ip_to' in record
+            assert 'country' in record
+            assert 'organization' in record
+            assert 'record_date' in record
+            assert 'range' in record
+            assert 'record_ip' in record
+            assert 'server' in record
+            assert 'ip_from' in record
+
+        assert len(api_call) > 0
+
+    with api.reverse_ip_whois(ip='65.55.53.233') as result:
+        assert 'ip_to_alloc' in result
+        assert 'range' in result
+        assert 'ip_from_alloc' in result
+        assert 'server' in result
+        assert 'whois_record' in result
+        assert 'organization' in result
+        assert 'record_date' in result
+        assert 'country' in result
+        assert 'ip_to' in result
+        assert 'ip_from' in result
+
+    with pytest.raises(ValueError):
+        api.reverse_ip_whois(ip='8.8.8.8', query='Google')
+
+
+@vcr.use_cassette
+def test_reverse_name_server():
+    api_call = api.reverse_name_server('google.com')
+    with api_call as result:
+        assert 'name_server' in result
+        assert 'primary_domains' in result
+        assert 'secondary_domains' in result
+
+        for primary_domain in api_call:
+            assert primary_domain
+
+
+@vcr.use_cassette
+def test_reverse_whois():
+    api_call = api.reverse_whois('Amazon')
+    with api_call as result:
+        assert 'domain_count' in result
+
+        for domain in result:
+            assert domain
+
+
+@vcr.use_cassette
+def test_whois():
+    api_call = api.whois('google.com')
+    with api_call as whois:
+        assert 'registrant' in whois
+        assert 'name_servers' in whois
+        assert 'whois' in whois
+        assert 'record_source' in whois
+
+        assert 'contact-admin@google.com' in api_call.emails()
+
+
+@vcr.use_cassette
+def test_whois_history():
+    api_call = api.whois_history('woot.com')
+    with api_call as results:
+        assert 'record_count' in results
+        assert 'history' in results
+
+        for history_item in api_call:
+            assert 'date' in history_item
+            assert 'is_private' in history_item
+            assert 'whois' in history_item
+
+
+@vcr.use_cassette
+def test_dict_like_behaviour():
+    with api.whois('google.com') as whois_google:
+        assert len(whois_google.items())
+        assert len(whois_google.keys())
+        assert len(whois_google.values())
+        assert whois_google.has_key('registrant')
+        assert 'registrant' in whois_google
+        whois_google.update({'registrant': 'override'})
+        assert whois_google['registrant'] == 'override'
+        del whois_google['registrant']
+        assert not 'registrant' in whois_google
+        whois_google['registrant'] = 'me'
+        assert whois_google['registrant'] == 'me'
+        assert isinstance(whois_google.pop('whois', {}), dict)
+
+
+@vcr.use_cassette
+def test_exception_handling():
+    exception = None
+    api_call = api.reverse_ip('ss')
+    assert api_call.status == 400
+    try:
+        api_call.data()
+    except Exception as e:
+        exception = e
+
+    assert exception
+    assert exception.code == 400
+    assert 'not understand' in exception.reason['error']['message']
+
+    with pytest.raises(exceptions.NotFoundException):
+        api._results('i_made_this_product_up', '/v1/steianrstierstnrsiatiarstnsto.com/whois').data()
+    with pytest.raises(exceptions.NotAuthorizedException):
+        API('notauser', 'notakey').domain_search('amazon').data()
+
+
+@vcr.use_cassette
+def test_rate_limiting():
+    domain_searches = ['google'] * 31
+    for domain_search in domain_searches:
+        api.domain_search(domain_search).data()
+
+
+@vcr.use_cassette
+def test_no_https():
+    no_https_api = API(environ.get('TEST_USER', 'test_user'), environ.get('TEST_KEY', 'test_key'), https=False)
+    assert no_https_api.domain_search('google').data()
+
+
+@vcr.use_cassette
+def test_formats():
+    with api.domain_search('google') as data:
+        assert '{' in str(data.json)
+        assert '<' in str(data.xml)
+        assert '<title>' in str(data.html)
+        assert '\n' in str(data.as_list())

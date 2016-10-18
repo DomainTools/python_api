@@ -1,0 +1,27 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/domain-suggestions?query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5SS20oDMRCGX2XJlYX6Ar1UVHqhBQ83SpHZZJqNTTNpku22lL67kxalssimgZ0s
+        me+fU7IXAaMnF1FM9mLdYtiJidBE2qIYi5ggtfFTksKYgY6dAbWJCQOqChx/MpkNVh3W0aSs8X3G
+        Q1jyL4WKT0xAmVAxue2Tjs4iKfYrtJh+Um3AWKgtVqDBOCbWTDjcYA78G6fGBYWs1+wld92QVdUV
+        e3DlkyFXeQyG1IgJPCc8OmWcrk4ps7s5d2t0rJMjcRiLZBXP40Pczh4Ze7p7ZTt7fmA7fbqf8XYz
+        fWf79iLmPMRWa4w5c9bshaJVrr43Zj7ZHhdnOKO87HPr4/rLnSgPdjVE1iakRsGuLK4ymC6pICaS
+        S2hlbnhIwbcZL+qOeO4DJIQLgx4FZWhDBQWcUH4qDRayi4CwHGQtdWVtefJl4ApUGQgSy8AFhEtG
+        /0W6/Jq8twacHMQ7foL/FzE/HL4BAAD//wMAc+/GMPUEAAA=
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:07 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

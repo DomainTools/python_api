@@ -1,0 +1,29 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/account
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8yW3W6DMAyF3yXXjQShwNZXmSaUQQrRIIny062q+u4zqNuoBojQDpUrwE706cTH
+        zglpZpQUhqHdCdE8l07Y7lXxzBmmBW0ghGyupanZEW0gyfID/LPasfMGKS0Ll1uDdi8nxAvILWRD
+        ucAQ2POawQrFdNZIYaus5g2H7RGJA3i+Q1w4y35iIWkD9M3IuvdbuLreIGdo2ZFaWdAjJG8htdu6
+        XbgNEACxT8U1tVyKrKC2hSdBmOAgxSSF+AXyo5LcrMdGosSTDVfcWKmPg4zhKGHkAUj64pFoPqBm
+        B6YNw1wN0yVpmpIwvp0w6UsYb/0J2/LFUMbwNXbYt1NGVzqm/pSTxXg7X9Dj87DIxcfGlSUzbfIw
+        YluLY9UYB0u9HA2Dtkv/ADKq82rUy3fwSZ8sDp/mS1hJEE6UK3h5jniDiA3V75jWTNtBuigco0vW
+        oNOsBOk0FXZdRvI8n7HXYzBswOGkHxGTq0emUxQaYTHdCf/hyhB5TT3lbJfl3QeXA5LhbnPVB3/H
+        8YR+d8ObM5Ov8ACrZ+OpGpwcJcvmXTxjjlyuvZiLvdTNshP2wCN9PrgrjQO+ns9fAAAA//8DAKk7
+        Uq2hCwAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:05 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

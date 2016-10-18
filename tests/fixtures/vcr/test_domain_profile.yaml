@@ -1,0 +1,33 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7SVUW/aMBDHv4rlh70sCUmAQipV09RNVbW1TG33VKrIJIZYc+zMdkoR4rvvHNMC
+        baDSxp5I7vD9f7673C2xorqSQlN8uoTnGdNGEWHsmyAlWPGFlDNO0aXIAuzhXJaECY1Po2Ev6nm4
+        UjKvM5PWisN/C2MqfTrujDuKPlKl6byQTAfukJGS6yCT5bjziXB+/3DmQn+0oT8IKSiY8MrDmio4
+        bBFYlZI8B0QQxNGgG0RJLzgZBEkCKNIUVKUvQPHwXRpWvUXRlKisAKTfZ7MGx5otxXMyDJPCsmSK
+        EkNzC5IkAz9M/KgPFPSpYgAI5jiMw8bcA3Nd5et/x2EU+eHAj0O8CQq3w1efb75dja4v70Y36PL6
+        3GZXG2JqbaPd44wzKswXyqmhP5Qs2ITZgN7acQdl0lOqWlw/G+0dh0tpSzDnaA3mXG+CPUBubGuk
+        zm9Zly8lw9e3UXAxGl18/xqcj67wuyURLd2xVZJX4VbejlR8XKn4gFT3uFLdA1K940rthFs9eLiA
+        DpRqsf3BNx8bHIL20SaFwHYCQOeGsR9BT3dtn1sjFLt7iMgJvwV69ow7hdSGiZm/hmj57rZ6q6Fa
+        64YeNqyEYUVEykS6gHj2ozuYoGPgbI+gDU08HLbyRP89Pc1EdbXLpMrhsR/2+15r9WDu9F31/oWp
+        UdwQ7RmYzdyWFkwDFyyO5ORvZCGGP1FyDg0AEs79OgN0omESpTCXiEuE22BpJnPQhXvb0hi+WV54
+        s1PwbK7htaTubE51pljlZjy+baAQ7BU0l4rnSCMmplKVzRLw4CXjdQ71QcBQkRnVYCvd7yPLqdSI
+        iByVcP8ArfdmQTQqiVggXdGMEY6msEZqYEZGooLyCi1kjaYMztEnkhm+QPOCmMaqKOJS/rKCQBHY
+        y+/L6J5Fu1Oh1R8AAAD//wMAkkUAS+4HAAA=
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:06 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

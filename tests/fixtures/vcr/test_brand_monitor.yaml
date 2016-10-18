@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/mark-alert?query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5RX227bOBD9Fz7bgh236a5/ZdGHETmWGFEcmRc7bpB/31FitU0Uy0MgQKDkHPLM
+        cK4vKmAcyEdU+xd1zBguaq8aosahWilne5vU/vtms1mpRAmc2v+7Wyl81i4b5vz3c6U8ntU+hYwr
+        RX7dkjPTZ06Hf9T+AC7yh4HEBPWw2T6ut5v19gefDw5DinzMizLUg/UM2D7u3u+vNPWMiQlSZszv
+        w19Xf6GhNmcKJq6/5ozaPuK13mSf5PjfuIq/76pxbsILwINlV1zxDdzHs6FObmmdUyJ/oMD/iVfO
+        +aMNM46hXDvUzuruj925W+QcAuI7uCaKSfRq7/g1vL1dZVBKOECItrJBjEc0lcckxfdUWzYa0qLF
+        H8FjZDgJfgTYrhrOAvB2+208uAsS7MOOfz5F3A3sw+7b3cC5Ih+/F3gOTG99rBgmxZe9PIQqJgoo
+        EF5DDQXKa9BdIbyBvicv9KOGwJ7JAbz+IpsWbtItQipQpgmKsk9zccCALEujTxik9pD3qJPlnlFy
+        GT9eETyHuaIFgoGLCQi9OBtNAHuStZh3Aodgask765E7wYGktJqeC245YExrjvNmHl9LLAqcTt2A
+        IZewfhWAW45765sKs5DwBCdhRD3BpUDIE4aIF449To+hkGNs1MTdX0jrLaM6rCg0UsZbS2jRDULb
+        6VQU5gN6cOkSOAuZOHPbjUsG+4xOnBmDg9G99+eXKzzoAgOOR/nJATsHPTvURtsX3METbXYpfprX
+        blg7FrHK/xIeHf9UvwJBEb2lED/H0S1FSDNrb0MHaLCkEEfrQf4EsTwFIjVUUoUSDbLRJXELjY6X
+        iPksfpOB3ozT76fp+gb8NFaJohZ9smhI+FZnrHtu0OMdYoo92BFa1ZIx8AItEZC7e7i9jlTDrEh9
+        aWqXYytcOfiXu64n61F3c1yGP0+7zMeZ+EsZ/WXalJadQdCxLyYVsaVhu7s3cw9FS95bOa0nOf1y
+        TR3ozCsukYvcpK/DjaNsuMom/sv9TD8e5Rtl4JCnguWZQ3EqJOFk9byQzNS8AeM0QkknqLHolMjy
+        XHLWeMFp1xXoGqtOyRXUlsBTa313tmlKBHdaVMODIud6kzEEi0UvknpwJXDqSk4/3Y3zn6+v/wMA
+        AP//AwCWoUreExIAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:06 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

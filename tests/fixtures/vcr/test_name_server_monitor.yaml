@@ -1,0 +1,31 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?days_back=0&page=1&query=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7xWXW+bMBT9KxPPjQVrt0p5M8EBlw9H2Cztpili4KRoxI4MWaRG+e9zwiYlXcmk
+        QPqGr8053HvuuXhrKF6tpKi4MdwaZbEsamNomaZ5Y+RprYPGR9P6PLDMgXVv3BgiXfJZxdUvrvTW
+        QspFyUEml3qrlnVa7s9/0otVutDvWs3DLJNrUR+WaclVXRnDb1tDlvnsFO4uW4s/YIJvZme40qwu
+        pNBRplJRzbn6gIUO53KZFvvwrXlnP7ogQgyMImN3c122e4btPRMJ29lOAP/ly4vqUKQGs9LngHh5
+        k5qs62NuOGIkppOYuDHU9AREXy/7gmOyiG9OOGIHRiAMege2ofOAPIDj/pGxD2kEH/eiXAY+V5wL
+        uWxtgVc62IT4IaTeNcrkojjEEYzBqIdCObzkNc+P8T1nCjEIpy3gz7KqC7HgCmz4D1Cr7obxcIBG
+        OMKAxG4Lqaj+zqV+PIqdkMKDRWFbEXV2mVRC5/m87k74QOwxRoEDUNLCN9eG1zNWo6Srop8sfQ9G
+        IzhGl7f9f1rFJwFCtm7FPjz7Jn4SE+rBMYUxbuRqK183ohAiOkCUQXauWM3xVap+agM0USB43V2o
+        8Ckg5Ez7d0sugjbzUIisa8lEQuTCSZBQECSM+iCBvQ89MkERtvd/NOy0gGelXOfzMlU9zYgJiSOi
+        Oxz7/SjzKiMa6rFHKXsKOvjz4ouCboj3uCuwBCYBdLCLGQwOBv6C3kk+Nr1FjDbSfd/tfgMAAP//
+        AwCjsXtV2goAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:07 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

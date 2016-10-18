@@ -1,0 +1,23 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/ip-monitor?days_back=0&page=1&query=65.55.53.233
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAySMQQqFMAxE75K1SmJRwavIR4ItUqi22PyVeHcHhFkM83hz0xVqyWcNNN+U4hGN
+        ZmHmhrwaRupZxla4lYkaimVV76FUkHHoBsR1vXNglk0TZkYvusOVr6xb/p+4xaemcBnc5fc8LwAA
+        AP//AwDGmjloewAAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:07 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

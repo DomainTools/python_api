@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5RWUY/aOBD+K1b6ctWRrJ0AC3lqCtwW3RIQYXsPR7XKBhesEjtyTClX7X+/iZNA
+        AoFupRUbzTfzefzNjO2fhqRpInhKDfcnfK9ZqmTIleEaD0KstxSNeWQZrSOkmOCZayRpqOgK/Ei/
+        f2/ivkk64EZ/JAwYwWxjG2tzG8y7ZFV425gQE9+bNq6QSgAm3vzvydQfL6ZzNPYH2ZqpCtUuzdj+
+        NaIto1wN6ZYqOpNiw15YRtgqgAUknX6lsgF60mvXgJTK71Q2kOVAI1kOXZB9eW0ZPIzpc47rXP2A
+        WA/T6cPjyBpMJxDrB/a5wTk3tKuGLy1jvxEszZTOFsyF65oEm6SrhYuEzOQcijhkHPmQgYvWumJW
+        JOIln+fSHlDhMR66yCZOr0Paz8PpxBv7z7CQ+Xke+EfnUKJ/Pk3HAQr0Xlykc7DiUH6LBWdKyBo3
+        uD/NH120USpxl3fLu/1+f+mcK7ZCQ/iFFDDpmBg2Yi8Idp2e27GhGzBe8kHWUNBcheOpqxYYu/qv
+        cDytPq/0JBplnVdlODags7BJM4OLJpDuJE+3pVu9yj/2fC8Xrm9X7d4LdCUaCK7CSKER6Lt1UZgZ
+        YcfJFuRW6YcbqtXjZxvBId0/iWXjntPrd+7bkGNRtkCPgIuaWxn9kWmfHsVnUci5JeR6eUeT5F1z
+        0Psr5Jdd/yb6y7BrC5zP25voz4MuyZsH8xfkzUHXyH9bmmth1xb4TWmag95Xpn5+PMl1A5+6Dwz5
+        YTHkKfJWMeM1bCrXIWf/6TlyUeUKqHkFSlKqXDTb0hA6OSo6ufhvhhnth9Np1EKkizHy4mTD1AbG
+        XFI0g/HYh4ca7YCpA4yk2AENSPSZ0f3ZslCt5R3s+DvjEexh4NXwmYAbYwuDtQKs38Ztp06fEUtY
+        4Smohx0HsNvBdsfBuHpIlA5wwKgzIf8Kf5RhXdLrde7JOdwQVBwXK55e6FSpn65MUbr8u6iaH5RV
+        y803CpY7lLW6UYLcsVH9kqNB+Bxq0rzgq8pdOFeV7tpOWytdwUq9clOTvkek7vo2VRc02hSi6s8L
+        TbX1hqQaLxW1IX00stDH8JBuRCbot/2h8GkUs4hu0FIjTVLmZFUlc9eqkA50LMmEPEGlONpSl5G0
+        +/0TUHO8KWKm1fFhwFPbugG2b4HOLZDUQKhMMBq4aMdTtuZ0Ba+J+SMSXxG0MBoPPN8vHixw44cI
+        JH3Z0hjOvkRIxfgaBYdU0bj6QlklMrXgfqaSs8jiVIGVG6/li+o5FTsZZc+tUxrG6+v/AAAA//8D
+        AHeuxFEmCwAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:13 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

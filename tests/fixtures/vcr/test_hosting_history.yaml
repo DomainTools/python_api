@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/hosting-history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:07 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

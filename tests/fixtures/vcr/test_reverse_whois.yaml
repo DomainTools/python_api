@@ -1,0 +1,23 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6pWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQxMzS3NLHaWMzOKS
+        /KLMZKCIuZmRpUmtDlB/QX5RSXwBUDQVUw+GFoSO5PxiVEsMkBUb1NbWAgAAAP//AwBje3SvnQAA
+        AA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 19:55:13 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

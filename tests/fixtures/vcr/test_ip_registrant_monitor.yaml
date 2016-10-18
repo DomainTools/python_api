@@ -1,0 +1,28 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/ip-registrant-monitor?days_back=0&include_total_count=false&page=1&query=google.com&search_type=all
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6ySXW+CMBSG/wo511hbFFDu3GayZU4TZVdzMQ1UbKItK6jZDP99xY/5MVESveLj
+        PfSc5zysQLEkliJh4K0gppG+ElO/DKQKR4GcixS8mgkTmoxmUrFRXpKAN6bThJkwkyEfcxaC97GC
+        YEJFtL7/NEFOw/zE7UE8Bg+IW0NW3UWk2UBOHUzg8Wis5OxclDC1YEony4nkCaKKCyRYqhOpIir4
+        D025FDp/aPX9Ttv3jcde96k3gL/ZQ5pqFrAwcSq4UcHNPMoH/NduWLUcHa5h1beO3web4VJ5Ukss
+        FzITBFteZTszBcEV4tzGdmFjd2HLzPIaLewggs973GelYX06DWSaGs+6JRdRYhqdNCzUSewzyNuu
+        w2oNX2feFF/zuQe5h9AixksLvA9kGbEWbqAGRo7+pH6s9TQpDWxjbAxa3YHhv7QN27WNt1b/te0X
+        a3UPiI+66h+5Wcx7UGqTAqWnEPcQWsxXvLzb8TLtj4bhTqViM7nYPZzi5Av9mrP1mZGU0ZShQI+V
+        Zb8AAAD//wMAGF94JvoFAAA=
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 17 Oct 2016 21:17:50 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1
