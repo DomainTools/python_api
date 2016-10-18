@@ -62,7 +62,7 @@ def run(api=None, args=None):
             with open(arguments.pop('credentials')) as credentials:
                 user, key = credentials.readline().strip(), credentials.readline().strip()
         except Exception:
-             sys.stderr.write('Credentials are required to perform API calls.\n')
+            sys.stderr.write('Credentials are required to perform API calls.\n')
             sys.exit(1)
 
     if not api: # pragma: no cover
