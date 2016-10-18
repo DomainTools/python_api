@@ -23,7 +23,7 @@ class AIter(object):
 
 
 class AsyncResults(Results):
-    """The base (abstract) DomainTool's product definition with Async capabilities built in"""
+    """The base (abstract) DomainTools' product definition with Async capabilities built in"""
 
     def __await__(self):
         return self.__awaitable__().__await__()

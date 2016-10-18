@@ -1,4 +1,4 @@
-"""Tests the Python interface for DomainTool's APIs"""
+"""Tests the Python interface for DomainTools' APIs"""
 from os import environ
 
 import pytest
