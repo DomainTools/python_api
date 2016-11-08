@@ -13,7 +13,7 @@ requires = ['requests']
 packages = ['domaintools']
 if sys.version_info[0] >= 3 and sys.version_info[1] >= 5:
     packages.append('domaintools_async')
-    requires.append('aiohttp')
+    requires.append('aiohttp==1.0.5')
 elif sys.version_info[0] == 2 and sys.version_info[1] <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
@@ -71,7 +71,7 @@ except (IOError, ImportError, OSError, RuntimeError):
 
 setup(name='domaintools_api',
       version='0.1.1',
-      description="DomainTools' Official Python API",
+      description="DomainTool's Official Python API",
       long_description=readme,
       author='DomainTools',
       author_email='timothy@domaintools.com',
@@ -83,7 +83,7 @@ setup(name='domaintools_api',
         ]
       },
       packages=packages,
-      requires=requires,
+      requires=[package.split('==')[0] for package in requires],
       install_requires=requires,
       cmdclass=cmdclass,
       ext_modules=ext_modules,
