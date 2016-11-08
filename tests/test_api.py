@@ -350,3 +350,21 @@ def test_formats():
         assert '<' in str(data.xml)
         assert '<title>' in str(data.html)
         assert '\n' in str(data.as_list())
+
+
+@vcr.use_cassette
+def test_phisheye():
+    with api.phisheye('google') as data:
+        assert data['term'] == 'google'
+        for result in data:
+            assert result['domain']
+            assert result['tld']
+
+
+@vcr.use_cassette
+def test_phisheye_term_list():
+    with api.phisheye_term_list() as data:
+        assert data
+        for term in data:
+            assert 'term' in term
+            assert type(term['active']) == bool
