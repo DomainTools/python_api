@@ -172,11 +172,12 @@ class API(object):
         return self._results('phisheye', '/v1/phisheye', query=query, days_back=days_back, items_path=('domains', ),
                              **kwargs)
 
-    def phisheye_term_list(self, **kwargs):
+    def phisheye_term_list(self, include_inactive=False, **kwargs):
         """Provides a list of terms that are set up for this account.
            This call is not charged against your API usage limit.
 
            NOTE: The terms must be configured in the PhishEye web interface: https://research.domaintools.com/phisheye.
                  There is no API call to set up the terms.
         """
-        return self._results('phisheye_term_list', '/v1/phisheye/term-list', items_path=('terms', ), **kwargs)
+        return self._results('phisheye_term_list', '/v1/phisheye/term-list', include_inactive=include_inactive,
+                             items_path=('terms', ), **kwargs)
