@@ -31,6 +31,7 @@ class API(object):
        For detailed usage information of all API calls see: https://www.domaintools.com/resources/api-documentation/
     """
     limits = {}
+    limits_set = False
 
     def __init__(self, username, key, https=True, verify_ssl=True, rate_limit=True, **default_parameters):
         self.username = username
@@ -39,12 +40,18 @@ class API(object):
         self.https = https
         self.verify_ssl = verify_ssl
         self.rate_limit = rate_limit
-        if rate_limit and not self.limits:
-            for product in self.account_information():
-                self.limits[product['id']] = {'interval': timedelta(seconds=60 / float(product['per_minute_limit']))}
+
+    def _rate_limit(self):
+        """Pulls in and enforces the latest rate limits for the specified user"""
+        self.limits_set = True
+        for product in self.account_information():
+            self.limits[product['id']] = {'interval': timedelta(seconds=60 / float(product['per_minute_limit']))}
 
     def _results(self, product, path, cls=Results, **kwargs):
         """Returns _results for the specified API path with the specified **kwargs parameters"""
+        if product != 'account-information' and self.rate_limit and not self.limits_set and not self.limits:
+            self._rate_limit()
+
         uri = '/'.join(('{0}://api.domaintools.com'.format('https' if self.https else 'http'), path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
