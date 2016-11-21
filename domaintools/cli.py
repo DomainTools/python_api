@@ -23,7 +23,7 @@ def parse(args=None):
     parser.add_argument('-k', '--key', dest='key', default='', help='API Key')
     parser.add_argument('-c', '--credfile', dest='credentials', default=os.path.expanduser('~/.dtapi'),
                         help='Optional file with API username and API key, one per line.')
-    parser.add_argument('-l', '--rate-limit', dest='rate_limit', action='store_false', default=False,
+    parser.add_argument('-l', '--rate-limit', dest='rate_limit', action='store_true', default=False,
                         help='Rate limit API calls against the API based on per minute limits.')
     parser.add_argument('-f', '--format', dest='format', choices=['list', 'json','xml','html'], default='json')
     parser.add_argument('-o', '--outfile', dest='out_file', type=argparse.FileType('wbU'), default=sys.stdout,
