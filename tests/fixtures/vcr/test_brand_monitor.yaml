@@ -33,4 +33,30 @@ interactions:
       date: ['Mon, 17 Oct 2016 19:55:06 GMT']
       vary: [Accept-Encoding]
     status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/account
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8yWbWuDMBDHv0teN6CWVuhXGUMyveoxTcIl6Sal332ndFthajtZV30Vc5fw4x7+
+        l6MgcNZoB2J3FCrPTdC+X1rMggPSqmGT8DkZV0MrVuzk8cB7ngKcVsKSKULundg9HQUW7FuYRqGW
+        bNhjDXzCAmWN0b7KamyQrxfJJuLv04Q6ePiyxUlnUC/O1BfbOtT1SgSnyp7Um0K17Ny59lf3a8aB
+        d4ukPBqdFcp36EkUb2WUyiRl+xnxrTLolksmK3TeUDtIGI/yre+PR3AAciDRDrNt0zRN4s3D+bqy
+        lVy+/DeW5oczThbhw+jO3etCWYLrnIcRuyocq8NN9KeY3cEfeKAor0Y7+G+j14fnxvBVhoOmy+V2
+        cKPoVaoayA+yreMxtu1/dEbJYSOl/VIJL3RF8nHkHC8PEu1y2axi6Sumte+hA5jABt97/Vr3ZuPF
+        13Xve/BOxO4ucDeIMkNdtO5U7U2Ojbvxnd+1EvXeUDMvuTPpkut0lmdFBe3wSzmeyOjMhK7HkZ5P
+        pw8AAAD//wMAz6jVURIMAAA=
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Mon, 21 Nov 2016 21:18:02 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
 version: 1
