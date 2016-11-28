@@ -1,7 +1,6 @@
 """Tests the CLI interface for DomainTools' APIs"""
 import pytest
-
-from domaintools import cli, __version__
+from domaintools import __version__, cli
 
 
 def test_domain_search():

@@ -1,16 +1,21 @@
 """Defines the base result object - which specifies how DomainTools' API endpoints will be interacted with"""
+import collections
 import json
 import re
 import time
 from datetime import datetime
 
-from requests import Session
-
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException)
+from requests import Session
+
+try: # pragma: no cover
+    from collections.abc import MutableMapping, MutableSequence
+except ImportError: # pragma: no cover
+    from collections import MutableMapping, MutableSequence
 
 
-class Results(object):
+class Results(MutableMapping, MutableSequence):
     """The base (abstract) DomainTools result definition"""
 
     def __init__(self, api, product, url, items_path=(), response_path=('response', ), **kwargs):
@@ -152,17 +157,11 @@ class Results(object):
     def has_key(self, key):
         return key in self.response()
 
-    def keys(self):
-        return self.response().keys()
-
     def values(self):
         return self.response().values()
 
-    def pop(self, *args):
-        return self.response().pop(*args)
-
-    def __contains__(self, item):
-        return item in self.response() or item in self._items()
+    def insert(self, index, item):
+        return self._items().insert(index, item)
 
     def update(self, *args, **kwargs):
         return self.response().update(*args, **kwargs)
