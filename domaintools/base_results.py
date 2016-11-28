@@ -9,8 +9,9 @@ from requests import Session
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException)
 
+import collections
 
-class Results(object):
+class Results(collections.MutableMapping):
     """The base (abstract) DomainTools result definition"""
 
     def __init__(self, api, product, url, items_path=(), response_path=('response', ), **kwargs):
