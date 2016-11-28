@@ -1,7 +1,7 @@
 """Tests Python3.5+ async interaction support for DomainTools' APIs"""
 import asyncio
 
-from tests.settings import vcr, api
+from tests.settings import api, vcr
 
 
 def run_async(future):
