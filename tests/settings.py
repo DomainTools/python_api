@@ -1,9 +1,8 @@
 """Defines all test wide settings and variables"""
 from os import environ
 
-from vcr import VCR
-
 from domaintools import API
+from vcr import VCR
 
 
 def remove_server(response):
