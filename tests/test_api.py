@@ -2,9 +2,9 @@
 from os import environ
 
 import pytest
-
 from domaintools import API, exceptions
-from tests.settings import vcr, api
+
+from tests.settings import api, vcr
 
 
 @vcr.use_cassette
@@ -305,6 +305,16 @@ def test_dict_like_behaviour():
         whois_google['registrant'] = 'me'
         assert whois_google['registrant'] == 'me'
         assert isinstance(whois_google.pop('whois', {}), dict)
+
+
+@vcr.use_cassette
+def test_list_like_behaviour():
+    with api.phisheye('google') as data:
+        data.insert(0, {'domain': 'woot', 'tld': 'com'})
+        assert data['term'] == 'google'
+        for result in data:
+            assert result['domain']
+            assert result['tld']
 
 
 @vcr.use_cassette
