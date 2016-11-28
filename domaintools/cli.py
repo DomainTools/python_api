@@ -1,8 +1,8 @@
 """Defines how to interact with the domaintools API via the command line"""
 import argparse
+import inspect
 import os.path
 import sys
-import inspect
 
 from domaintools import API
 from domaintools._version import current as version
