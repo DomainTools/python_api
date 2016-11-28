@@ -4,7 +4,6 @@ from hmac import new as hmac
 from types import MethodType
 
 import requests
-
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
 
 
