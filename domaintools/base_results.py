@@ -9,8 +9,9 @@ from requests import Session
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException)
 
+import collections
 
-class Results(object):
+class Results(collections.MutableMapping):
     """The base (abstract) DomainTools result definition"""
 
     def __init__(self, api, product, url, items_path=(), response_path=('response', ), **kwargs):
@@ -21,7 +22,7 @@ class Results(object):
         self.response_path = response_path
         self.kwargs = kwargs
         self._data = None
-        self._response = None
+        self._response = {}
         self._items_list = None
 
     def _wait_time(self):
@@ -110,7 +111,7 @@ class Results(object):
             raise ServiceException('Empty response')
 
     def response(self):
-        if self._response is None:
+        if not self._response:
             response = self.data()
             for step in self.response_path:
                 response = response[step]
@@ -152,20 +153,8 @@ class Results(object):
     def has_key(self, key):
         return key in self.response()
 
-    def keys(self):
-        return self.response().keys()
-
-    def values(self):
-        return self.response().values()
-
-    def pop(self, *args):
-        return self.response().pop(*args)
-
     def __contains__(self, item):
         return item in self.response() or item in self._items()
-
-    def update(self, *args, **kwargs):
-        return self.response().update(*args, **kwargs)
 
     def __len__(self):
         return len(self._items())
