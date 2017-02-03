@@ -378,3 +378,16 @@ def test_phisheye_term_list():
         for term in data:
             assert 'term' in term
             assert type(term['active']) == bool
+
+
+@vcr.use_cassette
+def test_iris():
+    with pytest.raises(ValueError):
+        api.iris()
+
+    with api.iris(domain='google.com', https=False) as results:
+        assert results
+        for result in results:
+            assert 'domain' in result
+            assert str(result['domain'])
+
