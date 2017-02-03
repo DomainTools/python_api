@@ -187,3 +187,16 @@ class API(object):
         """
         return self._results('phisheye_term_list', '/v1/phisheye/term-list', include_inactive=include_inactive,
                              items_path=('terms', ), **kwargs)
+
+    def iris(self, domain=None, ip=None, email=None, nameserver=None, registrar=None, registrant=None,
+             registrant_org=None, **kwargs):
+        """Performs a search for the provided search terms ANDed together,
+           returning the pivot engine row data for the resulting domains.
+        """
+        if (not domain and not ip and not email and not nameserver and not registrar and not registrant and not
+            registrant_org and not kwargs):
+            raise ValueError('At least one search term must be specified')
+
+        return self._results('Iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
+                             registrar=registrar, registrant=registrant, registrant_org=registrant_org,
+                             items_path=('results', ), **kwargs)
