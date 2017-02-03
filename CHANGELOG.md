@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.1.6
+- Added support for Iris endpoint
+
 ### 0.1.5
 - Made Results a subclass of both MutableMapping and MutableSequence for more natural interaction
 
