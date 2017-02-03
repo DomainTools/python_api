@@ -1,0 +1,23 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/iris?domain=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAyyNsQrDMAxEf0VoDnGhnbJ17Na14MXYpgk0OSPJBBr873Wg4/Hu3h2cRSA8HRyR
+        Mk+3y3XgNauGd0/8QhW6Px9UNQuFGFE3o0Vpg1GoNkOWb05kOGGfkc2dFkGq0UZuA0vWLunsPNFa
+        CsS6eTYrk3fe7fs+Jqxh2Qz46Bixevfvecet/QAAAP//AwAVm+NZpAAAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 03 Feb 2017 21:46:31 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 403, message: Forbidden}
+version: 1
