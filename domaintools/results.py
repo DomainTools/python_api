@@ -55,7 +55,7 @@ class ParsedWhois(Results):
 
         registrar = parsed.get('registrar', {})
         for key in ('name', 'abuse_contact_phone', 'abuse_contact_email', 'iana_id', 'url', 'whois_server'):
-            flat['registrant_{0}'.format(key)] = registrar[key]
+            flat['registrar_{0}'.format(key)] = registrar[key]
 
         for contact_type in ('registrant', 'admin', 'tech', 'billing'):
             contact = parsed.get('contacts', {}).get(contact_type, {})
