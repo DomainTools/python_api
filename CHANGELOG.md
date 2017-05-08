@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.1.7
+- Fixed typo in registrar information assignment
+
 ### 0.1.6
 - Added support for Iris endpoint
 
