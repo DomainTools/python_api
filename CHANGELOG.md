@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.1.8
+- Updated defaults for domain_search call
+
 ### 0.1.7
 - Fixed typo in registrar information assignment
 
