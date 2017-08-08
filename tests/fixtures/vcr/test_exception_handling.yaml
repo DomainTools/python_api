@@ -85,4 +85,25 @@ interactions:
       date: ['Mon, 17 Oct 2016 22:26:50 GMT']
       vary: [Accept-Encoding]
     status: {code: 403, message: Forbidden}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAyyNwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AgAA//8DADIMD8WgAAAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Tue, 08 Aug 2017 18:35:01 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 403, message: Forbidden}
 version: 1
