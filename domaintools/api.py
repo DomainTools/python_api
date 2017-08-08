@@ -77,7 +77,7 @@ class API(object):
         """Returns a profile for the specified domain name"""
         return self._results('domain-profile', '/v1/{0}'.format(query))
 
-    def domain_search(self, query, exclude_query=[], max_length=25, min_length=1, has_hyphen=True, has_number=True,
+    def domain_search(self, query, exclude_query=[], max_length=25, min_length=2, has_hyphen=True, has_number=True,
                       active_only=False, deleted_only=False, anchor_left=False, anchor_right=False, page=1, **kwargs):
         """Each term in the query string must be at least three characters long.
            Pass in a list or use spaces to separate multiple terms.
