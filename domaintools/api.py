@@ -127,7 +127,7 @@ class API(object):
     def reputation(self, query, include_reasons=False, **kwargs):
         """Pass in a domain name to see its reputation score"""
         return self._results('reputation', '/v1/reputation', domain=query, include_reasons=include_reasons,
-                            cls=Reputation, **kwargs)
+                             cls=Reputation, **kwargs)
 
     def reverse_ip(self, domain=None, limit=None, **kwargs):
         """Pass in a domain name."""
@@ -200,3 +200,12 @@ class API(object):
         return self._results('Iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
                              registrar=registrar, registrant=registrant, registrant_org=registrant_org,
                              items_path=('results', ), **kwargs)
+
+    def risk(self, domain, **kwargs):
+        """Returns back the risk score for a given domain"""
+        return self._results('Risk', '/v1/risk', items_path=('components', ), domain=domain, cls=Reputation,
+                             **kwargs)
+
+    def risk_evidence(self, domain, **kwargs):
+        """Returns back the detailed risk evidence associated with a given domain"""
+        return self._results('Risk', '/v1/risk/evidence/', items_path=('components', ), domain=domain, **kwargs)
