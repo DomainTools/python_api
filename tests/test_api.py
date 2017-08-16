@@ -391,3 +391,23 @@ def test_iris():
             assert 'domain' in result
             assert str(result['domain'])
 
+@vcr.use_cassette
+def test_risk():
+    with api.risk(domain='google.com') as result:
+        assert result
+        assert int(result) == 0
+
+    with api.risk(domain='onedrive-en-marche.fr') as result:
+        assert result
+        assert int(result) > 0
+
+
+@vcr.use_cassette
+def test_risk_evidence():
+    with api.risk_evidence(domain='google.com') as result:
+        assert result
+        assert list(result) == [{'name': 'whitelist', 'risk_score': 0}]
+
+    with api.risk_evidence(domain='onedrive-en-marche.fr') as result:
+        assert result
+        assert 'blacklist' in [reason['name'] for reason in result]

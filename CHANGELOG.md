@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.1.9
+- Added support for `risk` and `risk_evidence` API calls
+
 ### 0.1.8
 - Updated defaults for domain_search call
 

@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?domain=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA1zLQQqAIBBG4bv8a4nWXiUixAaTdCYcoYV492bd9uO9gUb6CCvBD5xSQ2Z4JJFU
+        aIlS4dCy3odGadasDoY2EHeF3wY4VHO8V+5Usvb/MPc5PwAAAP//AwBVShr/ZgAAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Tue, 15 Aug 2017 21:56:22 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.11.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?domain=onedrive-en-marche.fr
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA2TLMQ7CMAxG4bv8c4qKxEKuglAVUleNmtiVHbFEuTuZGGB+32tQslPYCL5hlRIS
+        w0OYVk1vmoinEjTudNkUDprsWCyKDn6dZ4coZdzE1eAfDRzKKHjlEI+crP4v3X1V3ZVCXU6VLWX6
+        ofdbf/b+AQAA//8DAGgL35CfAAAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Tue, 15 Aug 2017 21:56:22 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1
