@@ -51,18 +51,10 @@ class Results(MutableMapping, MutableSequence):
         return wait_for
 
     def _make_request(self):
-        rv = self.api._request_session.get(url=self.url, params=self.kwargs,
-                                           verify=self.api.verify_ssl)
-        try:
-            rv.connection.close()
-        except AttributeError:
-            pass
-        return rv
+        with Session() as session:
+            return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl)
 
     def _get_results(self):
-        if not hasattr(self.api, '_request_session'):
-            self.api._request_session = Session()
-
         wait_for = self._wait_time()
         if self.api.rate_limit and (wait_for is None or self.product == 'account-information'):
             data = self._make_request()
