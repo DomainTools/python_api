@@ -51,7 +51,13 @@ class Results(MutableMapping, MutableSequence):
         return wait_for
 
     def _make_request(self):
-        return self.api._request_session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl)
+        rv = self.api._request_session.get(url=self.url, params=self.kwargs,
+                                           verify=self.api.verify_ssl)
+        try:
+            rv.connection.close()
+        except AttributeError:
+            pass
+        return rv
 
     def _get_results(self):
         if not hasattr(self.api, '_request_session'):
