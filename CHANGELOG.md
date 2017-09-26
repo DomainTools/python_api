@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.2.0
+- Ensure connections are cleaned up
+
 ### 0.1.9
 - Added support for `risk` and `risk_evidence` API calls
 

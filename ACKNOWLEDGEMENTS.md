@@ -8,7 +8,7 @@ Notable Bug Reporters
 
 Code Contributors
 ===================
--
+- @mariodsantana
 
 Documenters
 ===================
