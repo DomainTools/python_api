@@ -5,7 +5,6 @@
 [![Build Status](https://travis-ci.org/DomainTools/python_api.svg?branch=master)](https://travis-ci.org/DomainTools/python_api)
 [![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=master)](https://coveralls.io/github/DomainTools/python_api?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
-[![Join the chat at https://gitter.im/DomainTools/python_api](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DomainTools/python_api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 DomainTools' Official Python API
 
