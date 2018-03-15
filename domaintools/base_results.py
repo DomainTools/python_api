@@ -6,7 +6,8 @@ import time
 from datetime import datetime
 
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
-                                    NotFoundException, ServiceException, ServiceUnavailableException)
+                                    NotFoundException, ServiceException, ServiceUnavailableException,
+                                    IncompleteResponseException)
 from requests import Session
 
 try: # pragma: no cover
@@ -70,11 +71,14 @@ class Results(MutableMapping, MutableSequence):
     def data(self):
         if self._data is None:
             results = self._get_results()
-            self.setStatus(results.status_code, results)
+            raise_after = self.setStatus(results.status_code, results)
             if self.kwargs.get('format', 'json') == 'json':
                 self._data = results.json()
             else:
                 self._data = results.text
+
+            if raise_after:
+                raise raise_after
 
         return self._data
 
@@ -109,8 +113,10 @@ class Results(MutableMapping, MutableSequence):
             raise InternalServerErrorException(code, reason)
         elif code == 503: # pragma: no cover
             raise ServiceUnavailableException(code, reason)
+        elif code == 206: # pragma: no cover
+            return IncompleteResponseException(code, reason)
         else: # pragma: no cover
-            raise ServiceException('Empty response')
+            raise ServiceException(code, 'Unknown Exception')
 
     def response(self):
         if self._response is None:

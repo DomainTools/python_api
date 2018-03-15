@@ -27,3 +27,7 @@ class NotFoundException(ServiceException):
 
 class ServiceUnavailableException(ServiceException):
     pass
+
+
+class IncompleteResponseException(ServiceException):
+    pass
