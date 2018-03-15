@@ -1,5 +1,9 @@
 Changelog
 =========
+### 0.2.1
+- Separated out IncompleteResponseException; enabling partial results to still be read
+- Fixed unknown exception handling
+
 ### 0.2.0
 - Ensure connections are cleaned up
 
