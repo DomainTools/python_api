@@ -114,7 +114,7 @@ class Results(MutableMapping, MutableSequence):
         elif code == 503: # pragma: no cover
             raise ServiceUnavailableException(code, reason)
         elif code == 206: # pragma: no cover
-            return IncompleteResponseException(code, 'Empty response')
+            return IncompleteResponseException(code, reason)
         else: # pragma: no cover
             raise ServiceException(code, 'Unknown Exception')
 
