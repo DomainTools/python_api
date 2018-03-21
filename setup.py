@@ -13,7 +13,7 @@ requires = ['requests']
 packages = ['domaintools']
 if sys.version_info[0] >= 3 and sys.version_info[1] >= 5:
     packages.append('domaintools_async')
-    requires.append('aiohttp==1.0.5')
+    requires.append('aiohttp==2.3.6')
 elif sys.version_info[0] == 2 and sys.version_info[1] <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
