@@ -32,13 +32,20 @@ class API(object):
     limits = {}
     limits_set = False
 
-    def __init__(self, username, key, https=True, verify_ssl=True, rate_limit=True, **default_parameters):
+    def __init__(self, username, key, https=True, verify_ssl=True, rate_limit=True, proxy_url=None,
+                 **default_parameters):
         self.username = username
         self.key = key
         self.default_parameters = default_parameters
         self.https = https
         self.verify_ssl = verify_ssl
         self.rate_limit = rate_limit
+        self.proxy_url = proxy_url
+        self.extra_request_params = {}
+        self.extra_aiohttp_params = {}
+        if proxy_url:
+            self.extra_request_params['proxies'] = {'http': proxy_url, 'https': proxy_url}
+            self.extra_aiohttp_params['proxy'] = proxy_url
 
     def _rate_limit(self):
         """Pulls in and enforces the latest rate limits for the specified user"""

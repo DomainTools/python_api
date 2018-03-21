@@ -19,10 +19,11 @@ except ImportError: # pragma: no cover
 class Results(MutableMapping, MutableSequence):
     """The base (abstract) DomainTools result definition"""
 
-    def __init__(self, api, product, url, items_path=(), response_path=('response', ), **kwargs):
+    def __init__(self, api, product, url, items_path=(), response_path=('response', ), proxy_url=None, **kwargs):
         self.api = api
         self.product = product
         self.url = url
+        self.proxy_url = proxy_url
         self.items_path = items_path
         self.response_path = response_path
         self.kwargs = kwargs
@@ -53,7 +54,8 @@ class Results(MutableMapping, MutableSequence):
 
     def _make_request(self):
         with Session() as session:
-            return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl)
+            return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
+                               **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
