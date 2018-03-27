@@ -1,5 +1,9 @@
 Changelog
 =========
+### 0.2.2
+- HTTP Authentication fixes
+- Initial proxy support
+
 ### 0.2.1
 - Separated out IncompleteResponseException; enabling partial results to still be read
 - Fixed unknown exception handling
