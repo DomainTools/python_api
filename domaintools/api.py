@@ -61,8 +61,9 @@ class API(object):
         uri = '/'.join(('{0}://api.domaintools.com'.format('https' if self.https else 'http'), path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
-        parameters['api_key'] = self.key
-        if not self.https:
+        if self.https:
+            parameters['api_key'] = self.key
+        else:
             parameters['timestamp'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
             parameters['signature'] = hmac(self.key.encode('utf8'), ''.join([self.username, parameters['timestamp'],
                                                                              path]).encode('utf8'),
