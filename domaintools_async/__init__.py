@@ -29,7 +29,7 @@ class AsyncResults(Results):
         return self.__awaitable__().__await__()
 
     async def _make_async_request(self, session):
-        async with session.get(self.url, params=self.kwargs) as results:
+        async with session.get(self.url, params=self.kwargs, **self.api.extra_aiohttp_params) as results:
             self.setStatus(results.status, results)
             if self.kwargs.get('format', 'json') == 'json':
                 self._data = await results.json()
