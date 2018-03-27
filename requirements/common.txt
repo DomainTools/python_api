@@ -1,2 +1,2 @@
-aiohttp==1.0.5
+aiohttp==2.3.6
 requests==2.11.1
