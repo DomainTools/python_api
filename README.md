@@ -1,7 +1,7 @@
 ![domaintools](https://github.com/DomainTools/python_api/raw/master/artwork/logo.png)
 ===================
 
-[![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools)
+[![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools_api)
 [![Build Status](https://travis-ci.org/DomainTools/python_api.svg?branch=master)](https://travis-ci.org/DomainTools/python_api)
 [![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=master)](https://coveralls.io/github/DomainTools/python_api?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
