@@ -3,6 +3,7 @@ import collections
 import json
 import re
 import time
+import logging
 from datetime import datetime
 
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
@@ -15,6 +16,7 @@ try: # pragma: no cover
 except ImportError: # pragma: no cover
     from collections import MutableMapping, MutableSequence
 
+log = logging.getLogger(__name__)
 
 class Results(MutableMapping, MutableSequence):
     """The base (abstract) DomainTools result definition"""
@@ -62,12 +64,18 @@ class Results(MutableMapping, MutableSequence):
         if self.api.rate_limit and (wait_for is None or self.product == 'account-information'):
             data = self._make_request()
             if data.status_code == 503: # pragma: no cover
-                time.sleep(60)
+                sleeptime = 60
+                log.info('503 encountered for [%s] - sleeping [%s] seconds before retrying request.',
+                         self.product, sleeptime)
+                time.sleep(sleeptime)
                 self._wait_time()
                 data = self._make_request()
             return data
 
-        time.sleep(wait_for)
+        if wait_for > 0:
+            log.info('Sleeping for [%s] prior to requesting [%s].',
+                     wait_for, self.product)
+            time.sleep(wait_for)
         return self._make_request()
 
     def data(self):
