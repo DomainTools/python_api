@@ -9,6 +9,7 @@ Notable Bug Reporters
 Code Contributors
 ===================
 - @mariodsantana
+- @vEpiphyte
 
 Documenters
 ===================
