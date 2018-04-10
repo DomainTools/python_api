@@ -6,7 +6,7 @@ class ServiceException(Exception):
     def __init__(self, code, reason):
         self.code = code
         self.reason = reason
-        super(ServiceException, self).__init__()
+        super(ServiceException, self).__init__(str(reason))
 
 
 class BadRequestException(ServiceException):
