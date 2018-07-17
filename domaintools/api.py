@@ -217,3 +217,54 @@ class API(object):
     def risk_evidence(self, domain, **kwargs):
         """Returns back the detailed risk evidence associated with a given domain"""
         return self._results('Risk', '/v1/risk/evidence/', items_path=('components', ), domain=domain, **kwargs)
+
+    def iris_enrich(self, domains, data_updated_after=None, **kwargs):
+        """Returns back enriched data related to the specified domains using our Iris Enrich service"""
+        if type(domains) in (list, tuple):
+            domains = ','.join(domains)
+        if hasattr(date_updated_after, 'strftime'):
+            data_updated_after = data_updated_after.strftime('%Y-%M-%d')
+
+        return self._results('Iris', '/v1/iris-enrich/', domains=domains, data_updated_after=data_updated_after,
+                             **kwargs)
+
+    def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None, create_date=None, **kwargs):
+        """Returns back a list of domains based on the provided filters.
+        The following filters are available beyond what is parameterized as kwargs:
+
+            - ip: Search for domains having this IP.
+            - email: Search for domains with this email in their data.
+            - email_domain: Search for domains where the email address uses this domain.
+            - nameserver_host: Search for domains with this nameserver.
+            - nameserver_domain: Search for domains with a nameserver that has this domain.
+            - nameserver_ip: Search for domains with a nameserver on this IP.
+            - registrar: Search for domains with this registrar.
+            - registrant: Search for domains with this registrant name.
+            - registrant_org: Search for domains with this registrant organization.
+            - mailserver_host: Search for domains with this mailserver.
+            - mailserver_domain: Search for domains with a mailserver that has this domain.
+            - mailserver_ip: Search for domains with a mailserver on this IP.
+            - redirect_domain: Search for domains which redirect to this domain.
+            - ssl_hash: Search for domains which have an SSL certificate with this hash.
+            - ssl_subject: Search for domains which have an SSL certificate with this subject string.
+            - ssl_email: Search for domains which have an SSL certificate with this email in it.
+            - ssl_org: Search for domains which have an SSL certificate with this organization in it.
+            - google_analytics: Search for domains which have this Google Analytics code.
+            - adsense: Search for domains which have this AdSense code.
+            - active: true to include only active domains, false to include only inactive domains. Omit for all domains. Must be combined with another parameter.
+            - tld: Filter by TLD. Must be combined with another parameter.
+
+        """
+        if type(domains) in (list, tuple):
+            domains = ','.join(domains)
+        if hasattr(date_updated_after, 'strftime'):
+            data_updated_after = data_updated_after.strftime('%Y-%M-%d')
+        if hasattr(expiration_date, 'strftime'):
+            expiration_date = expiration_date.strftime('%Y-%M-%d')
+        if hasattr(create_date, 'strftime'):
+            create_date = create_date.strftime('%Y-%M-%d')
+        if type(active) == bool:
+            active = str(active).lower()
+
+        return self._results('Iris', '/v1/iris-investigate/', domains=domains, data_updated_after=None,
+                             expiration_date=expiration_date, create_date=create_date, **kwargs)
