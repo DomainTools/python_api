@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-investigate/?domain=amazon.com%2Cgoogle.com
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:32:29 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

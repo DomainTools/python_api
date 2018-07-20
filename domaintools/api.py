@@ -218,17 +218,31 @@ class API(object):
         """Returns back the detailed risk evidence associated with a given domain"""
         return self._results('Risk', '/v1/risk/evidence/', items_path=('components', ), domain=domain, **kwargs)
 
-    def iris_enrich(self, domains, data_updated_after=None, **kwargs):
-        """Returns back enriched data related to the specified domains using our Iris Enrich service"""
-        if type(domains) in (list, tuple):
-            domains = ','.join(domains)
-        if hasattr(date_updated_after, 'strftime'):
+    def iris_enrich(self, *domains, **kwargs):
+        """Returns back enriched data related to the specified domains using our Iris Enrich service
+           each domain should be passed in as an un-named argument to the method:
+               iris_enrich('domaintools.com', 'google.com')
+
+           api.iris_enrich(DOMAIN_LIST)['results_count'] Returns the number of results
+           api.iris_enrich(DOMAIN_LIST)['missing_domains'] Returns any domains that we were unable to
+                                                           retrieve enrichment data for
+           api.iris_enrich(DOMAIN_LIST)['limit_exceeded'] Returns True if you've exceeded your API usage
+
+           for enrichment in api.iris_enrich(DOMAIN_LIST):  # Enables looping over all returned enriched domains
+        """
+        if not domains:
+            raise ValueError('One or more domains to enrich must be provided')
+
+        domains = ','.join(domains)
+        data_updated_after = kwargs.get('data_updated_after', None)
+        if hasattr(data_updated_after, 'strftime'):
             data_updated_after = data_updated_after.strftime('%Y-%M-%d')
 
-        return self._results('Iris', '/v1/iris-enrich/', domains=domains, data_updated_after=data_updated_after,
-                             **kwargs)
+        return self._results('Iris', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
+                             items_path=('results', ), **kwargs)
 
-    def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None, create_date=None, **kwargs):
+    def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None,
+                         create_date=None, active=None, **kwargs):
         """Returns back a list of domains based on the provided filters.
         The following filters are available beyond what is parameterized as kwargs:
 
@@ -251,13 +265,28 @@ class API(object):
             - ssl_org: Search for domains which have an SSL certificate with this organization in it.
             - google_analytics: Search for domains which have this Google Analytics code.
             - adsense: Search for domains which have this AdSense code.
-            - active: true to include only active domains, false to include only inactive domains. Omit for all domains. Must be combined with another parameter.
             - tld: Filter by TLD. Must be combined with another parameter.
 
+        You can loop over results of your investigation as if it was a native Python list:
+
+            for result in api.iris_investigate(ip='199.30.228.112'):  # Enables looping over all related results
+
+        api.iris_investigate(QUERY)['results_count'] Returns the number of results returned with this request
+        api.iris_investigate(QUERY)['total_count'] Returns the number of results available within Iris
+        api.iris_investigate(QUERY)['missing_domains'] Returns any domains that we were unable to find
+        api.iris_investigate(QUERY)['limit_exceeded'] Returns True if you've exceeded your API usage
+        api.iris_investigate(QUERY)['position'] Returns the position key that can be used to retrieve the next page:
+            next_page = api.iris_investigate(QUERY, position=api.iris_investigate(QUERY)['position'])
+
+        for enrichment in api.iris_enrich(i):  # Enables looping over all returned enriched domains
+
         """
+        if not (kwargs or domains):
+            raise ValueError('Need to define investigation using kwarg filters or domains')
+
         if type(domains) in (list, tuple):
             domains = ','.join(domains)
-        if hasattr(date_updated_after, 'strftime'):
+        if hasattr(data_updated_after, 'strftime'):
             data_updated_after = data_updated_after.strftime('%Y-%M-%d')
         if hasattr(expiration_date, 'strftime'):
             expiration_date = expiration_date.strftime('%Y-%M-%d')
@@ -266,5 +295,6 @@ class API(object):
         if type(active) == bool:
             active = str(active).lower()
 
-        return self._results('Iris', '/v1/iris-investigate/', domains=domains, data_updated_after=None,
-                             expiration_date=expiration_date, create_date=create_date, **kwargs)
+        return self._results('Iris', '/v1/iris-investigate/', domain=domains, data_updated_after=data_updated_after,
+                             expiration_date=expiration_date, create_date=create_date, items_path=('results', ),
+                             **kwargs)
