@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-enrich/?domain=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA91Wy27bOhD9FUPLwlH0tCUDBloYRXGB5LZAH5skECiSttlSpEBSsdPA/fYOKTuR
+        rCRF27SLrmzO68wMR4dz6ymqayk09Wa3HmcVMwXdYkoJJd5sibimY6+iWqMVWHivxWd5M7qRjRoR
+        ZJDvja1/w40usGyE8WbhncSbXdx6RFaICfBcSbni1MeyAp/NWjJdNIqDYm1MrWeXp5enTuq3HkZK
+        rq315WnPExFN98leI97YnLwdiDndIgeOsGHXIDaqgcxb3wIJxG8Mw3rgRyomIHVhwM8qBaoGwaVa
+        dUVvXMzR2dnCKrVRlJpjF8zMzbFMG2R6sRevrLiWoOCDALabqhfj43tnvpZikOESbY9FFLoIUS+u
+        4H/JOGdi9ZN1/mZ1P1Xbr1am6IpBjkiYf/4SDcVrwTDi/3ylWFGALsgRfpjn05MgPwlT57CtmUKG
+        STEwjIIocIbxXeTiwEMX92YVUl8qKZiRypHL7gqKlqi4SwWOmnePiBBmEeEOWgY76O6DorLRFKLV
+        3JKYfvkQCKudC0QDpuxRUhRO/DTzo3DqxxPHT7qXc5iGk9yG2PcbRoH0ShfcejFdPzYBu/GPgJM/
+        BAzO1dbFXMMIdc0QN6GPdF1tfe532B4CHq6te7mBH00dWN3rfBTkfpb6Bz3A1YpJ5SYblE5iP5dC
+        U3VN1YOZCB3+MIG+/jgJ6GMU534c+aGFtO0egkTPBJI8BRI/E8jkKZDkmUCyPcjVIUShmP5i49jf
+        QmOpwD6w81fBtkLFfr1o+Q/2CWYoh5fA7iNdh137SBCmKB6w3kFeDLP2+m/LQzTbUT/JuAc71TU5
+        B1o4b2lhPPpPYL9nWVjubWyFHuYMiv1YW457p+SalVAp8Sw31cuCiaWEaNdzOIQjJjBvCJ0VcOrc
+        y+gb4txryax1sJOP9Lqb0DJL8pDigOBJgsIwgA2wjCclIktaBinNpmk6TbIkdC9DU34+aufi//mL
+        DuT47fy+CeOz+bllDWjx6BOjm/H7D/MF4mwplWBovJi3LwU0EQn21VH6493svBPDIiB5EkfLNM8T
+        nNB4SmKMSRllaR7E6SQncTbFaZJOHi9is9n85TLgJg2HVdvbb8a01HDDxf1WDoQGHwUs20XjpoAU
+        hsFCblBVO2ILs5NgehIFH8JoFsSzKPLzHL6pxBFexbS2m1874doh7r4DpGW64PQLAAA=
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:32:29 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

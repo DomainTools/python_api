@@ -1,0 +1,22 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/phisheye?query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWKkktylWyUkrPz0/PSVXSUUrJz03MzCtWsoqOra0FAJ1D
+        iI8rAAAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:31:09 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

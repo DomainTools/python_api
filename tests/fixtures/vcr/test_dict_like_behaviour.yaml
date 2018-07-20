@@ -1,0 +1,33 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5VVYW/aMBD9K1b2ZdUgJAFU8KdFAXVIECpCtw9LhdLgBmvEjmxT1lX8950TBgkE
+        1koIoXt3787Pz8ebIYjMOJPEwG/wO6FSiYgpAxt3nCdrgsZjz2gcEEU505mxIJEiS0iz+/3bptVv
+        2l1II78zCoQQdizHysMdCG+y5T7bsexe03Kajl0iFQBMIvFrwhlVXKARi02ApYrURmq2n0a8poSp
+        AVkTRe4FX9Enqgkbe2AOM8tnImqgh7x3BZBEvBBRQ1YAtWQFdEb2uGsYLErJosDzWf3ANu+m07vx
+        0PSmE6j1A+c00D4NdMqBx4axXXEqtdK64UG426bdz4WLudByDngaUYZ8mACjJL8wM+ZpyGaFtK9o
+        nzEaYOTY7V7X7iwG04k78hfQqPl9FviH5EigH9+mowAF+VkwymcwU7iZtLiZCjekP8zGGK2UynDY
+        Clvb7fY8uVBsiQbwDSMcrn9uW7jTxXAiq2dZIfO0ocBc+8Sjq+aWhfMPnF4nHrvPSp5EQ+28MsPB
+        gO25Y9czYFRyXSO3XZl/5PpuIVzfKcfdJ3Al8jhTUazQEPRdYxTpIJw4W4PcSn69olq1/n7FGYz7
+        xTYdq9fu9bu3HZhxf21B/gQwqrcy+qy1lwfxaRwxZnKRhC2SZZ/qi24ukJ+7/l3052WXGpy+t3fR
+        nxadk9c/zP+Q1xddIv+wNJfKLjX4oDT1RTdHjzGFpiKJGP2TvwiMjru8kqSnIGELOF4oi8GFnlvB
+        Pb5hsEQweghC5i5TGPwyb4HXUhZQhW1O4tUVshyu5cqRCpXefoedxWTHLC/CE9C5BtrXwHYFHPhB
+        MPQw2jBJE0aWsOhmY8SfkVoRNPJc39/vUlhGEYITPK1JChsr40JRlqDgVSqSlpfnMhPShNVBBKOx
+        yYiCKDN2/5b9QvKNiPU/wXEMY7f7C9pN+EfABwAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:31:07 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1
