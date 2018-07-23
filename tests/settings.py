@@ -7,6 +7,7 @@ from vcr import VCR
 
 def remove_server(response):
     response.get('headers', {}).pop('server', None)
+    response.pop('url', None)
     return response
 
 
