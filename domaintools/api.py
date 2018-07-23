@@ -223,12 +223,16 @@ class API(object):
            each domain should be passed in as an un-named argument to the method:
                iris_enrich('domaintools.com', 'google.com')
 
-           api.iris_enrich(DOMAIN_LIST)['results_count'] Returns the number of results
-           api.iris_enrich(DOMAIN_LIST)['missing_domains'] Returns any domains that we were unable to
+           api.iris_enrich(*DOMAIN_LIST)['results_count'] Returns the number of results
+           api.iris_enrich(*DOMAIN_LIST)['missing_domains'] Returns any domains that we were unable to
                                                            retrieve enrichment data for
-           api.iris_enrich(DOMAIN_LIST)['limit_exceeded'] Returns True if you've exceeded your API usage
+           api.iris_enrich(*DOMAIN_LIST)['limit_exceeded'] Returns True if you've exceeded your API usage
 
-           for enrichment in api.iris_enrich(DOMAIN_LIST):  # Enables looping over all returned enriched domains
+           for enrichment in api.iris_enrich(*DOMAIN_LIST):  # Enables looping over all returned enriched domains
+
+           for example:
+               enrich_domains = ['google.com', 'amazon.com']
+               assert api.iris_enrich(*enrich_domains)['missing_domains'] == []
         """
         if not domains:
             raise ValueError('One or more domains to enrich must be provided')
