@@ -7,7 +7,8 @@ from vcr import VCR
 
 def remove_server(response):
     response.get('headers', {}).pop('server', None)
-    response.pop('url', None)
+    if 'url' in response:
+        response['url'] = response['url'].update_query(api_username='test', api_key='test')
     return response
 
 
