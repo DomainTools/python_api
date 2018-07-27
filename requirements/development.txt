@@ -6,4 +6,5 @@ isort==4.2.2
 ipython==4.1.1
 wheel==0.29.0
 python-coveralls==2.7.0
-vcrpy==1.11.1
+vcrpy==1.13.0
+aiohttp==3.3.2

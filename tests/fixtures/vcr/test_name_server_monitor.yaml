@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?days_back=0&page=1&query=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WYW2+jOBSA/8qK58ZKqmpn1DcDDnFr7KxtSOloVXkSJ8uKQASkmU7V/z6HZrWa
+        dpTLUHgCbHE+zvG58uyUttoUeWWd62cnS9dp7VyPhsPhhbMwNSw6l8PR58Hw0+By6Fw4uVnbh8qW
+        j7aErVVRrDKL5sUatuqiNhksXv0JDxuzgndH+5uHebHN69dHk9myrpzrL89ObncPR8QV2eLd9i79
+        tsgrlNsats28ToscVnVp8mppyz9oDsuLYm3SZvnq8w2ZESYTJCPn5aIF7mcIt7ufhWPuI4Xbid2Y
+        snrc5CjNl8UZerhE6YlQ2hchphzdJfcf18a3ma3t4g2GCk6wRp4IUXh3ADEvzfen/SvVQdCb7/hV
+        O7Gt33BZJCXxgYv4Ic3mWbFdLDNTHtbu96AeDgMqmYqpT4RCnOgD5CX4LUQBSDObtDM4x8x1EeVj
+        0e4o99tvz+GUG3kTLDUBS88wXBQaU465RzFr9wmlXe3M05lsH+sRD46YuQd9/Qn2bzFHQga9xAsZ
+        KBAdJXjahMxRxD9FBS935D3kbiqQJw8AG1SarzbZFuyUdYAbY58ob0IZQV5LVzlhyECIgBFf0pgg
+        FfeIIBAAk34RIZ6qfglThpPXHN0/pVeCjnuTL4WIiYJ0d3vZPuWcgEwwD0SkVZ9H8T+jJ/l0fxKd
+        qfCuRaISc3KDfeqfTJDdVBkGxw6VhkKlgQtpR7Sb9Pu5wBAHCZauYHowiZDSQraEHrFiSMENXKhj
+        H7FhCvWnRHNzjk4ykIRwNW2QLRvcY+pEinr4r2OBmS+z+vHyqqNyycdMxyCttflOBNEUOnPKaR8B
+        pHCCQXIXZfe9ZE/FreXu7Nemy/hafDtzEFNQFbG6oSgQ7uHR4gPahIL5TUvr0paj0W/NlUpjqQah
+        UJ6YHR4tza4CkYPRJ1SUqw78WBNvMsXQvzTZmnfQ0r4zoo5c6icfKJj1tkyrdfFkq42d12a+zYrX
+        Vh2Z8gyj6khSOMeEqCnxNPYiJva1FR/qdE98ziJdpbXJirk1+ZnpPBpHt0HEiDwyY/cxD8aExUQn
+        PmFUE9U+U/1r67qJzDP9OKYzcnzafyq2ZVV2Nejf8cEgwBIK9OB+ho+o2cNPhoQwBtHqCa4i1nQI
+        vdSCBLq1yO1tirnHwX//ZxrA3y8vPwBLnIPHuhMAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:30:49 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

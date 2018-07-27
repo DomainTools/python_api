@@ -7,6 +7,8 @@ from vcr import VCR
 
 def remove_server(response):
     response.get('headers', {}).pop('server', None)
+    if 'url' in response:
+        response['url'] = response['url'].update_query(api_username='test', api_key='test')
     return response
 
 
@@ -14,4 +16,4 @@ vcr = VCR(before_record_response=remove_server, filter_query_parameters=['api_ke
           cassette_library_dir='tests/fixtures/vcr/', path_transformer=VCR.ensure_suffix('.yaml'),
           record_mode='new_episodes')
 with vcr.use_cassette('init_user_account'):
-    api = API(environ.get('TEST_USER', 'test_user'), environ.get('TEST_KEY', 'test_key'))
+    api = API(environ.get('TEST_USER', 'test'), environ.get('TEST_KEY', 'test'))
