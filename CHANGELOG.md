@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.2.3
+- Added support for Iris Investigate and Enrich
+
 ### 0.2.2
 - HTTP Authentication fixes
 - Initial proxy support
