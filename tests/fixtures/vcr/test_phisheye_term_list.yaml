@@ -1,0 +1,22 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/phisheye/term-list?include_inactive=false
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAyXKMQqAMAwF0Lv8uYtrriJSpIRSsI0kqUvJ3RXc3vAWlO2WYQxacNZuoP0XCFWk
+        XoyEs3h7vuM6OWEaa+4ymovmInM4aIsj4gW1NisaTwAAAA==
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:32:28 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

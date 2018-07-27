@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/account
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82W246jMAyG3yXXjQR0Cpp5ldWqyoIHrIEkyqGzVdV3X4cyu1QLTGmpWq4gdsIn
+        +7fjAzNgtZIW2NuBiTxXXrr2VePWWzBSNGRiLjfK1rBnK3JyuKM1ZzwcV0wbVfjcWfb248CwIN9C
+        NQIlJ8M71kA7NJhto6SrtjU2SMezZBPR82VC6R38tcVJMIhfVtW9ZenresW8FWVL6lQh9uS8Jtf2
+        6PadcOC3RiMcKrkthAvoSRSnPMp4kpG9Q/ysFNr7kqU9snQmGa/QOmX2g4TxKN/6/oEzsANjgaMe
+        ZkuzLEvizcP5gmw5yZe+xtL8cMZJEd5OF/Xoosvpuuq1vizBBudhxKDCMR1uokWDGDb+hwfC5NVo
+        Bd8evVOtf4GFr4sjWCmKmyyft4gbYT64qMG4QbZ1PMaWzmB76bG9zCmOksJmhHR3J7wyer3Wwmk7
+        Uo6fDxL187JpQd2vmG5/D50ODGjvWq/ZrW9hvLPW9+/unYjdYnDfzy9ncATVK90p7U3eHEteb2d8
+        3WjLUb4r01yZ3M50IWHSb4HJcA88Y9R0Y1SwHx6Z4ymuGVB9pgvSaiZ0djPNabXDOf33uxpA+3GF
+        7td3030A4rDDAmQ+kbglyGa2i5A6kvsuTHFlMM9L44xeMT+NLRtIgyMz3CJYLH7tj3Cv4yH7eTz+
+        AbHlMUcJDwAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:30:46 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/mark-alert?query=google
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:30:46 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

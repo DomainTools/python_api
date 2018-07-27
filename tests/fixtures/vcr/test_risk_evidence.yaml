@@ -1,0 +1,22 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.domaintools.com/v1/risk/evidence/?domain=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA13LQQqAIBBG4bv8a4nWXiUixAaTdCYcoYV492bd9uO9gUb6CCvBD5xSQ2Z4JJFU
+        aIlS4dCy3odGadasDoY2EHeF3wY4VHO8V+5Usvb/MPc5P1VKGv9mAAAA
+    headers:
+      content-encoding: [gzip]
+      content-type: [application/json;charset=utf-8]
+      date: ['Fri, 20 Jul 2018 22:32:29 GMT']
+      vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

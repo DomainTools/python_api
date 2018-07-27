@@ -170,21 +170,6 @@ def test_registrant_monitor():
 
 
 @vcr.use_cassette
-def test_ip_registrant_monitor():
-    api_call = api.ip_registrant_monitor('google.com')
-    with api_call as result:
-        assert 'page' in result
-        assert result['query'] == 'google.com'
-        assert type(result['removed']) == list
-        assert type(result['added']) == list
-        assert type(result['modified']) == list
-        for modification in result['modified']:
-            assert 'new' in modification
-            assert 'old' in modification
-            assert 'changed' in modification
-
-
-@vcr.use_cassette
 def test_reputation():
     api_call = api.reputation('google.com')
     with api_call as risk_data:
@@ -274,7 +259,7 @@ def test_whois():
         assert 'whois' in whois
         assert 'record_source' in whois
 
-        assert 'contact-admin@google.com' in api_call.emails()
+        assert 'abusecomplaints@markmonitor.com' in api_call.emails()
 
 
 @vcr.use_cassette
@@ -397,7 +382,7 @@ def test_risk():
         assert result
         assert int(result) == 0
 
-    with api.risk(domain='onedrive-en-marche.fr') as result:
+    with api.risk(domain='hug.rest') as result:
         assert result
         assert int(result) > 0
 
@@ -408,6 +393,25 @@ def test_risk_evidence():
         assert result
         assert list(result) == [{'name': 'whitelist', 'risk_score': 0}]
 
-    with api.risk_evidence(domain='onedrive-en-marche.fr') as result:
-        assert result
-        assert 'blacklist' in [reason['name'] for reason in result]
+
+@vcr.use_cassette
+def test_iris_enrich():
+    with pytest.raises(ValueError):
+        api.iris_enrich()
+
+    enriched_data = api.iris_enrich('google.com')
+    assert enriched_data['results_count']
+    for result in enriched_data:
+        assert result['domain'] == 'google.com'
+
+
+@vcr.use_cassette
+def test_iris_investigate():
+    with pytest.raises(ValueError):
+        api.iris_investigate()
+
+    investigation_results = api.iris_investigate(domains=['amazon.com', 'google.com'])
+    assert investigation_results['results_count']
+    for result in investigation_results:
+        assert result['domain'] == 'amazon.com' or result['domain'] == 'google.com'
+
