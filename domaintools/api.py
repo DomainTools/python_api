@@ -205,18 +205,19 @@ class API(object):
             registrant_org and not kwargs):
             raise ValueError('At least one search term must be specified')
 
-        return self._results('Iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
+        return self._results('iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
                              registrar=registrar, registrant=registrant, registrant_org=registrant_org,
                              items_path=('results', ), **kwargs)
 
     def risk(self, domain, **kwargs):
         """Returns back the risk score for a given domain"""
-        return self._results('Risk', '/v1/risk', items_path=('components', ), domain=domain, cls=Reputation,
+        return self._results('risk', '/v1/risk', items_path=('components', ), domain=domain, cls=Reputation,
                              **kwargs)
 
     def risk_evidence(self, domain, **kwargs):
         """Returns back the detailed risk evidence associated with a given domain"""
-        return self._results('Risk', '/v1/risk/evidence/', items_path=('components', ), domain=domain, **kwargs)
+        return self._results('risk-evidence', '/v1/risk/evidence/', items_path=('components', ), domain=domain,
+                             **kwargs)
 
     def iris_enrich(self, *domains, **kwargs):
         """Returns back enriched data related to the specified domains using our Iris Enrich service
@@ -242,7 +243,7 @@ class API(object):
         if hasattr(data_updated_after, 'strftime'):
             data_updated_after = data_updated_after.strftime('%Y-%M-%d')
 
-        return self._results('Iris', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
+        return self._results('iris-enrich', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
                              items_path=('results', ), **kwargs)
 
     def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None,
@@ -299,6 +300,6 @@ class API(object):
         if type(active) == bool:
             active = str(active).lower()
 
-        return self._results('Iris', '/v1/iris-investigate/', domain=domains, data_updated_after=data_updated_after,
-                             expiration_date=expiration_date, create_date=create_date, items_path=('results', ),
-                             **kwargs)
+        return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
+                             data_updated_after=data_updated_after, expiration_date=expiration_date,
+                             create_date=create_date, items_path=('results', ), **kwargs)
