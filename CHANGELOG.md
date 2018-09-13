@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.2.4
+- Enabled rate-limiting support for Iris API endpoints
+
 ### 0.2.3
 - Added support for Iris Investigate and Enrich
 
