@@ -11,7 +11,7 @@ from setuptools.command.test import test as TestCommand
 
 requires = ['requests']
 packages = ['domaintools']
-if sys.version_info[0] >= 3 and sys.version_info[1] >= 5:
+if sys.version_info[0] >= 3 and sys.version_info[1] >= 5 and sys.version_info[2] >= 2:
     packages.append('domaintools_async')
     requires.append('aiohttp==3.4.4')
 elif sys.version_info[0] == 2 and sys.version_info[1] <= 6:
