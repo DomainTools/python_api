@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.3.0
+- Python 3.7 support as well as general Async fixes and improvements (Thanks @jnwatson)
+
 ### 0.2.4
 - Enabled rate-limiting support for Iris API endpoints
 
