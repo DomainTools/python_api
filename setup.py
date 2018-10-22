@@ -70,7 +70,7 @@ except (IOError, ImportError, OSError, RuntimeError):
    readme = ''
 
 setup(name='domaintools_api',
-      version='0.2.4',
+      version='0.3.0',
       description="DomainTools' Official Python API",
       long_description=readme,
       author='DomainTools',
