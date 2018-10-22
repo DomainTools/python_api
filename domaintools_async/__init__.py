@@ -4,18 +4,24 @@ import aiohttp
 
 from domaintools.base_results import Results
 
+from domaintools.exceptions import ServiceUnavailableException
 
-class AIter(object):
-    """A wrapper to turn non async-iterators into async compatible iterators"""
-    __slots__ = ('iterator', )
+class _AIter(object):
+    """A wrapper to wrap an AsyncResults as an async iterable"""
+    __slots__ = ('results', 'iterator', )
 
-    def __init__(self, iterator):
-        self.iterator = iterator
+    def __init__(self, results):
+        self.results = results
+        self.iterator = None
 
     def __aiter__(self):
         return self
 
     async def __anext__(self):
+        if self.iterator is None:
+            await self.results
+            self.iterator = self.results._items().__iter__()
+
         try:
             return self.iterator.__next__()
         except StopIteration:
@@ -38,7 +44,7 @@ class AsyncResults(Results):
 
     async def __awaitable__(self):
         if self._data is None:
-            with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=self.api.verify_ssl)) as session:
+            async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=self.api.verify_ssl)) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
                     try:
@@ -53,9 +59,8 @@ class AsyncResults(Results):
 
         return self
 
-    async def __aiter__(self):
-        await self
-        return AIter(self._items().__iter__())
+    def __aiter__(self):
+        return _AIter(self)
 
     async def __aenter__(self):
         return await self
