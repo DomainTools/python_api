@@ -10,6 +10,8 @@ Code Contributors
 ===================
 - @mariodsantana
 - @vEpiphyte
+- Nic Watson (@jnwatson)
+
 
 Documenters
 ===================
