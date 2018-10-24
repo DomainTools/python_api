@@ -11,10 +11,13 @@ from setuptools.command.test import test as TestCommand
 
 requires = ['requests']
 packages = ['domaintools']
-if sys.version_info[0] >= 3 and sys.version_info[1] >= 5 and sys.version_info[2] >= 2:
+
+major, minor, patch = sys.version_info
+
+if major >= 3 and (minor > 5 or (minor == 5 and patch >= 2)):
     packages.append('domaintools_async')
     requires.append('aiohttp==3.4.4')
-elif sys.version_info[0] == 2 and sys.version_info[1] <= 6:
+elif major == 2 and minor <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
 MYDIR = path.abspath(os.path.dirname(__file__))
