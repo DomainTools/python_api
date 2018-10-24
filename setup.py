@@ -12,7 +12,7 @@ from setuptools.command.test import test as TestCommand
 requires = ['requests']
 packages = ['domaintools']
 
-major, minor, patch = sys.version_info
+major, minor, patch = sys.version_info[:3]
 
 if major >= 3 and (minor > 5 or (minor == 5 and patch >= 2)):
     packages.append('domaintools_async')
