@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.3.1
+- Python 3.7.0 Python version check for async fixed
+
 ### 0.3.0
 - Python 3.7 support as well as general Async fixes and improvements (Thanks @jnwatson)
 
