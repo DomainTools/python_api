@@ -1,5 +1,8 @@
 Changelog
 =========
+### 0.3.2
+- Python 3.5.2 installation fix
+
 ### 0.3.1
 - Python 3.7.0 Python version check for async fixed
 
