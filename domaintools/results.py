@@ -5,17 +5,19 @@ Additionally, defines any custom result objects that may be used to enable more 
 import sys
 from itertools import chain
 
+major, minor, patch = sys.version_info[:3]
+
 try: # pragma: no cover
     from collections import OrderedDict
 except ImportError: # pragma: no cover
     from ordereddict import OrderedDict
 
-if sys.version_info[0] >= 3: # pragma: no cover
+if major >= 3: # pragma: no cover
     from itertools import zip_longest
 else: # pragma: no cover
     from itertools import izip_longest as zip_longest
 
-if sys.version_info[0] >= 3 and sys.version_info[1] >= 5: # pragma: no cover
+if major >= 3 and (minor > 5 or (minor == 5 and patch >= 3)):
     from domaintools_async import AsyncResults as Results
 else: # pragma: no cover
     from domaintools.base_results import Results
