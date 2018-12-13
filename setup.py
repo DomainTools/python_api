@@ -14,9 +14,9 @@ packages = ['domaintools']
 
 major, minor, patch = sys.version_info[:3]
 
-if major >= 3 and (minor > 5 or (minor == 5 and patch >= 2)):
+if major >= 3 and (minor > 5 or (minor == 5 and patch >= 3)):
     packages.append('domaintools_async')
-    requires.append('aiohttp==3.4.4')
+    requires.append('aiohttp>=3.4.4')
 elif major == 2 and minor <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
