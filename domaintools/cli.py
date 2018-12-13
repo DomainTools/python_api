@@ -25,7 +25,7 @@ def parse(args=None):
                         help='Optional file with API username and API key, one per line.')
     parser.add_argument('-l', '--rate-limit', dest='rate_limit', action='store_true', default=False,
                         help='Rate limit API calls against the API based on per minute limits.')
-    parser.add_argument('-f', '--format', dest='format', choices=['list', 'json','xml','html'], default='json')
+    parser.add_argument('-f', '--format', dest='format', choices=['list', 'json', 'xml', 'html'], default='json')
     parser.add_argument('-o', '--outfile', dest='out_file', type=argparse.FileType('wbU'), default=sys.stdout,
                         help='Output file (defaults to stdout)')
     parser.add_argument('-v', '--version', action='version', version='DomainTools CLI API Client {0}'.format(version))

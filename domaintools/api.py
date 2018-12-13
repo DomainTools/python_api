@@ -201,8 +201,8 @@ class API(object):
         """Performs a search for the provided search terms ANDed together,
            returning the pivot engine row data for the resulting domains.
         """
-        if (not domain and not ip and not email and not nameserver and not registrar and not registrant and not
-            registrant_org and not kwargs):
+        if ((not domain and not ip and not email and not nameserver and not registrar and not registrant and not
+             registrant_org and not kwargs)):
             raise ValueError('At least one search term must be specified')
 
         return self._results('iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
