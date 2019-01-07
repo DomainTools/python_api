@@ -90,7 +90,6 @@ setup(name='domaintools_api',
         ]
       },
       packages=packages,
-      requires=[package.split('==')[0] for package in requires],
       install_requires=requires,
       cmdclass=cmdclass,
       ext_modules=ext_modules,
