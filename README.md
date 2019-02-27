@@ -95,7 +95,7 @@ html = str(api.domain_search('google').html())
 
 If any API call is unsuccesfull, one of the exceptions defined in `domaintools.exceptions` will be raised:
 
-```python
+```python-traceback
 api.domain_profile('notvalid').data()
 
 
