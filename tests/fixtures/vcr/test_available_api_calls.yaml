@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/account
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA83W726CMBAA8HfpZ5vwR5fpqyyL6eCUi9CSa9EZw7vvQLaRpU7ZMMInoKX95XrX
+        chIEtjTaglidhEoSU2nX3pa4riyQVgU3ieRgTErK7pSYcTeHe37rqIJ6JkoyaZU4K1YvJ4Ep9+7G
+        kag3hgrl0Gj+rARaF0a7bJ1jgTyLCIPm+mxCXTn4als0E71Zk/de6irPZ6KyattynUnVsR2G+7Yj
+        80M8F2yC9xKpnXidKgfnT+tZ50NCK0ETJtlFl18VBbez+qrljSjUe7AOt03z/WRxTxbNF9dth8yg
+        9YHOE3g4odcjFt2C/xqs4DooNYVCLTn1Nph7Q/UoWRsqmaF1ho6DYPEl1wiqzHBW6e3kXAR7IAsS
+        y0eSuHjCpQyeZdTUwg9aswNK3gn5aXJhG16XflU0iqpQtJMqB3KDSE9eUhyOFKktpzwpPo0mJsNS
+        cm/kcpyOqZfr08OVilM+/UPO33nH/97DJlaP3SFpQZH/R2e4yssKe6zwhnXkQyiD48BT2ysKx1pC
+        tLsxUmpMj4Q9pqCTYXHyu+L/sV7r+gOcXGp3KQwAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 26 Jul 2019 17:14:18 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1
