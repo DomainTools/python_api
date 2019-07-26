@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from hashlib import sha1
 from hmac import new as hmac
 from types import MethodType
+import re
 
 import requests
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
@@ -75,6 +76,18 @@ class API(object):
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
         return self._results('account-information', '/v1/account', items_path=('products', ), **kwargs)
+
+    def available_api_calls(self):
+        """Provides a list of api calls that you can use based on your account information."""
+        def snakecase(string):
+            string = re.sub(r"[\-\.\s]", '_', str(string))
+            if not string:
+                return string
+            return str(string[0]).lower() + re.sub(r"[A-Z]", lambda matched: '_' + str(matched.group(0)).lower(),
+                                                   string[1:])
+        api_calls = tuple((api_call for api_call in dir(API) if not api_call.startswith('_') and
+                           callable(getattr(API, api_call, None))))
+        return [snakecase(p["id"]) for p in self.account_information()["products"] if snakecase(p["id"]) in api_calls]
 
     def brand_monitor(self, query, exclude=[], domain_status=None, days_back=None, **kwargs):
         """Pass in one or more terms as a list or separated by the pipe character ( | )"""
