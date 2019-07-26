@@ -20,6 +20,14 @@ def test_account_information():
 
 
 @vcr.use_cassette
+def test_available_api_calls():
+    available_api_calls = api.available_api_calls()
+    # Not sure what else to check for as this is highly dependent on your API_KEY but at least account_information
+    # should be there.
+    assert 'account_information' in available_api_calls
+
+
+@vcr.use_cassette
 def test_brand_monitor():
     api_call = api.brand_monitor('google')
     with api_call as response:
