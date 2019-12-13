@@ -57,6 +57,7 @@ atlassian-ide-plugin.xml
 *.swp
 *.kate-swp
 .ropeproject/
+.vscode/
 
 # Python3 Venv Files
 .venv/
@@ -67,6 +68,7 @@ lib64
 pyvenv.cfg
 share/
 venv/
+.python-version
 
 # Cython
 *.c
