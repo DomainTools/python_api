@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta
-from hashlib import sha1
+from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 from types import MethodType
 import re
 
 import requests
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
+
+AVAILABLE_KEY_SIGN_HASHES = ['sha1', 'sha256', 'md5']
 
 
 def delimited(items, character='|'):
@@ -34,7 +36,7 @@ class API(object):
     limits_set = False
 
     def __init__(self, username, key, https=True, verify_ssl=True, rate_limit=True, proxy_url=None,
-                 **default_parameters):
+                 always_sign_api_key=False, key_sign_hash='sha256', **default_parameters):
         self.username = username
         self.key = key
         self.default_parameters = default_parameters
@@ -44,6 +46,8 @@ class API(object):
         self.proxy_url = proxy_url
         self.extra_request_params = {}
         self.extra_aiohttp_params = {}
+        self.always_sign_api_key = always_sign_api_key
+        self.key_sign_hash = key_sign_hash
         if proxy_url:
             self.extra_request_params['proxies'] = {'http': proxy_url, 'https': proxy_url}
             self.extra_aiohttp_params['proxy'] = proxy_url
@@ -62,16 +66,26 @@ class API(object):
         uri = '/'.join(('{0}://api.domaintools.com'.format('https' if self.https else 'http'), path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
-        if self.https:
-            parameters['api_key'] = self.key
-        else:
-            parameters['timestamp'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-            parameters['signature'] = hmac(self.key.encode('utf8'), ''.join([self.username, parameters['timestamp'],
-                                                                             path]).encode('utf8'),
-                                           digestmod=sha1).hexdigest()
+        self.handle_api_key(path, parameters)
         parameters.update(dict((key, str(value).lower() if value in (True, False) else value) for
                                key, value in kwargs.items() if value is not None))
         return cls(self, product, uri, **parameters)
+
+    def handle_api_key(self, path, parameters):
+        if self.https and not self.always_sign_api_key:
+            parameters['api_key'] = self.key
+        else:
+            if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
+                signing_hash = eval(self.key_sign_hash)
+            else:
+                raise ValueError("Invalid value '{0}' for 'key_sign_hash'. "
+                                 "Values available are {1}".format(
+                                    self.key_sign_hash, ','.join(AVAILABLE_KEY_SIGN_HASHES)))
+            parameters['timestamp'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+            parameters['signature'] = hmac(self.key.encode('utf8'), ''.join([self.username, parameters['timestamp'],
+                                                                             path]).encode('utf8'),
+                                           digestmod=signing_hash).hexdigest()
+
 
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""

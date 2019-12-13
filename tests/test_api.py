@@ -328,6 +328,9 @@ def test_exception_handling():
         api._results('i_made_this_product_up', '/v1/steianrstierstnrsiatiarstnsto.com/whois').data()
     with pytest.raises(exceptions.NotAuthorizedException):
         API('notauser', 'notakey').domain_search('amazon').data()
+    with pytest.raises(ValueError, match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5"):
+        API('notauser', 'notakey', always_sign_api_key=True, key_sign_hash='notahash').domain_search('amazon')
+
 
 
 @vcr.use_cassette
