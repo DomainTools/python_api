@@ -31,3 +31,6 @@ class ServiceUnavailableException(ServiceException):
 
 class IncompleteResponseException(ServiceException):
     pass
+
+class RequestUriTooLongException(ServiceException):
+    pass

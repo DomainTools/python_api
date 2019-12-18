@@ -8,7 +8,7 @@ from datetime import datetime
 
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException,
-                                    IncompleteResponseException)
+                                    IncompleteResponseException, RequestUriTooLongException)
 from requests import Session
 
 try: # pragma: no cover
@@ -56,8 +56,14 @@ class Results(MutableMapping, MutableSequence):
 
     def _make_request(self):
         with Session() as session:
-            return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
-                               **self.api.extra_request_params)
+            if self.product in ['iris-investigate']:
+                post_data = self.kwargs.copy()
+                post_data.update(self.api.extra_request_params)
+                return session.post(url=self.url, verify=self.api.verify_ssl,
+                        data=post_data)
+            else:
+                return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
+                        **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
@@ -124,7 +130,9 @@ class Results(MutableMapping, MutableSequence):
         elif code == 503: # pragma: no cover
             raise ServiceUnavailableException(code, reason)
         elif code == 206: # pragma: no cover
-            return IncompleteResponseException(code, reason)
+            raise IncompleteResponseException(code, reason)
+        elif code == 414: # pragma: no cover
+            raise RequestUriTooLongException(code, reason)
         else: # pragma: no cover
             raise ServiceException(code, 'Unknown Exception')
 
