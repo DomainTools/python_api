@@ -57,8 +57,10 @@ class Results(MutableMapping, MutableSequence):
     def _make_request(self):
         with Session() as session:
             if self.product in ['iris-investigate']:
+                post_data = self.kwargs.copy()
+                post_data.update(self.api.extra_request_params)
                 return session.post(url=self.url, verify=self.api.verify_ssl,
-                        data={**self.kwargs, **self.api.extra_request_params})
+                        data=post_data)
             else:
                 return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
                         **self.api.extra_request_params)
