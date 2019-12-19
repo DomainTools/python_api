@@ -59,7 +59,7 @@ class Results(MutableMapping, MutableSequence):
             if self.product in ['iris-investigate']:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
-                return session.post(url=self.url, verify=self.api.verify_ssl,
+                return session.post(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
                         data=post_data)
             else:
                 return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
