@@ -12,7 +12,7 @@ AVAILABLE_KEY_SIGN_HASHES = ['sha1', 'sha256', 'md5']
 
 def delimited(items, character='|'):
     """Returns a character delimited version of the provided list as a Python string"""
-    return '|'.join(items) if type(items) in (list, tuple, set) else items
+    return character.join(items) if type(items) in (list, tuple, set) else items
 
 
 class API(object):
