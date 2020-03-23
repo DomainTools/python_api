@@ -2,10 +2,14 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
     uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
@@ -294,9 +298,80 @@ interactions:
         7mKDImmESHp8fOjE53Uf1eWI8L4in6NmNw3BNv09J7tbPc8/2uKIVK3zV+waIuNW3H48MKqaH9t2
         Kwi6v5zHbjv1vahvWkeC3+bh//Ov//zn/wH0H8kX88MBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:47 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:30:47 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.20.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&exclude_query=domaintoolssucks+ff1toolsdomain&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=domain+tools
+  response:
+    body:
+      string: !!binary |
+        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
+        589/57prxcxGAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 23 Mar 2020 06:10:21 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '16180'
+    status:
+      code: 200
+      message: OK
 version: 1
