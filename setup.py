@@ -20,7 +20,7 @@ if major >= 3:
         requires.append('aiohttp==3.4.4')
     if minor > 5:
         packages.append('domaintools_async')
-        requires.append('aiohttp>=3.4.4,<4.0.0')
+        requires.append('aiohttp>=3.6.0,<4.0.0')
 elif major == 2 and minor <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
