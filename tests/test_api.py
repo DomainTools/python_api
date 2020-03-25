@@ -81,6 +81,13 @@ def test_domain_search():
             assert 'has_hyphen' in domain
             assert 'tlds_count' in domain
 
+    exclude_list = ['domaintools', 'ff1toolsdomain']
+    api_call = api.domain_search('domain tools', exclude_query=exclude_list)
+    with api_call as response:
+
+        for domain in response:
+            assert domain['sld'] not in exclude_list
+
 
 @vcr.use_cassette
 def test_domain_suggestions():
@@ -425,4 +432,3 @@ def test_iris_investigate():
     assert investigation_results['results_count']
     for result in investigation_results:
         assert result['domain'] == 'amazon.com' or result['domain'] == 'google.com'
-
