@@ -33,6 +33,7 @@ class Results(MutableMapping, MutableSequence):
         self._items_list = None
         self._data = None
         self._limit_exceeded = None
+        self._limit_exceeded_message = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
