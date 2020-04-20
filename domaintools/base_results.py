@@ -29,9 +29,10 @@ class Results(MutableMapping, MutableSequence):
         self.items_path = items_path
         self.response_path = response_path
         self.kwargs = kwargs
-        self._data = None
         self._response = None
         self._items_list = None
+        self._data = None
+        self._limit_exceeded = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -87,16 +88,33 @@ class Results(MutableMapping, MutableSequence):
     def data(self):
         if self._data is None:
             results = self._get_results()
-            raise_after = self.setStatus(results.status_code, results)
+            self.setStatus(results.status_code, results)
             if self.kwargs.get('format', 'json') == 'json':
                 self._data = results.json()
             else:
                 self._data = results.text
+            limit_exceeded, message = self.test_limit_exceeded()
 
-            if raise_after:
-                raise raise_after
+            if limit_exceeded:
+                self._limit_exceeded = True
+                self._limit_exceeded_message = message
 
-        return self._data
+        if self._limit_exceeded is True:
+            raise ServiceException(503, f"Limit Exceeded {self._limit_exceeded_message}")
+        else:
+            return self._data
+
+    def test_limit_exceeded(self):
+        if self.kwargs.get('format', 'json') == 'json':
+            if ("response" in self._data and
+                "limit_exceeded" in self._data['response'] and
+                self._data['response']['limit_exceeded'] is True):
+                return True, self._data['response']['message']
+        else:
+            # TODO: handle html, xml response errors better.
+            if "response" in self._data and "limit_exdeeded" in self._data:
+                return True, "limit exceeded"
+        return False, ""
 
     @property
     def status(self):
