@@ -394,6 +394,7 @@ def test_iris():
             assert 'domain' in result
             assert str(result['domain'])
 
+
 @vcr.use_cassette
 def test_risk():
     with api.risk(domain='google.com') as result:
@@ -432,3 +433,10 @@ def test_iris_investigate():
     assert investigation_results['results_count']
     for result in investigation_results:
         assert result['domain'] == 'amazon.com' or result['domain'] == 'google.com'
+
+
+@vcr.use_cassette
+def test_limit_exceeded():
+    with pytest.raises(exceptions.ServiceException):
+        response = api.iris_investigate(ip="8.8.8.8")
+        response.response()
