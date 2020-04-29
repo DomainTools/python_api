@@ -4,7 +4,7 @@ import aiohttp
 
 from domaintools.base_results import Results
 
-from domaintools.exceptions import ServiceUnavailableException
+from domaintools.exceptions import ServiceUnavailableException, ServiceException
 
 class _AIter(object):
     """A wrapper to wrap an AsyncResults as an async iterable"""
@@ -41,6 +41,11 @@ class AsyncResults(Results):
                 self._data = await results.json()
             else:
                 self._data = await results.text()
+            limit_exceeded, message = self.check_limit_exceeded()
+
+            if limit_exceeded:
+                self._limit_exceeded = True
+                self._limit_exceeded_message = message
 
     async def __awaitable__(self):
         if self._data is None:
