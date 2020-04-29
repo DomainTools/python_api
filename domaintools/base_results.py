@@ -94,7 +94,7 @@ class Results(MutableMapping, MutableSequence):
                 self._data = results.json()
             else:
                 self._data = results.text
-            limit_exceeded, message = self.test_limit_exceeded()
+            limit_exceeded, message = self.check_limit_exceeded()
 
             if limit_exceeded:
                 self._limit_exceeded = True
@@ -105,7 +105,7 @@ class Results(MutableMapping, MutableSequence):
         else:
             return self._data
 
-    def test_limit_exceeded(self):
+    def check_limit_exceeded(self):
         if self.kwargs.get('format', 'json') == 'json':
             if ("response" in self._data and
                 "limit_exceeded" in self._data['response'] and

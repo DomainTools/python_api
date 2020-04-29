@@ -41,7 +41,7 @@ class AsyncResults(Results):
                 self._data = await results.json()
             else:
                 self._data = await results.text()
-            limit_exceeded, message = self.test_limit_exceeded()
+            limit_exceeded, message = self.check_limit_exceeded()
 
             if limit_exceeded:
                 self._limit_exceeded = True
