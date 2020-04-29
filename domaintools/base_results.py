@@ -101,7 +101,7 @@ class Results(MutableMapping, MutableSequence):
                 self._limit_exceeded_message = message
 
         if self._limit_exceeded is True:
-            raise ServiceException(503, f"Limit Exceeded {self._limit_exceeded_message}")
+            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
         else:
             return self._data
 
