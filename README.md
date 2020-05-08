@@ -201,3 +201,9 @@ To avoid having to type in your API key repeatedly, you can specify them in `~/.
 API_USER
 API_KEY
 ```
+
+Python Version Support Policy
+===================
+
+Please see the [supported versions](https://github.com/DomainTools/python_api/raw/master/PYTHON_SUPPORT.md) document 
+for the DomainTools Python support policy.
