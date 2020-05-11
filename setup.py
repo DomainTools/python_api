@@ -71,15 +71,16 @@ class PyTest(TestCommand):
 cmdclass['test'] = PyTest
 
 try:
-   import pypandoc
-   readme = pypandoc.convert('README.md', 'rst')
+   with open("README.md", "r") as f:
+       readme = f.read()
 except (IOError, ImportError, OSError, RuntimeError):
    readme = ''
 
 setup(name='domaintools_api',
-      version='0.5.0',
+      version='0.5.1',
       description="DomainTools' Official Python API",
       long_description=readme,
+      long_description_content_type="text/markdown",
       author='DomainTools',
       author_email='timothy@domaintools.com',
       url='https://github.com/domaintools/python_api',
