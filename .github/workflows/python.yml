@@ -1,6 +1,6 @@
 on: [push]
 
-name: DomainTool Python API Python package
+name: Tests
 
 jobs:
   test:
