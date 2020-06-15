@@ -2,7 +2,7 @@
 ===================
 
 [![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools_api)
-[![Build Status](https://travis-ci.org/DomainTools/python_api.svg?branch=master)](https://travis-ci.org/DomainTools/python_api)
+[![CI Status](https://github.com/domaintools/python_api/workflows/Python/badge.svg)](https://github.com/domaintools/python_api/actions)
 [![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=master)](https://coveralls.io/github/DomainTools/python_api?branch=master)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 
