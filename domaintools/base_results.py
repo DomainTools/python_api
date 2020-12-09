@@ -8,7 +8,7 @@ from datetime import datetime
 
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException,
-                                    IncompleteResponseException)
+                                    IncompleteResponseException, RequestUriTooLongException)
 from requests import Session
 
 try: # pragma: no cover
@@ -29,9 +29,11 @@ class Results(MutableMapping, MutableSequence):
         self.items_path = items_path
         self.response_path = response_path
         self.kwargs = kwargs
-        self._data = None
         self._response = None
         self._items_list = None
+        self._data = None
+        self._limit_exceeded = None
+        self._limit_exceeded_message = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -56,8 +58,15 @@ class Results(MutableMapping, MutableSequence):
 
     def _make_request(self):
         with Session() as session:
-            return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
-                               **self.api.extra_request_params)
+            session.proxies = self.api.extra_request_params.get('proxies', session.proxies)
+            if self.product in ['iris-investigate']:
+                post_data = self.kwargs.copy()
+                post_data.update(self.api.extra_request_params)
+                return session.post(url=self.url, verify=self.api.verify_ssl,
+                        data=post_data)
+            else:
+                return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
+                        **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
@@ -81,16 +90,33 @@ class Results(MutableMapping, MutableSequence):
     def data(self):
         if self._data is None:
             results = self._get_results()
-            raise_after = self.setStatus(results.status_code, results)
+            self.setStatus(results.status_code, results)
             if self.kwargs.get('format', 'json') == 'json':
                 self._data = results.json()
             else:
                 self._data = results.text
+            limit_exceeded, message = self.check_limit_exceeded()
 
-            if raise_after:
-                raise raise_after
+            if limit_exceeded:
+                self._limit_exceeded = True
+                self._limit_exceeded_message = message
 
-        return self._data
+        if self._limit_exceeded is True:
+            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
+        else:
+            return self._data
+
+    def check_limit_exceeded(self):
+        if self.kwargs.get('format', 'json') == 'json':
+            if ("response" in self._data and
+                "limit_exceeded" in self._data['response'] and
+                self._data['response']['limit_exceeded'] is True):
+                return True, self._data['response']['message']
+        else:
+            # TODO: handle html, xml response errors better.
+            if "response" in self._data and "limit_exdeeded" in self._data:
+                return True, "limit exceeded"
+        return False, ""
 
     @property
     def status(self):
@@ -124,7 +150,9 @@ class Results(MutableMapping, MutableSequence):
         elif code == 503: # pragma: no cover
             raise ServiceUnavailableException(code, reason)
         elif code == 206: # pragma: no cover
-            return IncompleteResponseException(code, reason)
+            raise IncompleteResponseException(code, reason)
+        elif code == 414: # pragma: no cover
+            raise RequestUriTooLongException(code, reason)
         else: # pragma: no cover
             raise ServiceException(code, 'Unknown Exception')
 

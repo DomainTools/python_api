@@ -81,6 +81,13 @@ def test_domain_search():
             assert 'has_hyphen' in domain
             assert 'tlds_count' in domain
 
+    exclude_list = ['domaintools', 'ff1toolsdomain']
+    api_call = api.domain_search('domain tools', exclude_query=exclude_list)
+    with api_call as response:
+
+        for domain in response:
+            assert domain['sld'] not in exclude_list
+
 
 @vcr.use_cassette
 def test_domain_suggestions():
@@ -328,6 +335,9 @@ def test_exception_handling():
         api._results('i_made_this_product_up', '/v1/steianrstierstnrsiatiarstnsto.com/whois').data()
     with pytest.raises(exceptions.NotAuthorizedException):
         API('notauser', 'notakey').domain_search('amazon').data()
+    with pytest.raises(ValueError, match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5"):
+        API('notauser', 'notakey', always_sign_api_key=True, key_sign_hash='notahash').domain_search('amazon')
+
 
 
 @vcr.use_cassette
@@ -384,6 +394,7 @@ def test_iris():
             assert 'domain' in result
             assert str(result['domain'])
 
+
 @vcr.use_cassette
 def test_risk():
     with api.risk(domain='google.com') as result:
@@ -423,3 +434,9 @@ def test_iris_investigate():
     for result in investigation_results:
         assert result['domain'] == 'amazon.com' or result['domain'] == 'google.com'
 
+
+@vcr.use_cassette
+def test_limit_exceeded():
+    with pytest.raises(exceptions.ServiceException):
+        response = api.iris_investigate(ip="8.8.8.8")
+        response.response()

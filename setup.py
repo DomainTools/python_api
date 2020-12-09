@@ -20,7 +20,7 @@ if major >= 3:
         requires.append('aiohttp==3.4.4')
     if minor > 5:
         packages.append('domaintools_async')
-        requires.append('aiohttp>=3.4.4,<4.0.0')
+        requires.append('aiohttp>=3.6.0,<4.0.0')
 elif major == 2 and minor <= 6:
     requires.extend(['ordereddict', 'argparse'])
 
@@ -71,15 +71,16 @@ class PyTest(TestCommand):
 cmdclass['test'] = PyTest
 
 try:
-   import pypandoc
-   readme = pypandoc.convert('README.md', 'rst')
+   with open("README.md", "r") as f:
+       readme = f.read()
 except (IOError, ImportError, OSError, RuntimeError):
    readme = ''
 
 setup(name='domaintools_api',
-      version='0.3.3',
+      version='0.5.2',
       description="DomainTools' Official Python API",
       long_description=readme,
+      long_description_content_type="text/markdown",
       author='DomainTools',
       author_email='timothy@domaintools.com',
       url='https://github.com/domaintools/python_api',
@@ -100,13 +101,11 @@ setup(name='domaintools_api',
                    'Environment :: Console',
                    'License :: OSI Approved :: MIT License',
                    'Programming Language :: Python',
-                   'Programming Language :: Python :: 2',
-                   'Programming Language :: Python :: 2.6',
                    'Programming Language :: Python :: 2.7',
-                   'Programming Language :: Python :: 3',
-                   'Programming Language :: Python :: 3.3',
-                   'Programming Language :: Python :: 3.4',
                    'Programming Language :: Python :: 3.5',
+                   'Programming Language :: Python :: 3.6',
+                   'Programming Language :: Python :: 3.7',
+                   'Programming Language :: Python :: 3.8',
                    'Topic :: Software Development :: Libraries',
                    'Topic :: Utilities'],
       **PyTest.extra_kwargs)
