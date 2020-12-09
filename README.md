@@ -93,6 +93,35 @@ xml = str(api.domain_search('google').xml())
 html = str(api.domain_search('google').html())
 ```
 
+Besides the Iris Investigate method letting you lookup domains, it can also be used to search for domains sharing common attributes. For instance, you can pass it an IP to bring back all domains sharing that IP:
+
+```python
+api.iris_investigate(ip='ENTER_IP_ADDRESS_HERE')
+```
+
+Other args you can use are below:
+- **ip**: Search for domains having this IP.
+- **email**: Search for domains with this email in their data.
+- **email_domain**: Search for domains where the email address uses this domain.
+- **nameserver_host**: Search for domains with this nameserver.
+- **nameserver_domain**: Search for domains with a nameserver that has this domain.
+- **nameserver_ip**: Search for domains with a nameserver on this IP.
+- **registrar**: Search for domains with this registrar.
+- **registrant**: Search for domains with this registrant name.
+- **registrant_org**: Search for domains with this registrant organization.
+- **mailserver_host**: Search for domains with this mailserver.
+- **mailserver_domain**: Search for domains with a mailserver that has this domain.
+- **mailserver_ip**: Search for domains with a mailserver on this IP.
+- **redirect_domain**: Search for domains which redirect to this domain.
+- **ssl_hash**: Search for domains which have an SSL certificate with this hash.
+- **ssl_subject**: Search for domains which have an SSL certificate with this subject string.
+- **ssl_email**: Search for domains which have an SSL certificate with this email in it.
+- **ssl_org**: Search for domains which have an SSL certificate with this organization in it.
+- **google_analytics**: Search for domains which have this Google Analytics code.
+- **adsense**: Search for domains which have this AdSense code.
+- **tld**: Filter by TLD. Must be combined with another parameter.
+- **search_hash**: Use search hash from Iris to bring back domains.
+
 If any API call is unsuccesfull, one of the exceptions defined in `domaintools.exceptions` will be raised:
 
 ```python-traceback

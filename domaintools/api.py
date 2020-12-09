@@ -298,6 +298,7 @@ class API(object):
             - google_analytics: Search for domains which have this Google Analytics code.
             - adsense: Search for domains which have this AdSense code.
             - tld: Filter by TLD. Must be combined with another parameter.
+            - search_hash: Use search hash from Iris to bring back domains.
 
         You can loop over results of your investigation as if it was a native Python list:
 
