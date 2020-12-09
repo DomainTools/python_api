@@ -1,0 +1,41 @@
+interactions:
+- request:
+    body: !!python/unicode 'api_key=fde3b-8cfc3-2e1b7-58eca-a1156&ip=8.8.8.8'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.23.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAzWMQQ7CMAwEv2L5DKgXLv0DL0AoishSLNUJ2InUqurfGw5cZ3dmY4N/SnbwuPEs
+        KjVgeQIJicdqDSd+Rw9aDKFf21z9zxXuceoi3+Ii2pSuwzCQoTbLSHSmtTTSuFLuPaqlTy/J+GGj
+        b4OtF+4ZcZc8hVQ0Su71+2PfDzk/D2uYAAAA
+    headers:
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 29 Apr 2020 21:09:30 GMT
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '794364'
+    status:
+      code: 200
+      message: OK
+version: 1
