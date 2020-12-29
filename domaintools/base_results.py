@@ -59,7 +59,7 @@ class Results(MutableMapping, MutableSequence):
     def _make_request(self):
         with Session() as session:
             session.proxies = self.api.extra_request_params.get('proxies', session.proxies)
-            if self.product in ['iris-investigate']:
+            if self.product in ['iris-investigate', 'iris-enrich']:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
                 return session.post(url=self.url, verify=self.api.verify_ssl,
