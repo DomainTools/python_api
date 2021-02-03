@@ -1,13 +1,21 @@
 interactions:
 - request:
-    body: null
+    body: domain=google.com
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
-    method: GET
-    uri: https://api.domaintools.com/v1/iris-enrich/?domain=google.com
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '160'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.20.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-enrich/
   response:
     body:
       string: !!binary |
@@ -28,9 +36,15 @@ interactions:
         nNB4SmKMSRllaR7E6SQncTbFaZJOHi9is9n85TLgJg2HVdvbb8a01HDDxf1WDoQGHwUs20XjpoAU
         hsFCblBVO2ILs5NgehIFH8JoFsSzKPLzHL6pxBFexbS2m1874doh7r4DpGW64PQLAAA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:32:29 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:32:29 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1
