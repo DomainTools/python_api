@@ -198,9 +198,10 @@ class API(object):
         """Pass in a domain name or an IP address to perform a whois lookup."""
         return self._results('whois', '/v1/{0}/whois'.format(query), **kwargs)
 
-    def whois_history(self, query, **kwargs):
+    def whois_history(self, query, mode=None, sort=None, offset=None, limit=None, **kwargs):
         """Pass in a domain name."""
-        return self._results('whois-history', '/v1/{0}/whois/history'.format(query), items_path=('history', ), **kwargs)
+        return self._results('whois-history', '/v1/{0}/whois/history'.format(query), mode=mode, sort=sort,
+          offset=offset, limit=limit, items_path=('history', ), **kwargs)
 
     def phisheye(self, query, days_back=None, **kwargs):
         """Returns domain results for the specified term for today or the specified number of days_back.
