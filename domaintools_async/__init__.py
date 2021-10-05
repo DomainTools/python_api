@@ -1,6 +1,7 @@
 """Adds async capabilities to the base product object"""
 import asyncio
 import aiohttp
+import ssl
 
 from domaintools.base_results import Results
 
@@ -49,7 +50,13 @@ class AsyncResults(Results):
 
     async def __awaitable__(self):
         if self._data is None:
-            async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=self.api.verify_ssl)) as session:
+            verify_ssl = True
+            if isinstance(self.api.verify_ssl, str):
+                sslcontext = ssl.create_default_context(cafile=self.api.verify_ssl)
+                self.api.extra_aiohttp_params['ssl'] = sslcontext
+            elif isinstance(self.api.verify_ssl, bool):
+                verify_ssl = self.api.verify_ssl
+            async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=verify_ssl)) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
                     try:
