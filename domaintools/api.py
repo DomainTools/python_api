@@ -187,10 +187,12 @@ class API(object):
         return self._results('reverse-name-server', '/v1/{0}/name-server-domains'.format(query),
                             items_path=('primary_domains', ), limit=limit, **kwargs)
 
-    def reverse_whois(self, query, exclude=[], scope='current', mode=None, **kwargs):
+    def reverse_whois(self, query, exclude=None, scope='current', mode='purchase', **kwargs):
         """List of one or more terms to search for in the Whois record,
            as a Python list or separated with the pipe character ( | ).
         """
+        if exclude is None:
+            exclude = []
         return self._results('reverse-whois', '/v1/reverse-whois', terms=delimited(query), exclude=delimited(exclude),
                             scope=scope, mode=mode, **kwargs)
 
