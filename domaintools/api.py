@@ -91,6 +91,7 @@ class API(object):
                                            ''.join([self.username, parameters['timestamp'], path]).encode('utf8'),
                                            digestmod=signing_hash).hexdigest()
 
+
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
         return self._results('account-information', '/v1/account', items_path=('products',), **kwargs)
@@ -194,7 +195,7 @@ class API(object):
         return self._results('reverse-name-server', '/v1/{0}/name-server-domains'.format(query),
                              items_path=('primary_domains',), limit=limit, **kwargs)
 
-    def reverse_whois(self, query, exclude=None, scope='current', mode=None, **kwargs):
+    def reverse_whois(self, query, exclude=None, scope='current', mode='purchase', **kwargs):
         """List of one or more terms to search for in the Whois record,
            as a Python list or separated with the pipe character ( | ).
         """
