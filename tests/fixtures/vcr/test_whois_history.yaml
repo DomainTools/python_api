@@ -2,10 +2,14 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
     uri: https://api.domaintools.com/v1/woot.com/whois/history
   response:
@@ -262,9 +266,619 @@ interactions:
         QTh3rb/WX+uv9df6a/2/yNa/zGFmUc+LPlBeSOuv9df6a/21/l9o6//ljEP/27/+9f8B5sXhJ3iQ
         EAA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:31:07 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:31:07 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:17 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4712927'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:17:54 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4635715'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy3KMQqAMAwAwK9IXMWCikN3B//QRWpAwTYlSekg/bsKrsfdgMzEYGGNihy3q1k+
+        aNpxmCfogFEos0cBe4PklIj13YdqEuuMM6WUfqewnVGJLuk9BWf+6AzU+gCJwBa4YwAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html
+      Date:
+      - Wed, 13 Oct 2021 20:38:20 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4099966'
+    status:
+      code: 500
+      message: Internal Server Error
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy3KMQqAMAwAwK9IXMWCikN3B//QRWpAwTYlSekg/bsKrsfdgMzEYGGNihy3q1k+
+        aNpxmCfogFEos0cBe4PklIj13YdqEuuMM6WUfqewnVGJLuk9BWf+6AzU+gCJwBa4YwAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html
+      Date:
+      - Wed, 13 Oct 2021 21:28:14 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '9090059'
+    status:
+      code: 500
+      message: Internal Server Error
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:43:53 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '2669389'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:42 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '1784865'
+    status:
+      code: 429
+      message: Too Many Requests
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrCMBAFf2XZk4K0BfHSPxF6icnTFpJu3U1aRfrvRvA4zMB8GKqi3H/YSwD3
+        l+584gQz96jEVyk0uhWElwcCAuURlNxrSiXRXNINSnInxbPAspGLUbaalTlU85aiZNB18qCIFZEO
+        l647NryfWGFVe9jvbmVZRHNdjjkv1g/t0G7b1gRJbpqzSLTGSxrafzi0vO9fJIaPUr4AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:37:46 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '9859'
+    status:
+      code: 503
+      message: Service Unavailable
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrCMBAFf2XZk4K0BfHSPxF6icnTFpJu3U1aRfrvRvA4zMB8GKqi3H/YSwD3
+        l+584gQz96jEVyk0uhWElwcCAuURlNxrSiXRXNINSnInxbPAspGLUbaalTlU85aiZNB18qCIFZEO
+        l647NryfWGFVe9jvbmVZRHNdjjkv1g/t0G7b1gRJbpqzSLTGSxrafzi0vO9fJIaPUr4AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:38:47 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '9500'
+    status:
+      code: 503
+      message: Service Unavailable
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:12 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '6489993'
+    status:
+      code: 200
+      message: OK
 version: 1

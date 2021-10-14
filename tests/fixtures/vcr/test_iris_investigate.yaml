@@ -106,4 +106,582 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:30:38 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '128903'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:19:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '158491'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+1abW/byBH+K4I+FjKz70saMJA0LdoDcndFk7Yf6oBYkSuJF76Vu4rtBP7vnSVl
+        aUmRipNTru7BsAFL3JnZZ2dmd2ce+vO80aauSqPnl5/neVZkNta3idapTueXK5UbvZhvlImLqtEx
+        yG5za/YDhTZGrUF1/ufyl+pudldtm1mqrArmi/lOOE6qbWnnl2Qxt5VVufd9b+7fn+dpVaisBEuq
+        UJ+qMkiqAmzcbKrMxNsmh4GNtbW5vH5x/aJ9GnQatqpy46SvX/Q0VWr0blUfVb51GOHpbm50DwK5
+        vlXzS4zhY2KzjyBhmy0sal1V61zHqlT5nc0Sc8JEWmQlrKe0YMGJlarozfjXythCGaubxexVi272
+        Rq9VPvuTrm1wMIbBWNWsfdWd+DudbMoqr9aZNovZD2Uy0DK20dr6in8Lfg5mf6xuZyFG5CBMKeMC
+        FJLM3vnif9dl5ZlEDDHa2lW2t5Sf/nmQEgIR7BxQw/pU7ouFEUfSm5URKe93X5vexFtzECM4ZEJy
+        7kTrTVX2ZsYECSIEQ4J5hjnnBKRX6nZEViKMPFkSUrd0DfmSt8n2IL7Zx+dlL3keFIUI5f17UF1m
+        eZ6V61Ox7qfGIJr9weOg9ceHMRpqD0LTHz6OycD4cSgGBoYB6A8PPN4ffHCx81mj1xmsVJX2eYv8
+        frdIFMpui1gXhixpD/jnaP9Oo005ZW20k0aDP+J04BQcRewC4wuEPRdGzn/6ts4aZbOqPFIiiIAS
+        uqAexEji/XkSP9QGHtAxdIyGnEWwsINYoZoPRVVmtmr6spgjTGV0/x4iW6n42BNNVdlRH0hMaKtm
+        8r3ae1cLpJlbHeR/V7Qcm1TLrdFgq85d3WJeToPDkWAcu1myujUB1qFY6pUiWIqAkgAjGhDE/UuL
+        udLE9PyFBUfRIbsEIYQR7ibYJSJs2lRPZSOVFNzFRQiGM1P3NldTpbMfVHoQ5ozcuxCMQAacAeE4
+        gLkdbi9yQvyGmF/tozo8P1BIKGZoCj9nAaFRQMIg9BxOQvybg+8dg8NVCAzZI/i9m624bVG5fe1b
+        6RL7whS2DsaSHMPWWOxr8tPbjmK3v3eJuncVRBiDqzANMPdOXeZA1U1WNe2x23rEXRKx0c1H3YyC
+        LQ0OaoqD9K7UiQ1KON4P2QZ+HUU6JkwkY1gcgyUoDCT8ooDinmnqzroxQOQEIIrPAIgF4DnCh4go
+        mkJEJxExeUYX4R4gMM2nALFpQHCznc9FA0RCinFEderyCPrNRsGn/iSwZWhIRjGNK3C41CIyjkoC
+        MPCWfwNizAiZhiUOsJIq2H7wNOGSp+POGkiGUcQjOeEoBwlzH1LEEA4B0fsH03GTmQ/OvvsbmwTa
+        fSjpnXxRQ/1R7tr0rqCbf9JNlUN179p8X96tcCdiN65EiOumWmW5frRgXKj8RjVfoVBvMrOB5uzx
+        GqZWxZF017KkWaOTE63Zg0R8HJCh4L77+TVFsGfm2+rhBwONr/sjVB4/dpXHSZ3YVb1bF/l5kmeQ
+        BKnOtdXgx022zKxOZ91jB9CsdHM0sK1dsec97o75IzPd4xEz3cDQzNzVX/UqzspV1XneVWPdN3eB
+        KLPxl4u0WKaJ0nChagpbPREpljSJlhiThHK5WvFIyCXpe8Fsl78McuH1T1c3Nzfejbn4+epQTVxf
+        d85cvLl6C+lmc714++7qX6rNTluVi9dX/3jrnWxdj6PK7FNbF4+XKMP4UNZvs49XqxAPdbLSSK3S
+        CMkk0SjCS7pClBLBEjiyiUoRCb32ZXK1fwhqvQ4U+fRrFyvOsViIus3T9uxryUG9NJAN8YHBJAhO
+        LMc/xl3GpLHNCg1JXNRdn4Fdn4HpOyQveXTZFiZWrc2DK/ckZMcBfgsJ2dN8NAn5HTnIk7zUX9p5
+        Zm/evO71a213eGaW6vUrbwrKKMXyG+mqRzfK30BcHcYNnFGJnTX6P1vIoFkrMFtVTTFTdnZIgy4B
+        TDBo5nb5MciH/enyzCl+T07xOeWfaMo/iiN8jt4Tjd405ycvUHSBeS8k4RdJv7DV8mggqM3IKdLv
+        u67wLKwhtHAX7Y38cmwSQijBT4M8ZKRlFwiWgfAqQUyiES6LY3HgsqB+5lEo8Rm4rG4z+3QChx8m
+        p/g3H7X0ULMofPKocUBpDzSV5CmDlqR1M2YBQcJ/A4D+T1D7DQ5GTyNBThCyucWBMnVxG+TB6NmB
+        mWRTtOyoAkWUk2jPCPV4V4LGuCgAQb4AgjJJWpbpDCDoFAh6EgQmzvNknGX9ahBsCgT7AggiBBb0
+        PCD4OIiTkYgEZ+xM82P0WB5+1Bfu7cZXAAHcIzQlFu3LlfaVlk+AEjnJeZNxODzi4dngsD4cGiE8
+        TcGPTQAbH50NjeihkTQ8Qb+PgsFknE3+FjBhHwwS9JlQ/p8QypOCj2mewoiRZ564XW6IU7rEFDGm
+        GcIaSxmRFRUKej8hlEq1jiIGDx7LE4+eTugEEzpJfBxjxXgpBEpDHgquBRE6ERJqGEXUioWRZkqk
+        ekmZ/x8i0Qmadwxqq/C1UM/I0Qo4yi8Z9zlaV0BlxjjabNfltY/v/wsGxijXxyoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:40:04 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '124662'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:30:01 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '94994'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:45:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '90978'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:53:27 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '114635'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+1ZbW/byBH+K4I+Fjaz70saMJA0LdoDcndFk7Yf6oBYkSuLF76Vu4rtBP7vnSX1
+        sqRIxfYpd8bBgAFL5MzsszOzszOPvs4bbeqqNHp+8XWeZ0VmY32baJ3qdH6xVLnRZ/OVMnFRNToG
+        2XVuze5FoY1R16A6/2v5S3U3u6vWzSxVVgXzs/lGOE6qdWnnF+Rsbiurcu/7ztx/v87TqlBZCZZU
+        ob5UZZBUBdi4WVWZiddNDi9W1tbm4urV1av2adBp2KrKjZO+etXTVKnRm119VvnaYYSnm7XRPQjk
+        +lbNLzCGj4nNPoOEbdawqeuqus51rEqV39ksMUdMpEVWwn5KCxacWKmK3op/r4wtlLG6OZu9adHN
+        3ulrlc/+omsb7I1hMFY1177qRvyDTlZllVfXmTZnsx/KZKBlbKO19RX/EfwczP5c3c5CjMhemFLG
+        BSgkmb3zxf+py8oziRgitLWrbG8rP/17LyUEosxJ1bA/lftiYcSR9FZlhDuY7demt/Da7MUIDjkW
+        RDjRelWVvZUxQfBKMCSYZ5hzwkF6qW5HZCXCyJMlIYpAVkO+5G2ybcVXu/i87iXPVlEIHt1/BNVF
+        ludZeX0s1v3UGESz//IwaP33wxgNtQeh6b8+jMnA+GEoBgaGAei/Hni8/3LrYuezRl9nsFNV2pcj
+        8sc9IlEoZXtErAtDlrQF/iXaf9BoU45EG+2k0eCPOB04BUcRO8f4HGHPhZHzjL6ts0bZrCoPlAgi
+        oITOqQcxkoRtEcbb3sADOoaO0VDwEDa2FytU86moysxWTV8Wc4Q5JvcfIbKVig890VSVHfWBxJAP
+        Ts3kO7WPrhdIM7c7yP+uaTk0qRZro8FWnbu+xbyeBocjwVG7Sla3JsA6NEu9VgRLEVASYEQDgrh/
+        aTnHKdPzFwZ70T67BAmplMwtsElEOLSpnspGKqlzlwjBcGbq3uFqqnT2g0r3wpzxexeCEciAM4D0
+        DwhrcXuRE+I3xPxmF9Vh/UAhDTmEdwI/ZwGhUUDCIPQcTkL8m4PvlcHhLgRmYUjFvVutuG1RuXPt
+        W+kS+9wUtg7GkhxLVx+25+74saPYne9Nou5cBRHG4CpMA8y9qisdqLrJqqYtu9x9dZdEbHTzWTej
+        YEuDg5riIL0rdWKDEsr7PttIWycOkY4JE8koJ4dgCQoDCX8ooLhnmrpaNwaIHAFE8QkAsQA8R/gQ
+        EUVTiOgkIiZP6CLcAwSm+RQgNg1IyFMA2rhogEjICUR16vII5s1Gwaf+InBk6ASmcQWOI85G0t6h
+        kgAMvOXfgBgzLKZhiT2spArWnzxNuOSJHAU2kAwjQIQmHOUgYe5DihjCISD6uDUdN5n55Oy7/7FJ
+        YNyHlt7JFzX0H+VmTO8auvkX3VQ5dPduzPfl3Q43InblWoS4bqpllusHC8aFym9U8wiFepWZFQxn
+        D9cwtSoOpLuRJc0anRwZzbYS8WFAhoK76efXNMGemaf1w1sDja/7I3QeP3adx1Gd2HW9axf5eZJn
+        kASpzrXV4MdVtsisTmfdYwfQLHVz8GJdu2bPe9yV+QMz3eMRM92LoZm567/qZZyVy6rzvOvGum/u
+        AlFm5W8XabFIE6XhQtUUjnoiUixpEi0wJgnlcrnkkZAL0veCWS9+GeTC258ub25uvBvz7OfLfTdx
+        ddU58+zd5XtIN5vrs/cfLv+j2uy0VXn29vJf773K1s04qsy+tH3xeIsyjA/dtcXdmH24W4V4qJOl
+        RmqZRkgmiUYRXtAlopQIlkDJJipFJPTGl8nd/imo9XWgyJdfu1lxis1C1G2etrWvJQf1wkA2xHsG
+        kyCoWI5/jLuMSWObFRqSuKi7OQO7OQOzDyiEgQmuL7Bi1bXZunJHQnYc4FNIyJ7mg0nI78hBHuWl
+        /tauM3v37m1vXqPi9CzV2zfeEjAtc+gPn0ZXPXhQfgJxtX9voEYldtbo/60hg2atwGxZNcVM2dk+
+        DboEMMFgmNvkxyAfdtXlhVP8npziS8o/05R/EEf4Er1nGr1pzk+eo+gc815Iwm+SfmGr5dFA0Jvt
+        tjZG+n3XHZ6ENYQR7ry9kV+PLUIIhW0/C/KQkZZdIFgGIvTznI9wWZCwey4L+mcehRKfgMvqDrNP
+        JwiMpYim+DcftfRQMxI+e9Q4oLQHmkrynEFL0roZs4Ag4XfkY+zyc0TtDzi4/bnj90d9hJDNLQ6U
+        qYvbIA9GawdmMuI4HOWCRhUoYkhKvmWEerwrQWNcFIAg3wBBOYyPJwJBp0DQoyAwoZyHYpxlfTQI
+        NgWCfQMEkTicYMkfDYKPgzgaiUgiSU+0Ply7D+ThR30hCHpMSnC6Q+H1A1i0P660P2n5BCjhcpqF
+        H4XDIzbO5T4FDuvDoWE4CYeOwpFMkJOhET00kspJMGwcTNfDngZM2AeDGH8hlH8XQnlS8CHDUxgx
+        8sITt9sNcUoXGAol0wxhjaWMyJIKxWC+FEqlWkcRgwcP5YlHqxM6woROEh+HWDFeCIHSEG5CrmGe
+        1ImANoMqopYsjDRTItUL6Na8jiU6QvOOQW0VHgv1hBytvEAELgCfo3UNVGaMo802U177+P7/NDbF
+        3scqAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:40:31 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '91989'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: domain=amazon.com%2Cgoogle.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '164'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-investigate/
+  response:
+    body:
+      string: !!binary |
+        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
+        3scqAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:43:57 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '101284'
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -15,8 +15,9 @@ def test_not_authenticated():
     (out_file, out_format, arguments) = cli.parse(args=['-c', 'non-existent', 'domain_search', 'google',
                                                         '--max-length', '100'])
     assert out_format == 'json'
-    assert not arguments.get('user', None)
-    assert not arguments.get('key', None)
+    print(arguments)
+    assert not arguments.get('user')
+    assert not arguments.get('key')
 
 
 def test_stream_in():

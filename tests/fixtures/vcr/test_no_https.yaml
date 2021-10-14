@@ -2,12 +2,16 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=94e26f6c1db28a8f88e378f39cba7d842945c027&timestamp=2018-07-23T21%3A50%3A06Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -295,20 +299,30 @@ interactions:
         iSJW2+YNnJoduOpMfai/+V0o9101K4WnFv3u5iskbOkarJozYlBdDmQI7u5qRqISqkNQ6S3qHOKb
         KS1XCqbGnA5vfF9Za1ovTauSjtne1olRnReHIv7173//fwgrJeBGxAEA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Mon, 23 Jul 2018 21:50:09 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 23 Jul 2018 21:50:09 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f9a707fdf419ee96288df0cca76eb8fc64f7e1fa&timestamp=2018-07-23T21%3A51%3A33Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -605,21 +619,32 @@ interactions:
         +EBWh0FS+cbs65lMcJ3SWH3AOUeaTJjjfuH4BNs14nA5m7U6Q2c76wjXdmULT+0GcA+mvjPc1y5G
         bzetSOGuZSu7Vk9LdFfWaF2cM4F9CcMQ3aDVTU4FYwAi+l49yL/+85//B5oA4KFGxAEA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Mon, 23 Jul 2018 21:51:35 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 23 Jul 2018 21:51:35 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=02bedb5efe1145930921eab060c795612ce0eaaa&timestamp=2018-07-23T23%3A52%3A42Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -907,20 +932,30 @@ interactions:
         nlr0u1uukLCla7BozohB9SWQIbi7qxmJWukFPOoxCNR4WX1DfFOpZUrB3Jnz5Q3uK1tNa7ZpVdEx
         +98uIap//ec//w9mb3j+RsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Mon, 23 Jul 2018 23:52:44 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 23 Jul 2018 23:52:44 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=cded47eb78a8d5e3c282b09cfe1e5e9f7fcc5276&timestamp=2018-07-23T23%3A54%3A03Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -1208,21 +1243,32 @@ interactions:
         nlr0u1uukLCla7BozohB9SWQIbi7qxmJWukFPOoxCNR4WX1DfFOpZUrB3Jnz5Q3uK1tNa7ZpVdEx
         +98uIap//ec//w9mb3j+RsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Mon, 23 Jul 2018 23:54:05 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 23 Jul 2018 23:54:05 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=aba798f571a65b457861acc542e36f93c17d4b4c&timestamp=2018-07-23T23%3A57%3A04Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -1519,20 +1565,30 @@ interactions:
         iW98IKvDIKl8Y/b1TCa4TmmsPuCcI00mzHG/cHyC7RpxuJzNWp2hs511hGu7soWndgO4B1PfGe5r
         F6O3m1akcNeylV2rpyW6K2u0Ls6ZwL6EYYhu0Oomp4IxABF9rx7kX//+9/8HQSAItEbEAQA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Mon, 23 Jul 2018 23:57:06 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 23 Jul 2018 23:57:06 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=7fbfda8e9174966b91694ed6779a5f377b95ff30&timestamp=2018-07-23T23%3A58%3A25Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -1820,21 +1876,32 @@ interactions:
         pxb97pYrJGzpGiyaM2JQfQlkCO7uakaiVnoBj3oMAjVeVt8Q31RqmVIwd+Z8eYP7ylbTmm1aVXTM
         /rdLiOpf//nP/wPaIWgbRsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Mon, 23 Jul 2018 23:58:27 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 23 Jul 2018 23:58:27 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e3dffc939a84b6c0b7af03f79510bae4d4144013&timestamp=2018-07-24T00%3A04%3A38Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -2131,20 +2198,30 @@ interactions:
         +EBWh0FS+cbs65lMcJ3SWH3AOUeaTJjjfuH4BNs14nA5m7U6Q2c76wjXdmULT+0GcA+mvjPc1y5G
         bzetSOGuZSu7Vk9LdFfWaF2cM4F9CcMQ3aDVTU4FYwAi+l49yL/+85//B5oA4KFGxAEA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Tue, 24 Jul 2018 00:04:39 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 24 Jul 2018 00:04:39 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=094ba7a3bbea3552e307eb3288ea771cfff27455&timestamp=2018-07-24T00%3A05%3A58Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -2432,21 +2509,32 @@ interactions:
         Gm5+F8t9N81K4allvztxhYwtXaNVc04Mqi+BDNHdXd1IVEZ1CCq9RZ1DQjNl5UrB1LjTEYzvG2vN
         6qVJKumY7W29GNXT4lDEv/797/8PQAV1pkbEAQA=
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Tue, 24 Jul 2018 00:06:00 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 24 Jul 2018 00:06:00 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=9d678db8a0bb4cd24f6ea2f2fcbb3bdfee850897&timestamp=2018-07-24T00%3A20%3A05Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -2734,20 +2822,30 @@ interactions:
         IWFL12DRnBGD6ksgQ3B3VzMStdILeNRjEKjxsvqG+KZSy5SCuTPnyxvcV7aa1mzTqqJj9r9dQlT/
         +s9//h8Nt1KHRsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Tue, 24 Jul 2018 00:20:06 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 24 Jul 2018 00:20:06 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=a1ef6f844a2277b09b9c47f41c811fc411dee21f&timestamp=2018-07-24T00%3A21%3A25Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -3035,21 +3133,32 @@ interactions:
         DTe/ixVfmGal8NSy3524QsaWrtGqOScG1ZdAhujurm4kKiNTHpXeos4hoZmycqVgatzpCMb3jbVm
         9dIklXTM9rZejOppcSjiX//+9/8Hai07K0bEAQA=
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Tue, 24 Jul 2018 00:21:27 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 24 Jul 2018 00:21:27 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=771eb840145de54eb96a78f79dc9a161da94148e&timestamp=2018-07-24T00%3A28%3A29Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -3337,20 +3446,30 @@ interactions:
         nlr0u1uukLCla7BozohB9SWQIbi7qxmJWukFPOoxCNR4WX1DfFOpZUrB3Jnz5Q3uK1tNa7ZpVdEx
         +98uIap//ec//w9mb3j+RsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Tue, 24 Jul 2018 00:28:31 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 24 Jul 2018 00:28:31 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e4981f53443ac2668767a20f4628c0f290c4e87c&timestamp=2018-07-24T00%3A29%3A50Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -3638,21 +3757,32 @@ interactions:
         SNjSNVg0Z8Sg+hLIENzd1YxErfQCHvUYBGq8rL4hvqnUMqVg7sz58gb3la2mNdu0quiY/W+XENW/
         /vOf/wex+UJiRsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Tue, 24 Jul 2018 00:29:51 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 24 Jul 2018 00:29:51 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=a1e85032b6fd495e9f688178728d4f2ef5e1983b&timestamp=2018-07-24T00%3A35%3A04Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -3949,20 +4079,30 @@ interactions:
         +EBWh0FS+cbs65lMcJ3SWH3AOUeaTJjjfuH4BNs14nA5m7U6Q2c76wjXdmULT+0GcA+mvjPc1y5G
         bzetSOGuZSu7Vk9LdFfWaF2cM4F9CcMQ3aDVTU4FYwAi+l49yL/+85//B5oA4KFGxAEA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Tue, 24 Jul 2018 00:35:05 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 24 Jul 2018 00:35:05 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=98443d4105d70199bae3ae4d792dec4a082cf5b7&timestamp=2018-07-24T00%3A36%3A25Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4259,21 +4399,32 @@ interactions:
         iW98IKvDIKl8Y/b1TCa4TmmsPuCcI00mzHG/cHyC7RpxuJzNWp2hs511hGu7soWndgO4B1PfGe5r
         F6O3m1akcNeylV2rpyW6K2u0Ls6ZwL6EYYhu0Oomp4IxABF9rx7kX//+9/8HQSAItEbEAQA=
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Tue, 24 Jul 2018 00:36:26 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 24 Jul 2018 00:36:26 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=7a62f65fa2bf04d786b5403f7e6173a185ae4420&timestamp=2018-07-24T17%3A20%3A29Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4281,20 +4432,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Tue, 24 Jul 2018 17:20:30 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 24 Jul 2018 17:20:30 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=b16b4df0d2c8edbf343cca7a5f1a586e1afbe1f8&timestamp=2018-07-24T17%3A21%3A50Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4302,21 +4463,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Tue, 24 Jul 2018 17:21:51 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 24 Jul 2018 17:21:51 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=4616b21f237b1f823939570c333055e8acfb5ee2&timestamp=2018-07-26T21%3A18%3A49Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4324,20 +4496,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:18:51 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:18:51 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=efd02026c67d0d533ca0b31afba1b66c76e64b56&timestamp=2018-07-26T21%3A20%3A10Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4345,21 +4527,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 21:20:12 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 21:20:12 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f7452a60d95487354284b8652f64344065db5247&timestamp=2018-07-26T21%3A24%3A41Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4367,20 +4560,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:24:42 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:24:42 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=c063476bceba3be611ea73b1ad39037203100bf4&timestamp=2018-07-26T21%3A26%3A02Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4388,21 +4591,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 21:26:04 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 21:26:04 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=b0a9ed78a72bdbac33b3dd5f3339cfd082bf6ef3&timestamp=2018-07-26T21%3A31%3A49Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4410,20 +4624,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:31:51 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:31:51 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=ff6d11611aea2663b5df582f70caf03fdf401e95&timestamp=2018-07-26T21%3A33%3A10Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4431,21 +4655,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 21:33:11 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 21:33:11 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=bfafb9ee403669ec9232387753f1f081e23a4ba8&timestamp=2018-07-26T21%3A43%3A07Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4453,20 +4688,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:43:09 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:43:09 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=128ffb9d67c0185448e39e8a44766d0d50882e48&timestamp=2018-07-26T21%3A44%3A28Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4474,21 +4719,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 21:44:30 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 21:44:30 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=ad8ab4727da0d933b30d85c37b2ce8ea0838c3f2&timestamp=2018-07-26T21%3A54%3A14Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -4776,20 +5032,30 @@ interactions:
         zmjOOrYDArZt3sCp2YFzxRSJ+js1hhLgdSsxeGrRnHG+QsIersHSOSsQ1eVAhuB2rnY4KqFEBJXe
         ovYhvpkyEqZgauzp8Ab5NfpiNEEm5XTMfrZOoOq8OB7x7//+9/8DD4McCT7EAQA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:54:16 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:54:16 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=d2dea7755be1f2a93fdf67ca8464bff80a69fa0d&timestamp=2018-07-26T21%3A55%3A49Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -5087,20 +5353,30 @@ interactions:
         s3R2eIWYbVe28NRuIFNlmjzDQxhjHHczNAy+tZy72OptiR7DGm2OczawL2EZoieyuhWqYNRGRN9r
         Cvnf//zn/wFf4/ciPsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 21:55:50 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 21:55:50 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=fb158773f70a833feb7b3ab58c24d7c945acc735&timestamp=2018-07-26T21%3A57%3A10Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -5398,21 +5674,32 @@ interactions:
         s3R2eIWYbVe28NRuIFNlmjzDQxhjHHczNAy+tZy72OptiR7DGm2OczawL2EZoieyuhWqYNRGRN9r
         Cvnf//zn/wFf4/ciPsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 21:57:11 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 21:57:11 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f8ceb152a1fef3deefa64196a2aa97c2e03dbf39&timestamp=2018-07-26T22%3A01%3A36Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -5700,20 +5987,30 @@ interactions:
         EvZwDXbOGYmovgQyBLdzNdNRK/22i56IQI2XNTzEt5RauRSsnble3gy/Qve0KclWKx2z4e2Sp/qf
         //zn/wOiqCx/PsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:01:37 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:01:37 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=2c17f6b29703a79951d77c323f7e8d090f2542fa&timestamp=2018-07-26T22%3A02%3A57Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -6001,21 +6298,32 @@ interactions:
         kLCHa7ByzghE9SWQIbidqxmOWmm3XfRABGq8rOYhvqnU0qVg7sz58kb4FfaidUm2SumYDW+XONX/
         /Oc//x8zw8KlPsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:02:58 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:02:58 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=dd3bcde64ac5198b38da29bc6a20b715dcbc1a29&timestamp=2018-07-26T22%3A27%3A06Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -6303,20 +6611,30 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:27:08 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:27:08 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=d99ee004ff73fc95258ef2cf704dd0e115cd0e0b&timestamp=2018-07-26T22%3A28%3A27Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -6604,21 +6922,32 @@ interactions:
         HRCwbfMGTs0OnCumSNTfqTFUgaFbicFTi+aM8xUS9nANls5ZgaguBzIEt3O1w1EJ6fKo9Ba1D/HN
         lJEwBVNjT4c3yK/xPaMJMimnY/azdQJV58XxiH//97//H2IrhTU+xAEA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:28:29 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:28:29 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e5aca01085a5aff368d071fd3580c69c39f66603&timestamp=2018-07-26T22%3A32%3A30Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -6906,20 +7235,30 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:32:31 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:32:31 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f83aa2ad2635d5d39ccdb0e0b89559e2ce707a1c&timestamp=2018-07-26T22%3A33%3A51Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -7207,21 +7546,32 @@ interactions:
         EvZwDXbOGYmovgQyBLdzNdNRK/22i56IQI2XNTzEt5RauRSsnble3gy/Qve0KclWKx2z4e2Sp/qf
         //zn/wOiqCx/PsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:33:53 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:33:53 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=7697566e1a5d3ca01f4f524536c555473df145af&timestamp=2018-07-26T22%3A38%3A19Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -7519,20 +7869,30 @@ interactions:
         ELPtyhae2g1kqkyTZ3gIY6zJwgwNg28t5y62eluix7BGm+OcDexLWIboiaxuhSoYtRHR9wjy//uf
         //w/qz5e0j7EAQA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:38:20 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:38:20 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=dd1554a0f9a54af497f74d970c453228069fbd81&timestamp=2018-07-26T22%3A39%3A41Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -7820,21 +8180,32 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:39:42 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:39:42 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=5c6bff02d7b2ccf576f38e260659c6d315fcc2b8&timestamp=2018-07-26T22%3A53%3A05Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8122,20 +8493,30 @@ interactions:
         KyTs4RqsnDMCUX0JZAhu52qGo1babRc9EIEaL6t5iG8qtXQpmDtzvrwRfoXuaV2SrVI6ZsPbJU71
         P//5z/8HYMb/7j7EAQA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:53:07 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:53:07 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=32e7ebccca9aa43eefcebed38e97c8c5b580d52d&timestamp=2018-07-26T22%3A54%3A27Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8423,21 +8804,32 @@ interactions:
         zmjOOrYDArZt3sCp2YFzxRSJ+js1hhLgdSsxeGrRnHG+QsIersHSOSsQ1eVAhuB2rnY4KqFEBJXe
         ovYhvpkyEqZgauzp8Ab5NfpiNEEm5XTMfrZOoOq8OB7x7//+9/8DD4McCT7EAQA=
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:54:28 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:54:28 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e50d3b1039ed1eed991253f19171af2c4e7db477&timestamp=2018-07-26T22%3A56%3A18Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8445,20 +8837,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 22:56:19 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 22:56:19 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=7019bd683f9c2dd37af980e9494bd773416e8445&timestamp=2018-07-26T22%3A57%3A40Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8466,21 +8868,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 22:57:41 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 22:57:41 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=977e5da9ddb36ea3db81ee4ef9614ff45735f78b&timestamp=2018-07-26T23%3A05%3A07Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8488,20 +8901,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:05:08 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:05:08 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=ad2d10c1f634f1e368aeff78d08ae39f04ba98f9&timestamp=2018-07-26T23%3A06%3A29Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8509,21 +8932,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:06:30 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:06:30 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=c320278042f2008ca1f0ddb1c9f544456c43561f&timestamp=2018-07-26T23%3A09%3A04Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8531,20 +8965,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:09:05 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:09:05 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=d3cf042fad8795499a52327c515acf8662de658b&timestamp=2018-07-26T23%3A10%3A35Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8552,21 +8996,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:10:36 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:10:36 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=3f834a43884f830236a8ed94d2ce2a3646272665&timestamp=2018-07-26T23%3A30%3A23Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -8854,20 +9309,30 @@ interactions:
         kLCHa7ByzghE9SWQIbidqxmOWmm3XfRABGq8rOYhvqnU0qVg7sz58kb4FfaidUm2SumYDW+XONX/
         /Oc//x8zw8KlPsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:30:24 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:30:24 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=22d307a35da6ecb3a5864788996e104c8ad6752c&timestamp=2018-07-26T23%3A31%3A45Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -9165,21 +9630,32 @@ interactions:
         0tnhFWK2XdnCU7uBTJVp8gwPYYxx3M3QMPjWcu5iq7clegxrtDnO2cC+hGWInsjqVqiCURsRfa8p
         5H//85//BxrMP74+xAEA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:31:46 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:31:46 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f094bf3f0dbade61fd7f729ddc509658f960cd78&timestamp=2018-07-26T23%3A34%3A24Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -9467,20 +9943,30 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:34:25 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:34:25 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=f28e4c47a3aa49999c7110d69aef127f844d2297&timestamp=2018-07-26T23%3A35%3A45Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -9778,21 +10264,32 @@ interactions:
         0tnhFWK2XdnCU7uBTJVp8gwPYYxx3M3QMPjWcu5iq7clegxrtDnO2cC+hGWInsjqVqiCURsRfa8p
         5H//85//BxrMP74+xAEA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:35:46 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:35:46 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=aeafc394b05f142feea47f4f07afd8ffc61a4f54&timestamp=2018-07-26T23%3A40%3A13Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -10080,20 +10577,30 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:40:14 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:40:14 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=1a6052c3b70388580665f87e11237c5877f07c0f&timestamp=2018-07-26T23%3A41%3A40Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -10381,21 +10888,32 @@ interactions:
         kLCHa7ByzghE9SWQIbidqxmOWmm3XfRABGq8rOYhvqnU0qVg7sz58kb4FfaidUm2SumYDW+XONX/
         /Oc//x8zw8KlPsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:41:41 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:41:41 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=cf5dc426536bddea57eec603dd11981443f400e6&timestamp=2018-07-26T23%3A43%3A58Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -10683,20 +11201,30 @@ interactions:
         zmjOOrYDArZt3sCp2YFzxRSJ+js1hhLgdSsxeGrRnHG+QsIersHSOSsQ1eVAhuB2rnY4KqFEBJXe
         ovYhvpkyEqZgauzp8Ab5NfpiNEEm5XTMfrZOoOq8OB7x7//+9/8DD4McCT7EAQA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:43:59 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:43:59 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e9a4521df1fc9ca4a7a17916fe6309457518246e&timestamp=2018-07-26T23%3A45%3A26Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -10984,21 +11512,32 @@ interactions:
         EvZwDXbOGYmovgQyBLdzNdNRK/22i56IQI2XNTzEt5RauRSsnble3gy/Qve0KclWKx2z4e2Sp/qf
         //zn/wOiqCx/PsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:45:27 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:45:27 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=b3a0bde088058e2a3b9e9cb0a867291058a1ac15&timestamp=2018-07-26T23%3A47%3A20Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11286,20 +11825,30 @@ interactions:
         kLCHa7ByzghE9SWQIbidqxmOWmm3XfRABGq8rOYhvqnU0qVg7sz58kb4FfaidUm2SumYDW+XONX/
         /Oc//x8zw8KlPsQBAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Thu, 26 Jul 2018 23:47:21 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 26 Jul 2018 23:47:21 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=5450c9c9c090578b2a62ac809d511d2834f555b6&timestamp=2018-07-26T23%3A48%3A42Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11587,21 +12136,32 @@ interactions:
         IWEP12DlnBGI6ksgQ3A7VzMctdJuu+iBCNR4Wc1DfFOppUvB3Jnz5Y3wK+xF65JsldIxG94ucar/
         +c9//j/xrRE0PsQBAA==
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 26 Jul 2018 23:48:42 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Jul 2018 23:48:42 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=e433183402f071dfd98c30d320f4be4b97b3c2e2&timestamp=2018-07-27T18%3A31%3A17Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11609,20 +12169,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 27 Jul 2018 18:31:17 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 27 Jul 2018 18:31:17 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=9953220b7394c0f339a61cab32eb8779ce7b9a30&timestamp=2018-07-27T18%3A32%3A39Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11630,21 +12200,32 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      Content-Encoding: [gzip]
-      Content-Type: [application/json;charset=utf-8]
-      Date: ['Fri, 27 Jul 2018 18:32:39 GMT']
-      Server: [Chuck Norris fears nothing that is not Emily.]
-      Vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 27 Jul 2018 18:32:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=df53a7fb039e9df90528fe9057913957e68654b1&timestamp=2018-07-27T18%3A42%3A56Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11652,20 +12233,30 @@ interactions:
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
         cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 27 Jul 2018 18:42:57 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 403, message: Forbidden}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 27 Jul 2018 18:42:57 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 403
+      message: Forbidden
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
-    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google&signature=69abee5295b63273d357889d62d9e331ef9dbf4a&timestamp=2018-09-12T23%3A44%3A38Z
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
   response:
     body:
       string: !!binary |
@@ -11963,9 +12554,503 @@ interactions:
         /X09rku5d9XVfVdvJQcmio7nbzgWBcWZA5KD8cvIfnjhSXB/U7q38VYwCN6lIbTZ7omRXJLERHIl
         S+z5FttGYk6abuyd/Z///d//D0W1AbLBxwEA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Wed, 12 Sep 2018 23:44:39 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 12 Sep 2018 23:44:39 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T15%3A30%3A24Z&signature=0fb498c77c72005871d38927f759aa68bc742a91b0dce4131d1e1de97117f865&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:30:26 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5270'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T20%3A19%3A13Z&signature=dde6ce6988c344252ee0b928064b54af4843e43222c0a0ce96a5bbaca478f4a9&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:19:15 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5171'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T20%3A39%3A37Z&signature=734ecd65204954d9d84af72046a5981de178f97d947af2cad96f09fabba1b21d&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:39:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4566'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T21%3A29%3A35Z&signature=0dc278c5dd7f6399c715022428cfc090ff55ff1047424c4e9a3e6021ee83af1f&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:29:36 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5117'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T21%3A45%3A12Z&signature=5d9259437e5dd53e355d71aaf4034b84bdf33807dab0a9270cf948b9c65d7336&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:45:14 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5071'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-13T21%3A53%3A00Z&signature=d0641278be3c1a674fa73e9f9cfdd0d90feae24b08a4bb0755187488fe26976c&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:53:01 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4633'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-14T13%3A40%3A04Z&signature=f7afd4e7a038b465ca5a7db71a200f7566710c76dbfbb8134d088385d84407e1&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:40:06 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5242'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: http://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: ''
+    headers:
+      Content-length:
+      - '0'
+      Location:
+      - https://api.domaintools.com/v2/domain-search?api_username=test_user&timestamp=2021-10-14T13%3A43%3A31Z&signature=cbc97996f88a928ae49059c75056cb18f8b92f8c456243d0d4d578371328f1f6&query=google&exclude_query=&max_length=25&min_length=2&has_hyphen=true&has_number=true&active_only=false&deleted_only=false&anchor_left=false&anchor_right=false&page=1
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:43:33 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5152'
+    status:
+      code: 403
+      message: Forbidden
 version: 1

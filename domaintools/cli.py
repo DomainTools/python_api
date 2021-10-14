@@ -40,7 +40,7 @@ def parse(args=None):
     for api_call in API_CALLS:
         api_method = getattr(API, api_call)
         subparser = subparsers.add_parser(api_call, help=api_method.__name__)
-        spec = inspect.getargspec(api_method)
+        spec = inspect.getfullargspec(api_method)
 
         for argument_name, default in reversed(list(zip_longest(reversed(spec.args or []),
                                                                 reversed(spec.defaults or []), fillvalue='EMPTY'))):
@@ -53,7 +53,7 @@ def parse(args=None):
                                        default=default, nargs='*')
 
     arguments = vars(parser.parse_args(args) if args else parser.parse_args())
-    if not arguments.get('user', None) or not arguments.get('key', None):
+    if not arguments.get('user') or not arguments.get('key'):
         try:
             with open(arguments.pop('credentials')) as credentials:
                 arguments['user'], arguments['key'] = credentials.readline().strip(), credentials.readline().strip()
@@ -62,13 +62,13 @@ def parse(args=None):
 
     for key, value in arguments.items():
         if value in ('-', ['-']):
-            arguments[key] == (line.strip() for line in sys.stdin.readlines())
+            arguments[key] = (line.strip() for line in sys.stdin.readlines())
         elif value == []:
             arguments[key] = True
-        elif type(value) == list and len(value) == 1:
+        elif isinstance(value, list) and len(value) == 1:
             arguments[key] = value[0]
 
-    return (arguments.pop('out_file'), arguments.pop('format'), arguments)
+    return arguments.pop('out_file'), arguments.pop('format'), arguments
 
 
 def run(): # pragma: no cover

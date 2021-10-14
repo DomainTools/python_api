@@ -2,10 +2,14 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
     uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
   response:
@@ -14,9 +18,339 @@ interactions:
         H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQxNTQ1MDHaWMzOKS
         /KLMZCUrIyMzU3ODWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWoJhvUFtbCwBBUYRLnQAAAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:55 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:30:55 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1NTS1MTHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAQ8uY2J0AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:11 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '157836'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:16:33 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '117060'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:17:48 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '182222'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:15 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '126002'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:04 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '126415'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:43:49 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '146253'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '99272'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzOLWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUALWDBfJ0AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:37:45 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '129605'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-whois?scope=current&terms=Amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMi0/OL80rAfGTS4uKUkFMQ1MzAzNDHaWMzOKS
+        /KLMZCUrYwNLQzPDWh2g/oL8opL4AqBoKqYeDC0IHcn5xaiWGCArNqitrQUAY2BRn50AAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:03 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '167698'
+    status:
+      code: 200
+      message: OK
 version: 1

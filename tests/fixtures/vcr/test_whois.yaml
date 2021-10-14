@@ -2,10 +2,14 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
     uri: https://api.domaintools.com/v1/google.com/whois
   response:
@@ -25,9 +29,474 @@ interactions:
         MPQw2jBJE0aWsOhmY8SfkVoRNPJc39/vUlhGEYITPK1JChsr40JRlqDgVSqSlpfnMhPShNVBBKOx
         yYiCKDN2/5b9QvKNiPU/wXEMY7f7C9pN+EfABwAA
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:55 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:30:55 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:12 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '19345'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:16:34 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '18396'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:17:49 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '18420'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:15 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '18383'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:05 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '18343'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:43:50 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '18997'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:40 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '19922'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:37:45 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '19104'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWW3PaOBT+K2fcl3YKxjZQsJ+WgWyWGS4dTLoPdSej2ApoFkuuJEIvk/++R7YL
+        djC0fWiGCck5R58+fToXfbckVZngilrBd/x7w5SWhGsrsG6F2OwozGZjq3X0aCa4iYwlJZomGOb6
+        /qDt+G23j2H0S8YQEM2e4w1zcw/N+ywpoz3H9Y3Z8SugEh1zIv+bC860kDDlsY1upYneK4P20Yp3
+        jHI9oTuq6XsptuyBGcBW6VgjZ/VIZYPrLt+75lBUPlHZAFY4GsEK1xnYp+eWxUlK7wt/znURuvbt
+        cnk7u7HHyzmuXYTeS0P3paFXNXxqWYetYMoobTYs9HTbrtN2vVy4WEgj50SkhHFYIIMANvmF2bFI
+        I74qpP0KZcR0EoDndod9t3c/Wc5H08U9btT+sAoXx2Ai4d9/ltMQwvwsAeQc7BRvJi1upoaN4Xer
+        WQBbrbMg6kSdw+FwHlwolsAEfyOF4/Wv3X7Q9QOn99bBn4iPTUJhcpWBp6xaO4PAcfBTBp52X1Vy
+        Em5M5lURjgnYvYgQQCXrWnnaVfGno8WoEM73qvbRA2YljAXXJNZwg/ruAiDGiCfOdii3Vn9dUa2+
+        /v1WcKT71rU9Z9gd+v3BADmW1xbmJRBAcyrDa6O9OorPYsK5LeQm6tAse9W86M0F8POs/yX482WX
+        NnhZb78E/3LROXhzYf4EvHnRJfDflubSsksb/KY0zYvenHKMa1jKDeHsW14RAZx6eS3IsKBRBzGe
+        GI8xC8ejmn8s9hybSAB3Yc1e5nyIDDCDV/TznqrSCn8LmQLRcDpBkh/5vJF08v4Sdap9a5SkqM5l
+        8oW/kXfhqlEuTH+O7ZrG2ytkc3cj19xTo5pb/hxTMyGOfZ0rz77i7F5z9q453ZpzsgjDm3EAe67Y
+        htMEh8FqBuIR9JbCdDxaLMp5gw2bAAr0sKMpnjoTUjO+gfCr0jStDpgkk8rG9kolZ7HNqUYrjzhK
+        A6mQFBh/RJWKKYCfAr14RkAsEqpakO0owe77xBTTQcQBLlYavmPEXsYUlczIxnxh7bULtHaOZvau
+        vlvK2p4TjvEpdq/X6zlWJZ5M432aI5kBgclCFRCe4H9c7VN8NSBxIJCwDdNkBwchd4ltwD8YltUh
+        VU+AxoH7Y67gkTEYx8rQcQa9vu95fsSnWA17KTLayp29nu14Ttdz3nmeh1On3Y649fzjfXFfnB+f
+        GadbtZ6f/wdamyi2MwoAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:05 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '1284305'
+    status:
+      code: 200
+      message: OK
 version: 1
