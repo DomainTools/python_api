@@ -2,10 +2,14 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.19.1
     method: GET
     uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
   response:
@@ -15,9 +19,348 @@ interactions:
         UvJzEzPz4pPzS/NKlKyM4QJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC3hHv6ewY4Bnsjc4FB3d9fg
         ELBQbG1tLQCucEJSkwAAAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:52 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jul 2018 22:30:52 GMT
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:06 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '7192'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:16:17 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '7179'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:17:42 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5305'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:10 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '7828'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:27:59 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '6757'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:43:44 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '9253'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:35 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '24785'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:37:39 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '7414'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWyiyIT0xJAYoUpxaj8pWslAwtLfWMDfSMjCz0DA2NlHSU
+        UvJzEzPz4pPzS/NKlKxM4AJ5ibkg7dFKLv6+jp5+If7+PsF6zv6+QC2hwU56YX5ARriHv2ewY4An
+        VBzMDQ51d3cNDgELxdbW1gIAZ8Nj6pwAAAA=
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:41:58 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '7022'
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -160,4 +160,1204 @@ interactions:
     status:
       code: 403
       message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:19 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '464'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:21 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '272'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:21 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '29419'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 15:29:22 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4496'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:18:08 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '399'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:18:10 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '388'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:18:10 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '12204'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:18:11 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5324'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:32 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '427'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:34 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '272'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:34 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '13906'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 20:38:35 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4545'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:29 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '399'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:31 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '443'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:32 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '12598'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:28:32 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4829'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:44:07 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '465'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:44:09 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '417'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:44:09 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '14545'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:44:10 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5244'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:54 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '504'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:56 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '442'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:57 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '14216'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 13 Oct 2021 21:51:57 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4188'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:38:59 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '492'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:39:01 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '356'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:39:01 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '19127'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:39:02 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5200'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:26 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '396'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:28 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '391'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:28 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '13636'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 13:42:29 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5534'
+    status:
+      code: 403
+      message: Forbidden
 version: 1
