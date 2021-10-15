@@ -90,20 +90,6 @@ def test_domain_search():
 
 
 @vcr.use_cassette
-def test_domain_suggestions():
-    api_call = api.domain_suggestions('google')
-    with api_call as response:
-        assert 'status_codes' in response
-        assert 'suggestions' in response
-        assert 'query' in response
-        assert 'tlds' in response
-
-        for suggestion in api_call:
-            assert 'domain' in suggestion
-            assert 'status' in suggestion
-
-
-@vcr.use_cassette
 def test_hosting_history():
     api_call = api.hosting_history('google.com')
     with api_call as result:
@@ -296,12 +282,11 @@ def test_dict_like_behaviour():
         assert len(whois_google.items())
         assert len(whois_google.keys())
         assert len(whois_google.values())
-        assert whois_google.has_key('registrant')
         assert 'registrant' in whois_google
         whois_google.update({'registrant': 'override'})
         assert whois_google['registrant'] == 'override'
         del whois_google['registrant']
-        assert not 'registrant' in whois_google
+        assert 'registrant' not in whois_google
         whois_google['registrant'] = 'me'
         assert whois_google['registrant'] == 'me'
         assert isinstance(whois_google.pop('whois', {}), dict)
@@ -335,9 +320,9 @@ def test_exception_handling():
         api._results('i_made_this_product_up', '/v1/steianrstierstnrsiatiarstnsto.com/whois').data()
     with pytest.raises(exceptions.NotAuthorizedException):
         API('notauser', 'notakey').domain_search('amazon').data()
-    with pytest.raises(ValueError, match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5"):
+    with pytest.raises(ValueError,
+                       match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5"):
         API('notauser', 'notakey', always_sign_api_key=True, key_sign_hash='notahash').domain_search('amazon')
-
 
 
 @vcr.use_cassette
@@ -410,7 +395,7 @@ def test_risk():
 def test_risk_evidence():
     with api.risk_evidence(domain='google.com') as result:
         assert result
-        assert list(result) == [{'name': 'whitelist', 'risk_score': 0}]
+        assert list(result) == [{'name': 'zerolist', 'risk_score': 0}]
 
 
 @vcr.use_cassette
@@ -432,7 +417,7 @@ def test_iris_investigate():
     investigation_results = api.iris_investigate(domains=['amazon.com', 'google.com'])
     assert investigation_results['results_count']
     for result in investigation_results:
-        assert result['domain'] == 'amazon.com' or result['domain'] == 'google.com'
+        assert result['domain'] in ['amazon.com', 'google.com']
 
 
 @vcr.use_cassette

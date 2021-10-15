@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: !!python/unicode 'api_key=fde3b-8cfc3-2e1b7-58eca-a1156&ip=8.8.8.8'
+    body: ip=8.8.8.8
     headers:
       Accept:
       - '*/*'
@@ -9,11 +9,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '72'
+      - '144'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.26.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-investigate/
   response:
@@ -23,18 +23,20 @@ interactions:
         KjVgeQIJicdqDSd+Rw9aDKFf21z9zxXuceoi3+Ii2pSuwzCQoTbLSHSmtTTSuFLuPaqlTy/J+GGj
         b4OtF+4ZcZc8hVQ0Su71+2PfDzk/D2uYAAAA
     headers:
-      content-encoding:
+      Content-Encoding:
       - gzip
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      date:
-      - Wed, 29 Apr 2020 21:09:30 GMT
-      transfer-encoding:
+      Date:
+      - Thu, 14 Oct 2021 16:19:29 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
       - chunked
-      vary:
+      Vary:
       - Accept-Encoding
-      x-time:
-      - '794364'
+      X-TIME:
+      - '557836'
     status:
       code: 200
       message: OK

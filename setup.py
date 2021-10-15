@@ -9,20 +9,9 @@ from os import path
 from setuptools import Extension, find_packages, setup
 from setuptools.command.test import test as TestCommand
 
-requires = ['requests']
-packages = ['domaintools']
+requires = ['requests', 'aiohttp']
+packages = ['domaintools', 'domaintools_async']
 
-major, minor, patch = sys.version_info[:3]
-
-if major >= 3:
-    if minor == 5 and patch >= 3:
-        packages.append('domaintools_async')
-        requires.append('aiohttp==3.4.4')
-    if minor > 5:
-        packages.append('domaintools_async')
-        requires.append('aiohttp>=3.6.0,<4.0.0')
-elif major == 2 and minor <= 6:
-    requires.extend(['ordereddict', 'argparse'])
 
 MYDIR = path.abspath(os.path.dirname(__file__))
 JYTHON = 'java' in sys.platform
@@ -82,7 +71,7 @@ setup(name='domaintools_api',
       long_description=readme,
       long_description_content_type="text/markdown",
       author='DomainTools',
-      author_email='timothy@domaintools.com',
+      author_email='integrations@domaintools.com',
       url='https://github.com/domaintools/python_api',
       license="MIT",
       entry_points={
@@ -101,11 +90,11 @@ setup(name='domaintools_api',
                    'Environment :: Console',
                    'License :: OSI Approved :: MIT License',
                    'Programming Language :: Python',
-                   'Programming Language :: Python :: 2.7',
-                   'Programming Language :: Python :: 3.5',
                    'Programming Language :: Python :: 3.6',
                    'Programming Language :: Python :: 3.7',
                    'Programming Language :: Python :: 3.8',
+                   'Programming Language :: Python :: 3.9',
+                   'Programming Language :: Python :: 3.10',
                    'Topic :: Software Development :: Libraries',
                    'Topic :: Utilities'],
       **PyTest.extra_kwargs)

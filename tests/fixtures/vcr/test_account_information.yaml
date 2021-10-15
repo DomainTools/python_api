@@ -2,29 +2,45 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/account
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA82W246jMAyG3yXXjQR0Cpp5ldWqyoIHrIEkyqGzVdV3X4cyu1QLTGmpWq4gdsIn
-        +7fjAzNgtZIW2NuBiTxXXrr2VePWWzBSNGRiLjfK1rBnK3JyuKM1ZzwcV0wbVfjcWfb248CwIN9C
-        NQIlJ8M71kA7NJhto6SrtjU2SMezZBPR82VC6R38tcVJMIhfVtW9ZenresW8FWVL6lQh9uS8Jtf2
-        6PadcOC3RiMcKrkthAvoSRSnPMp4kpG9Q/ysFNr7kqU9snQmGa/QOmX2g4TxKN/6/oEzsANjgaMe
-        ZkuzLEvizcP5gmw5yZe+xtL8cMZJEd5OF/Xoosvpuuq1vizBBudhxKDCMR1uokWDGDb+hwfC5NVo
-        Bd8evVOtf4GFr4sjWCmKmyyft4gbYT64qMG4QbZ1PMaWzmB76bG9zCmOksJmhHR3J7wyer3Wwmk7
-        Uo6fDxL187JpQd2vmG5/D50ODGjvWq/ZrW9hvLPW9+/unYjdYnDfzy9ncATVK90p7U3eHEteb2d8
-        3WjLUb4r01yZ3M50IWHSb4HJcA88Y9R0Y1SwHx6Z4ymuGVB9pgvSaiZ0djPNabXDOf33uxpA+3GF
-        7td3030A4rDDAmQ+kbglyGa2i5A6kvsuTHFlMM9L44xeMT+NLRtIgyMz3CJYLH7tj3Cv4yH7eTz+
-        AbHlMUcJDwAA
+        H4sIAAAAAAAAA82Wb2/CIBDGvwuvJemfaXVfZVkMa5m92AIB6maM333X6rYuORU2l7SvWrjCLw8P
+        d3dgVjqjlZPs8cBEWepO+eHVwLpz0irR4hQr37SurHBbwWYY5mGHo9528jhjxuqqK71jj08HBhVG
+        n9fhoF61bYUHrfA3I+261crX6wZawF1YmvTP5xSozsuvuXm/0YvTzWhQdU0zY50TmwHX60rsMXTV
+        xw4r92sulkuGVPLdgB22XlfCy9PPx9mZECw4LpWFsibJ5lfIFkk4WvqwGLFlq1VKsrEsyRKeFDwt
+        2E9GUDvpPGz6MAo0uwKaRYDmYwlX2W0F32oNjkI6bUDgpCTPSWpGajeWrriNVOlWgOLox1doSLnu
+        xlaM5XoIVIvX4Ly2+4uOo48xjzjG+bDIJ9myWNxGqzX6S22uwV2UjUQ7Q/xZMyt30jrJwUyPqU+L
+        HNMjfk0PLv5q0lgZjTXOaAG3shV2y0UjrY9CIrMsy9N7SbVBu1uBRWpqaGA4hgPexQlBjfw+QToj
+        0PbVL3z/32n/O4X996X8WSwDOqBzsXRSWLoHiuciwbJiXJHmSUBrYbAU1XIfWcFJqjSsuQg5SnDb
+        e3grkCigcPdEXO6gkqqM04omy0NMn4eY3nT+d00/rdmFXieWq++no3to0lZ/7aGfj8cPs7l3enkN
+        AAA=
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:46 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 16:17:18 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '114366'
+    status:
+      code: 200
+      message: OK
 version: 1

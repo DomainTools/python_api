@@ -9,33 +9,37 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/account
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA83W726CMBAA8HfpZ5vwR5fpqyyL6eCUi9CSa9EZw7vvQLaRpU7ZMMInoKX95XrX
-        chIEtjTaglidhEoSU2nX3pa4riyQVgU3ieRgTErK7pSYcTeHe37rqIJ6JkoyaZU4K1YvJ4Ep9+7G
-        kag3hgrl0Gj+rARaF0a7bJ1jgTyLCIPm+mxCXTn4als0E71Zk/de6irPZ6KyattynUnVsR2G+7Yj
-        80M8F2yC9xKpnXidKgfnT+tZ50NCK0ETJtlFl18VBbez+qrljSjUe7AOt03z/WRxTxbNF9dth8yg
-        9YHOE3g4odcjFt2C/xqs4DooNYVCLTn1Nph7Q/UoWRsqmaF1ho6DYPEl1wiqzHBW6e3kXAR7IAsS
-        y0eSuHjCpQyeZdTUwg9aswNK3gn5aXJhG16XflU0iqpQtJMqB3KDSE9eUhyOFKktpzwpPo0mJsNS
-        cm/kcpyOqZfr08OVilM+/UPO33nH/97DJlaP3SFpQZH/R2e4yssKe6zwhnXkQyiD48BT2ysKx1pC
-        tLsxUmpMj4Q9pqCTYXHyu+L/sV7r+gOcXGp3KQwAAA==
+        H4sIAAAAAAAAA82Wb2/CIBDGvwuvJemfaXVfZVkMa5m92AIB6maM333X6rYuORU2l7SvWrjCLw8P
+        d3dgVjqjlZPs8cBEWepO+eHVwLpz0irR4hQr37SurHBbwWYY5mGHo9528jhjxuqqK71jj08HBhVG
+        n9fhoF61bYUHrfA3I+261crX6wZawF1YmvTP5xSozsuvuXm/0YvTzWhQdU0zY50TmwHX60rsMXTV
+        xw4r92sulkuGVPLdgB22XlfCy9PPx9mZECw4LpWFsibJ5lfIFkk4WvqwGLFlq1VKsrEsyRKeFDwt
+        2E9GUDvpPGz6MAo0uwKaRYDmYwlX2W0F32oNjkI6bUDgpCTPSWpGajeWrriNVOlWgOLox1doSLnu
+        xlaM5XoIVIvX4Ly2+4uOo48xjzjG+bDIJ9myWNxGqzX6S22uwV2UjUQ7Q/xZMyt30jrJwUyPqU+L
+        HNMjfk0PLv5q0lgZjTXOaAG3shV2y0UjrY9CIrMsy9N7SbVBu1uBRWpqaGA4hgPexQlBjfw+QToj
+        0PbVL3z/32n/O4X996X8WSwDOqBzsXRSWLoHiuciwbJiXJHmSUBrYbAU1XIfWcFJqjSsuQg5SnDb
+        e3grkCigcPdEXO6gkqqM04omy0NMn4eY3nT+d00/rdmFXieWq++no3to0lZ/7aGfj8cPs7l3enkN
+        AAA=
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 26 Jul 2019 17:14:18 GMT
+      - Thu, 14 Oct 2021 16:17:19 GMT
       Server:
       - Chuck Norris fears nothing that is not Emily.
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
+      X-TIME:
+      - '113178'
     status:
       code: 200
       message: OK

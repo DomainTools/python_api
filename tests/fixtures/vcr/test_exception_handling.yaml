@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.19.1
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/ss/reverse-ip
   response:
@@ -18,16 +18,22 @@ interactions:
         H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
         eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
         EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
-        fVvWeZ33fZ+ycCzNRYaThNf5n1vncJ5/8rNsMfkAAAA=
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
     headers:
-      content-encoding:
+      Content-Encoding:
       - gzip
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      date:
-      - Fri, 20 Jul 2018 22:31:10 GMT
-      vary:
+      Date:
+      - Thu, 14 Oct 2021 16:17:53 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
       - Accept-Encoding
+      X-TIME:
+      - '409'
     status:
       code: 400
       message: Bad Request
@@ -41,7 +47,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.19.1
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/ss/reverse-ip
   response:
@@ -50,16 +56,22 @@ interactions:
         H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
         eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
         EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
-        fVvWeZ33fZ+ycCzNRYaThNf5n1vncJ5/8rNsMfkAAAA=
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
     headers:
-      content-encoding:
+      Content-Encoding:
       - gzip
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      date:
-      - Fri, 20 Jul 2018 22:31:12 GMT
-      vary:
+      Date:
+      - Thu, 14 Oct 2021 16:17:55 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
       - Accept-Encoding
+      X-TIME:
+      - '371'
     status:
       code: 400
       message: Bad Request
@@ -73,24 +85,30 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.19.1
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csJjE0UhNXTtoOVf+dINjuTnf3dmRVUex2
-        dOIZu/bcnjByzvSuDgeGkVaGJKDsOBUYrrf+ASG9RCOVIAlopTDRc2KoGZQxZPASKSRr+jtcvNd6
-        1+BxwipkUcf5y8vLPIuWChlLmTtrrNm2rflNi8iUGyfRmn/PGjyOD2CrDl2vAAAA
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
     headers:
-      content-encoding:
+      Content-Encoding:
       - gzip
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      date:
-      - Fri, 20 Jul 2018 22:31:12 GMT
-      vary:
+      Date:
+      - Thu, 14 Oct 2021 16:17:56 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
       - Accept-Encoding
+      X-TIME:
+      - '15003'
     status:
       code: 404
       message: Not Found
@@ -104,7 +122,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.19.1
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
   response:
@@ -112,51 +130,22 @@ interactions:
       string: !!binary |
         H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
         43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
-        cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
     headers:
-      content-encoding:
+      Content-Encoding:
       - gzip
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      date:
-      - Fri, 20 Jul 2018 22:31:12 GMT
-      vary:
-      - Accept-Encoding
-    status:
-      code: 403
-      message: Forbidden
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.22.0
-    method: GET
-    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&api_key=notakey&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
-        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
-        cd9jCikcxzEXqXltLrLZTFJT+PdSwOv6AjIMD8WgAAAA
-    headers:
-      content-encoding:
-      - gzip
-      content-type:
-      - application/json;charset=utf-8
-      date:
-      - Sun, 15 Dec 2019 02:43:52 GMT
-      transfer-encoding:
+      Date:
+      - Thu, 14 Oct 2021 16:17:56 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
       - chunked
-      vary:
+      Vary:
       - Accept-Encoding
-      x-time:
-      - '3464'
+      X-TIME:
+      - '4733'
     status:
       code: 403
       message: Forbidden

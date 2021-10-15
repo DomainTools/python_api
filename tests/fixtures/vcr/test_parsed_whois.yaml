@@ -2,37 +2,56 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/google.com/whois/parsed
   response:
     body:
       string: !!binary |
-        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
+        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
+        hA8AAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:49 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 16:17:25 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '43563'
+    status:
+      code: 200
+      message: OK
 version: 1
