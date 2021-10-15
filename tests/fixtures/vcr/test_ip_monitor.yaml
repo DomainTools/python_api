@@ -2,22 +2,38 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
     method: GET
     uri: https://api.domaintools.com/v1/ip-monitor?days_back=0&page=1&query=65.55.53.233
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAyWMwQqEMBBD/2XOKtMWd8VfEZHBlqXQtcWOJ/HfjQg5hCQvJ+2hlrzVQONJKf6j
-        0miYuSEvipAsm6Hlb2uZGoplEe+BVDSfvush11nn0GlWSYifXZEfWPOaZc3Hhlt8Sgq7gp3m67oB
-        Jb4sJHsAAAA=
+        H4sIAAAAAAAAAyWMQQqEMBAE/zJnlZlk3YNfWUSGTZBANMGMJ/HvNgh9aLqovuiIrZa9RZouymlL
+        RpMwc0dBDSM5dtIL9/KhjlJdNAQoDeQ7DiPiB+c9mBXTjJnRq65w5S3Lv5w7bvGpOR4G9zff9wOw
+        48kSewAAAA==
     headers:
-      content-encoding: [gzip]
-      content-type: [application/json;charset=utf-8]
-      date: ['Fri, 20 Jul 2018 22:30:49 GMT']
-      vary: [Accept-Encoding]
-    status: {code: 200, message: OK}
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 14 Oct 2021 16:17:24 GMT
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '113847'
+    status:
+      code: 200
+      message: OK
 version: 1

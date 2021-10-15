@@ -67,8 +67,14 @@ class API(object):
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
         self.handle_api_key(path, parameters)
-        parameters.update(dict((key, str(value).lower() if value in (True, False) else value) for
-                               key, value in kwargs.items() if value is not None))
+        parameters.update(
+            {
+                key: str(value).lower() if value in (True, False) else value
+                for key, value in kwargs.items()
+                if value is not None
+            }
+        )
+
         return cls(self, product, uri, **parameters)
 
     def handle_api_key(self, path, parameters):
@@ -79,54 +85,54 @@ class API(object):
                 signing_hash = eval(self.key_sign_hash)
             else:
                 raise ValueError("Invalid value '{0}' for 'key_sign_hash'. "
-                                 "Values available are {1}".format(
-                                    self.key_sign_hash, ','.join(AVAILABLE_KEY_SIGN_HASHES)))
+                                 "Values available are {1}".format(self.key_sign_hash, ','.join(AVAILABLE_KEY_SIGN_HASHES)))
             parameters['timestamp'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-            parameters['signature'] = hmac(self.key.encode('utf8'), ''.join([self.username, parameters['timestamp'],
-                                                                             path]).encode('utf8'),
+            parameters['signature'] = hmac(self.key.encode('utf8'),
+                                           ''.join([self.username, parameters['timestamp'], path]).encode('utf8'),
                                            digestmod=signing_hash).hexdigest()
 
 
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
-        return self._results('account-information', '/v1/account', items_path=('products', ), **kwargs)
+        return self._results('account-information', '/v1/account', items_path=('products',), **kwargs)
 
     def available_api_calls(self):
         """Provides a list of api calls that you can use based on your account information."""
+
         def snakecase(string):
             string = re.sub(r"[\-\.\s]", '_', str(string))
             if not string:
                 return string
             return str(string[0]).lower() + re.sub(r"[A-Z]", lambda matched: '_' + str(matched.group(0)).lower(),
                                                    string[1:])
+
         api_calls = tuple((api_call for api_call in dir(API) if not api_call.startswith('_') and
                            callable(getattr(API, api_call, None))))
         return [snakecase(p["id"]) for p in self.account_information()["products"] if snakecase(p["id"]) in api_calls]
 
-    def brand_monitor(self, query, exclude=[], domain_status=None, days_back=None, **kwargs):
+    def brand_monitor(self, query, exclude=None, domain_status=None, days_back=None, **kwargs):
         """Pass in one or more terms as a list or separated by the pipe character ( | )"""
+        if exclude is None:
+            exclude = []
         return self._results('mark-alert', '/v1/mark-alert', query=delimited(query), exclude=delimited(exclude),
-                            domain_status=domain_status, days_back=days_back, items_path=('alerts', ), **kwargs)
+                             domain_status=domain_status, days_back=days_back, items_path=('alerts',), **kwargs)
 
     def domain_profile(self, query, **kwargs):
         """Returns a profile for the specified domain name"""
         return self._results('domain-profile', '/v1/{0}'.format(query))
 
-    def domain_search(self, query, exclude_query=[], max_length=25, min_length=2, has_hyphen=True, has_number=True,
+    def domain_search(self, query, exclude_query=None, max_length=25, min_length=2, has_hyphen=True, has_number=True,
                       active_only=False, deleted_only=False, anchor_left=False, anchor_right=False, page=1, **kwargs):
         """Each term in the query string must be at least three characters long.
            Pass in a list or use spaces to separate multiple terms.
         """
+        if exclude_query is None:
+            exclude_query = []
         return self._results('domain-search', '/v2/domain-search', query=delimited(query, ' '),
-                            exclude_query=delimited(exclude_query, ' '),
-                            max_length=max_length, min_length=min_length, has_hyphen=has_hyphen, has_number=has_number,
-                            active_only=active_only, deleted_only=deleted_only, anchor_left=anchor_left,
-                            anchor_right=anchor_right, page=page, items_path=('results', ), **kwargs)
-
-    def domain_suggestions(self, query, **kwargs):
-        """Passed in name must be at least two characters long. Use a list or spaces to separate multiple terms."""
-        return self._results('domain-suggestions', '/v1/domain-suggestions', query=delimited(query, ' '),
-                            items_path=('suggestions', ), **kwargs)
+                             exclude_query=delimited(exclude_query, ' '),
+                             max_length=max_length, min_length=min_length, has_hyphen=has_hyphen, has_number=has_number,
+                             active_only=active_only, deleted_only=deleted_only, anchor_left=anchor_left,
+                             anchor_right=anchor_right, page=page, items_path=('results',), **kwargs)
 
     def hosting_history(self, query, **kwargs):
         """Returns the hosting history from the given domain name"""
@@ -135,29 +141,31 @@ class API(object):
     def ip_monitor(self, query, days_back=0, page=1, **kwargs):
         """Pass in the IP Address you wish to query ( i.e. 199.30.228.112 )."""
         return self._results('ip-monitor', '/v1/ip-monitor', query=query, days_back=days_back, page=page,
-                            items_path=('alerts', ), **kwargs)
+                             items_path=('alerts',), **kwargs)
 
     def ip_registrant_monitor(self, query, days_back=0, search_type="all", server=None, country=None, org=None, page=1,
                               include_total_count=False, **kwargs):
         """Query based on free text query terms"""
         return self._results('ip-registrant-monitor', '/v1/ip-registrant-monitor', query=query,
-                            days_back=days_back, search_type=search_type, server=server, country=country, org=org,
-                            page=page, include_total_count=include_total_count, **kwargs)
+                             days_back=days_back, search_type=search_type, server=server, country=country, org=org,
+                             page=page, include_total_count=include_total_count, **kwargs)
 
     def name_server_monitor(self, query, days_back=0, page=1, **kwargs):
         """Pass in the hostname of the Name Server you wish to query ( i.e. dynect.net )."""
         return self._results('name-server-monitor', '/v1/name-server-monitor', query=query, days_back=days_back,
-                            page=page, items_path=('alerts', ), **kwargs)
+                             page=page, items_path=('alerts',), **kwargs)
 
     def parsed_whois(self, query, **kwargs):
         """Pass in a domain name"""
         return self._results('parsed-whois', '/v1/{0}/whois/parsed'.format(query), cls=ParsedWhois, **kwargs)
 
-    def registrant_monitor(self, query, exclude=[], days_back=0, limit=None, **kwargs):
+    def registrant_monitor(self, query, exclude=None, days_back=0, limit=None, **kwargs):
         """One or more terms as a Python list or separated by the pipe character ( | )."""
+        if exclude is None:
+            exclude = []
         return self._results('registrant-alert', '/v1/registrant-alert', query=delimited(query),
-                            exclude=delimited(exclude), days_back=days_back, limit=limit, items_path=('alerts', ),
-                            **kwargs)
+                             exclude=delimited(exclude), days_back=days_back, limit=limit, items_path=('alerts',),
+                             **kwargs)
 
     def reputation(self, query, include_reasons=False, **kwargs):
         """Pass in a domain name to see its reputation score"""
@@ -179,13 +187,13 @@ class API(object):
             raise ValueError('Query or IP Address (but not both) must be defined')
 
         return self._results('reverse-ip-whois', '/v1/reverse-ip-whois', query=query, ip=ip, country=country,
-                            server=server, include_total_count=include_total_count, page=page, items_path=('records', ),
-                            **kwargs)
+                             server=server, include_total_count=include_total_count, page=page, items_path=('records',),
+                             **kwargs)
 
     def reverse_name_server(self, query, limit=None, **kwargs):
         """Pass in a domain name or a name server."""
         return self._results('reverse-name-server', '/v1/{0}/name-server-domains'.format(query),
-                            items_path=('primary_domains', ), limit=limit, **kwargs)
+                             items_path=('primary_domains',), limit=limit, **kwargs)
 
     def reverse_whois(self, query, exclude=None, scope='current', mode='purchase', **kwargs):
         """List of one or more terms to search for in the Whois record,
@@ -194,7 +202,7 @@ class API(object):
         if exclude is None:
             exclude = []
         return self._results('reverse-whois', '/v1/reverse-whois', terms=delimited(query), exclude=delimited(exclude),
-                            scope=scope, mode=mode, **kwargs)
+                             scope=scope, mode=mode, **kwargs)
 
     def whois(self, query, **kwargs):
         """Pass in a domain name or an IP address to perform a whois lookup."""
@@ -203,7 +211,7 @@ class API(object):
     def whois_history(self, query, mode=None, sort=None, offset=None, limit=None, **kwargs):
         """Pass in a domain name."""
         return self._results('whois-history', '/v1/{0}/whois/history'.format(query), mode=mode, sort=sort,
-          offset=offset, limit=limit, items_path=('history', ), **kwargs)
+                             offset=offset, limit=limit, items_path=('history',), **kwargs)
 
     def phisheye(self, query, days_back=None, **kwargs):
         """Returns domain results for the specified term for today or the specified number of days_back.
@@ -213,7 +221,7 @@ class API(object):
                  Many domains will have incomplete data because that information isn't available in their Whois records,
                  or they don't have DNS results for a name server or IP address.
         """
-        return self._results('phisheye', '/v1/phisheye', query=query, days_back=days_back, items_path=('domains', ),
+        return self._results('phisheye', '/v1/phisheye', query=query, days_back=days_back, items_path=('domains',),
                              **kwargs)
 
     def phisheye_term_list(self, include_inactive=False, **kwargs):
@@ -224,7 +232,7 @@ class API(object):
                  There is no API call to set up the terms.
         """
         return self._results('phisheye_term_list', '/v1/phisheye/term-list', include_inactive=include_inactive,
-                             items_path=('terms', ), **kwargs)
+                             items_path=('terms',), **kwargs)
 
     def iris(self, domain=None, ip=None, email=None, nameserver=None, registrar=None, registrant=None,
              registrant_org=None, **kwargs):
@@ -237,16 +245,16 @@ class API(object):
 
         return self._results('iris', '/v1/iris', domain=domain, ip=ip, email=email, nameserver=nameserver,
                              registrar=registrar, registrant=registrant, registrant_org=registrant_org,
-                             items_path=('results', ), **kwargs)
+                             items_path=('results',), **kwargs)
 
     def risk(self, domain, **kwargs):
         """Returns back the risk score for a given domain"""
-        return self._results('risk', '/v1/risk', items_path=('components', ), domain=domain, cls=Reputation,
+        return self._results('risk', '/v1/risk', items_path=('components',), domain=domain, cls=Reputation,
                              **kwargs)
 
     def risk_evidence(self, domain, **kwargs):
         """Returns back the detailed risk evidence associated with a given domain"""
-        return self._results('risk-evidence', '/v1/risk/evidence/', items_path=('components', ), domain=domain,
+        return self._results('risk-evidence', '/v1/risk/evidence/', items_path=('components',), domain=domain,
                              **kwargs)
 
     def iris_enrich(self, *domains, **kwargs):
@@ -274,7 +282,7 @@ class API(object):
             data_updated_after = data_updated_after.strftime('%Y-%M-%d')
 
         return self._results('iris-enrich', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
-                             items_path=('results', ), **kwargs)
+                             items_path=('results',), **kwargs)
 
     def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None,
                          create_date=None, active=None, **kwargs):
@@ -320,7 +328,7 @@ class API(object):
         if not (kwargs or domains):
             raise ValueError('Need to define investigation using kwarg filters or domains')
 
-        if type(domains) in (list, tuple):
+        if isinstance(domains, (list, tuple)):
             domains = ','.join(domains)
         if hasattr(data_updated_after, 'strftime'):
             data_updated_after = data_updated_after.strftime('%Y-%M-%d')
@@ -328,9 +336,9 @@ class API(object):
             expiration_date = expiration_date.strftime('%Y-%M-%d')
         if hasattr(create_date, 'strftime'):
             create_date = create_date.strftime('%Y-%M-%d')
-        if type(active) == bool:
-            active = str(active).lower()
+        if isinstance(active, bool):
+            kwargs['active'] = str(active).lower()
 
         return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
                              data_updated_after=data_updated_after, expiration_date=expiration_date,
-                             create_date=create_date, items_path=('results', ), **kwargs)
+                             create_date=create_date, items_path=('results',), **kwargs)
