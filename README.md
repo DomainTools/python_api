@@ -171,7 +171,7 @@ api.domain_profile('google.com').status == 200
 Using the API Asynchronously
 ===================
 
-![domaintools Async Example](https://github.com/DomainTools/python_api/raw/master/artwork/example_async.gif)
+![domaintools Async Example](https://github.com/DomainTools/python_api/raw/main/artwork/example_async.gif)
 
 If you are running on Python 3.5+ the DomainTools' API automatically supports async usage:
 
@@ -204,7 +204,7 @@ title = profile['website_data']['title']
 Interacting with the API via the command line client
 ===================
 
-![domaintools CLI Example](https://github.com/DomainTools/python_api/raw/master/artwork/example_cli.gif)
+![domaintools CLI Example](https://github.com/DomainTools/python_api/raw/main/artwork/example_cli.gif)
 
 Immediately after installing `domaintools_api` with pip, a `domaintools` command line client will become available to you:
 
@@ -234,5 +234,5 @@ API_KEY
 Python Version Support Policy
 ===================
 
-Please see the [supported versions](https://github.com/DomainTools/python_api/raw/master/PYTHON_SUPPORT.md) document 
+Please see the [supported versions](https://github.com/DomainTools/python_api/raw/main/PYTHON_SUPPORT.md) document 
 for the DomainTools Python support policy.
