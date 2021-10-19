@@ -325,6 +325,10 @@ class API(object):
         for enrichment in api.iris_enrich(i):  # Enables looping over all returned enriched domains
 
         """
+        # We put search_hash in the signature definition so the CLI can see it as a valid arg
+        if search_hash:
+            kwargs['search_hash'] = search_hash
+
         if not (kwargs or domains):
             raise ValueError('Need to define investigation using kwarg filters or domains')
 
@@ -338,9 +342,7 @@ class API(object):
             create_date = create_date.strftime('%Y-%M-%d')
         if isinstance(active, bool):
             kwargs['active'] = str(active).lower()
-        # We put search_hash in the signature definition so the CLI can see it as a valid arg
-        if search_hash:
-            kwargs['search_hash'] = search_hash
+
 
         return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
                              data_updated_after=data_updated_after, expiration_date=expiration_date,
