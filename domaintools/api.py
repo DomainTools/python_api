@@ -285,7 +285,7 @@ class API(object):
                              items_path=('results',), **kwargs)
 
     def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None,
-                         create_date=None, active=None, **kwargs):
+                         create_date=None, active=None, search_hash=None, **kwargs):
         """Returns back a list of domains based on the provided filters.
         The following filters are available beyond what is parameterized as kwargs:
 
@@ -338,6 +338,9 @@ class API(object):
             create_date = create_date.strftime('%Y-%M-%d')
         if isinstance(active, bool):
             kwargs['active'] = str(active).lower()
+        # We put search_hash in the signature definition so the CLI can see it as a valid arg
+        if search_hash:
+            kwargs['search_hash'] = search_hash
 
         return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
                              data_updated_after=data_updated_after, expiration_date=expiration_date,
