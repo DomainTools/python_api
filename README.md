@@ -1,14 +1,14 @@
-![domaintools](https://github.com/DomainTools/python_api/raw/master/artwork/logo.png)
+![domaintools](https://github.com/DomainTools/python_api/raw/main/artwork/logo.png)
 ===================
 
 [![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools_api)
 [![CI Status](https://github.com/domaintools/python_api/workflows/Tests/badge.svg)](https://github.com/domaintools/python_api/actions)
-[![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=master)](https://coveralls.io/github/DomainTools/python_api?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=main)](https://coveralls.io/github/DomainTools/python_api?branch=main)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 
 DomainTools' Official Python API
 
-![domaintools Example](https://github.com/DomainTools/python_api/raw/master/artwork/example.gif)
+![domaintools Example](https://github.com/DomainTools/python_api/raw/main/artwork/example.gif)
 
 
 Installing the DomainTools' API
