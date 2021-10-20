@@ -48,6 +48,8 @@ class API(object):
         self.extra_aiohttp_params = {}
         self.always_sign_api_key = always_sign_api_key
         self.key_sign_hash = key_sign_hash
+        if not https:
+            raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
         if proxy_url:
             self.extra_request_params['proxies'] = {'http': proxy_url, 'https': proxy_url}
             self.extra_aiohttp_params['proxy'] = proxy_url
@@ -63,7 +65,7 @@ class API(object):
         if product != 'account-information' and self.rate_limit and not self.limits_set and not self.limits:
             self._rate_limit()
 
-        uri = '/'.join(('{0}://api.domaintools.com'.format('https' if self.https else 'http'), path.lstrip('/')))
+        uri = '/'.join(('https://api.domaintools.com', path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
         self.handle_api_key(path, parameters)
@@ -342,7 +344,6 @@ class API(object):
             create_date = create_date.strftime('%Y-%M-%d')
         if isinstance(active, bool):
             kwargs['active'] = str(active).lower()
-
 
         return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
                              data_updated_after=data_updated_after, expiration_date=expiration_date,
