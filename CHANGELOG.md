@@ -1,5 +1,7 @@
 Changelog
 =========
+### 0.6.0
+
 ### 0.3.3
 - Python 3.5.2 installation fix
 
