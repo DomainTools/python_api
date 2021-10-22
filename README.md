@@ -40,7 +40,7 @@ Every API endpoint is then exposed as a method on the API object, with any param
 being passed in as method arguments:
 
 ```python
-api.domain_search('google', exclude='photos')
+api.iris_enrich('domaintools.com')
 ```
 
 You can get an overview of every endpoint that you can interact with using the builtin help function:
@@ -52,14 +52,14 @@ help(api)
 If applicable, native Python looping can be used directly to loop through any results:
 
 ```python
-for result in api.domain_search('google', exclude='photos'):
-    print(result['sld'])
+for result in api.iris_enrich('domaintools.com').response().get('results', {}):
+    print(result['domain'])
 ```
 
 You can also use a context manager to ensure processing on the results only occurs if the request is successfully made:
 
 ```python
-with api.domain_search('google', exclude='photos') as results:
+with api.iris_enrich('domaintools.com').response().get('results', {}) as results:
     print(results)
 ```
 
@@ -82,11 +82,11 @@ The entire structure returned from DomainTools can be retrieved by doing `.data(
 can be retrieved by doing `.response()`:
 
 ```python
-api.domain_search('google').data() == {'response': { ... }}
-api.domain_search('google').response() == { ... }
+api.iris_enrich('domaintools.com').data() == {'response': { ... }}
+api.iris_enrich('domaintools.com').response() == { ... }
 ```
 
-You can directly get the html, xml, or json version of the response by calling `.(html|xml|json)()`:
+You can directly get the html, xml, or json version of the response by calling `.(html|xml|json)()` These only work with non AsyncResults:
 ```python
 html = str(api.domain_search('google').json())
 xml = str(api.domain_search('google').xml())
@@ -173,24 +173,24 @@ Using the API Asynchronously
 
 ![domaintools Async Example](https://github.com/DomainTools/python_api/raw/main/artwork/example_async.gif)
 
-If you are running on Python 3.5+ the DomainTools' API automatically supports async usage:
+The DomainTools' API automatically supports async usage:
 
 ```python
 
-search_results = await api.domain_search('google')
+search_results = await api.iris_enrich('domaintools.com').response().get('results', {})
 ```
 
 There is built-in support for async context managers:
 
 ```python
-async with api.domain_search('google') as search_results:
+async with api.iris_enrich('domaintools.com').response().get('results', {}) as search_results:
     # do things
 ```
 
 And direct async for loops:
 
 ```python
-async for result in api.domain_search('google'):
+async for result in api.iris_enrich('domaintools.com').response().get('results', {}):
     print(result)
 ```
 
@@ -215,7 +215,7 @@ domaintools --help
 To use - simply pass in the api_call you would like to make along with the parameters that it takes and your credentials:
 
 ```bash
-domaintools domain_search google --max_length 10 -u $TEST_USER -k $TEST_KEY
+domaintools iris_investigate --domains domaintools.com -u $TEST_USER -k $TEST_KEY
 ```
 
 Optionally, you can specify the desired format (html, xml, json, or list) of the results:
