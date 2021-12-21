@@ -113,7 +113,7 @@ class API(object):
 
         api_calls = tuple((api_call for api_call in dir(API) if not api_call.startswith('_') and
                            callable(getattr(API, api_call, None))))
-        return [snakecase(p["id"]) for p in self.account_information()["products"] if snakecase(p["id"]) in api_calls]
+        return sorted([snakecase(p["id"]) for p in self.account_information()["products"] if snakecase(p["id"]) in api_calls])
 
     def brand_monitor(self, query, exclude=None, domain_status=None, days_back=None, **kwargs):
         """Pass in one or more terms as a list or separated by the pipe character ( | )"""
