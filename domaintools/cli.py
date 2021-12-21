@@ -81,6 +81,10 @@ def run(): # pragma: no cover
 
     api = API(user, key, https=arguments.pop('https'), verify_ssl=arguments.pop('verify_ssl'),
               rate_limit=arguments.pop('rate_limit'))
-    response = getattr(api, arguments.pop('api_call'))(**arguments)
-    output = str(getattr(response, out_format) if out_format != 'list' else response.as_list())
+    api_call = arguments.pop('api_call')
+    response = getattr(api, api_call)(**arguments)
+    if api_call in ["available_api_calls"]:
+        output = '\n'.join(response)
+    else:
+        output = str(getattr(response, out_format) if out_format != 'list' else response.as_list())
     out_file.write(output if output.endswith('\n') else output + '\n')
