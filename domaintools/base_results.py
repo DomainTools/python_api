@@ -112,10 +112,9 @@ class Results(MutableMapping, MutableSequence):
                 "limit_exceeded" in self._data['response'] and
                 self._data['response']['limit_exceeded'] is True):
                 return True, self._data['response']['message']
-        else:
-            # TODO: handle html, xml response errors better.
-            if "response" in self._data and "limit_exdeeded" in self._data:
-                return True, "limit exceeded"
+        # TODO: handle html, xml response errors better.
+        elif "response" in self._data and "limit_exceeded" in self._data:
+            return True, "limit exceeded"
         return False, ""
 
     @property
