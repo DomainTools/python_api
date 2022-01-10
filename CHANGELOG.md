@@ -1,5 +1,11 @@
 Changelog
 =========
+
+### 0.6.1
+- Fix an invalid response type error for available_api_calls on CLI
+- Add better error messaging for users when proxy info is not set correctly
+- Fix typo on limit_exceeded when outputting formats other than JSON when using non-async results
+
 ### 0.6.0
 
 ### 0.3.3
