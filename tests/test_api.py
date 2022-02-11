@@ -1,5 +1,6 @@
 """Tests the Python interface for DomainTools' APIs"""
 from os import environ
+from datetime import datetime
 
 import pytest
 from domaintools import API, exceptions
@@ -416,6 +417,22 @@ def test_iris_investigate():
     assert investigation_results['results_count']
     for result in investigation_results:
         assert result['domain'] in ['amazon.com', 'google.com']
+
+
+@vcr.use_cassette
+def test_iris_detect_monitors():
+    with pytest.raises(ValueError):
+        api.iris_detect_monitors(include_counts=True)
+
+    detect_results = api.iris_detect_monitors()
+    assert detect_results['total_count'] == 21
+
+    detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
+    assert detect_results['monitors'][0]['term'] == 'meta'
+
+    detect_results = api.iris_detect_monitors(include_counts=True, datetime_counts_since=datetime(2022, 2, 10))
+    assert detect_results['total_count'] == 21
+    assert 'domain_counts' in detect_results['monitors'][0]
 
 
 @vcr.use_cassette
