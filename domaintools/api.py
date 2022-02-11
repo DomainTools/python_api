@@ -351,3 +351,20 @@ class API(object):
         return self._results('iris-investigate', '/v1/iris-investigate/', domain=domains,
                              data_updated_after=data_updated_after, expiration_date=expiration_date,
                              create_date=create_date, items_path=('results',), **kwargs)
+
+    def iris_detect_monitors(self, include_counts=False, datetime_counts_since=None, sort=None, order="desc", offset=0,
+                             limit=None, **kwargs):
+        """Returns back a list of monitors based on the provided filters.
+        """
+
+        if include_counts:
+            if not datetime_counts_since:
+                raise ValueError('Need to define datetime_counts_since when include_counts is True')
+            if isinstance(datetime_counts_since, datetime):
+                datetime_counts_since = str(datetime_counts_since.astimezone())
+            kwargs["include_counts"] = "true"
+            kwargs["datetime_counts_since"] = datetime_counts_since
+        if sort:
+            kwargs["sort[]"] = sort
+        return self._results('iris-detect-monitors', '/v1/iris-detect/monitors/', order=order, offset=offset,
+                             limit=limit, items_path=('monitors',), response_path=(), **kwargs)
