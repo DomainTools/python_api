@@ -75,44 +75,4 @@ interactions:
     status:
       code: 200
       message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.26.0
-    method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?datetime_counts_since=2022-02-10+00%3A00%3A00-08%3A00&include_counts=true&offset=0&order=desc
-  response:
-    body:
-      string: '{"total_count":21,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"QEMba7ljxo","created_date":"2021-11-11T21:49:09.206924+00:00","updated_date":"2021-11-11T21:49:09.206924+00:00","state":"active","status":"completed","domain_counts":{"new":7768,"watched":2,"escalated":0,"changed":0},"created_by":"meddy@domaintools.com"},{"term":"antifa","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"8W2p0lpzOM","created_date":"2021-06-03T19:50:34.640067+00:00","updated_date":"2021-06-03T19:50:34.640067+00:00","state":"active","status":"completed","domain_counts":{"new":308,"watched":0,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"apple","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"JngmNwZb9v","created_date":"2021-10-19T18:20:42.447126+00:00","updated_date":"2021-10-19T18:20:42.447126+00:00","state":"active","status":"completed","domain_counts":{"new":11548,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"auth","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"WZVmOQpe59","created_date":"2021-06-03T19:50:10.845443+00:00","updated_date":"2021-06-03T19:50:10.845443+00:00","state":"active","status":"completed","domain_counts":{"new":29699,"watched":2,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"bamboozoo","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"ZBEp9ogmYX","created_date":"2021-10-19T18:01:08.506617+00:00","updated_date":"2021-10-19T18:01:08.506617+00:00","state":"active","status":"completed","domain_counts":{"new":5,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"bitcoin","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"6GRjDglpze","created_date":"2021-10-19T18:21:01.246780+00:00","updated_date":"2021-10-19T18:21:01.246780+00:00","state":"active","status":"completed","domain_counts":{"new":13768,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"codejester","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"BVAmAykm9d","created_date":"2021-10-19T17:57:28.045611+00:00","updated_date":"2021-10-19T17:57:28.045611+00:00","state":"active","status":"completed","domain_counts":{"new":1,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"com","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"dZ4jKRMp8V","created_date":"2022-01-07T21:13:37.476991+00:00","updated_date":"2022-01-07T21:13:37.476991+00:00","state":"active","status":"completed","domain_counts":{"new":103582,"watched":90,"escalated":0,"changed":4},"created_by":"gsamson@domaintools.com"},{"term":"comradchat","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"ZBEp9vzjYX","created_date":"2022-01-07T21:14:50.931752+00:00","updated_date":"2022-01-07T21:14:50.931752+00:00","state":"active","status":"completed","domain_counts":{"new":0,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"domaintools","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"ND2pMlrbL8","created_date":"2021-11-02T20:11:39.850602+00:00","updated_date":"2021-11-02T20:11:39.850602+00:00","state":"active","status":"completed","domain_counts":{"new":9,"watched":51,"escalated":0,"changed":1},"created_by":"piffey@piffey.net"},{"term":"facebook","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"JZej4N0bN1","created_date":"2021-11-01T20:39:48.750600+00:00","updated_date":"2021-11-01T20:39:48.750600+00:00","state":"active","status":"completed","domain_counts":{"new":1928,"watched":0,"escalated":0,"changed":0},"created_by":"sdavis@domaintools.com"},{"term":"farsight","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"JBgb1MWbwP","created_date":"2021-11-02T20:11:28.535857+00:00","updated_date":"2021-11-02T20:11:28.535857+00:00","state":"active","status":"completed","domain_counts":{"new":16,"watched":63,"escalated":0,"changed":2},"created_by":"piffey@piffey.net"},{"term":"garysamson","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"vqrmd82mz8","created_date":"2021-10-22T16:34:44.867530+00:00","updated_date":"2021-10-22T16:34:44.867530+00:00","state":"active","status":"completed","domain_counts":{"new":1,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"login","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"RdEjzgmJZn","created_date":"2021-06-03T20:01:26.865353+00:00","updated_date":"2021-06-03T20:01:26.865353+00:00","state":"active","status":"completed","domain_counts":{"new":14219,"watched":5,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"meta","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"ZBEp9ZvjYX","created_date":"2021-11-10T00:15:04.553628+00:00","updated_date":"2021-11-10T00:15:04.553628+00:00","state":"active","status":"completed","domain_counts":{"new":258362,"watched":2,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"metaverse","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"3ZXmRwObEo","created_date":"2021-11-02T20:13:16.475109+00:00","updated_date":"2021-11-02T20:13:16.475109+00:00","state":"active","status":"completed","domain_counts":{"new":72619,"watched":2,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"microsoft","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"eoab3Lp8BR","created_date":"2021-06-03T20:04:36.969437+00:00","updated_date":"2021-06-03T20:04:36.969437+00:00","state":"active","status":"completed","domain_counts":{"new":2987,"watched":3,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"refund","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"8kXjkRp2Oa","created_date":"2021-06-03T20:05:53.298385+00:00","updated_date":"2021-06-03T20:05:53.298385+00:00","state":"active","status":"completed","domain_counts":{"new":2367,"watched":0,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"ticotiki","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"dZ4jKlAm8V","created_date":"2021-10-19T18:00:54.565759+00:00","updated_date":"2021-10-19T18:00:54.565759+00:00","state":"active","status":"completed","domain_counts":{"new":0,"watched":0,"escalated":0,"changed":0},"created_by":"gsamson@domaintools.com"},{"term":"update","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxkGmYJ","created_date":"2021-10-27T20:40:19.763527+00:00","updated_date":"2021-10-27T20:40:19.763527+00:00","state":"active","status":"completed","domain_counts":{"new":6746,"watched":0,"escalated":0,"changed":0},"created_by":"piffey@piffey.net"},{"term":"wellsfargo","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"4ZrpBnapBw","created_date":"2021-11-16T16:13:06.990933+00:00","updated_date":"2021-11-16T16:13:06.990933+00:00","state":"active","status":"completed","domain_counts":{"new":298,"watched":39,"escalated":0,"changed":4},"created_by":"lohara@domaintools.com"}]}'
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 11 Feb 2022 15:37:20 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
-      Set-Cookie:
-      - csrftoken=9800948385da12374ff587bd77618ca5; path=/; domain=.domaintools.com;
-        secure
-      - dtsession=tookibtt3fdc5a45ufqcpa95svudibmgf5q786r9vr57f9dvkgf53f8rdr7367fkobbnqab5cat86o46u4hb7sc1jg51chq45fii3vn;
-        expires=Sun, 13-Mar-2022 15:37:20 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-        secure; HttpOnly
-      Transfer-Encoding:
-      - chunked
-    status:
-      code: 200
-      message: OK
 version: 1

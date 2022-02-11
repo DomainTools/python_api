@@ -430,10 +430,6 @@ def test_iris_detect_monitors():
     detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
     assert detect_results['monitors'][0]['term'] == 'meta'
 
-    detect_results = api.iris_detect_monitors(include_counts=True, datetime_counts_since=datetime(2022, 2, 10))
-    assert detect_results['total_count'] == 21
-    assert 'domain_counts' in detect_results['monitors'][0]
-
 
 @vcr.use_cassette
 def test_limit_exceeded():
