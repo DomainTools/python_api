@@ -371,7 +371,7 @@ class API(object):
         return self._results('iris-detect-monitors', '/v1/iris-detect/monitors/', order=order, offset=offset,
                              limit=limit, items_path=('monitors',), response_path=(), **kwargs)
 
-    def iris_detect_new_domains(self, monitor_id=None, escalation_types=None, tlds=None, risk_score_ranges=None,
+    def iris_detect_new_domains(self, monitor_id=None, tlds=None, risk_score_ranges=None,
                                 mx_exists=None, discovered_since=None, changed_since=None, search=None, sort=None,
                                 order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
         """Returns back a list of new domains in Iris Detect based on the provided filters.
@@ -388,6 +388,42 @@ class API(object):
                 kwargs["changed_since"] = str(changed_since.astimezone())
             elif isinstance(changed_since, str):
                 kwargs["changed_since"] = changed_since
+        if tlds:
+            kwargs["tlds[]"] = tlds
+        if risk_score_ranges:
+            kwargs["risk_score_ranges[]"] = risk_score_ranges
+        if sort:
+            kwargs["sort[]"] = sort
+        if order is not None:
+            kwargs["order"] = order
+        if mx_exists is not None:
+            kwargs["mx_exists"] = mx_exists
+        return self._results('iris-detect-new-domains', '/v1/iris-detect/domains/new/', monitor_id=monitor_id,
+                             search=search, include_domain_data=include_domain_data, preview=preview, offset=offset,
+                             limit=limit, items_path=('watchlist_domains',), response_path=(), **kwargs)
+
+    def iris_detect_watched_domains(self, monitor_id=None, escalation_types=None, tlds=None, risk_score_ranges=None,
+                                mx_exists=None, discovered_since=None, changed_since=None, escalated_since=None, search=None, sort=None,
+                                order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
+        """Returns back a list of watched domains in Iris Detect based on the provided filters.
+        """
+        if discovered_since and changed_since:
+            raise ValueError('Please only use one of discovered_since or changed_since in your query.')
+        if discovered_since:
+            if isinstance(discovered_since, datetime):
+                kwargs["discovered_since"] = str(discovered_since.astimezone())
+            elif isinstance(discovered_since, str):
+                kwargs["discovered_since"] = discovered_since
+        if changed_since:
+            if isinstance(changed_since, datetime):
+                kwargs["changed_since"] = str(changed_since.astimezone())
+            elif isinstance(changed_since, str):
+                kwargs["changed_since"] = changed_since
+        if escalated_since:
+            if isinstance(escalated_since, datetime):
+                kwargs["escalated_since"] = str(escalated_since.astimezone())
+            elif isinstance(escalated_since, str):
+                kwargs["escalated_since"] = escalated_since
         if escalation_types:
             kwargs["escalation_types[]"] = escalation_types
         if tlds:
@@ -400,6 +436,6 @@ class API(object):
             kwargs["order"] = order
         if mx_exists is not None:
             kwargs["mx_exists"] = mx_exists
-        return self._results('iris-detect-new-domains', '/v1/iris-detect/domains/new/', monitor_id=monitor_id,
+        return self._results('iris-detect-watched-domains', '/v1/iris-detect/domains/watched/', monitor_id=monitor_id,
                              search=search, include_domain_data=include_domain_data, preview=preview, offset=offset,
                              limit=limit, items_path=('watchlist_domains',), response_path=(), **kwargs)

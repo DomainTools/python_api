@@ -444,6 +444,21 @@ def test_iris_detect_new_domains():
 
 
 @vcr.use_cassette
+def test_iris_detect_watched_domains():
+    with pytest.raises(ValueError):
+        api.iris_detect_watched_domains(discovered_since=True, changed_since=True)
+
+    detect_results = api.iris_detect_watched_domains()
+    assert detect_results['count'] == 100
+
+    detect_results = api.iris_detect_watched_domains(monitor_id="QEMba7ljxo", sort=["risk_score"], order="desc")
+    assert detect_results['watchlist_domains'][0]['risk_score'] == 98
+
+    detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
+    assert detect_results['count'] == 0
+
+
+@vcr.use_cassette
 def test_limit_exceeded():
     with pytest.raises(exceptions.ServiceException):
         response = api.iris_investigate(ip="8.8.8.8")
