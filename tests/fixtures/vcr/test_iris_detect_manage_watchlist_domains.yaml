@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: '{"api_username": "cwoodraska", "timestamp": "2022-03-07T21:06:38Z", "signature":
+      "5fdf43d9f02e1db43b1e6078c3f02b815e164285fab1ace177e2468d6e7f5294", "state":
+      "watched", "watchlist_domain_ids": ["Zadmr81nEd"]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '208'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.26.0
+    method: PATCH
+    uri: https://api.domaintools.com/v1/iris-detect/domains/
+  response:
+    body:
+      string: '{"watchlist_domains":[{"state":"watched","domain":"caritasukraine.org","discovered_date":"2022-03-01T21:33:42.265000+00:00","changed_date":"2022-03-01T21:36:12.000000+00:00","id":"Zadmr81nEd","assigned_by":"cwoodraska@domaintools.com","assigned_date":"2022-03-07T21:06:39.000000+00:00"}]}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Mar 2022 21:06:39 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=ab7604ede137a3d1a9950282f1a9dc52; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=19fa7qjr75e55mmbdbv2iv9akbh90qkvr755meaj89h1kuoqrbep775o7ela48u7hbt7ii37cfhun31bp0nmpkqppunlcr4ta067qt8;
+        expires=Wed, 06-Apr-2022 21:06:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1

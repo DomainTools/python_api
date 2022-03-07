@@ -96,7 +96,6 @@ class API(object):
                                            ''.join([self.username, parameters['timestamp'], path]).encode('utf8'),
                                            digestmod=signing_hash).hexdigest()
 
-
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
         return self._results('account-information', '/v1/account', items_path=('products',), **kwargs)
@@ -376,8 +375,6 @@ class API(object):
                                 order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
         """Returns back a list of new domains in Iris Detect based on the provided filters.
         """
-        if discovered_since and changed_since:
-            raise ValueError('Please only use one of discovered_since or changed_since in your query.')
         if discovered_since:
             if isinstance(discovered_since, datetime):
                 kwargs["discovered_since"] = str(discovered_since.astimezone())
@@ -407,8 +404,6 @@ class API(object):
                                 order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
         """Returns back a list of watched domains in Iris Detect based on the provided filters.
         """
-        if discovered_since and changed_since:
-            raise ValueError('Please only use one of discovered_since or changed_since in your query.')
         if discovered_since:
             if isinstance(discovered_since, datetime):
                 kwargs["discovered_since"] = str(discovered_since.astimezone())
@@ -439,3 +434,10 @@ class API(object):
         return self._results('iris-detect-watched-domains', '/v1/iris-detect/domains/watched/', monitor_id=monitor_id,
                              search=search, include_domain_data=include_domain_data, preview=preview, offset=offset,
                              limit=limit, items_path=('watchlist_domains',), response_path=(), **kwargs)
+
+    def iris_detect_manage_watchlist_domains(self, watchlist_domain_ids, state, **kwargs):
+        """Changes the watch state of a list of domains by their Iris Detect monitor ID.
+        """
+        return self._results('iris-detect-manage-watchlist-domains', '/v1/iris-detect/domains/', state=state,
+                             watchlist_domain_ids=watchlist_domain_ids, items_path=('watchlist_domains',),
+                             response_path=(), **kwargs)

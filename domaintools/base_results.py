@@ -62,11 +62,14 @@ class Results(MutableMapping, MutableSequence):
             if self.product in ['iris-investigate', 'iris-enrich']:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
-                return session.post(url=self.url, verify=self.api.verify_ssl,
-                        data=post_data)
+                return session.post(url=self.url, verify=self.api.verify_ssl, data=post_data)
+            elif self.product in ['iris-detect-manage-watchlist-domains']:
+                patch_data = self.kwargs.copy()
+                patch_data.update(self.api.extra_request_params)
+                return session.patch(url=self.url, verify=self.api.verify_ssl, json=patch_data)
             else:
                 return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
-                        **self.api.extra_request_params)
+                                   **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
