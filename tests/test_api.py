@@ -433,9 +433,6 @@ def test_iris_detect_monitors():
 
 @vcr.use_cassette
 def test_iris_detect_new_domains():
-    with pytest.raises(ValueError):
-        api.iris_detect_new_domains(discovered_since=True, changed_since=True)
-
     detect_results = api.iris_detect_new_domains()
     assert detect_results['count'] == 100
 
@@ -445,9 +442,6 @@ def test_iris_detect_new_domains():
 
 @vcr.use_cassette
 def test_iris_detect_watched_domains():
-    with pytest.raises(ValueError):
-        api.iris_detect_watched_domains(discovered_since=True, changed_since=True)
-
     detect_results = api.iris_detect_watched_domains()
     assert detect_results['count'] == 100
 
@@ -456,6 +450,12 @@ def test_iris_detect_watched_domains():
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
     assert detect_results['count'] == 0
+
+
+@vcr.use_cassette
+def test_iris_detect_manage_watchlist_domains():
+    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["Zadmr81nEd"], state="watched")
+    assert detect_results['watchlist_domains'][0]['state'] == "watched"
 
 
 @vcr.use_cassette

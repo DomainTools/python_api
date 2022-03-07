@@ -2,26 +2,15 @@
 
 Additionally, defines any custom result objects that may be used to enable more Pythonic interaction with endpoints.
 """
-import sys
 from itertools import chain
-
-major, minor, patch = sys.version_info[:3]
 
 try: # pragma: no cover
     from collections import OrderedDict
 except ImportError: # pragma: no cover
     from ordereddict import OrderedDict
 
-if major >= 3: # pragma: no cover
-    from itertools import zip_longest
-else: # pragma: no cover
-    from itertools import izip_longest as zip_longest
-
-if major >= 3 and (minor > 5 or (minor == 5 and patch >= 3)):
-    from domaintools_async import AsyncResults as Results
-else: # pragma: no cover
-    from domaintools.base_results import Results
-
+from itertools import zip_longest
+from domaintools_async import AsyncResults as Results
 
 class Reputation(Results):
     """Returns the reputation results in a format that can quickly be converted into floats / ints"""
