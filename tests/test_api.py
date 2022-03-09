@@ -459,6 +459,12 @@ def test_iris_detect_manage_watchlist_domains():
 
 
 @vcr.use_cassette
+def test_iris_detect_escalate_domains():
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["mPjGyweeWA"], escalation_type="blocked")
+    assert detect_results['escalations'][0]['escalation_type'] == "blocked"
+
+
+@vcr.use_cassette
 def test_limit_exceeded():
     with pytest.raises(exceptions.ServiceException):
         response = api.iris_investigate(ip="8.8.8.8")

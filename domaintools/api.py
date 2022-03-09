@@ -436,8 +436,16 @@ class API(object):
                              limit=limit, items_path=('watchlist_domains',), response_path=(), **kwargs)
 
     def iris_detect_manage_watchlist_domains(self, watchlist_domain_ids, state, **kwargs):
-        """Changes the watch state of a list of domains by their Iris Detect monitor ID.
+        """Changes the watch state of a list of domains by their Iris Detect domain ID.
         """
         return self._results('iris-detect-manage-watchlist-domains', '/v1/iris-detect/domains/', state=state,
                              watchlist_domain_ids=watchlist_domain_ids, items_path=('watchlist_domains',),
+                             response_path=(), **kwargs)
+
+    def iris_detect_escalate_domains(self, watchlist_domain_ids, escalation_type, **kwargs):
+        """Changes the escalation type of a list of domains by their Iris Detect domain ID.
+        """
+        kwargs["watchlist_domain_ids[]"] = watchlist_domain_ids
+        return self._results('iris-detect-escalate-domains', '/v1/iris-detect/escalations/',
+                             escalation_type=escalation_type, items_path=('escalations',),
                              response_path=(), **kwargs)
