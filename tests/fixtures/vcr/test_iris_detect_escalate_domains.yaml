@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: escalation_type=blocked&watchlist_domain_ids%5B%5D=mPjGyweeWA
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '195'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.26.0
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-detect/escalations/
+  response:
+    body:
+      string: '{"escalations":[{"watchlist_domain_id":"mPjGyweeWA","escalation_type":"blocked","id":"9WZbNeAg0w","created_date":"2022-03-09T19:10:34.056510+00:00","updated_date":"2022-03-09T19:10:34.056510+00:00","created_by":"cwoodraska@domaintools.com"}]}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 09 Mar 2022 19:10:34 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Chuck Norris fears nothing that is not Emily.
+      Set-Cookie:
+      - csrftoken=54134f3a3f3e0061728826acd3140c67; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=3431amrpvnlaujahr6lecarklnsc7rhpa4mit79tm3a8pn3umm2j1c9724hdi2scbrabb589rbpeubak0tp7soqlo465ndtitsbosa2;
+        expires=Fri, 08-Apr-2022 19:10:33 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1
