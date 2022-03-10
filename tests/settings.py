@@ -2,7 +2,7 @@
 from os import environ
 from yarl import URL
 
-from domaintools import API
+from domaintools import API, utils
 from vcr import VCR
 
 
