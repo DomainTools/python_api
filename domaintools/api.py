@@ -361,8 +361,8 @@ class API(object):
         datetime_counts_since: ISO 8601 datetime format: default None. Conditionally required if the include_counts
         parameter is set to True.
 
-        sort: List[str]: default ["term"]. Sort monitor list by ["term", "created_date", "domain_counts_changed",
-        "domain_counts_discovered"]
+        sort: List[str]: default ["term"]. Sort order for monitor list. Valid values are an ordered list of the following:
+         ["term", "created_date", "domain_counts_changed", "domain_counts_discovered"]
 
         order: str: default "desc". Sort order "asc" or "desc"
 
@@ -401,12 +401,16 @@ class API(object):
         mx_exists: bool: default None. Filter domains by if they have an MX record in DNS.
 
         discovered_since: ISO 8601 datetime format: default None. Filter domains by when they were discovered.
+        Most relevant for iris_detect_new_domains endpoint to control the timeframe for when a new domain was discovered.
 
         changed_since: ISO 8601 datetime format: default None. Filter domains by when they were last changed.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for changes to DNS or whois
+        fields for watched domains.
 
         search: str: default None. A "contains" search for any portion of a domain name.
 
-        sort: List[str]: default None. Sort domain list by ["domain_discovered", "domain_changed", "risk_score"]
+        sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
+        ["domain_discovered", "domain_changed", "risk_score"]
 
         order: str: default None. Sort order "asc" or "desc"
 
@@ -462,14 +466,20 @@ class API(object):
         mx_exists: bool: default None. Filter domains by if they have an MX record in DNS.
 
         discovered_since: ISO 8601 datetime format: default None. Filter domains by when they were discovered.
+        Most relevant for iris_detect_new_domains endpoint to control the timeframe for when a new domain was discovered.
 
         changed_since: ISO 8601 datetime format: default None. Filter domains by when they were last changed.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for changes to DNS or whois
+        fields for watched domains.
 
         escalated_since: ISO 8601 datetime format: default None. Filter domains by when they were last escalated.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for when a domain was most
+        recently escalated.
 
         search: str: default None. A "contains" search for any portion of a domain name.
 
-        sort: List[str]: default None. Sort domain list by ["domain_discovered", "domain_changed", "risk_score"]
+        sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
+        ["domain_discovered", "domain_changed", "risk_score"]
 
         order: str: default None. Sort order "asc" or "desc"
 
