@@ -354,6 +354,21 @@ class API(object):
     def iris_detect_monitors(self, include_counts=False, datetime_counts_since=None, sort=None, order="desc", offset=0,
                              limit=None, **kwargs):
         """Returns back a list of monitors in Iris Detect based on the provided filters.
+
+        include_counts: bool: default False. includes counts for each monitor for new, watched, changed, and escalated
+        domains
+
+        datetime_counts_since: ISO 8601 datetime format: default None. Conditionally required if the include_counts
+        parameter is set to True.
+
+        sort: List[str]: default ["term"]. Sort order for monitor list. Valid values are an ordered list of the following:
+         ["term", "created_date", "domain_counts_changed", "domain_counts_discovered"]
+
+        order: str: default "desc". Sort order "asc" or "desc"
+
+        offset: int: default 0. Offset for pagination
+
+        limit: int: default 500. Limit for pagination. Restricted to maximum 100 if include_counts is set to True.
         """
 
         if include_counts:
@@ -374,6 +389,39 @@ class API(object):
                                 mx_exists=None, discovered_since=None, changed_since=None, search=None, sort=None,
                                 order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
         """Returns back a list of new domains in Iris Detect based on the provided filters.
+
+        monitor_id: str: default None. Monitor ID from monitors response. Only used when requesting domains for a
+        specific monitor.
+
+        tlds: List[str]: default None. List of TLDs to filter domains by.
+
+        risk_score_ranges: List[str]: default None. List of risk score ranges to filter domains by. Valid values are:
+        ["0-0", "1-39", "40-69", "70-99", "100-100"]
+
+        mx_exists: bool: default None. Filter domains by if they have an MX record in DNS.
+
+        discovered_since: ISO 8601 datetime format: default None. Filter domains by when they were discovered.
+        Most relevant for iris_detect_new_domains endpoint to control the timeframe for when a new domain was discovered.
+
+        changed_since: ISO 8601 datetime format: default None. Filter domains by when they were last changed.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for changes to DNS or whois
+        fields for watched domains.
+
+        search: str: default None. A "contains" search for any portion of a domain name.
+
+        sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
+        ["domain_discovered", "domain_changed", "risk_score"]
+
+        order: str: default None. Sort order "asc" or "desc"
+
+        include_domain_data: bool: default False. Includes DNS and whois data in the response.
+
+        offset: int: default 0. Offset for pagination
+
+        limit: int: default 100. Limit for pagination. Restricted to maximum 50 if include_domain_data is set to True.
+
+        preview: bool: default None. Preview mode used for testing. If set to True, only the first 10 results are
+        returned but not limited by hourly restrictions.
         """
         if discovered_since:
             if isinstance(discovered_since, datetime):
@@ -403,6 +451,46 @@ class API(object):
                                 mx_exists=None, discovered_since=None, changed_since=None, escalated_since=None, search=None, sort=None,
                                 order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
         """Returns back a list of watched domains in Iris Detect based on the provided filters.
+
+        monitor_id: str: default None. Monitor ID from monitors response. Only used when requesting domains for a
+        specific monitor.
+
+        escalation_types: List[str]: default None. List of escalation types to filter domains by. Valid values are:
+        ["blocked", "google_safe"]
+
+        tlds: List[str]: default None. List of TLDs to filter domains by.
+
+        risk_score_ranges: List[str]: default None. List of risk score ranges to filter domains by. Valid values are:
+        ["0-0", "1-39", "40-69", "70-99", "100-100"]
+
+        mx_exists: bool: default None. Filter domains by if they have an MX record in DNS.
+
+        discovered_since: ISO 8601 datetime format: default None. Filter domains by when they were discovered.
+        Most relevant for iris_detect_new_domains endpoint to control the timeframe for when a new domain was discovered.
+
+        changed_since: ISO 8601 datetime format: default None. Filter domains by when they were last changed.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for changes to DNS or whois
+        fields for watched domains.
+
+        escalated_since: ISO 8601 datetime format: default None. Filter domains by when they were last escalated.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for when a domain was most
+        recently escalated.
+
+        search: str: default None. A "contains" search for any portion of a domain name.
+
+        sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
+        ["domain_discovered", "domain_changed", "risk_score"]
+
+        order: str: default None. Sort order "asc" or "desc"
+
+        include_domain_data: bool: default False. Includes DNS and whois data in the response.
+
+        offset: int: default 0. Offset for pagination
+
+        limit: int: default 100. Limit for pagination. Restricted to maximum 50 if include_domain_data is set to True.
+
+        preview: bool: default None. Preview mode used for testing. If set to True, only the first 10 results are
+        returned but not limited by hourly restrictions.
         """
         if discovered_since:
             if isinstance(discovered_since, datetime):
@@ -437,6 +525,10 @@ class API(object):
 
     def iris_detect_manage_watchlist_domains(self, watchlist_domain_ids, state, **kwargs):
         """Changes the watch state of a list of domains by their Iris Detect domain ID.
+
+        watchlist_domain_ids: List[str]: required. List of Iris Detect domain IDs to manage.
+
+        state: str: required. Valid values are: ["watched", "ignored"]
         """
         return self._results('iris-detect-manage-watchlist-domains', '/v1/iris-detect/domains/', state=state,
                              watchlist_domain_ids=watchlist_domain_ids, items_path=('watchlist_domains',),
@@ -444,6 +536,10 @@ class API(object):
 
     def iris_detect_escalate_domains(self, watchlist_domain_ids, escalation_type, **kwargs):
         """Changes the escalation type of a list of domains by their Iris Detect domain ID.
+
+        watchlist_domain_ids: List[str]: required. List of Iris Detect domain IDs to escalate.
+
+        escalation_type: str: required. Valid values are: ["blocked", "google_safe"]
         """
         kwargs["watchlist_domain_ids[]"] = watchlist_domain_ids
         return self._results('iris-detect-escalate-domains', '/v1/iris-detect/escalations/',
