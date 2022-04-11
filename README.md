@@ -10,6 +10,7 @@ DomainTools' Official Python API
 
 ![domaintools Example](https://github.com/DomainTools/python_api/raw/main/artwork/example.gif)
 
+The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™ and Iris Enrich™ products. It is actively maintained and may be downloaded via <a href="https://github.com/DomainTools/python_api">GitHub</a> or <a href="https://pypi.org/project/domaintools-api/">PyPI</a>.
 
 Installing the DomainTools' API
 ===================
