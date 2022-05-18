@@ -9,9 +9,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: GET
-    uri: https://api.domaintools.com/v1/ss/reverse-ip
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=0.6.1
   response:
     body:
       string: !!binary |
@@ -25,15 +25,13 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:17:53 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Tue, 17 May 2022 20:16:32 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '409'
+      - '385'
     status:
       code: 400
       message: Bad Request
@@ -47,9 +45,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: GET
-    uri: https://api.domaintools.com/v1/ss/reverse-ip
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=0.6.1
   response:
     body:
       string: !!binary |
@@ -63,15 +61,13 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:17:55 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Tue, 17 May 2022 20:16:38 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '371'
+      - '410'
     status:
       code: 400
       message: Bad Request
@@ -85,9 +81,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: GET
-    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=0.6.1
   response:
     body:
       string: !!binary |
@@ -100,15 +96,13 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:17:56 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Tue, 17 May 2022 20:16:39 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '15003'
+      - '16744'
     status:
       code: 404
       message: Not Found
@@ -122,9 +116,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: GET
-    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=0.6.1&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
   response:
     body:
       string: !!binary |
@@ -137,15 +131,13 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:17:56 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Tue, 17 May 2022 20:16:39 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '4733'
+      - '4776'
     status:
       code: 403
       message: Forbidden

@@ -5,6 +5,7 @@ from types import MethodType
 import re
 
 import requests
+from domaintools._version import current as version
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
 
 AVAILABLE_KEY_SIGN_HASHES = ['sha1', 'sha256', 'md5']
@@ -36,10 +37,14 @@ class API(object):
     limits_set = False
 
     def __init__(self, username, key, https=True, verify_ssl=True, rate_limit=True, proxy_url=None,
-                 always_sign_api_key=False, key_sign_hash='sha256', **default_parameters):
+                 always_sign_api_key=False, key_sign_hash='sha256', app_name="python_wrapper", app_version=version,
+                 **default_parameters):
+        if not default_parameters:
+            self.default_parameters = {}
+        else:
+            self.default_parameters = default_parameters
         self.username = username
         self.key = key
-        self.default_parameters = default_parameters
         self.https = https
         self.verify_ssl = verify_ssl
         self.rate_limit = rate_limit
@@ -48,6 +53,8 @@ class API(object):
         self.extra_aiohttp_params = {}
         self.always_sign_api_key = always_sign_api_key
         self.key_sign_hash = key_sign_hash
+        self.default_parameters['app_name'] = app_name
+        self.default_parameters['app_version'] = app_version
         if not https:
             raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
         if proxy_url:

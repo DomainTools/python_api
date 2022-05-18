@@ -9,9 +9,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: GET
-    uri: https://api.domaintools.com/v1/reputation?domain=google.com&include_reasons=false
+    uri: https://api.domaintools.com/v1/reputation?app_name=python_wrapper&app_version=0.6.1&domain=google.com&include_reasons=false
   response:
     body:
       string: !!binary |
@@ -23,15 +23,13 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:17:27 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Tue, 17 May 2022 20:15:55 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '20120'
+      - '18865'
     status:
       code: 200
       message: OK
