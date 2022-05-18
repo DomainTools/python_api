@@ -1,8 +1,7 @@
 interactions:
 - request:
-    body: '{"api_username": "cwoodraska", "timestamp": "2022-03-07T21:06:38Z", "signature":
-      "5fdf43d9f02e1db43b1e6078c3f02b815e164285fab1ace177e2468d6e7f5294", "state":
-      "watched", "watchlist_domain_ids": ["Zadmr81nEd"]}'
+    body: '{"app_name": "python_wrapper", "app_version": "0.6.1", "state": "watched",
+      "watchlist_domain_ids": ["gae08rdVWG"]}'
     headers:
       Accept:
       - '*/*'
@@ -11,32 +10,38 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '208'
+      - '272'
       Content-Type:
       - application/json
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: PATCH
     uri: https://api.domaintools.com/v1/iris-detect/domains/
   response:
     body:
-      string: '{"watchlist_domains":[{"state":"watched","domain":"caritasukraine.org","discovered_date":"2022-03-01T21:33:42.265000+00:00","changed_date":"2022-03-01T21:36:12.000000+00:00","id":"Zadmr81nEd","assigned_by":"cwoodraska@domaintools.com","assigned_date":"2022-03-07T21:06:39.000000+00:00"}]}'
+      string: !!binary |
+        H4sIAAAAAAAAA3WOQQrCMBBF75KtWibBasjKnRcQXYhITIYYbBPoDIpI725qQVRwlv/x5v+HuFl2
+        5yYSH31ubUwkzP4hiC2jMCNFL6ZipCUKOYcG2TYX7CqX28qlAUdy+Yod+qMfVQVKzaCeyeVGgVG1
+        kaqSSgPABMAAFMmdbQp/jYWRuoLXvY3ohwUWQXd+u1uXxBLFkMqT072gmBhDZznmRBNGYrkah3PO
+        DQ1zP5XfXr2R2si5Afnd2x/6J13TV58pAQAA
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json
       Date:
-      - Mon, 07 Mar 2022 21:06:39 GMT
+      - Wed, 18 May 2022 18:14:01 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=ab7604ede137a3d1a9950282f1a9dc52; path=/; domain=.domaintools.com;
+      - csrftoken=a5c838e4ad88040365c0ac69b337bcc2; path=/; domain=.domaintools.com;
         secure
-      - dtsession=19fa7qjr75e55mmbdbv2iv9akbh90qkvr755meaj89h1kuoqrbep775o7ela48u7hbt7ii37cfhun31bp0nmpkqppunlcr4ta067qt8;
-        expires=Wed, 06-Apr-2022 21:06:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=s43cnhit5pvimtkru2cpp1phq3ehkqab0i96q4mol6li2c7magfkaes2d686tmrhjmfaj9b0gj06piblcocj582it57rn209nrto1jq;
+        expires=Fri, 17-Jun-2022 18:14:01 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked

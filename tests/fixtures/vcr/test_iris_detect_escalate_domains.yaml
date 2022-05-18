@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: escalation_type=blocked&watchlist_domain_ids%5B%5D=mPjGyweeWA
+    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=blocked&watchlist_domain_ids%5B%5D=gae08rdVWG
     headers:
       Accept:
       - '*/*'
@@ -9,34 +9,86 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '195'
+      - '247'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
-      - python-requests/2.26.0
+      - python-requests/2.27.1
     method: POST
     uri: https://api.domaintools.com/v1/iris-detect/escalations/
   response:
     body:
-      string: '{"escalations":[{"watchlist_domain_id":"mPjGyweeWA","escalation_type":"blocked","id":"9WZbNeAg0w","created_date":"2022-03-09T19:10:34.056510+00:00","updated_date":"2022-03-09T19:10:34.056510+00:00","created_by":"cwoodraska@domaintools.com"}]}'
+      string: !!binary |
+        H4sIAAAAAAAAA5WPQQqDMBBF75KtVcZowGbVRaEXKBVaSohJsKHRiJkiIt69oVLotptZ/Pcfw1+I
+        CUo6idb3gfDbQiaJ6uFsQKF9J20vrCactNJANepLfSK7H0XgPJiIG+fV0+jIPm1fs+bKpnZ/jIka
+        jUSjhY43MgqUpsDSvDrnjJd7TsuMQlUUkABwgGi8Bv2n8f3RzLFvezTtuE1K0ATMD9sU9N6FTPmO
+        rPf1DSG2nxn6AAAA
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Mar 2022 19:10:34 GMT
+      - Wed, 18 May 2022 15:49:25 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
       Set-Cookie:
-      - csrftoken=54134f3a3f3e0061728826acd3140c67; path=/; domain=.domaintools.com;
+      - csrftoken=4781bf603c7df2e61c84a35900f5d6e8; path=/; domain=.domaintools.com;
         secure
-      - dtsession=3431amrpvnlaujahr6lecarklnsc7rhpa4mit79tm3a8pn3umm2j1c9724hdi2scbrabb589rbpeubak0tp7soqlo465ndtitsbosa2;
-        expires=Fri, 08-Apr-2022 19:10:33 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=9q47q0iset8pca48cfq56ai9u099qinhikhm89pcdhsj54eab2afauli09uptrb7k71pihc6qlpi3f5fo0lsnkgfpg9rogniomoju60;
+        expires=Fri, 17-Jun-2022 15:49:24 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=google_safe&watchlist_domain_ids%5B%5D=gae08rdVWG
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '251'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.27.1
+    method: POST
+    uri: https://api.domaintools.com/v1/iris-detect/escalations/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5WPQQrCMBBF75JtbUljq21WIkgvILoQCbEZYyBtSjMqtfTuRkVw6+Yv5s3j80cC
+        vpZWonGtJ/wwkrvE+mKNR6FcI00rjCKcaAm06NVuX5HZjyJw6OCFndMWhJdnCPxtZO6mi2q9eczD
+        pe5BIiihQgbGKGMxzeO02KY5z0rOFklW5suSRZRySoNx7dSfxrfjNIR/0yLo/jMrQvCYrj5z0Dnr
+        k9o1ZDpOT4rbiTv+AAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 May 2022 15:49:27 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=232a86223674e487e9a9938ef875c2dd; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=ni4nkrpdb36iqu1fkhajdjg12fhngt6sj5ppo43e20b43u1nh59thl8ddsrbvs8rospf9kj2k0p4kd6je32didaksckvbuiqpl4clr2;
+        expires=Fri, 17-Jun-2022 15:49:26 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked

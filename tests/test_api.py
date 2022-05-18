@@ -425,43 +425,44 @@ def test_iris_detect_monitors():
         api.iris_detect_monitors(include_counts=True)
 
     detect_results = api.iris_detect_monitors()
-    assert detect_results['total_count'] == 21
+    assert detect_results['total_count'] == 1
 
     detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
-    assert detect_results['monitors'][0]['term'] == 'meta'
+    assert detect_results['monitors'][0]['term'] == 'google'
 
 
 @vcr.use_cassette
 def test_iris_detect_new_domains():
-    detect_results = api.iris_detect_new_domains()
-    assert detect_results['count'] == 100
-
-    detect_results = api.iris_detect_new_domains(monitor_id="QEMba7ljxo", sort=["risk_score"], order="desc")
+    detect_results = api.iris_detect_new_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
     assert detect_results['watchlist_domains'][0]['risk_score'] == 100
 
 
 @vcr.use_cassette
 def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains()
-    assert detect_results['count'] == 100
+    assert detect_results['count'] == 2
 
-    detect_results = api.iris_detect_watched_domains(monitor_id="QEMba7ljxo", sort=["risk_score"], order="desc")
-    assert detect_results['watchlist_domains'][0]['risk_score'] == 98
+    detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
+    assert detect_results['watchlist_domains'][0]['risk_score'] == 100
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results['count'] == 0
+    assert detect_results['count'] == 1
 
 
 @vcr.use_cassette
 def test_iris_detect_manage_watchlist_domains():
-    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["Zadmr81nEd"], state="watched")
+    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
     assert detect_results['watchlist_domains'][0]['state'] == "watched"
 
 
 @vcr.use_cassette
 def test_iris_detect_escalate_domains():
-    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["mPjGyweeWA"], escalation_type="blocked")
+    # If you rerun this test without VCR, it will fail because the domain is already escalated
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["gae08rdVWG"], escalation_type="blocked")
     assert detect_results['escalations'][0]['escalation_type'] == "blocked"
+
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["gae08rdVWG"], escalation_type="google_safe")
+    assert detect_results['escalations'][0]['escalation_type'] == "google_safe"
 
 
 @vcr.use_cassette
