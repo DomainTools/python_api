@@ -470,8 +470,8 @@ def test_iris_detect_ignored_domains():
     detect_results = api.iris_detect_ignored_domains()
     assert detect_results['count'] == 3
 
-    detect_results = api.iris_detect_ignored_domains(monitor_id="3ZXmRDNpEo")
-    assert detect_results['count'] == 2
+    detect_results = api.iris_detect_ignored_domains(monitor_id="DKObxJVjYJ")
+    assert detect_results['count'] == 1
 
 
 @vcr.use_cassette
