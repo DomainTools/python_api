@@ -552,3 +552,79 @@ class API(object):
         return self._results('iris-detect-escalate-domains', '/v1/iris-detect/escalations/',
                              escalation_type=escalation_type, items_path=('escalations',),
                              response_path=(), **kwargs)
+
+    def iris_detect_ignored_domains(self, monitor_id=None, escalation_types=None, tlds=None, risk_score_ranges=None,
+                                mx_exists=None, discovered_since=None, changed_since=None, escalated_since=None, search=None, sort=None,
+                                order=None, include_domain_data=False, offset=0, limit=None, preview=None, **kwargs):
+        """Returns back a list of ignored domains in Iris Detect based on the provided filters.
+
+        monitor_id: str: default None. Monitor ID from monitors response. Only used when requesting domains for a
+        specific monitor.
+
+        escalation_types: List[str]: default None. List of escalation types to filter domains by. Valid values are:
+        ["blocked", "google_safe"]
+
+        tlds: List[str]: default None. List of TLDs to filter domains by.
+
+        risk_score_ranges: List[str]: default None. List of risk score ranges to filter domains by. Valid values are:
+        ["0-0", "1-39", "40-69", "70-99", "100-100"]
+
+        mx_exists: bool: default None. Filter domains by if they have an MX record in DNS.
+
+        discovered_since: ISO 8601 datetime format: default None. Filter domains by when they were discovered.
+        Most relevant for iris_detect_new_domains endpoint to control the timeframe for when a new domain was discovered.
+
+        changed_since: ISO 8601 datetime format: default None. Filter domains by when they were last changed.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for changes to DNS or whois
+        fields for watched domains.
+
+        escalated_since: ISO 8601 datetime format: default None. Filter domains by when they were last escalated.
+        Most relevant for the iris_detect_watched_domains endpoint to control the timeframe for when a domain was most
+        recently escalated.
+
+        search: str: default None. A "contains" search for any portion of a domain name.
+
+        sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
+        ["domain_discovered", "domain_changed", "risk_score"]
+
+        order: str: default None. Sort order "asc" or "desc"
+
+        include_domain_data: bool: default False. Includes DNS and whois data in the response.
+
+        offset: int: default 0. Offset for pagination
+
+        limit: int: default 100. Limit for pagination. Restricted to maximum 50 if include_domain_data is set to True.
+
+        preview: bool: default None. Preview mode used for testing. If set to True, only the first 10 results are
+        returned but not limited by hourly restrictions.
+        """
+        if discovered_since:
+            if isinstance(discovered_since, datetime):
+                kwargs["discovered_since"] = str(discovered_since.astimezone())
+            elif isinstance(discovered_since, str):
+                kwargs["discovered_since"] = discovered_since
+        if changed_since:
+            if isinstance(changed_since, datetime):
+                kwargs["changed_since"] = str(changed_since.astimezone())
+            elif isinstance(changed_since, str):
+                kwargs["changed_since"] = changed_since
+        if escalated_since:
+            if isinstance(escalated_since, datetime):
+                kwargs["escalated_since"] = str(escalated_since.astimezone())
+            elif isinstance(escalated_since, str):
+                kwargs["escalated_since"] = escalated_since
+        if escalation_types:
+            kwargs["escalation_types[]"] = escalation_types
+        if tlds:
+            kwargs["tlds[]"] = tlds
+        if risk_score_ranges:
+            kwargs["risk_score_ranges[]"] = risk_score_ranges
+        if sort:
+            kwargs["sort[]"] = sort
+        if order is not None:
+            kwargs["order"] = order
+        if mx_exists is not None:
+            kwargs["mx_exists"] = mx_exists
+        return self._results('iris-detect-ignored-domains', '/v1/iris-detect/domains/ignored/', monitor_id=monitor_id,
+                             search=search, include_domain_data=include_domain_data, preview=preview, offset=offset,
+                             limit=limit, items_path=('watchlist_domains',), response_path=(), **kwargs)

@@ -1,0 +1,97 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=0.6.1&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82T24rbMBCG30W3mw3yIQfrqoXtzaZQWkpDKYtRbMXRRta40sRJNuTdO4qLaQob
+        QthCfSXPzD8j/R9zYFuJxcpoj3kJtdTWM/HjwDxKVEwwXVlwqmQD1mUpJBfKyT1s5XrtnkHW8gXs
+        sICaaoJq40NNgbpVQaV9Aa2iFnnZdYx5HN/z0X2UfY0mYjQRaTKkGOf8jnPBOYmKlbTVq4qpiJMh
+        P329wmm/zmmSo/rpn795f6XGQau9BivNmSCnqzdglUWqOoSyna417qnRccDqXa52ZA7lltJ4NWBo
+        SurWvVeH40Kmmc34xw8VRZQvpJFIY4KPT9QArEZwuS5DgD3MPi12j9+evz8ySkrvyWB66WIfvLao
+        KteJ71B5jN51piOA8b8t7iWvmZNMz805Di7SrAAqQ7OcUthqtR2CNdqqG2BGRFKk02Ecj6+EGQue
+        0pUvwczeCmZK5FZOScwpuNRGnfIr7VfaVjTneA4b3aZn3Ttywj2bJw9m0r7I5grc9v22/lzFzc/q
+        3+AeC34Lbln6BspCerxtcflIpDQ9o8WNrmPNw54HxQXW8fitYEf8Mu14fLxutyfzGUTTWTb/8h/A
+        5iIZ/QWb5iCgNGTFxiITCTHoT7BcekVHMsMEY4Iv/PgLeI08kvIFAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 May 2022 17:59:40 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=b476b965d7b869a4e0cad3d6a6ca4fe7; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=5ekgn49f5l5igbi95mv2jk3ki0u553cttr140b46r2c363iicgai49j7nlbl3u0i9boa4sr47ja9l4lifhkv791pptqsguqa9aende7;
+        expires=Sat, 18-Jun-2022 17:59:40 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=0.6.1&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA3VQwW7CMAz9l1wpKC0gIKcdtgubtMs0aZqmym3TEkhjlBgoQ/z7nHWqxoGcnOf3
+        nu13ESegcmNNoLzCFowLQn1eRCAgLZQwjUOvK5GIvssQFNrDGU+w2/ktQgvf6CYltsyJqkOInJLM
+        UUeVCSUeNVvkVe+YySwby/k4Xb2lCzVfqNl0wpiUciSlkpJF5QZcc1exVNl0In/foPAm7HKe5Jm/
+        /P/Nh5X2Ho8mGHRgbwQ5r75Hpx0x6xJpnWkNndnomoi2y3XH4XCvBht0IshW7Nbfa2JZwGzlVvLl
+        qWFEhxIsEI+JOX6xATpD6HNTRUA8Pr8W3fp9+7EW3IQQOGC+tDjHrB3pxvfiEelA6UMfOiHa8Bfx
+        ILkXznR5G86V5xASWD704EiolAMeKqzroLmUibDxbAalvP4AWceZNxYCAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 May 2022 17:59:42 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=1151c0c3664840686bb87f5539e36979; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=ssltrhejule3juk83muqo3unvlcaf1khn4npqcla6fj4jln33mn6m9unphjodfmj4jpnn63613ruge17n042o7pd2kov51h130ik47v;
+        expires=Sat, 18-Jun-2022 17:59:42 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1

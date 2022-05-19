@@ -466,6 +466,15 @@ def test_iris_detect_escalate_domains():
 
 
 @vcr.use_cassette
+def test_iris_detect_ignored_domains():
+    detect_results = api.iris_detect_ignored_domains()
+    assert detect_results['count'] == 3
+
+    detect_results = api.iris_detect_ignored_domains(monitor_id="DKObxJVjYJ")
+    assert detect_results['count'] == 1
+
+
+@vcr.use_cassette
 def test_limit_exceeded():
     with pytest.raises(exceptions.ServiceException):
         response = api.iris_investigate(ip="8.8.8.8")
