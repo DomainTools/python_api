@@ -1,8 +1,6 @@
 """Adds async capabilities to the base product object"""
 import asyncio
-import aiohttp
 from httpx import AsyncClient
-import ssl
 
 from domaintools.base_results import Results
 

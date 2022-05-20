@@ -9,7 +9,7 @@ from os import path
 from setuptools import Extension, find_packages, setup
 from setuptools.command.test import test as TestCommand
 
-requires = ['requests', 'aiohttp', 'dateparser']
+requires = ['httpx', 'dateparser']
 packages = ['domaintools', 'domaintools_async']
 
 
