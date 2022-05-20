@@ -4,7 +4,6 @@ from hmac import new as hmac
 from types import MethodType
 import re
 
-import requests
 from domaintools._version import current as version
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
 
