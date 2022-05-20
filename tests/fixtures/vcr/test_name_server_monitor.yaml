@@ -1,46 +1,108 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=0.6.1&days_back=0&page=1&query=google.com
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA7WWXW+bMBSG/8rEdbGSTFuV3jngILdgI39EbaapcoObsBEc8dFoqvLf6yTb1E4j
-        RZTcIIzhPJzj9z32s1PocmPyUjtXz06WrtPKuRoOBoMLJ1GVfeiMBqORO/jiDi+dCydXa31f6uJJ
-        F3Zqacwy02Bh1naqMpXK9u/v39uopf12eLy5X5g6rw5DlemiKp2rb89Orrf3J8KZLPln2j5Uiyo1
-        ub0nemuHiVmrdD8ceXcgQs7uot+w0POQjxiXMWIzjEIEJKENlO3KpGUj5M0//MWJQuXloy4+0bp6
-        zfUoEZhIGWEyQ1xEiAgOKAt6T9DHMySY9G7AlH08uK8zXenkNWCKw2gUIR/D8Rjc3s27QY7Tx6Bl
-        YxFx/oYsiQ89TAkmAjGGz1PAAE4g8+mEdU/uIav1ypQVSPMWaQVI8P2KCcmQDzBpYD6sE1upXFc9
-        qBFzOZfWA3GIrRcCRmUMPBp1y3ZlFbLOwI9Ni1yvubWcJ8B13MAq1VNPjrsJcQxJMAQTOe+4ju84
-        IcJeCBl1D1eOo9h2E0pCTHpoWy1xXFDWkaa2pRWU+3kITLFssXQRndATlijqn65FWcmDatXD8kWU
-        cIa4jFB3ZRb1Wq22+qFlf7Fy8SmDh+6CKQOQiSZuUW9MZlSS5sue5BozOsPEw5BDQrBHQ9hTe/uP
-        khiaSsTm1EeYBLbIlLuQcMTPqd5G5gck/A7SMuy2y2W4J3AQ3Z6HcjxKhOF56/cac6pkv2399Y+t
-        P6pLwXAcQWFdGHbLq6zLjc4TnbjHmC3NKKdwcDkGE9TowXNhL8cnuSv1S2WH3b0f40sSyhAxECAC
-        RNORbZGZOnnMVPHeiao1Nbb7iJwA23ac3ffd7gVHPutcNQwAAA==
+    content: '{"response":{"limit":1000,"date":"2022-05-20","name_server":"google.com","total":"100","page":1,"page_count":1,"alerts":[{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"106GGOLARO.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"120GKASAM.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"188TOTOBO.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"18GGOLARO.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"224GOLARO.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"321GOODGAME.COM"},{"new_name_server":"google.com","old_name_server":"he.net","action":"Transfer
+      In","domain":"3CIYUAN.COM"},{"new_name_server":"google.com","old_name_server":"niagahoster.com","action":"Transfer
+      In","domain":"3NDERKET.XYZ"},{"new_name_server":"hichina.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"5101.NET"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"51TOTOBO.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"53TTRTIPBET.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"ASZW.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"AZSF.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"BETFLIX321.COM"},{"new_name_server":"google.com","old_name_server":"arvancdn.com","action":"Transfer
+      In","domain":"BIMEH.IN"},{"new_name_server":"google.com","old_name_server":"irandns.com","action":"Transfer
+      In","domain":"BIMEHME.COM"},{"new_name_server":"iconnect.zm","old_name_server":"google.com","action":"Transfer
+      Out","domain":"BRANDLINE.CO.ZM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"CBEN.COM"},{"new_name_server":"google.com","old_name_server":"sav.com","action":"Transfer
+      In","domain":"CDKCDK.COM"},{"new_name_server":"google.com","old_name_server":"gmoserver.jp","action":"Transfer
+      In","domain":"COUNTRYMAN.CO.JP"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"CXPO.COM"},{"new_name_server":"libyanspider.net","old_name_server":"google.com","action":"Transfer
+      Out","domain":"DAILYMEDIC.LY"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"DATW.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"DBHIGH.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"DOCINN.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"DUBAIWEALTH.COM"},{"new_name_server":"domaincontrol.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"EBRA.ME"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"FASTGATE.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"FNZW.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"FPWX.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"FYIS.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"FZAF.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"GANTHIP.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"GKASAM60.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"GNCP.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"GOLARO90.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"GOVERNOR.NETWORK"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"HOSTNEWS.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"IGR.COM.AR"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"ISRA-ISRA.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"JFZW.COM"},{"new_name_server":"dnsv.jp","old_name_server":"google.com","action":"Transfer
+      Out","domain":"JSELECT.JP"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"KBWX.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"KCGE.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"KYWZ.COM"},{"new_name_server":"google.com","old_name_server":"sav.com","action":"Transfer
+      In","domain":"LISTBBS.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"LMJU.COM"},{"new_name_server":"nic.cl","old_name_server":"google.com","action":"Transfer
+      Out","domain":"MAGENTADEPAPEL.CL"},{"new_name_server":"mizbandp.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"MANAGER-AU.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"MARKOBET199.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"MARKOBET249.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"MIDWIFEDOC.PW"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"MSNX.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"MYSDTEACHER.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"NECOCOLA.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"NEWWAYGROUP.COM.VN"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"OHYJ.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"OLCP.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"ONLINEVIEW-PAYEEREMOVAL.COM"},{"new_name_server":"google.com","old_name_server":"sav.com","action":"Transfer
+      In","domain":"OPSHE.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"PATHARAPORNHOME.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"PFRY.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"PGKU.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"POGINF.ES"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"PQZB.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"PRWX.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"QBNF.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"QFUC.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"QOFF.COM"},{"new_name_server":"google.com","old_name_server":"sav.com","action":"Transfer
+      In","domain":"RANK2.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"READMAP.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"RJEY.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"RTARF-CONTEST.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"SIDELTEC.CL"},{"new_name_server":"google.com","old_name_server":"empretienda.net","action":"Transfer
+      In","domain":"SIMOKI.COM.AR"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"STZW.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"SUWANTH.COM"},{"new_name_server":"registrar-servers.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"THEGOLDENMIND.SITE"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"THEPRIME-PROPERTY.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"TINDERTURKEY.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"TQZW.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"TSAG.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"TTBD.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"TTRTIPBET106.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"UALX.COM"},{"new_name_server":"google.com","old_name_server":"suspended-domain.com","action":"Transfer
+      In","domain":"UDMESUK.COM"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"VATRINAH.SA"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"VBEG.COM"},{"new_name_server":"google.com","old_name_server":"sav.com","action":"Transfer
+      In","domain":"VUPZHU.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"WIIB.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"WUQP.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"XERR.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"XGMJ.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"XTGN.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"YBSY.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"YBYL.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"YWWX.COM"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"YZOX.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"ZAKHAR.ME"},{"new_name_server":"google.com","old_name_server":"bodis.com","action":"Transfer
+      In","domain":"ZMLB.COM"}]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:15:53 GMT
+      - Fri, 20 May 2022 18:34:02 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '69907'
-    status:
-      code: 200
-      message: OK
+      - '67980'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

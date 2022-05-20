@@ -9,7 +9,7 @@ from datetime import datetime
 from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
                                     NotFoundException, ServiceException, ServiceUnavailableException,
                                     IncompleteResponseException, RequestUriTooLongException)
-from requests import Session
+from httpx import Client
 
 try: # pragma: no cover
     from collections.abc import MutableMapping, MutableSequence
@@ -57,19 +57,17 @@ class Results(MutableMapping, MutableSequence):
         return wait_for
 
     def _make_request(self):
-        with Session() as session:
-            session.proxies = self.api.extra_request_params.get('proxies', session.proxies)
+        with Client(verify=self.api.verify_ssl, proxies=self.api.extra_request_params.get('proxies'), timeout=None) as session:
             if self.product in ['iris-investigate', 'iris-enrich', 'iris-detect-escalate-domains']:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
-                return session.post(url=self.url, verify=self.api.verify_ssl, data=post_data)
+                return session.post(url=self.url, data=post_data)
             elif self.product in ['iris-detect-manage-watchlist-domains']:
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
-                return session.patch(url=self.url, verify=self.api.verify_ssl, json=patch_data)
+                return session.patch(url=self.url, json=patch_data)
             else:
-                return session.get(url=self.url, params=self.kwargs, verify=self.api.verify_ssl,
-                                   **self.api.extra_request_params)
+                return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
