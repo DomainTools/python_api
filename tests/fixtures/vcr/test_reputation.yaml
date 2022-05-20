@@ -1,36 +1,34 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/reputation?app_name=python_wrapper&app_version=0.6.1&domain=google.com&include_reasons=false
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMU7JSSs/PT89J1UvOz1XSUSrKLM6OL07OLwKq
-        MaitBQDniM1NMwAAAA==
+    content: '{"response":{"domain":"google.com","risk_score":0}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:15:55 GMT
+      - Fri, 20 May 2022 18:34:03 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '18865'
-    status:
-      code: 200
-      message: OK
+      - '19341'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

@@ -1,7 +1,6 @@
 """Adds async capabilities to the base product object"""
 import asyncio
-import aiohttp
-import ssl
+from httpx import AsyncClient
 
 from domaintools.base_results import Results
 
@@ -36,12 +35,22 @@ class AsyncResults(Results):
         return self.__awaitable__().__await__()
 
     async def _make_async_request(self, session):
-        async with session.get(self.url, params=self.kwargs, **self.api.extra_aiohttp_params) as results:
-            self.setStatus(results.status, results)
+        if self.product in ['iris-investigate', 'iris-enrich', 'iris-detect-escalate-domains']:
+            post_data = self.kwargs.copy()
+            post_data.update(self.api.extra_request_params)
+            results = await session.post(url=self.url, data=post_data)
+        elif self.product in ['iris-detect-manage-watchlist-domains']:
+            patch_data = self.kwargs.copy()
+            patch_data.update(self.api.extra_request_params)
+            results = await session.patch(url=self.url, json=patch_data)
+        else:
+            results = await session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
+        if results:
+            self.setStatus(results.status_code, results)
             if self.kwargs.get('format', 'json') == 'json':
-                self._data = await results.json()
+                self._data = results.json()
             else:
-                self._data = await results.text()
+                self._data = results.text()
             limit_exceeded, message = self.check_limit_exceeded()
 
             if limit_exceeded:
@@ -50,13 +59,7 @@ class AsyncResults(Results):
 
     async def __awaitable__(self):
         if self._data is None:
-            verify_ssl = True
-            if isinstance(self.api.verify_ssl, str):
-                sslcontext = ssl.create_default_context(cafile=self.api.verify_ssl)
-                self.api.extra_aiohttp_params['ssl'] = sslcontext
-            elif isinstance(self.api.verify_ssl, bool):
-                verify_ssl = self.api.verify_ssl
-            async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=verify_ssl)) as session:
+            async with AsyncClient(verify=self.api.verify_ssl, proxies=self.api.extra_request_params.get('proxies'), timeout=None) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
                     try:

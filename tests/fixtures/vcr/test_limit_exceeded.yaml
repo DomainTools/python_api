@@ -2,40 +2,38 @@ interactions:
 - request:
     body: app_name=python_wrapper&app_version=0.6.1&ip=8.8.8.8
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
+      content-length:
       - '196'
-      Content-Type:
+      content-type:
       - application/x-www-form-urlencoded
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-investigate/
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAzWMQQ7CMAwEv2L5DKgXLv0DL0AoishSLNUJ2InUqurfGw5cZ3dmY4N/SnbwuPEs
-        KjVgeQIJicdqDSd+Rw9aDKFf21z9zxXuceoi3+Ii2pSuwzCQoTbLSHSmtTTSuFLuPaqlTy/J+GGj
-        b4OtF+4ZcZc8hVQ0Su71+2PfDzk/D2uYAAAA
+    content: '{"response":{"limit_exceeded":true,"has_more_results":true,"message":"Maximum
+      5000 returned - you may need to refine your query.","missing_domains":[]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:27 GMT
+      - Fri, 20 May 2022 18:35:21 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '592061'
-    status:
-      code: 200
-      message: OK
+      - '658924'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

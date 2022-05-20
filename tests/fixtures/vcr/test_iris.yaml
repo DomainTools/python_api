@@ -1,48 +1,40 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/iris?app_name=python_wrapper&app_version=0.6.1&domain=google.com&https=false
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA81WS0/jMBD+K5XPbYhDH7QnEFqt0PKQ0N6gstxk2nhx7KztQCvU/77jOAktZXdR
-        T9w8r29enrFfiQFbamWBzF6JFIVwDNYpQAYZmS25tNAnBVjLV6hBvqlfetPb6Mr0Mu54RPrevpLO
-        slRXypEZ7Thk9vBKMl1wodBypfVKQpTqAm1eci0sq4xEQe5caWePJ48nNTcKFk5rab3248meJc8s
-        1MEST0hY89pl0GFccblxIrWNPCuEwsCU46nz+SleNKbarPDwvTbrXV9fIss6A+CCOBVuE07Wcedt
-        Li+QKDWSslHx+RqvVVkvyrVqsJd8HQ6AmaD2w3zbJwshpVCrf0Xz3xj+GsEn/BtYCUTnyn2RgjhI
-        cyVSLr9IPKkBBGJZQKPT6WQQTwd05NXWpTDcCa1acRInZ7V42KKw9qY/7F/1gpunQivhtKk5c4xY
-        c9Z6Jpmyg/qenu+Yzf3dzYT3iPUJ09JZ8EVlAbVK6efEnr/30IyXgd8VWHcgRmxR1rOJLnBU/azQ
-        YRIlozgaTyM6HfvJsT4TOqLj6byrJDYqg7acwpZdf8i2v4c2QTQ6iegwSk7PjkBDpWJdh5hjP1Fg
-        C1dGe2X9eK/UiZHJMKLJCDMZRckEuS3tk3xPj3dor79HT7w+BlMaoU194Wjsg/O3lFkwz2B2o1SW
-        fj7IhI6xOtPoNIloTOa+gh1McgTM8BDm9AiY8SHM8AiYswCDtTLCPjGbaoO9jv0ayoSBtJniluqG
-        JzC7TfW2DnaYH2yGVortIDcX9z9u7m6vft7d93tXt5dRf4fjGbv6zG+Pyj9VJJUClMtAgoPS6Fws
-        hIOsF9jes12CORBUpd8IO+xwLQ5gAvsDmCB4D1OviXLJhFrqZs1ZyfYWvmfk3OZvVPeKOIlvNwmN
-        cbnfawyhl0LWjzwe1/6db3FKXoRTweULN03B4VlkoFJotuMLLCwGxt5+C0mM7fSfABaCz5gT+FFw
-        vCjDgkwG8WhAxz8TOhsNZzTBud5u/wCNgXepcAgAAA==
+    content: '{"response":{"limit_exceeded":false,"message":"Enjoy your data.","results_count":1,"results":[{"domain":"google.com","whois_url":"https:\/\/whois.domaintools.com\/google.com","adsense":"","alexa":1,"google_analytics":"","admin_contact":{"name":"","org":"Google
+      LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":[]},"billing_contact":{"name":"","org":"","street":"","city":"","state":"","postal":"","country":"","phone":"","fax":"","email":[]},"registrant_contact":{"name":"","org":"Google
+      LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":[]},"technical_contact":{"name":"","org":"Google
+      LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":[]},"create_date":"1997-09-15","expiration_date":"2028-09-14","email_domain":["google.com","markmonitor.com"],"soa_email":["dns-admin@google.com"],"additional_whois_email":["abusecomplaints@markmonitor.com","whoisrequest@markmonitor.com"],"ip":[{"address":"142.250.217.78","asn":[15169],"country_code":"us","isp":"Google"},{"address":"142.251.33.100","asn":[15169],"country_code":"us","isp":"Google"},{"address":"142.251.33.68","asn":[15169],"country_code":"us","isp":"Google"},{"address":"142.251.33.78","asn":[15169],"country_code":"us","isp":"Google"}],"mx":[{"host":"smtp.google.com","domain":"google.com","ip":["74.125.195.27","74.125.142.27","74.125.142.26","74.125.195.26","74.125.197.27"],"priority":10}],"name_server":[{"host":"ns1.google.com","domain":"google.com","ip":["216.239.32.10"]},{"host":"ns2.google.com","domain":"google.com","ip":["216.239.34.10"]},{"host":"ns3.google.com","domain":"google.com","ip":["216.239.36.10"]},{"host":"ns4.google.com","domain":"google.com","ip":["216.239.38.10"]}],"risk_score":0,"redirect":"","redirect_domain":"","registrant_name":"","registrant_org":"Google
+      LLC","registrar":"MARKMONITOR, INC.,MARKMONITOR INC","registrar_status":["clientdeleteprohibited
+      clienttransferprohibited clientupdateprohibited serverdeleteprohibited servertransferprohibited
+      serverupdateprohibited"],"spf_info":"","ssl_country":"","ssl_hash":"","ssl_org":"","tld":"com","threat_profile":{"proximity":"","spam":"","malware":"","evidence":[]},"website_response":200,"data_updated_timestamp":"2022-05-19T21:54:01"}]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:19 GMT
+      - Fri, 20 May 2022 18:35:07 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '65119'
-    status:
-      code: 200
-      message: OK
+      - '73329'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

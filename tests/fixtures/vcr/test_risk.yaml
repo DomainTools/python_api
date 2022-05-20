@@ -1,70 +1,66 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=0.6.1&domain=google.com
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA13LMQqAMAxG4bv8cxHnXkVESg1SbBNJOll6dzO7Pr43oGSPsBHiwCktFUbEJXJV
-        WrI0BGix+7As6mYN8OgDcTfEbYBT846XVGqx/vdzn/MDv5jf92UAAAA=
+    content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:19 GMT
+      - Fri, 20 May 2022 18:35:07 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '21318'
-    status:
-      code: 200
-      message: OK
+      - '20519'
+    http_version: HTTP/1.1
+    status_code: 200
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=0.6.1&domain=hug.rest
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA12LTQqAIBBG7/KtpW3gVSJCTGqIcWTGoBDvnuu276dBkxXJluAbduFAGR7nfUxD
-        VDgo2bVZFB3F7BCFR55yNfilIQceHEXlIab6/oe+9v4B4vpVPGQAAAA=
+    content: '{"response":{"domain":"hug.rest","risk_score":7,"components":[{"name":"proximity","risk_score":7}]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:20 GMT
+      - Fri, 20 May 2022 18:35:08 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '26201'
-    status:
-      code: 200
-      message: OK
+      - '32876'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

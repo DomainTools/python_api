@@ -4,7 +4,6 @@ from hmac import new as hmac
 from types import MethodType
 import re
 
-import requests
 from domaintools._version import current as version
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
 
@@ -50,7 +49,6 @@ class API(object):
         self.rate_limit = rate_limit
         self.proxy_url = proxy_url
         self.extra_request_params = {}
-        self.extra_aiohttp_params = {}
         self.always_sign_api_key = always_sign_api_key
         self.key_sign_hash = key_sign_hash
         self.default_parameters['app_name'] = app_name
@@ -60,7 +58,6 @@ class API(object):
         if proxy_url:
             if isinstance(proxy_url, str):
                 self.extra_request_params['proxies'] = {'http': proxy_url, 'https': proxy_url}
-                self.extra_aiohttp_params['proxy'] = proxy_url
             else:
                 raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 

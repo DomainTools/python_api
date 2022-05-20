@@ -1,25 +1,21 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.1&offset=0&order=desc
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA31PzWrDMAx+F1+bBsdtksWn7hEGu5USXEfJDLaV2UrWUfruE2SMwWAX8fH9SboL
-        QjK+t7hEEroqBI5jBoayEN4Fx6iWjANGR5iy0Oe7IEhBaDEhTh4Ei4bsW5+Xa6bk4tSvJjlDDiPb
-        R+MzFCKaABnSCqmHm/VL3tTzpeC2G/0h3cAL4vNHeJnU/D7xEpvAEAz9wJM1JZXay3pfta9K6qrS
-        6lg2Tde17U5KLSUnlnn4J6H04alsD3XXHH8SmTarseRW+CYWPklYDLMHbvt1yfWTBRcJprR9uyPI
-        VJ0GDIZpRJ9LzonH5fEFVRZBpGgBAAA=
+    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -28,44 +24,38 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 May 2022 15:49:16 GMT
+      - Fri, 20 May 2022 19:05:47 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=77d0e93e9ef352bc1a861fabbc893fda; path=/; domain=.domaintools.com;
+      - csrftoken=4e18f99f5e49d0937ad449b8ad5a406e; path=/; domain=.domaintools.com;
         secure
-      - dtsession=f8s5978rmv8a9p81r6tkk3e704q384tpabbiam1mume9muk92upsla890gqcq81eosjkkvf5b7ajctc0vapfmf1n5evu21nnb7ubh7q;
-        expires=Fri, 17-Jun-2022 15:49:16 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=h2s028kg7pmook6vas35fdek91tcnnqrv67jmrruc4guoq91bp7cbj97qq9ebo96h0jiq1n379l2mgi69hs3ie0vd0n0vke4dcetosh;
+        expires=Sun, 19-Jun-2022 19:05:47 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
-    status:
-      code: 200
-      message: OK
+    http_version: HTTP/1.1
+    status_code: 200
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.1&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA31Qy27CMBD8l70SkGMCKT7RT6jUG0KRcRZjyY/U3gAV4t+7kKo9VOrFGu3M7Kzn
-        BpRI+86kMRKouoJ0PBZkKCrwLjhGK8E4pOgo5QJqdwPCHECBTcl6BCY1mVNXxkOh7KLtzjo7TS5F
-        lh+1L1hB1AEL5jPmDq/Gj2Vid/uKt13pz9D1HBBfL+HNyuHDcojJqAn7rueXOSmknIvVvG7fpVB1
-        rWSzWK83m7adCaGEYMc49P84pFq+LNrlarNufhyFJqk25M74PRj5JDApDB55Gw/7FLSLU2fM3SDi
-        BVTTVHB5FMGaR5FYjPaP/GeX5qSjfTL3368cPnmzi4Q2T3XNCAvV2ymAUvJlwcFw39+/ACGagfCp
-        AQAA
+    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","domain_counts":{"new":188,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","domain_counts":{"new":150,"watched":3,"escalated":2,"changed":2},"created_by":"integrations+test1@domaintools.com"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -74,20 +64,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 May 2022 15:49:17 GMT
+      - Fri, 20 May 2022 19:05:48 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=d824ec70df9ae6d90165ea189e2116a5; path=/; domain=.domaintools.com;
+      - csrftoken=23c663d9de317c80f7765c87e8af96a9; path=/; domain=.domaintools.com;
         secure
-      - dtsession=nljvbj7cav2h42nc877b7010g0432u8g4r1umnlbj9i3i45i7an01njh3sqalf1qlh5c4i49osjsr4ob9e0sdtn5k6cctjl24cs9fm6;
-        expires=Fri, 17-Jun-2022 15:49:17 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=771dapfkbjs41ddu818h4omgv2mr15qgfe66a7i2v3stu9ar1d9t0ovoov30pgs6qlh93f6rmo6gfnht5s2ufrkitbnjbdbom876rjr;
+        expires=Sun, 19-Jun-2022 19:05:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
-    status:
-      code: 200
-      message: OK
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

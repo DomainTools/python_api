@@ -1,28 +1,25 @@
 interactions:
 - request:
-    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=blocked&watchlist_domain_ids%5B%5D=gae08rdVWG
+    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=blocked&watchlist_domain_ids%5B%5D=OWxzqKqQEY
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
+      content-length:
       - '247'
-      Content-Type:
+      content-type:
       - application/x-www-form-urlencoded
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-detect/escalations/
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA5WPQQqDMBBF75KtVcZowGbVRaEXKBVaSohJsKHRiJkiIt69oVLotptZ/Pcfw1+I
-        CUo6idb3gfDbQiaJ6uFsQKF9J20vrCactNJANepLfSK7H0XgPJiIG+fV0+jIPm1fs+bKpnZ/jIka
-        jUSjhY43MgqUpsDSvDrnjJd7TsuMQlUUkABwgGi8Bv2n8f3RzLFvezTtuE1K0ATMD9sU9N6FTPmO
-        rPf1DSG2nxn6AAAA
+    content: '{"escalations":[{"watchlist_domain_id":"OWxzqKqQEY","escalation_type":"blocked","id":"5X1xLoWbp2","created_date":"2022-05-20T19:04:23.982670+00:00","updated_date":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -31,46 +28,42 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 May 2022 15:49:25 GMT
+      - Fri, 20 May 2022 19:04:24 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=4781bf603c7df2e61c84a35900f5d6e8; path=/; domain=.domaintools.com;
+      - csrftoken=eda8f72a32e203bdd9af790b139fa7c9; path=/; domain=.domaintools.com;
         secure
-      - dtsession=9q47q0iset8pca48cfq56ai9u099qinhikhm89pcdhsj54eab2afauli09uptrb7k71pihc6qlpi3f5fo0lsnkgfpg9rogniomoju60;
-        expires=Fri, 17-Jun-2022 15:49:24 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=aeamu2opcb3qb0d9ve919nlmuj3aeosl47ifqrtrpc8ph85io4qqendbsn51j2i2tus8j23p3n9p7se5afa79odg66ck3qsfqpvqu4k;
+        expires=Sun, 19-Jun-2022 19:04:23 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
-    status:
-      code: 200
-      message: OK
+    http_version: HTTP/1.1
+    status_code: 200
 - request:
-    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=google_safe&watchlist_domain_ids%5B%5D=gae08rdVWG
+    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=google_safe&watchlist_domain_ids%5B%5D=OWxzqKqQEY
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
+      content-length:
       - '251'
-      Content-Type:
+      content-type:
       - application/x-www-form-urlencoded
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-detect/escalations/
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA5WPQQrCMBBF75JtbUljq21WIkgvILoQCbEZYyBtSjMqtfTuRkVw6+Yv5s3j80cC
-        vpZWonGtJ/wwkrvE+mKNR6FcI00rjCKcaAm06NVuX5HZjyJw6OCFndMWhJdnCPxtZO6mi2q9eczD
-        pe5BIiihQgbGKGMxzeO02KY5z0rOFklW5suSRZRySoNx7dSfxrfjNIR/0yLo/jMrQvCYrj5z0Dnr
-        k9o1ZDpOT4rbiTv+AAAA
+    content: '{"escalations":[{"watchlist_domain_id":"OWxzqKqQEY","escalation_type":"google_safe","id":"W7Vb2GBx8m","created_date":"2022-05-20T19:04:26.283318+00:00","updated_date":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -79,20 +72,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 May 2022 15:49:27 GMT
+      - Fri, 20 May 2022 19:04:27 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=232a86223674e487e9a9938ef875c2dd; path=/; domain=.domaintools.com;
+      - csrftoken=6a1c8f4e2db4f510d3cd8f656162c2a4; path=/; domain=.domaintools.com;
         secure
-      - dtsession=ni4nkrpdb36iqu1fkhajdjg12fhngt6sj5ppo43e20b43u1nh59thl8ddsrbvs8rospf9kj2k0p4kd6je32didaksckvbuiqpl4clr2;
-        expires=Fri, 17-Jun-2022 15:49:26 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=d6a3vaud5pm5rh5bmetna933s6r8if0ekr9mld2emo62lp4680tv1kav85g9btu4f29p799gi4ru36b06743hpbgciqv0app8g06a12;
+        expires=Sun, 19-Jun-2022 19:04:25 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
-    status:
-      code: 200
-      message: OK
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

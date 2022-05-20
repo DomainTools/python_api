@@ -2,71 +2,59 @@ interactions:
 - request:
     body: app_name=python_wrapper&app_version=0.6.1&domain=amazon.com%2Cgoogle.com
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
+      content-length:
       - '216'
-      Content-Type:
+      content-type:
       - application/x-www-form-urlencoded
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-investigate/
   response:
-    body:
-      string: !!binary |
-        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
+    content: '{"response":{"limit_exceeded":false,"has_more_results":false,"message":"Enjoy
+      your data.","results_count":2,"total_count":2,"results":[{"domain":"amazon.com","whois_url":"https:\/\/whois.domaintools.com\/amazon.com","adsense":{"value":"","count":0},"alexa":10,"active":true,"google_analytics":{"value":"","count":0},"admin_contact":{"name":{"value":"Hostmaster,
+      Amazon Legal Dept.","count":1},"org":{"value":"Amazon Technologies, Inc.","count":1},"street":{"value":"P.O.
+      Box 8102","count":34385},"city":{"value":"Reno","count":105718},"state":{"value":"NV","count":687340},"postal":{"value":"89507","count":35185},"country":{"value":"us","count":232613374},"phone":{"value":"12062664064","count":36358},"fax":{"value":"12062667010","count":33425},"email":[{"value":"hostmaster@amazon.com","count":37594}]},"billing_contact":{"name":{"value":"","count":0},"org":{"value":"","count":0},"street":{"value":"","count":0},"city":{"value":"","count":0},"state":{"value":"","count":0},"postal":{"value":"","count":0},"country":{"value":"","count":0},"phone":{"value":"","count":0},"fax":{"value":"","count":0},"email":[]},"registrant_contact":{"name":{"value":"Hostmaster,
+      Amazon Legal Dept.","count":1},"org":{"value":"Amazon Technologies, Inc.","count":1},"street":{"value":"P.O.
+      Box 8102","count":34385},"city":{"value":"Reno","count":105718},"state":{"value":"NV","count":687340},"postal":{"value":"89507","count":35185},"country":{"value":"us","count":232613374},"phone":{"value":"12062664064","count":36358},"fax":{"value":"12062667010","count":33425},"email":[{"value":"hostmaster@amazon.com","count":40819}]},"technical_contact":{"name":{"value":"Hostmaster,
+      Amazon Legal Dept.","count":1},"org":{"value":"Amazon Technologies, Inc.","count":1},"street":{"value":"P.O.
+      Box 8102","count":34385},"city":{"value":"Reno","count":105718},"state":{"value":"NV","count":687340},"postal":{"value":"89507","count":35185},"country":{"value":"us","count":232613374},"phone":{"value":"12062664064","count":36358},"fax":{"value":"12062667010","count":33425},"email":[{"value":"hostmaster@amazon.com","count":34120}]},"create_date":{"value":"1994-11-01","count":193},"expiration_date":{"value":"2024-10-30","count":17111},"email_domain":[{"value":"amazon.com","count":4755385},{"value":"markmonitor.com","count":1548805}],"soa_email":[{"value":"root@amazon.com","count":7110}],"ssl_email":[],"additional_whois_email":[{"value":"abusecomplaints@markmonitor.com","count":1240620}],"ip":[{"address":{"value":"176.32.103.205","count":611},"asn":[{"value":16509,"count":44332324}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Prod
+      Iad","count":720}},{"address":{"value":"205.251.242.103","count":710},"asn":[{"value":16509,"count":44332324}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Amazon.com
+      Inc.","count":15481555}},{"address":{"value":"54.239.28.85","count":633},"asn":[{"value":16509,"count":44332324}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Amazon
+      Technologies Inc.","count":27147462}}],"mx":[{"host":{"value":"amazon-smtp.amazon.com","count":181},"domain":{"value":"amazon.com","count":320},"ip":[{"value":"99.78.197.215","count":10}],"priority":5}],"name_server":[{"host":{"value":"ns1.p31.dynect.net","count":5220},"domain":{"value":"dynect.net","count":270266},"ip":[{"value":"108.59.161.31","count":4845}]},{"host":{"value":"ns2.p31.dynect.net","count":5224},"domain":{"value":"dynect.net","count":270266},"ip":[{"value":"108.59.162.31","count":4863}]},{"host":{"value":"ns3.p31.dynect.net","count":4717},"domain":{"value":"dynect.net","count":270266},"ip":[{"value":"108.59.163.31","count":4420}]},{"host":{"value":"ns4.p31.dynect.net","count":4668},"domain":{"value":"dynect.net","count":270266},"ip":[{"value":"108.59.164.31","count":4408}]},{"host":{"value":"pdns1.ultradns.net","count":161952},"domain":{"value":"ultradns.net","count":635002},"ip":[{"value":"204.74.108.1","count":112289}]},{"host":{"value":"pdns6.ultradns.co.uk","count":141279},"domain":{"value":"co.uk","count":9226621},"ip":[{"value":"204.74.115.1","count":94948}]}],"domain_risk":{"risk_score":0,"components":[{"name":"zerolist","risk_score":0},{"name":"threat_profile","risk_score":0},{"name":"threat_profile_malware","risk_score":0},{"name":"threat_profile_phishing","risk_score":0},{"name":"threat_profile_spam","risk_score":0}]},"redirect":{"value":"","count":0},"redirect_domain":{"value":"","count":0},"registrant_name":{"value":"Hostmaster,
+      Amazon Legal Dept.","count":1},"registrant_org":{"value":"Amazon Technologies,
+      Inc.","count":1},"registrar":{"value":"MarkMonitor, Inc.","count":1},"registrar_status":["clientdeleteprohibited
+      clienttransferprohibited clientupdateprohibited serverdeleteprohibited servertransferprohibited
+      serverupdateprohibited"],"spf_info":"","ssl_info":[{"hash":{"value":"08040755c8b6852a5db945a2b380571111defd2d","count":6},"subject":{"value":"CN=*.peg.a2z.com","count":6},"organization":{"value":"","count":0},"email":[]},{"hash":{"value":"0e6bdcae568e3613c6d173c9b112c357ff5967b2","count":1},"subject":{"value":"CN=www.amazon.com,O=Amazon.com\\,
+      Inc.,L=Seattle,ST=Washington,C=US","count":2},"organization":{"value":"Amazon.com,
+      Inc.","count":34},"email":[]}],"tld":"com","website_response":200,"data_updated_timestamp":"2022-05-20T17:59:43","tags":[]},{"domain":"google.com","whois_url":"https:\/\/whois.domaintools.com\/google.com","adsense":{"value":"","count":0},"alexa":1,"active":true,"google_analytics":{"value":"","count":0},"admin_contact":{"name":{"value":"","count":0},"org":{"value":"Google
+      LLC","count":19928},"street":{"value":"","count":0},"city":{"value":"","count":0},"state":{"value":"CA","count":14317002},"postal":{"value":"","count":0},"country":{"value":"us","count":232613374},"phone":{"value":"","count":0},"fax":{"value":"","count":0},"email":[]},"billing_contact":{"name":{"value":"","count":0},"org":{"value":"","count":0},"street":{"value":"","count":0},"city":{"value":"","count":0},"state":{"value":"","count":0},"postal":{"value":"","count":0},"country":{"value":"","count":0},"phone":{"value":"","count":0},"fax":{"value":"","count":0},"email":[]},"registrant_contact":{"name":{"value":"","count":0},"org":{"value":"Google
+      LLC","count":19928},"street":{"value":"","count":0},"city":{"value":"","count":0},"state":{"value":"CA","count":14317002},"postal":{"value":"","count":0},"country":{"value":"us","count":232613374},"phone":{"value":"","count":0},"fax":{"value":"","count":0},"email":[]},"technical_contact":{"name":{"value":"","count":0},"org":{"value":"Google
+      LLC","count":19928},"street":{"value":"","count":0},"city":{"value":"","count":0},"state":{"value":"CA","count":14317002},"postal":{"value":"","count":0},"country":{"value":"us","count":232613374},"phone":{"value":"","count":0},"fax":{"value":"","count":0},"email":[]},"create_date":{"value":"1997-09-15","count":1916},"expiration_date":{"value":"2028-09-14","count":3973},"email_domain":[{"value":"google.com","count":14907640},{"value":"markmonitor.com","count":1548805}],"soa_email":[{"value":"dns-admin@google.com","count":206350}],"ssl_email":[],"additional_whois_email":[{"value":"abusecomplaints@markmonitor.com","count":1240620},{"value":"whoisrequest@markmonitor.com","count":805200}],"ip":[{"address":{"value":"142.250.217.78","count":291},"asn":[{"value":15169,"count":40132234}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Google","count":57274560}},{"address":{"value":"142.251.33.100","count":98},"asn":[{"value":15169,"count":40132234}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Google","count":57274560}},{"address":{"value":"142.251.33.68","count":101},"asn":[{"value":15169,"count":40132234}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Google","count":57274560}},{"address":{"value":"142.251.33.78","count":330},"asn":[{"value":15169,"count":40132234}],"country_code":{"value":"us","count":395001742},"isp":{"value":"Google","count":57274560}}],"mx":[{"host":{"value":"smtp.google.com","count":1523},"domain":{"value":"google.com","count":24787746},"ip":[{"value":"74.125.195.27","count":3351513},{"value":"74.125.142.27","count":3534052},{"value":"74.125.142.26","count":3720414},{"value":"74.125.195.26","count":3127743},{"value":"74.125.197.27","count":575350}],"priority":10}],"name_server":[{"host":{"value":"ns1.google.com","count":20037},"domain":{"value":"google.com","count":27567},"ip":[{"value":"216.239.32.10","count":18095}]},{"host":{"value":"ns2.google.com","count":19787},"domain":{"value":"google.com","count":27567},"ip":[{"value":"216.239.34.10","count":17739}]},{"host":{"value":"ns3.google.com","count":7526},"domain":{"value":"google.com","count":27567},"ip":[{"value":"216.239.36.10","count":7448}]},{"host":{"value":"ns4.google.com","count":7210},"domain":{"value":"google.com","count":27567},"ip":[{"value":"216.239.38.10","count":7141}]}],"domain_risk":{"risk_score":0,"components":[{"name":"zerolist","risk_score":0},{"name":"threat_profile","risk_score":0},{"name":"threat_profile_malware","risk_score":0},{"name":"threat_profile_phishing","risk_score":0},{"name":"threat_profile_spam","risk_score":0}]},"redirect":{"value":"","count":0},"redirect_domain":{"value":"","count":0},"registrant_name":{"value":"","count":0},"registrant_org":{"value":"Google
+      LLC","count":19538},"registrar":{"value":"MARKMONITOR, INC.,MARKMONITOR INC","count":805733},"registrar_status":["clientdeleteprohibited
+      clienttransferprohibited clientupdateprohibited serverdeleteprohibited servertransferprohibited
+      serverupdateprohibited"],"spf_info":"","ssl_info":[{"hash":{"value":"383cb7050a7710f4ef512754fe3aa9efc1525ba6","count":1},"subject":{"value":"CN=www.google.com","count":10},"organization":{"value":"","count":0},"email":[]},{"hash":{"value":"c8d53521f593c6c9fb78da4c64d3b6079d714d00","count":29},"subject":{"value":"CN=*.google.com","count":39},"organization":{"value":"","count":0},"email":[]}],"tld":"com","website_response":200,"data_updated_timestamp":"2022-05-19T21:54:01","tags":[]}],"missing_domains":[]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:21 GMT
+      - Fri, 20 May 2022 18:35:10 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '102097'
-    status:
-      code: 200
-      message: OK
+      - '99600'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

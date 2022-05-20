@@ -3,27 +3,24 @@ interactions:
     body: '{"app_name": "python_wrapper", "app_version": "0.6.1", "state": "watched",
       "watchlist_domain_ids": ["gae08rdVWG"]}'
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
+      content-length:
       - '272'
-      Content-Type:
+      content-type:
       - application/json
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: PATCH
     uri: https://api.domaintools.com/v1/iris-detect/domains/
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA3WOQQrCMBBF75KtWibBasjKnRcQXYhITIYYbBPoDIpI725qQVRwlv/x5v+HuFl2
-        5yYSH31ubUwkzP4hiC2jMCNFL6ZipCUKOYcG2TYX7CqX28qlAUdy+Yod+qMfVQVKzaCeyeVGgVG1
-        kaqSSgPABMAAFMmdbQp/jYWRuoLXvY3ohwUWQXd+u1uXxBLFkMqT072gmBhDZznmRBNGYrkah3PO
-        DQ1zP5XfXr2R2si5Afnd2x/6J13TV58pAQAA
+    content: '{"watchlist_domains":[{"state":"watched","domain":"googletalker.com.cn","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-05-17T20:26:18.000000+00:00","id":"gae08rdVWG","assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T18:35:17.000000+00:00"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -32,20 +29,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 May 2022 18:14:01 GMT
+      - Fri, 20 May 2022 18:35:17 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=a5c838e4ad88040365c0ac69b337bcc2; path=/; domain=.domaintools.com;
+      - csrftoken=64eee7f760673b9aee18609681ff3df5; path=/; domain=.domaintools.com;
         secure
-      - dtsession=s43cnhit5pvimtkru2cpp1phq3ehkqab0i96q4mol6li2c7magfkaes2d686tmrhjmfaj9b0gj06piblcocj582it57rn209nrto1jq;
-        expires=Fri, 17-Jun-2022 18:14:01 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=iohmm8s0t12lm0b7bc60jsno7u6r2ihb1fpq055kad23s4c3q3hkcr7atbajdg0pide6gmknv378mcpjiqgjircnqpti5d131r8a9m0;
+        expires=Sun, 19-Jun-2022 18:35:17 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
-    status:
-      code: 200
-      message: OK
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

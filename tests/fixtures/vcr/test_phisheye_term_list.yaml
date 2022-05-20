@@ -1,36 +1,34 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/phisheye/term-list?app_name=python_wrapper&app_version=0.6.1&include_inactive=false
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAyXKMQqAMAwF0Lv8uYtrriJSpIRSsI0kqUvJ3RXc3vAWlO2WYQxacNZuoP0XCFWk
-        XoyEs3h7vuM6OWEaa+4ymovmInM4aIsj4gW1NisaTwAAAA==
+    content: '{"response":{"terms":[{"term":"google","active":true,"user_monitor_count":1}]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:17:15 GMT
+      - Fri, 20 May 2022 18:35:06 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '16959'
-    status:
-      code: 200
-      message: OK
+      - '17080'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

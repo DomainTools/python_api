@@ -1,45 +1,35 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: GET
     uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=0.6.1
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA62VTY/aMBCG/8rKh16aBCdA+ZBWPWwrVAlKpbYnQJFJ3MRq8KS2KV0h/vuOY7aB
-        JbBSm1syE7/vE894vCeK6xKk5mS8x+dMaKOYNPZNsg1GyQQgK/jddPpAPJLChgmpyTii/XDokVJB
-        uk1MvFUFfpobU+rxsrPsKP6bK813OQgduEUGoNBBAptl5z0risXq3im/ReU3EiTHCDl4RHOFay2A
-        KGOWpgiIfiTsRUHUp0EUDoKQUmQBk3MV10QhfZVHlJcwmjOV5Aj16z6rgGzYgjzvhhEgLU6iODM8
-        tSyj0cCnIz/sIwb/UwpkxHBEo2EV7mF4W6bHryMajmyYjkgtij9IZkz9nIEUBtTdJ5kEmNaGma22
-        aguSFIJL84EX3PAvCnKxFlbQOya+YZ30D64aUt8r77OE29UGMZdoFHOpC7EV7o3tjdjlLev+b9XI
-        569hMJnPJ9OPwcN8Rl4tiWzoj5OSvJA7eGdWUbtW0Q2rbrtW3RtWvXatzuQOK4/k2IGgHk9PfHXe
-        cBG2jzYxCtsRgJ1LIz+kPu3aPrdBLHb3FpEzvgR6ziw7OWgjZOYfIRrO3UlvVVRHXzzdRmxwWjEZ
-        Cxk/op49dDc3qA2c0ylU03TfDRt5bg/FNniqmepql4BK8XFAhwOvsXqhT/uuev/DVDnWRFcGZjW6
-        wYJp5MKbY9j/F1vU8NcKdtgAaOHSL3eArzVOohjnEnMb4a6wOIGU26upahVT1LcXqa8Vku00vm64
-        XbtYXUe8cned/fLhCSwwBw1ABwAA
+    content: '{"response":{"registrant":{"name":"Google LLC","domains":20518,"product_url":"https:\/\/reversewhois.domaintools.com\/?all[]=Google+LLC&none[]="},"server":{"ip_address":"142.250.217.100","other_domains":210,"product_url":"https:\/\/reverseip.domaintools.com\/search\/?q=google.com"},"registration":{"created":"1997-09-15","expires":"2028-09-14","updated":"2019-09-09","registrar":"MarkMonitor
+      Inc.","statuses":["clientDeleteProhibited","clientTransferProhibited","clientUpdateProhibited","serverDeleteProhibited","serverTransferProhibited","serverUpdateProhibited"]},"name_servers":[{"server":"NS1.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS1.GOOGLE.COM"},{"server":"NS2.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS2.GOOGLE.COM"},{"server":"NS3.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS3.GOOGLE.COM"},{"server":"NS4.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS4.GOOGLE.COM"}],"history":{"registrar":{"earliest_event":"2002-10-03","events":3,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"name_server":{"events":0,"timespan_in_years":"","product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"ip_address":{"events":368,"timespan_in_years":18,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"whois":{"records":7090,"earliest_event":"2001-05-03","product_url":"https:\/\/research.domaintools.com\/research\/whois-history\/search\/?q=google.com"}},"seo":{"score":86,"product_url":"https:\/\/research.domaintools.com\/seo-browser\/?domain=google.com"},"website_data":{"response_code":200,"title":"Google","server":"gws","meta":[],"product_url":"https:\/\/whois.domaintools.com\/google.com"}}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 17 May 2022 20:15:45 GMT
+      - Fri, 20 May 2022 18:33:58 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '60067'
-    status:
-      code: 200
-      message: OK
+      - '64601'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1
