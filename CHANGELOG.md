@@ -1,6 +1,9 @@
 Changelog
 =========
 
+### 0.6.2
+- Update README with Iris trademarks
+
 ### 0.6.1
 - Fix an invalid response type error for available_api_calls on CLI
 - Add better error messaging for users when proxy info is not set correctly
