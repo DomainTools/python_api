@@ -1,4 +1,4 @@
-"""Defines the base result object - which specifies how DomainTools' API endpoints will be interacted with"""
+"""Defines the base result object - which specifies how DomainTools API endpoints will be interacted with"""
 import collections
 import json
 import re

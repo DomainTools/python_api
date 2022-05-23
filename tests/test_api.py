@@ -1,4 +1,4 @@
-"""Tests the Python interface for DomainTools' APIs"""
+"""Tests the Python interface for DomainTools APIs"""
 from os import environ
 from datetime import datetime
 
@@ -195,7 +195,7 @@ def test_host_domains():
 
 @vcr.use_cassette
 def test_reverse_ip_whois():
-    api_call = api.reverse_ip_whois(query='Domain Tools')
+    api_call = api.reverse_ip_whois(query='DomainTools')
     with api_call as results:
         assert 'page' in results
         assert 'has_more_pages' in results

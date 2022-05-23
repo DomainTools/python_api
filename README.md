@@ -6,12 +6,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=main)](https://coveralls.io/github/DomainTools/python_api?branch=main)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 
-DomainTools' Official Python API
+DomainTools Official Python API
 
 ![domaintools Example](https://github.com/DomainTools/python_api/raw/main/artwork/example.gif)
 
 
-Installing the DomainTools' API
+Installing the DomainTools API
 ===================
 
 To install the API run
@@ -173,7 +173,7 @@ Using the API Asynchronously
 
 ![domaintools Async Example](https://github.com/DomainTools/python_api/raw/main/artwork/example_async.gif)
 
-The DomainTools' API automatically supports async usage:
+The DomainTools API automatically supports async usage:
 
 ```python
 
