@@ -10,7 +10,7 @@ DomainTools Official Python API
 
 ![domaintools Example](https://github.com/DomainTools/python_api/raw/main/artwork/example.gif)
 
-The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™ and Iris Enrich™ products. It is actively maintained and may be downloaded via <a href="https://github.com/DomainTools/python_api">GitHub</a> or <a href="https://pypi.org/project/domaintools-api/">PyPI</a>.
+The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™, Iris Enrich™, and Iris Detect™ products. It is actively maintained and may be downloaded via <a href="https://github.com/DomainTools/python_api">GitHub</a> or <a href="https://pypi.org/project/domaintools-api/">PyPI</a>. See the included README file, the examples folder, and API documentation (https://app.swaggerhub.com/apis-docs/DomainToolsLLC/DomainTools_APIs/1.0#) for more info.
 
 Installing the DomainTools API
 ===================
@@ -50,6 +50,12 @@ You can get an overview of every endpoint that you can interact with using the b
 help(api)
 ```
 
+Or if you know the endpoint you want to use, you can get more information about it:
+
+```python
+help(api.iris_investigate)
+```
+
 If applicable, native Python looping can be used directly to loop through any results:
 
 ```python
@@ -71,7 +77,6 @@ profile = api.domain_profile('google.com')
 title = profile['website_data']['title']
 ```
 
-
 For any API call where a single type of data is expected you can directly cast to the desired type:
 
 ```python
@@ -89,39 +94,10 @@ api.iris_enrich('domaintools.com').response() == { ... }
 
 You can directly get the html, xml, or json version of the response by calling `.(html|xml|json)()` These only work with non AsyncResults:
 ```python
-html = str(api.domain_search('google').json())
+json = str(api.domain_search('google').json())
 xml = str(api.domain_search('google').xml())
 html = str(api.domain_search('google').html())
 ```
-
-Besides the Iris Investigate method letting you lookup domains, it can also be used to search for domains sharing common attributes. For instance, you can pass it an IP to bring back all domains sharing that IP:
-
-```python
-api.iris_investigate(ip='ENTER_IP_ADDRESS_HERE')
-```
-
-Other args you can use are below:
-- **ip**: Search for domains having this IP.
-- **email**: Search for domains with this email in their data.
-- **email_domain**: Search for domains where the email address uses this domain.
-- **nameserver_host**: Search for domains with this nameserver.
-- **nameserver_domain**: Search for domains with a nameserver that has this domain.
-- **nameserver_ip**: Search for domains with a nameserver on this IP.
-- **registrar**: Search for domains with this registrar.
-- **registrant**: Search for domains with this registrant name.
-- **registrant_org**: Search for domains with this registrant organization.
-- **mailserver_host**: Search for domains with this mailserver.
-- **mailserver_domain**: Search for domains with a mailserver that has this domain.
-- **mailserver_ip**: Search for domains with a mailserver on this IP.
-- **redirect_domain**: Search for domains which redirect to this domain.
-- **ssl_hash**: Search for domains which have an SSL certificate with this hash.
-- **ssl_subject**: Search for domains which have an SSL certificate with this subject string.
-- **ssl_email**: Search for domains which have an SSL certificate with this email in it.
-- **ssl_org**: Search for domains which have an SSL certificate with this organization in it.
-- **google_analytics**: Search for domains which have this Google Analytics code.
-- **adsense**: Search for domains which have this AdSense code.
-- **tld**: Filter by TLD. Must be combined with another parameter.
-- **search_hash**: Use search hash from Iris to bring back domains.
 
 If any API call is unsuccesfull, one of the exceptions defined in `domaintools.exceptions` will be raised:
 

@@ -1,4 +1,4 @@
-"""Defines how to interact with the domaintools API via the command line"""
+"""Defines how to interact with the DomainTools API via the command line"""
 import argparse
 import inspect
 import os.path
@@ -7,10 +7,7 @@ import sys
 from domaintools import API
 from domaintools._version import current as version
 
-try: # pragma: no cover
-    from itertools import zip_longest
-except ImportError: # pragma: no cover
-    from itertools import izip_longest as zip_longest
+from itertools import zip_longest
 
 API_CALLS = tuple((api_call for api_call in dir(API) if not api_call.startswith('_') and
                    callable(getattr(API, api_call, None))))
@@ -18,7 +15,8 @@ API_CALLS = tuple((api_call for api_call in dir(API) if not api_call.startswith(
 
 def parse(args=None):
     """Defines how to parse CLI arguments for the DomainTools API"""
-    parser = argparse.ArgumentParser(description='The DomainTools CLI API Client')
+    parser = argparse.ArgumentParser(description='The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™, Iris Enrich™, and Iris Enrich™ products. See the included README file, the examples folder and API documentation (https://app.swaggerhub.com/apis-docs/DomainToolsLLC/DomainTools_APIs/1.0#) for more info',
+                                     formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('-u', '--username', dest='user', default='', help='API Username')
     parser.add_argument('-k', '--key', dest='key', default='', help='API Key')
     parser.add_argument('-c', '--credfile', dest='credentials', default=os.path.expanduser('~/.dtapi'),
@@ -29,8 +27,6 @@ def parse(args=None):
     parser.add_argument('-o', '--outfile', dest='out_file', type=argparse.FileType('wbU'), default=sys.stdout,
                         help='Output file (defaults to stdout)')
     parser.add_argument('-v', '--version', action='version', version='DomainTools CLI API Client {0}'.format(version))
-    parser.add_argument('--no-https', dest='https', action='store_false', default=True,
-                        help='Use HTTP instead of HTTPS.')
     parser.add_argument('--no-verify-ssl', dest='verify_ssl', action='store_false', default=True,
                         help='Skip verification of SSL certificate when making HTTPs API calls')
 
@@ -39,7 +35,7 @@ def parse(args=None):
     subparsers.required = True
     for api_call in API_CALLS:
         api_method = getattr(API, api_call)
-        subparser = subparsers.add_parser(api_call, help=api_method.__name__)
+        subparser = subparsers.add_parser(api_call, formatter_class=argparse.RawTextHelpFormatter, help=inspect.getdoc(api_method), description=inspect.getdoc(api_method))
         spec = inspect.getfullargspec(api_method)
 
         for argument_name, default in reversed(list(zip_longest(reversed(spec.args or []),
