@@ -31,4 +31,36 @@ interactions:
       - '135128'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=0.6.2
+  response:
+    content: '{"response":{"account":{"api_username":"integrations_testing","active":true},"products":[{"id":"account-information","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"6","month":"31"},"expiration_date":null},{"id":"iris-investigate","per_month_limit":"1000","per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"3"},"expiration_date":null},{"id":"iris-enrich","per_month_limit":"1000","per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"4"},"expiration_date":null},{"id":"iris-detect-escalate-domains","per_month_limit":"1500","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"4"},"expiration_date":null},{"id":"iris-detect-ignored-domains","per_month_limit":"1500","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"4","month":"15"},"expiration_date":null},{"id":"iris-detect-manage-watchlist-domains","per_month_limit":"1500","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"17"},"expiration_date":null},{"id":"iris-detect-monitors","per_month_limit":"1500","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"4","month":"17"},"expiration_date":null},{"id":"iris-detect-new-domains","per_month_limit":"1500","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"2","month":"8"},"expiration_date":null},{"id":"iris-detect-watched-domains","per_month_limit":"1500","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"6","month":"25"},"expiration_date":null},{"id":"phisheye","per_month_limit":"10000","per_minute_limit":"10","absolute_limit":null,"usage":{"today":"4","month":"14"},"expiration_date":null},{"id":"domain-profile","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"domain-search","per_month_limit":"100000","per_minute_limit":"500","absolute_limit":null,"usage":{"today":"48","month":"238"},"expiration_date":null},{"id":"hosting-history","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"ip-monitor","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"ip-registrant-monitor","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris","per_month_limit":"1000","per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"3"},"expiration_date":null},{"id":"reputation","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"reverse-ip","per_month_limit":"100000","per_minute_limit":"10","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"reverse-ip-whois","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"4","month":"12"},"expiration_date":null},{"id":"risk","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"4","month":"14"},"expiration_date":null},{"id":"risk-evidence","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"reverse-name-server","per_month_limit":"100000","per_minute_limit":"10","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"reverse-whois","per_month_limit":"100000","per_minute_limit":"10","absolute_limit":null,"usage":{"today":"2","month":"9"},"expiration_date":null},{"id":"mark-alert","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"2","month":"6"},"expiration_date":null},{"id":"parsed-whois","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"5"},"expiration_date":null},{"id":"name-server-monitor","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"2","month":"5"},"expiration_date":null},{"id":"whois","per_month_limit":"100000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"4","month":"10"},"expiration_date":null},{"id":"whois-history","per_month_limit":"5000","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"200","month":"800"},"expiration_date":null},{"id":"parsed-whois-live","per_month_limit":"120","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"registrant-alert","per_month_limit":"100000","per_minute_limit":"5","absolute_limit":null,"usage":{"today":"2","month":"4"},"expiration_date":null}]}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 25 May 2022 15:28:38 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '111071'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

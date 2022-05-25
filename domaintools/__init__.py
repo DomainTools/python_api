@@ -1,4 +1,4 @@
-"""DomainTools' Official Python API"""
+"""DomainTools Official Python API"""
 from domaintools._version import current
 from domaintools.api import API
 

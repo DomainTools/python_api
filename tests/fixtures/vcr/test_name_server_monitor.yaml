@@ -105,4 +105,74 @@ interactions:
       - '67980'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=0.6.2&days_back=0&page=1&query=google.com
+  response:
+    content: '{"response":{"limit":1000,"date":"2022-05-25","name_server":"google.com","total":"54","page":1,"page_count":1,"alerts":[{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"183GOLARO.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"193TOTOBO.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"1TTRTIPBET.COM"},{"new_name_server":"google.com","old_name_server":"servicio-online.net","action":"Transfer
+      In","domain":"3STUDIO.ES"},{"new_name_server":"tuwebdns.net","old_name_server":"google.com","action":"Transfer
+      Out","domain":"ABUBA.CL"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"APARAT.ICU"},{"new_name_server":"google.com","old_name_server":"webd.pl","action":"Transfer
+      In","domain":"ART-BOUTIQUE.PL"},{"new_name_server":"google.com","old_name_server":"microsoftonline.com","action":"Transfer
+      In","domain":"BBU2015.ORG"},{"new_name_server":"akkyservicios.mx","old_name_server":"google.com","action":"Transfer
+      Out","domain":"BFI.MX"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"CINEVEZ.VIP"},{"new_name_server":"dnsowl.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"DATING4YOU-NOW.LIFE"},{"new_name_server":"google.com","old_name_server":"sitiodns.net","action":"Transfer
+      In","domain":"DEPEPPINO.CL"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"DIGIKALA.CYOU"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"DIZITURKA.NET"},{"new_name_server":"google.com","old_name_server":"nic.py","action":"Transfer
+      In","domain":"EQUIDISTANCIA.COM.PY"},{"new_name_server":"nsone.net","old_name_server":"google.com","action":"Transfer
+      Out","domain":"FRANZ.TENNIS"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"FULLYUNDETECTABLE.COM"},{"new_name_server":"google.com","old_name_server":"iconnect.zm","action":"Transfer
+      In","domain":"FWIYA.CO.ZM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"GKASAM122.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"GKASAM124.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"GOLARO89.COM"},{"new_name_server":"nano.lv","old_name_server":"google.com","action":"Transfer
+      Out","domain":"ILAM.LV"},{"new_name_server":"burtinet.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"INDIR.CO"},{"new_name_server":"google.com","old_name_server":"arvancdn.net","action":"Transfer
+      In","domain":"IRANSERVER.QUEST"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"KAYACELIKKONSTRUKSIYON.COM"},{"new_name_server":"google.com","old_name_server":"irandns.com","action":"Transfer
+      In","domain":"LAWIRANS.COM"},{"new_name_server":"suspended-domain.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"LIEWLALIN.COM"},{"new_name_server":"dns-parking.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"LIFEPLUS.COM.PK"},{"new_name_server":"google.com","old_name_server":"namecheaphosting.com","action":"Transfer
+      In","domain":"LIVETRADE.CL"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"MAMAKKAU2.XYZ"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"MARKOBET230.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"MARKOBET453.COM"},{"new_name_server":"google.com","old_name_server":"counthost.com","action":"Transfer
+      In","domain":"MOTIONARCHBD.XYZ"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"MRVERIFICATION.COM"},{"new_name_server":"google.com","old_name_server":"anagramme.be","action":"Transfer
+      In","domain":"MUMANDSONS.BE"},{"new_name_server":"bluehost.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"MZONE.COM.SA"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"NEWASWAYS.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"POSTINI.TOKYO.JP"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"PSIROGERIOSILVA.ONLINE"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"REDCAPCRAFTSODA.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"RUBIKA.CAM"},{"new_name_server":"mizbandp.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"SECURE-REG.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"SIPCI.UZ"},{"new_name_server":"enic.ee","old_name_server":"google.com","action":"Transfer
+      Out","domain":"SISTRUM.EE"},{"new_name_server":"registrar-servers.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"TGMONEY.INFO"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"THECODEX.INFO"},{"new_name_server":"up.net.tr","old_name_server":"google.com","action":"Transfer
+      Out","domain":"TINDERTURKEY.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"TOKEN.BH"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"TOTOBO223.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"TRADERYAB.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"TTRTIPBET113.COM"},{"new_name_server":"google.com","old_name_server":"awsdns-15.com","action":"Transfer
+      In","domain":"WOOPYLIBRERIA.COM.AR"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"WW4-SUNCOAST-COM-PREVIEW.XYZ"},{"new_name_server":"google.com","old_name_server":"dynadot.com","action":"Transfer
+      In","domain":"XN--CABAAS-ZWA.ORG"}]}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 25 May 2022 15:28:43 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '54342'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

@@ -32,4 +32,37 @@ interactions:
       - '64601'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=0.6.2
+  response:
+    content: '{"response":{"registrant":{"name":"Google LLC","domains":20522,"product_url":"https:\/\/reversewhois.domaintools.com\/?all[]=Google+LLC&none[]="},"server":{"ip_address":"142.250.217.100","other_domains":210,"product_url":"https:\/\/reverseip.domaintools.com\/search\/?q=google.com"},"registration":{"created":"1997-09-15","expires":"2028-09-14","updated":"2019-09-09","registrar":"MarkMonitor
+      Inc.","statuses":["clientDeleteProhibited","clientTransferProhibited","clientUpdateProhibited","serverDeleteProhibited","serverTransferProhibited","serverUpdateProhibited"]},"name_servers":[{"server":"NS1.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS1.GOOGLE.COM"},{"server":"NS2.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS2.GOOGLE.COM"},{"server":"NS3.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS3.GOOGLE.COM"},{"server":"NS4.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS4.GOOGLE.COM"}],"history":{"registrar":{"earliest_event":"2002-10-03","events":3,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"name_server":{"events":0,"timespan_in_years":"","product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"ip_address":{"events":368,"timespan_in_years":18,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"whois":{"records":7095,"earliest_event":"2001-05-03","product_url":"https:\/\/research.domaintools.com\/research\/whois-history\/search\/?q=google.com"}},"seo":{"score":86,"product_url":"https:\/\/research.domaintools.com\/seo-browser\/?domain=google.com"},"website_data":{"response_code":200,"title":"Google","server":"gws","meta":[],"product_url":"https:\/\/whois.domaintools.com\/google.com"}}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 25 May 2022 15:28:40 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '62915'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1
