@@ -85,4 +85,36 @@ interactions:
       - '358479'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=0.6.2&include_total_count=false&page=1&query=DomainTools
+  response:
+    content: '{"error":"Internal Error #3264","resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/html
+      Date:
+      - Wed, 25 May 2022 15:29:01 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '9429024'
+    http_version: HTTP/1.1
+    status_code: 500
 version: 1
