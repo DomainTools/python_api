@@ -1,4 +1,5 @@
 [report]
 include = domaintools/*.py
+          domaintools_async/*.py
 exclude_lines = if __name__ == .__main__.:
                 pragma: no cover
