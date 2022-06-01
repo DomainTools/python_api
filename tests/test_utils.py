@@ -16,7 +16,7 @@ def test_get_threat_component():
     assert result.get("risk_score") == 31
 
 
-def test_enrich_and_investigate_average_risk_score():
+def test_investigate_average_risk_score():
     domains = [
         {"domain_risk": {"risk_score": 25}},
         {"domain_risk": {"risk_score": 27}}
@@ -49,6 +49,56 @@ def test_detect_average_risk_score():
     ]
     result = utils.get_average_risk_score(domains)
     assert result == 25
+
+    domains = []
+    result = utils.get_average_risk_score(domains)
+    assert result == None
+
+def test_investigate_average_age():
+    two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
+    five_days_ago = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
+
+    domains = [
+        {"create_date": {"value": two_days_ago}},
+        {"create_date": {"value": five_days_ago}}
+    ]
+    result = utils.get_average_age(domains)
+    assert result == 3
+
+    domains = [
+        {"create_date": {"value": two_days_ago}},
+        {}
+    ]
+    result = utils.get_average_age(domains)
+    assert result == 2
+
+    domains = [
+        {"create_date": {"value": two_days_ago}},
+        {"create_date": {"value": ""}}
+    ]
+    result = utils.get_average_age(domains)
+    assert result == 2
+
+    domains = []
+    result = utils.get_average_age(domains)
+    assert result == None
+
+def test_detect_average_age():
+    two_days_ago = int((datetime.now() - timedelta(days=2)).strftime("%Y%m%d"))
+    five_days_ago = int((datetime.now() - timedelta(days=5)).strftime("%Y%m%d"))
+    domains = [
+        {"create_date": two_days_ago},
+        {"create_date": five_days_ago}
+    ]
+    result = utils.get_average_age(domains)
+    assert result == 3
+
+    domains = [
+        {"create_date": two_days_ago},
+        {"create_date": None}
+    ]
+    result = utils.get_average_age(domains)
+    assert result == 2
 
     domains = []
     result = utils.get_average_risk_score(domains)
