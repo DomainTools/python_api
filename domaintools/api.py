@@ -287,7 +287,7 @@ class API(object):
         domains = ','.join(domains)
         data_updated_after = kwargs.get('data_updated_after', None)
         if hasattr(data_updated_after, 'strftime'):
-            data_updated_after = data_updated_after.strftime('%Y-%M-%d')
+            data_updated_after = data_updated_after.strftime('%Y-%m-%d')
 
         return self._results('iris-enrich', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
                              items_path=('results',), **kwargs)
@@ -343,11 +343,11 @@ class API(object):
         if isinstance(domains, (list, tuple)):
             domains = ','.join(domains)
         if hasattr(data_updated_after, 'strftime'):
-            data_updated_after = data_updated_after.strftime('%Y-%M-%d')
+            data_updated_after = data_updated_after.strftime('%Y-%m-%d')
         if hasattr(expiration_date, 'strftime'):
-            expiration_date = expiration_date.strftime('%Y-%M-%d')
+            expiration_date = expiration_date.strftime('%Y-%m-%d')
         if hasattr(create_date, 'strftime'):
-            create_date = create_date.strftime('%Y-%M-%d')
+            create_date = create_date.strftime('%Y-%m-%d')
         if isinstance(active, bool):
             kwargs['active'] = str(active).lower()
 
@@ -414,7 +414,7 @@ class API(object):
         search: str: default None. A "contains" search for any portion of a domain name.
 
         sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
-        ["domain_discovered", "domain_changed", "risk_score"]
+        ["discovered_date", "changed_date", "risk_score"]
 
         order: str: default None. Sort order "asc" or "desc"
 
@@ -483,7 +483,7 @@ class API(object):
         search: str: default None. A "contains" search for any portion of a domain name.
 
         sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
-        ["domain_discovered", "domain_changed", "risk_score"]
+        ["discovered_date", "changed_date", "risk_score"]
 
         order: str: default None. Sort order "asc" or "desc"
 
@@ -582,7 +582,7 @@ class API(object):
         search: str: default None. A "contains" search for any portion of a domain name.
 
         sort: List[str]: default None. Sort order for domain list. Valid values are an ordered list of the following:
-        ["domain_discovered", "domain_changed", "risk_score"]
+        ["discovered_date", "changed_date", "risk_score"]
 
         order: str: default None. Sort order "asc" or "desc"
 
