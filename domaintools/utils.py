@@ -28,3 +28,26 @@ def get_threat_component(components, threat_type):
             return component
     else:
         return None
+
+
+def get_average_risk_score(domains):
+    """
+    Gets average risk score for Enrich, Investigate, and Detect result sets
+    Args:
+        domains: Iris Enrich or Investigate result set
+
+    Returns: average risk score
+    """
+    count = 0
+    total = 0
+    for d in domains:
+        # enrich and investigate result sets
+        if "risk_score" in d.get("domain_risk", {}):
+            count += 1
+            total += d.get("domain_risk", {}).get("risk_score")
+        # detect result set
+        elif d.get("risk_score"):
+            count += 1
+            total += d.get("risk_score")
+
+    return total // count if count else None
