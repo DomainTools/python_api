@@ -73,3 +73,28 @@ def get_average_age(domains):
             total += get_domain_age(str(d.get("create_date")))
 
     return total // count if count else None
+
+
+def prune_data(data_obj):
+    """
+    Does a deep dive through a data object to prune any null or empty items. Checks for empty lists, dicts, and strs.
+    Args:
+        data_obj: Either a list or dict that needs to be pruned
+    """
+    items_to_prune = []
+    if isinstance(data_obj, dict) and len(data_obj):
+        for k, v in data_obj.items():
+            if isinstance(data_obj[k], dict) or isinstance(data_obj[k], list):
+                prune_data(data_obj[k])
+            if not isinstance(v, int) and not v:
+                items_to_prune.append(k)
+            elif k == 'count' and v == 0:
+                items_to_prune.append(k)
+        for k in items_to_prune:
+            del data_obj[k]
+    elif isinstance(data_obj, list) and len(data_obj):
+        for index, item in enumerate(data_obj):
+            prune_data(item)
+            if not isinstance(item, int) and not item:
+                items_to_prune.append(index)
+        data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
