@@ -1,5 +1,8 @@
 from datetime import datetime, timedelta
 from tests.settings import utils
+from tests.responses.iris_investage_data import espn
+from tests.responses.expected_data import prune_espn_expected
+
 
 def test_get_domain_age():
     create_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
@@ -103,3 +106,8 @@ def test_detect_average_age():
     domains = []
     result = utils.get_average_risk_score(domains)
     assert result == None
+
+def test_data_prune():
+    data = espn()
+    utils.prune_data(data)
+    assert data == prune_espn_expected()
