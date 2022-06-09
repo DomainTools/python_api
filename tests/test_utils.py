@@ -1,7 +1,9 @@
+import json
 from datetime import datetime, timedelta
-from tests.settings import utils
-from tests.responses.iris_investage_data import espn
+
 from tests.responses.expected_data import prune_espn_expected
+from tests.responses.iris_investage_data import espn
+from tests.settings import utils
 
 
 def test_get_domain_age():
@@ -38,6 +40,7 @@ def test_investigate_average_risk_score():
     result = utils.get_average_risk_score(domains)
     assert result == None
 
+
 def test_detect_average_risk_score():
     domains = [
         {"risk_score": 25},
@@ -56,6 +59,7 @@ def test_detect_average_risk_score():
     domains = []
     result = utils.get_average_risk_score(domains)
     assert result == None
+
 
 def test_investigate_average_age():
     two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
@@ -86,6 +90,7 @@ def test_investigate_average_age():
     result = utils.get_average_age(domains)
     assert result == None
 
+
 def test_detect_average_age():
     two_days_ago = int((datetime.now() - timedelta(days=2)).strftime("%Y%m%d"))
     five_days_ago = int((datetime.now() - timedelta(days=5)).strftime("%Y%m%d"))
@@ -107,7 +112,37 @@ def test_detect_average_age():
     result = utils.get_average_risk_score(domains)
     assert result == None
 
+
 def test_data_prune():
     data = espn()
     utils.prune_data(data)
     assert data == prune_espn_expected()
+
+
+def test_find_emails():
+    emails = utils.find_emails(json.dumps(espn()))
+    assert emails == {'domainabuse@cscglobal.com', 'awsdns-hostmaster@amazon.com', 'domreg@espn.com'}
+
+
+def test_find_ips():
+    ips = utils.find_ips(json.dumps(espn()))
+    assert ips == {'104.47.44.36',
+                   '104.47.45.36',
+                   '13.224.13.26',
+                   '13.224.13.62',
+                   '13.224.13.66',
+                   '13.224.13.80',
+                   '205.251.192.122',
+                   '205.251.195.78',
+                   '205.251.196.21',
+                   '205.251.199.144',
+                   '74.123.200.120',
+                   '74.123.200.222',
+                   '74.123.200.35',
+                   '74.123.200.36',
+                   '74.123.203.125',
+                   '74.123.203.98',
+                   '99.86.32.125',
+                   '99.86.32.27',
+                   '99.86.32.32',
+                   '99.86.32.4'}
