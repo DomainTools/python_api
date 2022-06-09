@@ -1,8 +1,8 @@
 import json
 from datetime import datetime, timedelta
 
-from tests.responses.expected_data import prune_espn_expected
-from tests.responses.iris_investage_data import espn
+from tests.responses import iris_investigate_data
+from tests.responses.expected_data import prune_domaintools_expected
 from tests.settings import utils
 
 
@@ -114,35 +114,25 @@ def test_detect_average_age():
 
 
 def test_data_prune():
-    data = espn()
+    data = iris_investigate_data.domaintools()
     utils.prune_data(data)
-    assert data == prune_espn_expected()
+    assert data == prune_domaintools_expected()
 
 
 def test_find_emails():
-    emails = utils.find_emails(json.dumps(espn()))
-    assert emails == {'domainabuse@cscglobal.com', 'awsdns-hostmaster@amazon.com', 'domreg@espn.com'}
+    emails = utils.find_emails(json.dumps(iris_investigate_data.domaintools()))
+    assert emails == {'abuse@enom.com', 'hostmaster@nsone.net'}
 
 
 def test_find_ips():
-    ips = utils.find_ips(json.dumps(espn()))
-    assert ips == {'104.47.44.36',
-                   '104.47.45.36',
-                   '13.224.13.26',
-                   '13.224.13.62',
-                   '13.224.13.66',
-                   '13.224.13.80',
-                   '205.251.192.122',
-                   '205.251.195.78',
-                   '205.251.196.21',
-                   '205.251.199.144',
-                   '74.123.200.120',
-                   '74.123.200.222',
-                   '74.123.200.35',
-                   '74.123.200.36',
-                   '74.123.203.125',
-                   '74.123.203.98',
-                   '99.86.32.125',
-                   '99.86.32.27',
-                   '99.86.32.32',
-                   '99.86.32.4'}
+    ips = utils.find_ips(json.dumps(iris_investigate_data.domaintools()))
+    assert ips == {'142.250.115.26',
+                   '142.250.141.27',
+                   '198.51.44.4',
+                   '198.51.44.68',
+                   '198.51.45.4',
+                   '198.51.45.68',
+                   '199.30.228.112',
+                   '64.233.171.26',
+                   '74.125.142.26'}
+
