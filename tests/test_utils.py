@@ -1,7 +1,9 @@
+import json
 from datetime import datetime, timedelta
+
+from tests.responses import iris_investigate_data
+from tests.responses.expected_data import prune_domaintools_expected
 from tests.settings import utils
-from tests.responses.iris_investage_data import espn
-from tests.responses.expected_data import prune_espn_expected
 
 
 def test_get_domain_age():
@@ -38,6 +40,7 @@ def test_investigate_average_risk_score():
     result = utils.get_average_risk_score(domains)
     assert result == None
 
+
 def test_detect_average_risk_score():
     domains = [
         {"risk_score": 25},
@@ -56,6 +59,7 @@ def test_detect_average_risk_score():
     domains = []
     result = utils.get_average_risk_score(domains)
     assert result == None
+
 
 def test_investigate_average_age():
     two_days_ago = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
@@ -86,6 +90,7 @@ def test_investigate_average_age():
     result = utils.get_average_age(domains)
     assert result == None
 
+
 def test_detect_average_age():
     two_days_ago = int((datetime.now() - timedelta(days=2)).strftime("%Y%m%d"))
     five_days_ago = int((datetime.now() - timedelta(days=5)).strftime("%Y%m%d"))
@@ -107,7 +112,27 @@ def test_detect_average_age():
     result = utils.get_average_risk_score(domains)
     assert result == None
 
+
 def test_data_prune():
-    data = espn()
+    data = iris_investigate_data.domaintools()
     utils.prune_data(data)
-    assert data == prune_espn_expected()
+    assert data == prune_domaintools_expected()
+
+
+def test_find_emails():
+    emails = utils.find_emails(json.dumps(iris_investigate_data.domaintools()))
+    assert emails == {'abuse@enom.com', 'hostmaster@nsone.net'}
+
+
+def test_find_ips():
+    ips = utils.find_ips(json.dumps(iris_investigate_data.domaintools()))
+    assert ips == {'142.250.115.26',
+                   '142.250.141.27',
+                   '198.51.44.4',
+                   '198.51.44.68',
+                   '198.51.45.4',
+                   '198.51.45.68',
+                   '199.30.228.112',
+                   '64.233.171.26',
+                   '74.125.142.26'}
+

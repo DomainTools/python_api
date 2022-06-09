@@ -1,5 +1,6 @@
 from datetime import datetime
 import dateparser
+import re
 
 
 def get_domain_age(create_date):
@@ -98,3 +99,15 @@ def prune_data(data_obj):
             if not isinstance(item, int) and not item:
                 items_to_prune.append(index)
         data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
+
+
+def find_emails(data_str):
+    """Find and returns all emails"""
+    return set(re.findall(r'[\w\.-]+@[\w\.-]+', data_str))
+
+
+def find_ips(data_str):
+    """Find and returns all ipv4"""
+    ipv4s = set(re.findall(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b', data_str))
+    return ipv4s
+
