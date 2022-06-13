@@ -534,6 +534,8 @@ class API(object):
 
         state: str: required. Valid values are: ["watched", "ignored"]
         """
+        if isinstance(watchlist_domain_ids, str):
+            watchlist_domain_ids = watchlist_domain_ids.split(',')
         return self._results('iris-detect-manage-watchlist-domains', '/v1/iris-detect/domains/', state=state,
                              watchlist_domain_ids=watchlist_domain_ids, items_path=('watchlist_domains',),
                              response_path=(), **kwargs)
