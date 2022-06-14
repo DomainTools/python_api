@@ -111,3 +111,43 @@ def find_ips(data_str):
     ipv4s = set(re.findall(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b', data_str))
     return ipv4s
 
+def get_pivots(data_obj, name, return_data=None, count=0, pivot_threshold=500):
+    """
+    Does a deep dive through a data object to check count vs pivot threshold.
+    Args:
+        data_obj: Either a list or dict that needs to check pivot count
+        name: pivot category name
+        return_data: Holds data to return once we reach the end of the data_obj
+        count: Lets us track to know when we are finished with the data_obj
+        pivot_threshold: Threshold to include as a pivot.
+    """
+    if return_data is None:
+        return_data = []
+    count += 1
+    if isinstance(data_obj, dict) and len(data_obj):
+        temp_name = name
+        for k, v in data_obj.items():
+            if isinstance(data_obj[k], (dict, list)):
+                name = "{}_{}".format(name, k)
+                temp_data = get_pivots(
+                    data_obj[k], name, return_data, count, pivot_threshold
+                )
+                if temp_data:
+                    return_data.append([name[1:].upper().replace("_", " "), temp_data])
+            name = temp_name
+        if "count" in data_obj and (1 < data_obj["count"] < pivot_threshold):
+            return data_obj["value"], data_obj["count"]
+    elif isinstance(data_obj, list) and len(data_obj):
+        for index, item in enumerate(data_obj):
+            temp_data = get_pivots(item, name, return_data, count, pivot_threshold)
+            if temp_data:
+                if isinstance(temp_data, list):
+                    for x in temp_data:
+                        return_data.append(x)
+                elif isinstance(temp_data, tuple):
+                    return_data.append([name[1:].upper().replace("_", " "), temp_data])
+    count -= 1
+    if count:
+        return
+    else:
+        return return_data
