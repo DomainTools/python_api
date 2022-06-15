@@ -409,6 +409,17 @@ def test_iris_enrich():
 
 
 @vcr.use_cassette
+def test_iris_enrich_cli():
+    with pytest.raises(ValueError):
+        api.iris_enrich()
+
+    enriched_data = api.iris_enrich('google.com')
+    assert enriched_data['results_count']
+    for result in enriched_data:
+        assert result['domain'] == 'google.com'
+
+
+@vcr.use_cassette
 def test_iris_investigate():
     with pytest.raises(ValueError):
         api.iris_investigate()
