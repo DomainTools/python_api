@@ -292,6 +292,35 @@ class API(object):
         return self._results('iris-enrich', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
                              items_path=('results',), **kwargs)
 
+    def iris_enrich_cli(self, domains=None, **kwargs):
+        """Returns back enriched data related to the specified domains using our Iris Enrich service.
+            This is a CLI version of the iris_enrich method to help maintain backwards compatibility.
+
+           api.iris_enrich(['domaintools.com', 'google.com'])
+
+           api.iris_enrich(DOMAIN_LIST)['results_count'] Returns the number of results
+           api.iris_enrich(DOMAIN_LIST)['missing_domains'] Returns any domains that we were unable to
+                                                           retrieve enrichment data for
+           api.iris_enrich(DOMAIN_LIST)['limit_exceeded'] Returns True if you've exceeded your API usage
+
+           for enrichment in api.iris_enrich(DOMAIN_LIST):  # Enables looping over all returned enriched domains
+
+           for example:
+               enrich_domains = ['google.com', 'amazon.com']
+               assert api.iris_enrich(*enrich_domains)['missing_domains'] == []
+        """
+        if not domains:
+            raise ValueError('One or more domains to enrich must be provided')
+
+        if isinstance(domains, (list, tuple)):
+            domains = ','.join(domains)
+        data_updated_after = kwargs.get('data_updated_after', None)
+        if hasattr(data_updated_after, 'strftime'):
+            data_updated_after = data_updated_after.strftime('%Y-%m-%d')
+
+        return self._results('iris-enrich', '/v1/iris-enrich/', domain=domains, data_updated_after=data_updated_after,
+                             items_path=('results',), **kwargs)
+
     def iris_investigate(self, domains=None, data_updated_after=None, expiration_date=None,
                          create_date=None, active=None, search_hash=None, **kwargs):
         """Returns back a list of domains based on the provided filters.
