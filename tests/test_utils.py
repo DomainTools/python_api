@@ -136,3 +136,11 @@ def test_find_ips():
                    '64.233.171.26',
                    '74.125.142.26'}
 
+def test_get_pivots():
+    pivots = utils.get_pivots(iris_investigate_data.domaintools().get("results"), "")
+    assert pivots == [
+        ['IP ADDRESS', ('199.30.228.112', 4)],
+        ['IP ASN', (17318, 111)],
+        ['IP ISP', ('DomainTools LLC', 222)]
+    ]
+
