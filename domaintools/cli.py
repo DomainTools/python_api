@@ -75,7 +75,7 @@ def run(): # pragma: no cover
         sys.stderr.write('Credentials are required to perform API calls.\n')
         sys.exit(1)
 
-    api = API(user, key, verify_ssl=arguments.pop('verify_ssl'), rate_limit=arguments.pop('rate_limit'))
+    api = API(user, key, app_name="python_wrapper_cli", verify_ssl=arguments.pop('verify_ssl'), rate_limit=arguments.pop('rate_limit'))
     api_call = arguments.pop('api_call')
     response = getattr(api, api_call)(**arguments)
     if api_call in ["available_api_calls"]:
