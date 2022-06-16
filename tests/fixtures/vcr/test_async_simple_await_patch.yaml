@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"app_name": "python_wrapper", "app_version": "0.6.2", "state": "watched",
+    body: '{"app_name": "python_wrapper", "app_version": "1.0.0", "state": "watched",
       "watchlist_domain_ids": ["gae08rdVWG"]}'
     headers:
       accept:
@@ -20,7 +20,7 @@ interactions:
     method: PATCH
     uri: https://api.domaintools.com/v1/iris-detect/domains/
   response:
-    content: '{"watchlist_domains":[{"state":"watched","domain":"googletalker.com.cn","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-05-23T22:46:18.000000+00:00","id":"gae08rdVWG","assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-26T20:40:23.000000+00:00"}]}'
+    content: '{"watchlist_domains":[{"state":"watched","domain":"googletalker.com.cn","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","id":"gae08rdVWG","assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -29,16 +29,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 26 May 2022 20:40:23 GMT
+      - Thu, 16 Jun 2022 15:04:03 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=c8da67a50ec570889cfb4e068b5e0a53; path=/; domain=.domaintools.com;
+      - csrftoken=db36c685f45d2619a9a9f32e80480c7e; path=/; domain=.domaintools.com;
         secure
-      - dtsession=p2a85ql9l7qn45kec6eu5rni19eto8tc61fmlnmh8e4keph9mtved0r1ursavdtctsh5fqnb66p5uc6953m3df0aij934pburemec0n;
-        expires=Sat, 25-Jun-2022 20:40:23 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=jre5hvks4g71tjno3qoc6c0qr7832ihriur3olmth13f03pi878g4avc36j6s7km2s6jofjqd46dqrolv4nqh1q1h05j5e1fq3ekdru;
+        expires=Sat, 16-Jul-2022 15:04:03 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked

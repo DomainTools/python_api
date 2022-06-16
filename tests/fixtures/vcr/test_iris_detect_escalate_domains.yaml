@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=blocked&watchlist_domain_ids%5B%5D=OWxzqKqQEY
+    body: app_name=python_wrapper&app_version=1.0.0&escalation_type=blocked&watchlist_domain_ids%5B%5D=OWxzqKqQEY
     headers:
       accept:
       - '*/*'
@@ -44,7 +44,7 @@ interactions:
     http_version: HTTP/1.1
     status_code: 200
 - request:
-    body: app_name=python_wrapper&app_version=0.6.1&escalation_type=google_safe&watchlist_domain_ids%5B%5D=OWxzqKqQEY
+    body: app_name=python_wrapper&app_version=1.0.0&escalation_type=google_safe&watchlist_domain_ids%5B%5D=OWxzqKqQEY
     headers:
       accept:
       - '*/*'

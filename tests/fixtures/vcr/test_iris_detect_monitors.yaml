@@ -13,7 +13,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.1&offset=0&order=desc
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=1.0.0&offset=0&order=desc
   response:
     content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"}]}'
     headers:
@@ -24,16 +24,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 20 May 2022 19:05:47 GMT
+      - Thu, 16 Jun 2022 15:03:48 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=4e18f99f5e49d0937ad449b8ad5a406e; path=/; domain=.domaintools.com;
+      - csrftoken=3c85c4ad43353178fae29d861f65a361; path=/; domain=.domaintools.com;
         secure
-      - dtsession=h2s028kg7pmook6vas35fdek91tcnnqrv67jmrruc4guoq91bp7cbj97qq9ebo96h0jiq1n379l2mgi69hs3ie0vd0n0vke4dcetosh;
-        expires=Sun, 19-Jun-2022 19:05:47 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=b7vb0rf8tehoqcp3532i4kacl8a6kghf9igj01oa9kaob75mrb08all64m4ka4bgsr98pmjac1dd0d07p46ml6op2k87m4ma9g9bf57;
+        expires=Sat, 16-Jul-2022 15:03:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked
@@ -53,9 +53,9 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.1&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=1.0.0&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
   response:
-    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","domain_counts":{"new":188,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","domain_counts":{"new":150,"watched":3,"escalated":2,"changed":2},"created_by":"integrations+test1@domaintools.com"}]}'
+    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","domain_counts":{"new":4429,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","domain_counts":{"new":1685,"watched":3,"escalated":2,"changed":1},"created_by":"integrations+test1@domaintools.com"}]}'
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
@@ -64,96 +64,16 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 20 May 2022 19:05:48 GMT
+      - Thu, 16 Jun 2022 15:03:48 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - csrftoken=23c663d9de317c80f7765c87e8af96a9; path=/; domain=.domaintools.com;
+      - csrftoken=7e0e7ae00a25102ebae960ef815d7213; path=/; domain=.domaintools.com;
         secure
-      - dtsession=771dapfkbjs41ddu818h4omgv2mr15qgfe66a7i2v3stu9ar1d9t0ovoov30pgs6qlh93f6rmo6gfnht5s2ufrkitbnjbdbom876rjr;
-        expires=Sun, 19-Jun-2022 19:05:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-        secure; HttpOnly
-      Transfer-Encoding:
-      - chunked
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.22.0
-    method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.2&offset=0&order=desc
-  response:
-    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"}]}'
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 25 May 2022 15:30:16 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - csrftoken=aa148cfa4b98aafa67ce178847187760; path=/; domain=.domaintools.com;
-        secure
-      - dtsession=u08pciqrbhpu5tiqovidrcodqa0n3kjbdjcgdg8tdacs8ak09mc0n8kgel1u1e3euk2imlq46eaap8fjrje4i1i320iso4p8mq2e5kj;
-        expires=Fri, 24-Jun-2022 15:30:16 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-        secure; HttpOnly
-      Transfer-Encoding:
-      - chunked
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.22.0
-    method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=0.6.2&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
-  response:
-    content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153+00:00","updated_date":"2022-05-19T17:51:42.770730+00:00","state":"active","status":"completed","domain_counts":{"new":1407,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977+00:00","updated_date":"2022-05-18T20:19:03.051233+00:00","state":"active","status":"completed","domain_counts":{"new":408,"watched":3,"escalated":2,"changed":1},"created_by":"integrations+test1@domaintools.com"}]}'
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 25 May 2022 15:30:17 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - csrftoken=ef0df49f4dc5f6659c4c3f384dfd3d4c; path=/; domain=.domaintools.com;
-        secure
-      - dtsession=pasv2mouiqrqmv7tdsvft452hv7uroqvs4j907evgeikdh8icr83ik35li90lpie75rdc402f2e0lcdg7ujfgrugck9s5bde16fnqnj;
-        expires=Fri, 24-Jun-2022 15:30:17 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=6cbmgn2c2souvtkvk4pt1ja62ot480rupckkoiif3q6ptkfcq0ln4nami2j1kp5tpm46v8m4ojjs2l8sualv5aplranotif7toj5out;
+        expires=Sat, 16-Jul-2022 15:03:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
       Transfer-Encoding:
       - chunked

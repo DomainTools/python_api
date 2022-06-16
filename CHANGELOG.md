@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### 1.0.0
+- Adding support for Iris Detect API endpoints
+- Update underlying HTTP client
+- Addition of helper functions for common tasks
+- Documentation and example code updates
+
 ### 0.6.2
 - Update README with Iris trademarks
 

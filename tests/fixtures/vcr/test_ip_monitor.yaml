@@ -13,54 +13,22 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=0.6.1&days_back=0&page=1&query=65.55.53.233
+    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=1.0.0&days_back=0&page=1&query=65.55.53.233
   response:
-    content: '{"response":{"limit":1000,"date":"2022-05-20","ip_address":"65.55.53.233","total":"0","page":1,"page_count":0,"alerts":[]}}'
+    content: '{"response":{"limit":1000,"date":"2022-06-16","ip_address":"65.55.53.233","total":"0","page":1,"page_count":0,"alerts":[]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 20 May 2022 18:34:01 GMT
+      - Thu, 16 Jun 2022 15:02:08 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '158771'
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.22.0
-    method: GET
-    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=0.6.2&days_back=0&page=1&query=65.55.53.233
-  response:
-    content: '{"response":{"limit":1000,"date":"2022-05-25","ip_address":"65.55.53.233","total":"0","page":1,"page_count":0,"alerts":[]}}'
-    headers:
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 25 May 2022 15:28:42 GMT
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-TIME:
-      - '39140'
+      - '5125910'
     http_version: HTTP/1.1
     status_code: 200
 version: 1
