@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: '{"app_name": "python_wrapper", "app_version": "1.0.0", "state": "watched",
+      "watchlist_domain_ids": ["gae08rdVWG"]}'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '272'
+      content-type:
+      - application/json
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: PATCH
+    uri: https://api.domaintools.com/v1/iris-detect/domains/
+  response:
+    content: '{"watchlist_domains":[{"state":"watched","domain":"googletalker.com.cn","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","id":"gae08rdVWG","assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}]}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:04:03 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=db36c685f45d2619a9a9f32e80480c7e; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=jre5hvks4g71tjno3qoc6c0qr7832ihriur3olmth13f03pi878g4avc36j6s7km2s6jofjqd46dqrolv4nqh1q1h05j5e1fq3ekdru;
+        expires=Sat, 16-Jul-2022 15:04:03 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

@@ -1,5 +1,6 @@
-"""Tests the Python interface for DomainTools' APIs"""
+"""Tests the Python interface for DomainTools APIs"""
 from os import environ
+from datetime import datetime
 
 import pytest
 from domaintools import API, exceptions
@@ -194,7 +195,7 @@ def test_host_domains():
 
 @vcr.use_cassette
 def test_reverse_ip_whois():
-    api_call = api.reverse_ip_whois(query='Domain Tools')
+    api_call = api.reverse_ip_whois(query='DomainTools')
     with api_call as results:
         assert 'page' in results
         assert 'has_more_pages' in results
@@ -408,6 +409,17 @@ def test_iris_enrich():
 
 
 @vcr.use_cassette
+def test_iris_enrich_cli():
+    with pytest.raises(ValueError):
+        api.iris_enrich()
+
+    enriched_data = api.iris_enrich('google.com')
+    assert enriched_data['results_count']
+    for result in enriched_data:
+        assert result['domain'] == 'google.com'
+
+
+@vcr.use_cassette
 def test_iris_investigate():
     with pytest.raises(ValueError):
         api.iris_investigate()
@@ -416,6 +428,61 @@ def test_iris_investigate():
     assert investigation_results['results_count']
     for result in investigation_results:
         assert result['domain'] in ['amazon.com', 'google.com']
+
+
+@vcr.use_cassette
+def test_iris_detect_monitors():
+    with pytest.raises(ValueError):
+        api.iris_detect_monitors(include_counts=True)
+
+    detect_results = api.iris_detect_monitors()
+    assert detect_results['total_count'] >= 1
+
+    detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
+    assert detect_results['monitors'][0]['term'] == 'amazon'
+
+
+@vcr.use_cassette
+def test_iris_detect_new_domains():
+    detect_results = api.iris_detect_new_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
+    assert detect_results['watchlist_domains'][0]['risk_score'] == 100
+
+
+@vcr.use_cassette
+def test_iris_detect_watched_domains():
+    detect_results = api.iris_detect_watched_domains()
+    assert detect_results['count'] >= 1
+
+    detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
+    assert detect_results['watchlist_domains'][0]['risk_score'] == 100
+
+    detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
+    assert detect_results['count'] >= 1
+
+
+@vcr.use_cassette
+def test_iris_detect_manage_watchlist_domains():
+    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
+    assert detect_results['watchlist_domains'][0]['state'] == "watched"
+
+
+@vcr.use_cassette
+def test_iris_detect_escalate_domains():
+    # If you rerun this test without VCR, it will fail because the domain is already escalated
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked")
+    assert detect_results['escalations'][0]['escalation_type'] == "blocked"
+
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe")
+    assert detect_results['escalations'][0]['escalation_type'] == "google_safe"
+
+
+@vcr.use_cassette
+def test_iris_detect_ignored_domains():
+    detect_results = api.iris_detect_ignored_domains()
+    assert detect_results['count'] >= 1
+
+    detect_results = api.iris_detect_ignored_domains(monitor_id="DKObxJVjYJ")
+    assert detect_results['count'] >= 1
 
 
 @vcr.use_cassette

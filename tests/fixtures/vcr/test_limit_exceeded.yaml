@@ -1,43 +1,39 @@
 interactions:
 - request:
-    body: ip=8.8.8.8
+    body: app_name=python_wrapper&app_version=1.0.0&ip=8.8.8.8
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      Content-Length:
-      - '144'
-      Content-Type:
+      content-length:
+      - '196'
+      content-type:
       - application/x-www-form-urlencoded
-      User-Agent:
-      - python-requests/2.26.0
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
     method: POST
     uri: https://api.domaintools.com/v1/iris-investigate/
   response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAzWMQQ7CMAwEv2L5DKgXLv0DL0AoishSLNUJ2InUqurfGw5cZ3dmY4N/SnbwuPEs
-        KjVgeQIJicdqDSd+Rw9aDKFf21z9zxXuceoi3+Ii2pSuwzCQoTbLSHSmtTTSuFLuPaqlTy/J+GGj
-        b4OtF+4ZcZc8hVQ0Su71+2PfDzk/D2uYAAAA
+    content: '{"response":{"limit_exceeded":true,"has_more_results":true,"message":"Maximum
+      5000 returned - you may need to refine your query.","missing_domains":[]}}'
     headers:
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 14 Oct 2021 16:19:29 GMT
-      Server:
-      - Chuck Norris fears nothing that is not Emily.
+      - Thu, 16 Jun 2022 15:04:00 GMT
       Transfer-Encoding:
       - chunked
       Vary:
       - Accept-Encoding
       X-TIME:
-      - '557836'
-    status:
-      code: 200
-      message: OK
+      - '2086942'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

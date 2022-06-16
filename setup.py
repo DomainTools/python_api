@@ -9,7 +9,7 @@ from os import path
 from setuptools import Extension, find_packages, setup
 from setuptools.command.test import test as TestCommand
 
-requires = ['requests', 'aiohttp']
+requires = ['httpx', 'dateparser']
 packages = ['domaintools', 'domaintools_async']
 
 
@@ -66,8 +66,8 @@ except (IOError, ImportError, OSError, RuntimeError):
    readme = ''
 
 setup(name='domaintools_api',
-      version='0.6.2',
-      description="DomainTools' Official Python API",
+      version='1.0.0',
+      description="DomainTools Official Python API",
       long_description=readme,
       long_description_content_type="text/markdown",
       author='DomainTools',

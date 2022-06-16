@@ -1,2 +1,2 @@
-aiohttp==3.7.4
-requests==2.26.0
+httpx==0.22.0
+dateparser==1.1.0

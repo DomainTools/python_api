@@ -1,13 +1,15 @@
 """Defines all test wide settings and variables"""
 from os import environ
 from yarl import URL
+import json
 
-from domaintools import API
+from domaintools import API, utils
 from vcr import VCR
 
 
 def remove_server(response):
     response.get('headers', {}).pop('server', None)
+    response.get('headers', {}).pop('Server', None)
     if 'url' in response:
         url = URL(response['url'])
         query = dict(url.query)
@@ -21,7 +23,18 @@ def remove_server(response):
     return response
 
 
-vcr = VCR(before_record_response=remove_server, filter_query_parameters=['timestamp', 'signature', 'api_username', 'api_key'], filter_post_data_parameters=['timestamp', 'signature', 'api_username', 'api_key'],
+def filter_patch_parameters(request):
+    if request.method == 'PATCH' and request.body:
+        body = json.loads(request.body)
+        body.pop('api_username', None)
+        body.pop('api_key', None)
+        body.pop('signature', None)
+        body.pop('timestamp', None)
+        request.body = json.dumps(body).encode('utf-8')
+    return request
+
+
+vcr = VCR(before_record_response=remove_server, before_record_request=filter_patch_parameters, filter_query_parameters=['timestamp', 'signature', 'api_username', 'api_key'], filter_post_data_parameters=['timestamp', 'signature', 'api_username', 'api_key'],
           cassette_library_dir='tests/fixtures/vcr/', path_transformer=VCR.ensure_suffix('.yaml'),
           record_mode='new_episodes')
 with vcr.use_cassette('init_user_account'):
