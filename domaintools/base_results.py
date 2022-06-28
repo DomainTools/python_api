@@ -67,6 +67,8 @@ class Results(MutableMapping, MutableSequence):
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
             else:
+                if 'proxies' in self.api.extra_request_params:
+                    self.api.extra_request_params.pop('proxies')
                 return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
     def _get_results(self):
