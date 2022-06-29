@@ -18,6 +18,7 @@ def test_account_information():
             assert 'absolute_limit' in product
             assert 'usage' in product
             assert 'expiration_date' in product
+            assert 'proxies' in product
 
 
 @vcr.use_cassette
