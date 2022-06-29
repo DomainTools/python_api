@@ -59,7 +59,8 @@ class AsyncResults(Results):
 
     async def __awaitable__(self):
         if self._data is None:
-            async with AsyncClient(verify=self.api.verify_ssl, proxies=self.api.extra_request_params.get('proxies'), timeout=None) as session:
+            proxies = self.api.extra_request_params.pop('proxies') or None
+            async with AsyncClient(verify=self.api.verify_ssl, proxies=proxies, timeout=None) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
                     try:
