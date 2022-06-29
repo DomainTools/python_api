@@ -60,7 +60,7 @@ class AsyncResults(Results):
     async def __awaitable__(self):
         if self._data is None:
             params = self.api.extra_request_params
-            proxies = params.pop('proxies') if params else  None
+            proxies = params.pop('proxies') if params else None
             async with AsyncClient(verify=self.api.verify_ssl, proxies=proxies, timeout=None) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
