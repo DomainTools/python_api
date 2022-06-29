@@ -57,7 +57,7 @@ class API(object):
             raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
         if proxy_url:
             if isinstance(proxy_url, str):
-                    self.extra_request_params['proxies'] = {'http://': proxy_url, 'https://': proxy_url}
+                self.extra_request_params['proxies'] = {'http://': proxy_url, 'https://': proxy_url}
             else:
                 raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 
