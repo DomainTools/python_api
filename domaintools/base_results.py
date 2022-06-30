@@ -57,9 +57,8 @@ class Results(MutableMapping, MutableSequence):
         return wait_for
 
     def _make_request(self):
-        params = self.api.extra_request_params
-        proxies = params.pop('proxies') if params else None
-        with Client(verify=self.api.verify_ssl, proxies=proxies, timeout=None) as session:
+
+        with Client(verify=self.api.verify_ssl, proxies=self.api.proxy_url, timeout=None) as session:
             if self.product in ['iris-investigate', 'iris-enrich', 'iris-detect-escalate-domains']:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
