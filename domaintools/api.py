@@ -67,7 +67,7 @@ class API(object):
         for product in self.account_information():
             self.limits[product['id']] = {'interval': timedelta(
                 #  momentarily fix to avoid errors when there is not limit set:
-                seconds=60 / float(product['per_minute_limit'] or 3600))
+                seconds=60 / float(product['per_minute_limit']) or float(product['per_hour_limit'])  or 3600)
         }
             
 
