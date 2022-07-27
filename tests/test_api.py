@@ -461,13 +461,13 @@ def test_available_api_calls():
 #     assert detect_results['escalations'][0]['escalation_type'] == "google_safe"
 
 
-# @vcr.use_cassette
-# def test_iris_detect_ignored_domains():
-#     detect_results = api.iris_detect_ignored_domains()
-#     assert detect_results['count'] >= 1
+@vcr.use_cassette
+def test_iris_detect_ignored_domains():
+    detect_results = api.iris_detect_ignored_domains()
+    assert detect_results['count'] >= 1
 
-#     detect_results = api.iris_detect_ignored_domains(monitor_id="DKObxJVjYJ")
-#     assert detect_results['count'] >= 1
+    detect_results = api.iris_detect_ignored_domains(monitor_id="DKObxJVjYJ")
+    assert detect_results['count'] >= 1
 
 
 @vcr.use_cassette
