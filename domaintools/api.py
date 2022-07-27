@@ -69,11 +69,11 @@ class API(object):
             limit_hours = product['per_hour_limit']
 
             default = 3600 
-            hours = limit_hours and 3600 / limit_hours
-            minutes = limit_minutes and 60 / limit_minutes
+            hours = limit_hours and 3600 / float(limit_hours)
+            minutes = limit_minutes and 60 / float(limit_minutes)
 
             self.limits[product['id']] = {'interval': timedelta(
-                seconds = float( minutes or hours or default )
+                seconds = minutes or hours or default 
             )
         }
             
@@ -83,7 +83,7 @@ class API(object):
         if product != 'account-information' and self.rate_limit and not self.limits_set and not self.limits:
             self._rate_limit()
 
-        uri = '/'.join(('https://api.domaintools.com', path.lstrip('/')))
+        uri = '/'.join(('https://api.domaintools.test3', path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
         self.handle_api_key(path, parameters)
