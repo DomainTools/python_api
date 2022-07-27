@@ -8,16 +8,18 @@ from domaintools import API, exceptions
 from tests.settings import api, vcr
 
 
-# @vcr.use_cassette
-# def test_account_information():
-#     with api.account_information() as account_information:
-#         assert 'products' in account_information
-#         for product in account_information:
-#             assert 'id' in product
-#             assert 'per_month_limit' in product
-#             assert 'absolute_limit' in product
-#             assert 'usage' in product
-#             assert 'expiration_date' in product
+@vcr.use_cassette
+def test_account_information():
+    with api.account_information() as account_information:
+        assert 'products' in account_information
+        for product in account_information:
+            assert 'id' in product
+            assert 'per_month_limit' in product
+            assert 'per_minute_limit' in product
+            assert 'per_hour_limit' in product
+            assert 'absolute_limit' in product
+            assert 'usage' in product
+            assert 'expiration_date' in product
 
 
 # @vcr.use_cassette
