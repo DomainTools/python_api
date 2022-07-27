@@ -404,15 +404,15 @@ def test_available_api_calls():
 #         assert result['domain'] == 'google.com'
 
 
-@vcr.use_cassette
-def test_iris_investigate():
-    with pytest.raises(ValueError):
-        api.iris_investigate()
+# @vcr.use_cassette
+# def test_iris_investigate():
+#     with pytest.raises(ValueError):
+#         api.iris_investigate()
 
-    investigation_results = api.iris_investigate(domains=['amazon.com', 'google.com'])
-    assert investigation_results['results_count']
-    for result in investigation_results:
-        assert result['domain'] in ['amazon.com', 'google.com']
+#     investigation_results = api.iris_investigate(domains=['amazon.com', 'google.com'])
+#     assert investigation_results['results_count']
+#     for result in investigation_results:
+#         assert result['domain'] in ['amazon.com', 'google.com']
 
 
 # @vcr.use_cassette
