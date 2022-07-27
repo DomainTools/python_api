@@ -166,10 +166,10 @@ def test_available_api_calls():
 #         assert float(api_call) == 0.0
 
 
-# @vcr.use_cassette
-# def test_reverse_ip():
-#     with api.reverse_ip('google.com') as results:
-#         assert 'ip_addresses' in results
+@vcr.use_cassette
+def test_reverse_ip():
+    with api.reverse_ip('google.com') as results:
+        assert 'ip_addresses' in results
 
 
 # @vcr.use_cassette
