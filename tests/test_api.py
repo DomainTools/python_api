@@ -8,26 +8,26 @@ from domaintools import API, exceptions
 from tests.settings import api, vcr
 
 
-@vcr.use_cassette
-def test_account_information():
-    with api.account_information() as account_information:
-        assert 'products' in account_information
-        for product in account_information:
-            assert 'id' in product
-            assert 'per_month_limit' in product
-            assert 'per_minute_limit' in product
-            assert 'per_hour_limit' in product
-            assert 'absolute_limit' in product
-            assert 'usage' in product
-            assert 'expiration_date' in product
+# @vcr.use_cassette
+# def test_account_information():
+#     with api.account_information() as account_information:
+#         assert 'products' in account_information
+#         for product in account_information:
+#             assert 'id' in product
+#             assert 'per_month_limit' in product
+#             assert 'per_minute_limit' in product
+#             assert 'per_hour_limit' in product
+#             assert 'absolute_limit' in product
+#             assert 'usage' in product
+#             assert 'expiration_date' in product
 
 
-@vcr.use_cassette
-def test_available_api_calls():
-    available_api_calls = api.available_api_calls()
-    # Not sure what else to check for as this is highly dependent on your API_KEY but at least account_information
-    # should be there.
-    assert 'account_information' in available_api_calls
+# @vcr.use_cassette
+# def test_available_api_calls():
+#     available_api_calls = api.available_api_calls()
+#     # Not sure what else to check for as this is highly dependent on your API_KEY but at least account_information
+#     # should be there.
+#     assert 'account_information' in available_api_calls
 
 
 
@@ -470,8 +470,8 @@ def test_reverse_ip():
 #     assert detect_results['count'] >= 1
 
 
-@vcr.use_cassette
-def test_limit_exceeded():
-    with pytest.raises(exceptions.ServiceException):
-        response = api.iris_investigate(ip="8.8.8.8")
-        response.response()
+# @vcr.use_cassette
+# def test_limit_exceeded():
+#     with pytest.raises(exceptions.ServiceException):
+#         response = api.iris_investigate(ip="8.8.8.8")
+#         response.response()
