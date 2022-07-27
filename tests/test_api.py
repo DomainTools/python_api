@@ -31,22 +31,22 @@ def test_available_api_calls():
 
 
 
-# @vcr.use_cassette
-# def test_domain_profile():
-#     with api.domain_profile('google.com') as response:
-#         assert 'history' in response
-#         assert 'server' in response
-#         assert 'name_servers' in response
-#         assert 'website_data' in response
-#         assert 'seo' in response
-#         assert 'registration' in response
-#         assert 'registrant' in response
+@vcr.use_cassette
+def test_domain_profile():
+    with api.domain_profile('google.com') as response:
+        assert 'history' in response
+        assert 'server' in response
+        assert 'name_servers' in response
+        assert 'website_data' in response
+        assert 'seo' in response
+        assert 'registration' in response
+        assert 'registrant' in response
 
-#         history = response['history']
-#         assert 'whois' in history
-#         assert 'registrar' in history
-#         assert 'name_server' in history
-#         assert 'ip_address' in history
+        history = response['history']
+        assert 'whois' in history
+        assert 'registrar' in history
+        assert 'name_server' in history
+        assert 'ip_address' in history
 
 
 # @vcr.use_cassette
