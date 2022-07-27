@@ -65,9 +65,16 @@ class API(object):
         """Pulls in and enforces the latest rate limits for the specified user"""
         self.limits_set = True
         for product in self.account_information():
+            limit_minutes = product['per_minute_limit']
+            limit_hours = product['per_hour_limit']
+
+            default = 3600 
+            hours = limit_hours and 3600 / limit_hours
+            minutes = limit_minutes and 60 / limit_minutes
+
             self.limits[product['id']] = {'interval': timedelta(
-                #  momentarily fix to avoid errors when there is not limit set:
-                seconds=60 / float(product['per_minute_limit']) or float(product['per_hour_limit'])  or 3600)
+                seconds = float( minutes or hours or default )
+            )
         }
             
 
