@@ -83,7 +83,7 @@ class API(object):
         if product != 'account-information' and self.rate_limit and not self.limits_set and not self.limits:
             self._rate_limit()
 
-        uri = '/'.join(('https://api.domaintools.test3', path.lstrip('/')))
+        uri = '/'.join(('https://api.domaintools.com', path.lstrip('/')))
         parameters = self.default_parameters.copy()
         parameters['api_username'] = self.username
         self.handle_api_key(path, parameters)
