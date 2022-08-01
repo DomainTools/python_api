@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"app_name": "python_wrapper", "app_version": "1.0.0", "state": "watched",
+    body: '{"app_name": "python_wrapper", "app_version": "1.0.1", "state": "watched",
       "watchlist_domain_ids": ["gae08rdVWG"]}'
     headers:
       accept:

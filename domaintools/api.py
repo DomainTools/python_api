@@ -65,7 +65,17 @@ class API(object):
         """Pulls in and enforces the latest rate limits for the specified user"""
         self.limits_set = True
         for product in self.account_information():
-            self.limits[product['id']] = {'interval': timedelta(seconds=60 / float(product['per_minute_limit']))}
+            limit_minutes = product['per_minute_limit'] or None
+            limit_hours = product['per_hour_limit'] or None
+
+            default = 3600 
+            hours = limit_hours and 3600 / float(limit_hours)
+            minutes = limit_minutes and 60 / float(limit_minutes)
+
+            self.limits[product['id']] = {'interval': timedelta(
+                seconds = minutes or hours or default 
+            )
+        }
 
     def _results(self, product, path, cls=Results, **kwargs):
         """Returns _results for the specified API path with the specified **kwargs parameters"""
