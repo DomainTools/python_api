@@ -2,7 +2,8 @@
 
 ### 1.0.1
 
-- Adding support to per Hour limit
+- Adds support for the hourly query limit on the Account API endpoint
+- Fixes an issue with handling of proxies
 
 ### 1.0.0
 
