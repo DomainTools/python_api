@@ -65,8 +65,8 @@ class API(object):
         """Pulls in and enforces the latest rate limits for the specified user"""
         self.limits_set = True
         for product in self.account_information():
-            limit_minutes = product['per_minute_limit']
-            limit_hours = product['per_hour_limit']
+            limit_minutes = product['per_minute_limit'] or None
+            limit_hours = product['per_hour_limit'] or None
 
             default = 3600 
             hours = limit_hours and 3600 / float(limit_hours)
