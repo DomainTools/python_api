@@ -72,3 +72,6 @@ venv/
 
 # Cython
 *.c
+
+# Testing folders
+proxyTest/
