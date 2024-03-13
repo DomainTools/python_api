@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "domaintools_api"
-version = "1.1.0"
 dependencies = ["httpx", "dateparser"]
 requires-python = ">= 3.6"
 authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
@@ -29,7 +28,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries",
     "Topic :: Utilities",
 ]
-
+dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://github.com/domaintools/python_api"
