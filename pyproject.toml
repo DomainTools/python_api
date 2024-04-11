@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "domaintools-api"
+name = "domaintools_api"
 dependencies = ["httpx", "dateparser"]
 requires-python = ">= 3.6"
 authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
