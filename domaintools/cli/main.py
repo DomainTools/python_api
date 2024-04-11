@@ -24,7 +24,7 @@ def main(
         help="Show Domaintools CLI version information.",
     ),
 ):
-    print(f"About to execute command: {ctx.invoked_subcommand}")
+    print(f"About to execute command: `{ctx.invoked_subcommand}`")
 
 
 __all__ = ["dt_cli"]

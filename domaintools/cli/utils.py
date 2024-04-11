@@ -1,6 +1,33 @@
 from domaintools.cli import constants as c
 
 
+def _iris_investigate_helptext():
+    return """
+    Returns back a list of domains based on the provided filters. The following filters are available beyond what is parameterized as kwargs: \n
+    * --ip: Search for domains having this IP. \n
+    * --email: Search for domains with this email in their data. \n
+    * --email_domain: Search for domains where the email address uses this domain.\n
+    * --nameserver_host: Search for domains with this nameserver.\n
+    * --nameserver_domain: Search for domains with a nameserver that has this domain.\n
+    * --nameserver_ip: Search for domains with a nameserver on this IP.\n
+    * --registrar: Search for domains with this registrar.\n
+    * --registrant: Search for domains with this registrant name.\n
+    * --registrant_org: Search for domains with this registrant organization.\n
+    * --mailserver_host: Search for domains with this mailserver.\n
+    * --mailserver_domain: Search for domains with a mailserver that has this domain.\n
+    * --mailserver_ip: Search for domains with a mailserver on this IP.\n
+    * --redirect_domain: Search for domains which redirect to this domain.\n
+    * --ssl_hash: Search for domains which have an SSL certificate with this hash.\n
+    * --ssl_subject: Search for domains which have an SSL certificate with this subject string.\n
+    * --ssl_email: Search for domains which have an SSL certificate with this email in it.\n
+    * --ssl_org: Search for domains which have an SSL certificate with this organization in it.\n
+    * --google_analytics: Search for domains which have this Google Analytics code.\n
+    * --adsense: Search for domains which have this AdSense code.\n
+    * --tld: Filter by TLD. Must be combined with another parameter.\n
+    * --search_hash: Use search hash from Iris to bring back domains.\n
+    """
+
+
 def _phisheye_helptext():
     return """
         Returns domain results for the specified term for today or the specified number of days_back. Terms must be setup for monitoring via the web interface: https://research.domaintools.com/phisheye. \n
@@ -23,7 +50,7 @@ def _phisheye_termlist():
 _command_help_mapper = {
     c.ACCOUNT_INFORMATION: "Provides a snapshot of your accounts current API usage.",
     c.AVAILABLE_API_CALLS: "Provides a list of api calls that you can use based on your account information.",
-    c.IRIS_INVESTIGATE: "Returns back a list of domains based on the provided filters.",
+    c.IRIS_INVESTIGATE: _iris_investigate_helptext(),
     c.IRIS_ENRICH: "Returns back enriched data related to the specified domains using our Iris Enrich service.",
     c.BRAND_MONITOR: "Pass in one or more terms as a list or separated by the pipe character ( | )",
     c.DOMAIN_PROFILE: "Returns a profile for the specified domain name",

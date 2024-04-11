@@ -3,8 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "domaintools_api"
-dependencies = ["httpx", "dateparser", "typer"]
+name = "domaintools-api"
+dependencies = ["httpx", "dateparser"]
 requires-python = ">= 3.6"
 authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
 description = "DomainTools Official Python API"
@@ -39,6 +39,7 @@ domaintools = "domaintools.cli:run"
 
 [project.optional-dependencies]
 test = ["pytest", "mock"]
+cli = ["typer"]
 
 [tool.setuptools]
 packages = ["domaintools", "domaintools_async"]

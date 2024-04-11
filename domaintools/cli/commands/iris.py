@@ -14,7 +14,7 @@ from domaintools.cli import constants as c
 )
 def iris_investigate(
     ctx: typer.Context,
-    domains: str = typer.Option(..., "-d", "--domains", help="Domains to use."),
+    domains: str = typer.Option(None, "-d", "--domains", help="Domains to use."),
     data_updated_after: str = typer.Option(
         None, "--data-updated-after", help="The data updated after."
     ),
@@ -59,7 +59,10 @@ def iris_investigate(
     ),
 ):
 
-    DTCLICommand.run(name=c.IRIS_INVESTIGATE, params=ctx.params)
+    extra_args = ctx.args.copy()
+    kwargs = DTCLICommand.args_to_dict(*extra_args)
+
+    DTCLICommand.run(name=c.IRIS_INVESTIGATE, params=ctx.params, **kwargs)
 
 
 @dt_cli.command(

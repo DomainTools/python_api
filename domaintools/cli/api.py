@@ -14,7 +14,7 @@ from domaintools.exceptions import ServiceException
 
 class DTCLICommand:
     API_SUCCESS_STATUS = 200
-    APP_PARTNER_NAME = "python_wrapper_cli_2.0"
+    APP_PARTNER_NAME = "python_wrapper_cli_2.0.0"
 
     @staticmethod
     def print_api_version(value: bool):
@@ -32,6 +32,21 @@ class DTCLICommand:
                 f"value is not in available formats: {VALID_FORMATS}"
             )
         return value
+
+    @staticmethod
+    def args_to_dict(*args) -> Dict:
+        """Converts args to key-value pair.
+
+        Returns:
+            Dict: The converted dictionary from args
+        """
+        argument_dict = {}
+        for i in range(0, len(args), 2):
+            key = args[i].replace("--", "")
+            value = args[i + 1].strip()
+            argument_dict[key] = value
+
+        return argument_dict
 
     @classmethod
     def _get_formatted_output(cls, cmd_name: str, response, out_format: str = "json"):
@@ -65,7 +80,7 @@ class DTCLICommand:
         return user, key
 
     @classmethod
-    def run(cls, name: str, params: Optional[Dict] = {}):
+    def run(cls, name: str, params: Optional[Dict] = {}, **kwargs):
         """Run the domaintools command given with specified parameters.
 
         Args:
@@ -101,6 +116,7 @@ class DTCLICommand:
                     rate_limit=rate_limit,
                 )
 
+                params = params | kwargs
                 response = getattr(dt_api, name)(**params)
                 progress.add_task(
                     description=f"Preparing results with format of {response_format}...",
