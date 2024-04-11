@@ -1,140 +1,318 @@
 interactions:
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=1.0.1
-    response:
-      content:
-        '{"error":{"code":400,"message":"We could not understand your request.
-        It may be missing important parameters or is simply malformed. Consult the API
-        documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:02:54 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "367"
-      http_version: HTTP/1.1
-      status_code: 400
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=1.0.1
-    response:
-      content:
-        '{"error":{"code":400,"message":"We could not understand your request.
-        It may be missing important parameters or is simply malformed. Consult the API
-        documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:03:00 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "472"
-      http_version: HTTP/1.1
-      status_code: 400
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=1.0.1
-    response:
-      content:
-        '{"error":{"code":404,"message":"We have no recent WHOIS information
-        available for this domain\/IP Address."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:03:01 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "20826"
-      http_version: HTTP/1.1
-      status_code: 404
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=1.0.1&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
-    response:
-      content:
-        '{"error":{"code":403,"message":"The credentials you entered do not match
-        an active account."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:03:01 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "5530"
-      http_version: HTTP/1.1
-      status_code: 403
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=1.0.1
+  response:
+    content: '{"error":{"code":400,"message":"We could not understand your request.
+      It may be missing important parameters or is simply malformed. Consult the API
+      documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:02:54 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '367'
+    http_version: HTTP/1.1
+    status_code: 400
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=1.0.1
+  response:
+    content: '{"error":{"code":400,"message":"We could not understand your request.
+      It may be missing important parameters or is simply malformed. Consult the API
+      documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:03:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '472'
+    http_version: HTTP/1.1
+    status_code: 400
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=1.0.1
+  response:
+    content: '{"error":{"code":404,"message":"We have no recent WHOIS information
+      available for this domain\/IP Address."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:03:01 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '20826'
+    http_version: HTTP/1.1
+    status_code: 404
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=1.0.1&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    content: '{"error":{"code":403,"message":"The credentials you entered do not match
+      an active account."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:03:01 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5530'
+    http_version: HTTP/1.1
+    status_code: 403
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.0.0
+  response:
+    content: '{"error":{"code":400,"message":"We could not understand your request.
+      It may be missing important parameters or is simply malformed. Consult the API
+      documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 04:50:31 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=f51737qr0s2d85dfd47o3iqsi6amtpq4phnmit0ps638oq9lgad7ukqd42mhcpb0u91peeebpflohabt4e86ef7bv0i08bh794gtm8q;
+        expires=Sat, 11-May-2024 04:50:31 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '394'
+    http_version: HTTP/1.1
+    status_code: 400
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=2.0.0
+  response:
+    content: '{"error":{"code":404,"message":"We have no recent WHOIS information
+      available for this domain\/IP Address."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 04:50:37 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=jao12s97i2qsm12ogljclp0v67qbi10ug9poi2kguamd33k23cvhc747o80ok590k9litpnr9gqbtig2o70nbmrcmq0bu6mt9fd252h;
+        expires=Sat, 11-May-2024 04:50:37 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '12544'
+    http_version: HTTP/1.1
+    status_code: 404
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=2.0.0&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    content: '{"error":{"code":403,"message":"The credentials you entered do not match
+      an active account."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 04:50:38 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=6jtupigbdvodi482ntfq6u8s6cu6d2gbm8mbje86m2r2jg20jkvnpbv4lg33vd8peoc9kb66b43i2748qodlfocoktrof466ncvfn7m;
+        expires=Sat, 11-May-2024 04:50:38 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '4317'
+    http_version: HTTP/1.1
+    status_code: 403
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.0.0
+  response:
+    content: '{"error":{"code":400,"message":"We could not understand your request.
+      It may be missing important parameters or is simply malformed. Consult the API
+      documentation for more details."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 05:52:51 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=p08a3gsukj45g7vfhl8iivj0q3bfb5hvuc97u51mluecp9a0re6c4jhp9biako1nlf0rgq8qo5r5cf4qp32d9pa16ecm4e9khih2orf;
+        expires=Sat, 11-May-2024 05:52:51 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '363'
+    http_version: HTTP/1.1
+    status_code: 400
 version: 1

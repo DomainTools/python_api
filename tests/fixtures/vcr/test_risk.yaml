@@ -1,66 +1,158 @@
 interactions:
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=1.0.1&domain=google.com
-    response:
-      content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:03:42 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "22556"
-      http_version: HTTP/1.1
-      status_code: 200
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=1.0.1&domain=hug.rest
-    response:
-      content: '{"response":{"domain":"hug.rest","risk_score":7,"components":[{"name":"proximity","risk_score":7}]}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:03:42 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "21940"
-      http_version: HTTP/1.1
-      status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=1.0.1&domain=google.com
+  response:
+    content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:03:42 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '22556'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=1.0.1&domain=hug.rest
+  response:
+    content: '{"response":{"domain":"hug.rest","risk_score":7,"components":[{"name":"proximity","risk_score":7}]}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:03:42 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '21940'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=2.0.0&domain=google.com
+  response:
+    content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 05:53:20 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=ufekuk23s3cl9380d719ok1ithvmasgir20j5mq7798ka5e0bhnnlq4pfup1uhm3bnhpigrsdiqoduil610bh5e4i9b5lf3g6glj2ln;
+        expires=Sat, 11-May-2024 05:53:20 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '23155'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=2.0.0&domain=hug.rest
+  response:
+    content: '{"response":{"domain":"hug.rest","risk_score":74,"components":[{"name":"proximity","risk_score":20},{"name":"threat_profile","risk_score":74},{"name":"threat_profile_phishing","risk_score":74},{"name":"threat_profile_malware","risk_score":17},{"name":"threat_profile_spam","risk_score":63}]}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 05:53:20 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=4p0cgdri51s8pc96abguer0gibhvt5o16qlqf24trajkq2h5r161bl8s2f2j17n2teojjf7coj9iisrbkte9n19givhhg4n7a4gh7li;
+        expires=Sat, 11-May-2024 05:53:20 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '21740'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

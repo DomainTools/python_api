@@ -1,34 +1,80 @@
 interactions:
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/199.30.228.112/host-domains?app_name=python_wrapper&app_version=1.0.1
-    response:
-      content: '{"response":{"ip_addresses":{"ip_address":"199.30.228.112","domain_count":4,"domain_names":["DOMAINTOOLS.COM","USB.VN","WHOISAPI.COM","WHOISSUGGEST.COM"]}}}'
-      headers:
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json;charset=utf-8
-        Date:
-          - Thu, 16 Jun 2022 15:02:17 GMT
-        Transfer-Encoding:
-          - chunked
-        Vary:
-          - Accept-Encoding
-        X-TIME:
-          - "6853"
-      http_version: HTTP/1.1
-      status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains?app_name=python_wrapper&app_version=1.0.1
+  response:
+    content: '{"response":{"ip_addresses":{"ip_address":"199.30.228.112","domain_count":4,"domain_names":["DOMAINTOOLS.COM","USB.VN","WHOISAPI.COM","WHOISSUGGEST.COM"]}}}'
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 16 Jun 2022 15:02:17 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '6853'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains?app_name=python_wrapper&app_version=2.0.0
+  response:
+    content: '{"response":{"ip_addresses":{"ip_address":"199.30.228.112","domain_count":2,"domain_names":["usb.vn","whoisapi.com"]}}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 11 Apr 2024 04:49:05 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=1m30j723ftcq3r0e0bpmuo00p1nibrhcmuqv5nup4uvo3e8e1qh1padi4e8uvbm6vrqv5358jlk7regl93633adm9dt4s8rhqr7q7tj;
+        expires=Sat, 11-May-2024 04:49:05 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '10879'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1
