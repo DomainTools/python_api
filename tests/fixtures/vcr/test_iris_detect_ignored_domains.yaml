@@ -1,84 +1,167 @@
 interactions:
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&offset=0
-    response:
-      content:
-        '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000+00:00","changed_date":null,"risk_score":26,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":26,"malware":0,"spam":0,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"},{"state":"ignored","domain":"googlestreetview.online","status":"active","discovered_date":"2022-05-19T11:43:48.226000+00:00","changed_date":"2022-05-19T12:04:58.000000+00:00","risk_score":36,"risk_score_status":"full","risk_score_components":{"proximity":4,"threat_profile":{"phishing":36,"malware":15,"spam":13,"evidence":[]}},"mx_exists":true,"tld":"online","id":"KW3Dl7vzap","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:56:08.000000+00:00"},{"state":"ignored","domain":"googleadspodcast.com","status":"active","discovered_date":"2022-05-19T05:47:59.201000+00:00","changed_date":"2022-06-07T23:09:49.000000+00:00","risk_score":68,"risk_score_status":"full","risk_score_components":{"proximity":9,"threat_profile":{"phishing":68,"malware":10,"spam":8,"evidence":["domain
-        name","registrant","name server"]}},"mx_exists":false,"tld":"com","id":"7WKo18K9WR","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:50:35.000000+00:00"}],"total_count":3,"count":3,"offset":0,"limit":100}'
-      headers:
-        Cache-Control:
-          - no-store, no-cache, must-revalidate
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json
-        Date:
-          - Thu, 16 Jun 2022 15:09:37 GMT
-        Expires:
-          - Thu, 19 Nov 1981 08:52:00 GMT
-        Pragma:
-          - no-cache
-        Set-Cookie:
-          - csrftoken=bc563aa4408819363f343224a10d5efc; path=/; domain=.domaintools.com;
-            secure
-          - dtsession=o0dif49nnclb4c48gho92tm7pseueq7qeu3nn6spf0dqckh5mp31slcda4heet5f0ees3rhindt6m4dtckout2ut2oc51dijivv6c68;
-            expires=Sat, 16-Jul-2022 15:09:37 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-            secure; HttpOnly
-        Transfer-Encoding:
-          - chunked
-      http_version: HTTP/1.1
-      status_code: 200
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
-    response:
-      content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000+00:00","changed_date":null,"risk_score":26,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":26,"malware":0,"spam":0,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":1,"count":1,"offset":0,"limit":100}'
-      headers:
-        Cache-Control:
-          - no-store, no-cache, must-revalidate
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json
-        Date:
-          - Thu, 16 Jun 2022 15:09:39 GMT
-        Expires:
-          - Thu, 19 Nov 1981 08:52:00 GMT
-        Pragma:
-          - no-cache
-        Set-Cookie:
-          - csrftoken=87d16e11329d4f5d78759aa2806cfa2f; path=/; domain=.domaintools.com;
-            secure
-          - dtsession=6s853s0j56o21lqrdcbuf57ve8n4e94hfhd4qv5peqpaf177r55tt7nq8kj128t1k3krmfqhspcj87agdqghstaqae96rte72bcf5ij;
-            expires=Sat, 16-Jul-2022 15:09:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-            secure; HttpOnly
-        Transfer-Encoding:
-          - chunked
-      http_version: HTTP/1.1
-      status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000+00:00","changed_date":null,"risk_score":26,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":26,"malware":0,"spam":0,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"},{"state":"ignored","domain":"googlestreetview.online","status":"active","discovered_date":"2022-05-19T11:43:48.226000+00:00","changed_date":"2022-05-19T12:04:58.000000+00:00","risk_score":36,"risk_score_status":"full","risk_score_components":{"proximity":4,"threat_profile":{"phishing":36,"malware":15,"spam":13,"evidence":[]}},"mx_exists":true,"tld":"online","id":"KW3Dl7vzap","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:56:08.000000+00:00"},{"state":"ignored","domain":"googleadspodcast.com","status":"active","discovered_date":"2022-05-19T05:47:59.201000+00:00","changed_date":"2022-06-07T23:09:49.000000+00:00","risk_score":68,"risk_score_status":"full","risk_score_components":{"proximity":9,"threat_profile":{"phishing":68,"malware":10,"spam":8,"evidence":["domain
+      name","registrant","name server"]}},"mx_exists":false,"tld":"com","id":"7WKo18K9WR","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:50:35.000000+00:00"}],"total_count":3,"count":3,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:09:37 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=bc563aa4408819363f343224a10d5efc; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=o0dif49nnclb4c48gho92tm7pseueq7qeu3nn6spf0dqckh5mp31slcda4heet5f0ees3rhindt6m4dtckout2ut2oc51dijivv6c68;
+        expires=Sat, 16-Jul-2022 15:09:37 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000+00:00","changed_date":null,"risk_score":26,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":26,"malware":0,"spam":0,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":1,"count":1,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:09:39 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=87d16e11329d4f5d78759aa2806cfa2f; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=6s853s0j56o21lqrdcbuf57ve8n4e94hfhd4qv5peqpaf177r55tt7nq8kj128t1k3krmfqhspcj87agdqghstaqae96rte72bcf5ij;
+        expires=Sat, 16-Jul-2022 15:09:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":2,"risk_score_status":"full","risk_score_components":{"proximity":1,"threat_profile":{"phishing":2,"malware":2,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"},{"state":"ignored","domain":"googleadspodcast.com","status":"active","discovered_date":"2022-05-19T05:47:59.201000Z","changed_date":"2022-11-16T23:22:45.000000Z","risk_score":24,"risk_score_status":"full","risk_score_components":{"proximity":24,"threat_profile":{"phishing":3,"malware":9,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com","id":"7WKo18K9WR","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:50:35.000000+00:00"}],"total_count":2,"count":2,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Apr 2024 05:53:32 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=m7tq3i8ol0a1gptq76if11qne94qiu9nmm9rp7k0t1c70vohr3dbhfn9pf6g3mrfcimmclv6gegd4n189tuhmd3bl52pgqo7p1pbv1g;
+        expires=Sat, 11-May-2024 05:53:32 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":2,"risk_score_status":"full","risk_score_components":{"proximity":1,"threat_profile":{"phishing":2,"malware":2,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":1,"count":1,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Apr 2024 05:53:34 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=1mdmh8blgn9jud059j1nqeil12lghs0pdqj0c1jplfcvhg0vqp7c8tu8vt69a9kko9u5ancj2iv6c08mo4rj11t8vpjqcfiol0jrut3;
+        expires=Sat, 11-May-2024 05:53:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

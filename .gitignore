@@ -69,6 +69,7 @@ pyvenv.cfg
 share/
 venv/
 .python-version
+__pycache__
 
 # Cython
 *.c
