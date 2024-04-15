@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 from types import MethodType
@@ -145,7 +145,10 @@ class API(object):
                         self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES)
                     )
                 )
-            parameters["timestamp"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+            parameters["timestamp"] = datetime.now(timezone.utc).strftime(
+                "%Y-%m-%dT%H:%M:%SZ"
+            )
             parameters["signature"] = hmac(
                 self.key.encode("utf8"),
                 "".join([self.username, parameters["timestamp"], path]).encode("utf8"),

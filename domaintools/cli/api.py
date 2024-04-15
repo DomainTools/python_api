@@ -10,6 +10,7 @@ from rich import print
 
 from domaintools.api import API
 from domaintools.exceptions import ServiceException
+from domaintools.cli.utils import get_file_extension
 
 
 class DTCLICommand:
@@ -29,8 +30,32 @@ class DTCLICommand:
         VALID_FORMATS = ("list", "json", "xml", "html")
         if value not in VALID_FORMATS:
             raise typer.BadParameter(
-                f"value is not in available formats: {VALID_FORMATS}"
+                f"{value} is not in available formats: {VALID_FORMATS}"
             )
+        return value
+
+    @staticmethod
+    def validate_source_file_extension(value: str):
+        """Validates source file extension.
+
+        Args:
+            value (str): The source file (e.g. `my-domains.csv`).
+
+        Raises:
+            typer.BadParameter: Raises Badparameter exception if the given value is not in valid extensions.
+
+        """
+        if not value:
+            return
+
+        VALID_EXTENSIONS = (".csv", ".txt")
+        ext = get_file_extension(value)
+
+        if ext.lower() not in VALID_EXTENSIONS:
+            raise typer.BadParameter(
+                f"{value} is not in valid extensions. Valid file extensions: {VALID_EXTENSIONS}"
+            )
+
         return value
 
     @staticmethod
@@ -41,10 +66,16 @@ class DTCLICommand:
             Dict: The converted dictionary from args
         """
         argument_dict = {}
-        for i in range(0, len(args), 2):
-            key = args[i].replace("--", "")
-            value = args[i + 1].strip()
-            argument_dict[key] = value
+        if not args:
+            return argument_dict
+
+        try:
+            for i in range(0, len(args), 2):
+                key = args[i].replace("--", "")
+                value = args[i + 1].strip()
+                argument_dict[key] = value
+        except:
+            pass
 
         return argument_dict
 
@@ -65,6 +96,10 @@ class DTCLICommand:
 
         if not user or not key:
             creds_file = params.pop("creds_file") or ""
+            typer.echo(
+                f"No user or key parameter given. Using credentials in {creds_file} instead."
+            )
+
             try:
                 if "~" in creds_file:
                     # expand user path if path uses "~".
@@ -80,21 +115,50 @@ class DTCLICommand:
         return user, key
 
     @classmethod
+    def _get_domains_from_source(cls, source: str) -> Dict[str, str]:
+        domains = []
+        ext = get_file_extension(source)
+        try:
+            with open(source, "r", newline="", encoding="utf-8") as src:
+                if ext == ".csv":
+                    import csv
+
+                    reader = csv.DictReader(src, fieldnames=("domain",))
+                    next(reader)  # skip header
+                    domains.extend([row.get("domain") or "" for row in reader])
+                else:
+                    domains.extend([domain.strip() for domain in src.readlines()])
+        except FileNotFoundError:
+            raise typer.BadParameter(f"File '{source}' not found.")
+
+        return ",".join(domains)
+
+    @classmethod
     def run(cls, name: str, params: Optional[Dict] = {}, **kwargs):
         """Run the domaintools command given with specified parameters.
 
         Args:
             name (str): The command name.
             params (Optional[Dict], optional): The command available parameters. Defaults to {}.
-
+            kwargs (Optional[Dict], optional): The command available kwargs to pass in domaintools API
         """
         try:
             rate_limit = params.pop("rate_limit") or False
             response_format = params.pop("format") or "json"
             out_file = params.pop("out_file") or sys.stdout
             verify_ssl = params.pop("no_verify_ssl") or False
+            source = params.pop("src_file") or None
 
             user, key = cls._get_credentials(params)
+
+            # Add support for using a source file for commands that has `--domains` parameters
+            if source:
+                domains = cls._get_domains_from_source(source=source)
+                if params["domains"]:
+                    # append to existing domain parameter if found
+                    params["domains"] = params["domains"] + "," + domains
+                else:
+                    params["domains"] = domains
 
             typer.echo(f"Using api credentials with a username of: {user}")
 
