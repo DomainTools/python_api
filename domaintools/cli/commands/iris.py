@@ -28,6 +28,12 @@ def iris_investigate(
     search_hash: str = typer.Option(
         None, "--search-hash", help="The search hash to use"
     ),
+    src_file: str = typer.Option(
+        None,
+        "--source-file",
+        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        callback=DTCLICommand.validate_source_file_extension,
+    ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
     creds_file: str = typer.Option(
@@ -66,13 +72,19 @@ def iris_investigate(
 
 
 @dt_cli.command(
-    name=c.IRIS_ENRICH,
+    name="iris_enrich",
     context_settings={"allow_extra_args": True, "ignore_unknown_options": True},
     help=get_cli_helptext_by_name(command_name=c.IRIS_ENRICH),
 )
 def iris_enrich(
     ctx: typer.Context,
-    domains: str = typer.Option(..., "-d", "--domains", help="Domains to use."),
+    domains: str = typer.Option(None, "-d", "--domains", help="Domains to use."),
+    src_file: str = typer.Option(
+        None,
+        "--source-file",
+        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        callback=DTCLICommand.validate_source_file_extension,
+    ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
     creds_file: str = typer.Option(

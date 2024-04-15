@@ -1,3 +1,4 @@
+import os
 from domaintools.cli import constants as c
 
 
@@ -83,8 +84,13 @@ _command_help_mapper = {
 }
 
 
-def get_cli_helptext_by_name(command_name: str):  # pragma: no cover
+def get_cli_helptext_by_name(command_name: str) -> str:  # pragma: no cover
     return _command_help_mapper.get(command_name) or ""
 
 
-__all__ = ["get_cli_helptext_by_name"]
+def get_file_extension(source: str) -> str:
+    ext = os.path.splitext(source)[1]
+    return ext
+
+
+__all__ = ["get_cli_helptext_by_name", "get_file_extension"]
