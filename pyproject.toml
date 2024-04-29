@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "domaintools_api"
-dependencies = ["httpx", "dateparser", "rich", "typer"]
+dependencies = ["httpx", "rich", "typer"]
 requires-python = ">= 3.6"
 authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
 description = "DomainTools Official Python API"
@@ -41,7 +41,12 @@ domaintools = "domaintools.cli:run"
 test = ["pytest", "mock"]
 
 [tool.setuptools]
-packages = ["domaintools", "domaintools_async"]
+packages = [
+    "domaintools",
+    "domaintools.cli",
+    "domaintools.cli.commands",
+    "domaintools_async",
+]
 
 [tool.setuptools.dynamic]
 version = { "file" = "VERSION" }
