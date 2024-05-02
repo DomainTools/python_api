@@ -147,7 +147,10 @@ class DTCLICommand:
             response_format = params.pop("format") or "json"
             out_file = params.pop("out_file") or sys.stdout
             verify_ssl = params.pop("no_verify_ssl") or False
-            source = params.pop("src_file") or None
+            source = None
+
+            if "src_file" in params:
+                source = params.pop("src_file") or None
 
             user, key = cls._get_credentials(params)
 

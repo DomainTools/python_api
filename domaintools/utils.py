@@ -1,5 +1,4 @@
 from datetime import datetime
-import dateparser
 import re
 
 
@@ -7,11 +6,21 @@ def get_domain_age(create_date):
     """
     Finds how many days old a domain is given a start date.
     Args:
-        create_date: Date in the form of %Y-%m-%d'
+        create_date: Date in the form of %Y-%m-%d' or %Y%m%d'
 
     Returns: Number of days between now and the create_date.
     """
-    time_diff = datetime.now() - dateparser.parse(create_date, date_formats=['%Y-%m-%d', '%Y%m%d'])
+    try:
+        create_date = datetime.strptime(create_date, "%Y-%m-%d")
+    except ValueError:
+        try:
+            create_date = datetime.strptime(create_date, "%Y%m%d")
+        except ValueError:
+            raise ValueError(
+                "Invalid date format. Supported formats are %Y-%m-%d and %Y%m%d."
+            )
+
+    time_diff = datetime.now() - create_date
 
     return time_diff.days
 
@@ -89,7 +98,7 @@ def prune_data(data_obj):
                 prune_data(data_obj[k])
             if not isinstance(v, int) and not v:
                 items_to_prune.append(k)
-            elif k == 'count' and v == 0:
+            elif k == "count" and v == 0:
                 items_to_prune.append(k)
         for k in items_to_prune:
             del data_obj[k]
@@ -98,18 +107,28 @@ def prune_data(data_obj):
             prune_data(item)
             if not isinstance(item, int) and not item:
                 items_to_prune.append(index)
-        data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
+        data_obj[:] = [
+            item
+            for index, item in enumerate(data_obj)
+            if index not in items_to_prune and len(item)
+        ]
 
 
 def find_emails(data_str):
     """Find and returns all emails"""
-    return set(re.findall(r'[\w\.-]+@[\w\.-]+', data_str))
+    return set(re.findall(r"[\w\.-]+@[\w\.-]+", data_str))
 
 
 def find_ips(data_str):
     """Find and returns all ipv4"""
-    ipv4s = set(re.findall(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b', data_str))
+    ipv4s = set(
+        re.findall(
+            r"\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b",
+            data_str,
+        )
+    )
     return ipv4s
+
 
 def get_pivots(data_obj, name, return_data=None, count=0, pivot_threshold=500):
     """
