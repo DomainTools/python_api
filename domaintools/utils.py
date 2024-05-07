@@ -1,4 +1,7 @@
 from datetime import datetime
+
+from typing import Optional
+
 import re
 
 
@@ -170,3 +173,9 @@ def get_pivots(data_obj, name, return_data=None, count=0, pivot_threshold=500):
         return
     else:
         return return_data
+
+
+def convert_str_to_dateobj(
+    string_date: str, date_format: Optional[str] = "%Y-%m-%d"
+) -> datetime:
+    return datetime.strptime(string_date, date_format)
