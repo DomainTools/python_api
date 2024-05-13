@@ -6,6 +6,13 @@ import re
 
 from domaintools._version import current as version
 from domaintools.results import GroupedIterable, ParsedWhois, Reputation, Results
+from domaintools.filters import (
+    filter_by_riskscore,
+    filter_by_expire_date,
+    filter_by_date_updated_after,
+    filter_by_field,
+    DTResultFilter,
+)
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256", "md5"]
 
@@ -549,7 +556,7 @@ class API(object):
         if hasattr(data_updated_after, "strftime"):
             data_updated_after = data_updated_after.strftime("%Y-%m-%d")
 
-        return self._results(
+        results = self._results(
             "iris-enrich",
             "/v1/iris-enrich/",
             domain=domains,
@@ -557,6 +564,38 @@ class API(object):
             items_path=("results",),
             **kwargs,
         )
+
+        risk_score = kwargs.pop("risk_score", {}) or None
+        younger_than_date = kwargs.pop("younger_than_date", {}) or None
+        older_than_date = kwargs.pop("older_than_date", {}) or None
+        updated_after = kwargs.pop("updated_after", {}) or None
+        include_domains_with_missing_field = (
+            kwargs.pop("include_domains_with_missing_field", {}) or None
+        )
+        exclude_domains_with_missing_field = (
+            kwargs.pop("exclude_domains_with_missing_field", {}) or None
+        )
+
+        filtered_results = DTResultFilter(result_set=results).by(
+            [
+                filter_by_riskscore(threshold=risk_score),
+                filter_by_expire_date(date=younger_than_date, lookup_type="before"),
+                filter_by_expire_date(date=older_than_date, lookup_type="after"),
+                filter_by_date_updated_after(date=updated_after),
+                filter_by_field(
+                    field=include_domains_with_missing_field, filter_type="include"
+                ),
+                filter_by_field(
+                    field=exclude_domains_with_missing_field, filter_type="exclude"
+                ),
+            ]
+        )
+
+        results["results"] = filtered_results
+        results["results_count"] = len(filtered_results)
+        results["total_count"] = len(filtered_results)
+
+        return results
 
     def iris_enrich_cli(self, domains=None, **kwargs):
         """Returns back enriched data related to the specified domains using our Iris Enrich service.
@@ -601,6 +640,12 @@ class API(object):
         create_date=None,
         active=None,
         search_hash=None,
+        risk_score=None,
+        younger_than_date=None,
+        older_than_date=None,
+        updated_after=None,
+        include_domains_with_missing_field=None,
+        exclude_domains_with_missing_field=None,
         **kwargs,
     ):
         """Returns back a list of domains based on the provided filters.
@@ -662,7 +707,7 @@ class API(object):
         if isinstance(active, bool):
             kwargs["active"] = str(active).lower()
 
-        return self._results(
+        results = self._results(
             "iris-investigate",
             "/v1/iris-investigate/",
             domain=domains,
@@ -672,6 +717,27 @@ class API(object):
             items_path=("results",),
             **kwargs,
         )
+
+        filtered_results = DTResultFilter(result_set=results).by(
+            [
+                filter_by_riskscore(threshold=risk_score),
+                filter_by_expire_date(date=younger_than_date, lookup_type="before"),
+                filter_by_expire_date(date=older_than_date, lookup_type="after"),
+                filter_by_date_updated_after(date=updated_after),
+                filter_by_field(
+                    field=include_domains_with_missing_field, filter_type="include"
+                ),
+                filter_by_field(
+                    field=exclude_domains_with_missing_field, filter_type="exclude"
+                ),
+            ]
+        )
+
+        results["results"] = filtered_results
+        results["results_count"] = len(filtered_results)
+        results["total_count"] = len(filtered_results)
+
+        return results
 
     def iris_detect_monitors(
         self,
