@@ -22,7 +22,10 @@ def main(
         help="Show Domaintools CLI version information.",
     ),
 ):
-    print(f"About to execute command: `{ctx.invoked_subcommand}`")
+    """
+    Main callback of domaintools cli
+    """
+    ...
 
 
 __all__ = ["dt_cli"]
