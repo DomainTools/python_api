@@ -8,8 +8,6 @@ from typer.testing import CliRunner
 from domaintools.cli import dt_cli
 from domaintools._version import current
 
-from tests.settings import vcr
-
 runner = CliRunner()
 
 
@@ -24,7 +22,7 @@ def test_valid_command():
     user = os.environ.get("TEST_USER", "test")
     key = os.environ.get("TEST_KEY", "key")
     result = runner.invoke(dt_cli, ["account_information", "--help"])
-    assert "About to execute command: `account_information`" in result.stdout
+    assert "Usage: main account_information" in result.stdout
 
 
 def test_invalid_command():

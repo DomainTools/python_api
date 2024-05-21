@@ -93,13 +93,9 @@ class DTCLICommand:
     def _get_credentials(cls, params: Optional[Dict] = {}) -> Tuple[str]:
         user = params.pop("user")
         key = params.pop("key")
+        creds_file = params.pop("creds_file", {}) or ""
 
         if not user or not key:
-            creds_file = params.pop("creds_file") or ""
-            typer.echo(
-                f"No user or key parameter given. Using credentials in {creds_file} instead."
-            )
-
             try:
                 if "~" in creds_file:
                     # expand user path if path uses "~".
@@ -163,8 +159,6 @@ class DTCLICommand:
                 else:
                     params["domains"] = domains
 
-            typer.echo(f"Using api credentials with a username of: {user}")
-
             with Progress(
                 SpinnerColumn(),
                 TextColumn("[progress.description]{task.description}"),
@@ -172,7 +166,8 @@ class DTCLICommand:
             ) as progress:
 
                 progress.add_task(
-                    description=f"Executing [green]{name}[/green] api call..."
+                    description=f"Using api credentials with a username of: [cyan]{user}[/cyan]\nExecuting [green]{name}[/green] api call...",
+                    total=None,
                 )
 
                 dt_api = API(
@@ -182,12 +177,14 @@ class DTCLICommand:
                     verify_ssl=verify_ssl,
                     rate_limit=rate_limit,
                 )
+                dt_api_func = getattr(dt_api, name)
 
                 params = params | kwargs
-                response = getattr(dt_api, name)(**params)
+
+                response = dt_api_func(**params)
                 progress.add_task(
                     description=f"Preparing results with format of {response_format}...",
-                    total=0,
+                    total=None,
                 )
 
                 output = cls._get_formatted_output(
@@ -203,7 +200,6 @@ class DTCLICommand:
                 time.sleep(0.5)
 
             name = typer.style(name, fg=typer.colors.CYAN, bold=True)
-            typer.echo(f"Done fetching results from `{name}` command.")
         except Exception as e:
             if isinstance(e, ServiceException):
                 code = typer.style(getattr(e, "code", 400), fg=typer.colors.BRIGHT_RED)
