@@ -193,7 +193,7 @@ class DTCLICommand:
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    print(output)
+                    typer.echo(output)
                 else:
                     # if it's a file then write
                     out_file.write(output if output.endswith("\n") else output + "\n")
