@@ -30,8 +30,9 @@ def iris_investigate(
     ),
     src_file: str = typer.Option(
         None,
+        "-s",
         "--source-file",
-        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        help="Comma-separated list of maximum 100 domains. Supports only {.csv, .txt} format",
         callback=DTCLICommand.validate_source_file_extension,
     ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
@@ -81,8 +82,9 @@ def iris_enrich(
     domains: str = typer.Option(None, "-d", "--domains", help="Domains to use."),
     src_file: str = typer.Option(
         None,
+        "-s",
         "--source-file",
-        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        help="Comma-separated list of maximum 100 domains. Supports only {.csv, .txt} format",
         callback=DTCLICommand.validate_source_file_extension,
     ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
