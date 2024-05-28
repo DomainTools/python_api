@@ -3,7 +3,10 @@ import typer
 
 from domaintools.cli.main import dt_cli
 from domaintools.cli.api import DTCLICommand
-from domaintools.cli.utils import get_cli_helptext_by_name
+from domaintools.cli.utils import (
+    get_cli_helptext_by_name,
+    remove_special_char_in_string,
+)
 from domaintools.cli import constants as c
 
 
@@ -68,6 +71,12 @@ def iris_investigate(
 
     extra_args = ctx.args.copy()
     kwargs = DTCLICommand.args_to_dict(*extra_args)
+    if "ssl_hash" in kwargs:
+        # silently remove the ':' if present.
+        ssl_hash_value = kwargs["ssl_hash"]
+        kwargs["ssl_hash"] = remove_special_char_in_string(
+            ssl_hash_value, special_char=":"
+        )
 
     DTCLICommand.run(name=c.IRIS_INVESTIGATE, params=ctx.params, **kwargs)
 

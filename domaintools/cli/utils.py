@@ -93,4 +93,21 @@ def get_file_extension(source: str) -> str:
     return ext
 
 
-__all__ = ["get_cli_helptext_by_name", "get_file_extension"]
+def remove_special_char_in_string(item: str, special_char: str) -> str:
+    """Removes the given `special char` in an string item.
+
+    Args:
+        item (str): The string to be formatted
+
+    Returns:
+        str: The formatted string.
+    """
+    cleaned_string = item.replace(special_char, "")
+    return cleaned_string
+
+
+__all__ = [
+    "get_cli_helptext_by_name",
+    "get_file_extension",
+    "remove_special_char_in_string",
+]
