@@ -6,11 +6,13 @@ import _io
 
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
-from rich import print
+from rich import console
 
 from domaintools.api import API
 from domaintools.exceptions import ServiceException
 from domaintools.cli.utils import get_file_extension
+
+console = console.Console()
 
 
 class DTCLICommand:
@@ -73,6 +75,9 @@ class DTCLICommand:
             for i in range(0, len(args), 2):
                 key = args[i].replace("--", "")
                 value = args[i + 1].strip()
+                # replace all the "-" to "_" to make it a valid kwargs
+                # we replace all CLI parameters to use "-" instead of underscore.
+                key = key.replace("-", "_")
                 argument_dict[key] = value
         except:
             pass
@@ -193,7 +198,7 @@ class DTCLICommand:
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    typer.echo(output)
+                    print(output)
                 else:
                     # if it's a file then write
                     out_file.write(output if output.endswith("\n") else output + "\n")
