@@ -23,7 +23,7 @@ def main(
     ),
 ):
     """
-    Main callback of domaintools cli
+    Official Domaintools CLI
     """
     ...
 

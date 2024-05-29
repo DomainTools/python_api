@@ -22,13 +22,13 @@ def ip_monitor(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -39,7 +39,7 @@ def ip_monitor(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -73,13 +73,13 @@ def ip_registrant_monitor(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -90,7 +90,7 @@ def ip_registrant_monitor(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -114,13 +114,13 @@ def host_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -131,7 +131,7 @@ def host_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -163,13 +163,13 @@ def reverse_ip_whois(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -180,7 +180,7 @@ def reverse_ip_whois(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,

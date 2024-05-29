@@ -3,7 +3,10 @@ import typer
 
 from domaintools.cli.main import dt_cli
 from domaintools.cli.api import DTCLICommand
-from domaintools.cli.utils import get_cli_helptext_by_name
+from domaintools.cli.utils import (
+    get_cli_helptext_by_name,
+    remove_special_char_in_string,
+)
 from domaintools.cli import constants as c
 
 
@@ -30,8 +33,9 @@ def iris_investigate(
     ),
     src_file: str = typer.Option(
         None,
+        "-s",
         "--source-file",
-        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        help="Comma-separated list of maximum 100 domains. Supports only {.csv, .txt} format",
         callback=DTCLICommand.validate_source_file_extension,
     ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
@@ -39,13 +43,13 @@ def iris_investigate(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -56,7 +60,7 @@ def iris_investigate(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -67,6 +71,12 @@ def iris_investigate(
 
     extra_args = ctx.args.copy()
     kwargs = DTCLICommand.args_to_dict(*extra_args)
+    if "ssl_hash" in kwargs:
+        # silently remove the ':' if present.
+        ssl_hash_value = kwargs["ssl_hash"]
+        kwargs["ssl_hash"] = remove_special_char_in_string(
+            ssl_hash_value, special_char=":"
+        )
 
     DTCLICommand.run(name=c.IRIS_INVESTIGATE, params=ctx.params, **kwargs)
 
@@ -81,8 +91,9 @@ def iris_enrich(
     domains: str = typer.Option(None, "-d", "--domains", help="Domains to use."),
     src_file: str = typer.Option(
         None,
+        "-s",
         "--source-file",
-        help="Comma-separated list of domains. Supports only {.csv, .txt} format",
+        help="Comma-separated list of maximum 100 domains. Supports only {.csv, .txt} format",
         callback=DTCLICommand.validate_source_file_extension,
     ),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
@@ -90,13 +101,13 @@ def iris_enrich(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -107,7 +118,7 @@ def iris_enrich(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -139,13 +150,13 @@ def iris(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -156,7 +167,7 @@ def iris(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,

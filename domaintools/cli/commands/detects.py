@@ -47,7 +47,7 @@ def iris_detect_monitors(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
@@ -64,7 +64,7 @@ def iris_detect_monitors(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -101,7 +101,7 @@ def iris_detect_new_domains(
     ),
     discovered_since: str = typer.Option(
         None,
-        "--discovered_since",
+        "--discovered-since",
         help="ISO 8601 datetime format: default None. Filter domains by when they were discovered.",
     ),
     changed_since: str = typer.Option(
@@ -145,13 +145,13 @@ def iris_detect_new_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -162,7 +162,7 @@ def iris_detect_new_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -190,7 +190,7 @@ def iris_detect_watched_domains(
     ),
     escalation_types: str = typer.Option(
         None,
-        "--escalation_types",
+        "--escalation-types",
         help="List of escalation types to filter domains by. Valid values are: {'blocked', 'google_safe'}",
     ),
     escalated_since: str = typer.Option(
@@ -212,7 +212,7 @@ def iris_detect_watched_domains(
     ),
     discovered_since: str = typer.Option(
         None,
-        "--discovered_since",
+        "--discovered-since",
         help="ISO 8601 datetime format: default None. Filter domains by when they were discovered.",
     ),
     changed_since: str = typer.Option(
@@ -256,13 +256,13 @@ def iris_detect_watched_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -273,7 +273,7 @@ def iris_detect_watched_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -304,13 +304,13 @@ def iris_detect_manage_watchlist_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -321,7 +321,7 @@ def iris_detect_manage_watchlist_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -354,13 +354,13 @@ def iris_detect_escalate_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -371,7 +371,7 @@ def iris_detect_escalate_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -399,7 +399,7 @@ def iris_detect_ignored_domains(
     ),
     escalation_types: str = typer.Option(
         None,
-        "--escalation_types",
+        "--escalation-types",
         help="List of escalation types to filter domains by. Valid values are: {'blocked', 'google_safe'}",
     ),
     escalated_since: str = typer.Option(
@@ -421,7 +421,7 @@ def iris_detect_ignored_domains(
     ),
     discovered_since: str = typer.Option(
         None,
-        "--discovered_since",
+        "--discovered-since",
         help="ISO 8601 datetime format: default None. Filter domains by when they were discovered.",
     ),
     changed_since: str = typer.Option(
@@ -465,13 +465,13 @@ def iris_detect_ignored_domains(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
         False,
         "-l",
-        "--rate_limit",
+        "--rate-limit",
         help="Rate limit API calls against the API based on per minute limits.",
     ),
     format: str = typer.Option(
@@ -482,7 +482,7 @@ def iris_detect_ignored_domains(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,

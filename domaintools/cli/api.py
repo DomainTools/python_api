@@ -6,7 +6,6 @@ import _io
 
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
-from rich import print
 
 from domaintools.api import API
 from domaintools.exceptions import ServiceException
@@ -73,6 +72,9 @@ class DTCLICommand:
             for i in range(0, len(args), 2):
                 key = args[i].replace("--", "")
                 value = args[i + 1].strip()
+                # replace all the "-" to "_" to make it a valid kwargs
+                # we replace all CLI parameters to use "-" instead of underscore.
+                key = key.replace("-", "_")
                 argument_dict[key] = value
         except:
             pass
@@ -124,6 +126,13 @@ class DTCLICommand:
                     domains.extend([row.get("domain") or "" for row in reader])
                 else:
                     domains.extend([domain.strip() for domain in src.readlines()])
+
+                total_domains_found = len(domains)
+                if total_domains_found > 100:
+                    raise typer.BadParameter(
+                        f"Domains in source file exceeds the maximum count of 100. Current source file domain count: {total_domains_found}"
+                    )
+
         except FileNotFoundError:
             raise typer.BadParameter(f"File '{source}' not found.")
 
@@ -193,13 +202,11 @@ class DTCLICommand:
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    typer.echo(output)
+                    print(response)
                 else:
                     # if it's a file then write
                     out_file.write(output if output.endswith("\n") else output + "\n")
-                time.sleep(0.5)
-
-            name = typer.style(name, fg=typer.colors.CYAN, bold=True)
+                time.sleep(0.25)
         except Exception as e:
             if isinstance(e, ServiceException):
                 code = typer.style(getattr(e, "code", 400), fg=typer.colors.BRIGHT_RED)
@@ -213,7 +220,7 @@ class DTCLICommand:
 
                 reason = typer.style(_reason, bg=typer.colors.RED)
 
-                err_msg_format = f"Error occured while fetching data from API: [{code}] Reason: {reason}"
+                err_msg_format = f"Error occured while fetching data from the API: [{code}] Reason: {reason}"
                 typer.echo(message=err_msg_format)
             else:
                 typer.echo(message=e)

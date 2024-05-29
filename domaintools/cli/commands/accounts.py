@@ -19,7 +19,7 @@ def account_information(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
@@ -36,7 +36,7 @@ def account_information(
         callback=DTCLICommand.validate_format_input,
     ),
     out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out_file", help="Output file (defaults to stdout)"
+        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
     ),
     no_verify_ssl: bool = typer.Option(
         False,
@@ -58,7 +58,7 @@ def available_api_calls(
     creds_file: str = typer.Option(
         "~/.dtapi",
         "-c",
-        "--cred_file",
+        "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
     rate_limit: bool = typer.Option(
