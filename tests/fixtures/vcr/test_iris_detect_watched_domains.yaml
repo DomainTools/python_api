@@ -1,135 +1,258 @@
 interactions:
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&offset=0
-    response:
-      content:
-        '{"watchlist_domains":[{"state":"watched","domain":"httpsmyaccountgooglecom.com","status":"active","discovered_date":"2022-06-12T07:45:12.432000+00:00","changed_date":"2022-06-12T07:46:05.000000+00:00","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":80,"spam":95,"evidence":["domain
-        name","registrant","ip address"]}},"mx_exists":true,"tld":"com","id":"KW36NNpDPp","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:34.000000+00:00"},{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
-        name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
-        name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"},{"state":"watched","domain":"googlepi.gq","status":"active","discovered_date":"2022-05-17T18:07:17.476000+00:00","changed_date":"2022-05-17T18:11:53.000000+00:00","risk_score":97,"risk_score_status":"full","risk_score_components":{"proximity":34,"threat_profile":{"phishing":97,"malware":72,"spam":76,"evidence":["domain
-        name","name server","registrant"]}},"mx_exists":false,"tld":"gq","id":"6EgoNRQKEw","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-17T20:15:32.000000+00:00"}],"total_count":4,"count":4,"offset":0,"limit":100}'
-      headers:
-        Cache-Control:
-          - no-store, no-cache, must-revalidate
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json
-        Date:
-          - Thu, 16 Jun 2022 15:09:30 GMT
-        Expires:
-          - Thu, 19 Nov 1981 08:52:00 GMT
-        Pragma:
-          - no-cache
-        Set-Cookie:
-          - csrftoken=86d5c6e40c9a4f4ddb2ec9ef67671431; path=/; domain=.domaintools.com;
-            secure
-          - dtsession=59fg9e5i0lh9bn31r2gpbbogv0oq03icfaf73jiieoj1h48t8m76tq425dt7p8aupmb67fohnvt7gdtvd937qk59r89mms8r7tvdeoo;
-            expires=Sat, 16-Jul-2022 15:09:30 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-            secure; HttpOnly
-        Transfer-Encoding:
-          - chunked
-      http_version: HTTP/1.1
-      status_code: 200
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
-    response:
-      content:
-        '{"watchlist_domains":[{"state":"watched","domain":"httpsmyaccountgooglecom.com","status":"active","discovered_date":"2022-06-12T07:45:12.432000+00:00","changed_date":"2022-06-12T07:46:05.000000+00:00","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":80,"spam":95,"evidence":["domain
-        name","registrant","ip address"]}},"mx_exists":true,"tld":"com","id":"KW36NNpDPp","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:34.000000+00:00"},{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
-        name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googlepi.gq","status":"active","discovered_date":"2022-05-17T18:07:17.476000+00:00","changed_date":"2022-05-17T18:11:53.000000+00:00","risk_score":97,"risk_score_status":"full","risk_score_components":{"proximity":34,"threat_profile":{"phishing":97,"malware":72,"spam":76,"evidence":["domain
-        name","name server","registrant"]}},"mx_exists":false,"tld":"gq","id":"6EgoNRQKEw","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-17T20:15:32.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
-        name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}],"total_count":4,"count":4,"offset":0,"limit":100}'
-      headers:
-        Cache-Control:
-          - no-store, no-cache, must-revalidate
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json
-        Date:
-          - Thu, 16 Jun 2022 15:09:32 GMT
-        Expires:
-          - Thu, 19 Nov 1981 08:52:00 GMT
-        Pragma:
-          - no-cache
-        Set-Cookie:
-          - csrftoken=536d9264d4fe8a50292443155dd6727a; path=/; domain=.domaintools.com;
-            secure
-          - dtsession=nlf6n516c2atah5dbp63cabhsv2pijs2o51abalevpjr9l3vff0pk9f8bj3vrnb47233qtjv895v23ehoi3813pcatvnvbmfhpkfmfo;
-            expires=Sat, 16-Jul-2022 15:09:32 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-            secure; HttpOnly
-        Transfer-Encoding:
-          - chunked
-      http_version: HTTP/1.1
-      status_code: 200
-  - request:
-      body: ""
-      headers:
-        accept:
-          - "*/*"
-        accept-encoding:
-          - gzip, deflate
-        connection:
-          - keep-alive
-        host:
-          - api.domaintools.com
-        user-agent:
-          - python-httpx/0.22.0
-      method: GET
-      uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&escalation_types%5B%5D=blocked&include_domain_data=false&offset=0
-    response:
-      content:
-        '{"watchlist_domains":[{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
-        name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
-        name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}],"total_count":2,"count":2,"offset":0,"limit":100}'
-      headers:
-        Cache-Control:
-          - no-store, no-cache, must-revalidate
-        Content-Encoding:
-          - gzip
-        Content-Type:
-          - application/json
-        Date:
-          - Thu, 16 Jun 2022 15:09:34 GMT
-        Expires:
-          - Thu, 19 Nov 1981 08:52:00 GMT
-        Pragma:
-          - no-cache
-        Set-Cookie:
-          - csrftoken=aadbb770b031c03323e5bea61a481fb0; path=/; domain=.domaintools.com;
-            secure
-          - dtsession=kg58aqmbmb8liha18uums3nud0pfij1isj9rkgotvjfnkdgqjb67q7rvt6omng3vjlmi6em6ue563u4p3t3avvqjbvp31jj69247q17;
-            expires=Sat, 16-Jul-2022 15:09:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-            secure; HttpOnly
-        Transfer-Encoding:
-          - chunked
-      http_version: HTTP/1.1
-      status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"watched","domain":"httpsmyaccountgooglecom.com","status":"active","discovered_date":"2022-06-12T07:45:12.432000+00:00","changed_date":"2022-06-12T07:46:05.000000+00:00","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":80,"spam":95,"evidence":["domain
+      name","registrant","ip address"]}},"mx_exists":true,"tld":"com","id":"KW36NNpDPp","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:34.000000+00:00"},{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
+      name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
+      name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"},{"state":"watched","domain":"googlepi.gq","status":"active","discovered_date":"2022-05-17T18:07:17.476000+00:00","changed_date":"2022-05-17T18:11:53.000000+00:00","risk_score":97,"risk_score_status":"full","risk_score_components":{"proximity":34,"threat_profile":{"phishing":97,"malware":72,"spam":76,"evidence":["domain
+      name","name server","registrant"]}},"mx_exists":false,"tld":"gq","id":"6EgoNRQKEw","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-17T20:15:32.000000+00:00"}],"total_count":4,"count":4,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:09:30 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=86d5c6e40c9a4f4ddb2ec9ef67671431; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=59fg9e5i0lh9bn31r2gpbbogv0oq03icfaf73jiieoj1h48t8m76tq425dt7p8aupmb67fohnvt7gdtvd937qk59r89mms8r7tvdeoo;
+        expires=Sat, 16-Jul-2022 15:09:30 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
+  response:
+    content: '{"watchlist_domains":[{"state":"watched","domain":"httpsmyaccountgooglecom.com","status":"active","discovered_date":"2022-06-12T07:45:12.432000+00:00","changed_date":"2022-06-12T07:46:05.000000+00:00","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":80,"spam":95,"evidence":["domain
+      name","registrant","ip address"]}},"mx_exists":true,"tld":"com","id":"KW36NNpDPp","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:34.000000+00:00"},{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
+      name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googlepi.gq","status":"active","discovered_date":"2022-05-17T18:07:17.476000+00:00","changed_date":"2022-05-17T18:11:53.000000+00:00","risk_score":97,"risk_score_status":"full","risk_score_components":{"proximity":34,"threat_profile":{"phishing":97,"malware":72,"spam":76,"evidence":["domain
+      name","name server","registrant"]}},"mx_exists":false,"tld":"gq","id":"6EgoNRQKEw","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-17T20:15:32.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
+      name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}],"total_count":4,"count":4,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:09:32 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=536d9264d4fe8a50292443155dd6727a; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=nlf6n516c2atah5dbp63cabhsv2pijs2o51abalevpjr9l3vff0pk9f8bj3vrnb47233qtjv895v23ehoi3813pcatvnvbmfhpkfmfo;
+        expires=Sat, 16-Jul-2022 15:09:32 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=1.0.1&escalation_types%5B%5D=blocked&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"watched","domain":"accountcheckgoogle.ml","status":"active","discovered_date":"2022-05-20T13:16:29.550000+00:00","changed_date":null,"risk_score":99,"risk_score_status":"full","risk_score_components":{"proximity":28,"threat_profile":{"phishing":99,"malware":97,"spam":99,"evidence":["domain
+      name","name server","ip address"]}},"mx_exists":false,"tld":"ml","id":"OWxzqKqQEY","escalations":[{"escalation_type":"blocked","id":"5X1xLoWbp2","created":"2022-05-20T19:04:23.982670+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"W7Vb2GBx8m","created":"2022-05-20T19:04:26.283318+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-20T19:04:27.000000+00:00"},{"state":"watched","domain":"googletalker.com.cn","status":"active","discovered_date":"2022-05-17T20:25:12.128000+00:00","changed_date":"2022-06-16T10:04:49.000000+00:00","risk_score":76,"risk_score_status":"full","risk_score_components":{"proximity":76,"threat_profile":{"phishing":71,"malware":9,"spam":49,"evidence":["domain
+      name","registrant","name server"]}},"mx_exists":false,"tld":"com.cn","id":"gae08rdVWG","escalations":[{"escalation_type":"blocked","id":"oW5bZ5wg9D","created":"2022-05-18T15:49:24.208330+00:00","created_by":"integrations+test1@domaintools.com"},{"escalation_type":"google_safe","id":"4ovg8GBEz3","created":"2022-05-18T15:49:26.495792+00:00","created_by":"integrations+test1@domaintools.com"}],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:04:03.000000+00:00"}],"total_count":2,"count":2,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 16 Jun 2022 15:09:34 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=aadbb770b031c03323e5bea61a481fb0; path=/; domain=.domaintools.com;
+        secure
+      - dtsession=kg58aqmbmb8liha18uums3nud0pfij1isj9rkgotvjfnkdgqjb67q7rvt6omng3vjlmi6em6ue563u4p3t3avvqjbvp31jj69247q17;
+        expires=Sat, 16-Jul-2022 15:09:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[],"total_count":0,"count":0,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Apr 2024 05:53:29 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=llii137l7k3i4htqf03vshvmrjfa3297aelvjeeq3j7vvkc1e76oe9a8vf3v0es9h9t68gum5ec40cenoorkbooj4fb0302748lbc5e;
+        expires=Sat, 11-May-2024 05:53:29 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
+  response:
+    content: '{"watchlist_domains":[],"total_count":0,"count":0,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Apr 2024 05:59:23 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=jvcvdt9l9j4bnscjqrikikpust5j8fue5brmopbvgq7mkpl61oghv6fqpqmvqqhf2de3o9ogl89oa51hltsq1ciohsj7rbfn6eck1hj;
+        expires=Sat, 11-May-2024 05:59:23 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.0.0&escalation_types%5B%5D=blocked&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[],"total_count":0,"count":0,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Apr 2024 06:10:34 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=knbe4c5h9i5llgipqiflgskuke737ahbnhumjp0gjvrta6d2ku2c2bb32n79qq55dh2m4mutis7st640d4ptttumutdhode9bkvp60b;
+        expires=Sat, 11-May-2024 06:10:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

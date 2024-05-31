@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "domaintools_api"
+dependencies = ["httpx", "rich", "typer"]
+requires-python = ">= 3.6"
+authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
+description = "DomainTools Official Python API"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["Python", "Python3"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/domaintools/python_api"
+
+
+[project.scripts]
+domaintools = "domaintools.cli:run"
+
+[project.optional-dependencies]
+test = ["pytest", "mock"]
+
+[tool.setuptools]
+packages = [
+    "domaintools",
+    "domaintools.cli",
+    "domaintools.cli.commands",
+    "domaintools_async",
+]
+
+[tool.setuptools.dynamic]
+version = { "file" = "VERSION" }
