@@ -51,7 +51,7 @@ class API(object):
         verify_ssl=True,
         rate_limit=True,
         proxy_url=None,
-        always_sign_api_key=False,
+        always_sign_api_key=True,
         key_sign_hash="sha256",
         app_name="python_wrapper",
         app_version=version,
