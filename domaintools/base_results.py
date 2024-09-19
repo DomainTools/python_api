@@ -1,4 +1,5 @@
 """Defines the base result object - which specifies how DomainTools API endpoints will be interacted with"""
+
 import collections
 import json
 import re
@@ -6,22 +7,39 @@ import time
 import logging
 from datetime import datetime
 
-from domaintools.exceptions import (BadRequestException, InternalServerErrorException, NotAuthorizedException,
-                                    NotFoundException, ServiceException, ServiceUnavailableException,
-                                    IncompleteResponseException, RequestUriTooLongException)
+from domaintools.exceptions import (
+    BadRequestException,
+    InternalServerErrorException,
+    NotAuthorizedException,
+    NotFoundException,
+    ServiceException,
+    ServiceUnavailableException,
+    IncompleteResponseException,
+    RequestUriTooLongException,
+)
 from httpx import Client
 
-try: # pragma: no cover
+try:  # pragma: no cover
     from collections.abc import MutableMapping, MutableSequence
-except ImportError: # pragma: no cover
+except ImportError:  # pragma: no cover
     from collections import MutableMapping, MutableSequence
 
 log = logging.getLogger(__name__)
 
+
 class Results(MutableMapping, MutableSequence):
     """The base (abstract) DomainTools result definition"""
 
-    def __init__(self, api, product, url, items_path=(), response_path=('response', ), proxy_url=None, **kwargs):
+    def __init__(
+        self,
+        api,
+        product,
+        url,
+        items_path=(),
+        response_path=("response",),
+        proxy_url=None,
+        **kwargs,
+    ):
         self.api = api
         self.product = product
         self.url = url
@@ -41,51 +59,67 @@ class Results(MutableMapping, MutableSequence):
 
         now = datetime.now()
         limit = self.api.limits[self.product]
-        if 'last_scheduled' not in limit:
-            limit['last_scheduled'] = now
+        if "last_scheduled" not in limit:
+            limit["last_scheduled"] = now
             return None
 
-        safe_after = limit['last_scheduled'] + limit['interval']
+        safe_after = limit["last_scheduled"] + limit["interval"]
         wait_for = 0
         if now < safe_after:
             wait_for = safe_after - now
-            wait_for = float(wait_for.seconds) + (float(wait_for.microseconds) / 1000000.0)
-            limit['last_scheduled'] = safe_after
+            wait_for = float(wait_for.seconds) + (
+                float(wait_for.microseconds) / 1000000.0
+            )
+            limit["last_scheduled"] = safe_after
         else:
-            limit['last_scheduled'] = now
+            limit["last_scheduled"] = now
 
         return wait_for
 
     def _make_request(self):
 
-        with Client(verify=self.api.verify_ssl, proxies=self.api.proxy_url, timeout=None) as session:
-            if self.product in ['iris-investigate', 'iris-enrich', 'iris-detect-escalate-domains']:
+        with Client(
+            verify=self.api.verify_ssl, proxies=self.api.proxy_url, timeout=None
+        ) as session:
+            if self.product in [
+                "iris-investigate",
+                "iris-enrich",
+                "iris-detect-escalate-domains",
+            ]:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
                 return session.post(url=self.url, data=post_data)
-            elif self.product in ['iris-detect-manage-watchlist-domains']:
+            elif self.product in ["iris-detect-manage-watchlist-domains"]:
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
             else:
-                return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
+                return session.get(
+                    url=self.url, params=self.kwargs, **self.api.extra_request_params
+                )
 
     def _get_results(self):
         wait_for = self._wait_time()
-        if self.api.rate_limit and (wait_for is None or self.product == 'account-information'):
+        if self.api.rate_limit and (
+            wait_for is None or self.product == "account-information"
+        ):
             data = self._make_request()
-            if data.status_code == 503: # pragma: no cover
+            if data.status_code == 503:  # pragma: no cover
                 sleeptime = 60
-                log.info('503 encountered for [%s] - sleeping [%s] seconds before retrying request.',
-                         self.product, sleeptime)
+                log.info(
+                    "503 encountered for [%s] - sleeping [%s] seconds before retrying request.",
+                    self.product,
+                    sleeptime,
+                )
                 time.sleep(sleeptime)
                 self._wait_time()
                 data = self._make_request()
             return data
 
         if wait_for > 0:
-            log.info('Sleeping for [%s] prior to requesting [%s].',
-                     wait_for, self.product)
+            log.info(
+                "Sleeping for [%s] prior to requesting [%s].", wait_for, self.product
+            )
             time.sleep(wait_for)
         return self._make_request()
 
@@ -93,7 +127,7 @@ class Results(MutableMapping, MutableSequence):
         if self._data is None:
             results = self._get_results()
             self.setStatus(results.status_code, results)
-            if self.kwargs.get('format', 'json') == 'json':
+            if self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
             else:
                 self._data = results.text
@@ -104,16 +138,20 @@ class Results(MutableMapping, MutableSequence):
                 self._limit_exceeded_message = message
 
         if self._limit_exceeded is True:
-            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
+            raise ServiceException(
+                503, "Limit Exceeded{}".format(self._limit_exceeded_message)
+            )
         else:
             return self._data
 
     def check_limit_exceeded(self):
-        if self.kwargs.get('format', 'json') == 'json':
-            if ("response" in self._data and
-                "limit_exceeded" in self._data['response'] and
-                self._data['response']['limit_exceeded'] is True):
-                return True, self._data['response']['message']
+        if self.kwargs.get("format", "json") == "json":
+            if (
+                "response" in self._data
+                and "limit_exceeded" in self._data["response"]
+                and self._data["response"]["limit_exceeded"] is True
+            ):
+                return True, self._data["response"]["message"]
         # TODO: handle html, xml response errors better.
         elif "response" in self._data and "limit_exceeded" in self._data:
             return True, "limit exceeded"
@@ -121,7 +159,7 @@ class Results(MutableMapping, MutableSequence):
 
     @property
     def status(self):
-        if not getattr(self, '_status', None):
+        if not getattr(self, "_status", None):
             self._status = self._get_results().status_code
 
         return self._status
@@ -135,7 +173,7 @@ class Results(MutableMapping, MutableSequence):
         if response is not None:
             try:
                 reason = response.json()
-            except Exception: # pragma: no cover
+            except Exception:  # pragma: no cover
                 reason = response.text
                 if callable(reason):
                     reason = reason()
@@ -146,16 +184,16 @@ class Results(MutableMapping, MutableSequence):
             raise NotAuthorizedException(code, reason)
         elif code == 404:
             raise NotFoundException(code, reason)
-        elif code == 500: # pragma: no cover
+        elif code == 500:  # pragma: no cover
             raise InternalServerErrorException(code, reason)
-        elif code == 503: # pragma: no cover
+        elif code == 503:  # pragma: no cover
             raise ServiceUnavailableException(code, reason)
-        elif code == 206: # pragma: no cover
+        elif code == 206:  # pragma: no cover
             raise IncompleteResponseException(code, reason)
-        elif code == 414: # pragma: no cover
+        elif code == 414:  # pragma: no cover
             raise RequestUriTooLongException(code, reason)
-        else: # pragma: no cover
-            raise ServiceException(code, 'Unknown Exception')
+        else:  # pragma: no cover
+            raise ServiceException(code, "Unknown Exception")
 
     def response(self):
         if self._response is None:
@@ -171,7 +209,7 @@ class Results(MutableMapping, MutableSequence):
 
     def emails(self):
         """Find and returns all emails mentioned in the response"""
-        return set(re.findall(r'[\w\.-]+@[\w\.-]+', str(self.response())))
+        return set(re.findall(r"[\w\.-]+@[\w\.-]+", str(self.response())))
 
     def _items(self):
         if self._items_list is None:
@@ -221,25 +259,58 @@ class Results(MutableMapping, MutableSequence):
 
     @property
     def json(self):
-        self.kwargs.pop('format', None)
-        return self.__class__(format='json', product=self.product, url=self.url, items_path=self.items_path,
-                              response_path=self.response_path, api=self.api, **self.kwargs)
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="json",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
 
     @property
     def xml(self):
-        self.kwargs.pop('format', None)
-        return self.__class__(format='xml', product=self.product, url=self.url, items_path=self.items_path,
-                              response_path=self.response_path, api=self.api, **self.kwargs)
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="xml",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
 
     @property
     def html(self):
-        self.kwargs.pop('format', None)
-        return self.__class__(api=self.api, product=self.product, url=self.url, items_path=self.items_path,
-                              response_path=self.response_path, format='html', **self.kwargs)
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            api=self.api,
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            format="html",
+            **self.kwargs,
+        )
 
     def as_list(self):
-        return '\n'.join([json.dumps(item, indent=4, separators=(',', ': ')) for item in self._items()])
+        return "\n".join(
+            [
+                json.dumps(item, indent=4, separators=(",", ": "))
+                for item in self._items()
+            ]
+        )
 
     def __str__(self):
-        return str(json.dumps(self.data(), indent=4,
-                              separators=(',', ': ')) if self.kwargs.get('format', 'json') == 'json' else self.data())
+        return str(
+            json.dumps(self.data(), indent=4, separators=(",", ": "))
+            if self.kwargs.get("format", "json") == "json"
+            else self.data()
+        )
+
+    @property
+    def as_json_from_jsonl(self):
+        pass
