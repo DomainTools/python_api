@@ -41,3 +41,7 @@ IRIS_DETECT_IGNORED_DOMAINS = "iris_detect_ignored_domains"
 # phisheye
 PHISHEYE = "phisheye"
 PHISHEYE_TERM_LIST = "phisheye_term_list"
+
+# feeds
+FEEDS_NAD = "newly-active-domains-feed-(api)"
+FEEDS_NOD = "newly-observed-domains-feed-(api)"

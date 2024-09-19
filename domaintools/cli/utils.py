@@ -81,6 +81,8 @@ _command_help_mapper = {
     c.IRIS_DETECT_MANAGE_WATCHLIST_DOMAINS: "Changes the watch state of a list of domains by their Iris Detect domain ID.",
     c.IRIS_DETECT_ESCALATE_DOMAINS: "Changes the escalation type of a list of domains by their Iris Detect domain ID.",
     c.IRIS_DETECT_IGNORED_DOMAINS: "Returns back a list of ignored domains in Iris Detect based on the provided filters.",
+    c.FEEDS_NAD: "Returns back newly active domains feed.",
+    c.FEEDS_NOD: "Returns back newly observed domains feed.",
 }
 
 

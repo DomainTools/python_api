@@ -1,6 +1,5 @@
 """Defines the base result object - which specifies how DomainTools API endpoints will be interacted with"""
 
-import collections
 import json
 import re
 import time
@@ -17,6 +16,8 @@ from domaintools.exceptions import (
     IncompleteResponseException,
     RequestUriTooLongException,
 )
+from domaintools.utils import get_feeds_products_list
+
 from httpx import Client
 
 try:  # pragma: no cover
@@ -127,7 +128,12 @@ class Results(MutableMapping, MutableSequence):
         if self._data is None:
             results = self._get_results()
             self.setStatus(results.status_code, results)
-            if self.kwargs.get("format", "json") == "json":
+            if self.product in get_feeds_products_list():
+                # Special handling of feeds products' data since the result is in jsonline format
+                # As much as possible we would like to preserve its format
+                self.kwargs["format"] = "jsonline"
+                self._data = results.text
+            elif self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
             else:
                 self._data = results.text

@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta, timezone
-from hashlib import sha1, sha256, md5
 from hmac import new as hmac
-from types import MethodType
 import re
 
 from domaintools._version import current as version
@@ -1118,5 +1116,25 @@ class API(object):
             limit=limit,
             items_path=("watchlist_domains",),
             response_path=(),
+            **kwargs,
+        )
+
+    def newly_observed_domains_feed(self, **kwargs):
+        """Returns back list of the newly observed domains feed"""
+        return self._results(
+            "newly-observed-domains-feed-(api)",
+            "v1/feed/nod/",
+            response_path=(),
+            after="-60",
+            **kwargs,
+        )
+
+    def newly_active_domains_feed(self, **kwargs):
+        """Returns back list of the newly active domains feed"""
+        return self._results(
+            "newly-active-domains-feed-(api)",
+            "v1/feed/nod/",
+            response_path=(),
+            after="-60",
             **kwargs,
         )
