@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta, timezone
+from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 import re
 
@@ -1133,7 +1134,7 @@ class API(object):
         """Returns back list of the newly active domains feed"""
         return self._results(
             "newly-active-domains-feed-(api)",
-            "v1/feed/nod/",
+            "v1/feed/nad/",
             response_path=(),
             after="-60",
             **kwargs,
