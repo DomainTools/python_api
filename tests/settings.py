@@ -45,9 +45,14 @@ vcr = VCR(
     path_transformer=VCR.ensure_suffix(".yaml"),
     record_mode="new_episodes",
 )
+
+
 with vcr.use_cassette("init_user_account"):
+    test_user = os.getenv("TEST_USER") or "test"
+    test_pass = os.getenv("TEST_KEY") or "test"
+
     api = API(
-        os.getenv("TEST_USER", "test"),
-        os.getenv("TEST_KEY", "test"),
+        test_user,
+        test_pass,
         always_sign_api_key=False,
     )

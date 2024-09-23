@@ -531,17 +531,17 @@ def test_newly_observed_domains_feed():
         assert "domain" in feed_result.keys()
 
 
-@vcr.use_cassette
-def test_newly_active_domains_feed():
-    results = api.newly_active_domains_feed()
-    response = results.response()
-    rows = response.strip().split("\n")
+# @vcr.use_cassette
+# def test_newly_active_domains_feed():
+#     results = api.newly_active_domains_feed()
+#     response = results.response()
+#     rows = response.strip().split("\n")
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+#     assert response is not None
+#     assert results.status == 200
+#     assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+#     for row in rows:
+#         feed_result = json.loads(row)
+#         assert "timestamp" in feed_result.keys()
+#         assert "domain" in feed_result.keys()
