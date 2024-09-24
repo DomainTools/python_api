@@ -182,12 +182,7 @@ def convert_str_to_dateobj(
 
 
 def get_feeds_products_list():
-    from domaintools.cli.constants import (
-        FEEDS_NAD,
-        FEEDS_NOD,
-    )  # Prevents circular import error
-
     return [
-        FEEDS_NAD,
-        FEEDS_NOD,
+        "newly-active-domains-feed-(api)",
+        "newly-observed-domains-feed-(api)",
     ]

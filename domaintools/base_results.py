@@ -131,7 +131,6 @@ class Results(MutableMapping, MutableSequence):
             if self.product in get_feeds_products_list():
                 # Special handling of feeds products' data since the result is in jsonline format
                 # As much as possible we would like to preserve its format
-                self.kwargs["format"] = "jsonline"
                 self._data = results.text
             elif self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
