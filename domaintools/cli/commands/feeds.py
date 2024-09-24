@@ -56,7 +56,7 @@ def feeds_nad(
     name=c.FEEDS_NOD,
     help=get_cli_helptext_by_name(command_name=c.FEEDS_NOD),
 )
-def feeds_nad(
+def feeds_nod(
     ctx: typer.Context,
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
