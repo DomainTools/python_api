@@ -43,5 +43,5 @@ PHISHEYE = "phisheye"
 PHISHEYE_TERM_LIST = "phisheye_term_list"
 
 # feeds
-FEEDS_NAD = "newly-active-domains-feed-(api)"
-FEEDS_NOD = "newly-observed-domains-feed-(api)"
+FEEDS_NAD = "newly_active_domains_feed"
+FEEDS_NOD = "newly_observed_domains_feed"
