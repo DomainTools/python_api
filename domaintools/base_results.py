@@ -315,7 +315,3 @@ class Results(MutableMapping, MutableSequence):
             if self.kwargs.get("format", "json") == "json"
             else self.data()
         )
-
-    @property
-    def as_json_from_jsonl(self):
-        pass
