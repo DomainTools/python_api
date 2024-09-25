@@ -1,11 +1,12 @@
 """Defines all test wide settings and variables"""
 
-from os import environ
-from yarl import URL
+import os
 import json
 
-from domaintools import API, utils
 from vcr import VCR
+from yarl import URL
+
+from domaintools import API, utils
 
 
 def remove_server(response):
@@ -46,7 +47,7 @@ vcr = VCR(
 )
 with vcr.use_cassette("init_user_account"):
     api = API(
-        environ.get("TEST_USER", "test"),
-        environ.get("TEST_KEY", "test"),
-        always_sign_api_key=True,
+        os.getenv("TEST_USER", "test"),
+        os.getenv("TEST_KEY", "test"),
+        always_sign_api_key=False,
     )
