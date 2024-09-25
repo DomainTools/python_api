@@ -128,11 +128,11 @@ class Results(MutableMapping, MutableSequence):
         if self._data is None:
             results = self._get_results()
             self.setStatus(results.status_code, results)
-            if self.product in get_feeds_products_list():
-                # Special handling of feeds products' data since the result is in jsonline format
-                # As much as possible we would like to preserve its format
-                self._data = results.text
-            elif self.kwargs.get("format", "json") == "json":
+            if (
+                self.kwargs.get("format", "json") == "json"
+                and self.product
+                not in get_feeds_products_list()  # Special handling of feeds products' data to preserve the result in jsonline format
+            ):
                 self._data = results.json()
             else:
                 self._data = results.text
