@@ -215,4 +215,59 @@ interactions:
       - '135694'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.1.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82V226DMAyG3yVXm1QkoKUrfZVpQgHS4gkclEO7quLdZw5bc9F1ZJrUckXiQz6b
+        H+fMlNCtRC3Y9sx4UUiLZnhtIbNaKOQNmdh7znNesAW5GDjQjlFWdAvWKlnawmi2fT0zKMlzyhEA
+        7qRquAGJFNYKlTUSTZXV0ACdwKKwfyZTJa36sqCt6ykA0BrxHZH0x+da1s7m6Gw13w8FGFnyU588
+        Tsl5OJBWL6swZgQrPlpQA1FWciPG6G4xgYMCHQhUUFQ/A/vwxqEHcLJygNN0k8wEBjwIbWDfm69R
+        x95t9sEOHehoNbfJpTCiIIXsUSpRBqVsOKC+hn+BnIUeeaCvHfS1H3jDkZIFR26KqgZtblXAEm+Z
+        h3/8AKFnFRLBSHXPvi8jP2QUxzupZelS+0EPMrmbzN05mP4OfqwkXNex/7yOfCaJ5+9ISqhPgczp
+        hjpcehvsBC2e6O56/p8axv25M9wVSTpjgI9FjDfqY5SwcSpIbuj8res+AcRrxKk6CAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Sep 2024 17:07:20 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=nkrfgoegtqtueqtgm35ku6uq1v0o09dv2n3g74v5j6uhal1bhcldef3m5dntvv534cvonmvq71mevnou735083edd7mlf11k79vopkr;
+        expires=Sat, 26-Oct-2024 17:07:20 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '78037'
+    status:
+      code: 200
+      message: OK
 version: 1

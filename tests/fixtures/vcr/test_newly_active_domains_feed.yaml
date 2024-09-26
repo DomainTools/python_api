@@ -13,7 +13,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"timestamp":"2024-09-23T22:20:04Z","domain":"nettoyeurpresdechezmoi.ca"}
 
@@ -185,7 +185,7 @@ interactions:
       user-agent:
       - python-httpx/0.27.2
     method: GET
-    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.1.0
   response:
     body:
       string: '{"timestamp":"2024-09-24T13:55:33Z","domain":"mmmmdekalb.ph"}

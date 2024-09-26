@@ -45,7 +45,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/phisheye/term-list?app_name=python_wrapper&app_version=2.0.0&include_inactive=false
+    uri: https://api.domaintools.com/v1/phisheye/term-list?app_name=python_wrapper&app_version=2.1.0&include_inactive=false
   response:
     content: '{"response":{"terms":[{"term":"google","active":true,"user_monitor_count":1}]}}'
     headers:

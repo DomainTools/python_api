@@ -131,7 +131,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/domains/new/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
+    uri: https://api.domaintools.com/v1/iris-detect/domains/new/?app_name=python_wrapper&app_version=2.1.0&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
   response:
     content: '{"watchlist_domains":[{"state":"new","domain":"recoveryprocess-google.com","status":"active","discovered_date":"2023-09-16T01:53:42.031000Z","changed_date":"2023-09-17T10:02:08.000000Z","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":65,"malware":28,"spam":11,"evidence":["domain
       name","registrant","ip address"]}},"mx_exists":false,"tld":"com","id":"jWRlkKrg7E","escalations":[],"monitor_ids":["nAwmQg2pqg"]},{"state":"new","domain":"googlespinjoy.com","status":"active","discovered_date":"2023-11-15T02:40:54.926000Z","changed_date":"2024-04-02T09:34:21.000000Z","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":15,"malware":1,"spam":13,"evidence":[]}},"mx_exists":false,"tld":"com","id":"Ya2qzz1GOW","escalations":[],"monitor_ids":["nAwmQg2pqg"]},{"state":"new","domain":"open-google.com","status":"active","discovered_date":"2023-10-12T07:19:22.815000Z","changed_date":"2023-10-12T10:09:36.000000Z","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":96,"malware":9,"spam":1,"evidence":["domain

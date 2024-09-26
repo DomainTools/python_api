@@ -283,7 +283,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/registrant-alert?app_name=python_wrapper&app_version=2.0.0&days_back=0&query=google
+    uri: https://api.domaintools.com/v1/registrant-alert?app_name=python_wrapper&app_version=2.1.0&days_back=0&query=google
   response:
     content: '{"response":{"query":"google","limit":200,"total":971,"date":"2024-04-10","alerts":[{"domain":"180axis.com","match_type":"removed","current_owner":"DATA
       REDACTED","created":"2024-04-09","modified":"2024-04-09","last_owner":"Contact

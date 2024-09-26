@@ -147,7 +147,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"error":{"code":400,"message":"We could not understand your request.
       It may be missing important parameters or is simply malformed. Consult the API
@@ -193,7 +193,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"error":{"code":404,"message":"We have no recent WHOIS information
       available for this domain\/IP Address."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
@@ -238,7 +238,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=2.0.0&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=2.1.0&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
   response:
     content: '{"error":{"code":403,"message":"The credentials you entered do not match
       an active account."},"resources":{"support":"https:\/\/www.domaintools.com\/support\/"}}'
@@ -283,7 +283,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"error":{"code":400,"message":"We could not understand your request.
       It may be missing important parameters or is simply malformed. Consult the API

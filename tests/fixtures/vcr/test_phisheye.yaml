@@ -151,7 +151,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/phisheye?app_name=python_wrapper&app_version=2.0.0&query=google
+    uri: https://api.domaintools.com/v1/phisheye?app_name=python_wrapper&app_version=2.1.0&query=google
   response:
     content: '{"response":{"term":"google","date":"2024-04-10","domains":[{"domain":"abr-google-workspace.com","tld":"com","created_date":"2024-04-08","registrant_email":"select
       contact domain holder link at https:\/\/www.secureserver.net\/whois?plid=1387&domain=abr-google-workspace.com","registrar_name":"Wild

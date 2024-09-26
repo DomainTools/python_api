@@ -45,7 +45,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/risk/evidence/?app_name=python_wrapper&app_version=2.0.0&domain=google.com
+    uri: https://api.domaintools.com/v1/risk/evidence/?app_name=python_wrapper&app_version=2.1.0&domain=google.com
   response:
     content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
     headers:
