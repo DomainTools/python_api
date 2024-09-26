@@ -44,7 +44,7 @@ def feeds_nad(
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
     no_sign_api_key: bool = typer.Option(
-        True,
+        False,
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
@@ -88,7 +88,7 @@ def feeds_nod(
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
     no_sign_api_key: bool = typer.Option(
-        True,
+        False,
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
