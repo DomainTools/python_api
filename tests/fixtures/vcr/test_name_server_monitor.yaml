@@ -80,7 +80,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=2.0.0&days_back=0&page=1&query=google.com
+    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=2.1.0&days_back=0&page=1&query=google.com
   response:
     content: '{"response":{"limit":1000,"date":"2024-04-10","name_server":"google.com","total":"100","page":1,"page_count":1,"alerts":[{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
       In","domain":"ACTIVISIONAWARDS.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer

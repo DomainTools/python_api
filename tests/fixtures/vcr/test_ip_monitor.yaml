@@ -45,7 +45,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=2.0.0&days_back=0&page=1&query=65.55.53.233
+    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=2.1.0&days_back=0&page=1&query=65.55.53.233
   response:
     content: '{"response":{"limit":1000,"date":"2024-04-10","ip_address":"65.55.53.233","total":"0","page":1,"page_count":0,"alerts":[]}}'
     headers:

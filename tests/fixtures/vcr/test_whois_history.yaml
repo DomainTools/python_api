@@ -2507,7 +2507,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/woot.com/whois/history?app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/woot.com/whois/history?app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"response":{"record_count":611,"history":[{"date":"2024-03-25","is_private":0,"whois":{"registrant":"Woot,
       Inc.","registration":{"created":"2000-01-12","expires":"2025-01-12","updated":"2023-10-31","registrar":"MarkMonitor

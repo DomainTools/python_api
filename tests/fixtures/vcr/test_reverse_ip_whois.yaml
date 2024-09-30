@@ -109,7 +109,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.0.0&include_total_count=false&page=1&query=DomainTools
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.1.0&include_total_count=false&page=1&query=DomainTools
   response:
     content: '{"response":{"records":[{"ip_from":"199.30.228.0","ip_to":"199.30.231.255","record_ip":"199.30.228.113","record_date":"2024-04-09","country":"US","range":"199.30.228.0\/22","organization":"DomainTools,
       LLC","server":"whois.arin.net","short_record_ip":"199.30.228.113"},{"ip_from":"64.246.165.128","ip_to":"64.246.165.255","record_ip":"64.246.165.128","record_date":"2024-04-03","country":"US","range":"64.246.165.128\/25","organization":"DomainTools,
@@ -167,7 +167,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.0.0&include_total_count=false&ip=65.55.53.233&page=1
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.1.0&include_total_count=false&ip=65.55.53.233&page=1
   response:
     content: '{"response":{"whois_record":"NetRange:       65.52.0.0 - 65.55.255.255\nCIDR:           65.52.0.0\/14\nNetName:        MICROSOFT-1BLK\nNetHandle:      NET-65-52-0-0-1\nParent:         NET65
       (NET-65-0-0-0-0)\nNetType:        Direct Allocation\nOriginAS:       \nOrganization:   Microsoft

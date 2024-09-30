@@ -94,7 +94,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&offset=0
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.1.0&include_domain_data=false&offset=0
   response:
     content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":2,"risk_score_status":"full","risk_score_components":{"proximity":1,"threat_profile":{"phishing":2,"malware":2,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"},{"state":"ignored","domain":"googleadspodcast.com","status":"active","discovered_date":"2022-05-19T05:47:59.201000Z","changed_date":"2022-11-16T23:22:45.000000Z","risk_score":24,"risk_score_status":"full","risk_score_components":{"proximity":24,"threat_profile":{"phishing":3,"malware":9,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com","id":"7WKo18K9WR","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-05-19T17:50:35.000000+00:00"}],"total_count":2,"count":2,"offset":0,"limit":100}'
     headers:
@@ -136,7 +136,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.0.0&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.1.0&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
   response:
     content: '{"watchlist_domains":[{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":2,"risk_score_status":"full","risk_score_components":{"proximity":1,"threat_profile":{"phishing":2,"malware":2,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":1,"count":1,"offset":0,"limit":100}'
     headers:
