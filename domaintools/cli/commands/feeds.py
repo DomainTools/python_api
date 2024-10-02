@@ -58,6 +58,12 @@ def feeds_nad(
         "--after",
         help="Start of the time window, relative to the current time in seconds, for which data will be provided",
     ),
+    domain: str = typer.Option(
+        None,
+        "-d",
+        "--domain",
+        help="A string value used to filter feed results",
+    ),
     top: str = typer.Option(
         None,
         "--top",
@@ -116,6 +122,12 @@ def feeds_nod(
         None,
         "--after",
         help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+    ),
+    domain: str = typer.Option(
+        None,
+        "-d",
+        "--domain",
+        help="A string value used to filter feed results",
     ),
     top: str = typer.Option(
         None,
