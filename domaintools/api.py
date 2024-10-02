@@ -1124,8 +1124,8 @@ class API(object):
         """Returns back list of the newly observed domains feed"""
         sessionID = kwargs.get("sessionID")
         after = kwargs.get("after")
-        if (sessionID and after) or not (sessionID or after):
-            raise ValueError("sessionID or after (but not both) must be defined")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
 
         return self._results(
             "newly-observed-domains-feed-(api)",
@@ -1138,8 +1138,8 @@ class API(object):
         """Returns back list of the newly active domains feed"""
         sessionID = kwargs.get("sessionID")
         after = kwargs.get("after")
-        if (sessionID and after) or not (sessionID or after):
-            raise ValueError("sessionID or after (but not both) must be defined")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
 
         return self._results(
             "newly-active-domains-feed-(api)",
