@@ -1120,22 +1120,30 @@ class API(object):
             **kwargs,
         )
 
-    def newly_observed_domains_feed(self, **kwargs):
+    def nod(self, **kwargs):
         """Returns back list of the newly observed domains feed"""
+        sessionID = kwargs.get("sessionID")
+        after = kwargs.get("after")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
+
         return self._results(
             "newly-observed-domains-feed-(api)",
             "v1/feed/nod/",
             response_path=(),
-            after="-60",
             **kwargs,
         )
 
-    def newly_active_domains_feed(self, **kwargs):
+    def nad(self, **kwargs):
         """Returns back list of the newly active domains feed"""
+        sessionID = kwargs.get("sessionID")
+        after = kwargs.get("after")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
+
         return self._results(
             "newly-active-domains-feed-(api)",
             "v1/feed/nad/",
             response_path=(),
-            after="-60",
             **kwargs,
         )

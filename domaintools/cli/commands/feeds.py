@@ -48,6 +48,27 @@ def feeds_nad(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
+    sessionID: str = typer.Option(
+        None,
+        "--session-id",
+        help="Unique identifier for the session",
+    ),
+    after: str = typer.Option(
+        None,
+        "--after",
+        help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+    ),
+    domain: str = typer.Option(
+        None,
+        "-d",
+        "--domain",
+        help="A string value used to filter feed results",
+    ),
+    top: str = typer.Option(
+        None,
+        "--top",
+        help="Number of results to return in the response payload",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_NAD, params=ctx.params)
 
@@ -91,6 +112,27 @@ def feeds_nod(
         False,
         "--no-sign-api-key",
         help="Skip signing of api key",
+    ),
+    sessionID: str = typer.Option(
+        None,
+        "--session-id",
+        help="Unique identifier for the session",
+    ),
+    after: str = typer.Option(
+        None,
+        "--after",
+        help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+    ),
+    domain: str = typer.Option(
+        None,
+        "-d",
+        "--domain",
+        help="A string value used to filter feed results",
+    ),
+    top: str = typer.Option(
+        None,
+        "--top",
+        help="Number of results to return in the response payload",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_NOD, params=ctx.params)

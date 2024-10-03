@@ -517,7 +517,7 @@ def test_limit_exceeded():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
-    results = api.newly_observed_domains_feed()
+    results = api.nod(after="-60")
     response = results.response()
     rows = response.strip().split("\n")
 
@@ -533,7 +533,7 @@ def test_newly_observed_domains_feed():
 
 @vcr.use_cassette
 def test_newly_active_domains_feed():
-    results = api.newly_active_domains_feed()
+    results = api.nad(after="-60")
     response = results.response()
     rows = response.strip().split("\n")
 
