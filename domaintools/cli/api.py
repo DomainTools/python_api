@@ -148,10 +148,11 @@ class DTCLICommand:
             kwargs (Optional[Dict], optional): The command available kwargs to pass in domaintools API
         """
         try:
-            rate_limit = params.pop("rate_limit") or False
-            response_format = params.pop("format") or "json"
-            out_file = params.pop("out_file") or sys.stdout
-            verify_ssl = params.pop("no_verify_ssl") or False
+            rate_limit = params.pop("rate_limit", False)
+            response_format = params.pop("format", "json")
+            out_file = params.pop("out_file", sys.stdout)
+            verify_ssl = params.pop("no_verify_ssl", False)
+            always_sign_api_key = params.pop("no_sign_api_key", False)
             source = None
 
             if "src_file" in params:
@@ -185,6 +186,7 @@ class DTCLICommand:
                     app_name=cls.APP_PARTNER_NAME,
                     verify_ssl=verify_ssl,
                     rate_limit=rate_limit,
+                    always_sign_api_key=always_sign_api_key,
                 )
                 dt_api_func = getattr(dt_api, name)
 

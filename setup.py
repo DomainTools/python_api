@@ -60,7 +60,7 @@ class PyTest(TestCommand):
 cmdclass["test"] = PyTest
 
 setup(
+    name="domaintools_api",
     cmdclass=cmdclass,
     ext_modules=ext_modules,
-    **PyTest.extra_kwargs,
 )

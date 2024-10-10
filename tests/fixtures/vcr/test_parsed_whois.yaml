@@ -73,7 +73,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/google.com/whois/parsed?app_name=python_wrapper&app_version=2.0.0
+    uri: https://api.domaintools.com/v1/google.com/whois/parsed?app_name=python_wrapper&app_version=2.1.0
   response:
     content: '{"response":{"registrant":"Google LLC","registration":{"created":"1997-09-15","expires":"2028-09-14","updated":"2019-09-09","registrar":"MarkMonitor
       Inc.","statuses":["clientDeleteProhibited","clientTransferProhibited","clientUpdateProhibited","serverDeleteProhibited","serverTransferProhibited","serverUpdateProhibited"]},"name_servers":["NS1.GOOGLE.COM","NS2.GOOGLE.COM","NS3.GOOGLE.COM","NS4.GOOGLE.COM"],"whois":{"date":"2024-04-10","record":"Domain

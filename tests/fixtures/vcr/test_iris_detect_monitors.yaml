@@ -93,7 +93,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.0.0&offset=0&order=desc
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.1.0&offset=0&order=desc
   response:
     content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153Z","updated_date":"2022-05-19T17:51:42.770730Z","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"},{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977Z","updated_date":"2022-05-18T20:19:03.051233Z","state":"active","status":"completed","created_by":"integrations+test1@domaintools.com"}]}'
     headers:
@@ -135,7 +135,7 @@ interactions:
       user-agent:
       - python-httpx/0.22.0
     method: GET
-    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.0.0&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.1.0&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
   response:
     content: '{"total_count":2,"offset":0,"limit":500,"monitors":[{"term":"google","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"nAwmQg2pqg","created_date":"2022-05-17T20:11:24.669977Z","updated_date":"2022-05-18T20:19:03.051233Z","state":"active","status":"completed","domain_counts":{"new":21990,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"},{"term":"amazon","match_substring_variations":false,"nameserver_exclusions":[],"text_exclusions":[],"id":"DKObxJVjYJ","created_date":"2022-05-19T17:50:22.600153Z","updated_date":"2022-05-19T17:51:42.770730Z","state":"active","status":"completed","domain_counts":{"new":30890,"watched":0,"escalated":0,"changed":0},"created_by":"integrations+test1@domaintools.com"}]}'
     headers:

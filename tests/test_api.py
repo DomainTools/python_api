@@ -1,11 +1,11 @@
 """Tests the Python interface for DomainTools APIs"""
 
 from os import environ
-from datetime import datetime
 
+import json
 import pytest
-from domaintools import API, exceptions
 
+from domaintools import API, exceptions
 from tests.settings import api, vcr
 
 
@@ -513,3 +513,35 @@ def test_limit_exceeded():
     with pytest.raises(exceptions.ServiceException):
         response = api.iris_investigate(ip="8.8.8.8")
         response.response()
+
+
+@vcr.use_cassette
+def test_newly_observed_domains_feed():
+    results = api.nod(after="-60")
+    response = results.response()
+    rows = response.strip().split("\n")
+
+    assert response is not None
+    assert results.status == 200
+    assert len(rows) >= 1
+
+    for row in rows:
+        feed_result = json.loads(row)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_newly_active_domains_feed():
+    results = api.nad(after="-60")
+    response = results.response()
+    rows = response.strip().split("\n")
+
+    assert response is not None
+    assert results.status == 200
+    assert len(rows) >= 1
+
+    for row in rows:
+        feed_result = json.loads(row)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()

@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256, md5
 from hmac import new as hmac
-from types import MethodType
 import re
 
 from domaintools._version import current as version
@@ -51,7 +50,7 @@ class API(object):
         verify_ssl=True,
         rate_limit=True,
         proxy_url=None,
-        always_sign_api_key=False,
+        always_sign_api_key=True,
         key_sign_hash="sha256",
         app_name="python_wrapper",
         app_version=version,
@@ -1117,6 +1116,34 @@ class API(object):
             offset=offset,
             limit=limit,
             items_path=("watchlist_domains",),
+            response_path=(),
+            **kwargs,
+        )
+
+    def nod(self, **kwargs):
+        """Returns back list of the newly observed domains feed"""
+        sessionID = kwargs.get("sessionID")
+        after = kwargs.get("after")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
+
+        return self._results(
+            "newly-observed-domains-feed-(api)",
+            "v1/feed/nod/",
+            response_path=(),
+            **kwargs,
+        )
+
+    def nad(self, **kwargs):
+        """Returns back list of the newly active domains feed"""
+        sessionID = kwargs.get("sessionID")
+        after = kwargs.get("after")
+        if not (sessionID or after):
+            raise ValueError("sessionID or after (can be both) must be defined")
+
+        return self._results(
+            "newly-active-domains-feed-(api)",
+            "v1/feed/nad/",
             response_path=(),
             **kwargs,
         )
