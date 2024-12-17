@@ -68,9 +68,7 @@ class Results(MutableMapping, MutableSequence):
         wait_for = 0
         if now < safe_after:
             wait_for = safe_after - now
-            wait_for = float(wait_for.seconds) + (
-                float(wait_for.microseconds) / 1000000.0
-            )
+            wait_for = float(wait_for.seconds) + (float(wait_for.microseconds) / 1000000.0)
             limit["last_scheduled"] = safe_after
         else:
             limit["last_scheduled"] = now
@@ -79,9 +77,7 @@ class Results(MutableMapping, MutableSequence):
 
     def _make_request(self):
 
-        with Client(
-            verify=self.api.verify_ssl, proxies=self.api.proxy_url, timeout=None
-        ) as session:
+        with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
             if self.product in [
                 "iris-investigate",
                 "iris-enrich",
@@ -95,15 +91,11 @@ class Results(MutableMapping, MutableSequence):
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
             else:
-                return session.get(
-                    url=self.url, params=self.kwargs, **self.api.extra_request_params
-                )
+                return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
-        if self.api.rate_limit and (
-            wait_for is None or self.product == "account-information"
-        ):
+        if self.api.rate_limit and (wait_for is None or self.product == "account-information"):
             data = self._make_request()
             if data.status_code == 503:  # pragma: no cover
                 sleeptime = 60
@@ -118,9 +110,7 @@ class Results(MutableMapping, MutableSequence):
             return data
 
         if wait_for > 0:
-            log.info(
-                "Sleeping for [%s] prior to requesting [%s].", wait_for, self.product
-            )
+            log.info("Sleeping for [%s] prior to requesting [%s].", wait_for, self.product)
             time.sleep(wait_for)
         return self._make_request()
 
@@ -143,19 +133,13 @@ class Results(MutableMapping, MutableSequence):
                 self._limit_exceeded_message = message
 
         if self._limit_exceeded is True:
-            raise ServiceException(
-                503, "Limit Exceeded{}".format(self._limit_exceeded_message)
-            )
+            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
         else:
             return self._data
 
     def check_limit_exceeded(self):
         if self.kwargs.get("format", "json") == "json":
-            if (
-                "response" in self._data
-                and "limit_exceeded" in self._data["response"]
-                and self._data["response"]["limit_exceeded"] is True
-            ):
+            if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
                 return True, self._data["response"]["message"]
         # TODO: handle html, xml response errors better.
         elif "response" in self._data and "limit_exceeded" in self._data:
@@ -302,16 +286,7 @@ class Results(MutableMapping, MutableSequence):
         )
 
     def as_list(self):
-        return "\n".join(
-            [
-                json.dumps(item, indent=4, separators=(",", ": "))
-                for item in self._items()
-            ]
-        )
+        return "\n".join([json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()])
 
     def __str__(self):
-        return str(
-            json.dumps(self.data(), indent=4, separators=(",", ": "))
-            if self.kwargs.get("format", "json") == "json"
-            else self.data()
-        )
+        return str(json.dumps(self.data(), indent=4, separators=(",", ": ")) if self.kwargs.get("format", "json") == "json" else self.data())
