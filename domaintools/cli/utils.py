@@ -60,6 +60,7 @@ _command_help_mapper = {
     c.IP_MONITOR: "Pass in the IP Address you wish to query ( i.e. 199.30.228.112 ).",
     c.IP_REGISTRANT_MONITOR: "Query based on free text query terms",
     c.NAME_SERVER_MONITOR: "Pass in the hostname of the Name Server you wish to query ( i.e. dynect.net ).",
+    c.PARSED_DOMAIN_RDAP: "Pass in a domain name to see the most recent Domain-RDAP registration record.",
     c.PARSED_WHOIS: "Pass in a domain name.",
     c.REGISTRANT_MONITOR: "One or more terms as a Python list or separated by the pipe character ( | ).",
     c.REPUTATION: "Pass in a domain name to see its reputation score.",
