@@ -91,4 +91,57 @@ interactions:
       - '100154'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris?app_name=python_wrapper&app_version=2.2.0&domain=google.com
+  response:
+    body:
+      string: '{"response":{"limit_exceeded":false,"message":"Enjoy your data.","results_count":1,"results":[{"domain":"google.com","whois_url":"https:\/\/whois.domaintools.com\/google.com","adsense":"","alexa":1,"popularity_rank":1,"google_analytics":"","admin_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"billing_contact":{"name":"","org":"","street":"","city":"","state":"","postal":"","country":"","phone":"","fax":"","email":[]},"registrant_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"technical_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"create_date":"1997-09-15","expiration_date":"2028-09-14","email_domain":["markmonitor.com","google.com"],"soa_email":["dns-admin@google.com"],"additional_whois_email":["abusecomplaints@markmonitor.com","whoisrequest@markmonitor.com"],"ip":[{"address":"142.251.33.110","asn":[15169],"country_code":"us","isp":"Google"},{"address":"142.251.33.68","asn":[15169],"country_code":"us","isp":"Google"}],"mx":[{"host":"smtp.google.com","domain":"google.com","ip":["74.125.199.27","74.125.142.27","74.125.142.26","74.125.199.26","74.125.195.26"],"priority":10}],"name_server":[{"host":"ns3.google.com","domain":"google.com","ip":["216.239.36.10"]},{"host":"ns4.google.com","domain":"google.com","ip":["216.239.38.10"]},{"host":"ns1.google.com","domain":"google.com","ip":["216.239.32.10"]},{"host":"ns2.google.com","domain":"google.com","ip":["216.239.34.10"]}],"risk_score":null,"redirect":"","redirect_domain":"","registrant_name":"","registrant_org":"Google
+        LLC","registrar":"MarkMonitor, Inc.","registrar_status":["clientdeleteprohibited","clienttransferprohibited","clientupdateprohibited","serverdeleteprohibited","servertransferprohibited","serverupdateprohibited"],"spf_info":"","ssl_country":"","ssl_hash":"","ssl_org":"","tld":"com","threat_profile":{"proximity":"","spam":"","malware":"","evidence":[]},"website_response":200,"data_updated_timestamp":"2024-04-10T15:37:51.591000"}]}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 18 Dec 2024 19:41:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=5i1sdu1pkv6ftqhr9j3d51ea176tvmkg9acjs7i67ouoo0scfvnbp8e2e8cslem4o0lb0rtg21mgc8natc5km9p1p16k5t0goui3i64;
+        expires=Fri, 17-Jan-2025 19:41:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '356168'
+    status:
+      code: 200
+      message: OK
 version: 1
