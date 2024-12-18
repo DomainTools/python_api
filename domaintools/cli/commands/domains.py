@@ -16,9 +16,7 @@ def brand_monitor(
     ctx: typer.Context,
     query: str = typer.Option(..., "-q", "--query", help="The query to use."),
     exclude: str = typer.Option(None, "--exclude", help="The exclude condition."),
-    domain_status: str = typer.Option(
-        None, "--domain-status", help="The domain status."
-    ),
+    domain_status: str = typer.Option(None, "--domain-status", help="The domain status."),
     days_back: int = typer.Option(None, "--days-back", help="The days back to check."),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
@@ -41,9 +39,7 @@ def brand_monitor(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -81,9 +77,7 @@ def domain_profile(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -100,19 +94,13 @@ def domain_profile(
 def domain_search(
     ctx: typer.Context,
     query: str = typer.Option(..., "-q", "--query", help="The domain name to query."),
-    exclude_query: str = typer.Option(
-        None, "--exclude-query", help="The exclusion filter to query."
-    ),
+    exclude_query: str = typer.Option(None, "--exclude-query", help="The exclusion filter to query."),
     max_length: int = typer.Option(25, "--max-length", help="The max length"),
     min_length: int = typer.Option(2, "--min-length", help="The min length"),
     has_hyphen: bool = typer.Option(True, "--has-hyphen", help=""),
     has_number: bool = typer.Option(True, "--has-number", help=""),
-    active_only: bool = typer.Option(
-        False, "--active-only", help="Search for active only domains."
-    ),
-    deleted_only: bool = typer.Option(
-        False, "--deleted-only", help="Search for deleted only domains."
-    ),
+    active_only: bool = typer.Option(False, "--active-only", help="Search for active only domains."),
+    deleted_only: bool = typer.Option(False, "--deleted-only", help="Search for deleted only domains."),
     anchor_left: bool = typer.Option(False, "--achor-left", help=""),
     anchor_right: bool = typer.Option(False, "--achor-right", help=""),
     page: int = typer.Option(1, "--page", help="Number of pages to return."),
@@ -137,9 +125,7 @@ def domain_search(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -177,9 +163,7 @@ def hosting_history(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         True,
         "--no-verify-ssl",
@@ -219,9 +203,7 @@ def name_server_monitor(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -259,9 +241,7 @@ def parsed_whois(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -269,6 +249,44 @@ def parsed_whois(
     ),
 ):
     DTCLICommand.run(name=c.PARSED_WHOIS, params=ctx.params)
+
+
+@dt_cli.command(
+    name=c.PARSED_DOMAIN_RDAP,
+    help=get_cli_helptext_by_name(command_name=c.PARSED_DOMAIN_RDAP),
+)
+def parsed_domain_rdap(
+    ctx: typer.Context,
+    query: str = typer.Option(..., "-q", "--query", help="The domain to query."),
+    user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
+    key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
+    creds_file: str = typer.Option(
+        "~/.dtapi",
+        "-c",
+        "--credfile",
+        help="Optional file with API username and API key, one per line.",
+    ),
+    rate_limit: bool = typer.Option(
+        False,
+        "-l",
+        "--rate-limit",
+        help="Rate limit API calls against the API based on per minute limits.",
+    ),
+    format: str = typer.Option(
+        "json",
+        "-f",
+        "--format",
+        help="Output format in {'list', 'json', 'xml', 'html'}",
+        callback=DTCLICommand.validate_format_input,
+    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
+    no_verify_ssl: bool = typer.Option(
+        False,
+        "--no-verify-ssl",
+        help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+):
+    DTCLICommand.run(name=c.PARSED_DOMAIN_RDAP, params=ctx.params)
 
 
 @dt_cli.command(
@@ -306,9 +324,7 @@ def registrant_monitor(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -347,9 +363,7 @@ def reputation(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -388,9 +402,7 @@ def reverse_ip(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -429,9 +441,7 @@ def reverse_nameserver(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -454,9 +464,7 @@ def reverse_whois(
         "--scope",
         help="Sets the scope of the report to include only current Whois records, or to include both current and historic records.",
     ),
-    mode: str = typer.Option(
-        "purchase", "--mode", help="Values must be purchase (the default) or quote"
-    ),
+    mode: str = typer.Option("purchase", "--mode", help="Values must be purchase (the default) or quote"),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
     creds_file: str = typer.Option(
@@ -478,9 +486,7 @@ def reverse_whois(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -518,9 +524,7 @@ def whois(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -552,9 +556,7 @@ def whois_history(
         "--limit",
         help="Specify the maximum number of records to retrieve in an API query.",
     ),
-    offset: int = typer.Option(
-        None, "--offset", help="For paginating requests beyond the limit."
-    ),
+    offset: int = typer.Option(None, "--offset", help="For paginating requests beyond the limit."),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
     creds_file: str = typer.Option(
@@ -576,9 +578,7 @@ def whois_history(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -616,9 +616,7 @@ def risk(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -656,9 +654,7 @@ def risk_evidence(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -674,6 +670,7 @@ __all__ = [
     "domain_search",
     "name_server_monitor",
     "parsed_whois",
+    "parsed_domain_rdap",
     "registrant_monitor",
     "reputation",
     "reverse_ip",

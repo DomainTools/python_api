@@ -77,4 +77,54 @@ interactions:
       - '19995'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://api.domaintools.com/v1/risk/evidence/?app_name=python_wrapper&app_version=2.2.0&domain=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA13LMQqAMAxG4bv8cxHnXkVESg1SbBNJOll6dzO7Pr43oGSPsBHiwCktFUbEJXJV
+        WrI0BGix+7As6mYN8OgDcTfEbYBT846XVGqx/vdzn/MDv5jf92UAAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 18 Dec 2024 18:34:54 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=qnj307ipqt6i6i83di9u4vme6ssfchj337acsr29fj9v14eqo0fdd6gb6bfu4ft0e0chton1m9oc1040p5f1rmt46daengk54oi08ll;
+        expires=Fri, 17-Jan-2025 18:34:54 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '33701'
+    status:
+      code: 200
+      message: OK
 version: 1

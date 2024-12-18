@@ -79,4 +79,62 @@ interactions:
       - '53965'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=2.2.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WVUW/aMBDHv0rlh700BMeBjSBVe+gmNAnGpG1PgCI3uRFrwc5ss65CfPeeY9pA
+        CfRh9CGScxf//z/7nPOGaDCVkgbIcIPjpTBWc2ndm+QrjJKRUssSrsbjWxKQXK24kIYMWS8e9AJS
+        aZWvM5uudYmfFtZWZjjvzrsa/oI2cF8oYUI/ySpVmjBTq3n3Iy/L2eLGK1+j8jupJGCEbANiQONc
+        ByCqlOc5AqIfiXosZP0oZBE+bIAsyhag02eiiL7OI6pjGANcZwVC/blZ1kAu7ECedsMKJR1OpoFb
+        yB1Lknzo0KQT9RED/lUCGTHMKBvU4R6G11W++5rRKHFhmpBGFBdIJlz/nigprNJXX2QWYtpYbtfG
+        qc1IVgqQ9hOUYOGbVoW4E04w2CV+YJ3ML9AtqZ+190HC72qLmE+0ivnUkdgC98adjdTnHevmuWrk
+        6/coHE2no/Hn8HY6Ia+WRLacj72SvJDbBgdW7LJW7IxVfFmr+IxV77JWB3LbRUAKPIFKP+z/8fX/
+        hpPw+BiborBrAcSdbjfEEtNzHN7uGOMpM+8Wylghl52ddcvftneiapbG14oV9iguUyHTB9Qznuxt
+        cfZ7T0OTxO9beVj01jx1J/UVy5TOcTigMQuOa8YojTq036Hxf+5R7dgQnWiTdcNWDswgF7SVpsaH
+        O4PNI8VWwv0q/K2TZirHSQjt9tWWzYVDmpuALO8Nvq7AzZ0tTi/rxHVzwLt9BJ2l1u7zBgAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 18 Dec 2024 18:33:07 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=8iqq2icld51vhb0tg9epquvbnbot2eoi2n39pqiug54jqif6tbqjb02d9lq9ebg0vl5ksvhlp5a23ebg89stp986o2g2j24b29smf5g;
+        expires=Fri, 17-Jan-2025 18:33:07 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '75427'
+    status:
+      code: 200
+      message: OK
 version: 1

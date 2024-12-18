@@ -77,4 +77,63 @@ interactions:
       - '140490'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.2.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WY246bMBCG38VXWymWCITNdl+lqpAXJjBasC3bJI2ivPsOh7RcJGm8hS1wBdiD
+        vxn9nhlzYgasVtICez0xkaaqlq691ZjUFowUFQ0xlA5yIxzS1MSBdShztiIDh3sad6aG84ppo7I6
+        dZa9/jgxzMiu/yJHuVOmau3JTINJKiVdkZRYIa3H1kFz9UOFqs1lRNZl2RugrB38toib5d+sKgcv
+        u8m1FXnrjlOZONLUaBvS5HbBZqk4CNaMaOGXxs6lJBMOOvPzqidHg5aw942veTN8C9sHOgwep97E
+        A+g4Ch9EBmkwLa7SvnjSPnvQPm8GtOE2/P4gbgYOUsfBpqKkKTxTlUBpr0c79uOPPPiDAX7gx465
+        VAayz6CTgNio6LEfeiUkfYwfhEuLEq0bNfxrH7X/Q/zJDJ0y/xl68+gG7aklHGahmPXGj7vVykzU
+        HkZ/Z9cF2gKOt/O3nzymk3QXUE41dIflHdzZ7MEe2IIwNwrOJ6p6MB1vodq2hZMgKF0cFxBh1Jfk
+        9vVNkz+qgZwia4R0y6GmxDZKY+eTF/wbOwO6dmM2z16ijdZD4ObpAeA9GAsc9VjA022yP6z8UKg7
+        ephPXiDVvi8Ek8MeM5DpEgraRQnNmZfKmqGn5ch3VO1Oh1sJ885FCcbNvjhoQXHNFpMUBqpdTP1d
+        SmxbzruNY/xVtJuXrZ90edn8orsa43AmMhh0jstIDXR4L4+8+/t5OQnzHVDIn4TGb+Pwd++ndEC9
+        tfkiW5QLP8/nDxda5t62FgAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 18 Dec 2024 18:33:04 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=i8a1njv6capdok448rs6cnjov8vupl3gnat5us7n4o4rk0qufhejs5g1lqokk8f9rflir194r8pv5i1tdp8uepttvk0bilih4i19il5;
+        expires=Fri, 17-Jan-2025 18:33:04 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '174136'
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -154,6 +154,32 @@ def test_parsed_whois():
 
 
 @vcr.use_cassette
+def test_parsed_domain_rdap():
+    api_call = api.parsed_domain_rdap("google.com")
+    with api_call as result:
+        for key in (
+            "handle",
+            "domain_statuses",
+            "creation_date",
+            "last_changed_date",
+            "expiration_date",
+            "nameservers",
+            "conformance",
+            "emails",
+            "email_domains",
+            "unclassified_emails",
+            "registrar",
+            "contacts",
+        ):
+            assert key in result.get("parsed_domain_rdap")
+
+        for key, value in result.items():
+            assert key
+
+        assert isinstance(result.flattened(), dict)
+
+
+@vcr.use_cassette
 def test_registrant_monitor():
     api_call = api.registrant_monitor("google")
     with api_call as result:
@@ -385,7 +411,7 @@ def test_iris():
     with pytest.raises(ValueError):
         api.iris()
 
-    with api.iris(domain="google.com", https=False) as results:
+    with api.iris(domain="google.com") as results:
         assert results
         for result in results:
             assert "domain" in result
@@ -471,10 +497,10 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains(
         monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
     )
-    assert len(detect_results["watchlist_domains"]) == 0
+    assert len(detect_results["watchlist_domains"]) == 2
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results["count"] == 0
+    assert detect_results["count"] == 1
 
 
 @vcr.use_cassette

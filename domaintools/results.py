@@ -2,24 +2,26 @@
 
 Additionally, defines any custom result objects that may be used to enable more Pythonic interaction with endpoints.
 """
+
 from itertools import chain
 
-try: # pragma: no cover
+try:  # pragma: no cover
     from collections import OrderedDict
-except ImportError: # pragma: no cover
+except ImportError:  # pragma: no cover
     from ordereddict import OrderedDict
 
 from itertools import zip_longest
 from domaintools_async import AsyncResults as Results
 
+
 class Reputation(Results):
     """Returns the reputation results in a format that can quickly be converted into floats / ints"""
 
     def __float__(self):
-        return float(self['risk_score'])
+        return float(self["risk_score"])
 
     def __int__(self):
-        return int(self['risk_score'])
+        return int(self["risk_score"])
 
 
 class GroupedIterable(Results):
@@ -27,8 +29,9 @@ class GroupedIterable(Results):
 
     def _items(self):
         if self._items_list is None:
-            self._items_list = chain(*[zip_longest([], value, fillvalue=key) for key, value in self.response().items()
-                                       if type(value) in (list, tuple)])
+            self._items_list = chain(
+                *[zip_longest([], value, fillvalue=key) for key, value in self.response().items() if type(value) in (list, tuple)]
+            )
 
         return self._items_list
 
@@ -38,26 +41,26 @@ class ParsedWhois(Results):
 
     def flattened(self):
         """Returns a flattened version of the parsed whois data"""
-        parsed = self['parsed_whois']
+        parsed = self["parsed_whois"]
         flat = OrderedDict()
-        for key in ('domain', 'created_date', 'updated_date', 'expired_date', 'statuses', 'name_servers'):
+        for key in ("domain", "created_date", "updated_date", "expired_date", "statuses", "name_servers"):
             if key in parsed:
                 value = parsed[key]
-                flat[key] = ' | '.join(value) if type(value) in (list, tuple) else value
+                flat[key] = " | ".join(value) if type(value) in (list, tuple) else value
 
-        registrar = parsed.get('registrar', {})
-        for key in ('name', 'abuse_contact_phone', 'abuse_contact_email', 'iana_id', 'url', 'whois_server'):
+        registrar = parsed.get("registrar", {})
+        for key in ("name", "abuse_contact_phone", "abuse_contact_email", "iana_id", "url", "whois_server"):
             if key in registrar:
-                flat['registrar_{0}'.format(key)] = registrar[key]
+                flat["registrar_{0}".format(key)] = registrar[key]
 
         if "networks" in parsed:
             networks = parsed.get("networks")
             for network in networks:
                 id = network.get("id")
-                for key in ('range', 'asn', 'org', 'parent', 'customer', 'country', 'phone', 'status', 'source', 'updated_date', 'created_date'):
+                for key in ("range", "asn", "org", "parent", "customer", "country", "phone", "status", "source", "updated_date", "created_date"):
                     if key in network:
                         value = network[key]
-                        flat['network_{0}'.format(id)] = ' '.join(value) if type(value) in (list, tuple) else value
+                        flat["network_{0}".format(id)] = " ".join(value) if type(value) in (list, tuple) else value
 
         if "contacts" in parsed:
             contacts = parsed.get("contacts")
@@ -65,17 +68,76 @@ class ParsedWhois(Results):
                 # handle IP-style contacts, which show up as a list
                 for contact in contacts:
                     contact_type = contact.get("type")
-                    for key in ('name', 'email', 'org', 'abuse_mailbos', 'address', 'street', 'city', 'state', 'postal', 'country', 'phone', 'fax'):
+                    for key in (
+                        "name",
+                        "email",
+                        "org",
+                        "abuse_mailbos",
+                        "address",
+                        "street",
+                        "city",
+                        "state",
+                        "postal",
+                        "country",
+                        "phone",
+                        "fax",
+                    ):
                         if key in contact:
                             value = contact[key]
-                            flat['{0}_{1}'.format(contact_type, key)] = ' '.join(value) if type(value) in (list, tuple) else value
+                            flat["{0}_{1}".format(contact_type, key)] = " ".join(value) if type(value) in (list, tuple) else value
 
             elif type(contacts) is dict:
-                for contact_type in ('registrant', 'admin', 'tech', 'billing'):
+                for contact_type in ("registrant", "admin", "tech", "billing"):
                     contact = contacts.get(contact_type, {})
-                    for key in ('name', 'email', 'org', 'street', 'city', 'state', 'postal', 'country', 'phone', 'fax'):
+                    for key in ("name", "email", "org", "street", "city", "state", "postal", "country", "phone", "fax"):
                         if key in contact:
                             value = contact[key]
-                            flat['{0}_{1}'.format(contact_type, key)] = ' '.join(value) if type(value) in (list, tuple) else value
+                            flat["{0}_{1}".format(contact_type, key)] = " ".join(value) if type(value) in (list, tuple) else value
+
+        return flat
+
+
+class ParsedDomainRdap(Results):
+    """Returns the parsed domain rdap results in a format that can quickly be flattened"""
+
+    def flattened(self):
+        """Returns a flattened version of the parsed domain rdap data"""
+        parsed = self["parsed_domain_rdap"]
+        flat = OrderedDict()
+        for key in (
+            "domain",
+            "handle",
+            "domain_statuses",
+            "creation_date",
+            "last_changed_date",
+            "expiration_date",
+            "dnssec",
+            "nameservers",
+            "conformance",
+            "emails",
+            "email_domains",
+            "unclassified_emails",
+        ):
+            if key in parsed:
+                value = parsed[key]
+                flat[key] = " | ".join(value) if type(value) in (list, tuple) else value
+
+        registrar = parsed.get("registrar", {})
+        for registrar_key, registrar_value in registrar.items():
+            if registrar_key == "contacts":
+                for i, contact in enumerate(registrar_value, start=1):
+                    for contact_key, contact_value in contact.items():
+                        flat[f"registrar_contacts_{contact_key}"] = (
+                            " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
+                        )
+
+                continue
+            flat[f"registrar_{registrar_key}"] = registrar_value
+
+        contacts = parsed.get("contacts")
+        if contacts:
+            for i, contact in enumerate(contacts, start=1):
+                for contact_key, contact_value in contact.items():
+                    flat[f"contact_{contact_key}_{i}"] = " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
 
         return flat

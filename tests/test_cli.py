@@ -22,7 +22,7 @@ def test_valid_command():
     user = os.environ.get("TEST_USER", "test")
     key = os.environ.get("TEST_KEY", "key")
     result = runner.invoke(dt_cli, ["account_information", "--help"])
-    assert "Usage: main account_information" in result.stdout
+    assert "Provides a snapshot of your accounts current API usage." in result.stdout
 
 
 def test_invalid_command():
