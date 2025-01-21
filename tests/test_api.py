@@ -345,18 +345,14 @@ def test_exception_handling():
     assert "not understand" in exception.reason["error"]["message"]
 
     with pytest.raises(exceptions.NotFoundException):
-        api._results(
-            "i_made_this_product_up", "/v1/steianrstierstnrsiatiarstnsto.com/whois"
-        ).data()
+        api._results("i_made_this_product_up", "/v1/steianrstierstnrsiatiarstnsto.com/whois").data()
     with pytest.raises(exceptions.NotAuthorizedException):
         API("notauser", "notakey").domain_search("amazon").data()
     with pytest.raises(
         ValueError,
         match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5",
     ):
-        API(
-            "notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash"
-        ).domain_search("amazon")
+        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash").domain_search("amazon")
 
 
 @vcr.use_cassette
@@ -483,9 +479,7 @@ def test_iris_detect_monitors():
 
 @vcr.use_cassette
 def test_iris_detect_new_domains():
-    detect_results = api.iris_detect_new_domains(
-        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
-    )
+    detect_results = api.iris_detect_new_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
     assert detect_results["watchlist_domains"][0]["risk_score"] == 100
 
 
@@ -494,9 +488,7 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains()
     assert detect_results["count"] >= 0
 
-    detect_results = api.iris_detect_watched_domains(
-        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
-    )
+    detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
     assert len(detect_results["watchlist_domains"]) == 2
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
@@ -505,23 +497,17 @@ def test_iris_detect_watched_domains():
 
 @vcr.use_cassette
 def test_iris_detect_manage_watchlist_domains():
-    detect_results = api.iris_detect_manage_watchlist_domains(
-        watchlist_domain_ids=["gae08rdVWG"], state="watched"
-    )
+    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
     assert detect_results["watchlist_domains"][0]["state"] == "watched"
 
 
 @vcr.use_cassette
 def test_iris_detect_escalate_domains():
     # If you rerun this test without VCR, it will fail because the domain is already escalated
-    detect_results = api.iris_detect_escalate_domains(
-        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked"
-    )
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked")
     assert detect_results["escalations"][0]["escalation_type"] == "blocked"
 
-    detect_results = api.iris_detect_escalate_domains(
-        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe"
-    )
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe")
     assert detect_results["escalations"][0]["escalation_type"] == "google_safe"
 
 
@@ -571,3 +557,23 @@ def test_newly_active_domains_feed():
         feed_result = json.loads(row)
         assert "timestamp" in feed_result.keys()
         assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_domainrdap_feed():
+    results = api.domainrdap(after="-60", sessiondID="integrations-testing", top=5)
+    response = results.response()
+    rows = response.strip().split("\n")
+
+    assert response is not None
+    assert results.status == 200
+    assert len(rows) == 5
+
+    for row in rows:
+        feed_result = json.loads(row)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "parsed_record" in feed_result.keys()
+        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
