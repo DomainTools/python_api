@@ -46,3 +46,4 @@ PHISHEYE_TERM_LIST = "phisheye_term_list"
 # feeds
 FEEDS_NAD = "nad"
 FEEDS_NOD = "nod"
+FEEDS_DOMAINRDAP = "domainrdap"

@@ -4,6 +4,7 @@ import sys
 import os
 import _io
 
+from datetime import datetime
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
@@ -28,10 +29,20 @@ class DTCLICommand:
     def validate_format_input(value: str):
         VALID_FORMATS = ("list", "json", "xml", "html")
         if value not in VALID_FORMATS:
-            raise typer.BadParameter(
-                f"{value} is not in available formats: {VALID_FORMATS}"
-            )
+            raise typer.BadParameter(f"{value} is not in available formats: {VALID_FORMATS}")
         return value
+
+    @staticmethod
+    def validate_after_or_before_input(value: str):
+        if value is None or value.replace("-", "").isdigit():
+            return value
+
+        # Checks if value is a valid ISO 8601 datetime string in UTC form
+        try:
+            datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+            return value
+        except:
+            raise typer.BadParameter(f"{value} is neither an integer or a valid ISO 8601 datetime string in UTC form")
 
     @staticmethod
     def validate_source_file_extension(value: str):
@@ -51,9 +62,7 @@ class DTCLICommand:
         ext = get_file_extension(value)
 
         if ext.lower() not in VALID_EXTENSIONS:
-            raise typer.BadParameter(
-                f"{value} is not in valid extensions. Valid file extensions: {VALID_EXTENSIONS}"
-            )
+            raise typer.BadParameter(f"{value} is not in valid extensions. Valid file extensions: {VALID_EXTENSIONS}")
 
         return value
 
@@ -85,11 +94,7 @@ class DTCLICommand:
     def _get_formatted_output(cls, cmd_name: str, response, out_format: str = "json"):
         if cmd_name in ("available_api_calls",):
             return "\n".join(response)
-        return str(
-            getattr(response, out_format)
-            if out_format != "list"
-            else response.as_list()
-        )
+        return str(getattr(response, out_format) if out_format != "list" else response.as_list())
 
     @classmethod
     def _get_credentials(cls, params: Optional[Dict] = {}) -> Tuple[str]:
@@ -106,9 +111,7 @@ class DTCLICommand:
                 with open(creds_file, "r") as cf:
                     user, key = cf.readline().strip(), cf.readline().strip()
             except FileNotFoundError as e:
-                raise typer.BadParameter(
-                    f"{str(e)}. Please create one first and try again."
-                )
+                raise typer.BadParameter(f"{str(e)}. Please create one first and try again.")
 
         return user, key
 
@@ -198,9 +201,7 @@ class DTCLICommand:
                     total=None,
                 )
 
-                output = cls._get_formatted_output(
-                    cmd_name=name, response=response, out_format=response_format
-                )
+                output = cls._get_formatted_output(cmd_name=name, response=response, out_format=response_format)
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
@@ -215,10 +216,7 @@ class DTCLICommand:
                 _reason = getattr(e, "reason", {})
                 # check data type first as some of the reasons is just plain text
                 if isinstance(_reason, dict):
-                    _reason = (
-                        _reason.get("error", {}).get("message")
-                        or "Unknown Error occured."
-                    )
+                    _reason = _reason.get("error", {}).get("message") or "Unknown Error occured."
 
                 reason = typer.style(_reason, bg=typer.colors.RED)
 

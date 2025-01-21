@@ -84,6 +84,7 @@ _command_help_mapper = {
     c.IRIS_DETECT_IGNORED_DOMAINS: "Returns back a list of ignored domains in Iris Detect based on the provided filters.",
     c.FEEDS_NAD: "Returns back newly active domains feed.",
     c.FEEDS_NOD: "Returns back newly observed domains feed.",
+    c.FEEDS_DOMAINRDAP: "Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP).",
 }
 
 
