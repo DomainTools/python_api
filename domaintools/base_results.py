@@ -138,7 +138,7 @@ class Results(MutableMapping, MutableSequence):
             return self._data
 
     def check_limit_exceeded(self):
-        if self.kwargs.get("format", "json") == "json":
+        if self.kwargs.get("format", "json") == "json" and self.product not in get_feeds_products_list():
             if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
                 return True, self._data["response"]["message"]
         # TODO: handle html, xml response errors better.

@@ -1085,3 +1085,18 @@ class API(object):
             response_path=(),
             **kwargs,
         )
+
+    def domainrdap(self, **kwargs):
+        """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
+        sessionID = kwargs.get("sessionID")
+        after = kwargs.get("after")
+        before = kwargs.get("before")
+        if not (sessionID or after or before):
+            raise ValueError("sessionID or after or before must be defined")
+
+        return self._results(
+            "domain-registration-data-access-protocol-feed-(api)",
+            "v1/feed/domainrdap/",
+            response_path=(),
+            **kwargs,
+        )
