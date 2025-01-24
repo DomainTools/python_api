@@ -6,6 +6,7 @@ from domaintools.cli.main import dt_cli
 from domaintools.cli.api import DTCLICommand
 from domaintools.cli.utils import get_cli_helptext_by_name
 from domaintools.cli import constants as c
+from domaintools.constants import Endpoint
 
 
 @dt_cli.command(
@@ -158,6 +159,13 @@ def feeds_domainrdap(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
+    endpoint: str = typer.Option(
+        Endpoint.FEED.value,
+        "-e",
+        "--endpoint",
+        help=f"Valid endpoints: [{Endpoint.FEED.value}, {Endpoint.DOWNLOAD.value}]",
+        callback=DTCLICommand.validate_endpoint_input,
+    ),
     sessionID: str = typer.Option(
         None,
         "--session-id",
@@ -188,3 +196,78 @@ def feeds_domainrdap(
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_DOMAINRDAP, params=ctx.params)
+
+
+@dt_cli.command(
+    name=c.FEEDS_DOMAINDISCOVERY,
+    help=get_cli_helptext_by_name(command_name=c.FEEDS_DOMAINDISCOVERY),
+)
+def feeds_domaindiscovery(
+    ctx: typer.Context,
+    user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
+    key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
+    creds_file: str = typer.Option(
+        "~/.dtapi",
+        "-c",
+        "--credfile",
+        help="Optional file with API username and API key, one per line.",
+    ),
+    no_verify_ssl: bool = typer.Option(
+        False,
+        "--no-verify-ssl",
+        help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    output_format: str = typer.Option(
+        "jsonl",
+        "-f",
+        "--format",
+        help="Output format in {'jsonl'}",
+        callback=DTCLICommand.validate_feeds_format_input,
+    ),
+    endpoint: str = typer.Option(
+        Endpoint.FEED.value,
+        "-e",
+        "--endpoint",
+        help=f"Valid endpoints: [{Endpoint.FEED.value}, {Endpoint.DOWNLOAD.value}]",
+        callback=DTCLICommand.validate_endpoint_input,
+    ),
+    sessionID: str = typer.Option(
+        None,
+        "--session-id",
+        help="Unique identifier for the session",
+    ),
+    after: str = typer.Option(
+        None,
+        "--after",
+        help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+        callback=DTCLICommand.validate_after_or_before_input,
+    ),
+    before: str = typer.Option(
+        None,
+        "--before",
+        help="The end of the query window in seconds, relative to the current time, inclusive",
+        callback=DTCLICommand.validate_after_or_before_input,
+    ),
+    domain: str = typer.Option(
+        None,
+        "-d",
+        "--domain",
+        help="A string value used to filter feed results",
+    ),
+    headers: bool = typer.Option(
+        False,
+        "--headers",
+        help="Adds a header to the first line of response when text/csv is set in header parameters",
+    ),
+    top: str = typer.Option(
+        None,
+        "--top",
+        help="Number of results to return in the response payload. This is ignored in download endpoint",
+    ),
+):
+    DTCLICommand.run(name=c.FEEDS_DOMAINDISCOVERY, params=ctx.params)

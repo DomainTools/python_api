@@ -8,6 +8,7 @@ from datetime import datetime
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
+from domaintools.constants import Endpoint, OutputFormat
 from domaintools.api import API
 from domaintools.exceptions import ServiceException
 from domaintools.cli.utils import get_file_extension
@@ -30,6 +31,20 @@ class DTCLICommand:
         VALID_FORMATS = ("list", "json", "xml", "html")
         if value not in VALID_FORMATS:
             raise typer.BadParameter(f"{value} is not in available formats: {VALID_FORMATS}")
+        return value
+
+    @staticmethod
+    def validate_feeds_format_input(value: str):
+        VALID_FEEDS_FORMATS = ("jsonl", "csv")
+        if value not in VALID_FEEDS_FORMATS:
+            raise typer.BadParameter(f"{value} is not in available formats: {VALID_FEEDS_FORMATS}")
+        return value
+
+    @staticmethod
+    def validate_endpoint_input(value: str):
+        VALID_ENDPOINTS = (Endpoint.FEED.value, Endpoint.DOWNLOAD.value)
+        if value not in VALID_ENDPOINTS:
+            raise typer.BadParameter(f"{value} is not in available endpoints: {VALID_ENDPOINTS}")
         return value
 
     @staticmethod
@@ -152,7 +167,13 @@ class DTCLICommand:
         """
         try:
             rate_limit = params.pop("rate_limit", False)
-            response_format = params.pop("format", "json")
+            response_format = (
+                params.pop("format", "json")
+                if params.get("format", None)
+                else params.get(
+                    "output_format", OutputFormat.JSONL.value
+                )  # Using output_format for RTUF endpoints to separate from other endpoints. This will be needed further along the process
+            )
             out_file = params.pop("out_file", sys.stdout)
             verify_ssl = params.pop("no_verify_ssl", False)
             always_sign_api_key = params.pop("no_sign_api_key", False)
