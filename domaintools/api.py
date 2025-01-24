@@ -19,7 +19,7 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
-from domaintools.utils import validate_feeds_required_parameters
+from domaintools.utils import validate_feeds_parameters
 
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256", "md5"]
@@ -1091,7 +1091,7 @@ class API(object):
 
     def domainrdap(self, **kwargs):
         """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
-        validate_feeds_required_parameters(kwargs)
+        validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
 
@@ -1104,10 +1104,11 @@ class API(object):
 
     def domaindiscovery(self, **kwargs):
         """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
-        validate_feeds_required_parameters(kwargs)
+        validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
         if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
         return self._results(

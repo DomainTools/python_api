@@ -6,7 +6,7 @@ from domaintools.cli.main import dt_cli
 from domaintools.cli.api import DTCLICommand
 from domaintools.cli.utils import get_cli_helptext_by_name
 from domaintools.cli import constants as c
-from domaintools.constants import Endpoint
+from domaintools.constants import Endpoint, OutputFormat
 
 
 @dt_cli.command(
@@ -226,7 +226,7 @@ def feeds_domaindiscovery(
         "jsonl",
         "-f",
         "--format",
-        help="Output format in {'jsonl'}",
+        help=f"Output format in [{OutputFormat.JSONL.value}, {OutputFormat.CSV.value}]",
         callback=DTCLICommand.validate_feeds_format_input,
     ),
     endpoint: str = typer.Option(
