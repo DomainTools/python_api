@@ -176,4 +176,15 @@ def get_feeds_products_list():
         "newly-active-domains-feed-(api)",
         "newly-observed-domains-feed-(api)",
         "domain-registration-data-access-protocol-feed-(api)",
+        "domain-registration-data-access-protocol-feed-(s3)",
+        "real-time-domain-discovery-feed-(api)",
+        "real-time-domain-discovery-feed-(s3)",
     ]
+
+
+def validate_feeds_required_parameters(params):
+    sessionID = params.get("sessionID")
+    after = params.get("after")
+    before = params.get("before")
+    if not (sessionID or after or before):
+        raise ValueError("sessionID or after or before must be defined")

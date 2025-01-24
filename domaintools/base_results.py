@@ -4,8 +4,12 @@ import json
 import re
 import time
 import logging
-from datetime import datetime
 
+from copy import deepcopy
+from datetime import datetime
+from httpx import Client
+
+from domaintools.constants import OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -18,7 +22,6 @@ from domaintools.exceptions import (
 )
 from domaintools.utils import get_feeds_products_list
 
-from httpx import Client
 
 try:  # pragma: no cover
     from collections.abc import MutableMapping, MutableSequence
@@ -90,6 +93,18 @@ class Results(MutableMapping, MutableSequence):
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
+            elif self.product in get_feeds_products_list():
+                parameters = deepcopy(self.kwargs)
+                parameters.pop("output_format", None)
+                parameters.pop(
+                    "format", None
+                )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+                headers = {}
+                if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+                    parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+                    headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
             else:
                 return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
@@ -251,6 +266,32 @@ class Results(MutableMapping, MutableSequence):
         self.kwargs.pop("format", None)
         return self.__class__(
             format="json",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
+
+    @property
+    def jsonl(self):
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="jsonl",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
+
+    @property
+    def csv(self):
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="csv",
             product=self.product,
             url=self.url,
             items_path=self.items_path,

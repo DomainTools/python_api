@@ -1,11 +1,14 @@
 """Adds async capabilities to the base product object"""
 
 import asyncio
+
+from copy import deepcopy
 from httpx import AsyncClient
 
 from domaintools.base_results import Results
-
-from domaintools.exceptions import ServiceUnavailableException, ServiceException
+from domaintools.constants import OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.exceptions import ServiceUnavailableException
+from domaintools.utils import get_feeds_products_list
 
 
 class _AIter(object):
@@ -49,6 +52,17 @@ class AsyncResults(Results):
             patch_data = self.kwargs.copy()
             patch_data.update(self.api.extra_request_params)
             results = await session.patch(url=self.url, json=patch_data)
+        elif self.product in get_feeds_products_list():
+            parameters = deepcopy(self.kwargs)
+            parameters.pop("output_format", None)
+            parameters.pop(
+                "format", None
+            )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+            headers = {}
+            if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+                parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+                headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+            results = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
         else:
             results = await session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
         if results:

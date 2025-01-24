@@ -3,6 +3,7 @@ from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 import re
 
+from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, OutputFormat
 from domaintools._version import current as version
 from domaintools.results import (
     GroupedIterable,
@@ -18,6 +19,8 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
+from domaintools.utils import validate_feeds_required_parameters
+
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256", "md5"]
 
@@ -1088,15 +1091,28 @@ class API(object):
 
     def domainrdap(self, **kwargs):
         """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
-        sessionID = kwargs.get("sessionID")
-        after = kwargs.get("after")
-        before = kwargs.get("before")
-        if not (sessionID or after or before):
-            raise ValueError("sessionID or after or before must be defined")
+        validate_feeds_required_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
 
         return self._results(
-            "domain-registration-data-access-protocol-feed-(api)",
-            "v1/feed/domainrdap/",
+            f"domain-registration-data-access-protocol-feed-({source.value})",
+            f"v1/{endpoint}/domainrdap/",
+            response_path=(),
+            **kwargs,
+        )
+
+    def domaindiscovery(self, **kwargs):
+        """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
+        validate_feeds_required_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"real-time-domain-discovery-feed-({source.value})",
+            f"v1/{endpoint}/domaindiscovery/",
             response_path=(),
             **kwargs,
         )
