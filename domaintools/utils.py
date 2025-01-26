@@ -1,6 +1,7 @@
 from datetime import datetime
-
 from typing import Optional
+
+from domaintools.constants import Endpoint, OutputFormat
 
 import re
 
@@ -176,4 +177,19 @@ def get_feeds_products_list():
         "newly-active-domains-feed-(api)",
         "newly-observed-domains-feed-(api)",
         "domain-registration-data-access-protocol-feed-(api)",
+        "domain-registration-data-access-protocol-feed-(s3)",
+        "real-time-domain-discovery-feed-(api)",
+        "real-time-domain-discovery-feed-(s3)",
     ]
+
+
+def validate_feeds_parameters(params):
+    sessionID = params.get("sessionID")
+    after = params.get("after")
+    before = params.get("before")
+    if not (sessionID or after or before):
+        raise ValueError("sessionID or after or before must be defined")
+
+    format = params.get("output_format")
+    if params.get("endpoint") == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
+        raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")

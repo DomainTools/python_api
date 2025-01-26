@@ -577,3 +577,19 @@ def test_domainrdap_feed():
         assert "domain" in feed_result["parsed_record"]["parsed_fields"]
         assert "emails" in feed_result["parsed_record"]["parsed_fields"]
         assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+
+
+@vcr.use_cassette
+def test_domain_discovery_feed():
+    results = api.domaindiscovery(after="-60")
+    response = results.response()
+    rows = response.strip().split("\n")
+
+    assert response is not None
+    assert results.status == 200
+    assert len(rows) >= 1
+
+    for row in rows:
+        feed_result = json.loads(row)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
