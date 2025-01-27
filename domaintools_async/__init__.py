@@ -62,6 +62,11 @@ class AsyncResults(Results):
             if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
                 parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
                 headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+            header_api_key = parameters.pop("X-Api-Key", None)
+            if header_api_key:
+                headers["X-Api-Key"] = header_api_key
+
             results = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
         else:
             results = await session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
