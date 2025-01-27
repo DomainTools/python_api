@@ -3,7 +3,7 @@ from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 import re
 
-from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, OutputFormat
+from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
 from domaintools._version import current as version
 from domaintools.results import (
     GroupedIterable,
@@ -19,7 +19,7 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
-from domaintools.utils import get_feeds_products_list, validate_feeds_parameters
+from domaintools.utils import validate_feeds_parameters
 
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256", "md5"]
@@ -133,7 +133,7 @@ class API(object):
 
     def handle_api_key(self, product, path, parameters, header_authentication):
         if self.https and not self.always_sign_api_key:
-            if product in get_feeds_products_list() and header_authentication:
+            if product in FEEDS_PRODUCTS_LIST and header_authentication:
                 parameters["X-Api-Key"] = self.key
             else:
                 parameters["api_key"] = self.key

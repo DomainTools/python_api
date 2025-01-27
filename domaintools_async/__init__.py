@@ -6,9 +6,8 @@ from copy import deepcopy
 from httpx import AsyncClient
 
 from domaintools.base_results import Results
-from domaintools.constants import OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import ServiceUnavailableException
-from domaintools.utils import get_feeds_products_list
 
 
 class _AIter(object):
@@ -52,7 +51,7 @@ class AsyncResults(Results):
             patch_data = self.kwargs.copy()
             patch_data.update(self.api.extra_request_params)
             results = await session.patch(url=self.url, json=patch_data)
-        elif self.product in get_feeds_products_list():
+        elif self.product in FEEDS_PRODUCTS_LIST:
             parameters = deepcopy(self.kwargs)
             parameters.pop("output_format", None)
             parameters.pop(
