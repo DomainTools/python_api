@@ -1,0 +1,327 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.2.0&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-01-27T17:02:38Z\",\"domain\":\"whitespot-system.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-01-27T17:02:34Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2002177069_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"WHITESPOT-SYSTEM.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/WHITESPOT-SYSTEM.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/WHITESPOT-SYSTEM.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.domainconnection.info\\\\/domain\\\\/WHITESPOT-SYSTEM.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.domainconnection.info\\\\/domain\\\\/WHITESPOT-SYSTEM.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"379\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"379\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+34
+        941 620 100\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@nicline.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2016-02-12T14:28:12Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-02-12T14:28:12Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-02-13T08:19:49Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:21Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS1.SESDERMA.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2.SESDERMA.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-01-27T17:02:34Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/whitespot-system.com\"},{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"ldhName\\\":\\\"whitespot-system.com\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2016-02-12T15:28:11.000Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2017-02-13T12:15:11.000Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-02-12T14:28:12.000Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:37.911Z\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"port43\\\":\\\"whois.nicline.com\\\",\\\"lang\\\":\\\"en\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrant\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://registrar.domainconnection.info/\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"ES\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"VALENCIA\\\",\\\"\\\",\\\"\\\"]]]],\\\"status\\\":[\\\"removed\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"This
+        email has been redacted for privacy. You could use the 'contact-uri' to contact
+        the registrant of the domain.\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"379\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.nicline.com\\\"]]],\\\"publicIds\\\":[{\\\"identifier\\\":\\\"379\\\",\\\"type\\\":\\\"IANA
+        Registrar ID\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.nicline.com\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@nicline.com\\\"],[\\\"tel\\\",{},\\\"uri\\\",\\\"tel:+34.941620100\\\"]]]}]}],\\\"remarks\\\":[],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns1.sesderma.com\\\",\\\"ipAddresses\\\":{\\\"ipv4Adresses\\\":[\\\"82.223.208.140\\\"]}},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.sesderma.com\\\",\\\"ipAddresses\\\":{\\\"ipv4Adresses\\\":[\\\"82.223.223.77\\\"]}}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://icann.org/epp\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/wicf\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\"}]}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-01-27T17:02:37Z\",\"url\":\"https://rdap.domainconnection.info/domain/WHITESPOT-SYSTEM.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"\",\"country\":\"ES\",\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"postal\":\"\",\"region\":\"VALENCIA\",\"roles\":[\"registrant\"],\"street\":\"\"}],\"creation_date\":\"2016-02-12T15:28:11+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"whitespot-system.com\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"nicline.com\"],\"emails\":[\"abuse@nicline.com\",\"redacted
+        for privacy\"],\"expiration_date\":\"2025-02-12T14:28:12+00:00\",\"handle\":\"2002177069_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2017-02-13T12:15:11+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/WHITESPOT-SYSTEM.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.domainconnection.info/domain/WHITESPOT-SYSTEM.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns1.sesderma.com\",\"ns2.sesderma.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@nicline.com\",\"name\":\"Arsys
+        Internet, S.L. dba NICLINE.COM\",\"org\":\"Arsys Internet, S.L. dba NICLINE.COM\",\"phone\":\"tel:+34.941620100\",\"roles\":[\"abuse\"]}],\"iana_id\":\"379\",\"name\":\"Arsys
+        Internet, S.L. dba NICLINE.COM\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.domainconnection.info/domain/WHITESPOT-SYSTEM.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/whitespot-system.com\"}}\n{\"timestamp\":\"2025-01-27T17:02:38Z\",\"domain\":\"iasdesignllc.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-01-27T17:02:33Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2854512103_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"IASDESIGNLLC.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/IASDESIGNLLC.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/IASDESIGNLLC.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.namecheap.com\\\\/domain\\\\/IASDESIGNLLC.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.namecheap.com\\\\/domain\\\\/IASDESIGNLLC.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1068\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1068\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NameCheap,
+        Inc.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@namecheap.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-02-12T04:38:38Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-02-12T04:38:38Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-02-12T04:38:42Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:21Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"DNS1.REGISTRAR-SERVERS.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"DNS2.REGISTRAR-SERVERS.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-01-27T17:02:33Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/iasdesignllc.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"RDAP
+        Terms of Service\\\",\\\"description\\\":[\\\"By querying Namecheap\u2019s
+        \ RDAP Domain Database, you agree to comply with Namecheap\u2019s RDAP Terms
+        of Service, including but not limited to the terms herein,  and you acknowledge
+        and agree that your information will be used in accordance with Namecheap
+        Privacy Policy (https://www.namecheap.com/legal/general/privacy-policy/),
+        including that Namecheap may retain certain details about queries to our RDAP
+        Domain Database for the purposes of detecting and preventing misuse.  If you
+        do not agree to any of these terms, do not access or use ,the RDAP Domain
+        Database.\\\",\\\"Although Namecheap believes the data to be reliable, you
+        agree and acknowledge that any information provided is 'as is' without any
+        guarantee of accuracy.\\\",\\\"You further agree that you will:\\\",\\\"1)
+        Not misuse the RDAP Domain Database. It is intended solely for query-based
+        access and should not be used for or relied upon for any other purpose.\\\",\\\"2)
+        Not use the RDAP Domain Database to allow, enable, or otherwise support the
+        transmission of unsolicited, commercial advertising or solicitations.\\\",\\\"3)
+        Not access the RDAP Domain Database through the use of high volume, automated
+        electronic processes that send queries or data to the systems of Namecheap,
+        any other ICANN-accredited registrar, or any registry operator.\\\",\\\"4)
+        Not compile, repackage, disseminate, or otherwise use the information contained
+        in the RDAP Domain Database in its entirety, or in any substantial portion,
+        without our prior written permission.\\\",\\\"5) You will only use the information
+        contained in the RDAP Domain Database for lawful purposes.\\\",\\\"We reserve
+        the right to restrict or deny your access to the RDAP Domain Database if we
+        suspect that you have failed to comply with these terms.\\\",\\\"We reserve
+        the right to modify this agreement at any time.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://icann.org/epp\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://www.icann.org/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.icann.org/wicf\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.icann.org/wicf\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"lang\\\":\\\"en\\\",\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"value\\\":\\\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\\\"}],\\\"handle\\\":\\\"2854512103_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"iasdesignllc.com\\\",\\\"unicodeName\\\":\\\"iasdesignllc.com\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:37\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-02-12T04:38:38\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-02-12T04:38:38\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\",\\\"add period\\\"],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false,\\\"zoneSigned\\\":false},\\\"port43\\\":\\\"whois.namecheap.com\\\",\\\"entities\\\":[{\\\"publicIds\\\":[{\\\"type\\\":\\\"NAMECHEAP
+        INC\\\",\\\"identifier\\\":\\\"1068\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.9854014545\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@namecheap.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1068\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"support@namecheap.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"194C5ADB-A18A-4EC2-AA11-08DC2B0B884B\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Registrant\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"D1FB13C5-53D3-46BF-AA12-08DC2B0B884B\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Administrative\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"4600C657-CA5D-42B8-4506-08DC2B0F2005\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Technical\\\"]}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns1.registrar-servers.com\\\",\\\"unicodeName\\\":\\\"dns1.registrar-servers.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns2.registrar-servers.com\\\",\\\"unicodeName\\\":\\\"dns2.registrar-servers.com\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-01-27T17:02:35Z\",\"url\":\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\",\"handle\":\"194C5ADB-A18A-4EC2-AA11-08DC2B0B884B\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"registrant\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\",\"handle\":\"D1FB13C5-53D3-46BF-AA12-08DC2B0B884B\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"administrative\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\",\"handle\":\"4600C657-CA5D-42B8-4506-08DC2B0F2005\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"technical\"],\"street\":\"Kalkofnsvegur 2\"}],\"creation_date\":\"2024-02-12T04:38:38\",\"dnssec\":{\"signed\":false},\"domain\":\"iasdesignllc.com\",\"domain_statuses\":[\"client
+        transfer prohibited\",\"add period\"],\"email_domains\":[\"namecheap.com\",\"withheldforprivacy.com\"],\"emails\":[\"26475444f6de4aceac5c7c427cb16e13.protect@withheldforprivacy.com\",\"abuse@namecheap.com\",\"support@namecheap.com\"],\"expiration_date\":\"2025-02-12T04:38:38\",\"handle\":\"2854512103_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-02-12T04:38:42+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/IASDESIGNLLC.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\",\"rel\":\"self\"}],\"nameservers\":[\"dns1.registrar-servers.com\",\"dns2.registrar-servers.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@namecheap.com\",\"name\":\"NAMECHEAP
+        INC\",\"phone\":\"tel:+1.9854014545\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1068\",\"name\":\"NAMECHEAP
+        INC\"},\"unclassified_emails\":[\"support@namecheap.com\"]},\"registrar_request_url\":\"https://rdap.namecheap.com/domain/IASDESIGNLLC.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/iasdesignllc.com\"}}\n{\"timestamp\":\"2025-01-27T17:02:38Z\",\"domain\":\"zambakyemek.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-01-27T17:02:36Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2514918918_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"zambakyemek.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns63.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-08-09T02:06:14Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns64.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-08-09T02:06:14Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/zambakyemek.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/domain/zambakyemek.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"zambakyemekcom-reg\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Repossessed
+        by Go Daddy\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"AZ\\\",\\\"\\\",\\\"\\\"]],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=zambakyemek.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-08-09T02:06:16Z\\\"}],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object truncated due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"zambakyemekcom-tech\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Repossessed
+        by Go Daddy\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"AZ\\\",\\\"\\\",\\\"\\\"]],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=zambakyemek.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-08-09T02:06:16Z\\\"}],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object truncated due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"2155
+        E Godaddy Way\\\",\\\"Tempe\\\",\\\"AZ\\\",\\\"85284\\\",\\\"\\\"]],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"146\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:480-624-2505\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.godaddy.com\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:37Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-04-15T02:17:09Z\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2020-04-15T02:17:09Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"0001-01-01T00:00:00Z\\\"}],\\\"status\\\":[\\\"delete
+        prohibited\\\",\\\"transfer prohibited\\\",\\\"renew prohibited\\\",\\\"update
+        prohibited\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status Codes\\\",\\\"description\\\":[\\\"For
+        more information on domain status codes, please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree to
+        these Universal Terms of Service\\\",\\\"and limitations of warranty. In particular,
+        you agree not to use this\\\",\\\"data to allow, enable, or otherwise make
+        possible, dissemination or\\\",\\\"collection of this data, in part or in
+        its entirety, for any purpose,\\\",\\\"such as the transmission of unsolicited
+        advertising and solicitations of\\\",\\\"any kind, including spam. You further
+        agree not to use this data to enable\\\",\\\"high volume, automated or robotic
+        electronic processes designed to collect\\\",\\\"or compile this data for
+        any purpose, including mining this data for your\\\",\\\"own personal or commercial
+        purposes, or use this data in any way that violates\\\",\\\"applicable laws
+        and regulations.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.godaddy.com/agreements/showdoc?pageid=5403\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"port43\\\":\\\"whois.godaddy.com\\\",\\\"redacted\\\":[{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Name\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Street\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Email\\\"},\\\"method\\\":\\\"replacementValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        City\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Postal Code\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Phone\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Registrant
+        Fax\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Tech
+        Name\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Tech
+        Phone\\\"},\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"description\\\":\\\"Tech
+        Email\\\"},\\\"method\\\":\\\"replacementValue\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-01-27T17:02:36Z\",\"url\":\"https://rdap.godaddy.com/v1/domain/ZAMBAKYEMEK.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"\",\"country\":\"US\",\"email\":\"REDACTED
+        FOR PRIVACY\",\"handle\":\"zambakyemekcom-reg\",\"name\":\"REDACTED FOR PRIVACY\",\"org\":\"Repossessed
+        by Go Daddy\",\"postal\":\"\",\"region\":\"AZ\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"city\":\"\",\"country\":\"US\",\"email\":\"REDACTED
+        FOR PRIVACY\",\"handle\":\"zambakyemekcom-tech\",\"name\":\"REDACTED FOR PRIVACY\",\"org\":\"Repossessed
+        by Go Daddy\",\"postal\":\"\",\"region\":\"AZ\",\"roles\":[\"technical\"],\"street\":\"\"}],\"creation_date\":\"2020-04-15T02:17:09+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"zambakyemek.com\",\"domain_statuses\":[\"delete
+        prohibited\",\"transfer prohibited\",\"renew prohibited\",\"update prohibited\"],\"email_domains\":[\"godaddy.com\"],\"emails\":[\"abuse@godaddy.com\",\"redacted
+        for privacy\"],\"expiration_date\":\"2025-04-15T02:17:09+00:00\",\"handle\":\"2514918918_DOMAIN_COM-VRSN\",\"last_changed_date\":\"0001-01-01T00:00:00+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/ZAMBAKYEMEK.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/ZAMBAKYEMEK.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/zambakyemek.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns63.domaincontrol.com\",\"ns64.domaincontrol.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@godaddy.com\",\"name\":\"\",\"phone\":\"tel:480-624-2505\",\"roles\":[\"abuse\"]}],\"iana_id\":\"146\",\"name\":\"GoDaddy.com,
+        LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.godaddy.com/v1/domain/ZAMBAKYEMEK.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/zambakyemek.com\"}}\n{\"timestamp\":\"2025-01-27T17:02:38Z\",\"domain\":\"pumpkinclassic.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-01-27T17:02:34Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2649214887_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"pumpkinclassic.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns1.afternic.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-01-20T07:51:13Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.afternic.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-01-20T07:51:13Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/pumpkinclassic.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/domain/pumpkinclassic.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"pumpkinclassiccom-reg\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=pumpkinclassic.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2022-05-21T00:55:12Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"pumpkinclassiccom-tech\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=pumpkinclassic.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2022-05-21T00:55:12Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"2155
+        E Godaddy Way\\\",\\\"Tempe\\\",\\\"AZ\\\",\\\"85284\\\",\\\"\\\"]],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"146\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:480-624-2505\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.godaddy.com\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:37Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-10-20T20:26:25Z\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2021-10-20T20:26:25Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-10-21T11:32:23Z\\\"}],\\\"status\\\":[\\\"delete
+        prohibited\\\",\\\"transfer prohibited\\\",\\\"renew prohibited\\\",\\\"update
+        prohibited\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status Codes\\\",\\\"description\\\":[\\\"For
+        more information on domain status codes, please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree to
+        these Universal Terms of Service\\\",\\\"and limitations of warranty. In particular,
+        you agree not to use this\\\",\\\"data to allow, enable, or otherwise make
+        possible, dissemination or\\\",\\\"collection of this data, in part or in
+        its entirety, for any purpose,\\\",\\\"such as the transmission of unsolicited
+        advertising and solicitations of\\\",\\\"any kind, including spam. You further
+        agree not to use this data to enable\\\",\\\"high volume, automated or robotic
+        electronic processes designed to collect\\\",\\\"or compile this data for
+        any purpose, including mining this data for your\\\",\\\"own personal or commercial
+        purposes, or use this data in any way that violates\\\",\\\"applicable laws
+        and regulations.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.godaddy.com/agreements/showdoc?pageid=5403\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"port43\\\":\\\"whois.godaddy.com\\\"}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-01-27T17:02:36Z\",\"url\":\"https://rdap.godaddy.com/v1/domain/PUMPKINCLASSIC.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://www.godaddy.com/whois/results.aspx?domain=pumpkinclassic.com\",\"handle\":\"pumpkinclassiccom-reg\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"registrant\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"},{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://www.godaddy.com/whois/results.aspx?domain=pumpkinclassic.com\",\"handle\":\"pumpkinclassiccom-tech\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"technical\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"}],\"creation_date\":\"2021-10-20T20:26:25+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"pumpkinclassic.com\",\"domain_statuses\":[\"delete
+        prohibited\",\"transfer prohibited\",\"renew prohibited\",\"update prohibited\"],\"email_domains\":[\"godaddy.com\"],\"emails\":[\"abuse@godaddy.com\",\"https://www.godaddy.com/whois/results.aspx?domain=pumpkinclassic.com\"],\"expiration_date\":\"2025-10-20T20:26:25+00:00\",\"handle\":\"2649214887_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-10-21T11:32:23+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/PUMPKINCLASSIC.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/PUMPKINCLASSIC.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/pumpkinclassic.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns1.afternic.com\",\"ns2.afternic.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@godaddy.com\",\"name\":\"\",\"phone\":\"tel:480-624-2505\",\"roles\":[\"abuse\"]}],\"iana_id\":\"146\",\"name\":\"GoDaddy.com,
+        LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.godaddy.com/v1/domain/PUMPKINCLASSIC.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/pumpkinclassic.com\"}}\n{\"timestamp\":\"2025-01-27T17:02:38Z\",\"domain\":\"giftedlens.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-01-27T17:02:33Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2900435358_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"GIFTEDLENS.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/GIFTEDLENS.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/GIFTEDLENS.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.namebright.com\\\\/rdap\\\\/domain\\\\/GIFTEDLENS.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.namebright.com\\\\/rdap\\\\/domain\\\\/GIFTEDLENS.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1792\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1792\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"DropCatch.com
+        381 LLC\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:17204960020\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"support@namebright.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-07-18T18:35:23Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-07-18T18:35:23Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-07-19T20:34:40Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:21Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NSG1.NAMEBRIGHTDNS.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NSG2.NAMEBRIGHTDNS.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-01-27T17:02:33Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/giftedlens.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"handle\\\":\\\"2900435358_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"GIFTEDLENS.COM\\\",\\\"lang\\\":\\\"en\\\",\\\"objectClassName\\\":\\\"domain\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"handle\\\":\\\"1792\\\",\\\"lang\\\":\\\"en-US\\\",\\\"publicIds\\\":[{\\\"identifier\\\":\\\"1792\\\",\\\"type\\\":\\\"IANA
+        Registrar ID\\\"}],\\\"vcardArray\\\":[\\n  \\\"vcard\\\",\\n[\\n  [\\n    \\\"version\\\",\\n
+        \   {},\\n    \\\"text\\\",\\n    \\\"4.0\\\"\\n  ],\\n  [\\n    \\\"fn\\\",\\n
+        \   {},\\n    \\\"text\\\",\\n    \\\"DropCatch.com 381 LLC\\\"\\n  ]\\n]\\n],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\n
+        \ \\\"vcard\\\",\\n[\\n  [\\n    \\\"version\\\",\\n    {},\\n    \\\"text\\\",\\n
+        \   \\\"4.0\\\"\\n  ],\\n  [\\n    \\\"fn\\\",\\n    {},\\n    \\\"text\\\",\\n
+        \   \\\"DropCatch.com 381 LLC\\\"\\n  ],\\n  [\\n    \\\"email\\\",\\n    {},\\n
+        \   \\\"text\\\",\\n    \\\"abuse@NameBright.com\\\"\\n  ],\\n  [\\n    \\\"tel\\\",\\n
+        \   {\\n      \\\"type\\\": \\\"VOICE\\\"\\n    },\\n    \\\"uri\\\",\\n    \\\"tel:+1.7204960020\\\"\\n
+        \ ]\\n]\\n]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"administrative\\\",\\\"registrant\\\",\\\"technical\\\"],\\\"handle\\\":\\\"TC-240470\\\",\\\"lang\\\":\\\"en-US\\\",\\\"vcardArray\\\":[\\n
+        \ \\\"vcard\\\",\\n[\\n  [\\n    \\\"version\\\",\\n    {},\\n    \\\"text\\\",\\n
+        \   \\\"4.0\\\"\\n  ],\\n  [\\n    \\\"fn\\\",\\n    {},\\n    \\\"text\\\",\\n
+        \   \\\"Domain Admin / This Domain is For Sale\\\"\\n  ],\\n  [\\n    \\\"email\\\",\\n
+        \   {},\\n    \\\"text\\\",\\n    \\\"domains@hugedomains.com\\\"\\n  ],\\n
+        \ [\\n    \\\"org\\\",\\n    {},\\n    \\\"text\\\",\\n    \\\"HugeDomains.com\\\"\\n
+        \ ],\\n  [\\n    \\\"adr\\\",\\n    {\\n      \\\"pref\\\": \\\"1\\\"\\n    },\\n
+        \   \\\"text\\\",\\n    [\\n      \\\"\\\",\\n      \\\"\\\",\\n      \\\"2635
+        Walnut Street\\\",\\n      \\\"Denver\\\",\\n      \\\"CO\\\",\\n      \\\"80205\\\",\\n
+        \     \\\"US\\\"\\n    ]\\n  ],\\n  [\\n    \\\"n\\\",\\n    {},\\n    \\\"text\\\",\\n
+        \   [\\n      \\\"Admin / This Domain is For Sale\\\",\\n      \\\"Domain\\\",\\n
+        \     \\\"\\\",\\n      \\\"\\\",\\n      \\\"\\\"\\n    ]\\n  ],\\n  [\\n
+        \   \\\"tel\\\",\\n    {\\n      \\\"type\\\": \\\"VOICE\\\"\\n    },\\n    \\\"uri\\\",\\n
+        \   \\\"tel:+1.3038930552\\\"\\n  ]\\n]\\n]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-07-18T18:35:23Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-07-18T18:35:23Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2025-07-18T18:35:23Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-01-27T17:02:37.8998641Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-07-19T11:51:10.306425Z\\\"}],\\\"links\\\":[{\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.namebright.com/rdap/domain/GiftedLens.com\\\",\\\"type\\\":\\\"application/rdap\\\\u002Bjson\\\",\\\"value\\\":\\\"https://rdap.namebright.com/rdap/domain/GiftedLens.com\\\"}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"nsg1.namebrightdns.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"nsg2.namebrightdns.com\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false,\\\"zoneSigned\\\":false,\\\"dsData\\\":[]},\\\"status\\\":[\\\"transfer
+        prohibited\\\"],\\\"notices\\\":[{\\\"description\\\":[\\\"For more information
+        on domain status codes, please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://icann.org/epp\\\"}],\\\"title\\\":\\\"Status
+        Codes\\\"},{\\\"description\\\":[\\\"NAMEBRIGHT.COM RDAP TERMS\\\",\\\"The
+        Registration Data Access Protocol (RDAP) is a pilot program implemented by
+        ICANN. For additional information please refer to https://www.icann.org/rdap\\\",\\\"Queries
+        made to NameBright via RDAP must expressly comply with these terms and are
+        done with the acknowledgement that any information will be used in accordance
+        with NameBright\\\\u0027s Privacy Policy, located at https://www.namebright.com/Privacy\\\",\\\"Any
+        and all information is provided \\\\u0027as is\\\\u0027. NameBright makes
+        no guarantee to the accuracy of the RDAP data provided in any way, shape or
+        form, and these terms in their entirety MUST be included in and accompany
+        any subsequent use or storage of this response data or its representation.\\\",\\\"Requestors
+        are not allowed to harass or solicit the registrant or misuse the data that
+        comes from RDAP. This system is solely intended for individual interaction
+        on query-based access. This RDAP service is being provided on an experimental
+        basis only and should not be relied upon for truth or accuracy nor should
+        it be used for any other purpose. In querying this database and data (through
+        use of RDAP) you agree to such stipulations.\\\",\\\"Under no circumstances
+        will any person or program that queries this RDAP information from NameBright
+        allow, enable, or otherwise support the transmission of mass unsolicited,
+        commercial advertising or solicitations (in any form) to or from any records
+        or fields that are retrieved from this system. Any attempt to do so violates
+        the terms of use of this system is unsupported, and might be in violation
+        of laws.\\\",\\\"Do not, under any circumstance, access this RDAP Domain Database
+        using any high volume, automated, electronic processes that send queries or
+        data to the systems of NameBright.com or any ICANN-accredited registrar.\\\",\\\"The
+        use of the information contained in the RDAP Domain Database is intended for
+        and will only be used for lawful purposes. Requesting parties will be solely
+        responsible for any and all consequences should they do otherwise, and any
+        abuse of this RDAP system will be dealt with appropriately and to the maximum
+        extent of the law.\\\",\\\"Requesters are not allowed to repackage, collate,
+        compile, disseminate, or otherwise use the data which is provided to you from
+        RDAP in its entirety, or in any substantial portion, without prior written
+        permission.\\\",\\\"Those querying RDAP from NameBright may not store results
+        in memory, databases, on a hard disk or flash drive, nor re-transmit, sell,
+        package, license or otherwise transfer such data in bulk to any other individual,
+        organization or business entity.\\\",\\\"NameBright retains certain details
+        about queries made to the RDAP database for the purposes of detecting and
+        preventing high volume, automated queries and/or potential misuse of NameBright
+        system(s). Any detection of misuse will be programmatically shut down.\\\",\\\"NameBright
+        reserves the right to restrict or deny access to the RDAP data if it is suspected
+        that there is any failure to comply with any of these terms. Any such termination
+        will occur without warning or notification, and NameBright reserves the exclusive
+        right and authority to terminate such use at any time for any reason.\\\",\\\"NameBright
+        reserves the right to modify or discontinue participation in any voluntary
+        aspects of the RDAP program and suspend or terminate related access to the
+        RDAP protocol at any time and for any reason at NameBright\\\\u0027s sole
+        discretion.\\\",\\\"In using RDAP through NameBright and/or over the Internet
+        or via any set of connected computers, requestors expressly agree to indemnify
+        and hold harmless NameBright, its officers, directors, employees or any related
+        business entity.\\\",\\\"NameBright reserves the right to modify this agreement
+        without notice at any time.\\\",\\\"---\\\",\\\"Last Revised: July 8, 2022\\\",\\\"Copyright
+        2008-2025 NameBright.com. All Rights Reserved.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://www.namebright.com/RDAP\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.namebright.com/RDAP\\\"}],\\\"title\\\":\\\"RDAP
+        Terms of Service\\\"},{\\\"description\\\":[\\\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://icann.org/wicf\\\"}],\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\"},{\\\"description\\\":[\\\"This response conforms
+        to the RDAP Operational Profile for gTLD Registries and Registrars version
+        1.0\\\"]}],\\\"port43\\\":\\\"whois.namebright.com\\\"}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-01-27T17:02:35Z\",\"url\":\"https://rdap.namebright.com/rdap/domain/GIFTEDLENS.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"Denver\",\"country\":\"US\",\"email\":\"domains@hugedomains.com\",\"handle\":\"TC-240470\",\"name\":\"Domain
+        Admin / This Domain is For Sale\",\"org\":\"HugeDomains.com\",\"postal\":\"80205\",\"region\":\"CO\",\"roles\":[\"administrative\",\"registrant\",\"technical\"],\"street\":\"2635
+        Walnut Street\"}],\"creation_date\":\"2024-07-18T18:35:23+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"GIFTEDLENS.COM\",\"domain_statuses\":[\"transfer
+        prohibited\"],\"email_domains\":[\"hugedomains.com\",\"namebright.com\"],\"emails\":[\"abuse@namebright.com\",\"domains@hugedomains.com\",\"support@namebright.com\"],\"expiration_date\":\"2025-07-18T18:35:23+00:00\",\"handle\":\"2900435358_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-07-19T11:51:10.306425+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/GIFTEDLENS.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.namebright.com/rdap/domain/GIFTEDLENS.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.namebright.com/rdap/domain/GiftedLens.com\",\"rel\":\"self\"}],\"nameservers\":[\"nsg1.namebrightdns.com\",\"nsg2.namebrightdns.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@NameBright.com\",\"name\":\"DropCatch.com
+        381 LLC\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1792\",\"name\":\"DropCatch.com
+        381 LLC\"},\"unclassified_emails\":[\"support@namebright.com\"]},\"registrar_request_url\":\"https://rdap.namebright.com/rdap/domain/GIFTEDLENS.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/giftedlens.com\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 27 Jan 2025 17:02:38 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=l7r70lo09la12hrgubi4ojrdjuqcn3quimvb0m7u3a28e2p6vhpvi8067dflh6ubauok5gd4a4kn3i7cblo5po12vklp1i8pcpkqlfa;
+        expires=Wed, 26-Feb-2025 17:02:38 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '6'
+    status:
+      code: 200
+      message: OK
+version: 1
