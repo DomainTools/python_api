@@ -9,7 +9,7 @@ from copy import deepcopy
 from datetime import datetime
 from httpx import Client
 
-from domaintools.constants import OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -20,7 +20,6 @@ from domaintools.exceptions import (
     IncompleteResponseException,
     RequestUriTooLongException,
 )
-from domaintools.utils import get_feeds_products_list
 
 
 try:  # pragma: no cover
@@ -93,7 +92,7 @@ class Results(MutableMapping, MutableSequence):
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
-            elif self.product in get_feeds_products_list():
+            elif self.product in FEEDS_PRODUCTS_LIST:
                 parameters = deepcopy(self.kwargs)
                 parameters.pop("output_format", None)
                 parameters.pop(
@@ -103,6 +102,10 @@ class Results(MutableMapping, MutableSequence):
                 if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
                     parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
                     headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+                header_api_key = parameters.pop("X-Api-Key", None)
+                if header_api_key:
+                    headers["X-Api-Key"] = header_api_key
 
                 return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
             else:
@@ -135,8 +138,7 @@ class Results(MutableMapping, MutableSequence):
             self.setStatus(results.status_code, results)
             if (
                 self.kwargs.get("format", "json") == "json"
-                and self.product
-                not in get_feeds_products_list()  # Special handling of feeds products' data to preserve the result in jsonline format
+                and self.product not in FEEDS_PRODUCTS_LIST  # Special handling of feeds products' data to preserve the result in jsonline format
             ):
                 self._data = results.json()
             else:
@@ -153,7 +155,7 @@ class Results(MutableMapping, MutableSequence):
             return self._data
 
     def check_limit_exceeded(self):
-        if self.kwargs.get("format", "json") == "json" and self.product not in get_feeds_products_list():
+        if self.kwargs.get("format", "json") == "json" and self.product not in FEEDS_PRODUCTS_LIST:
             if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
                 return True, self._data["response"]["message"]
         # TODO: handle html, xml response errors better.

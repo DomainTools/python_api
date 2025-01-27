@@ -172,17 +172,6 @@ def convert_str_to_dateobj(string_date: str, date_format: Optional[str] = "%Y-%m
     return datetime.strptime(string_date, date_format)
 
 
-def get_feeds_products_list():
-    return [
-        "newly-active-domains-feed-(api)",
-        "newly-observed-domains-feed-(api)",
-        "domain-registration-data-access-protocol-feed-(api)",
-        "domain-registration-data-access-protocol-feed-(s3)",
-        "real-time-domain-discovery-feed-(api)",
-        "real-time-domain-discovery-feed-(s3)",
-    ]
-
-
 def validate_feeds_parameters(params):
     sessionID = params.get("sessionID")
     after = params.get("after")

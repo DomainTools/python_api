@@ -593,3 +593,23 @@ def test_domain_discovery_feed():
         feed_result = json.loads(row)
         assert "timestamp" in feed_result.keys()
         assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_domainrdap_feed_not_api_header_auth():
+    results = api.domainrdap(after="-60", sessiondID="integrations-testing", top=5, header_authentication=False)
+    response = results.response()
+    rows = response.strip().split("\n")
+
+    assert response is not None
+    assert results.status == 200
+    assert len(rows) == 5
+
+    for row in rows:
+        feed_result = json.loads(row)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "parsed_record" in feed_result.keys()
+        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]

@@ -1,4 +1,3 @@
-import sys
 import typer
 
 
@@ -23,20 +22,6 @@ def feeds_nad(
         "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
-    rate_limit: bool = typer.Option(
-        False,
-        "-l",
-        "--rate-limit",
-        help="Rate limit API calls against the API based on per minute limits.",
-    ),
-    format: str = typer.Option(
-        "json",
-        "-f",
-        "--format",
-        help="Output format in {'list', 'json', 'xml', 'html'}",
-        callback=DTCLICommand.validate_format_input,
-    ),
-    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -47,6 +32,25 @@ def feeds_nad(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
+    header_authentication: bool = typer.Option(
+        True,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
+    output_format: str = typer.Option(
+        "jsonl",
+        "-f",
+        "--format",
+        help=f"Output format in [{OutputFormat.JSONL.value}, {OutputFormat.CSV.value}]",
+        callback=DTCLICommand.validate_feeds_format_input,
+    ),
+    endpoint: str = typer.Option(
+        Endpoint.FEED.value,
+        "-e",
+        "--endpoint",
+        help=f"Valid endpoints: [{Endpoint.FEED.value}, {Endpoint.DOWNLOAD.value}]",
+        callback=DTCLICommand.validate_endpoint_input,
+    ),
     sessionID: str = typer.Option(
         None,
         "--session-id",
@@ -56,6 +60,13 @@ def feeds_nad(
         None,
         "--after",
         help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+        callback=DTCLICommand.validate_after_or_before_input,
+    ),
+    before: str = typer.Option(
+        None,
+        "--before",
+        help="The end of the query window in seconds, relative to the current time, inclusive",
+        callback=DTCLICommand.validate_after_or_before_input,
     ),
     domain: str = typer.Option(
         None,
@@ -63,10 +74,15 @@ def feeds_nad(
         "--domain",
         help="A string value used to filter feed results",
     ),
+    headers: bool = typer.Option(
+        False,
+        "--headers",
+        help="Adds a header to the first line of response when text/csv is set in header parameters",
+    ),
     top: str = typer.Option(
         None,
         "--top",
-        help="Number of results to return in the response payload",
+        help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_NAD, params=ctx.params)
@@ -86,20 +102,6 @@ def feeds_nod(
         "--credfile",
         help="Optional file with API username and API key, one per line.",
     ),
-    rate_limit: bool = typer.Option(
-        False,
-        "-l",
-        "--rate-limit",
-        help="Rate limit API calls against the API based on per minute limits.",
-    ),
-    format: str = typer.Option(
-        "json",
-        "-f",
-        "--format",
-        help="Output format in {'list', 'json', 'xml', 'html'}",
-        callback=DTCLICommand.validate_format_input,
-    ),
-    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
@@ -110,6 +112,25 @@ def feeds_nod(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
+    header_authentication: bool = typer.Option(
+        True,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
+    output_format: str = typer.Option(
+        "jsonl",
+        "-f",
+        "--format",
+        help=f"Output format in [{OutputFormat.JSONL.value}, {OutputFormat.CSV.value}]",
+        callback=DTCLICommand.validate_feeds_format_input,
+    ),
+    endpoint: str = typer.Option(
+        Endpoint.FEED.value,
+        "-e",
+        "--endpoint",
+        help=f"Valid endpoints: [{Endpoint.FEED.value}, {Endpoint.DOWNLOAD.value}]",
+        callback=DTCLICommand.validate_endpoint_input,
+    ),
     sessionID: str = typer.Option(
         None,
         "--session-id",
@@ -119,6 +140,13 @@ def feeds_nod(
         None,
         "--after",
         help="Start of the time window, relative to the current time in seconds, for which data will be provided",
+        callback=DTCLICommand.validate_after_or_before_input,
+    ),
+    before: str = typer.Option(
+        None,
+        "--before",
+        help="The end of the query window in seconds, relative to the current time, inclusive",
+        callback=DTCLICommand.validate_after_or_before_input,
     ),
     domain: str = typer.Option(
         None,
@@ -126,10 +154,15 @@ def feeds_nod(
         "--domain",
         help="A string value used to filter feed results",
     ),
+    headers: bool = typer.Option(
+        False,
+        "--headers",
+        help="Adds a header to the first line of response when text/csv is set in header parameters",
+    ),
     top: str = typer.Option(
         None,
         "--top",
-        help="Number of results to return in the response payload",
+        help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_NOD, params=ctx.params)
@@ -158,6 +191,11 @@ def feeds_domainrdap(
         False,
         "--no-sign-api-key",
         help="Skip signing of api key",
+    ),
+    header_authentication: bool = typer.Option(
+        True,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
     endpoint: str = typer.Option(
         Endpoint.FEED.value,
@@ -221,6 +259,11 @@ def feeds_domaindiscovery(
         False,
         "--no-sign-api-key",
         help="Skip signing of api key",
+    ),
+    header_authentication: bool = typer.Option(
+        True,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
     output_format: str = typer.Option(
         "jsonl",

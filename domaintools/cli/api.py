@@ -8,15 +8,16 @@ from datetime import datetime
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from domaintools.constants import Endpoint, OutputFormat
 from domaintools.api import API
-from domaintools.exceptions import ServiceException
+from domaintools.constants import Endpoint, OutputFormat
 from domaintools.cli.utils import get_file_extension
+from domaintools.exceptions import ServiceException
+from domaintools._version import current as version
 
 
 class DTCLICommand:
     API_SUCCESS_STATUS = 200
-    APP_PARTNER_NAME = "python_wrapper_cli_2.0.0"
+    APP_PARTNER_NAME = f"python_wrapper_cli_{version}"
 
     @staticmethod
     def print_api_version(value: bool):

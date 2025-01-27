@@ -3,7 +3,7 @@ from hashlib import sha1, sha256, md5
 from hmac import new as hmac
 import re
 
-from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, OutputFormat
+from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
 from domaintools._version import current as version
 from domaintools.results import (
     GroupedIterable,
@@ -125,14 +125,18 @@ class API(object):
         uri = "/".join((self._rest_api_url, path.lstrip("/")))
         parameters = self.default_parameters.copy()
         parameters["api_username"] = self.username
-        self.handle_api_key(path, parameters)
+        header_authentication = kwargs.pop("header_authentication", True)  # Used only by Real-Time Threat Intelligence Feeds endpoints for now
+        self.handle_api_key(product, path, parameters, header_authentication)
         parameters.update({key: str(value).lower() if value in (True, False) else value for key, value in kwargs.items() if value is not None})
 
         return cls(self, product, uri, **parameters)
 
-    def handle_api_key(self, path, parameters):
+    def handle_api_key(self, product, path, parameters, header_authentication):
         if self.https and not self.always_sign_api_key:
-            parameters["api_key"] = self.key
+            if product in FEEDS_PRODUCTS_LIST and header_authentication:
+                parameters["X-Api-Key"] = self.key
+            else:
+                parameters["api_key"] = self.key
         else:
             if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
                 signing_hash = eval(self.key_sign_hash)
@@ -1063,28 +1067,32 @@ class API(object):
 
     def nod(self, **kwargs):
         """Returns back list of the newly observed domains feed"""
-        sessionID = kwargs.get("sessionID")
-        after = kwargs.get("after")
-        if not (sessionID or after):
-            raise ValueError("sessionID or after (can be both) must be defined")
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
 
         return self._results(
-            "newly-observed-domains-feed-(api)",
-            "v1/feed/nod/",
+            f"newly-observed-domains-feed-({source.value})",
+            f"v1/{endpoint}/nod/",
             response_path=(),
             **kwargs,
         )
 
     def nad(self, **kwargs):
         """Returns back list of the newly active domains feed"""
-        sessionID = kwargs.get("sessionID")
-        after = kwargs.get("after")
-        if not (sessionID or after):
-            raise ValueError("sessionID or after (can be both) must be defined")
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
 
         return self._results(
-            "newly-active-domains-feed-(api)",
-            "v1/feed/nad/",
+            f"newly-active-domains-feed-({source})",
+            f"v1/{endpoint}/nad/",
             response_path=(),
             **kwargs,
         )
@@ -1093,10 +1101,10 @@ class API(object):
         """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
-        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
 
         return self._results(
-            f"domain-registration-data-access-protocol-feed-({source.value})",
+            f"domain-registration-data-access-protocol-feed-({source})",
             f"v1/{endpoint}/domainrdap/",
             response_path=(),
             **kwargs,
@@ -1106,13 +1114,13 @@ class API(object):
         """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
-        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
         if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
         return self._results(
-            f"real-time-domain-discovery-feed-({source.value})",
+            f"real-time-domain-discovery-feed-({source})",
             f"v1/{endpoint}/domaindiscovery/",
             response_path=(),
             **kwargs,
