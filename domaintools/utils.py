@@ -175,7 +175,9 @@ def convert_str_to_dateobj(string_date: str, date_format: Optional[str] = "%Y-%m
 def get_feeds_products_list():
     return [
         "newly-active-domains-feed-(api)",
+        "newly-active-domains-feed-(s3)",
         "newly-observed-domains-feed-(api)",
+        "newly-observed-domains-feed-(s3)",
         "domain-registration-data-access-protocol-feed-(api)",
         "domain-registration-data-access-protocol-feed-(s3)",
         "real-time-domain-discovery-feed-(api)",
