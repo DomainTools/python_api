@@ -143,7 +143,6 @@ class Results(MutableMapping, MutableSequence):
 
     def _get_results(self):
         wait_for = self._wait_time()
-        print(f"JD: waitfor: {wait_for}")
         if self.api.rate_limit and (wait_for is None or self.product == "account-information"):
             data = self._make_request()
             status_code = data.status_code if self.product not in FEEDS_PRODUCTS_LIST else 200
@@ -161,7 +160,6 @@ class Results(MutableMapping, MutableSequence):
 
         if wait_for > 0:
             log.info("Sleeping for [%s] prior to requesting [%s].", wait_for, self.product)
-            print("Sleeping for [%s] prior to requesting [%s].", wait_for, self.product)
             time.sleep(wait_for)
         return self._make_request()
 
