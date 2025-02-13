@@ -210,7 +210,7 @@ class Results(MutableMapping, MutableSequence):
 
     def setStatus(self, code, response=None):
         self._status = code
-        if code == 200 or code == 206:
+        if code == 200 or (self.product in FEEDS_PRODUCTS_LIST and code == 206):
             return
 
         reason = None
