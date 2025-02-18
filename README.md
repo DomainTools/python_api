@@ -223,16 +223,40 @@ Real-Time Threat Intelligence Feeds provide data on the different stages of the 
 Custom parameters aside from the common `GET` Request parameters:
 - `endpoint` (choose either `download` or `feed` API endpoint - default is `feed`)
     ```python
-    api = API(USERNAME, KEY)
+    api = API(USERNAME, KEY, always_sign_api_key=False)
     api.nod(endpoint="feed", **kwargs)
     ```
 - `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so you need to set this to `False` when calling `download` API endpoints.
     ```python
-    api = API(USERNAME, KEY)
+    api = API(USERNAME, KEY, always_sign_api_key=False)
     api.nod(header_authentication=False, **kwargs)
     ```
 - `output_format`: (choose either `csv` or `jsonl` - default is `jsonl`). Cannot be used in `domainrdap` feeds. Additionally, `csv` is not available for `download` endpoints.
     ```python
-    api = API(USERNAME, KEY)
+    api = API(USERNAME, KEY, always_sign_api_key=False)
     api.nod(output_format="csv", **kwargs)
     ```
+
+The Feed API standard access pattern is to periodically request the most recent feed data, as often as every 60 seconds. Specify the range of data you receive in one of two ways:
+
+1. With `sessionID`: Make a call and provide a new `sessionID` parameter of your choosing. The API will return the last hour of data by default.
+    - Each subsequent call to the API using your `sessionID` will return all data since the last.
+    - Any single request returns a maximum of 10M results. Requests that exceed 10M results will return a HTTP 206 response code; repeat the same request (with the same `sessionID`) to receive the next tranche of data until receiving a HTTP 200 response code.
+2. Or, specify the time range in one of two ways:
+    - Either an `after=-60` query parameter, where (in this example) -60 indicates the previous 60 seconds.
+    - Or `after` and `before` query parameters for a time range, with each parameter accepting an ISO-8601 UTC formatted timestamp (a UTC date and time of the format YYYY-MM-DDThh:mm:ssZ)
+
+### Handling iterative response from RTUF endpoints:
+
+Since we may dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
+Example:
+```python
+from domaintools import API
+
+api = API(USERNAME, KEY, always_sign_api_key=False)
+results = api.nod(sessionID="my-session-id", after=-7200)
+
+for result in results.response() # generator that holds 2 hours of NOD feeds data
+    partial_data = result.text # In JSONL format
+    # do things
+```
