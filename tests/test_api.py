@@ -643,3 +643,27 @@ def test_verify_response_is_a_generator():
     results = feeds_api.domaindiscovery(after="-60", header_authenticationn=False)
 
     assert isgenerator(results.response())
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_download_api_using_header_auth():
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery(after="-60", endpoint="download")
+
+    assert str(excinfo.value) == "download API does not support header authentication. Provide api_key in the parameter"
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_no_required_params():
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery()
+
+    assert str(excinfo.value) == "sessionID or after or before must be provided"
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_asked_csv_format_for_download_api():
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery(after="-60", output_format="csv", endpoint="download")
+
+    assert str(excinfo.value) == "csv format is not available in download API."
