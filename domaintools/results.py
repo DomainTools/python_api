@@ -11,7 +11,7 @@ except ImportError:  # pragma: no cover
     from ordereddict import OrderedDict
 
 from itertools import zip_longest
-from types import GeneratorType
+from typing import Generator
 
 from domaintools_async import AsyncResults as Results
 
@@ -148,7 +148,7 @@ class ParsedDomainRdap(Results):
 class FeedsResults(Results):
     """Returns the generator for feeds results"""
 
-    def response(self) -> GeneratorType:
+    def response(self) -> Generator:
         status_code = None
         while status_code != 200:
             resp_data = super().response()

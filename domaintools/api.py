@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256, md5
 from hmac import new as hmac
-from types import GeneratorType
+from typing import Generator
 
 import re
 
@@ -1068,7 +1068,7 @@ class API(object):
             **kwargs,
         )
 
-    def nod(self, **kwargs) -> GeneratorType:
+    def nod(self, **kwargs) -> Generator:
         """Returns back list of the newly observed domains feed"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1085,7 +1085,7 @@ class API(object):
             **kwargs,
         )
 
-    def nad(self, **kwargs) -> GeneratorType:
+    def nad(self, **kwargs) -> Generator:
         """Returns back list of the newly active domains feed"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1102,7 +1102,7 @@ class API(object):
             **kwargs,
         )
 
-    def domainrdap(self, **kwargs) -> GeneratorType:
+    def domainrdap(self, **kwargs) -> Generator:
         """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1116,7 +1116,7 @@ class API(object):
             **kwargs,
         )
 
-    def domaindiscovery(self, **kwargs) -> GeneratorType:
+    def domaindiscovery(self, **kwargs) -> Generator:
         """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
