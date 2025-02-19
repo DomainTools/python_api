@@ -77,6 +77,23 @@ class Results(MutableMapping, MutableSequence):
 
         return wait_for
 
+    def _get_session_params(self):
+        parameters = deepcopy(self.kwargs)
+        parameters.pop("output_format", None)
+        parameters.pop(
+            "format", None
+        )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+        headers = {}
+        if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+            parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+            headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+        header_api_key = parameters.pop("X-Api-Key", None)
+        if header_api_key:
+            headers["X-Api-Key"] = header_api_key
+
+        return {"parameters": parameters, "headers": headers}
+
     def _make_request(self):
 
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
@@ -93,20 +110,9 @@ class Results(MutableMapping, MutableSequence):
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
             elif self.product in FEEDS_PRODUCTS_LIST:
-                parameters = deepcopy(self.kwargs)
-                parameters.pop("output_format", None)
-                parameters.pop(
-                    "format", None
-                )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
-                headers = {}
-                if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
-                    parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
-                    headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
-
-                header_api_key = parameters.pop("X-Api-Key", None)
-                if header_api_key:
-                    headers["X-Api-Key"] = header_api_key
-
+                session_params = self._get_session_params()
+                parameters = session_params.get("parameters")
+                headers = session_params.get("headers")
                 return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
             else:
                 return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
@@ -158,7 +164,6 @@ class Results(MutableMapping, MutableSequence):
         if self.kwargs.get("format", "json") == "json" and self.product not in FEEDS_PRODUCTS_LIST:
             if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
                 return True, self._data["response"]["message"]
-        # TODO: handle html, xml response errors better.
         elif "response" in self._data and "limit_exceeded" in self._data:
             return True, "limit exceeded"
         return False, ""
@@ -172,7 +177,7 @@ class Results(MutableMapping, MutableSequence):
 
     def setStatus(self, code, response=None):
         self._status = code
-        if code == 200:
+        if code == 200 or (self.product in FEEDS_PRODUCTS_LIST and code == 206):
             return
 
         reason = None

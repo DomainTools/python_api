@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256, md5
 from hmac import new as hmac
+from types import GeneratorType
+
 import re
 
 from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
@@ -11,6 +13,7 @@ from domaintools.results import (
     ParsedDomainRdap,
     Reputation,
     Results,
+    FeedsResults,
 )
 from domaintools.filters import (
     filter_by_riskscore,
@@ -1065,7 +1068,7 @@ class API(object):
             **kwargs,
         )
 
-    def nod(self, **kwargs):
+    def nod(self, **kwargs) -> GeneratorType:
         """Returns back list of the newly observed domains feed"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1078,10 +1081,11 @@ class API(object):
             f"newly-observed-domains-feed-({source.value})",
             f"v1/{endpoint}/nod/",
             response_path=(),
+            cls=FeedsResults,
             **kwargs,
         )
 
-    def nad(self, **kwargs):
+    def nad(self, **kwargs) -> GeneratorType:
         """Returns back list of the newly active domains feed"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1094,10 +1098,11 @@ class API(object):
             f"newly-active-domains-feed-({source})",
             f"v1/{endpoint}/nad/",
             response_path=(),
+            cls=FeedsResults,
             **kwargs,
         )
 
-    def domainrdap(self, **kwargs):
+    def domainrdap(self, **kwargs) -> GeneratorType:
         """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1107,10 +1112,11 @@ class API(object):
             f"domain-registration-data-access-protocol-feed-({source})",
             f"v1/{endpoint}/domainrdap/",
             response_path=(),
+            cls=FeedsResults,
             **kwargs,
         )
 
-    def domaindiscovery(self, **kwargs):
+    def domaindiscovery(self, **kwargs) -> GeneratorType:
         """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1123,5 +1129,6 @@ class API(object):
             f"real-time-domain-discovery-feed-({source})",
             f"v1/{endpoint}/domaindiscovery/",
             response_path=(),
+            cls=FeedsResults,
             **kwargs,
         )
