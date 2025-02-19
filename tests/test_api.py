@@ -5,8 +5,10 @@ from os import environ
 import json
 import pytest
 
+from inspect import isgenerator
+
 from domaintools import API, exceptions
-from tests.settings import api, vcr
+from tests.settings import api, feeds_api, vcr
 
 
 @vcr.use_cassette
@@ -529,87 +531,115 @@ def test_limit_exceeded():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
-    results = api.nod(after="-60")
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.nod(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_newly_observed_domains_feed_pagination():
+    results = feeds_api.nod(sessionID="integrations-testing", after="2025-01-16T10:20:00Z")
+    page_count = 0
+    for response in results.response():
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        page_count += 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+    assert page_count > 1
 
 
 @vcr.use_cassette
 def test_newly_active_domains_feed():
-    results = api.nad(after="-60")
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.nad(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
 
 
 @vcr.use_cassette
 def test_domainrdap_feed():
-    results = api.domainrdap(after="-60", sessiondID="integrations-testing", top=5)
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.domainrdap(after="-60", top=2, header_authenticationn=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) == 5
+        rows = response.strip().split("\n")
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
-        assert "parsed_record" in feed_result.keys()
-        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
-        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
-        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+        assert response is not None
+        assert len(rows) == 2
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "parsed_record" in feed_result.keys()
+            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
 
 
 @vcr.use_cassette
 def test_domain_discovery_feed():
-    results = api.domaindiscovery(after="-60")
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.domaindiscovery(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
 
 
 @vcr.use_cassette
 def test_domainrdap_feed_not_api_header_auth():
-    results = api.domainrdap(after="-60", sessiondID="integrations-testing", top=5, header_authentication=False)
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.domainrdap(after="-60", sessiondID="integrations-testing", top=5, header_authenticationn=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) == 5
+        rows = response.strip().split("\n")
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
-        assert "parsed_record" in feed_result.keys()
-        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
-        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
-        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+        assert response is not None
+        assert len(rows) == 5
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "parsed_record" in feed_result.keys()
+            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+
+
+@vcr.use_cassette
+def test_verify_response_is_a_generator():
+    results = feeds_api.domaindiscovery(after="-60", header_authenticationn=False)
+
+    assert isgenerator(results.response())

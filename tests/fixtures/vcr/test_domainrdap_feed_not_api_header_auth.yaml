@@ -324,4 +324,320 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.2.0&header_authenticationn=false&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-02-19T17:27:00Z\",\"domain\":\"cadorie.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-02-19T17:26:58Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":
+        [\\\"rdap_level_0\\\", \\\"icann_rdap_response_profile_0\\\", \\\"icann_rdap_technical_implementation_guide_0\\\"],
+        \\\"objectClassName\\\": \\\"domain\\\", \\\"handle\\\": \\\"2805058526_DOMAIN_COM-VRSN\\\",
+        \\\"ldhName\\\": \\\"CADORIE.COM\\\", \\\"unicodeName\\\": \\\"CADORIE.COM\\\",
+        \\\"nameservers\\\": [{\\\"objectClassName\\\": \\\"nameserver\\\", \\\"ldhName\\\":
+        \\\"ns-cloud-d1.googledomains.com\\\", \\\"unicodeName\\\": \\\"ns-cloud-d1.googledomains.com\\\",
+        \\\"lang\\\": \\\"en\\\"}, {\\\"objectClassName\\\": \\\"nameserver\\\", \\\"ldhName\\\":
+        \\\"ns-cloud-d2.googledomains.com\\\", \\\"unicodeName\\\": \\\"ns-cloud-d2.googledomains.com\\\",
+        \\\"lang\\\": \\\"en\\\"}, {\\\"objectClassName\\\": \\\"nameserver\\\", \\\"ldhName\\\":
+        \\\"ns-cloud-d3.googledomains.com\\\", \\\"unicodeName\\\": \\\"ns-cloud-d3.googledomains.com\\\",
+        \\\"lang\\\": \\\"en\\\"}, {\\\"objectClassName\\\": \\\"nameserver\\\", \\\"ldhName\\\":
+        \\\"ns-cloud-d4.googledomains.com\\\", \\\"unicodeName\\\": \\\"ns-cloud-d4.googledomains.com\\\",
+        \\\"lang\\\": \\\"en\\\"}], \\\"entities\\\": [{\\\"objectClassName\\\": \\\"entity\\\",
+        \\\"roles\\\": [\\\"registrant\\\"], \\\"vcardArray\\\": [\\\"vcard\\\", [[\\\"version\\\",
+        {}, \\\"text\\\", \\\"4.0\\\"], [\\\"fn\\\", {}, \\\"text\\\", \\\"Contact
+        Privacy Inc. Customer 0168093186\\\"], [\\\"kind\\\", {}, \\\"text\\\", \\\"individual\\\"],
+        [\\\"lang\\\", {}, \\\"language-tag\\\", \\\"en\\\"], [\\\"org\\\", {}, \\\"text\\\",
+        \\\"Contact Privacy Inc. Customer 0168093186\\\"], [\\\"adr\\\", {\\\"cc\\\":
+        \\\"CA\\\"}, \\\"text\\\", [\\\"\\\", \\\"\\\", \\\"96 Mowat Ave\\\", \\\"Toronto\\\",
+        \\\"ON\\\", \\\"M6K 3M1\\\", \\\"\\\"]], [\\\"tel\\\", {\\\"type\\\": [\\\"voice\\\"]},
+        \\\"uri\\\", \\\"tel:+1.4165385457\\\"], [\\\"email\\\", {}, \\\"text\\\",
+        \\\"cadorie.com@contactprivacy.com\\\"]]]}, {\\\"objectClassName\\\": \\\"entity\\\",
+        \\\"roles\\\": [\\\"administrative\\\"], \\\"vcardArray\\\": [\\\"vcard\\\",
+        [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"], [\\\"fn\\\", {}, \\\"text\\\",
+        \\\"Contact Privacy Inc. Customer 0168093186\\\"], [\\\"kind\\\", {}, \\\"text\\\",
+        \\\"individual\\\"], [\\\"lang\\\", {}, \\\"language-tag\\\", \\\"en\\\"],
+        [\\\"org\\\", {}, \\\"text\\\", \\\"Contact Privacy Inc. Customer 0168093186\\\"],
+        [\\\"adr\\\", {\\\"cc\\\": \\\"CA\\\"}, \\\"text\\\", [\\\"\\\", \\\"\\\",
+        \\\"96 Mowat Ave\\\", \\\"Toronto\\\", \\\"ON\\\", \\\"M6K 3M1\\\", \\\"\\\"]],
+        [\\\"tel\\\", {\\\"type\\\": [\\\"voice\\\"]}, \\\"uri\\\", \\\"tel:+1.4165385457\\\"],
+        [\\\"email\\\", {}, \\\"text\\\", \\\"cadorie.com@contactprivacy.com\\\"]]]},
+        {\\\"objectClassName\\\": \\\"entity\\\", \\\"roles\\\": [\\\"technical\\\"],
+        \\\"vcardArray\\\": [\\\"vcard\\\", [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"],
+        [\\\"fn\\\", {}, \\\"text\\\", \\\"Contact Privacy Inc. Customer 0168093186\\\"],
+        [\\\"kind\\\", {}, \\\"text\\\", \\\"individual\\\"], [\\\"lang\\\", {}, \\\"language-tag\\\",
+        \\\"en\\\"], [\\\"org\\\", {}, \\\"text\\\", \\\"Contact Privacy Inc. Customer
+        0168093186\\\"], [\\\"adr\\\", {\\\"cc\\\": \\\"CA\\\"}, \\\"text\\\", [\\\"\\\",
+        \\\"\\\", \\\"96 Mowat Ave\\\", \\\"Toronto\\\", \\\"ON\\\", \\\"M6K 3M1\\\",
+        \\\"\\\"]], [\\\"tel\\\", {\\\"type\\\": [\\\"voice\\\"]}, \\\"uri\\\", \\\"tel:+1.4165385457\\\"],
+        [\\\"email\\\", {}, \\\"text\\\", \\\"cadorie.com@contactprivacy.com\\\"]]]},
+        {\\\"objectClassName\\\": \\\"entity\\\", \\\"roles\\\": [\\\"billing\\\"],
+        \\\"vcardArray\\\": [\\\"vcard\\\", [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"],
+        [\\\"fn\\\", {}, \\\"text\\\", \\\"Contact Privacy Inc. Customer 0168093186\\\"],
+        [\\\"kind\\\", {}, \\\"text\\\", \\\"individual\\\"], [\\\"lang\\\", {}, \\\"language-tag\\\",
+        \\\"en\\\"], [\\\"org\\\", {}, \\\"text\\\", \\\"Contact Privacy Inc. Customer
+        0168093186\\\"], [\\\"adr\\\", {\\\"cc\\\": \\\"CA\\\"}, \\\"text\\\", [\\\"\\\",
+        \\\"\\\", \\\"96 Mowat Ave\\\", \\\"Toronto\\\", \\\"ON\\\", \\\"M6K 3M1\\\",
+        \\\"\\\"]], [\\\"tel\\\", {\\\"type\\\": [\\\"voice\\\"]}, \\\"uri\\\", \\\"tel:+1.4165385457\\\"],
+        [\\\"email\\\", {}, \\\"text\\\", \\\"cadorie.com@contactprivacy.com\\\"]]]},
+        {\\\"objectClassName\\\": \\\"entity\\\", \\\"roles\\\": [\\\"registrar\\\"],
+        \\\"vcardArray\\\": [\\\"vcard\\\", [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"],
+        [\\\"fn\\\", {}, \\\"text\\\", \\\"TUCOWS, INC.\\\"], [\\\"kind\\\", {}, \\\"text\\\",
+        \\\"individual\\\"], [\\\"lang\\\", {}, \\\"language-tag\\\", \\\"en\\\"]]],
+        \\\"publicIds\\\": [{\\\"type\\\": \\\"IANA Registrar ID\\\", \\\"identifier\\\":
+        \\\"69\\\"}], \\\"handle\\\": \\\"69\\\", \\\"entities\\\": [{\\\"objectClassName\\\":
+        \\\"entity\\\", \\\"roles\\\": [\\\"abuse\\\"], \\\"vcardArray\\\": [\\\"vcard\\\",
+        [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"], [\\\"fn\\\", {}, \\\"text\\\",
+        \\\"TUCOWS, INC.\\\"], [\\\"kind\\\", {}, \\\"text\\\", \\\"individual\\\"],
+        [\\\"lang\\\", {}, \\\"language-tag\\\", \\\"en\\\"], [\\\"tel\\\", {\\\"type\\\":
+        [\\\"voice\\\"]}, \\\"uri\\\", \\\"tel:+1.4165350123\\\"], [\\\"email\\\",
+        {}, \\\"text\\\", \\\"domainabuse@tucows.com\\\"]]]}]}, {\\\"objectClassName\\\":
+        \\\"entity\\\", \\\"roles\\\": [\\\"reseller\\\"], \\\"vcardArray\\\": [\\\"vcard\\\",
+        [[\\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\"], [\\\"fn\\\", {}, \\\"text\\\",
+        \\\"Shopify Inc.\\\"], [\\\"kind\\\", {}, \\\"text\\\", \\\"individual\\\"],
+        [\\\"lang\\\", {}, \\\"language-tag\\\", \\\"en\\\"]]]}], \\\"status\\\":
+        [\\\"client transfer prohibited\\\", \\\"client update prohibited\\\"], \\\"events\\\":
+        [{\\\"eventAction\\\": \\\"registration\\\", \\\"eventDate\\\": \\\"2023-08-11T16:45:15Z\\\"},
+        {\\\"eventAction\\\": \\\"expiration\\\", \\\"eventDate\\\": \\\"2025-08-11T16:45:15Z\\\"},
+        {\\\"eventAction\\\": \\\"last update of RDAP database\\\", \\\"eventDate\\\":
+        \\\"2024-07-30T06:07:08Z\\\"}, {\\\"eventAction\\\": \\\"last changed\\\",
+        \\\"eventDate\\\": \\\"2024-07-30T06:07:08Z\\\"}], \\\"secureDNS\\\": {\\\"zoneSigned\\\":
+        false, \\\"delegationSigned\\\": false}, \\\"publicIds\\\": [{\\\"type\\\":
+        \\\"IANA Registrar ID\\\", \\\"identifier\\\": \\\"69\\\"}], \\\"port43\\\":
+        \\\"whois.tucows.com\\\", \\\"notices\\\": [{\\\"title\\\": \\\"Status Codes\\\",
+        \\\"description\\\": [\\\"For more information on domain status codes, please
+        visit https://icann.org/epp\\\"], \\\"links\\\": [{\\\"value\\\": \\\"https://icann.org/epp\\\",
+        \\\"href\\\": \\\"https://icann.org/epp\\\", \\\"rel\\\": \\\"glossary\\\",
+        \\\"type\\\": \\\"text/html\\\"}]}, {\\\"title\\\": \\\"RDDS Inaccuracy Complaint
+        Form\\\", \\\"description\\\": [\\\"URL of the ICANN RDDS Inaccuracy Complaint
+        Form: https://icann.org/wicf\\\"], \\\"links\\\": [{\\\"href\\\": \\\"https://icann.org/wicf\\\",
+        \\\"rel\\\": \\\"help\\\", \\\"type\\\": \\\"text/html\\\"}]}, {\\\"title\\\":
+        \\\"Terms of Service\\\", \\\"description\\\": [\\\"The data provided by the
+        Registration Data Access Protocol (\\\\u201cRDAP\\\\u201d or \\\\u201cWhois\\\\u201d)
+        is provided to you by Tucows for information purposes only and may be used
+        to assist you in obtaining information about or related to a domain name's
+        registration record. These terms govern your use of this service and access
+        to this database. We reserve the right to modify these terms at any time.\\\",
+        \\\"This information is provided \\\\\\\"as is\\\\\\\" and does not guarantee
+        its accuracy.\\\", \\\"By submitting a query, you certify that you have a
+        legitimate purpose for requesting the data, that you will use this data only
+        for lawful purposes and delete the data immediately when the data are no longer
+        necessary for your lawful or legitimate purpose, and that, under no circumstances,
+        will you use this data to: a) allow, enable, or otherwise support the transmission
+        of mass, unsolicited, commercial advertising, or solicitations to entities
+        other than the data recipient\\\\u2019s own existing customers; or (b) enable
+        high volume, automated, electronic processes that send queries or data to
+        the systems of any registry operator or ICANN-accredited registrar, except
+        as reasonably necessary to register domain names or modify existing registrations.\\\",
+        \\\"The compilation, repackaging, dissemination, or other use of these data
+        is expressly prohibited.\\\", \\\"Your access to the database may be terminated
+        at any time in our sole discretion including, without limitation, for excessive
+        querying of the database or for failure to otherwise abide by this policy.\\\",
+        \\\"Your IP address, the queried domain, the response, and a timestamp is
+        stored for the purposes of maintaining the service and to ensure adherence
+        with these terms.\\\", \\\"By submitting this query, you agree to these terms.\\\",
+        \\\"NOTE: THIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN RECORD
+        DOES NOT SIGNIFY DOMAIN AVAILABILITY.\\\"], \\\"links\\\": [{\\\"value\\\":
+        \\\"http://www.tucowsdomains.com/rdap/tos\\\", \\\"href\\\": \\\"http://www.tucowsdomains.com/rdap/tos\\\",
+        \\\"type\\\": \\\"text/html\\\", \\\"rel\\\": \\\"terms-of-service\\\"}]}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-02-19T17:26:58Z\",\"url\":\"https://opensrs.rdap.tucows.com/domain/CADORIE.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"Toronto\",\"country\":\"CA\",\"email\":\"cadorie.com@contactprivacy.com\",\"name\":\"Contact
+        Privacy Inc. Customer 0168093186\",\"org\":\"Contact Privacy Inc. Customer
+        0168093186\",\"phone\":\"tel:+1.4165385457\",\"postal\":\"M6K 3M1\",\"region\":\"ON\",\"roles\":[\"registrant\"],\"street\":\"96
+        Mowat Ave\"},{\"city\":\"Toronto\",\"country\":\"CA\",\"email\":\"cadorie.com@contactprivacy.com\",\"name\":\"Contact
+        Privacy Inc. Customer 0168093186\",\"org\":\"Contact Privacy Inc. Customer
+        0168093186\",\"phone\":\"tel:+1.4165385457\",\"postal\":\"M6K 3M1\",\"region\":\"ON\",\"roles\":[\"administrative\"],\"street\":\"96
+        Mowat Ave\"},{\"city\":\"Toronto\",\"country\":\"CA\",\"email\":\"cadorie.com@contactprivacy.com\",\"name\":\"Contact
+        Privacy Inc. Customer 0168093186\",\"org\":\"Contact Privacy Inc. Customer
+        0168093186\",\"phone\":\"tel:+1.4165385457\",\"postal\":\"M6K 3M1\",\"region\":\"ON\",\"roles\":[\"technical\"],\"street\":\"96
+        Mowat Ave\"},{\"city\":\"Toronto\",\"country\":\"CA\",\"email\":\"cadorie.com@contactprivacy.com\",\"name\":\"Contact
+        Privacy Inc. Customer 0168093186\",\"org\":\"Contact Privacy Inc. Customer
+        0168093186\",\"phone\":\"tel:+1.4165385457\",\"postal\":\"M6K 3M1\",\"region\":\"ON\",\"roles\":[\"billing\"],\"street\":\"96
+        Mowat Ave\"},{\"name\":\"Shopify Inc.\",\"roles\":[\"reseller\"]}],\"creation_date\":\"2023-08-11T16:45:15+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"CADORIE.COM\",\"domain_statuses\":[\"client
+        transfer prohibited\",\"client update prohibited\"],\"email_domains\":[\"contactprivacy.com\",\"tucows.com\"],\"emails\":[\"cadorie.com@contactprivacy.com\",\"domainabuse@tucows.com\"],\"expiration_date\":\"2025-08-11T16:45:15+00:00\",\"handle\":\"2805058526_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-07-30T06:07:08+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/CADORIE.COM\",\"rel\":\"self\"},{\"href\":\"https://opensrs.rdap.tucows.com/domain/CADORIE.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns-cloud-d1.googledomains.com\",\"ns-cloud-d2.googledomains.com\",\"ns-cloud-d3.googledomains.com\",\"ns-cloud-d4.googledomains.com\"],\"registrar\":{\"contacts\":[{\"email\":\"domainabuse@tucows.com\",\"name\":\"TUCOWS,
+        INC.\",\"phone\":\"tel:+1.4165350123\",\"roles\":[\"abuse\"]}],\"iana_id\":\"69\",\"name\":\"TUCOWS,
+        INC.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://opensrs.rdap.tucows.com/domain/CADORIE.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/cadorie.com\"}}\n{\"timestamp\":\"2025-02-19T17:27:00Z\",\"domain\":\"thirdcapital66.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-02-19T17:26:56Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2861576559_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"thirdcapital66.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns69.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-03-07T01:46:01Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns70.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-03-07T01:46:01Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/thirdcapital66.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/domain/thirdcapital66.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"thirdcapital66com-reg\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=thirdcapital66.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-03-07T01:38:59Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"thirdcapital66com-tech\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=thirdcapital66.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-03-07T01:38:59Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"2155
+        E Godaddy Way\\\",\\\"Tempe\\\",\\\"AZ\\\",\\\"85284\\\",\\\"\\\"]],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"146\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:480-624-2505\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.godaddy.com\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-02-19T17:26:59Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-03-07T03:45:59Z\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-03-07T03:45:59Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-03-07T03:46:00Z\\\"}],\\\"status\\\":[\\\"delete
+        prohibited\\\",\\\"transfer prohibited\\\",\\\"renew prohibited\\\",\\\"update
+        prohibited\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status Codes\\\",\\\"description\\\":[\\\"For
+        more information on domain status codes, please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree to
+        these Universal Terms of Service\\\",\\\"and limitations of warranty. In particular,
+        you agree not to use this\\\",\\\"data to allow, enable, or otherwise make
+        possible, dissemination or\\\",\\\"collection of this data, in part or in
+        its entirety, for any purpose,\\\",\\\"such as the transmission of unsolicited
+        advertising and solicitations of\\\",\\\"any kind, including spam. You further
+        agree not to use this data to enable\\\",\\\"high volume, automated or robotic
+        electronic processes designed to collect\\\",\\\"or compile this data for
+        any purpose, including mining this data for your\\\",\\\"own personal or commercial
+        purposes, or use this data in any way that violates\\\",\\\"applicable laws
+        and regulations.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.godaddy.com/agreements/showdoc?pageid=5403\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"port43\\\":\\\"whois.godaddy.com\\\"}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-02-19T17:26:57Z\",\"url\":\"https://rdap.godaddy.com/v1/domain/THIRDCAPITAL66.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://www.godaddy.com/whois/results.aspx?domain=thirdcapital66.com\",\"handle\":\"thirdcapital66com-reg\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"registrant\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"},{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://www.godaddy.com/whois/results.aspx?domain=thirdcapital66.com\",\"handle\":\"thirdcapital66com-tech\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"technical\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"}],\"creation_date\":\"2024-03-07T03:45:59+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"thirdcapital66.com\",\"domain_statuses\":[\"delete
+        prohibited\",\"transfer prohibited\",\"renew prohibited\",\"update prohibited\"],\"email_domains\":[\"godaddy.com\"],\"emails\":[\"abuse@godaddy.com\",\"https://www.godaddy.com/whois/results.aspx?domain=thirdcapital66.com\"],\"expiration_date\":\"2025-03-07T03:45:59+00:00\",\"handle\":\"2861576559_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-03-07T03:46:00+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/THIRDCAPITAL66.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/THIRDCAPITAL66.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/thirdcapital66.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns69.domaincontrol.com\",\"ns70.domaincontrol.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@godaddy.com\",\"name\":\"\",\"phone\":\"tel:480-624-2505\",\"roles\":[\"abuse\"]}],\"iana_id\":\"146\",\"name\":\"GoDaddy.com,
+        LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.godaddy.com/v1/domain/THIRDCAPITAL66.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/thirdcapital66.com\"}}\n{\"timestamp\":\"2025-02-19T17:27:00Z\",\"domain\":\"brentmj.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-02-19T17:26:56Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"922792469_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"BRENTMJ.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/BRENTMJ.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/BRENTMJ.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/domain\\\\/BRENTMJ.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/domain\\\\/BRENTMJ.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"143\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"143\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Omnis
+        Network, LLC\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.4802957800\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@omnis.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-13T03:24:31Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-04-13T03:24:31Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-02-17T18:14:37Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-02-19T17:26:47Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"SHANE.NS.CLOUDFLARE.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"SUE.NS.CLOUDFLARE.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-02-19T17:26:56Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/brentmj.com\"},{\"data\":\"{\\\"conformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"922792469_DOMAIN_COM-VRSN\\\",\\\"port43\\\":\\\"whois.omnis.com\\\",\\\"notices\\\":[{\\\"description\\\":[\\\"Service
+        subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/terms_of_use\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/terms_of_use\\\"}],\\\"title\\\":\\\"Terms
+        of Use\\\"},{\\\"description\\\":[\\\"For more information on domain status
+        codes, please visit https:\\\\/\\\\/icann.org\\\\/epp.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\"}],\\\"title\\\":\\\"EPP
+        Status Codes\\\"},{\\\"description\\\":[\\\"URL of the ICANN Whois Inaccuracy
+        Complaint Form: https:\\\\/\\\\/www.icann.org\\\\/wicf.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/www.icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/www.icann.org\\\\/wicf\\\"}],\\\"title\\\":\\\"Whois
+        Inaccuracy Complaint Form\\\"}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"sue.ns.cloudflare.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"shane.ns.cloudflare.com\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Omnis
+        Network, LLC\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",[\\\"3655
+        Torrance Blvd\\\",\\\"Suite 230\\\"],\\\"Torrance\\\",\\\"CA\\\",\\\"90503\\\",\\\"US\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.3103169600\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"support@omnis.com\\\"]]],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"143\\\"}],\\\"handle\\\":\\\"\\\",\\\"lang\\\":\\\"en-US\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Omnis
+        Network, LLC\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",[\\\"3655
+        Torrance Blvd\\\",\\\"Suite 230\\\"],\\\"Torrance\\\",\\\"CA\\\",\\\"90503\\\",\\\"US\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.3103169600\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@omnis.com\\\"]]]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"US\\\"]],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https:\\\\/\\\\/www.omnis.com\\\\/tools\\\\/domain-email.php?domain=brentmj.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"]}]}],\\\"links\\\":[{\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/domain\\\\/brentmj.com\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.omnis.com\\\\/domain\\\\/brentmj.com\\\"}],\\\"lang\\\":\\\"en-US\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-12T20:24:31Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-04-12T14:44:02Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-04-12T20:24:31Z\\\"}],\\\"ldhName\\\":\\\"brentmj.com\\\",\\\"status\\\":[\\\"client
+        transfer prohibited\\\"]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-02-19T17:26:58Z\",\"url\":\"https://rdap.omnis.com/domain/BRENTMJ.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"contacts\":[{\"city\":\"\",\"country\":\"US\",\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"registrant\"],\"street\":\"\"}],\"creation_date\":\"2007-04-12T20:24:31+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"brentmj.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"omnis.com\"],\"emails\":[\"abuse@omnis.com\",\"redacted
+        for privacy\",\"support@omnis.com\"],\"expiration_date\":\"2025-04-12T20:24:31+00:00\",\"handle\":\"922792469_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-04-12T14:44:02+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/BRENTMJ.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.omnis.com/domain/BRENTMJ.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.omnis.com/domain/brentmj.com\",\"rel\":\"self\"}],\"nameservers\":[\"sue.ns.cloudflare.com\",\"shane.ns.cloudflare.com\"],\"registrar\":{\"contacts\":[{\"city\":\"Torrance\",\"country\":\"US\",\"email\":\"abuse@omnis.com\",\"org\":\"Omnis
+        Network, LLC\",\"phone\":\"+1.3103169600\",\"postal\":\"90503\",\"region\":\"CA\",\"roles\":[\"abuse\"],\"street\":\"3655
+        Torrance Blvd Suite 230\"}],\"iana_id\":\"143\",\"name\":\"Omnis Network,
+        LLC\"},\"unclassified_emails\":[\"support@omnis.com\"]},\"registrar_request_url\":\"https://rdap.omnis.com/domain/BRENTMJ.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/brentmj.com\"}}\n{\"timestamp\":\"2025-02-19T17:27:00Z\",\"domain\":\"renovacionantivirus.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-02-19T17:26:56Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"ldhName\\\":\\\"renovacionantivirus.com\\\",\\\"handle\\\":\\\"1640672156_DOMAIN_COM-VRSN\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2011-02-17T10:28:40.000Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2018-01-22T10:29:22.000Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-02-17T10:28:40.000Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-02-19T17:26:59.681Z\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"port43\\\":\\\"whois.nicline.com\\\",\\\"lang\\\":\\\"en\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrant\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://registrar.domainconnection.info/\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"ES\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"Girona\\\",\\\"\\\",\\\"\\\"]]]],\\\"status\\\":[\\\"removed\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"This
+        email has been redacted for privacy. You could use the 'contact-uri' to contact
+        the registrant of the domain.\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"379\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.nicline.com\\\"]]],\\\"publicIds\\\":[{\\\"identifier\\\":\\\"379\\\",\\\"type\\\":\\\"IANA
+        Registrar ID\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Arsys
+        Internet, S.L. dba NICLINE.COM\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.nicline.com\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@nicline.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+34.941620100\\\"]]]}]}],\\\"remarks\\\":[],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns3.elifebackup.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns4.elifebackup.com\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://icann.org/epp\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/wicf\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\"}]}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-02-19T17:26:58Z\",\"url\":\"https://rdap.domainconnection.info/domain/RENOVACIONANTIVIRUS.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"\",\"country\":\"ES\",\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"postal\":\"\",\"region\":\"Girona\",\"roles\":[\"registrant\"],\"street\":\"\"}],\"creation_date\":\"2011-02-17T10:28:40+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"renovacionantivirus.com\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"nicline.com\"],\"emails\":[\"abuse@nicline.com\",\"redacted
+        for privacy\"],\"expiration_date\":\"2026-02-17T10:28:40+00:00\",\"handle\":\"1640672156_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2018-01-22T10:29:22+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/RENOVACIONANTIVIRUS.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.domainconnection.info/domain/RENOVACIONANTIVIRUS.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns3.elifebackup.com\",\"ns4.elifebackup.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@nicline.com\",\"name\":\"Arsys
+        Internet, S.L. dba NICLINE.COM\",\"org\":\"Arsys Internet, S.L. dba NICLINE.COM\",\"phone\":\"tel:+34.941620100\",\"roles\":[\"abuse\"]}],\"iana_id\":\"379\",\"name\":\"Arsys
+        Internet, S.L. dba NICLINE.COM\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.domainconnection.info/domain/RENOVACIONANTIVIRUS.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/renovacionantivirus.com\"}}\n{\"timestamp\":\"2025-02-19T17:27:00Z\",\"domain\":\"nichepropertyforsale.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-02-19T17:26:56Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"RDAP
+        Terms of Service\\\",\\\"description\\\":[\\\"By querying Namecheap\u2019s
+        \ RDAP Domain Database, you agree to comply with Namecheap\u2019s RDAP Terms
+        of Service, including but not limited to the terms herein,  and you acknowledge
+        and agree that your information will be used in accordance with Namecheap
+        Privacy Policy (https://www.namecheap.com/legal/general/privacy-policy/),
+        including that Namecheap may retain certain details about queries to our RDAP
+        Domain Database for the purposes of detecting and preventing misuse.  If you
+        do not agree to any of these terms, do not access or use ,the RDAP Domain
+        Database.\\\",\\\"Although Namecheap believes the data to be reliable, you
+        agree and acknowledge that any information provided is 'as is' without any
+        guarantee of accuracy.\\\",\\\"You further agree that you will:\\\",\\\"1)
+        Not misuse the RDAP Domain Database. It is intended solely for query-based
+        access and should not be used for or relied upon for any other purpose.\\\",\\\"2)
+        Not use the RDAP Domain Database to allow, enable, or otherwise support the
+        transmission of unsolicited, commercial advertising or solicitations.\\\",\\\"3)
+        Not access the RDAP Domain Database through the use of high volume, automated
+        electronic processes that send queries or data to the systems of Namecheap,
+        any other ICANN-accredited registrar, or any registry operator.\\\",\\\"4)
+        Not compile, repackage, disseminate, or otherwise use the information contained
+        in the RDAP Domain Database in its entirety, or in any substantial portion,
+        without our prior written permission.\\\",\\\"5) You will only use the information
+        contained in the RDAP Domain Database for lawful purposes.\\\",\\\"We reserve
+        the right to restrict or deny your access to the RDAP Domain Database if we
+        suspect that you have failed to comply with these terms.\\\",\\\"We reserve
+        the right to modify this agreement at any time.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://icann.org/epp\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://www.icann.org/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.icann.org/wicf\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.icann.org/wicf\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"lang\\\":\\\"en\\\",\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"value\\\":\\\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\\\"}],\\\"handle\\\":\\\"2655248093_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"nichepropertyforsale.com\\\",\\\"unicodeName\\\":\\\"nichepropertyforsale.com\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-02-19T17:26:59\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2021-11-15T23:18:47\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-11-15T23:18:47\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-11-04T12:14:53\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false,\\\"zoneSigned\\\":false},\\\"port43\\\":\\\"whois.namecheap.com\\\",\\\"entities\\\":[{\\\"publicIds\\\":[{\\\"type\\\":\\\"NAMECHEAP
+        INC\\\",\\\"identifier\\\":\\\"1068\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.9854014545\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@namecheap.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1068\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"support@namecheap.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"8975A9ED-3531-452D-064D-08D9A855DC3B\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Registrant\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"5FD8BD00-D114-4031-064E-08D9A855DC3B\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Administrative\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"EB50D077-448F-4294-18A1-08D9A854C0C8\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"IS\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"Technical\\\"]}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns1.namecheaphosting.com\\\",\\\"unicodeName\\\":\\\"dns1.namecheaphosting.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns2.namecheaphosting.com\\\",\\\"unicodeName\\\":\\\"dns2.namecheaphosting.com\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-02-19T17:26:58Z\",\"url\":\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\",\"handle\":\"8975A9ED-3531-452D-064D-08D9A855DC3B\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"registrant\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\",\"handle\":\"5FD8BD00-D114-4031-064E-08D9A855DC3B\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"administrative\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\",\"handle\":\"EB50D077-448F-4294-18A1-08D9A854C0C8\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"technical\"],\"street\":\"Kalkofnsvegur 2\"}],\"creation_date\":\"2021-11-15T23:18:47\",\"dnssec\":{\"signed\":false},\"domain\":\"nichepropertyforsale.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"namecheap.com\",\"withheldforprivacy.com\"],\"emails\":[\"abuse@namecheap.com\",\"bb3773175c55454abe78450ed2c454ec.protect@withheldforprivacy.com\",\"support@namecheap.com\"],\"expiration_date\":\"2025-11-15T23:18:47\",\"handle\":\"2655248093_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-11-04T12:14:53\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/NICHEPROPERTYFORSALE.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\",\"rel\":\"self\"}],\"nameservers\":[\"dns1.namecheaphosting.com\",\"dns2.namecheaphosting.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@namecheap.com\",\"name\":\"NAMECHEAP
+        INC\",\"phone\":\"tel:+1.9854014545\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1068\",\"name\":\"NAMECHEAP
+        INC\"},\"unclassified_emails\":[\"support@namecheap.com\"]},\"registrar_request_url\":\"https://rdap.namecheap.com/domain/NICHEPROPERTYFORSALE.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/nichepropertyforsale.com\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 19 Feb 2025 17:27:00 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=v0mi0btgbc13s45eri40auns9aoh75ar77no40meaocjhp8marnbhtvo77hp124m7qnd3937pk50avrbfsoejtrv3b8diuqshnikvta;
+        expires=Fri, 21-Mar-2025 17:27:00 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '8'
+    status:
+      code: 200
+      message: OK
 version: 1
