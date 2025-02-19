@@ -11,6 +11,8 @@ except ImportError:  # pragma: no cover
     from ordereddict import OrderedDict
 
 from itertools import zip_longest
+from types import GeneratorType
+
 from domaintools_async import AsyncResults as Results
 
 
@@ -141,3 +143,21 @@ class ParsedDomainRdap(Results):
                     flat[f"contact_{contact_key}_{i}"] = " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
 
         return flat
+
+
+class FeedsResults(Results):
+    """Returns the generator for feeds results"""
+
+    def response(self) -> GeneratorType:
+        status_code = None
+        while status_code != 200:
+            resp_data = super().response()
+            status_code = self.status
+            yield resp_data
+
+            self._data = None
+            self._response = None
+            if not self.kwargs.get("sessionID"):
+                # we'll only do iterative request for queries that has sessionID.
+                # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
+                break
