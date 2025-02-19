@@ -2,11 +2,12 @@
 
 import asyncio
 
+from copy import deepcopy
 from httpx import AsyncClient
 
 from domaintools.base_results import Results
-from domaintools.constants import FEEDS_PRODUCTS_LIST
-from domaintools.exceptions import ServiceUnavailableException, ServiceException
+from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.exceptions import ServiceUnavailableException
 
 
 class _AIter(object):
@@ -41,26 +42,6 @@ class AsyncResults(Results):
     def __await__(self):
         return self.__awaitable__().__await__()
 
-    async def _get_feeds_async_results_generator(self, session, parameters, headers):
-        status_code = None
-        while status_code != 200:
-            resp_data = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
-            status_code = resp_data.status_code
-            self.setStatus(status_code, resp_data)
-
-            # Check limit exceeded here
-            if "response" in resp_data.text and "limit_exceeded" in resp_data.text:
-                self._limit_exceeded = True
-                self._limit_exceeded_message = "limit exceeded"
-            yield resp_data
-
-            if self._limit_exceeded:
-                raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
-            if not self.kwargs.get("sessionID"):
-                # we'll only do iterative request for queries that has sessionID.
-                # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
-                break
-
     async def _make_async_request(self, session):
         if self.product in ["iris-investigate", "iris-enrich", "iris-detect-escalate-domains"]:
             post_data = self.kwargs.copy()
@@ -71,19 +52,27 @@ class AsyncResults(Results):
             patch_data.update(self.api.extra_request_params)
             results = await session.patch(url=self.url, json=patch_data)
         elif self.product in FEEDS_PRODUCTS_LIST:
-            generator_params = self._get_session_params()
-            parameters = generator_params.get("parameters")
-            headers = generator_params.get("headers")
-            results = await self._get_feeds_async_results_generator(session=session, parameters=parameters, headers=headers)
+            parameters = deepcopy(self.kwargs)
+            parameters.pop("output_format", None)
+            parameters.pop(
+                "format", None
+            )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+            headers = {}
+            if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+                parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+                headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+            header_api_key = parameters.pop("X-Api-Key", None)
+            if header_api_key:
+                headers["X-Api-Key"] = header_api_key
+
+            results = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
         else:
             results = await session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
         if results:
-            status_code = results.status_code if self.product not in FEEDS_PRODUCTS_LIST else 200
-            self.setStatus(status_code, results)
+            self.setStatus(results.status_code, results)
             if self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
-            elif self.product in FEEDS_PRODUCTS_LIST:
-                self._data = results  # Uses generator to handle large data results from feeds endpoint
             else:
                 self._data = results.text()
             limit_exceeded, message = self.check_limit_exceeded()
@@ -94,6 +83,7 @@ class AsyncResults(Results):
 
     async def __awaitable__(self):
         if self._data is None:
+
             async with AsyncClient(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
                 wait_time = self._wait_time()
                 if wait_time is None and self.api:
