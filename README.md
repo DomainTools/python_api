@@ -257,6 +257,6 @@ api = API(USERNAME, KEY, always_sign_api_key=False)
 results = api.nod(sessionID="my-session-id", after=-7200)
 
 for result in results.response() # generator that holds 2 hours of NOD feeds data
-    partial_data = result.text # In JSONL format
+    partial_data = result # In JSONL format
     # do things
 ```
