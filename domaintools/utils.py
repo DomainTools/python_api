@@ -177,8 +177,12 @@ def validate_feeds_parameters(params):
     after = params.get("after")
     before = params.get("before")
     if not (sessionID or after or before):
-        raise ValueError("sessionID or after or before must be defined")
+        raise ValueError("sessionID or after or before must be provided")
 
     format = params.get("output_format")
-    if params.get("endpoint") == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
+    endpoint = params.get("endpoint")
+    if endpoint == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
+
+    if endpoint == Endpoint.DOWNLOAD.value and params.get("header_authentication", True):
+        raise ValueError(f"{Endpoint.DOWNLOAD.value} API does not support header authentication. Provide api_key in the parameter")

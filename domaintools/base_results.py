@@ -182,9 +182,9 @@ class Results(MutableMapping, MutableSequence):
                 if callable(reason):
                     reason = reason()
 
-        if code == 400:
+        if code in (400, 422):
             raise BadRequestException(code, reason)
-        elif code == 403:
+        elif code in (401, 403):
             raise NotAuthorizedException(code, reason)
         elif code == 404:
             raise NotFoundException(code, reason)
