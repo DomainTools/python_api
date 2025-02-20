@@ -226,7 +226,7 @@ Custom parameters aside from the common `GET` Request parameters:
     api = API(USERNAME, KEY, always_sign_api_key=False)
     api.nod(endpoint="feed", **kwargs)
     ```
-- `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so you need to set this to `False` when calling `download` API endpoints.
+- `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so this will be defaulted to `False` even without explicitly setting it.
     ```python
     api = API(USERNAME, KEY, always_sign_api_key=False)
     api.nod(header_authentication=False, **kwargs)

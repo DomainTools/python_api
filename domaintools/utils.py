@@ -185,4 +185,5 @@ def validate_feeds_parameters(params):
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
 
     if endpoint == Endpoint.DOWNLOAD.value and params.get("header_authentication", True):
-        raise ValueError(f"{Endpoint.DOWNLOAD.value} API does not support header authentication. Provide api_key in the parameter")
+        # For download endpoint, header_authentication will be False by default
+        params["header_authentication"] = False

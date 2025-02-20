@@ -646,11 +646,19 @@ def test_verify_response_is_a_generator():
 
 
 @vcr.use_cassette
-def test_feeds_endpoint_should_raise_error_if_download_api_using_header_auth():
-    with pytest.raises(ValueError) as excinfo:
-        feeds_api.domaindiscovery(after="-60", endpoint="download")
+def test_feeds_endpoint_should_non_header_auth_be_the_default():
+    results = feeds_api.domaindiscovery(after="-60", endpoint="download")
+    for response in results.response():
+        assert results.status == 200
 
-    assert str(excinfo.value) == "download API does not support header authentication. Provide api_key in the parameter"
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "download_name" in feed_result["response"].keys()
+            assert "files" in feed_result["response"].keys()
 
 
 @vcr.use_cassette

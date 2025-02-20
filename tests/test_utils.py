@@ -119,13 +119,15 @@ def test_get_pivots():
     assert pivots == [["IP ADDRESS", ("199.30.228.112", 4)], ["IP ASN", (17318, 111)], ["IP ISP", ("DomainTools LLC", 222)]]
 
 
-def test_validate_feeds_parameters_should_raise_error_if_download_api_using_header_auth(test_feeds_params):
+def test_validate_feeds_parameters_update_header_auth_to_False(test_feeds_params):
     test_feeds_params["output_format"] = "jsonl"
 
-    with pytest.raises(ValueError) as excinfo:
-        utils.validate_feeds_parameters(test_feeds_params)
+    assert test_feeds_params.get("header_authentication", True)  # header_authentication is True whether existing or not
+    assert test_feeds_params["endpoint"] == "download"
 
-    assert str(excinfo.value) == "download API does not support header authentication. Provide api_key in the parameter"
+    utils.validate_feeds_parameters(test_feeds_params)
+
+    assert not test_feeds_params["header_authentication"]  # header_authentication will be defaulted to False if endpoint is download
 
 
 def test_validate_feeds_parameters_should_raise_error_if_no_required_params(test_feeds_params):
