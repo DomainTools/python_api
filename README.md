@@ -246,17 +246,28 @@ The Feed API standard access pattern is to periodically request the most recent 
     - Either an `after=-60` query parameter, where (in this example) -60 indicates the previous 60 seconds.
     - Or `after` and `before` query parameters for a time range, with each parameter accepting an ISO-8601 UTC formatted timestamp (a UTC date and time of the format YYYY-MM-DDThh:mm:ssZ)
 
-### Handling iterative response from RTUF endpoints:
+## Handling iterative response from RTUF endpoints:
 
 Since we may dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
-Example:
+
+### Single request because the requested data is within the maximum result:
+```python
+from domaintools import API
+
+api = API(USERNAME, KEY, always_sign_api_key=False)
+results = api.nod(sessionID="my-session-id", after=-60)
+
+for result in results.response() # generator that holds NOD feeds data for the past 60 seconds and is expected to request only once
+    # do things to result
+```
+
+## Multiple requests because the requested data is more than the maximum result per request:
 ```python
 from domaintools import API
 
 api = API(USERNAME, KEY, always_sign_api_key=False)
 results = api.nod(sessionID="my-session-id", after=-7200)
 
-for result in results.response() # generator that holds 2 hours of NOD feeds data
-    partial_data = result # In JSONL format
-    # do things
+for partial_result in results.response() # generator that holds NOD feeds data for the past 2 hours and is expected to request multiple times
+    # do things to partial_result
 ```
