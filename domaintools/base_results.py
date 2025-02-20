@@ -53,8 +53,6 @@ class Results(MutableMapping, MutableSequence):
         self._response = None
         self._items_list = None
         self._data = None
-        self._limit_exceeded = None
-        self._limit_exceeded_message = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -77,29 +75,6 @@ class Results(MutableMapping, MutableSequence):
 
         return wait_for
 
-    def _get_feeds_results_generator(self, parameters, headers):
-        with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
-            status_code = None
-            while status_code != 200:
-                resp_data = session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
-                status_code = resp_data.status_code
-                self.setStatus(status_code, resp_data)
-
-                # Check limit exceeded here
-                if "response" in resp_data.text and "limit_exceeded" in resp_data.text:
-                    self._limit_exceeded = True
-                    self._limit_exceeded_message = "limit exceeded"
-
-                yield resp_data
-
-                if self._limit_exceeded:
-                    raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
-
-                if not self.kwargs.get("sessionID"):
-                    # we'll only do iterative request for queries that has sessionID.
-                    # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
-                    break
-
     def _get_session_params(self):
         parameters = deepcopy(self.kwargs)
         parameters.pop("output_format", None)
@@ -118,12 +93,6 @@ class Results(MutableMapping, MutableSequence):
         return {"parameters": parameters, "headers": headers}
 
     def _make_request(self):
-        if self.product in FEEDS_PRODUCTS_LIST:
-            session_params = self._get_session_params()
-            parameters = session_params.get("parameters")
-            headers = session_params.get("headers")
-
-            return self._get_feeds_results_generator(parameters=parameters, headers=headers)
 
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
             if self.product in [
@@ -138,6 +107,11 @@ class Results(MutableMapping, MutableSequence):
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
+            elif self.product in FEEDS_PRODUCTS_LIST:
+                session_params = self._get_session_params()
+                parameters = session_params.get("parameters")
+                headers = session_params.get("headers")
+                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
             else:
                 return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
@@ -145,8 +119,7 @@ class Results(MutableMapping, MutableSequence):
         wait_for = self._wait_time()
         if self.api.rate_limit and (wait_for is None or self.product == "account-information"):
             data = self._make_request()
-            status_code = data.status_code if self.product not in FEEDS_PRODUCTS_LIST else 200
-            if status_code == 503:  # pragma: no cover
+            if data.status_code == 503:  # pragma: no cover
                 sleeptime = 60
                 log.info(
                     "503 encountered for [%s] - sleeping [%s] seconds before retrying request.",
@@ -166,40 +139,27 @@ class Results(MutableMapping, MutableSequence):
     def data(self):
         if self._data is None:
             results = self._get_results()
-            status_code = results.status_code if self.product not in FEEDS_PRODUCTS_LIST else 200
-            self.setStatus(status_code, results)
-            if (
-                self.kwargs.get("format", "json") == "json"
-                and self.product not in FEEDS_PRODUCTS_LIST  # Special handling of feeds products' data to preserve the result in jsonline format
-            ):
+            self.setStatus(results.status_code, results)
+            if self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
-            elif self.product in FEEDS_PRODUCTS_LIST:
-                self._data = results  # Uses generator to handle large data results from feeds endpoint
             else:
                 self._data = results.text
-            limit_exceeded, message = self.check_limit_exceeded()
 
-            if limit_exceeded:
-                self._limit_exceeded = True
-                self._limit_exceeded_message = message
+        self.check_limit_exceeded()
 
-        if self._limit_exceeded is True:
-            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
-        else:
-            return self._data
+        return self._data
 
     def check_limit_exceeded(self):
-        if self.product in FEEDS_PRODUCTS_LIST:
-            # bypass here as this is handled in generator already
-            return False, ""
-
-        if self.kwargs.get("format", "json") == "json" and self.product not in FEEDS_PRODUCTS_LIST:
-            if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
-                return True, self._data["response"]["message"]
-        # TODO: handle html, xml response errors better.
+        limit_exceeded, reason = False, ""
+        if isinstance(self._data, dict) and (
+            "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True
+        ):
+            limit_exceeded, reason = True, self._data["response"]["message"]
         elif "response" in self._data and "limit_exceeded" in self._data:
-            return True, "limit exceeded"
-        return False, ""
+            limit_exceeded = True
+
+        if limit_exceeded:
+            raise ServiceException(503, f"Limit Exceeded {reason}")
 
     @property
     def status(self):
@@ -249,7 +209,7 @@ class Results(MutableMapping, MutableSequence):
         return self._response
 
     def items(self):
-        return self.response().items() if isinstance(self.response(), dict) else self.response()
+        return self.response().items()
 
     def emails(self):
         """Find and returns all emails mentioned in the response"""

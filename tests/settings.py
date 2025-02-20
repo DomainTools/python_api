@@ -49,5 +49,11 @@ with vcr.use_cassette("init_user_account"):
     api = API(
         os.getenv("TEST_USER", "test"),
         os.getenv("TEST_KEY", "test"),
+    )
+
+    feeds_api = API(
+        os.getenv("TEST_USER", "test"),
+        os.getenv("TEST_KEY", "test"),
         always_sign_api_key=False,
+        rate_limit=False,
     )
