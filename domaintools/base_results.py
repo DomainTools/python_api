@@ -154,12 +154,12 @@ class Results(MutableMapping, MutableSequence):
         if isinstance(self._data, dict) and (
             "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True
         ):
-            limit_exceeded, reason = True, f"Limit Exceeded: {self._data['response']['message']}"
+            limit_exceeded, reason = True, self._data["response"]["message"]
         elif "response" in self._data and "limit_exceeded" in self._data:
-            limit_exceeded, reason = True, "Limit Exceeded"
+            limit_exceeded = True
 
         if limit_exceeded:
-            raise ServiceException(503, reason)
+            raise ServiceException(503, f"Limit Exceeded {reason}")
 
     @property
     def status(self):
