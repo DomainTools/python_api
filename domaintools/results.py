@@ -151,13 +151,20 @@ class FeedsResults(Results):
     def response(self) -> Generator:
         status_code = None
         while status_code != 200:
-            resp_data = super().response()
+            resp_data = self.data()
             status_code = self.status
             yield resp_data
 
-            self._data = None
-            self._response = None
+            self._data = None  # clear the data here
             if not self.kwargs.get("sessionID"):
                 # we'll only do iterative request for queries that has sessionID.
                 # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
                 break
+
+    def data(self):
+        results = self._get_results()
+        self.setStatus(results.status_code, results)
+        self._data = results.text
+        self.check_limit_exceeded()
+
+        return self._data
