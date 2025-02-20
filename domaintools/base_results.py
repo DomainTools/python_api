@@ -53,8 +53,6 @@ class Results(MutableMapping, MutableSequence):
         self._response = None
         self._items_list = None
         self._data = None
-        self._limit_exceeded = None
-        self._limit_exceeded_message = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -142,31 +140,22 @@ class Results(MutableMapping, MutableSequence):
         if self._data is None:
             results = self._get_results()
             self.setStatus(results.status_code, results)
-            if (
-                self.kwargs.get("format", "json") == "json"
-                and self.product not in FEEDS_PRODUCTS_LIST  # Special handling of feeds products' data to preserve the result in jsonline format
-            ):
+            if self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
             else:
                 self._data = results.text
-            limit_exceeded, message = self.check_limit_exceeded()
 
-            if limit_exceeded:
-                self._limit_exceeded = True
-                self._limit_exceeded_message = message
+        self.check_limit_exceeded()
 
-        if self._limit_exceeded is True:
-            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
-        else:
-            return self._data
+        return self._data
 
     def check_limit_exceeded(self):
-        if self.kwargs.get("format", "json") == "json" and self.product not in FEEDS_PRODUCTS_LIST:
-            if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
-                return True, self._data["response"]["message"]
+        if isinstance(self._data, dict) and (
+            "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True
+        ):
+            raise ServiceException(503, f"Limit Exceeded: {self._data['response']['message']}")
         elif "response" in self._data and "limit_exceeded" in self._data:
-            return True, "limit exceeded"
-        return False, ""
+            raise ServiceException(503, "Limit Exceeded")
 
     @property
     def status(self):

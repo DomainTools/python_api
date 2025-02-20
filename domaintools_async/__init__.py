@@ -64,11 +64,8 @@ class AsyncResults(Results):
                 self._data = results.json()
             else:
                 self._data = results.text()
-            limit_exceeded, message = self.check_limit_exceeded()
 
-            if limit_exceeded:
-                self._limit_exceeded = True
-                self._limit_exceeded_message = message
+            self.check_limit_exceeded()
 
     async def __awaitable__(self):
         if self._data is None:
