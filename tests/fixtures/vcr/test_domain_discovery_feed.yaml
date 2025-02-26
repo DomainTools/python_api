@@ -339,4 +339,428 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.3.0
+  response:
+    body:
+      string: '{"timestamp":"2025-02-21T12:50:51Z","domain":"isp-writer.ru"}
+
+        {"timestamp":"2025-02-21T12:50:51Z","domain":"wearcherries.com"}
+
+        {"timestamp":"2025-02-21T12:50:51Z","domain":"wwwgovprtranslto.sbs"}
+
+        {"timestamp":"2025-02-21T12:50:54Z","domain":"titanium-businesssolutions.com"}
+
+        {"timestamp":"2025-02-21T12:50:54Z","domain":"webgraphixlab.com"}
+
+        {"timestamp":"2025-02-21T12:50:54Z","domain":"drelveriaglover.com"}
+
+        {"timestamp":"2025-02-21T12:50:54Z","domain":"theultimateheroes.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"hlns0l.us"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"ritaidiaopen8dian.vip"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"bindmeppel.nl"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"gyosr.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"leimarchitecten.nl"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"stodontologiaintegral.com.ar"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"fzwsbj.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"elizdar66.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"trendpulseonline.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"10crickc.wiki"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"whhls977125.sbs"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"americaetf.com"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"satyabhamaenterprises.in"}
+
+        {"timestamp":"2025-02-21T12:50:55Z","domain":"inexpensive-prescription-glasses.cfd"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"wsk.news"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"tchr.pro"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"commercial-vehicle-crash-attorney-51600.de"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"soccer-camps-delta.sbs"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"magdonal.com"}
+
+        {"timestamp":"2025-02-21T12:50:56Z","domain":"nutritiondaily.life"}
+
+        {"timestamp":"2025-02-21T12:50:59Z","domain":"telegllel.boutique"}
+
+        {"timestamp":"2025-02-21T12:50:59Z","domain":"carauction-ww-3693.today"}
+
+        {"timestamp":"2025-02-21T12:50:59Z","domain":"nenektogel4dddtki.com"}
+
+        {"timestamp":"2025-02-21T12:51:02Z","domain":"perfomaxchemicals.com"}
+
+        {"timestamp":"2025-02-21T12:51:02Z","domain":"candycleanseforyou.com"}
+
+        {"timestamp":"2025-02-21T12:51:04Z","domain":"moorah.my"}
+
+        {"timestamp":"2025-02-21T12:51:04Z","domain":"arcangelobriganti.com"}
+
+        {"timestamp":"2025-02-21T12:51:04Z","domain":"ilgq1q5.my"}
+
+        {"timestamp":"2025-02-21T12:51:05Z","domain":"pro-mebel.online"}
+
+        {"timestamp":"2025-02-21T12:51:05Z","domain":"okiemarket.com"}
+
+        {"timestamp":"2025-02-21T12:51:05Z","domain":"visitsamoa.us"}
+
+        {"timestamp":"2025-02-21T12:51:06Z","domain":"nenektogel4ddstar.com"}
+
+        {"timestamp":"2025-02-21T12:51:07Z","domain":"blockchayn.info"}
+
+        {"timestamp":"2025-02-21T12:51:08Z","domain":"whilefree.com"}
+
+        {"timestamp":"2025-02-21T12:51:10Z","domain":"xtropytech.com"}
+
+        {"timestamp":"2025-02-21T12:51:10Z","domain":"shuinangcengshejuanhen.vip"}
+
+        {"timestamp":"2025-02-21T12:51:10Z","domain":"babboburda.com"}
+
+        {"timestamp":"2025-02-21T12:51:11Z","domain":"telegllab.onl"}
+
+        {"timestamp":"2025-02-21T12:51:11Z","domain":"slpostasgov.top"}
+
+        {"timestamp":"2025-02-21T12:51:11Z","domain":"outoutandabout.co.uk"}
+
+        {"timestamp":"2025-02-21T12:51:13Z","domain":"1wxsww.top"}
+
+        {"timestamp":"2025-02-21T12:51:14Z","domain":"packing-job-nearby-alpp.today"}
+
+        {"timestamp":"2025-02-21T12:51:14Z","domain":"pwclaunch.com"}
+
+        {"timestamp":"2025-02-21T12:51:14Z","domain":"bladelpas.nl"}
+
+        {"timestamp":"2025-02-21T12:51:15Z","domain":"karigo.shop"}
+
+        {"timestamp":"2025-02-21T12:51:16Z","domain":"ahngze.com"}
+
+        {"timestamp":"2025-02-21T12:51:16Z","domain":"launchr.site"}
+
+        {"timestamp":"2025-02-21T12:51:16Z","domain":"softwing.site"}
+
+        {"timestamp":"2025-02-21T12:51:18Z","domain":"healthspotlight.life"}
+
+        {"timestamp":"2025-02-21T12:51:18Z","domain":"votesaver.com"}
+
+        {"timestamp":"2025-02-21T12:51:18Z","domain":"designers.co.in"}
+
+        {"timestamp":"2025-02-21T12:51:19Z","domain":"lcb789.shop"}
+
+        {"timestamp":"2025-02-21T12:51:20Z","domain":"binsatveiculos.com.br"}
+
+        {"timestamp":"2025-02-21T12:51:20Z","domain":"rudranash.com"}
+
+        {"timestamp":"2025-02-21T12:51:20Z","domain":"telegetbt.cfd"}
+
+        {"timestamp":"2025-02-21T12:51:21Z","domain":"telegteab.world"}
+
+        {"timestamp":"2025-02-21T12:51:22Z","domain":"wurmtests.de"}
+
+        {"timestamp":"2025-02-21T12:51:22Z","domain":"omgg-teas.com"}
+
+        {"timestamp":"2025-02-21T12:51:22Z","domain":"matchmaking-marriage-matching-33048.bond"}
+
+        {"timestamp":"2025-02-21T12:51:22Z","domain":"jbcorrespondente.com.br"}
+
+        {"timestamp":"2025-02-21T12:51:22Z","domain":"mongolia4d.com"}
+
+        {"timestamp":"2025-02-21T12:51:23Z","domain":"iestr.site"}
+
+        {"timestamp":"2025-02-21T12:51:23Z","domain":"meet-new-people-26490.bond"}
+
+        {"timestamp":"2025-02-21T12:51:23Z","domain":"ei2-service.at"}
+
+        {"timestamp":"2025-02-21T12:51:23Z","domain":"telegetbe.cfd"}
+
+        {"timestamp":"2025-02-21T12:51:24Z","domain":"propertytawi.co.za"}
+
+        {"timestamp":"2025-02-21T12:51:25Z","domain":"people-search-54284.bond"}
+
+        {"timestamp":"2025-02-21T12:51:25Z","domain":"hotfuns.shop"}
+
+        {"timestamp":"2025-02-21T12:51:25Z","domain":"donateyes.com"}
+
+        {"timestamp":"2025-02-21T12:51:25Z","domain":"thestorytails.com"}
+
+        {"timestamp":"2025-02-21T12:51:26Z","domain":"confirmio.net"}
+
+        {"timestamp":"2025-02-21T12:51:26Z","domain":"totalartisan.com"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"sturielshospital.com.ng"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"tzxqmu.studio"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"bamboohealthpro.com"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"mlst.ad"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"cakemupcosmetics.com"}
+
+        {"timestamp":"2025-02-21T12:51:27Z","domain":"ectomi.com"}
+
+        {"timestamp":"2025-02-21T12:51:28Z","domain":"spauto888.shop"}
+
+        {"timestamp":"2025-02-21T12:51:28Z","domain":"jflancer.id"}
+
+        {"timestamp":"2025-02-21T12:51:29Z","domain":"twoj-ogrodnik-wojtek.pl"}
+
+        {"timestamp":"2025-02-21T12:51:29Z","domain":"limitless-pro.com"}
+
+        {"timestamp":"2025-02-21T12:51:29Z","domain":"vinarskepodlozky.cz"}
+
+        {"timestamp":"2025-02-21T12:51:30Z","domain":"hizcpk.us"}
+
+        {"timestamp":"2025-02-21T12:51:30Z","domain":"casinometropol-erisim.vip"}
+
+        {"timestamp":"2025-02-21T12:51:30Z","domain":"scanbusinessbrokers.com.au"}
+
+        {"timestamp":"2025-02-21T12:51:30Z","domain":"trenddigitaltools.com"}
+
+        {"timestamp":"2025-02-21T12:51:30Z","domain":"yttypo.studio"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"healthbuzz.life"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"mxasfl.studio"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"garageguardians.shop"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"gxglgl.com"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"luphori.com"}
+
+        {"timestamp":"2025-02-21T12:51:31Z","domain":"warehouse-services-61080.bond"}
+
+        {"timestamp":"2025-02-21T12:51:32Z","domain":"1wugd.top"}
+
+        {"timestamp":"2025-02-21T12:51:32Z","domain":"mzoemg.cn"}
+
+        {"timestamp":"2025-02-21T12:51:32Z","domain":"lazacktech.biz.id"}
+
+        {"timestamp":"2025-02-21T12:51:32Z","domain":"slotsawan.club"}
+
+        {"timestamp":"2025-02-21T12:51:32Z","domain":"cyberbane.com"}
+
+        {"timestamp":"2025-02-21T12:51:33Z","domain":"zeldigi.my.id"}
+
+        {"timestamp":"2025-02-21T12:51:33Z","domain":"warehouse-services-62411.bond"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"vavada-serbia.rs"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"theromanmint.com"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"telegtbeb.lol"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"jawabets.com"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"webtop.com.au"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"momadefoodindustry.in"}
+
+        {"timestamp":"2025-02-21T12:51:34Z","domain":"mcbbuildcon.com"}
+
+        {"timestamp":"2025-02-21T12:51:36Z","domain":"boatski.net"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"wubivp.club"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"warehouse-services-88791.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"e5fpza.us"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"testalko.eu"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"nashiraslice.shop"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"jd-drone.com"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"prexxx2025.cfd"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"telegaele.world"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"circuit-board-assemblers-job-29280.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"gta78.club"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"blood-glucose-monitor-68141.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"soooooo.sbs"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"wrminerokjd.top"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"matchmaking-marriage-matching-40028.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"15762.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"earn-bnbtoken.vip"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"men-health-81462.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"xtropyai.com"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"wrminerokji.top"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"stagingmydev.com"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"orientaltreasureschina.com"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"cruise-ship-jobs-2580477.world"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"dta9b9.us"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"quantenresistent.de"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"jawabets.net"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"warehouse-services-57223.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"jandcroofingandbuildingltd.co.uk"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"86945.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"amparopelavida.org"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"most-cleanest.digital"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"47162.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"com-etcc.xin"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"34982.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"warehouse-services-62674.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"86154.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"warehouse-services-39613.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"meet-new-people-36200.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"matchmaking-marriage-matching-11946.bond"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"entregadordrathayra.com.br"}
+
+        {"timestamp":"2025-02-21T12:51:38Z","domain":"86517.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"smartmortgagerefi.bond"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"matchmaking-marriage-matching-38124.bond"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"19857.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"mental-health-test-79309.bond"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"67249.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"24359.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"digital-marketing-jobs-49963.bond"}
+
+        {"timestamp":"2025-02-21T12:51:39Z","domain":"atlasonline.edu.in"}
+
+        {"timestamp":"2025-02-21T12:51:40Z","domain":"telegrbbt.hair"}
+
+        {"timestamp":"2025-02-21T12:51:40Z","domain":"ecoles-privees-exclusives-pour-les-familles-fortunes.de"}
+
+        {"timestamp":"2025-02-21T12:51:40Z","domain":"getxtropynow.com"}
+
+        {"timestamp":"2025-02-21T12:51:40Z","domain":"d64hd5.us"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"f8fc11.com"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"karelcad.com.au"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"bamboohealthgroup.com"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"whhls713825.sbs"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"914447.com"}
+
+        {"timestamp":"2025-02-21T12:51:41Z","domain":"com-etcg.xin"}
+
+        {"timestamp":"2025-02-21T12:51:43Z","domain":"under-grounds.com"}
+
+        {"timestamp":"2025-02-21T12:51:43Z","domain":"kurniagallery.com"}
+
+        {"timestamp":"2025-02-21T12:51:43Z","domain":"86293.lgbt"}
+
+        {"timestamp":"2025-02-21T12:51:44Z","domain":"online-dating-63218.bond"}
+
+        {"timestamp":"2025-02-21T12:51:44Z","domain":"274axe.us"}
+
+        {"timestamp":"2025-02-21T12:51:45Z","domain":"0r6d4p.us"}
+
+        {"timestamp":"2025-02-21T12:51:45Z","domain":"akbike.cn"}
+
+        {"timestamp":"2025-02-21T12:51:45Z","domain":"zomerenadvies.nl"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"telegebte.lat"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"lucky-twice.nl"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"cruise-ship-jobs-8752596.zone"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"ernaehrungstests.de"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"warehouse-services-60007.bond"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"smassarratconsulting.com"}
+
+        {"timestamp":"2025-02-21T12:51:46Z","domain":"marydrach.ru"}
+
+        {"timestamp":"2025-02-21T12:51:48Z","domain":"spunizm.com"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Fri, 21 Feb 2025 12:51:50 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=bmsgge8ichgv0klv86tjq9unv4ppui5i0rpkvrabpgfabr31v3dt69lia9ka54o7r3eit8h283k95aknl6r0v2b3mru9u1euev792eb;
+        expires=Sun, 23-Mar-2025 12:51:50 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '6'
+    status:
+      code: 200
+      message: OK
 version: 1

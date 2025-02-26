@@ -574,4 +574,222 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.3.0&header_authenticationn=false&top=2
+  response:
+    body:
+      string: '{"timestamp":"2025-02-21T12:51:48Z","domain":"centroamerica.org","raw_record":{"first_request_timestamp":"2025-02-21T12:51:46Z","requests":[{"data":"{\n  \"rdapConformance\":
+        [\n    \"rdap_level_0\",\n    \"icann_rdap_response_profile_0\",\n    \"icann_rdap_technical_implementation_guide_0\"\n  ],\n  \"notices\":
+        [\n    {\n      \"title\": \"Terms of Service\",\n      \"description\": [\n        \"Public
+        Interest Registry provides this RDAP service for informational purposes only,
+        and to assist persons in obtaining information about or related to a domain
+        name registration record. Public Interest Registry does not guarantee its
+        accuracy. Users accessing the Public Interest Registry RDAP service agree
+        to use the data only for lawful purposes, and under no circumstances may this
+        data be used to: a) allow, enable, or otherwise support the transmission by
+        e-mail, telephone, or facsimile of mass unsolicited, commercial advertising
+        or solicitations to entities other than the registrar''s own existing customers
+        and b) enable high volume, automated, electronic processes that send queries
+        or data to the systems of Public Interest Registry or any ICANN-accredited
+        registrar, except as reasonably necessary to register domain names or modify
+        existing registrations. When using the Public Interest Registry RDAP service,
+        please consider the following: the RDAP service is not a replacement for standard
+        EPP commands to the SRS service. RDAP is not considered authoritative for
+        registered domain objects. The RDAP service may be scheduled for downtime
+        during production or OT\u0026E maintenance periods. Queries to the RDAP services
+        are throttled. If too many queries are received from a single IP address within
+        a specified time, the service will begin to reject further queries for a period
+        of time to prevent disruption of RDAP service access. Abuse of the RDAP system
+        through data mining is mitigated by detecting and limiting bulk query access
+        from single sources. Where applicable, the presence of a [Non-Public Data]
+        tag indicates that such data is not made publicly available due to applicable
+        data privacy laws or requirements. Should you wish to contact the registrant,
+        please refer to the RDAP records available through the registrar URL listed
+        above. Access to non-public data may be provided, upon request, where it can
+        be reasonably confirmed that the requester holds a specific legitimate interest
+        and a proper legal basis for accessing the withheld data. Access to this data
+        can be requested by submitting a request to WHOISrequest@pir.org. Public Interest
+        Registry Inc. reserves the right to modify these terms at any time. By submitting
+        this query, you agree to abide by this policy.\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org\",\n          \"rel\":
+        \"alternate\",\n          \"href\": \"https://thenew.org/org-people/about-pir/policies/\",\n          \"type\":
+        \"text/html\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Status
+        Codes\",\n      \"description\": [\n        \"For more information on domain
+        status codes, please visit https://icann.org/epp\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://icann.org/epp\",\n          \"rel\":
+        \"self\",\n          \"href\": \"https://icann.org/epp\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    },\n    {\n      \"title\":
+        \"RDDS Inaccuracy Complaint Form\",\n      \"description\": [\n        \"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://icann.org/wicf\",\n          \"rel\":
+        \"self\",\n          \"href\": \"https://icann.org/wicf\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"ldhName\":
+        \"centroamerica.org\",\n  \"unicodeName\": \"centroamerica.org\",\n  \"nameservers\":
+        [\n    {\n      \"ldhName\": \"ns1.dan.com\",\n      \"unicodeName\": \"ns1.dan.com\",\n      \"objectClassName\":
+        \"nameserver\",\n      \"handle\": \"86d75e7f07ca4a09863e765c5549a439-LROR\",\n      \"status\":
+        [\n        \"associated\"\n      ]\n    },\n    {\n      \"ldhName\": \"ns2.dan.com\",\n      \"unicodeName\":
+        \"ns2.dan.com\",\n      \"objectClassName\": \"nameserver\",\n      \"handle\":
+        \"190d3f17c4c7442da36fe995eaaac2b9-LROR\",\n      \"status\": [\n        \"associated\"\n      ]\n    }\n  ],\n  \"secureDNS\":
+        {\n    \"delegationSigned\": false,\n    \"maxSigLife\": 1\n  },\n  \"publicIds\":
+        [\n    {\n      \"type\": \"IANA Registrar ID\",\n      \"identifier\": \"472\"\n    }\n  ],\n  \"objectClassName\":
+        \"domain\",\n  \"handle\": \"fb035ad2844940088d0248fc0c125928-LROR\",\n  \"status\":
+        [\n    \"client transfer prohibited\"\n  ],\n  \"events\": [\n    {\n      \"eventAction\":
+        \"transfer\",\n      \"eventDate\": \"2017-05-14T23:30:04.905Z\"\n    },\n    {\n      \"eventAction\":
+        \"expiration\",\n      \"eventDate\": \"2025-05-10T14:30:15.777Z\"\n    },\n    {\n      \"eventAction\":
+        \"registration\",\n      \"eventDate\": \"2013-05-10T14:30:15.777Z\"\n    },\n    {\n      \"eventAction\":
+        \"last changed\",\n      \"eventDate\": \"2024-06-24T14:30:21.303Z\"\n    },\n    {\n      \"eventAction\":
+        \"last update of RDAP database\",\n      \"eventDate\": \"2025-02-21T12:51:47.62Z\"\n    }\n  ],\n  \"entities\":
+        [\n    {\n      \"vcardArray\": [\n        \"vcard\",\n        [\n          [\n            \"version\",\n            {},\n            \"text\",\n            \"4.0\"\n          ],\n          [\n            \"fn\",\n            {},\n            \"text\",\n            \"\"\n          ],\n          [\n            \"org\",\n            {\n              \"type\":
+        \"work\"\n            },\n            \"text\",\n            \"Domaining.com.es\"\n          ],\n          [\n            \"adr\",\n            {\n              \"cc\":
+        \"ES\"\n            },\n            \"text\",\n            [\n              \"\",\n              \"\",\n              \"\",\n              \"\",\n              \"Bcn\",\n              \"\",\n              \"\"\n            ]\n          ]\n        ]\n      ],\n      \"roles\":
+        [\n        \"registrant\"\n      ],\n      \"objectClassName\": \"entity\",\n      \"remarks\":
+        [\n        {\n          \"title\": \"REDACTED FOR PRIVACY\",\n          \"type\":
+        \"object redacted due to authorization\",\n          \"description\": [\n            \"Some
+        of the data in this object has been removed.\"\n          ]\n        },\n        {\n          \"title\":
+        \"EMAIL REDACTED FOR PRIVACY\",\n          \"type\": \"object redacted due
+        to authorization\",\n          \"description\": [\n            \"Please query
+        the RDDS service of the Registrar of Record identified in this output for
+        information on how to contact the Registrant of the queried domain name.\"\n          ]\n        }\n      ],\n      \"events\":
+        [\n        {\n          \"eventAction\": \"last update of RDAP database\",\n          \"eventDate\":
+        \"2025-02-21T12:51:47.62Z\"\n        }\n      ]\n    },\n    {\n      \"vcardArray\":
+        [\n        \"vcard\",\n        [\n          [\n            \"version\",\n            {},\n            \"text\",\n            \"4.0\"\n          ],\n          [\n            \"fn\",\n            {},\n            \"text\",\n            \"\"\n          ]\n        ]\n      ],\n      \"roles\":
+        [\n        \"technical\",\n        \"administrative\"\n      ],\n      \"objectClassName\":
+        \"entity\",\n      \"remarks\": [\n        {\n          \"title\": \"REDACTED
+        FOR PRIVACY\",\n          \"type\": \"object redacted due to authorization\",\n          \"description\":
+        [\n            \"Some of the data in this object has been removed.\"\n          ]\n        },\n        {\n          \"title\":
+        \"EMAIL REDACTED FOR PRIVACY\",\n          \"type\": \"object redacted due
+        to authorization\",\n          \"description\": [\n            \"Please query
+        the RDDS service of the Registrar of Record identified in this output for
+        information on how to contact the Registrant of the queried domain name.\"\n          ]\n        }\n      ],\n      \"events\":
+        [\n        {\n          \"eventAction\": \"last update of RDAP database\",\n          \"eventDate\":
+        \"2025-02-21T12:51:47.62Z\"\n        }\n      ]\n    },\n    {\n      \"vcardArray\":
+        [\n        \"vcard\",\n        [\n          [\n            \"version\",\n            {},\n            \"text\",\n            \"4.0\"\n          ],\n          [\n            \"fn\",\n            {},\n            \"text\",\n            \"Dynadot
+        Inc\"\n          ]\n        ]\n      ],\n      \"roles\": [\n        \"registrar\"\n      ],\n      \"publicIds\":
+        [\n        {\n          \"type\": \"IANA Registrar ID\",\n          \"identifier\":
+        \"472\"\n        }\n      ],\n      \"objectClassName\": \"entity\",\n      \"handle\":
+        \"472\",\n      \"entities\": [\n        {\n          \"vcardArray\": [\n            \"vcard\",\n            [\n              [\n                \"version\",\n                {},\n                \"text\",\n                \"4.0\"\n              ],\n              [\n                \"fn\",\n                {},\n                \"text\",\n                \"Todd
+        Han\"\n              ],\n              [\n                \"tel\",\n                {\n                  \"type\":
+        \"voice\"\n                },\n                \"uri\",\n                \"tel:+1.6502620100\"\n              ],\n              [\n                \"email\",\n                {},\n                \"text\",\n                \"abuse@dynadot.com\"\n              ]\n            ]\n          ],\n          \"roles\":
+        [\n            \"abuse\"\n          ],\n          \"objectClassName\": \"entity\",\n          \"handle\":
+        \"3d10187247034f4d83231729c717eabf-LROR\"\n        }\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/entity/472\",\n          \"rel\":
+        \"self\",\n          \"href\": \"https://rdap.publicinterestregistry.org/rdap/entity/472\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"value\":
+        \"https://rdap.dynadot.com/domain/centroamerica.org\",\n      \"rel\": \"related\",\n      \"href\":
+        \"https://rdap.dynadot.com/domain/centroamerica.org\",\n      \"type\": \"application/rdap+json\"\n    },\n    {\n      \"value\":
+        \"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org\",\n      \"rel\":
+        \"self\",\n      \"href\": \"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org\",\n      \"type\":
+        \"application/rdap+json\"\n    }\n  ]\n}","source_type":"registry","timestamp":"2025-02-21T12:51:46Z","url":"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org"},{"data":"{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"rel\":\"related\",\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"rel\":\"related\",\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\"}]},{\"title\":\"Terms
+        of Service\",\"description\":[\"URL of the Dynadot terms of service: https:\\/\\/www.dynadot.com\\/registration_agreement.html\"],\"links\":[{\"rel\":\"related\",\"href\":\"https:\\/\\/www.dynadot.com\\/registration_agreement.html\",\"type\":\"text\\/html\"}]}],\"links\":[{\"value\":\"https:\\/\\/rdap.dynadot.com\\/domain\\/centroamerica.org\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.dynadot.com\\/domain\\/centroamerica.org\",\"type\":\"application\\/rdap+json\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"472\"}],\"objectClassName\":\"domain\",\"handle\":\"D168658627-LROR\",\"ldhName\":\"centroamerica.org\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns1.dan.com\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns2.dan.com\"}],\"secureDNS\":{\"delegationSigned\":false},\"events\":[{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-02-21T06:00:37Z\"},{\"eventAction\":\"registration\",\"eventDate\":\"2013-05-10T14:30:15Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-05-10T14:30:15Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2024-05-13T10:06:53Z\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"472\",\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"472\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"Dynadot
+        Inc\"],[\"adr\",{},\"text\",[\"PO Box 701\",\"\",\"San Mateo\",\"California\",\"94401\",\"US\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"abuse@dynadot.com\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"abuse@dynadot.com\"]]]}]},{\"objectClassName\":\"entity\",\"handle\":\"C-29559\",\"roles\":[\"registrant\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2011-01-12T00:00:00Z\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"org\",{},\"text\",\"Super Privacy Service LTD c\\/o Dynadot\"],[\"adr\",{},\"text\",[\"PO
+        Box 701\",\"\",\"San Mateo\",\"California\",\"94401\",\"US\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"https:\\/\\/www.dynadot.com\\/domain\\/contact-request?domain=centroamerica.org\"]]]},{\"objectClassName\":\"entity\",\"handle\":\"C-29559\",\"roles\":[\"administrative\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2011-01-12T00:00:00Z\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"org\",{},\"text\",\"Super Privacy Service LTD c\\/o Dynadot\"],[\"adr\",{},\"text\",[\"PO
+        Box 701\",\"\",\"San Mateo\",\"California\",\"94401\",\"US\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"https:\\/\\/www.dynadot.com\\/domain\\/contact-request?domain=centroamerica.org\"]]]},{\"objectClassName\":\"entity\",\"handle\":\"C-29559\",\"roles\":[\"technical\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2011-01-12T00:00:00Z\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"org\",{},\"text\",\"Super Privacy Service LTD c\\/o Dynadot\"],[\"adr\",{},\"text\",[\"PO
+        Box 701\",\"\",\"San Mateo\",\"California\",\"94401\",\"US\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"https:\\/\\/www.dynadot.com\\/domain\\/contact-request?domain=centroamerica.org\"]]]},{\"objectClassName\":\"entity\",\"handle\":\"C-29559\",\"roles\":[\"billing\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2011-01-12T00:00:00Z\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"org\",{},\"text\",\"Super Privacy Service LTD c\\/o Dynadot\"],[\"adr\",{},\"text\",[\"PO
+        Box 701\",\"\",\"San Mateo\",\"California\",\"94401\",\"US\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.6505854708\"],[\"email\",{},\"text\",\"https:\\/\\/www.dynadot.com\\/domain\\/contact-request?domain=centroamerica.org\"]]]}],\"port43\":\"whois.dynadot.com\",\"status\":[\"transfer
+        prohibited\"]}","source_type":"registrar","timestamp":"2025-02-21T12:51:47Z","url":"https://rdap.dynadot.com/domain/centroamerica.org"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_0","icann_rdap_technical_implementation_guide_0"],"contacts":[{"city":"San
+        Mateo","country":"US","email":"https://www.dynadot.com/domain/contact-request?domain=centroamerica.org","handle":"C-29559","name":"REDACTED
+        FOR PRIVACY","org":"Super Privacy Service LTD c/o Dynadot","phone":"tel:+1.6505854708","postal":"94401","region":"California","roles":["registrant"],"street":"PO
+        Box 701"},{"city":"San Mateo","country":"US","email":"https://www.dynadot.com/domain/contact-request?domain=centroamerica.org","handle":"C-29559","name":"REDACTED
+        FOR PRIVACY","org":"Super Privacy Service LTD c/o Dynadot","phone":"tel:+1.6505854708","postal":"94401","region":"California","roles":["administrative"],"street":"PO
+        Box 701"},{"city":"San Mateo","country":"US","email":"https://www.dynadot.com/domain/contact-request?domain=centroamerica.org","handle":"C-29559","name":"REDACTED
+        FOR PRIVACY","org":"Super Privacy Service LTD c/o Dynadot","phone":"tel:+1.6505854708","postal":"94401","region":"California","roles":["technical"],"street":"PO
+        Box 701"},{"city":"San Mateo","country":"US","email":"https://www.dynadot.com/domain/contact-request?domain=centroamerica.org","handle":"C-29559","name":"REDACTED
+        FOR PRIVACY","org":"Super Privacy Service LTD c/o Dynadot","phone":"tel:+1.6505854708","postal":"94401","region":"California","roles":["billing"],"street":"PO
+        Box 701"}],"creation_date":"2013-05-10T14:30:15+00:00","dnssec":{"signed":false},"domain":"centroamerica.org","domain_statuses":["transfer
+        prohibited"],"email_domains":["dynadot.com","pir.org"],"emails":["abuse@dynadot.com","https://www.dynadot.com/domain/contact-request?domain=centroamerica.org","whoisrequest@pir.org"],"expiration_date":"2025-05-10T14:30:15+00:00","handle":"D168658627-LROR","last_changed_date":"2024-05-13T10:06:53+00:00","links":[{"href":"https://rdap.dynadot.com/domain/centroamerica.org","rel":"related"},{"href":"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org","rel":"self"},{"href":"https://rdap.dynadot.com/domain/centroamerica.org","rel":"self"}],"nameservers":["ns1.dan.com","ns2.dan.com"],"registrar":{"contacts":[{"email":"abuse@dynadot.com","name":"","phone":"tel:+1.6505854708","roles":["abuse"]}],"iana_id":"472","name":"Dynadot
+        Inc"},"unclassified_emails":["whoisrequest@pir.org"]},"registrar_request_url":"https://rdap.dynadot.com/domain/centroamerica.org","registry_request_url":"https://rdap.publicinterestregistry.org/rdap/domain/centroamerica.org"}}
+
+        {"timestamp":"2025-02-21T12:51:48Z","domain":"weknowloans.com","raw_record":{"first_request_timestamp":"2025-02-21T12:51:45Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"6921195_DOMAIN_COM-VRSN\",\"ldhName\":\"WEKNOWLOANS.COM\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS47.DOMAINCONTROL.COM\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2009-11-27T09:35:24Z\"}]},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS48.DOMAINCONTROL.COM\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2009-11-27T09:35:24Z\"}]}],\"secureDNS\":{\"delegationSigned\":false},\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM\",\"rel\":\"self\",\"href\":\"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM\",\"type\":\"application/rdap+json\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"WEKNOWLOANSCOM-reg\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=WEKNOWLOANS.COM\"]]],\"roles\":[\"registrant\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2012-07-05T06:57:23Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"WEKNOWLOANSCOM-tech\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=WEKNOWLOANS.COM\"]]],\"roles\":[\"technical\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2012-07-05T06:57:23Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"146\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2155 E Godaddy Way\",\"Tempe\",\"AZ\",\"85284\",\"\"]],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"146\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:480-624-2505\"],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"abuse\"]}],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1\",\"rel\":\"about\",\"href\":\"https://rdap.godaddy.com/v1\",\"type\":\"application/rdap+json\"}],\"port43\":\"whois.godaddy.com\"}],\"events\":[{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-02-21T12:51:48Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-05-31T07:47:10Z\"},{\"eventAction\":\"registration\",\"eventDate\":\"1999-05-31T07:47:48Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2024-05-03T06:58:17Z\"}],\"status\":[\"delete prohibited\",\"transfer
+        prohibited\",\"renew prohibited\",\"update prohibited\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Use\",\"description\":[\"By submitting an inquiry, you agree to these Universal
+        Terms of Service\",\"and limitations of warranty. In particular, you agree
+        not to use this\",\"data to allow, enable, or otherwise make possible, dissemination
+        or\",\"collection of this data, in part or in its entirety, for any purpose,\",\"such
+        as the transmission of unsolicited advertising and solicitations of\",\"any
+        kind, including spam. You further agree not to use this data to enable\",\"high
+        volume, automated or robotic electronic processes designed to collect\",\"or
+        compile this data for any purpose, including mining this data for your\",\"own
+        personal or commercial purposes, or use this data in any way that violates\",\"applicable
+        laws and regulations.\"],\"links\":[{\"rel\":\"terms-of-service\",\"href\":\"https://www.godaddy.com/agreements/showdoc?pageid=5403\",\"type\":\"text/html\"}]}],\"rdapConformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"port43\":\"whois.godaddy.com\"}","source_type":"registrar","timestamp":"2025-02-21T12:51:46Z","url":"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","redacted","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1"],"contacts":[{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=WEKNOWLOANS.COM","handle":"WEKNOWLOANSCOM-reg","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["registrant"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"},{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=WEKNOWLOANS.COM","handle":"WEKNOWLOANSCOM-tech","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["technical"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"}],"creation_date":"1999-05-31T07:47:48+00:00","dnssec":{"signed":false},"domain":"WEKNOWLOANS.COM","domain_statuses":["delete
+        prohibited","transfer prohibited","renew prohibited","update prohibited"],"email_domains":["godaddy.com"],"emails":["abuse@godaddy.com","https://www.godaddy.com/whois/results.aspx?domain=weknowloans.com"],"expiration_date":"2025-05-31T07:47:10+00:00","handle":"6921195_DOMAIN_COM-VRSN","last_changed_date":"2024-05-03T06:58:17+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/WEKNOWLOANS.COM","rel":"self"},{"href":"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM","rel":"related"},{"href":"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM","rel":"self"}],"nameservers":["NS47.DOMAINCONTROL.COM","NS48.DOMAINCONTROL.COM"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:480-624-2505","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com,
+        LLC"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.godaddy.com/v1/domain/WEKNOWLOANS.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/weknowloans.com"}}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Fri, 21 Feb 2025 12:51:48 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=belnutmn7i7qd6rdr9dcel7js1is9gqne4tnf16o044d0fn014jb1q09thiu2hp8o6dc3mnlakfntg6udhqu6ho2k6dr6ptdajl5e30;
+        expires=Sun, 23-Mar-2025 12:51:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '8'
+    status:
+      code: 200
+      message: OK
 version: 1
