@@ -4,8 +4,12 @@ import json
 import re
 import time
 import logging
-from datetime import datetime
 
+from copy import deepcopy
+from datetime import datetime
+from httpx import Client
+
+from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -16,9 +20,7 @@ from domaintools.exceptions import (
     IncompleteResponseException,
     RequestUriTooLongException,
 )
-from domaintools.utils import get_feeds_products_list
 
-from httpx import Client
 
 try:  # pragma: no cover
     from collections.abc import MutableMapping, MutableSequence
@@ -51,8 +53,6 @@ class Results(MutableMapping, MutableSequence):
         self._response = None
         self._items_list = None
         self._data = None
-        self._limit_exceeded = None
-        self._limit_exceeded_message = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -75,6 +75,23 @@ class Results(MutableMapping, MutableSequence):
 
         return wait_for
 
+    def _get_session_params(self):
+        parameters = deepcopy(self.kwargs)
+        parameters.pop("output_format", None)
+        parameters.pop(
+            "format", None
+        )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+        headers = {}
+        if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+            parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+            headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+
+        header_api_key = parameters.pop("X-Api-Key", None)
+        if header_api_key:
+            headers["X-Api-Key"] = header_api_key
+
+        return {"parameters": parameters, "headers": headers}
+
     def _make_request(self):
 
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
@@ -90,6 +107,11 @@ class Results(MutableMapping, MutableSequence):
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
+            elif self.product in FEEDS_PRODUCTS_LIST:
+                session_params = self._get_session_params()
+                parameters = session_params.get("parameters")
+                headers = session_params.get("headers")
+                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
             else:
                 return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
 
@@ -118,33 +140,26 @@ class Results(MutableMapping, MutableSequence):
         if self._data is None:
             results = self._get_results()
             self.setStatus(results.status_code, results)
-            if (
-                self.kwargs.get("format", "json") == "json"
-                and self.product
-                not in get_feeds_products_list()  # Special handling of feeds products' data to preserve the result in jsonline format
-            ):
+            if self.kwargs.get("format", "json") == "json":
                 self._data = results.json()
             else:
                 self._data = results.text
-            limit_exceeded, message = self.check_limit_exceeded()
 
-            if limit_exceeded:
-                self._limit_exceeded = True
-                self._limit_exceeded_message = message
+        self.check_limit_exceeded()
 
-        if self._limit_exceeded is True:
-            raise ServiceException(503, "Limit Exceeded{}".format(self._limit_exceeded_message))
-        else:
-            return self._data
+        return self._data
 
     def check_limit_exceeded(self):
-        if self.kwargs.get("format", "json") == "json":
-            if "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True:
-                return True, self._data["response"]["message"]
-        # TODO: handle html, xml response errors better.
+        limit_exceeded, reason = False, ""
+        if isinstance(self._data, dict) and (
+            "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True
+        ):
+            limit_exceeded, reason = True, self._data["response"]["message"]
         elif "response" in self._data and "limit_exceeded" in self._data:
-            return True, "limit exceeded"
-        return False, ""
+            limit_exceeded = True
+
+        if limit_exceeded:
+            raise ServiceException(503, f"Limit Exceeded {reason}")
 
     @property
     def status(self):
@@ -155,7 +170,7 @@ class Results(MutableMapping, MutableSequence):
 
     def setStatus(self, code, response=None):
         self._status = code
-        if code == 200:
+        if code == 200 or (self.product in FEEDS_PRODUCTS_LIST and code == 206):
             return
 
         reason = None
@@ -167,9 +182,9 @@ class Results(MutableMapping, MutableSequence):
                 if callable(reason):
                     reason = reason()
 
-        if code == 400:
+        if code in (400, 422):
             raise BadRequestException(code, reason)
-        elif code == 403:
+        elif code in (401, 403):
             raise NotAuthorizedException(code, reason)
         elif code == 404:
             raise NotFoundException(code, reason)
@@ -251,6 +266,32 @@ class Results(MutableMapping, MutableSequence):
         self.kwargs.pop("format", None)
         return self.__class__(
             format="json",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
+
+    @property
+    def jsonl(self):
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="jsonl",
+            product=self.product,
+            url=self.url,
+            items_path=self.items_path,
+            response_path=self.response_path,
+            api=self.api,
+            **self.kwargs,
+        )
+
+    @property
+    def csv(self):
+        self.kwargs.pop("format", None)
+        return self.__class__(
+            format="csv",
             product=self.product,
             url=self.url,
             items_path=self.items_path,

@@ -4,17 +4,20 @@ import sys
 import os
 import _io
 
+from datetime import datetime
 from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from domaintools.api import API
-from domaintools.exceptions import ServiceException
+from domaintools.constants import Endpoint, FEEDS_PRODUCTS_LIST, OutputFormat
 from domaintools.cli.utils import get_file_extension
+from domaintools.exceptions import ServiceException
+from domaintools._version import current as version
 
 
 class DTCLICommand:
     API_SUCCESS_STATUS = 200
-    APP_PARTNER_NAME = "python_wrapper_cli_2.0.0"
+    APP_PARTNER_NAME = f"python_wrapper_cli_{version}"
 
     @staticmethod
     def print_api_version(value: bool):
@@ -28,10 +31,34 @@ class DTCLICommand:
     def validate_format_input(value: str):
         VALID_FORMATS = ("list", "json", "xml", "html")
         if value not in VALID_FORMATS:
-            raise typer.BadParameter(
-                f"{value} is not in available formats: {VALID_FORMATS}"
-            )
+            raise typer.BadParameter(f"{value} is not in available formats: {VALID_FORMATS}")
         return value
+
+    @staticmethod
+    def validate_feeds_format_input(value: str):
+        VALID_FEEDS_FORMATS = ("jsonl", "csv")
+        if value not in VALID_FEEDS_FORMATS:
+            raise typer.BadParameter(f"{value} is not in available formats: {VALID_FEEDS_FORMATS}")
+        return value
+
+    @staticmethod
+    def validate_endpoint_input(value: str):
+        VALID_ENDPOINTS = (Endpoint.FEED.value, Endpoint.DOWNLOAD.value)
+        if value not in VALID_ENDPOINTS:
+            raise typer.BadParameter(f"{value} is not in available endpoints: {VALID_ENDPOINTS}")
+        return value
+
+    @staticmethod
+    def validate_after_or_before_input(value: str):
+        if value is None or value.replace("-", "").isdigit():
+            return value
+
+        # Checks if value is a valid ISO 8601 datetime string in UTC form
+        try:
+            datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+            return value
+        except:
+            raise typer.BadParameter(f"{value} is neither an integer or a valid ISO 8601 datetime string in UTC form")
 
     @staticmethod
     def validate_source_file_extension(value: str):
@@ -51,9 +78,7 @@ class DTCLICommand:
         ext = get_file_extension(value)
 
         if ext.lower() not in VALID_EXTENSIONS:
-            raise typer.BadParameter(
-                f"{value} is not in valid extensions. Valid file extensions: {VALID_EXTENSIONS}"
-            )
+            raise typer.BadParameter(f"{value} is not in valid extensions. Valid file extensions: {VALID_EXTENSIONS}")
 
         return value
 
@@ -85,11 +110,9 @@ class DTCLICommand:
     def _get_formatted_output(cls, cmd_name: str, response, out_format: str = "json"):
         if cmd_name in ("available_api_calls",):
             return "\n".join(response)
-        return str(
-            getattr(response, out_format)
-            if out_format != "list"
-            else response.as_list()
-        )
+        if response.product in FEEDS_PRODUCTS_LIST:
+            return "\n".join([data for data in response.response()])
+        return str(getattr(response, out_format) if out_format != "list" else response.as_list())
 
     @classmethod
     def _get_credentials(cls, params: Optional[Dict] = {}) -> Tuple[str]:
@@ -106,9 +129,7 @@ class DTCLICommand:
                 with open(creds_file, "r") as cf:
                     user, key = cf.readline().strip(), cf.readline().strip()
             except FileNotFoundError as e:
-                raise typer.BadParameter(
-                    f"{str(e)}. Please create one first and try again."
-                )
+                raise typer.BadParameter(f"{str(e)}. Please create one first and try again.")
 
         return user, key
 
@@ -149,7 +170,13 @@ class DTCLICommand:
         """
         try:
             rate_limit = params.pop("rate_limit", False)
-            response_format = params.pop("format", "json")
+            response_format = (
+                params.pop("format", "json")
+                if params.get("format", None)
+                else params.get(
+                    "output_format", OutputFormat.JSONL.value
+                )  # Using output_format for RTUF endpoints to separate from other endpoints. This will be needed further along the process
+            )
             out_file = params.pop("out_file", sys.stdout)
             verify_ssl = params.pop("no_verify_ssl", False)
             always_sign_api_key = params.pop("no_sign_api_key", False)
@@ -198,13 +225,14 @@ class DTCLICommand:
                     total=None,
                 )
 
-                output = cls._get_formatted_output(
-                    cmd_name=name, response=response, out_format=response_format
-                )
+                output = cls._get_formatted_output(cmd_name=name, response=response, out_format=response_format)
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    print(response)
+                    if response.product in FEEDS_PRODUCTS_LIST:
+                        print(output)
+                    else:
+                        print(response)
                 else:
                     # if it's a file then write
                     out_file.write(output if output.endswith("\n") else output + "\n")
@@ -215,10 +243,7 @@ class DTCLICommand:
                 _reason = getattr(e, "reason", {})
                 # check data type first as some of the reasons is just plain text
                 if isinstance(_reason, dict):
-                    _reason = (
-                        _reason.get("error", {}).get("message")
-                        or "Unknown Error occured."
-                    )
+                    _reason = _reason.get("error", {}).get("message") or "Unknown Error occured."
 
                 reason = typer.style(_reason, bg=typer.colors.RED)
 

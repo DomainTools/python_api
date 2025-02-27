@@ -5,8 +5,10 @@ from os import environ
 import json
 import pytest
 
+from inspect import isgenerator
+
 from domaintools import API, exceptions
-from tests.settings import api, vcr
+from tests.settings import api, feeds_api, vcr
 
 
 @vcr.use_cassette
@@ -345,18 +347,14 @@ def test_exception_handling():
     assert "not understand" in exception.reason["error"]["message"]
 
     with pytest.raises(exceptions.NotFoundException):
-        api._results(
-            "i_made_this_product_up", "/v1/steianrstierstnrsiatiarstnsto.com/whois"
-        ).data()
+        api._results("i_made_this_product_up", "/v1/steianrstierstnrsiatiarstnsto.com/whois").data()
     with pytest.raises(exceptions.NotAuthorizedException):
         API("notauser", "notakey").domain_search("amazon").data()
     with pytest.raises(
         ValueError,
         match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5",
     ):
-        API(
-            "notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash"
-        ).domain_search("amazon")
+        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash").domain_search("amazon")
 
 
 @vcr.use_cassette
@@ -483,9 +481,7 @@ def test_iris_detect_monitors():
 
 @vcr.use_cassette
 def test_iris_detect_new_domains():
-    detect_results = api.iris_detect_new_domains(
-        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
-    )
+    detect_results = api.iris_detect_new_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
     assert detect_results["watchlist_domains"][0]["risk_score"] == 100
 
 
@@ -494,9 +490,7 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains()
     assert detect_results["count"] >= 0
 
-    detect_results = api.iris_detect_watched_domains(
-        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
-    )
+    detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
     assert len(detect_results["watchlist_domains"]) == 2
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
@@ -505,23 +499,17 @@ def test_iris_detect_watched_domains():
 
 @vcr.use_cassette
 def test_iris_detect_manage_watchlist_domains():
-    detect_results = api.iris_detect_manage_watchlist_domains(
-        watchlist_domain_ids=["gae08rdVWG"], state="watched"
-    )
+    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
     assert detect_results["watchlist_domains"][0]["state"] == "watched"
 
 
 @vcr.use_cassette
 def test_iris_detect_escalate_domains():
     # If you rerun this test without VCR, it will fail because the domain is already escalated
-    detect_results = api.iris_detect_escalate_domains(
-        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked"
-    )
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked")
     assert detect_results["escalations"][0]["escalation_type"] == "blocked"
 
-    detect_results = api.iris_detect_escalate_domains(
-        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe"
-    )
+    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe")
     assert detect_results["escalations"][0]["escalation_type"] == "google_safe"
 
 
@@ -543,31 +531,147 @@ def test_limit_exceeded():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
-    results = api.nod(after="-60")
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.nod(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_newly_observed_domains_feed_pagination():
+    results = feeds_api.nod(sessionID="integrations-testing", after="2025-01-16T10:20:00Z")
+    page_count = 0
+    for response in results.response():
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        page_count += 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+    assert page_count > 1
 
 
 @vcr.use_cassette
 def test_newly_active_domains_feed():
-    results = api.nad(after="-60")
-    response = results.response()
-    rows = response.strip().split("\n")
+    results = feeds_api.nad(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
 
-    assert response is not None
-    assert results.status == 200
-    assert len(rows) >= 1
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
 
-    for row in rows:
-        feed_result = json.loads(row)
-        assert "timestamp" in feed_result.keys()
-        assert "domain" in feed_result.keys()
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_domainrdap_feed():
+    results = feeds_api.domainrdap(after="-60", top=2, header_authenticationn=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+
+        assert response is not None
+        assert len(rows) == 2
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "parsed_record" in feed_result.keys()
+            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+
+
+@vcr.use_cassette
+def test_domain_discovery_feed():
+    results = feeds_api.domaindiscovery(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_domainrdap_feed_not_api_header_auth():
+    results = feeds_api.domainrdap(after="-60", sessiondID="integrations-testing", top=5, header_authenticationn=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+
+        assert response is not None
+        assert len(rows) == 5
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "parsed_record" in feed_result.keys()
+            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+
+
+@vcr.use_cassette
+def test_verify_response_is_a_generator():
+    results = feeds_api.domaindiscovery(after="-60", header_authenticationn=False)
+
+    assert isgenerator(results.response())
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_non_header_auth_be_the_default():
+    results = feeds_api.domaindiscovery(after="-60", endpoint="download")
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "download_name" in feed_result["response"].keys()
+            assert "files" in feed_result["response"].keys()
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_no_required_params():
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery()
+
+    assert str(excinfo.value) == "sessionID or after or before must be provided"
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_asked_csv_format_for_download_api():
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery(after="-60", output_format="csv", endpoint="download")
+
+    assert str(excinfo.value) == "csv format is not available in download API."

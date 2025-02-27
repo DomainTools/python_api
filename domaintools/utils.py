@@ -1,6 +1,7 @@
 from datetime import datetime
-
 from typing import Optional
+
+from domaintools.constants import Endpoint, OutputFormat
 
 import re
 
@@ -19,9 +20,7 @@ def get_domain_age(create_date):
         try:
             create_date = datetime.strptime(create_date, "%Y%m%d")
         except ValueError:
-            raise ValueError(
-                "Invalid date format. Supported formats are %Y-%m-%d and %Y%m%d."
-            )
+            raise ValueError("Invalid date format. Supported formats are %Y-%m-%d and %Y%m%d.")
 
     time_diff = datetime.now() - create_date
 
@@ -110,11 +109,7 @@ def prune_data(data_obj):
             prune_data(item)
             if not isinstance(item, int) and not item:
                 items_to_prune.append(index)
-        data_obj[:] = [
-            item
-            for index, item in enumerate(data_obj)
-            if index not in items_to_prune and len(item)
-        ]
+        data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
 
 
 def find_emails(data_str):
@@ -151,9 +146,7 @@ def get_pivots(data_obj, name, return_data=None, count=0, pivot_threshold=500):
         for k, v in data_obj.items():
             if isinstance(data_obj[k], (dict, list)):
                 name = "{}_{}".format(name, k)
-                temp_data = get_pivots(
-                    data_obj[k], name, return_data, count, pivot_threshold
-                )
+                temp_data = get_pivots(data_obj[k], name, return_data, count, pivot_threshold)
                 if temp_data:
                     return_data.append([name[1:].upper().replace("_", " "), temp_data])
             name = temp_name
@@ -175,14 +168,22 @@ def get_pivots(data_obj, name, return_data=None, count=0, pivot_threshold=500):
         return return_data
 
 
-def convert_str_to_dateobj(
-    string_date: str, date_format: Optional[str] = "%Y-%m-%d"
-) -> datetime:
+def convert_str_to_dateobj(string_date: str, date_format: Optional[str] = "%Y-%m-%d") -> datetime:
     return datetime.strptime(string_date, date_format)
 
 
-def get_feeds_products_list():
-    return [
-        "newly-active-domains-feed-(api)",
-        "newly-observed-domains-feed-(api)",
-    ]
+def validate_feeds_parameters(params):
+    sessionID = params.get("sessionID")
+    after = params.get("after")
+    before = params.get("before")
+    if not (sessionID or after or before):
+        raise ValueError("sessionID or after or before must be provided")
+
+    format = params.get("output_format")
+    endpoint = params.get("endpoint")
+    if endpoint == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
+        raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
+
+    if endpoint == Endpoint.DOWNLOAD.value and params.get("header_authentication", True):
+        # For download endpoint, header_authentication will be False by default
+        params["header_authentication"] = False
