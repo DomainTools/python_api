@@ -89,11 +89,8 @@ class API(object):
 
         if not https:
             raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
-        if proxy_url:
-            if isinstance(proxy_url, str):
-                self.proxy_url = {"http://": proxy_url, "https://": proxy_url}
-            else:
-                raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
+        if proxy_url and not isinstance(proxy_url, str):
+            raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 
     def _build_api_url(self, api_url=None, api_port=None):
         """Build the API url based on the given url and port. Defaults to `https://api.domaintools.com`"""
