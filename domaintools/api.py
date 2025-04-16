@@ -411,38 +411,6 @@ class API(object):
             **kwargs,
         )
 
-    def phisheye(self, query, days_back=None, **kwargs):
-        """Returns domain results for the specified term for today or the specified number of days_back.
-        Terms must be setup for monitoring via the web interface: https://research.domaintools.com/phisheye.
-
-        NOTE: Properties of a domain are only provided if we have been able to obtain them.
-              Many domains will have incomplete data because that information isn't available in their Whois records,
-              or they don't have DNS results for a name server or IP address.
-        """
-        return self._results(
-            "phisheye",
-            "/v1/phisheye",
-            query=query,
-            days_back=days_back,
-            items_path=("domains",),
-            **kwargs,
-        )
-
-    def phisheye_term_list(self, include_inactive=False, **kwargs):
-        """Provides a list of terms that are set up for this account.
-        This call is not charged against your API usage limit.
-
-        NOTE: The terms must be configured in the PhishEye web interface: https://research.domaintools.com/phisheye.
-              There is no API call to set up the terms.
-        """
-        return self._results(
-            "phisheye_term_list",
-            "/v1/phisheye/term-list",
-            include_inactive=include_inactive,
-            items_path=("terms",),
-            **kwargs,
-        )
-
     def iris(
         self,
         domain=None,

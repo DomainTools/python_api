@@ -29,25 +29,6 @@ def _iris_investigate_helptext():
     """
 
 
-def _phisheye_helptext():
-    return """
-        Returns domain results for the specified term for today or the specified number of days_back. Terms must be setup for monitoring via the web interface: https://research.domaintools.com/phisheye. \n
-
-        NOTE: Properties of a domain are only provided if we have been able to obtain them. \n
-        Many domains will have incomplete data because that information isn't available in their Whois records,
-        or they don't have DNS results for a name server or IP address.
-    """
-
-
-def _phisheye_termlist():
-    return """
-        Provides a list of terms that are set up for this account. This call is not charged against your API usage limit.
-
-        NOTE: The terms must be configured in the PhishEye web interface: https://research.domaintools.com/phisheye. \n
-        There is no API call to set up the terms.
-    """
-
-
 _command_help_mapper = {
     c.ACCOUNT_INFORMATION: "Provides a snapshot of your accounts current API usage.",
     c.AVAILABLE_API_CALLS: "Provides a list of api calls that you can use based on your account information.",
@@ -71,8 +52,6 @@ _command_help_mapper = {
     c.REVERSE_WHOIS: "Provides list of one or more terms to search for in the Whois record, as a Python list or separated with the pipe character ( | ).",
     c.WHOIS: "Pass in a domain name or an IP address to perform a whois lookup.",
     c.WHOIS_HISTORY: "Retrieve historical Whois records of a given domain name.",
-    c.PHISHEYE: _phisheye_helptext(),
-    c.PHISHEYE_TERM_LIST: _phisheye_termlist(),
     c.IRIS: "Performs a search for the provided search terms ANDed together, returning the pivot engine row data for the resulting domains.",
     c.RISK: "Returns back the risk score for a given domain.",
     c.RISK_EVIDENCE: "Returns back the detailed risk evidence associated with a given domain.",
