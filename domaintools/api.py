@@ -1096,3 +1096,20 @@ class API(object):
             cls=FeedsResults,
             **kwargs,
         )
+
+    def noh(self, **kwargs) -> FeedsResults:
+        """Returns back list of the newly observed hostnames feed"""
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"newly-observed-hosts-feed-({source})",
+            f"v1/{endpoint}/noh/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
