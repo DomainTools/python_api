@@ -42,5 +42,6 @@ IRIS_DETECT_IGNORED_DOMAINS = "iris_detect_ignored_domains"
 # feeds
 FEEDS_NAD = "nad"
 FEEDS_NOD = "nod"
+FEEDS_NOH = "noh"
 FEEDS_DOMAINRDAP = "domainrdap"
 FEEDS_DOMAINDISCOVERY = "domaindiscovery"
