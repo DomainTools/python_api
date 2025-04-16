@@ -518,6 +518,22 @@ def test_newly_observed_domains_feed():
 
 
 @vcr.use_cassette
+def test_newly_observed_hosts_feed():
+    results = feeds_api.noh(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
 def test_newly_observed_domains_feed_pagination():
     results = feeds_api.nod(sessionID="integrations-testing", after="2025-01-16T10:20:00Z")
     page_count = 0
