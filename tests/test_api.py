@@ -693,3 +693,23 @@ def test_realtime_domain_risk():
             assert "malware_risk" in feed_result.keys()
             assert "proximity_risk" in feed_result.keys()
             assert "overall_risk" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_domain_hotlist():
+    results = feeds_api.domainhotlist(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "phishing_risk" in feed_result.keys()
+            assert "malware_risk" in feed_result.keys()
+            assert "proximity_risk" in feed_result.keys()
+            assert "overall_risk" in feed_result.keys()
