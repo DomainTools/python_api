@@ -1218,3 +1218,34 @@ class API(object):
             cls=FeedsResults,
             **kwargs,
         )
+
+    def domainhotlist(self, **kwargs) -> FeedsResults:
+        """Returns back list of domain hotlist feed.
+        Contains high-risk, apex-level domains that are observed by DomainTools' global sensor network to be active within 24 hours.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"domain-hotlist-feed-({source})",
+            f"v1/{endpoint}/domainhotlist/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
