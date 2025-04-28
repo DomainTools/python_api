@@ -39,12 +39,9 @@ IRIS_DETECT_MANAGE_WATCHLIST_DOMAINS = "iris_detect_manage_watchlist_domains"
 IRIS_DETECT_ESCALATE_DOMAINS = "iris_detect_escalate_domains"
 IRIS_DETECT_IGNORED_DOMAINS = "iris_detect_ignored_domains"
 
-# phisheye
-PHISHEYE = "phisheye"
-PHISHEYE_TERM_LIST = "phisheye_term_list"
-
 # feeds
 FEEDS_NAD = "nad"
 FEEDS_NOD = "nod"
+FEEDS_NOH = "noh"
 FEEDS_DOMAINRDAP = "domainrdap"
 FEEDS_DOMAINDISCOVERY = "domaindiscovery"

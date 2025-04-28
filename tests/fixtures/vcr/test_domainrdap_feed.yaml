@@ -792,4 +792,245 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.4.0&header_authenticationn=false&top=2
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-04-28T14:48:48Z\",\"domain\":\"scriptdrive.org\",\"raw_record\":{\"first_request_timestamp\":\"2025-04-28T14:48:38Z\",\"requests\":[{\"data\":\"{\\n
+        \ \\\"rdapConformance\\\": [\\n    \\\"rdap_level_0\\\",\\n    \\\"icann_rdap_response_profile_0\\\",\\n
+        \   \\\"icann_rdap_technical_implementation_guide_0\\\"\\n  ],\\n  \\\"notices\\\":
+        [\\n    {\\n      \\\"title\\\": \\\"Terms of Service\\\",\\n      \\\"description\\\":
+        [\\n        \\\"Public Interest Registry provides this RDAP service for informational
+        purposes only, and to assist persons in obtaining information about or related
+        to a domain name registration record. Public Interest Registry does not guarantee
+        its accuracy. Users accessing the Public Interest Registry RDAP service agree
+        to use the data only for lawful purposes, and under no circumstances may this
+        data be used to: a) allow, enable, or otherwise support the transmission by
+        e-mail, telephone, or facsimile of mass unsolicited, commercial advertising
+        or solicitations to entities other than the registrar's own existing customers
+        and b) enable high volume, automated, electronic processes that send queries
+        or data to the systems of Public Interest Registry or any ICANN-accredited
+        registrar, except as reasonably necessary to register domain names or modify
+        existing registrations. When using the Public Interest Registry RDAP service,
+        please consider the following: the RDAP service is not a replacement for standard
+        EPP commands to the SRS service. RDAP is not considered authoritative for
+        registered domain objects. The RDAP service may be scheduled for downtime
+        during production or OT\\u0026E maintenance periods. Queries to the RDAP services
+        are throttled. If too many queries are received from a single IP address within
+        a specified time, the service will begin to reject further queries for a period
+        of time to prevent disruption of RDAP service access. Abuse of the RDAP system
+        through data mining is mitigated by detecting and limiting bulk query access
+        from single sources. Where applicable, the presence of a [Non-Public Data]
+        tag indicates that such data is not made publicly available due to applicable
+        data privacy laws or requirements. Should you wish to contact the registrant,
+        please refer to the RDAP records available through the registrar URL listed
+        above. Access to non-public data may be provided, upon request, where it can
+        be reasonably confirmed that the requester holds a specific legitimate interest
+        and a proper legal basis for accessing the withheld data. Access to this data
+        can be requested by submitting a request to WHOISrequest@pir.org. Public Interest
+        Registry Inc. reserves the right to modify these terms at any time. By submitting
+        this query, you agree to abide by this policy.\\\"\\n      ],\\n      \\\"links\\\":
+        [\\n        {\\n          \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\\\",\\n
+        \         \\\"rel\\\": \\\"alternate\\\",\\n          \\\"href\\\": \\\"https://thenew.org/org-people/about-pir/policies/\\\",\\n
+        \         \\\"type\\\": \\\"text/html\\\"\\n        }\\n      ]\\n    },\\n
+        \   {\\n      \\\"title\\\": \\\"Status Codes\\\",\\n      \\\"description\\\":
+        [\\n        \\\"For more information on domain status codes, please visit
+        https://icann.org/epp\\\"\\n      ],\\n      \\\"links\\\": [\\n        {\\n
+        \         \\\"value\\\": \\\"https://icann.org/epp\\\",\\n          \\\"rel\\\":
+        \\\"self\\\",\\n          \\\"href\\\": \\\"https://icann.org/epp\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   },\\n    {\\n      \\\"title\\\": \\\"RDDS Inaccuracy Complaint Form\\\",\\n
+        \     \\\"description\\\": [\\n        \\\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\\\"\\n      ],\\n      \\\"links\\\":
+        [\\n        {\\n          \\\"value\\\": \\\"https://icann.org/wicf\\\",\\n
+        \         \\\"rel\\\": \\\"self\\\",\\n          \\\"href\\\": \\\"https://icann.org/wicf\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   }\\n  ],\\n  \\\"ldhName\\\": \\\"scriptdrive.org\\\",\\n  \\\"unicodeName\\\":
+        \\\"scriptdrive.org\\\",\\n  \\\"nameservers\\\": [\\n    {\\n      \\\"ldhName\\\":
+        \\\"ns11.abovedomains.com\\\",\\n      \\\"unicodeName\\\": \\\"ns11.abovedomains.com\\\",\\n
+        \     \\\"objectClassName\\\": \\\"nameserver\\\",\\n      \\\"handle\\\":
+        \\\"5522b37a84764fafb4f1606730191b7f-LROR\\\",\\n      \\\"status\\\": [\\n
+        \       \\\"associated\\\"\\n      ]\\n    },\\n    {\\n      \\\"ldhName\\\":
+        \\\"ns12.abovedomains.com\\\",\\n      \\\"unicodeName\\\": \\\"ns12.abovedomains.com\\\",\\n
+        \     \\\"objectClassName\\\": \\\"nameserver\\\",\\n      \\\"handle\\\":
+        \\\"8dc71b1f86e44e4580e9eac883725091-LROR\\\",\\n      \\\"status\\\": [\\n
+        \       \\\"associated\\\"\\n      ]\\n    }\\n  ],\\n  \\\"secureDNS\\\":
+        {\\n    \\\"delegationSigned\\\": false,\\n    \\\"maxSigLife\\\": 1\\n  },\\n
+        \ \\\"publicIds\\\": [\\n    {\\n      \\\"type\\\": \\\"IANA Registrar ID\\\",\\n
+        \     \\\"identifier\\\": \\\"940\\\"\\n    }\\n  ],\\n  \\\"objectClassName\\\":
+        \\\"domain\\\",\\n  \\\"handle\\\": \\\"97a22a8cd101495dba1a4b912305ca4a-LROR\\\",\\n
+        \ \\\"status\\\": [\\n    \\\"client transfer prohibited\\\"\\n  ],\\n  \\\"events\\\":
+        [\\n    {\\n      \\\"eventAction\\\": \\\"expiration\\\",\\n      \\\"eventDate\\\":
+        \\\"2025-10-26T22:48:57.515Z\\\"\\n    },\\n    {\\n      \\\"eventAction\\\":
+        \\\"registration\\\",\\n      \\\"eventDate\\\": \\\"2020-10-26T22:48:57.515Z\\\"\\n
+        \   },\\n    {\\n      \\\"eventAction\\\": \\\"last changed\\\",\\n      \\\"eventDate\\\":
+        \\\"2024-09-04T07:38:08.962Z\\\"\\n    },\\n    {\\n      \\\"eventAction\\\":
+        \\\"last update of RDAP database\\\",\\n      \\\"eventDate\\\": \\\"2025-04-28T14:48:39.73Z\\\"\\n
+        \   }\\n  ],\\n  \\\"entities\\\": [\\n    {\\n      \\\"vcardArray\\\": [\\n
+        \       \\\"vcard\\\",\\n        [\\n          [\\n            \\\"version\\\",\\n
+        \           {},\\n            \\\"text\\\",\\n            \\\"4.0\\\"\\n          ],\\n
+        \         [\\n            \\\"fn\\\",\\n            {},\\n            \\\"text\\\",\\n
+        \           \\\"\\\"\\n          ],\\n          [\\n            \\\"org\\\",\\n
+        \           {\\n              \\\"type\\\": \\\"work\\\"\\n            },\\n
+        \           \\\"text\\\",\\n            \\\"Transure Enterprise Ltd\\\"\\n
+        \         ],\\n          [\\n            \\\"adr\\\",\\n            {\\n              \\\"cc\\\":
+        \\\"US\\\"\\n            },\\n            \\\"text\\\",\\n            [\\n
+        \             \\\"\\\",\\n              \\\"\\\",\\n              \\\"\\\",\\n
+        \             \\\"\\\",\\n              \\\"Delaware\\\",\\n              \\\"\\\",\\n
+        \             \\\"\\\"\\n            ]\\n          ]\\n        ]\\n      ],\\n
+        \     \\\"roles\\\": [\\n        \\\"registrant\\\"\\n      ],\\n      \\\"objectClassName\\\":
+        \\\"entity\\\",\\n      \\\"remarks\\\": [\\n        {\\n          \\\"title\\\":
+        \\\"REDACTED\\\",\\n          \\\"type\\\": \\\"object redacted due to authorization\\\",\\n
+        \         \\\"description\\\": [\\n            \\\"Some of the data in this
+        object has been removed.\\\"\\n          ]\\n        }\\n      ],\\n      \\\"events\\\":
+        [\\n        {\\n          \\\"eventAction\\\": \\\"last update of RDAP database\\\",\\n
+        \         \\\"eventDate\\\": \\\"2025-04-28T14:48:39.73Z\\\"\\n        }\\n
+        \     ]\\n    },\\n    {\\n      \\\"vcardArray\\\": [\\n        \\\"vcard\\\",\\n
+        \       [\\n          [\\n            \\\"version\\\",\\n            {},\\n
+        \           \\\"text\\\",\\n            \\\"4.0\\\"\\n          ],\\n          [\\n
+        \           \\\"fn\\\",\\n            {},\\n            \\\"text\\\",\\n            \\\"\\\"\\n
+        \         ]\\n        ]\\n      ],\\n      \\\"roles\\\": [\\n        \\\"technical\\\",\\n
+        \       \\\"administrative\\\"\\n      ],\\n      \\\"objectClassName\\\":
+        \\\"entity\\\",\\n      \\\"remarks\\\": [\\n        {\\n          \\\"title\\\":
+        \\\"REDACTED\\\",\\n          \\\"type\\\": \\\"object redacted due to authorization\\\",\\n
+        \         \\\"description\\\": [\\n            \\\"Some of the data in this
+        object has been removed.\\\"\\n          ]\\n        }\\n      ],\\n      \\\"events\\\":
+        [\\n        {\\n          \\\"eventAction\\\": \\\"last update of RDAP database\\\",\\n
+        \         \\\"eventDate\\\": \\\"2025-04-28T14:48:39.73Z\\\"\\n        }\\n
+        \     ]\\n    },\\n    {\\n      \\\"vcardArray\\\": [\\n        \\\"vcard\\\",\\n
+        \       [\\n          [\\n            \\\"version\\\",\\n            {},\\n
+        \           \\\"text\\\",\\n            \\\"4.0\\\"\\n          ],\\n          [\\n
+        \           \\\"fn\\\",\\n            {},\\n            \\\"text\\\",\\n            \\\"Above.com
+        Pty Ltd.\\\"\\n          ]\\n        ]\\n      ],\\n      \\\"roles\\\": [\\n
+        \       \\\"registrar\\\"\\n      ],\\n      \\\"publicIds\\\": [\\n        {\\n
+        \         \\\"type\\\": \\\"IANA Registrar ID\\\",\\n          \\\"identifier\\\":
+        \\\"940\\\"\\n        }\\n      ],\\n      \\\"objectClassName\\\": \\\"entity\\\",\\n
+        \     \\\"handle\\\": \\\"940\\\",\\n      \\\"entities\\\": [\\n        {\\n
+        \         \\\"vcardArray\\\": [\\n            \\\"vcard\\\",\\n            [\\n
+        \             [\\n                \\\"version\\\",\\n                {},\\n
+        \               \\\"text\\\",\\n                \\\"4.0\\\"\\n              ],\\n
+        \             [\\n                \\\"fn\\\",\\n                {},\\n                \\\"text\\\",\\n
+        \               \\\"David Warmuz\\\"\\n              ],\\n              [\\n
+        \               \\\"tel\\\",\\n                {\\n                  \\\"type\\\":
+        \\\"voice\\\"\\n                },\\n                \\\"uri\\\",\\n                \\\"tel:+61.395897946\\\"\\n
+        \             ],\\n              [\\n                \\\"email\\\",\\n                {},\\n
+        \               \\\"text\\\",\\n                \\\"abuse@above.com\\\"\\n
+        \             ]\\n            ]\\n          ],\\n          \\\"roles\\\":
+        [\\n            \\\"abuse\\\"\\n          ],\\n          \\\"objectClassName\\\":
+        \\\"entity\\\",\\n          \\\"handle\\\": \\\"057d25ea626a48059417dcd95a9fba07-LROR\\\"\\n
+        \       }\\n      ],\\n      \\\"links\\\": [\\n        {\\n          \\\"value\\\":
+        \\\"https://rdap.publicinterestregistry.org/rdap/entity/940\\\",\\n          \\\"rel\\\":
+        \\\"self\\\",\\n          \\\"href\\\": \\\"https://rdap.publicinterestregistry.org/rdap/entity/940\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   }\\n  ],\\n  \\\"links\\\": [\\n    {\\n      \\\"value\\\": \\\"https://www.above.com/rdap/domain/scriptdrive.org\\\",\\n
+        \     \\\"rel\\\": \\\"related\\\",\\n      \\\"href\\\": \\\"https://www.above.com/rdap/domain/scriptdrive.org\\\",\\n
+        \     \\\"type\\\": \\\"application/rdap+json\\\"\\n    },\\n    {\\n      \\\"value\\\":
+        \\\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\\\",\\n
+        \     \\\"rel\\\": \\\"self\\\",\\n      \\\"href\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\\\",\\n
+        \     \\\"type\\\": \\\"application/rdap+json\\\"\\n    }\\n  ]\\n}\",\"source_type\":\"registry\",\"timestamp\":\"2025-04-28T14:48:38Z\",\"url\":\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\"},{\"data\":\"{\\\"lang\\\":\\\"en-US\\\",\\\"errorCode\\\":404,\\\"title\\\":\\\"Error
+        processing request\\\",\\\"description\\\":[\\\"Not found\\\"],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-04-28T14:48:44Z\",\"url\":\"https://www.above.com/rdap/domain/scriptdrive.org\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"\",\"country\":\"US\",\"name\":\"\",\"org\":\"Transure
+        Enterprise Ltd\",\"postal\":\"\",\"region\":\"Delaware\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"name\":\"\",\"roles\":[\"technical\",\"administrative\"]}],\"creation_date\":\"2020-10-26T22:48:57.515000+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"scriptdrive.org\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"above.com\",\"pir.org\"],\"emails\":[\"abuse@above.com\",\"whoisrequest@pir.org\"],\"expiration_date\":\"2025-10-26T22:48:57.515000+00:00\",\"handle\":\"97a22a8cd101495dba1a4b912305ca4a-LROR\",\"last_changed_date\":\"2024-09-04T07:38:08.962000+00:00\",\"links\":[{\"href\":\"https://www.above.com/rdap/domain/scriptdrive.org\",\"rel\":\"related\"},{\"href\":\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\",\"rel\":\"self\"}],\"nameservers\":[\"ns11.abovedomains.com\",\"ns12.abovedomains.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@above.com\",\"handle\":\"057d25ea626a48059417dcd95a9fba07-LROR\",\"name\":\"David
+        Warmuz\",\"phone\":\"tel:+61.395897946\",\"roles\":[\"abuse\"]}],\"iana_id\":\"940\",\"name\":\"Above.com
+        Pty Ltd.\"},\"unclassified_emails\":[\"whoisrequest@pir.org\"]},\"registrar_request_url\":\"https://www.above.com/rdap/domain/scriptdrive.org\",\"registry_request_url\":\"https://rdap.publicinterestregistry.org/rdap/domain/scriptdrive.org\"}}\n{\"timestamp\":\"2025-04-28T14:48:48Z\",\"domain\":\"retirebitch.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-04-28T14:48:42Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"RDAP
+        Terms of Service\\\",\\\"description\\\":[\\\"By querying Namecheap\u2019s
+        \ RDAP Domain Database, you agree to comply with Namecheap\u2019s RDAP Terms
+        of Service, including but not limited to the terms herein,  and you acknowledge
+        and agree that your information will be used in accordance with Namecheap
+        Privacy Policy (https://www.namecheap.com/legal/general/privacy-policy/),
+        including that Namecheap may retain certain details about queries to our RDAP
+        Domain Database for the purposes of detecting and preventing misuse.  If you
+        do not agree to any of these terms, do not access or use ,the RDAP Domain
+        Database.\\\",\\\"Although Namecheap believes the data to be reliable, you
+        agree and acknowledge that any information provided is 'as is' without any
+        guarantee of accuracy.\\\",\\\"You further agree that you will:\\\",\\\"1)
+        Not misuse the RDAP Domain Database. It is intended solely for query-based
+        access and should not be used for or relied upon for any other purpose.\\\",\\\"2)
+        Not use the RDAP Domain Database to allow, enable, or otherwise support the
+        transmission of unsolicited, commercial advertising or solicitations.\\\",\\\"3)
+        Not access the RDAP Domain Database through the use of high volume, automated
+        electronic processes that send queries or data to the systems of Namecheap,
+        any other ICANN-accredited registrar, or any registry operator.\\\",\\\"4)
+        Not compile, repackage, disseminate, or otherwise use the information contained
+        in the RDAP Domain Database in its entirety, or in any substantial portion,
+        without our prior written permission.\\\",\\\"5) You will only use the information
+        contained in the RDAP Domain Database for lawful purposes.\\\",\\\"We reserve
+        the right to restrict or deny your access to the RDAP Domain Database if we
+        suspect that you have failed to comply with these terms.\\\",\\\"We reserve
+        the right to modify this agreement at any time.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://www.namecheap.com/legal/domains/rdap-tos/\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://icann.org/epp\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"rel\\\":\\\"help\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"lang\\\":\\\"en\\\",\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"value\\\":\\\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\\\"}],\\\"handle\\\":\\\"2526285464_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"retirebitch.com\\\",\\\"unicodeName\\\":\\\"retirebitch.com\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-04-28T14:48:47\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2020-05-14T20:23:15\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-05-14T20:23:15\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-04-14T08:54:47\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false,\\\"zoneSigned\\\":false},\\\"port43\\\":\\\"whois.namecheap.com\\\",\\\"entities\\\":[{\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1068\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.9854014545\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@namecheap.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1068\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NAMECHEAP
+        INC\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"support@namecheap.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"770264BA-B93A-4F69-159A-08D7F8178343\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"IS\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"registrant\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"A88E2BD3-777D-47BF-F3A8-08D7F816F3E5\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"IS\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"administrative\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"FBB22240-C97C-4EC6-D7CC-08D7F8139AD4\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Redacted
+        for Privacy\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy service provided
+        by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"IS\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\\\"]]],\\\"remarks\\\":[{\\\"description\\\":[\\\"Some
+        of the data in this object has been removed.\\\"],\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\"}],\\\"roles\\\":[\\\"technical\\\"]}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns1.registrar-servers.com\\\",\\\"unicodeName\\\":\\\"dns1.registrar-servers.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns2.registrar-servers.com\\\",\\\"unicodeName\\\":\\\"dns2.registrar-servers.com\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-04-28T14:48:44Z\",\"url\":\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\",\"handle\":\"770264BA-B93A-4F69-159A-08D7F8178343\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"registrant\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\",\"handle\":\"A88E2BD3-777D-47BF-F3A8-08D7F816F3E5\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"administrative\"],\"street\":\"Kalkofnsvegur 2\"},{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\",\"handle\":\"FBB22240-C97C-4EC6-D7CC-08D7F8139AD4\",\"name\":\"Redacted
+        for Privacy\",\"org\":\"Privacy service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"technical\"],\"street\":\"Kalkofnsvegur 2\"}],\"creation_date\":\"2020-05-14T20:23:15\",\"dnssec\":{\"signed\":false},\"domain\":\"retirebitch.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"namecheap.com\",\"withheldforprivacy.com\"],\"emails\":[\"883734407ae64b92834d5bc39be8a461.protect@withheldforprivacy.com\",\"abuse@namecheap.com\",\"support@namecheap.com\"],\"expiration_date\":\"2026-05-14T20:23:15\",\"handle\":\"2526285464_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-04-14T08:54:47\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/RETIREBITCH.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\",\"rel\":\"self\"}],\"nameservers\":[\"dns1.registrar-servers.com\",\"dns2.registrar-servers.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@namecheap.com\",\"name\":\"NAMECHEAP
+        INC\",\"phone\":\"tel:+1.9854014545\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1068\",\"name\":\"NAMECHEAP
+        INC\"},\"unclassified_emails\":[\"support@namecheap.com\"]},\"registrar_request_url\":\"https://rdap.namecheap.com/domain/RETIREBITCH.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/retirebitch.com\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 28 Apr 2025 14:48:48 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=qtvju3jj4usrfvmvdbqj2t85tqlhd3htefvk2a5n06av5gd9dfdmbbca7p9m3qj6ndihsb9cgcdu47290mbc2a3gtb8u7g1e2i3srk3;
+        expires=Wed, 28-May-2025 14:48:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '16'
+    status:
+      code: 200
+      message: OK
 version: 1

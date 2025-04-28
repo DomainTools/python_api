@@ -323,16 +323,6 @@ def test_dict_like_behaviour():
 
 
 @vcr.use_cassette
-def test_list_like_behaviour():
-    with api.phisheye("google") as data:
-        data.insert(0, {"domain": "woot", "tld": "com"})
-        assert data["term"] == "google"
-        for result in data:
-            assert result["domain"]
-            assert result["tld"]
-
-
-@vcr.use_cassette
 def test_exception_handling():
     exception = None
     api_call = api.reverse_ip("ss")
@@ -384,24 +374,6 @@ def test_formats():
         assert "<" in str(data.xml)
         assert "<title>" in str(data.html)
         assert "\n" in str(data.as_list())
-
-
-@vcr.use_cassette
-def test_phisheye():
-    with api.phisheye("google") as data:
-        assert data["term"] == "google"
-        for result in data:
-            assert result["domain"]
-            assert result["tld"]
-
-
-@vcr.use_cassette
-def test_phisheye_term_list():
-    with api.phisheye_term_list() as data:
-        assert data
-        for term in data:
-            assert "term" in term
-            assert type(term["active"]) == bool
 
 
 @vcr.use_cassette
@@ -532,6 +504,22 @@ def test_limit_exceeded():
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
     results = feeds_api.nod(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_newly_observed_hosts_feed():
+    results = feeds_api.noh(after="-60", header_authentication=False)
     for response in results.response():
         assert results.status == 200
 

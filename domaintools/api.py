@@ -411,38 +411,6 @@ class API(object):
             **kwargs,
         )
 
-    def phisheye(self, query, days_back=None, **kwargs):
-        """Returns domain results for the specified term for today or the specified number of days_back.
-        Terms must be setup for monitoring via the web interface: https://research.domaintools.com/phisheye.
-
-        NOTE: Properties of a domain are only provided if we have been able to obtain them.
-              Many domains will have incomplete data because that information isn't available in their Whois records,
-              or they don't have DNS results for a name server or IP address.
-        """
-        return self._results(
-            "phisheye",
-            "/v1/phisheye",
-            query=query,
-            days_back=days_back,
-            items_path=("domains",),
-            **kwargs,
-        )
-
-    def phisheye_term_list(self, include_inactive=False, **kwargs):
-        """Provides a list of terms that are set up for this account.
-        This call is not charged against your API usage limit.
-
-        NOTE: The terms must be configured in the PhishEye web interface: https://research.domaintools.com/phisheye.
-              There is no API call to set up the terms.
-        """
-        return self._results(
-            "phisheye_term_list",
-            "/v1/phisheye/term-list",
-            include_inactive=include_inactive,
-            items_path=("terms",),
-            **kwargs,
-        )
-
     def iris(
         self,
         domain=None,
@@ -1065,7 +1033,21 @@ class API(object):
         )
 
     def nod(self, **kwargs) -> FeedsResults:
-        """Returns back list of the newly observed domains feed"""
+        """Returns back list of the newly observed domains feed.
+        Apex-level domains (e.g. example.com but not www.example.com) that we observe for the first time, and have not observed previously with our global DNS sensor network.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
@@ -1082,7 +1064,22 @@ class API(object):
         )
 
     def nad(self, **kwargs) -> FeedsResults:
-        """Returns back list of the newly active domains feed"""
+        """Returns back list of the newly active domains feed. Contains domains that have been observed after having not been seen for at least 10 days in passive DNS.
+        Apex-level domains (e.g. example.com but not www.example.com) that we observe based on the latest lifecycle of the domain. A domain may be seen either for the first time ever, or again after at least 10 days of inactivity (no observed resolutions in DNS).
+        Populated with our global passive DNS (pDNS) sensor network.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
@@ -1099,7 +1096,22 @@ class API(object):
         )
 
     def domainrdap(self, **kwargs) -> FeedsResults:
-        """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP)"""
+        """Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP).
+        Compliments the 5-Minute WHOIS Feed as registries and registrars switch from Whois to RDAP.
+        Contains parsed and raw RDAP-format domain registration data, emitted as soon as they are collected and parsed into a normalized structure.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
@@ -1113,7 +1125,22 @@ class API(object):
         )
 
     def domaindiscovery(self, **kwargs) -> FeedsResults:
-        """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties"""
+        """Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties".
+        Contains domains that are newly-discovered by Domain Tools in both passive and active DNS sources, emitted as soon as they are first observed.
+        New domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
@@ -1124,6 +1151,38 @@ class API(object):
         return self._results(
             f"real-time-domain-discovery-feed-({source})",
             f"v1/{endpoint}/domaindiscovery/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
+
+    def noh(self, **kwargs) -> FeedsResults:
+        """Returns back list of the newly observed hostnames feed.
+        Contains fully qualified domain names (i.e. host names) that have never been seen before in passive DNS, emitted as soon as they are first observed.
+        Hostname resolutions that we observe for the first time with our global DNS sensor network.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"newly-observed-hosts-feed-({source})",
+            f"v1/{endpoint}/noh/",
             response_path=(),
             cls=FeedsResults,
             **kwargs,

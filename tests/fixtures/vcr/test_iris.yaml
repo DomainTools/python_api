@@ -258,4 +258,118 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris?app_name=python_wrapper&app_version=2.4.0&domain=google.com
+  response:
+    body:
+      string: '{"response":{"limit_exceeded":false,"message":"Enjoy your data.","results_count":1,"results":[{"domain":"google.com","whois_url":"https:\/\/whois.domaintools.com\/google.com","adsense":"","alexa":1,"popularity_rank":1,"google_analytics":"","admin_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"billing_contact":{"name":"","org":"","street":"","city":"","state":"","postal":"","country":"","phone":"","fax":"","email":[]},"registrant_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"technical_contact":{"name":"","org":"Google
+        LLC","street":"","city":"","state":"CA","postal":"","country":"us","phone":"","fax":"","email":["select
+        request email form at https:\/\/domains.markmonitor.com\/whois\/google.com"]},"create_date":"1997-09-15","expiration_date":"2028-09-14","email_domain":["markmonitor.com","google.com"],"soa_email":["dns-admin@google.com"],"additional_whois_email":["abusecomplaints@markmonitor.com","whoisrequest@markmonitor.com"],"ip":[{"address":"142.251.33.110","asn":[15169],"country_code":"us","isp":"Google"},{"address":"142.251.33.68","asn":[15169],"country_code":"us","isp":"Google"}],"mx":[{"host":"smtp.google.com","domain":"google.com","ip":["74.125.199.27","74.125.142.27","74.125.142.26","74.125.199.26","74.125.195.26"],"priority":10}],"name_server":[{"host":"ns3.google.com","domain":"google.com","ip":["216.239.36.10"]},{"host":"ns4.google.com","domain":"google.com","ip":["216.239.38.10"]},{"host":"ns1.google.com","domain":"google.com","ip":["216.239.32.10"]},{"host":"ns2.google.com","domain":"google.com","ip":["216.239.34.10"]}],"risk_score":null,"redirect":"","redirect_domain":"","registrant_name":"","registrant_org":"Google
+        LLC","registrar":"MarkMonitor, Inc.","registrar_status":["clientdeleteprohibited","clienttransferprohibited","clientupdateprohibited","serverdeleteprohibited","servertransferprohibited","serverupdateprohibited"],"spf_info":"","ssl_country":"","ssl_hash":"","ssl_org":"","tld":"com","threat_profile":{"proximity":"","spam":"","malware":"","evidence":[]},"website_response":200,"data_updated_timestamp":"2024-04-10T15:37:51.591000"}]}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 18 Dec 2024 19:41:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=5i1sdu1pkv6ftqhr9j3d51ea176tvmkg9acjs7i67ouoo0scfvnbp8e2e8cslem4o0lb0rtg21mgc8natc5km9p1p16k5t0goui3i64;
+        expires=Fri, 17-Jan-2025 19:41:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '356168'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.4.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WYbY+iMBDHvwuv7hKbIC5q9qtcLqYLo0wWWtIWPWP87jc83WHiQ8viIr4S2oHf
+        DP/OTHvyFOhcCg3e+8njUSQLYaq/OW4KDUrwjIY8FAZ2ihukqRsD2qDYeTMyMLincaMKOM+8XMm4
+        iIz23n+dPIzJrnkiQ7GVKqvsySwHtcmkMMkmxQzpfd7cL3/NUCIL1Y6IIk0bAxSFgX8WYfn6Dy3T
+        zs16cqH5rnLHyJgfy4evAppcvZCugiB4CzyihT851i5tYm6gNj/PGnJUqAl7X/q6K4dvYbtAB749
+        deh3oNfzhSUyCIVRcpU2cI3x0gE36OKuluu1JW8MBiLDQEc8pSkslhlHoa+HO3TjXzjwd/F9N3bc
+        Cakg7oNOCvK+jN5V99yRPeOCnsYO3ERJitoMGv+5i96/8AHIDI1UI0BfJJa5G7WAw2iSmXclY5sN
+        G+5KKyPKfdFlXz1mzxPUCRxvZ3A3efRVx2PQOqCMqugW0zu4z5PzhSysgTVwdaPk9KjrvosUulpY
+        LB8TJ7JqXRhJghLGcQIxxrxNbyM0Ts6oCnYUWcWFGY+6RyEZpLlzyQzuzZ2CvDBDNtC9RRvawO5B
+        aWCYDwX7vAX2n5UdEnlHC9/VRlggo/6cCCaDPcYgoimUs1YJ5Z6Xipqiq+nId1DtPg834+qT8RSU
+        eflylnOKazxeUnDE7ah2Mh3DVBJuxXm3aQyfqgS/2y6EvkUF7oqXpeUh3dUoBy/ShHX6xmkkB9q8
+        p0dWn3+2O2G2BQr5D57jz2H46/u2Dlx44K8tesraCflRZY34NdwIw4ujiTcLNxqtN7tRFfPrXWf4
+        fdna4vCzpW2EX05jNI2TpiLQujwFMDKS6bhfI7jIOzbrmKfMYNauCRajjiSVpOPgfvT/PIHFodFD
+        R/RiFD8uCsHgKnsBp76We4dzoC+/hbbupt3xPbizzH+fz38Bkw1v+DIcAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 12:56:02 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=8isggrb1qqgk53hsh6c388d67nqeko2hhmma7etq6l5ctg150tgr4gvrq2h6amhkitldbppnasaq7tpt9m01dg29hglop7gb53vfp7c;
+        expires=Sun, 23-Mar-2025 12:56:02 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '198446'
+    status:
+      code: 200
+      message: OK
 version: 1

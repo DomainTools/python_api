@@ -4,7 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "domaintools_api"
-dependencies = ["httpx", "rich", "typer"]
+dependencies = [
+    "httpx==0.28.1",
+    "rich",
+    "typer"
+]
 requires-python = ">= 3.9"
 authors = [{ name = "DomainTools", email = "integrations@domaintools.com" }]
 description = "DomainTools Official Python API"
