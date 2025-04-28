@@ -197,4 +197,65 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.4.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WYbY+iMBDHvwuv7hKb8LCyul9lczFdGGGypSVt0TPG734D4oVL1FAPH+oroR36
+        m+HPzLT7QIOplTQQfOwDnmWqkbb7W+OqMaAlr2goQGmh0NwiTV1ZMBZlEczIwOKGxq1u4DALaq3y
+        JrMm+PjcB5iTXf9EhnKtdNXZk1kNelUpacuVwAppvSAK218/VKpGn0ZkI0RvgLKx8Ndi3i7/ZZQY
+        3DxObgwvOnesyvmOpiZpO7lbkK7iZRgtA6KF3zUeXVrl3MLR/DDryVGjIexN62vRDl/EdqGOw/HY
+        83BAHUVv6UhokBqz8ixv7MqbOvAu0gFvGibvI3lzsJBZBibjgqawXFUcpTkf8Lkbf+LAPwx36MaO
+        hVQa8lvQSUPBpOhjtd2jV1zSw9iW26wUaOyk4Y9c9P4f8ScztEo/GTp+c6OWsPVRMZ1U/BH7EZNR
+        bVqjuJLGX0bYPbABri+k8RuqZXg/3lJ17QArKXsovfMgwlifMsbjmxF3VA0FRVZzaf2hpnQxTcMU
+        3bdh0lA3dsq29J6y1bABbYBhPRXsI1jZtlTX1PA64UXz7Qkmgw3mIDMfytlJCe1Okoqapit/5Dup
+        du+HW3H9zbgAbV++NNSc4pp7kxQGqvWm+voS247zats4fxRtkiZu0mWiPfg6G+P4RWQw6Bv9SA20
+        HxY7djxTPO0u2Roo5D94jT+n4T/eH+lAnAw7yuUyGuuE+upyRv6CbsRhuBit9X4vqnN+vuecPyyf
+        jAj9CbbXfTuN0TROksrAmPYIwKpMiRd6GaSpeMyXzAWzWJ2+CpajyRSVpN3krri9oCganvm+L5fz
+        CZwxyVN8ue2UZqzY/HDqSgaezoG7819Ivj560J6tTV88nBz45xOPF+4lcOjD89/BlT7v1+HwB7Pt
+        QYIQHQAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 28 Apr 2025 14:41:24 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=gkgbkfnrb4u92n9ooknlbdsk5nhl54ubo207fin1girr0b5s92qa1qv1slk2gqbbcup5d9n1qato8jnm0382kk6qcctdvpq7cnvs8ff;
+        expires=Wed, 28-May-2025 14:41:24 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '214178'
+    status:
+      code: 200
+      message: OK
 version: 1

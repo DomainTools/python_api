@@ -177,4 +177,54 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/199.30.228.112/host-domains?app_name=python_wrapper&app_version=2.4.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA1WLwQqDMBAF/+WdZTHpRfMrIiE1AXPIbnCb9iD599pLweMMMyeOpFVYE9yJXH2I
+        8TKa9M5wMPNMj5GsncgYiwFRSsjsN2n8grN/waH89gVNn/Tmq/zskjXUTJsUrL33LyN+fjd3AAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 28 Apr 2025 14:41:44 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=4ho0i868n9mklnt98aq7jap4b4hbk3vt3nvl0pa7auva2dm2f6ko53ck79421e8jfpqts7e6cpohdf68uaqivd31fd1u9imvk13irus;
+        expires=Wed, 28-May-2025 14:41:44 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '10258'
+    status:
+      code: 200
+      message: OK
 version: 1
