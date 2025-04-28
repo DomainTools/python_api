@@ -400,7 +400,7 @@ def feeds_noh(
     name=c.FEEDS_DOMAINHOTLIST,
     help=get_cli_helptext_by_name(command_name=c.FEEDS_DOMAINHOTLIST),
 )
-def feeds_domain_hotlist(
+def feeds_domainhotlist(
     ctx: typer.Context,
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
