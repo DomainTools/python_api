@@ -673,3 +673,23 @@ def test_feeds_endpoint_should_raise_error_if_asked_csv_format_for_download_api(
         feeds_api.domaindiscovery(after="-60", output_format="csv", endpoint="download")
 
     assert str(excinfo.value) == "csv format is not available in download API."
+
+
+@vcr.use_cassette
+def test_realtime_domain_risk():
+    results = feeds_api.realtime_domain_risk(after="-60", header_authentication=False)
+    for response in results.response():
+        assert results.status == 200
+
+        rows = response.strip().split("\n")
+        assert response is not None
+        assert len(rows) >= 1
+
+        for row in rows:
+            feed_result = json.loads(row)
+            assert "timestamp" in feed_result.keys()
+            assert "domain" in feed_result.keys()
+            assert "phishing_risk" in feed_result.keys()
+            assert "malware_risk" in feed_result.keys()
+            assert "proximity_risk" in feed_result.keys()
+            assert "overall_risk" in feed_result.keys()
