@@ -64,6 +64,7 @@ _command_help_mapper = {
     c.FEEDS_NAD: "Returns back newly active domains feed.",
     c.FEEDS_NOD: "Returns back newly observed domains feed.",
     c.FEEDS_NOH: "Returns back newly observed hosts feed.",
+    c.FEEDS_DOMAINHOTLIST: "Returns domaint hotlist feed.",
     c.FEEDS_DOMAINRDAP: "Returns changes to global domain registration information, populated by the Registration Data Access Protocol (RDAP).",
     c.FEEDS_DOMAINDISCOVERY: "Returns new domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties.",
     c.FEEDS_REALTIME_DOMAIN_RISK: "Returns realtime domain risk information for apex-level domains, regardless of observed traffic.",
