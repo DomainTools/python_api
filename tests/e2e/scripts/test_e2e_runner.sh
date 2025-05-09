@@ -26,10 +26,21 @@ docker run --rm -d -v ~/.test_mitmproxy:/home/mitmproxy/.mitmproxy \
     -p 8090:8090 mitmproxy/mitmproxy mitmdump \
     --set listen_port=8090
 
+# Check until custom cert from mitmproxy container is copied locally
+echo "Checking for valid custom cert..."
+while [ ! -f ~/.test_mitmproxy/mitmproxy-ca.pem ] ;
+do
+    sleep 2
+done
+echo "Valid custom cert found!"
+
+# Copy valid custom cert to target dir
 cp ~/.test_mitmproxy/mitmproxy-ca.pem tests/e2e/mitmproxy-ca.pem
+
+echo "E2E processing..."
 python -m pytest -s --capture=sys -v --cov=domaintools tests/e2e
 
-# Clean up from the run
+# Clean up containers
 echo "Bringing down containers..."
 docker stop ${MITM_BASIC_AUTH_CONTAINER_NAME} || true
 docker stop ${MITM_CUSTOM_CERT_CONTAINER_NAME} || true
