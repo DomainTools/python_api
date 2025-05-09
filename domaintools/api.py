@@ -1,8 +1,10 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256, md5
 from hmac import new as hmac
+from typing import Union
 
 import re
+import ssl
 
 from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
 from domaintools._version import current as version
@@ -76,7 +78,7 @@ class API(object):
         self.username = username
         self.key = key
         self.https = https
-        self.verify_ssl = verify_ssl
+        self.verify_ssl = self._get_ssl_default_context(verify_ssl)
         self.rate_limit = rate_limit
         self.proxy_url = proxy_url
         self.extra_request_params = {}
@@ -91,6 +93,9 @@ class API(object):
             raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
         if proxy_url and not isinstance(proxy_url, str):
             raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
+
+    def _get_ssl_default_context(self, verify_ssl: Union[str, bool]):
+        return ssl.create_default_context(cafile=verify_ssl) if isinstance(verify_ssl, str) else verify_ssl
 
     def _build_api_url(self, api_url=None, api_port=None):
         """Build the API url based on the given url and port. Defaults to `https://api.domaintools.com`"""
