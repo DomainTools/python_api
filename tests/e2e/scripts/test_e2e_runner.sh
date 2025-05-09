@@ -38,4 +38,4 @@ docker network rm ${DOCKER_NETWORK_NAME} || true
 # Clean up custom certs
 echo "Removing custom certs..."
 rm -rf tests/e2e/mitmproxy-ca.pem
-rm -rf ~/.test_mitmproxy:/home/mitmproxy/.mitmproxy
+rm -rf ~/.test_mitmproxy
