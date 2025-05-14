@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta, timezone
-from hashlib import sha1, sha256, md5
+from hashlib import sha1, sha256
 from hmac import new as hmac
 
 import re
@@ -24,7 +24,7 @@ from domaintools.filters import (
 from domaintools.utils import validate_feeds_parameters
 
 
-AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256", "md5"]
+AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256"]
 
 
 def delimited(items, character="|"):
