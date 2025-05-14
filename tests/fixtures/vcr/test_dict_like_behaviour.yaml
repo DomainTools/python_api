@@ -322,4 +322,69 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois?app_name=python_wrapper&app_version=2.4.1
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VWXXPaOBT9K3e8L+0UG9tACX5aBrJZZsB0MOk+1J2MYiugWSx5JRG228l/3yvb
+        BTsY2j40w4Tk3qujo6P7oa+WpCoXXFEr+Ip/b5jSknBtBdadEJsdhfl8YnWOHs0EN5GJpETTFMO8
+        0WhouyPbG2AY/TdnCIhm3/VvCnMfzfs8raJ91xsZszuqgUp0LIj8eyE400LCjCcOupUmeq8M2icr
+        2THK9ZTuqKYfpNiyR2YAO5VjjZzVE5Utrvti74ZDUflMZQtY6WgFK11nYJ9fOhYnGX0o/QXXMPKc
+        u+Xybn7rTJYLXBtG/mtD77WhXzd87liHrWDKKG02LPUc2O7A9nqFcImQRs6pyAjjECKDADbFhTmJ
+        yGK+KqX9AlXEbBqA7/VuBl7/YbpcjGfhA25kf1xF4TGYSPjrz+Usgqg4SwAFByfDm8nKm2lgY/j9
+        ah7AVus8iLtx93A4nAeXiqUwxd9IwfX7touJ4a9dP/CGQa/3zsWfmE9MQmFyVYGnrFq7w8B18VMF
+        nnZf1XISbk3m1RGOCdi7iBBALes6RdrV8WfjcFwKN/Lr9vEjZiVMBNck0XCL+u4CIMaIJ853KLdW
+        v19Rrbn+w1ZwpPvOc3z35j1e0HCAHKtri4oSCKA9leGN0V4dxWcJ4dwRchN3aZ7/1r7o7QXw86z/
+        IfjzZZc2eF1vPwT/etE5eHthfge8fdEl8J+W5tKySxv8pDTti96ecoxrWMoN4ey/oiICOPXyRpBh
+        QeMuYjwznmAWTsYN/0TsOTaRAO6jhr3K+QgZYAav6D97qior/CFkBkTD6QRpceTzRtIt+kvcrfet
+        cZqhOpfJl/5W3qWrQbk0/Tq2a5psr5At3K1cC0+DamH5dUzNhDj2da4854rTv+bsXXP2G85pGEW3
+        kwD2XLENpykOg9UcxBPoLYXZZByG1bzBhk0ABXrc0QxPnQupGd9A9EVpmtUHTJpL5WB7pZKzxOFU
+        o5XHHKWBTEgKjD+hSuUUwE+JXj4jIBEpVR3Id5Rg931miukg5gAXKw3fMWIvE4pK5mRjvrD27BLN
+        LtDM3vV3S1XbC8IxPsPu9Wa9wKrEk2m8T3MkMyAwWagCwlP8j6t9hq8GJA4EUrZhmuzgIOQudQz4
+        R8OyPqSaCdA6cL/NFTwyBuNYuXHdYX8w8v1RzGdYDXspctopnP2+4/puz3ff+76PU8e2Y269fHtf
+        PJTnx2fG6Vatl5f/Aajp5t4zCgAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 14 May 2025 15:50:16 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=398iiv96ot9eor6ou0fg7mvvqt29pa1n4ib96ouea3vu28t79moqgoov24kip7chii61igp2m1ukt46cb4kcimhhp6q5her8vcg1evk;
+        expires=Fri, 13-Jun-2025 15:50:16 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '37013'
+    status:
+      code: 200
+      message: OK
 version: 1

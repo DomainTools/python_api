@@ -1033,4 +1033,148 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.4.1&header_authenticationn=false&top=2
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-05-14T15:55:43Z\",\"domain\":\"ashoreca.com.ua\",\"raw_record\":{\"first_request_timestamp\":\"2025-05-14T15:55:39Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\"],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"ashoreca.com.ua\\\",\\\"ldhName\\\":\\\"ashoreca.com.ua\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns1.promdns.net\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.promdns.net\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns3.promdns.net\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"ua.imena\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[
+        \\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\" ],[\\\"fn\\\",{},\\\"text\\\",\\\"Internet
+        Invest LLC\\\"],[\\\"org\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"Internet
+        Invest LLC\\\"],[\\\"org\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"\u0422\u041E\u0412
+        '\u0406\u043D\u0442\u0435\u0440\u043D\u0435\u0442 \u0406\u043D\u0432\u0435\u0441\u0442'\\\"],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\",\\\"altid\\\":\\\"1\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"50-B
+        Simi Prakhovykh St\\\",\\\"Kyiv\\\",\\\"01033\\\",\\\"\\\",\\\"UA\\\"]],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\",\\\"altid\\\":\\\"1\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\u0432\u0443\u043B.
+        \u0421\u0456\u043C'\u0457 \u041F\u0440\u0430\u0445\u043E\u0432\u0438\u0445,
+        50-\u0411\\\",\\\"\u043C. \u041A\u0438\u0457\u0432\\\",\\\"01033\\\",\\\"\\\",\\\"UA\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+380442010102\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@imena.ua\\\"],[\\\"url\\\",{\\\"type\\\":\\\"home\\\"},\\\"uri\\\",\\\"http://www.imena.ua\\\"]]],\\\"status\\\":[\\\"active\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"self\\\",\\\"value\\\":\\\"https://rdap.hostmaster.ua/entity/ua.imena\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"href\\\":\\\"https://rdap.hostmaster.ua/entity/ua.imena\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"C0000929794-UA\\\",\\\"roles\\\":[\\\"registrant\\\",\\\"administrative\\\",\\\"technical\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[
+        \\\"version\\\", {}, \\\"text\\\", \\\"4.0\\\" ],[\\\"fn\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"Registrant
+        information is not published\\\"],[\\\"fn\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"\u0406\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044F
+        \u043F\u0440\u043E \u0440\u0435\u0454\u0441\u0442\u0440\u0430\u043D\u0442\u0430
+        \u043D\u0435 \u043F\u0443\u0431\u043B\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F\\\"],[\\\"org\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"Whois
+        privacy protection service\\\"],[\\\"org\\\",{\\\"altid\\\":\\\"1\\\"},\\\"text\\\",\\\"\u0417\u0430\u0445\u0438\u0441\u0442
+        \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u0438\u0445 \u0434\u0430\u043D\u0438\u0445\\\"]]],\\\"remarks\\\":[{\\\"title\\\":\\\"Data
+        Policy\\\",\\\"description\\\":[\\\"Some of the data in this object has been
+        removed.\\\"]}],\\\"status\\\":[\\\"active\\\",\\\"associated\\\",\\\"private\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2013-04-08T22:19:45+03:00\\\",\\\"eventActor\\\":\\\"ua.imena\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2015-11-18T10:57:28+02:00\\\",\\\"eventActor\\\":\\\"ua.imena\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"ua.imena\\\",\\\"roles\\\":[\\\"registrar\\\"]}]}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2017-10-31T15:20:04+02:00\\\",\\\"eventActor\\\":\\\"ua.imena\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-10-24T15:18:02+03:00\\\",\\\"eventActor\\\":\\\"ua.imena\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-10-31T15:20:04+02:00\\\"}],\\\"links\\\":[{\\\"rel\\\":\\\"self\\\",\\\"value\\\":\\\"https://rdap.hostmaster.ua/domain/ashoreca.com.ua\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"href\\\":\\\"https://rdap.hostmaster.ua/domain/ashoreca.com.ua\\\"}],\\\"port43\\\":\\\"whois.ua\\\"}\",\"source_type\":\"registry\",\"timestamp\":\"2025-05-14T15:55:39Z\",\"url\":\"https://rdap.hostmaster.ua/domain/ashoreca.com.ua\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\"],\"contacts\":[{\"handle\":\"C0000929794-UA\",\"name\":\"\u0406\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044F
+        \u043F\u0440\u043E \u0440\u0435\u0454\u0441\u0442\u0440\u0430\u043D\u0442\u0430
+        \u043D\u0435 \u043F\u0443\u0431\u043B\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F\",\"org\":\"\u0417\u0430\u0445\u0438\u0441\u0442
+        \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u0438\u0445 \u0434\u0430\u043D\u0438\u0445\",\"roles\":[\"registrant\",\"administrative\",\"technical\"]}],\"creation_date\":\"2017-10-31T15:20:04+02:00\",\"dnssec\":{\"signed\":false},\"domain\":\"ashoreca.com.ua\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"imena.ua\"],\"emails\":[\"abuse@imena.ua\"],\"expiration_date\":\"2025-10-31T15:20:04+02:00\",\"handle\":\"ashoreca.com.ua\",\"last_changed_date\":\"2024-10-24T15:18:02+03:00\",\"links\":[{\"href\":\"https://rdap.hostmaster.ua/domain/ashoreca.com.ua\",\"rel\":\"self\"}],\"nameservers\":[\"ns1.promdns.net\",\"ns2.promdns.net\",\"ns3.promdns.net\"],\"registrar\":{\"name\":\"Internet
+        Invest LLC\"},\"unclassified_emails\":[\"abuse@imena.ua\"]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.hostmaster.ua/domain/ashoreca.com.ua\"}}\n{\"timestamp\":\"2025-05-14T15:55:43Z\",\"domain\":\"ehibar365.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-05-14T15:55:37Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2147267535_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"EHIBAR365.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/EHIBAR365.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/EHIBAR365.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.safenames.legal\\\\/rdap\\\\/domain\\\\/EHIBAR365.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.safenames.legal\\\\/rdap\\\\/domain\\\\/EHIBAR365.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        delete prohibited\\\",\\\"client transfer prohibited\\\",\\\"client update
+        prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"447\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"447\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"SafeNames
+        Ltd.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+44.1908200022\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@safenames.net\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2017-07-26T20:10:18Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-07-26T20:10:18Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-07-26T23:46:45Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-05-14T15:55:34Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS1-08.AZURE-DNS.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2-08.AZURE-DNS.NET\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS3-08.AZURE-DNS.ORG\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS4-08.AZURE-DNS.INFO\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"icann_rdap_response_profile_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-05-14T15:55:37Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/ehibar365.com\"},{\"data\":\"{\\r\\n
+        \ \\\"objectClassName\\\": \\\"domain\\\",\\r\\n  \\\"ldhName\\\": \\\"ehibar365.com\\\",\\r\\n
+        \ \\\"handle\\\": \\\"2147267535_DOMAIN_COM-VRSN\\\",\\r\\n  \\\"status\\\":
+        [\\r\\n    \\\"ok\\\"\\r\\n  ],\\r\\n  \\\"events\\\": [\\r\\n    {\\r\\n
+        \     \\\"eventAction\\\": \\\"registration\\\",\\r\\n      \\\"eventDate\\\":
+        \\\"2017-07-26T20:10:18Z\\\"\\r\\n    },\\r\\n    {\\r\\n      \\\"eventAction\\\":
+        \\\"last changed\\\",\\r\\n      \\\"eventDate\\\": \\\"2024-07-27T00:46:46Z\\\"\\r\\n
+        \   },\\r\\n    {\\r\\n      \\\"eventAction\\\": \\\"expires\\\",\\r\\n      \\\"eventDate\\\":
+        \\\"2025-07-26T20:10:18Z\\\"\\r\\n    },\\r\\n    {\\r\\n      \\\"eventAction\\\":
+        \\\"last update of RDAP database\\\",\\r\\n      \\\"eventDate\\\": \\\"2025-05-14T16:55:42Z\\\"\\r\\n
+        \   }\\r\\n  ],\\r\\n  \\\"entities\\\": [\\r\\n    {\\r\\n      \\\"objectClassName\\\":
+        \\\"entity\\\",\\r\\n      \\\"handle\\\": \\\"447\\\",\\r\\n      \\\"vcardArray\\\":
+        [\\r\\n        \\\"vcard\\\",\\r\\n        [\\r\\n          \\\"version\\\",\\r\\n
+        \         {},\\r\\n          \\\"text\\\",\\r\\n          \\\"4.0\\\"\\r\\n
+        \       ],\\r\\n        [\\r\\n          \\\"fn\\\",\\r\\n          {},\\r\\n
+        \         \\\"text\\\",\\r\\n          \\\"Safenames Ltd.\\\"\\r\\n        ]\\r\\n
+        \     ],\\r\\n      \\\"roles\\\": [\\r\\n        \\\"registrar\\\"\\r\\n
+        \     ],\\r\\n      \\\"publicIDs\\\": [\\r\\n        {\\r\\n          \\\"type\\\":
+        \\\"IANA RegistrarID\\\",\\r\\n          \\\"identifier\\\": \\\"447\\\"\\r\\n
+        \       }\\r\\n      ],\\r\\n      \\\"entites\\\": [\\r\\n        {\\r\\n
+        \         \\\"objectClassName\\\": \\\"entity\\\",\\r\\n          \\\"vcardArray\\\":
+        [\\r\\n            \\\"vcard\\\",\\r\\n            [\\r\\n              \\\"version\\\",\\r\\n
+        \             {},\\r\\n              \\\"text\\\",\\r\\n              \\\"4.0\\\"\\r\\n
+        \           ],\\r\\n            [\\r\\n              \\\"tel\\\",\\r\\n              {\\r\\n
+        \               \\\"type\\\": \\\"voice\\\"\\r\\n              },\\r\\n              \\\"uri\\\",\\r\\n
+        \             \\\"tel:+441908200022\\\"\\r\\n            ],\\r\\n            [\\r\\n
+        \             \\\"email\\\",\\r\\n              {},\\r\\n              \\\"text\\\",\\r\\n
+        \             \\\"abuse@safenames.net\\\"\\r\\n            ]\\r\\n          ],\\r\\n
+        \         \\\"roles\\\": [\\r\\n            \\\"abuse\\\"\\r\\n          ]\\r\\n
+        \       }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n      \\\"objectClassName\\\":
+        \\\"entity\\\",\\r\\n      \\\"roles\\\": [\\r\\n        \\\"registrant\\\"\\r\\n
+        \     ],\\r\\n      \\\"remarks\\\": [\\r\\n        {\\r\\n          \\\"title\\\":
+        \\\"Data Policy\\\",\\r\\n          \\\"type\\\": \\\"Response truncated due
+        to authorization\\\",\\r\\n          \\\"description\\\": [\\r\\n            \\\"Some
+        of the data in this object has been removed\\\"\\r\\n          ]\\r\\n        }\\r\\n
+        \     ],\\r\\n      \\\"status\\\": [\\r\\n        \\\"removed\\\"\\r\\n      ]\\r\\n
+        \   }\\r\\n  ],\\r\\n  \\\"nameservers\\\": [\\r\\n    {\\r\\n      \\\"objectClassName\\\":
+        \\\"nameserver\\\",\\r\\n      \\\"ldhName\\\": \\\"ns1-08.azure-dns.com\\\",\\r\\n
+        \     \\\"ipV4Addresses\\\": [\\r\\n        \\\"40.90.4.8\\\"\\r\\n      ]\\r\\n
+        \   },\\r\\n    {\\r\\n      \\\"objectClassName\\\": \\\"nameserver\\\",\\r\\n
+        \     \\\"ldhName\\\": \\\"ns2-08.azure-dns.net\\\",\\r\\n      \\\"ipV4Addresses\\\":
+        [\\r\\n        \\\"64.4.48.8\\\"\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n
+        \     \\\"objectClassName\\\": \\\"nameserver\\\",\\r\\n      \\\"ldhName\\\":
+        \\\"ns3-08.azure-dns.org\\\",\\r\\n      \\\"ipV4Addresses\\\": [\\r\\n        \\\"13.107.24.8\\\"\\r\\n
+        \     ]\\r\\n    },\\r\\n    {\\r\\n      \\\"objectClassName\\\": \\\"nameserver\\\",\\r\\n
+        \     \\\"ldhName\\\": \\\"ns4-08.azure-dns.info\\\",\\r\\n      \\\"ipV4Addresses\\\":
+        [\\r\\n        \\\"13.107.160.8\\\"\\r\\n      ]\\r\\n    }\\r\\n  ],\\r\\n
+        \ \\\"notices\\\": [\\r\\n    {\\r\\n      \\\"title\\\": \\\"Terms of Use\\\",\\r\\n
+        \     \\\"description\\\": [\\r\\n        \\\"Service subject to Terms of
+        Use.\\\"\\r\\n      ],\\r\\n      \\\"links\\\": [\\r\\n        {\\r\\n          \\\"href\\\":
+        \\\"https://www.verisign.com/domain-names/registration-data-access-protocol/terms-service/index.xhtml\\\",\\r\\n
+        \         \\\"type\\\": \\\"text/html\\\"\\r\\n        }\\r\\n      ]\\r\\n
+        \   },\\r\\n    {\\r\\n      \\\"title\\\": \\\"Status Codes\\\",\\r\\n      \\\"description\\\":
+        [\\r\\n        \\\"For more information on status codes, please visit https://icann.org/epp\\\"\\r\\n
+        \     ],\\r\\n      \\\"links\\\": [\\r\\n        {\\r\\n          \\\"href\\\":
+        \\\"https://icann.org/epp\\\",\\r\\n          \\\"type\\\": \\\"text/html\\\"\\r\\n
+        \       }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n      \\\"title\\\": \\\"RDDS
+        Inaccuracy Complaint Form\\\",\\r\\n      \\\"description\\\": [\\r\\n        \\\"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\\\"\\r\\n
+        \     ],\\r\\n      \\\"links\\\": [\\r\\n        {\\r\\n          \\\"href\\\":
+        \\\"https://icann.org/wicf\\\",\\r\\n          \\\"type\\\": \\\"text/html\\\"\\r\\n
+        \       }\\r\\n      ]\\r\\n    }\\r\\n  ],\\r\\n  \\\"rdapConformance\\\":
+        [\\r\\n    \\\"rdap_level_0\\\",\\r\\n    \\\"icann_rdap_technical_implementation_guide_0\\\",\\r\\n
+        \   \\\"icann_rdap_response_profile_0\\\"\\r\\n  ]\\r\\n}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-05-14T15:55:39Z\",\"url\":\"https://rdap.safenames.legal/rdap/domain/EHIBAR365.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"contacts\":[{\"roles\":[\"registrant\"]}],\"creation_date\":\"2017-07-26T20:10:18+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"ehibar365.com\",\"domain_statuses\":[\"ok\"],\"email_domains\":[\"safenames.net\"],\"emails\":[\"abuse@safenames.net\"],\"expiration_date\":\"2025-07-26T20:10:18+00:00\",\"handle\":\"2147267535_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-07-27T00:46:46+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/EHIBAR365.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.safenames.legal/rdap/domain/EHIBAR365.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns1-08.azure-dns.com\",\"ns2-08.azure-dns.net\",\"ns3-08.azure-dns.org\",\"ns4-08.azure-dns.info\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@safenames.net\",\"name\":\"\",\"phone\":\"tel:+44.1908200022\",\"roles\":[\"abuse\"]}],\"iana_id\":\"447\",\"name\":\"SafeNames
+        Ltd.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.safenames.legal/rdap/domain/EHIBAR365.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/ehibar365.com\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 14 May 2025 15:55:43 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=n9scr9893srq3ldvugh3mtb1jg5qh1p4pnuaccqcr2f8jp2vt0l6gblf3mqhb5gkoesn0bho1jtkqfk5s6o4epsk2g7tomenhtpcdaf;
+        expires=Fri, 13-Jun-2025 15:55:43 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '12'
+    status:
+      code: 200
+      message: OK
 version: 1

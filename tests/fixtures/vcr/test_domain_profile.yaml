@@ -253,4 +253,62 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=2.4.1
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WVTY/aMBCG/8rKh14aguMAS5BWPWwrVAlKpbYnQJE3mRKrwU5t03aF+O8dxywf
+        JbArlb05M/H7PvGMJ2uiwVRKGiCDNa4XwljNpXVPki8xSoZKLUq4GY3uSUByteRCGjJgPRrTgFRa
+        5avMpitd4quFtZUZzNqztoZfoA38LpQwod9klSpNmKnlrP2Ol+V0fueV36LyG6kkYIRsAmJA414H
+        IKqU5zkCoh+JOixk3SiM47DXRxJlC9Dpjid6AY2oTlEMcJ0ViPTzblHjuLDDeDoLK5R0MJkGbiF3
+        JEly26JJK+oiBvypBBJimFHWr8MdDK+qfPs2o1HiwjQhe1H8PDLm+sdYSWGVvvkosxDTxnK7Mk5t
+        SrJSgLTvoQQLn7UqxINwgsE28RWrZL6Dbkh9q72PEv5MG8R8olHMp07E5ng2rjNSn3es613NyKcv
+        UTicTIajD+H9ZEyeLYls6I6DkvwjtwmOrNh1rdgFq/i6VvEFq851rY7kNvOAFNiBSj8e3vf6tuEm
+        bB9jUxR2A4C47nZLLPHFu+XtTjGeMrN2oYwVctHaWjfctoOOqln2vlYscUJxmQqZPqKe8WSvi3M4
+        efY0Ee01AzH22kD1IPUly5TOcdmPbpPgtGiM0qhFuy0a/+ch1Y57ojNzsp7XyoEZ5IKm2tT48GBw
+        eqQ4S7j/Cv/TSTOVbzdZYcvtcncZcL0Et2M6P/8xZ/4xR5SbvzEMOK3oBgAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 14 May 2025 15:49:49 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=46u2oplh0ugqn4mibk1j1skmsnk045efjetdkk9qm973nh0bii547p4ch20nmjc5hk0tocne0qfeffo5117kqhdnjrm7ehopv00ukf9;
+        expires=Fri, 13-Jun-2025 15:49:49 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '71181'
+    status:
+      code: 200
+      message: OK
 version: 1
