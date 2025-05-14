@@ -27,7 +27,7 @@ def test_valid_command():
 
 def test_invalid_command():
     result = runner.invoke(dt_cli, ["test_invalid_command"])
-    assert "No such command 'test_invalid_command'." in result.stderr
+    assert "No such command 'test_invalid_command'." in result.stdout
 
 
 def test_no_creds_file_not_found():
