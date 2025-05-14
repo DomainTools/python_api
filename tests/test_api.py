@@ -342,9 +342,18 @@ def test_exception_handling():
         API("notauser", "notakey").domain_search("amazon").data()
     with pytest.raises(
         ValueError,
-        match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256,md5",
+        match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256",
     ):
         API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash").domain_search("amazon")
+
+
+@vcr.use_cassette
+def test_md5_is_not_supported():
+    with pytest.raises(
+        ValueError,
+        match=r"Invalid value 'md5' for 'key_sign_hash'. Values available are sha1,sha256",
+    ):
+        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="md5").domain_search("amazon")
 
 
 @vcr.use_cassette
