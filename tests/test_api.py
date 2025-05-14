@@ -386,6 +386,7 @@ def test_formats():
 
 
 @vcr.use_cassette
+@pytest.mark.skip(reason="Iris endpoint is already deprecated in light of enrich and investigate")
 def test_iris():
     with pytest.raises(ValueError):
         api.iris()
