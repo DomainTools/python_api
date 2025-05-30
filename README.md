@@ -271,3 +271,43 @@ results = api.nod(sessionID="my-session-id", after=-7200)
 for partial_result in results.response() # generator that holds NOD feeds data for the past 2 hours and is expected to request multiple times
     # do things to partial_result
 ```
+
+
+Running E2E Tests Locally
+===================
+For now, e2e tests only covers proxy and ssl testing. We are expected to broaden our e2e tests to other scenarios moving forward.
+To add more e2e tests, put these in the `../tests/e2e` folder.
+
+## Preparation
+- Create virtual environment.
+    ```bash
+        python3 -m venv venv
+    ```
+
+- Activate virtual environment
+    ```bash
+        source venv/bin/activate
+    ```
+
+- Install dependencies.
+    ```bash
+        pip install -r requirements/development.txt
+    ```
+
+- From the python_api project root directory, install the package.
+    ```bash
+        pip install -e .
+    ```
+
+- Export api credentials to use.
+    ```bash
+        export TEST_USER=<user-key>
+        export TEST_KEY=<api-key>
+    ```
+
+## Run the end-to-end test script
+- Before running the test, be sure that docker is running.
+- Execute the e2e test script .
+    ```bash
+        sh tests/e2e/scripts/test_e2e_runner.sh
+    ```
