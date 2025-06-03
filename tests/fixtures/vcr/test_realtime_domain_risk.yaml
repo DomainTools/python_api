@@ -41,7 +41,7 @@ interactions:
       - no-cache
       Set-Cookie:
       - dtsession=l8b3873m6pauhsfv4ufj6l3qcd; expires=Thu, 29-May-2025 16:33:05 GMT;
-        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+        Max-Age=2592000; path=/; domain=.domaintools.com; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -22780,7 +22780,7 @@ interactions:
       - no-cache
       Set-Cookie:
       - dtsession=qa2vgub1nrvseip05cj2td47h6; expires=Thu, 29-May-2025 16:33:06 GMT;
-        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+        Max-Age=2592000; path=/; domain=.domaintools.com; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -22838,7 +22838,7 @@ interactions:
       - no-cache
       Set-Cookie:
       - dtsession=l8b3873m6pauhsfv4ufj6l3qcd; expires=Thu, 29-May-2025 16:33:05 GMT;
-        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+        Max-Age=2592000; path=/; domain=.domaintools.com; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -24729,7 +24729,102 @@ interactions:
       - no-cache
       Set-Cookie:
       - dtsession=qa2vgub1nrvseip05cj2td47h6; expires=Thu, 29-May-2025 16:33:06 GMT;
-        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+        Max-Age=2592000; path=/; domain=.domaintools.com; secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-API-USERNAME:
+      - jbabac
+      X-Envoy-Upstream-Service-Time:
+      - '25'
+      X-GROUP-ID:
+      - '1117'
+      X-Powered-By:
+      - PHP/7.1.33
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: '{"timestamp":"2025-04-29T16:32:06Z","domain":"forex-indusind.in.net","phishing_risk":75,"malware_risk":45,"spam_risk":3,"proximity_risk":37,"overall_risk":75}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"interpharminc.com","phishing_risk":85,"malware_risk":89,"spam_risk":70,"proximity_risk":86,"overall_risk":89}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"intimacyflirts.com","phishing_risk":35,"malware_risk":8,"spam_risk":1,"proximity_risk":71,"overall_risk":71}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"invernessward.com","phishing_risk":47,"malware_risk":87,"spam_risk":5,"proximity_risk":51,"overall_risk":87}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"invest-budget.site","phishing_risk":61,"malware_risk":28,"spam_risk":1,"proximity_risk":86,"overall_risk":86}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"invoicefr.top","phishing_risk":81,"malware_risk":47,"spam_risk":57,"proximity_risk":84,"overall_risk":84}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"ioqbt.cn","phishing_risk":81,"malware_risk":20,"spam_risk":48,"proximity_risk":28,"overall_risk":81}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"iosushop.com","phishing_risk":13,"malware_risk":87,"spam_risk":1,"proximity_risk":45,"overall_risk":87}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"iotex.space","phishing_risk":7,"malware_risk":83,"spam_risk":1,"proximity_risk":70,"overall_risk":83}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"iosmain0220pm.top","phishing_risk":70,"malware_risk":14,"spam_risk":37,"proximity_risk":55,"overall_risk":70}
+
+        {"timestamp":"2025-04-29T16:32:22Z","domain":"iqtndefi.top","phishing_risk":96,"malware_risk":91,"spam_risk":86,"proximity_risk":88,"overall_risk":96}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"is1wba.cn","phishing_risk":93,"malware_risk":63,"spam_risk":68,"proximity_risk":26,"overall_risk":93}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isabael6-customerzonebe.xyz","phishing_risk":69,"malware_risk":9,"spam_risk":7,"proximity_risk":95,"overall_risk":95}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isabeladepaula.com.br","phishing_risk":29,"malware_risk":70,"spam_risk":2,"proximity_risk":25,"overall_risk":70}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isabelneeauthor.com","phishing_risk":92,"malware_risk":78,"spam_risk":94,"proximity_risk":80,"overall_risk":94}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isbpl.cn","phishing_risk":71,"malware_risk":45,"spam_risk":45,"proximity_risk":45,"overall_risk":71}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isupport-lphone.com.tr","phishing_risk":74,"malware_risk":22,"spam_risk":4,"proximity_risk":15,"overall_risk":74}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isuwadp.cn","phishing_risk":74,"malware_risk":42,"spam_risk":50,"proximity_risk":26,"overall_risk":74}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"isvillrp.cloud","phishing_risk":47,"malware_risk":47,"spam_risk":6,"proximity_risk":79,"overall_risk":79}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"itube.io.vn","phishing_risk":32,"malware_risk":74,"spam_risk":1,"proximity_risk":10,"overall_risk":74}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"ivzik.cn","phishing_risk":66,"malware_risk":7,"spam_risk":74,"proximity_risk":25,"overall_risk":74}
+
+        {"timestamp":"2025-04-29T16:32:23Z","domain":"ivhrsf.info","phishing_risk":70,"malware_risk":20,"spam_risk":92,"proximity_risk":48,"overall_risk":92}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Tue, 29 Apr 2025 16:32:50 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=qa2vgub1nrvseip05cj2td47h6; expires=Thu, 2-Jun-2025 16:33:06 GMT;
+        Max-Age=2592000; path=/; domain=.domaintools.com; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:

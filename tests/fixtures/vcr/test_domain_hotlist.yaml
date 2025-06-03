@@ -2506,6 +2506,149 @@ interactions:
       Pragma:
       - no-cache
       Set-Cookie:
+      - dtsession=o8sahnpg3k3d5n7qi2lpk4sugb; expires=Wed, 2-Jun-2025 18:00:47 GMT;
+        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-API-USERNAME:
+      - jbabac
+      X-Envoy-Upstream-Service-Time:
+      - '20'
+      X-GROUP-ID:
+      - '1117'
+      X-Powered-By:
+      - PHP/7.1.33
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4a20e-20217-ccc59-e31b0-a3038
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: '{"timestamp":"2025-04-28T17:59:32Z","domain":"noshbox.de","phishing_risk":32,"malware_risk":8,"spam_risk":95,"proximity_risk":32,"overall_risk":95}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"xzj20.icu","phishing_risk":5,"malware_risk":1,"spam_risk":4,"proximity_risk":70,"overall_risk":70}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"xzwns.lol","phishing_risk":32,"malware_risk":12,"spam_risk":20,"proximity_risk":88,"overall_risk":88}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"y0h000.sbs","phishing_risk":46,"malware_risk":97,"spam_risk":32,"proximity_risk":52,"overall_risk":97}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"yasfmo.cn","phishing_risk":92,"malware_risk":45,"spam_risk":76,"proximity_risk":76,"overall_risk":92}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"basdjitla.top","phishing_risk":84,"malware_risk":76,"spam_risk":29,"proximity_risk":87,"overall_risk":87}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"yayaespana.com","phishing_risk":98,"malware_risk":97,"spam_risk":1,"proximity_risk":66,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"ychzdh.com","phishing_risk":94,"malware_risk":79,"spam_risk":98,"proximity_risk":80,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:29Z","domain":"ycjszy.cn","phishing_risk":98,"malware_risk":92,"spam_risk":93,"proximity_risk":86,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"ydverjm.cn","phishing_risk":91,"malware_risk":73,"spam_risk":99,"proximity_risk":45,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"ycbee.plus","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":97,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yihuizhong.cn","phishing_risk":70,"malware_risk":32,"spam_risk":99,"proximity_risk":67,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yhgtfvgh56283juy.club","phishing_risk":95,"malware_risk":4,"spam_risk":95,"proximity_risk":74,"overall_risk":95}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yequzhibo.com","phishing_risk":91,"malware_risk":98,"spam_risk":98,"proximity_risk":84,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yenbai66.vip","phishing_risk":59,"malware_risk":35,"spam_risk":14,"proximity_risk":74,"overall_risk":74}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"sushipertodemim.store","phishing_risk":64,"malware_risk":39,"spam_risk":45,"proximity_risk":75,"overall_risk":75}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yesm.space","phishing_risk":38,"malware_risk":92,"spam_risk":2,"proximity_risk":69,"overall_risk":92}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yiduoyiduo.com","phishing_risk":89,"malware_risk":86,"spam_risk":88,"proximity_risk":84,"overall_risk":89}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yingba1303.top","phishing_risk":97,"malware_risk":38,"spam_risk":54,"proximity_risk":55,"overall_risk":97}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"981323.cc","phishing_risk":60,"malware_risk":20,"spam_risk":91,"proximity_risk":12,"overall_risk":91}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ykpin.cn","phishing_risk":3,"malware_risk":2,"spam_risk":2,"proximity_risk":70,"overall_risk":70}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"spaceball.com.br","phishing_risk":94,"malware_risk":51,"spam_risk":21,"proximity_risk":46,"overall_risk":94}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ymkbs378.com","phishing_risk":99,"malware_risk":96,"spam_risk":98,"proximity_risk":86,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ylbj88.com","phishing_risk":27,"malware_risk":20,"spam_risk":2,"proximity_risk":85,"overall_risk":85}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yndpctb.cn","phishing_risk":71,"malware_risk":43,"spam_risk":91,"proximity_risk":26,"overall_risk":91}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ynpiaez58gqodcr.buzz","phishing_risk":96,"malware_risk":98,"spam_risk":98,"proximity_risk":80,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yirwrf.top","phishing_risk":84,"malware_risk":45,"spam_risk":55,"proximity_risk":76,"overall_risk":84}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yhlaimao.com","phishing_risk":98,"malware_risk":98,"spam_risk":99,"proximity_risk":84,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yingba1246.top","phishing_risk":93,"malware_risk":29,"spam_risk":46,"proximity_risk":55,"overall_risk":93}
+
+        {"timestamp":"2025-04-28T18:00:30Z","domain":"yj-sy.net","phishing_risk":92,"malware_risk":89,"spam_risk":99,"proximity_risk":84,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ylcy99.net","phishing_risk":98,"malware_risk":7,"spam_risk":25,"proximity_risk":27,"overall_risk":98}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ykbdl73.sbs","phishing_risk":45,"malware_risk":97,"spam_risk":15,"proximity_risk":52,"overall_risk":97}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yjkjgnev.cn","phishing_risk":27,"malware_risk":2,"spam_risk":96,"proximity_risk":58,"overall_risk":96}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yneterm.cn","phishing_risk":94,"malware_risk":41,"spam_risk":79,"proximity_risk":45,"overall_risk":94}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ynbaizu.top","phishing_risk":99,"malware_risk":99,"spam_risk":98,"proximity_risk":86,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yo-nc.com","phishing_risk":99,"malware_risk":99,"spam_risk":98,"proximity_risk":84,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ynyxtmj.cn","phishing_risk":66,"malware_risk":21,"spam_risk":94,"proximity_risk":50,"overall_risk":94}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"2025627.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":95,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"you-are-my-evermore.com","phishing_risk":47,"malware_risk":4,"spam_risk":72,"proximity_risk":95,"overall_risk":95}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yonghengguojitupian.com","phishing_risk":33,"malware_risk":11,"spam_risk":77,"proximity_risk":80,"overall_risk":80}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"yoga-classes-12075.bond","phishing_risk":98,"malware_risk":99,"spam_risk":97,"proximity_risk":49,"overall_risk":99}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ynuqpgi.cn","phishing_risk":74,"malware_risk":73,"spam_risk":90,"proximity_risk":26,"overall_risk":90}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"hgpsem.top","phishing_risk":86,"malware_risk":72,"spam_risk":35,"proximity_risk":72,"overall_risk":86}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"ypwgcq.gdn","phishing_risk":96,"malware_risk":80,"spam_risk":91,"proximity_risk":78,"overall_risk":96}
+
+        {"timestamp":"2025-04-28T18:00:31Z","domain":"26dj.top","phishing_risk":63,"malware_risk":51,"spam_risk":70,"proximity_risk":84,"overall_risk":84}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 28 Apr 2025 18:00:31 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
       - dtsession=o8sahnpg3k3d5n7qi2lpk4sugb; expires=Wed, 28-May-2025 18:00:47 GMT;
         Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
       Strict-Transport-Security:

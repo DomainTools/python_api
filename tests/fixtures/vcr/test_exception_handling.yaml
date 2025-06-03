@@ -1107,4 +1107,202 @@ interactions:
     status:
       code: 400
       message: Bad Request
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 02 Jun 2025 18:28:57 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=949hc1bfpe0eb2pcbebb1hfdipur1uqchqt09gdo10u940sc9a9pvivbcen4v5pk217mnq39hm7g1g1acng0khdvmqfgbsh03osclf8;
+        expires=Wed, 02-Jul-2025 18:28:57 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '391'
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/steianrstierstnrsiatiarstnsto.com/whois?app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NsQ7CMAxEf8XyjBqGTt3Y6AQSQ5csITE0UhNXdtoOVf+dINjuTnf3diQRFux2
+        9BwIu/bcnjCRqntXhwPB6FaCzCDkKRcYrrf+ATG/WJIrkTO41cXJPSeCmkEZo0Lg5GK2pr/DJQSp
+        dw0eJ6yCF/GkX54u88xSKmQsZdbOGmu2bWt+28I8aeM5WfMvWoPH8QH0Zgu0sAAAAA==
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 02 Jun 2025 18:29:03 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=4a21k6ct8dr284ch8r6c5pk6lem6bkaq9rbma7ic6bdp079cg8vm1opmh4lovpr6hm5125k298h5gohbhub4hm6nas9kc697u8qlqrj;
+        expires=Wed, 02-Jul-2025 18:29:03 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '32899'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v2/domain-search?active_only=false&anchor_left=false&anchor_right=false&app_name=python_wrapper&app_version=2.5.0&deleted_only=false&has_hyphen=true&has_number=true&max_length=25&min_length=2&page=1&query=amazon
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2NwQrDMAxDf8X4XJrBdsp37JhLcMxaaOJiOyuj9N+XwU6SHkI6kVVFMZ5IUhjj
+        43afsLJZfo2Ez4WBlAs3X/Nm8JEOw/NAUASaONTstEBukMnXNw8h6c1nvCZUNulKbL8D6/su6mN1
+        cd8tppDCcRxzkZrX5iKbzSQ1hX8xBbyuL4tX9jGhAAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 02 Jun 2025 18:29:04 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=j8cr75c7url7oammga0e0d4s0u2jnb6ppdolgoa9pdtmknh4gnurc696itf0j19qgdg0sucvvsjvd2m62n3skocjqr1mabgm90nvir5;
+        expires=Wed, 02-Jul-2025 18:29:04 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '5851'
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/ss/reverse-ip?app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy2OsW7DMAwFf+VBc2Bn6OSt6JStWxcvqsQmAkTRJSkYRuB/rwJ0JHiHd89AqqJh
+        eYYkmcLydr1eApNZvI8rfBGS9JrRxNFbJjWPLeOQrlD67WQ+4ebgeOCbwMWstDsKb6KDdGxRI5MP
+        EaIoBhu/egyh/ogy5Qkf0qxXhz8I7583ZEmdqXn0Ig2DAosSMnks1aZwXoKSjYJE9iq3vr3WRu7D
+        fbNlndd53/cpC8fSXGRISXid/8F1Duf5B4T2Zqr6AAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 02 Jun 2025 18:41:43 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=0na1grvrcel29vgtis8n6ubhed4dkuv9f962voa08lq2pk9509uunn82ihk81ggp2s54ovvko9prio6rq3po44i8r505iks7jqr2plj;
+        expires=Wed, 02-Jul-2025 18:41:43 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '374'
+    status:
+      code: 400
+      message: Bad Request
 version: 1

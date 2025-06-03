@@ -567,4 +567,105 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.5.0&offset=0&order=desc
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7VQwUoDMRT8l1zdLkm227g5KXiqBxGKoKUs6e7rGtkkNXlbq6X/7tOKCMLeegnD
+        zOTNe3NgGND0dRMGj0zLjIXNJgFBnrHeOkuo5IRd8BZDTEwvDwwhOqaZceYjeEaiwea5TsM6YbS+
+        q3cmWoM2eLJvTJ8gY944SBB3EGvYN/2QTupyldG0Pf4jbUsBN7d36/384eVxTiFNBIPQ1i29pEku
+        5YSXE1EthKIdtZT5jHNRFk9kHrbtiFnoqcyV4qrgX+aEJ5dp0O7ghxhoEdYEt+2BBv3JX7+TYD1C
+        F083XiAkFFdtcIboEPqU0z92zH6L6kLoejhjUf76zd13cvvajRSlFpJrIbSc5rNZVSk1VtTlt7nS
+        vMh5KWRRnLGo1fETUsippYcCAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Jun 2025 18:29:39 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=ilcbe2ohioop0921m5qftgtgn27b24cdk92r23cka7fpn40502epqqqr75dbeiimkijmn1ftnbt5a8ovne1dsakv54pkghh91cvmvev;
+        expires=Wed, 02-Jul-2025 18:29:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.5.0&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WSXUvDMBiF/0tu7UqSrs2aKwWv5oUIQ9AxSpZmXSQfs0m36dh/960VP1B2M7wp
+        p+85vCd5yAFFH4WppO9cRJwmyK9WQYHECTLaalA5Bm2909G3AfH5AUXVWsRR431jFAJTRLmuQrcM
+        sdWuqbai1SJq7yC+EiaoBDlhVVDtVrWV2kvThcGdLxLYto+/hrqGAne1s3cN3Tw3UCJbJaKqqxq+
+        4FFM6QjnI8JmFHNCOB2nRVGWjD1CuNvUf4Yn7+GS4yzFOaFZ1odDHFJCRr1VH4MODoKktxujYBEM
+        a2+FdgMp8A7IqR0QKycFUNv1BCDWE1RBCtO3v//JtXBNr/Hx6w7LF1iuXVRNO3C6iCpEcjl0RO9N
+        SKEbHZNP2MKKV+/+Efb1ze1yP71/epiegF3OCIMHwSlNC4xJnp2CPYQJH9OUMcwyfC7sLCNj9g02
+        /gEbnwt7cXwD/HDVDw8DAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Jun 2025 18:29:43 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=6rlupgp413n01m0m27v7c8j79loood3irdov5ogb7nsopiqech4dnkdpridroc2h9cd5htsqjsrbs010g9h3ihu9f3g6dhh0d40ff0m;
+        expires=Wed, 02-Jul-2025 18:29:40 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
 version: 1
