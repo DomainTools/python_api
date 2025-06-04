@@ -214,7 +214,7 @@ class DTCLICommand:
                     verify_ssl=verify_ssl,
                     rate_limit=rate_limit,
                     always_sign_api_key=always_sign_api_key,
-                    api_url="https://api.domaintools.test",
+                    api_url="https://api.domaintools.com",
                 )
                 dt_api_func = getattr(dt_api, name)
 
