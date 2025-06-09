@@ -1933,4 +1933,491 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.5.0&header_authenticationn=false&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-06-02T18:36:32Z\",\"domain\":\"webarts.bc.ca\",\"raw_record\":{\"first_request_timestamp\":\"2025-06-02T18:36:30Z\",\"requests\":[{\"data\":\"{\\n
+        \ \\\"rdapConformance\\\" : [ \\\"icann_rdap_response_profile_1\\\", \\\"icann_rdap_technical_implementation_guide_1\\\",
+        \\\"rdap_level_0\\\", \\\"redacted\\\" ],\\n  \\\"handle\\\" : \\\"D6304-CIRA\\\",\\n
+        \ \\\"ldhName\\\" : \\\"webarts.bc.ca\\\",\\n  \\\"unicodeName\\\" : \\\"webarts.bc.ca\\\",\\n
+        \ \\\"status\\\" : [ \\\"active\\\" ],\\n  \\\"port43\\\" : \\\"whois.ca.fury.ca\\\",\\n
+        \ \\\"links\\\" : [ {\\n    \\\"href\\\" : \\\"https://rdap.ca.fury.ca/rdap/domain/webarts.bc.ca\\\",\\n
+        \   \\\"rel\\\" : \\\"self\\\",\\n    \\\"title\\\" : \\\"Authoritative URL
+        for this resource\\\",\\n    \\\"type\\\" : \\\"application/rdap+json\\\"\\n
+        \ } ],\\n  \\\"notices\\\" : [ {\\n    \\\"description\\\" : [ \\\"For more
+        information on domain status codes, please visit https://icann.org/epp\\\"
+        ],\\n    \\\"title\\\" : \\\"Status Codes\\\",\\n    \\\"links\\\" : [ {\\n
+        \     \\\"href\\\" : \\\"https://icann.org/epp\\\",\\n      \\\"rel\\\" :
+        \\\"related\\\",\\n      \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  },
+        {\\n    \\\"description\\\" : [ \\\"Service subject to Terms of Use.\\\" ],\\n
+        \   \\\"title\\\" : \\\"Terms of Service\\\",\\n    \\\"links\\\" : [ {\\n
+        \     \\\"href\\\" : \\\"https://cira.ca/legal-policy-compliance/website-terms-use\\\",\\n
+        \     \\\"rel\\\" : \\\"related\\\",\\n      \\\"type\\\" : \\\"text/html\\\"\\n
+        \   } ]\\n  }, {\\n    \\\"description\\\" : [ \\\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\\\" ],\\n    \\\"title\\\" : \\\"RDDS
+        Inaccuracy Complaint Form\\\",\\n    \\\"links\\\" : [ {\\n      \\\"href\\\"
+        : \\\"https://icann.org/wicf\\\",\\n      \\\"rel\\\" : \\\"related\\\",\\n
+        \     \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  }, {\\n    \\\"description\\\"
+        : [ \\\"\\\\nUse of CIRA's WHOIS service is governed by the Terms of Use in
+        its Legal\\\\nNotice, available at http://www.cira.ca/legal-notice/?lang=en\\\\n\\\\n(c)
+        2025 Canadian Internet Registration Authority, (http://www.cira.ca/)\\\" ],\\n
+        \   \\\"title\\\" : \\\"Legal Notice\\\",\\n    \\\"links\\\" : [ {\\n      \\\"href\\\"
+        : \\\"http://www.cira.ca/legal-notice\\\",\\n      \\\"rel\\\" : \\\"related\\\",\\n
+        \     \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  } ],\\n  \\\"events\\\"
+        : [ {\\n    \\\"eventAction\\\" : \\\"registration\\\",\\n    \\\"eventDate\\\"
+        : \\\"2000-10-13T04:29:58Z\\\"\\n  }, {\\n    \\\"eventAction\\\" : \\\"expiration\\\",\\n
+        \   \\\"eventDate\\\" : \\\"2026-05-25T04:00:00Z\\\"\\n  }, {\\n    \\\"eventAction\\\"
+        : \\\"last changed\\\",\\n    \\\"eventDate\\\" : \\\"2022-09-26T17:01:45Z\\\"\\n
+        \ }, {\\n    \\\"eventAction\\\" : \\\"last update of RDAP database\\\",\\n
+        \   \\\"eventDate\\\" : \\\"2025-06-02T18:36:31Z\\\"\\n  } ],\\n  \\\"nameservers\\\"
+        : [ {\\n    \\\"ldhName\\\" : \\\"dns1.zoneedit.com\\\",\\n    \\\"objectClassName\\\"
+        : \\\"nameserver\\\"\\n  }, {\\n    \\\"ldhName\\\" : \\\"dns2.zoneedit.com\\\",\\n
+        \   \\\"objectClassName\\\" : \\\"nameserver\\\"\\n  } ],\\n  \\\"entities\\\"
+        : [ {\\n    \\\"handle\\\" : \\\"not applicable\\\",\\n    \\\"vcardArray\\\"
+        : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ],
+        [ \\\"fn\\\", { }, \\\"text\\\", \\\"Tucows.com Co.\\\" ], [ \\\"kind\\\",
+        { }, \\\"text\\\", \\\"org\\\" ], [ \\\"role\\\", { }, \\\"text\\\", \\\"registrar\\\"
+        ], [ \\\"adr\\\", { }, \\\"text\\\", [ \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"\\\" ] ], [ \\\"url\\\", {\\n      \\\"type\\\" :
+        \\\"home\\\"\\n    }, \\\"uri\\\", \\\"https://help.opensrs.com/hc/en-us\\\"
+        ] ] ],\\n    \\\"entities\\\" : [ {\\n      \\\"handle\\\" : \\\"not applicable\\\",\\n
+        \     \\\"vcardArray\\\" : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\",
+        \\\"4.0\\\" ], [ \\\"fn\\\", { }, \\\"text\\\", \\\"Abuse Contact\\\" ], [
+        \\\"kind\\\", { }, \\\"text\\\", \\\"individual\\\" ], [ \\\"role\\\", { },
+        \\\"text\\\", \\\"abuse\\\" ], [ \\\"adr\\\", { }, \\\"text\\\", [ \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\" ] ], [ \\\"tel\\\",
+        {\\n        \\\"type\\\" : [ \\\"voice\\\" ]\\n      }, \\\"uri\\\", \\\"tel:+1.4165350123\\\"
+        ], [ \\\"email\\\", { }, \\\"text\\\", \\\"compliance@tucows.com\\\" ], [
+        \\\"url\\\", {\\n        \\\"type\\\" : \\\"home\\\"\\n      }, \\\"uri\\\",
+        \\\"https://help.opensrs.com/hc/en-us\\\" ] ] ],\\n      \\\"roles\\\" : [
+        \\\"abuse\\\" ],\\n      \\\"publicIds\\\" : [ ],\\n      \\\"objectClassName\\\"
+        : \\\"entity\\\"\\n    } ],\\n    \\\"roles\\\" : [ \\\"registrar\\\" ],\\n
+        \   \\\"publicIds\\\" : [ ],\\n    \\\"objectClassName\\\" : \\\"entity\\\"\\n
+        \ }, {\\n    \\\"handle\\\" : \\\"REDACTED FOR PRIVACY\\\",\\n    \\\"vcardArray\\\"
+        : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ],
+        [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ], [ \\\"kind\\\", { }, \\\"text\\\",
+        \\\"individual\\\" ], [ \\\"role\\\", { }, \\\"text\\\", \\\"registrant\\\"
+        ], [ \\\"adr\\\", { }, \\\"text\\\", [ \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"\\\" ] ] ] ],\\n    \\\"roles\\\" : [ \\\"registrant\\\"
+        ],\\n    \\\"publicIds\\\" : [ {\\n      \\\"type\\\" : \\\"ROID\\\",\\n      \\\"identifier\\\"
+        : \\\"REDACTED FOR PRIVACY\\\"\\n    } ],\\n    \\\"objectClassName\\\" :
+        \\\"entity\\\"\\n  }, {\\n    \\\"handle\\\" : \\\"REDACTED FOR PRIVACY\\\",\\n
+        \   \\\"vcardArray\\\" : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\",
+        \\\"4.0\\\" ], [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ], [ \\\"kind\\\",
+        { }, \\\"text\\\", \\\"individual\\\" ], [ \\\"role\\\", { }, \\\"text\\\",
+        \\\"administrative\\\" ], [ \\\"adr\\\", { }, \\\"text\\\", [ \\\"\\\", \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\" ] ] ] ],\\n    \\\"roles\\\"
+        : [ \\\"administrative\\\" ],\\n    \\\"publicIds\\\" : [ {\\n      \\\"type\\\"
+        : \\\"ROID\\\",\\n      \\\"identifier\\\" : \\\"REDACTED FOR PRIVACY\\\"\\n
+        \   } ],\\n    \\\"objectClassName\\\" : \\\"entity\\\"\\n  }, {\\n    \\\"handle\\\"
+        : \\\"REDACTED FOR PRIVACY\\\",\\n    \\\"vcardArray\\\" : [ \\\"vcard\\\",
+        [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ], [ \\\"fn\\\", { },
+        \\\"text\\\", \\\"\\\" ], [ \\\"kind\\\", { }, \\\"text\\\", \\\"individual\\\"
+        ], [ \\\"role\\\", { }, \\\"text\\\", \\\"technical\\\" ], [ \\\"adr\\\",
+        { }, \\\"text\\\", [ \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\",
+        \\\"\\\" ] ] ] ],\\n    \\\"roles\\\" : [ \\\"technical\\\" ],\\n    \\\"publicIds\\\"
+        : [ {\\n      \\\"type\\\" : \\\"ROID\\\",\\n      \\\"identifier\\\" : \\\"REDACTED
+        FOR PRIVACY\\\"\\n    } ],\\n    \\\"objectClassName\\\" : \\\"entity\\\"\\n
+        \ }, {\\n    \\\"handle\\\" : \\\"REDACTED FOR PRIVACY\\\",\\n    \\\"vcardArray\\\"
+        : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ],
+        [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ], [ \\\"kind\\\", { }, \\\"text\\\",
+        \\\"individual\\\" ], [ \\\"role\\\", { }, \\\"text\\\", \\\"billing\\\" ],
+        [ \\\"adr\\\", { }, \\\"text\\\", [ \\\"\\\", \\\"\\\", \\\"\\\", \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"\\\" ] ] ] ],\\n    \\\"roles\\\" : [ \\\"billing\\\"
+        ],\\n    \\\"publicIds\\\" : [ {\\n      \\\"type\\\" : \\\"ROID\\\",\\n      \\\"identifier\\\"
+        : \\\"REDACTED FOR PRIVACY\\\"\\n    } ],\\n    \\\"objectClassName\\\" :
+        \\\"entity\\\"\\n  } ],\\n  \\\"secureDNS\\\" : {\\n    \\\"delegationSigned\\\"
+        : false\\n  },\\n  \\\"redacted\\\" : [ {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registry Admin ID\\\"\\n    },\\n    \\\"method\\\" : \\\"replacementValue\\\",\\n
+        \   \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='administrative')].handle\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Name\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n    \\\"postPath\\\" :
+        \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='fn')][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Organization\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Admin Street\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"partialValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='adr')][3][2]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin City\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='adr')][3][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Region\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='adr')][3][4]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Postal
+        Code\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='adr')][3][5]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Country\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='administrative')].vcardArray[1][?(@[0]=='adr')][3][6]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Phone\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Admin Phone Ext\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Admin Fax\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  },
+        {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Admin Fax Ext\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Admin Email\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Admin Url\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  },
+        {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Registry Billing
+        ID\\\"\\n    },\\n    \\\"method\\\" : \\\"replacementValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='billing')].handle\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Billing Name\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"emptyValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='fn')][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Organization\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Billing Street\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"partialValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='adr')][3][2]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing City\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='adr')][3][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Region\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='adr')][3][4]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Postal
+        Code\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='adr')][3][5]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Country\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='billing')].vcardArray[1][?(@[0]=='adr')][3][6]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Phone\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Billing Phone Ext\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Billing Fax\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  },
+        {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Billing Fax Ext\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Billing Email\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Billing Url\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  },
+        {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registry Registrant ID\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"replacementValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='registrant')].handle\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Registrant Name\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"emptyValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='fn')][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant Organization\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Registrant Street\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"partialValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][2]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant City\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Registrant
+        Region\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][4]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant Postal
+        Code\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][5]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Registrant
+        Country\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][6]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant Phone\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Registrant Phone Ext\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant
+        Fax\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Registrant Fax Ext\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registrant
+        Email\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Registrant Url\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registry
+        Tech ID\\\"\\n    },\\n    \\\"method\\\" : \\\"replacementValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='technical')].handle\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Tech Name\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"emptyValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='fn')][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech Organization\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"description\\\" : \\\"Tech Street\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"partialValue\\\",\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='adr')][3][2]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech City\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='adr')][3][3]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech Region\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='adr')][3][4]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech Postal
+        Code\\\"\\n    },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='adr')][3][5]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech Country\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"partialValue\\\",\\n    \\\"postPath\\\"
+        : \\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='adr')][3][6]\\\"\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Tech Phone\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Tech Phone Ext\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Tech Fax\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  },
+        {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Tech Fax Ext\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\"
+        : {\\n      \\\"type\\\" : \\\"Tech Email\\\"\\n    },\\n    \\\"method\\\"
+        : \\\"removal\\\"\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Tech Url\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\"\\n  } ],\\n
+        \ \\\"objectClassName\\\" : \\\"domain\\\"\\n}\",\"source_type\":\"registry\",\"timestamp\":\"2025-06-02T18:36:30Z\",\"url\":\"https://rdap.ca.fury.ca/rdap/domain/webarts.bc.ca\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"rdap_level_0\",\"redacted\"],\"contacts\":[{\"city\":\"\",\"country\":\"\",\"handle\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"city\":\"\",\"country\":\"\",\"handle\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"administrative\"],\"street\":\"\"},{\"city\":\"\",\"country\":\"\",\"handle\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"technical\"],\"street\":\"\"},{\"city\":\"\",\"country\":\"\",\"handle\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"billing\"],\"street\":\"\"}],\"creation_date\":\"2000-10-13T04:29:58+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"webarts.bc.ca\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"tucows.com\"],\"emails\":[\"compliance@tucows.com\"],\"expiration_date\":\"2026-05-25T04:00:00+00:00\",\"handle\":\"D6304-CIRA\",\"last_changed_date\":\"2022-09-26T17:01:45+00:00\",\"links\":[{\"href\":\"https://rdap.ca.fury.ca/rdap/domain/webarts.bc.ca\",\"rel\":\"self\"}],\"nameservers\":[\"dns1.zoneedit.com\",\"dns2.zoneedit.com\"],\"registrar\":{\"contacts\":[{\"city\":\"\",\"country\":\"\",\"email\":\"compliance@tucows.com\",\"handle\":\"not
+        applicable\",\"name\":\"Abuse Contact\",\"phone\":\"tel:+1.4165350123\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"abuse\"],\"street\":\"\"}],\"name\":\"Tucows.com
+        Co.\"},\"unclassified_emails\":[]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.ca.fury.ca/rdap/domain/webarts.bc.ca\"}}\n{\"timestamp\":\"2025-06-02T18:36:32Z\",\"domain\":\"mindfulnesscentreofexcellence.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-06-02T18:36:29Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"1858952530_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"mindfulnesscentreofexcellence.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns1.dns-systems.net\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-11-07T02:21:16Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.dns-systems.net\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-11-07T02:21:16Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.123-reg.co.uk/v1/domain/mindfulnesscentreofexcellence.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.123-reg.co.uk/v1/domain/mindfulnesscentreofexcellence.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"mindfulnesscentreofexcellencecom-reg\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://webform.meshdigital.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-11-07T02:21:21Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"mindfulnesscentreofexcellencecom-tech\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://webform.meshdigital.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-11-07T02:21:21Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1515\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"123-Reg
+        Limited\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"GB\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"The
+        Old Vinyl Factory, Blyth Road\\\",\\\"Hayes\\\",\\\"Middlesex\\\",\\\"UB3
+        1HA\\\",\\\"\\\"]],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"support@domainbox.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1515\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.8779770099\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@123-reg.co.uk\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.123-reg.co.uk/v1\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://rdap.123-reg.co.uk/v1\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.123-reg.co.uk\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-06-02T18:36:31Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-05-16T11:55:15Z\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-05-16T11:55:15Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2019-06-03T08:40:46Z\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree to
+        these Universal Terms of Service\\\",\\\"and limitations of warranty. In particular,
+        you agree not to use this\\\",\\\"data to allow, enable, or otherwise make
+        possible, dissemination or\\\",\\\"collection of this data, in part or in
+        its entirety, for any purpose,\\\",\\\"such as the transmission of unsolicited
+        advertising and solicitations of\\\",\\\"any kind, including spam. You further
+        agree not to use this data to enable\\\",\\\"high volume, automated or robotic
+        electronic processes designed to collect\\\",\\\"or compile this data for
+        any purpose, including mining this data for your\\\",\\\"own personal or commercial
+        purposes, or use this data in any way that violates\\\",\\\"applicable laws
+        and regulations.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.godaddy.com/agreements/showdoc?pageid=5403\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"port43\\\":\\\"whois.123-reg.co.uk\\\"}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-06-02T18:36:30Z\",\"url\":\"https://rdap.123-reg.co.uk/v1/domain/MINDFULNESSCENTREOFEXCELLENCE.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://webform.meshdigital.com\",\"handle\":\"mindfulnesscentreofexcellencecom-reg\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"registrant\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"},{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://webform.meshdigital.com\",\"handle\":\"mindfulnesscentreofexcellencecom-tech\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"technical\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"}],\"creation_date\":\"2014-05-16T11:55:15+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"mindfulnesscentreofexcellence.com\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"123-reg.co.uk\",\"domainbox.com\"],\"emails\":[\"abuse@123-reg.co.uk\",\"https://webform.meshdigital.com\",\"support@domainbox.com\"],\"expiration_date\":\"2027-05-16T11:55:15+00:00\",\"handle\":\"1858952530_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2019-06-03T08:40:46+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/MINDFULNESSCENTREOFEXCELLENCE.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.123-reg.co.uk/v1/domain/MINDFULNESSCENTREOFEXCELLENCE.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.123-reg.co.uk/v1/domain/mindfulnesscentreofexcellence.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns1.dns-systems.net\",\"ns2.dns-systems.net\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@123-reg.co.uk\",\"name\":\"\",\"phone\":\"tel:+1.8779770099\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1515\",\"name\":\"123-Reg
+        Limited\"},\"unclassified_emails\":[\"support@domainbox.com\"]},\"registrar_request_url\":\"https://rdap.123-reg.co.uk/v1/domain/MINDFULNESSCENTREOFEXCELLENCE.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/mindfulnesscentreofexcellence.com\"}}\n{\"timestamp\":\"2025-06-02T18:36:32Z\",\"domain\":\"warrenandsons.biz\",\"raw_record\":{\"first_request_timestamp\":\"2025-06-02T18:36:30Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"D1E09F2FC37114C67A444D684A804DFAF-GDREG\\\",\\\"ldhName\\\":\\\"warrenandsons.biz\\\",\\\"status\\\":[\\\"client
+        delete prohibited\\\",\\\"client renew prohibited\\\",\\\"client update prohibited\\\",\\\"client
+        transfer prohibited\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2023-09-16T16:51:04Z\\\",\\\"eventActor\\\":\\\"GoDaddy.com,
+        LLC\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-09-16T16:51:04Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-07-16T15:38:10Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-06-02T18:36:31Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrant\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Please
+        query the RDDS service of the Registrar of Record identified in this output
+        for information on how to contact the Registrant of the queried domain name\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"status\\\":[\\\"removed\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"billing\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Please
+        query the RDDS service of the Registrar of Record identified in this output
+        for information on how to contact the Registrant of the queried domain name\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"status\\\":[\\\"removed\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"administrative\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Please
+        query the RDDS service of the Registrar of Record identified in this output
+        for information on how to contact the Registrant of the queried domain name\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"status\\\":[\\\"removed\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"technical\\\"],\\\"remarks\\\":[{\\\"title\\\":\\\"REDACTED
+        FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Some
+        of the data in this object has been removed\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"EMAIL
+        REDACTED FOR PRIVACY\\\",\\\"type\\\":\\\"object redacted due to authorization\\\",\\\"description\\\":[\\\"Please
+        query the RDDS service of the Registrar of Record identified in this output
+        for information on how to contact the Registrant of the queried domain name\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"status\\\":[\\\"removed\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",[\\\"2155
+        E. GoDaddy Way\\\",\\\"\\\",\\\"\\\"],\\\"Tempe\\\",\\\"AZ\\\",\\\"85284\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.4808241300\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"uri\\\",\\\"tel:+1.4808241499\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"domainops@godaddy.com\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.4806242505\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"identifier\\\":\\\"146\\\",\\\"type\\\":\\\"IANA
+        Registrar ID\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2001-09-30T16:26:03Z\\\",\\\"eventActor\\\":\\\"REGISTRY\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-10-21T17:57:07Z\\\",\\\"eventActor\\\":\\\"REGISTRY\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-06-02T18:36:31Z\\\"}],\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        Registry object record\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.nic.biz/entity/146\\\",\\\"type\\\":\\\"application/rdap+json\\\"}]}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"handle\\\":\\\"H7B6A6DEFEA504B079C942A66CA6402B7-ARI\\\",\\\"ldhName\\\":\\\"ns13.domaincontrol.com\\\",\\\"status\\\":[\\\"associated\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-03-29T00:08:54Z\\\",\\\"eventActor\\\":\\\"Tucows
+        Domains Inc.\\\"},{\\\"eventAction\\\":\\\"last update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-06-02T18:36:31Z\\\"}],\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        Registry object record\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.nic.biz/nameserver/ns13.domaincontrol.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"handle\\\":\\\"HC036F1AE2FAB4AB2B919538C1AFAE516-ARI\\\",\\\"ldhName\\\":\\\"ns14.domaincontrol.com\\\",\\\"status\\\":[\\\"associated\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-03-29T00:09:02Z\\\",\\\"eventActor\\\":\\\"Tucows
+        Domains Inc.\\\"},{\\\"eventAction\\\":\\\"last update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-06-02T18:36:31Z\\\"}],\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        Registry object record\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.nic.biz/nameserver/ns14.domaincontrol.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}]}],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://icann.org/epp\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://icann.org/wicf\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDAP
+        Terms of Service\\\",\\\"description\\\":[\\\"The RDAP service (the Service)
+        offered by Registry Services LLC, or our designated representatives (GoDaddy
+        Registry), is provided for informational purposes only and is designed to
+        assist a user (you) to look up certain information related to the registration
+        records of existing domain names.\\\",\\\"The information provided by the
+        Service is \\\\u2018as is\\\\u2019 and we make no guarantee of its accuracy.
+        Registry Services LLC cannot, under any circumstances, be held liable in such
+        instances where the stored information would prove to be wrong, incomplete,
+        or not accurate in any sense.\\\",\\\"By submitting a query, you agree that
+        you will not use this data\\\",\\\"(i)            to allow, enable or otherwise
+        support in any way the transmission of unsolicited, commercial advertising
+        or other solicitations whether via direct mail, email, telephone or otherwise;\\\",\\\"(ii)
+        \          to enable high volume, automated, electronic processes that apply
+        to the Service or associated systems;\\\",\\\"(iii)          for targeted
+        advertising in any possible way;\\\",\\\"(iv)         to cause nuisance in
+        any possible way to individuals by sending (whether by automated, electronic
+        processes capable of enabling high volumes or other possible means) messages
+        to them;\\\",\\\"(v)          in a way that is inconsistent with any applicable
+        laws rule, regulation or statute or any policy issued by Registry Services
+        LLC; and/or\\\",\\\"(vi)         in contravention of any applicable data and
+        privacy protection acts.\\\",\\\"Without prejudice to the above, the copying,
+        compilation, repackaging, dissemination or other use of the information provided
+        by the Service is explicitly forbidden without prior and explicit permission
+        by Registry Services LLC.\\\",\\\"By your use of the Service you agree to
+        abide by these Terms of Service and accept that Registry Services LLC can
+        take measures to limit the use of the Service in order to protect the privacy
+        of registrants or the integrity of the Service. Registry Services LLC may
+        restrict, suspend or terminate your access to the Service at any time. Registry
+        Services LLC reserve the right to make changes to the Service and these Terms
+        of Service at any time without prior notice to you. It is your responsibility
+        to review these Terms of Service each time you access or use the Service to
+        keep apprised of any changes. If you do not agree to the changes implemented
+        by Registry Services LLC, your sole and exclusive remedy is to terminate your
+        use of the Service.\\\",\\\"By executing a query, in any manner whatsoever,
+        you agree to abide by these Terms of Service.\\\"],\\\"links\\\":[{\\\"rel\\\":\\\"alternate\\\",\\\"value\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"href\\\":\\\"https://www.registry.godaddy/rdap\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"links\\\":[{\\\"title\\\":\\\"Registrar
+        RDAP server object record\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/domain/warrenandsons.biz\\\",\\\"type\\\":\\\"application/rdap+json\\\"},{\\\"title\\\":\\\"Authoritative
+        Registry object record\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.nic.biz/domain/warrenandsons.biz\\\",\\\"type\\\":\\\"application/rdap+json\\\"}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-06-02T18:36:30Z\",\"url\":\"https://rdap.nic.biz/domain/warrenandsons.biz\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[{\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"roles\":[\"registrant\"]},{\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"roles\":[\"billing\"]},{\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"roles\":[\"administrative\"]},{\"email\":\"REDACTED
+        FOR PRIVACY\",\"name\":\"REDACTED FOR PRIVACY\",\"roles\":[\"technical\"]}],\"creation_date\":\"2023-09-16T16:51:04+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"warrenandsons.biz\",\"domain_statuses\":[\"client
+        delete prohibited\",\"client renew prohibited\",\"client update prohibited\",\"client
+        transfer prohibited\"],\"email_domains\":[\"godaddy.com\"],\"emails\":[\"abuse@godaddy.com\",\"domainops@godaddy.com\",\"redacted
+        for privacy\"],\"expiration_date\":\"2025-09-16T16:51:04+00:00\",\"handle\":\"D1E09F2FC37114C67A444D684A804DFAF-GDREG\",\"last_changed_date\":\"2024-07-16T15:38:10+00:00\",\"links\":[{\"href\":\"https://rdap.godaddy.com/v1/domain/warrenandsons.biz\",\"rel\":\"related\"},{\"href\":\"https://rdap.nic.biz/domain/warrenandsons.biz\",\"rel\":\"self\"}],\"nameservers\":[\"ns13.domaincontrol.com\",\"ns14.domaincontrol.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@godaddy.com\",\"name\":\"GoDaddy.com,
+        LLC\",\"phone\":\"tel:+1.4806242505\",\"roles\":[\"abuse\"]}],\"iana_id\":\"146\",\"name\":\"GoDaddy.com,
+        LLC\"},\"unclassified_emails\":[\"domainops@godaddy.com\"]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.nic.biz/domain/warrenandsons.biz\"}}\n{\"timestamp\":\"2025-06-02T18:36:32Z\",\"domain\":\"vetorescritorios.com.br\",\"raw_record\":{\"first_request_timestamp\":\"2025-06-02T18:36:30Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"vetorescritorios.com.br\\\",\\\"ldhName\\\":\\\"vetorescritorios.com.br\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns1.irisdesign.com.br\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"delegation
+        check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\",\\\"status\\\":[\\\"ns
+        aa\\\"]},{\\\"eventAction\\\":\\\"last correct delegation check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns2.irisdesign.com.br\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"delegation
+        check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\",\\\"status\\\":[\\\"ns
+        aa\\\"]},{\\\"eventAction\\\":\\\"last correct delegation check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns3.irisdesign.com.br\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"delegation
+        check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\",\\\"status\\\":[\\\"ns
+        aa\\\"]},{\\\"eventAction\\\":\\\"last correct delegation check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"dns4.irisdesign.com.br\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"delegation
+        check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\",\\\"status\\\":[\\\"ns
+        aa\\\"]},{\\\"eventAction\\\":\\\"last correct delegation check\\\",\\\"eventDate\\\":\\\"2025-06-01T08:02:19Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nicbr_arbitration\\\":true,\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.registro.br/domain/vetorescritorios.com.br\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.registro.br/domain/vetorescritorios.com.br\\\",\\\"type\\\":\\\"application/rdap+json\\\"},{\\\"value\\\":\\\"https://rdap.registro.br/domain/vetorescritorios.com.br\\\",\\\"rel\\\":\\\"archives\\\",\\\"href\\\":\\\"https://rdap.registro.br/domain/vetorescritorios.com.br?ticket=8353716\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"05850070000152\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"org\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Leonardo
+        Correa Stumpp EPP\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"BR\\\"]]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"cnpj\\\",\\\"identifier\\\":\\\"05.850.070/0001-52\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"SAI55\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"SAMANTHA
+        IRIS\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"contato@irisdesign.com.br\\\"],[\\\"lang\\\",{},\\\"language-tag\\\",\\\"pt\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"BR\\\"]]]],\\\"roles\\\":[\\\"administrative\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2005-01-31T12:00:00Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-08-30T15:36:54Z\\\"}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2011-05-31T20:02:48Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2011-05-31T20:02:48Z\\\"}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.registro.br/entity/05850070000152\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.registro.br/entity/05850070000152\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"legalRepresentative\\\":\\\"Leonardo
+        Stumpp\\\"},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"SAI55\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"individual\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"SAMANTHA
+        IRIS\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"contato@irisdesign.com.br\\\"],[\\\"lang\\\",{},\\\"language-tag\\\",\\\"pt\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"BR\\\"]]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2005-01-31T12:00:00Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-08-30T15:36:54Z\\\"}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2011-05-31T20:02:48Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-06-19T08:20:44Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-05-31T20:02:48Z\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Use
+        and Privacy Policy\\\",\\\"description\\\":[\\\"Copyright (c) Nic.br - Use
+        of this data is governed by the Use and Privacy Policy. Distribution, commercialization,
+        reproduction, and use for advertising or similar purposes are expressly prohibited.\\\",\\\"2025-06-02T15:36:31-03:00
+        - 177.149.128.203\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.registro.br/domain/vetorescritorios.com.br\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://registro.br/upp\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"nicbr_level_0\\\"],\\\"port43\\\":\\\"whois.registro.br\\\"}\\n\",\"source_type\":\"registry\",\"timestamp\":\"2025-06-02T18:36:30Z\",\"url\":\"https://rdap.registro.br/domain/vetorescritorios.com.br\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"nicbr_level_0\"],\"contacts\":[{\"city\":\"\",\"country\":\"BR\",\"handle\":\"05850070000152\",\"name\":\"Leonardo
+        Correa Stumpp EPP\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"city\":\"\",\"country\":\"BR\",\"email\":\"contato@irisdesign.com.br\",\"handle\":\"SAI55\",\"name\":\"SAMANTHA
+        IRIS\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"technical\"],\"street\":\"\"}],\"creation_date\":\"2011-05-31T20:02:48+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"vetorescritorios.com.br\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"irisdesign.com.br\"],\"emails\":[\"contato@irisdesign.com.br\"],\"expiration_date\":\"2025-05-31T20:02:48+00:00\",\"handle\":\"vetorescritorios.com.br\",\"last_changed_date\":\"2024-06-19T08:20:44+00:00\",\"links\":[{\"href\":\"https://rdap.registro.br/domain/vetorescritorios.com.br\",\"rel\":\"self\"},{\"href\":\"https://rdap.registro.br/domain/vetorescritorios.com.br?ticket=8353716\",\"rel\":\"archives\"}],\"nameservers\":[\"dns1.irisdesign.com.br\",\"dns2.irisdesign.com.br\",\"dns3.irisdesign.com.br\",\"dns4.irisdesign.com.br\"],\"registrar\":{},\"unclassified_emails\":[]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.registro.br/domain/vetorescritorios.com.br\"}}\n{\"timestamp\":\"2025-06-02T18:36:32Z\",\"domain\":\"sarasotarecleague.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-06-02T18:36:29Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/wicf\\\",\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"The data provided by the Registration
+        Data Access Protocol (\u201CRDAP\u201D) and use of our RDAP service is governed
+        by the RDAP terms below. We reserve the right to modify these RDAP terms at
+        any time.\\\",\\\"The information in the RDAP database is provided to you
+        for informational purposes only, on an \\\\\\\"as is\\\\\\\" basis without
+        any guarantee of accuracy.\\\",\\\"By submitting a query, you certify that
+        you have a legitimate purpose for requesting the data, that you will only
+        use this data for lawful purposes and delete the data immediately when the
+        data is no longer necessary for your lawful or legitimate purpose, and that,
+        under no circumstances, will you use this data to: a) allow, enable, or otherwise
+        support the transmission of unsolicited, commercial advertising or solicitations;
+        or (b) enable high volume, automated electronic processes that send queries
+        or data to the systems of any registry operator or ICANN-accredited registrar,
+        except as reasonably necessary to register domain names or modify existing
+        registrations.\\\",\\\"The compilation, repackaging, dissemination, or other
+        use of this data is expressly prohibited.\\\",\\\"We reserve the right to
+        restrict or terminate access to the database at any time in our sole discretion
+        including, without limitation, for excessive querying of the database or for
+        failure to otherwise abide by these RDAP terms.\\\",\\\"Your IP address, the
+        queried domain, the response, and a timestamp is stored for the purposes of
+        maintaining the RDAP service and to ensure adherence with these RDAP terms.\\\",\\\"By
+        submitting this query, you agree to these RDAP terms.\\\",\\\"NOTE: THIS RDAP
+        DATABASE IS A CONTACT DATABASE ONLY. LACK OF A DOMAIN RECORD DOES NOT SIGNIFY
+        DOMAIN AVAILABILITY.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://legal.newfold.com\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://legal.newfold.com\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"1886155132_DOMAIN_COM-VRSN\\\",\\\"remarks\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"The data in Register.com's WHOIS database
+        is provided to you byRegister.com for information purposes only, that is,
+        to assist you in\\\\nobtaining information about or related to a domain name
+        registration\\\\nrecord.  Register.com makes this information available \\\\\\\"as
+        is,\\\\\\\" and\\\\ndoes not guarantee its accuracy.  By submitting a WHOIS
+        query, you\\\\nagree that you will use this data only for lawful purposes
+        and that,\\\\nunder no circumstances will you use this data to: (1) allow,
+        enable,\\\\nor otherwise support the transmission of mass unsolicited, commercial\\\\nadvertising
+        or solicitations via direct mail, electronic mail, or by\\\\ntelephone; or
+        (2) enable high volume, automated, electronic processes\\\\nthat apply to
+        Register.com (or its systems).  The compilation,\\\\nrepackaging, dissemination
+        or other use of this data is expressly\\\\nprohibited without the prior written
+        consent of Register.com.\\\\nRegister.com reserves the right to modify these
+        terms at any time.\\\\nBy submitting this query, you agree to abide by these
+        terms.\\\"]},{\\\"title\\\":\\\"ICANN WHOIS Data Inaccuracy\\\",\\\"description\\\":[\\\"URL
+        of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/\\\"],\\\"links\\\":[{\\\"value\\\":\\\"http://wdprs.internic.net/\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"http://wdprs.internic.net/\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Whois
+        status codes\\\",\\\"description\\\":[\\\"For more information on Whois status
+        codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/domain/sarasotarecleague.com.\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/domain/sarasotarecleague.com.\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-11-19T19:20:01Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-11-06T20:22:03Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2024-11-06T20:22:03Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-11-19T19:20:01Z\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"port43\\\":\\\"whois.register.com\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"9\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/entity/9\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/entity/9\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Register.com,
+        Inc.\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"domain.operations@web.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.8777228662\\\"]]]}],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"9\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Register.com,
+        Inc.\\\"]]]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"sarasotarecleaguecom-admin\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-admin\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-admin\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.register.com\\\",\\\"roles\\\":[\\\"administrative\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Kaydi
+        Lyons\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"kd3300@yahoo.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.9412860432
+        ext. null\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\" ext.
+        null\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"1322
+        n brink ave\\\",\\\"sarasota\\\",\\\"FL\\\",\\\"34237\\\",\\\"\\\"]]]]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"sarasotarecleaguecom-reg\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-reg\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-reg\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.register.com\\\",\\\"roles\\\":[\\\"registrant\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Kaydi
+        Lyons\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"kd3300@yahoo.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.9412860432
+        ext. null\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\" ext.
+        null\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"1322
+        n brink ave\\\",\\\"sarasota\\\",\\\"FL\\\",\\\"34237\\\",\\\"\\\"]]]]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"sarasotarecleaguecom-tech\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-tech\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/entity/sarasotarecleaguecom-tech\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.register.com\\\",\\\"roles\\\":[\\\"technical\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Kaydi
+        Lyons\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"kd3300@yahoo.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.9412860432
+        ext. null\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\" ext.
+        null\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"1322
+        n brink ave\\\",\\\"sarasota\\\",\\\"FL\\\",\\\"34237\\\",\\\"\\\"]]]]}],\\\"lang\\\":\\\"en\\\",\\\"ldhName\\\":\\\"sarasotarecleague.com.\\\",\\\"unicodeName\\\":\\\"sarasotarecleague.com.\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/nameserver/dns1.register.com.\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/nameserver/dns1.register.com.\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"ldhName\\\":\\\"dns1.register.com.\\\",\\\"unicodeName\\\":\\\"dns1.register.com.\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/nameserver/dns2.register.com.\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.snapnames.com/rdap/nameserver/dns2.register.com.\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"ldhName\\\":\\\"dns2.register.com.\\\",\\\"unicodeName\\\":\\\"dns2.register.com.\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false}}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-06-02T18:36:30Z\",\"url\":\"https://rdap.snapnames.com/rdap/domain/SARASOTARECLEAGUE.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"sarasota\",\"country\":\"US\",\"email\":\"kd3300@yahoo.com\",\"fax\":\"
+        ext. null\",\"handle\":\"sarasotarecleaguecom-admin\",\"name\":\"Kaydi Lyons\",\"phone\":\"+1.9412860432
+        ext. null\",\"postal\":\"34237\",\"region\":\"FL\",\"roles\":[\"administrative\"],\"street\":\"1322
+        n brink ave\"},{\"city\":\"sarasota\",\"country\":\"US\",\"email\":\"kd3300@yahoo.com\",\"fax\":\"
+        ext. null\",\"handle\":\"sarasotarecleaguecom-reg\",\"name\":\"Kaydi Lyons\",\"phone\":\"+1.9412860432
+        ext. null\",\"postal\":\"34237\",\"region\":\"FL\",\"roles\":[\"registrant\"],\"street\":\"1322
+        n brink ave\"},{\"city\":\"sarasota\",\"country\":\"US\",\"email\":\"kd3300@yahoo.com\",\"fax\":\"
+        ext. null\",\"handle\":\"sarasotarecleaguecom-tech\",\"name\":\"Kaydi Lyons\",\"phone\":\"+1.9412860432
+        ext. null\",\"postal\":\"34237\",\"region\":\"FL\",\"roles\":[\"technical\"],\"street\":\"1322
+        n brink ave\"}],\"creation_date\":\"2014-11-19T19:20:01+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"sarasotarecleague.com.\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"web.com\",\"yahoo.com\"],\"emails\":[\"domain.operations@web.com\",\"kd3300@yahoo.com\"],\"expiration_date\":\"2026-11-19T19:20:01+00:00\",\"handle\":\"1886155132_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-11-06T20:22:03+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/SARASOTARECLEAGUE.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.snapnames.com/rdap/domain/SARASOTARECLEAGUE.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.snapnames.com/rdap/domain/sarasotarecleague.com.\",\"rel\":\"self\"}],\"nameservers\":[\"dns1.register.com.\",\"dns2.register.com.\"],\"registrar\":{\"contacts\":[{\"email\":\"domain.operations@web.com\",\"name\":\"Register.com,
+        Inc.\",\"phone\":\"+1.8777228662\",\"roles\":[\"abuse\"]}],\"iana_id\":\"9\",\"name\":\"Register.com,
+        Inc.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.snapnames.com/rdap/domain/SARASOTARECLEAGUE.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/sarasotarecleague.com\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 02 Jun 2025 18:36:32 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=bseu3d0fjpel4t9aoclpldkrvnanccnsb9bchgj8k4fgenc63gdd3t0etialmpfg2v2oc75vt9ockllih6aok124b9ojci2pamj0c9q;
+        expires=Wed, 02-Jul-2025 18:36:32 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '13'
+    status:
+      code: 200
+      message: OK
 version: 1

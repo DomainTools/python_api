@@ -30,8 +30,12 @@ FEEDS_PRODUCTS_LIST = [
     "newly-observed-domains-feed-(s3)",
     "newly-observed-hosts-feed-(api)",
     "newly-observed-hosts-feed-(s3)",
+    "domain-hotlist-feed-(api)",
+    "domain-hotlist-feed-(s3)",
     "domain-registration-data-access-protocol-feed-(api)",
     "domain-registration-data-access-protocol-feed-(s3)",
+    "domain-risk-feed-(api)",
+    "domain-risk-feed-(s3)",
     "real-time-domain-discovery-feed-(api)",
     "real-time-domain-discovery-feed-(s3)",
 ]

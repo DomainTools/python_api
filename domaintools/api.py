@@ -1,8 +1,10 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256
 from hmac import new as hmac
+from typing import Union
 
 import re
+import ssl
 
 from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
 from domaintools._version import current as version
@@ -76,7 +78,7 @@ class API(object):
         self.username = username
         self.key = key
         self.https = https
-        self.verify_ssl = verify_ssl
+        self.verify_ssl = self._get_ssl_default_context(verify_ssl)
         self.rate_limit = rate_limit
         self.proxy_url = proxy_url
         self.extra_request_params = {}
@@ -91,6 +93,9 @@ class API(object):
             raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
         if proxy_url and not isinstance(proxy_url, str):
             raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
+
+    def _get_ssl_default_context(self, verify_ssl: Union[str, bool]):
+        return ssl.create_default_context(cafile=verify_ssl) if isinstance(verify_ssl, str) else verify_ssl
 
     def _build_api_url(self, api_url=None, api_port=None):
         """Build the API url based on the given url and port. Defaults to `https://api.domaintools.com`"""
@@ -1183,6 +1188,68 @@ class API(object):
         return self._results(
             f"newly-observed-hosts-feed-({source})",
             f"v1/{endpoint}/noh/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
+
+    def realtime_domain_risk(self, **kwargs) -> FeedsResults:
+        """Returns back list of the realtime domain risk feed.
+        Contains realtime domain risk information for apex-level domains, regardless of observed traffic.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"domain-risk-({source})",
+            f"v1/{endpoint}/domainrisk/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
+
+    def domainhotlist(self, **kwargs) -> FeedsResults:
+        """Returns back list of domain hotlist feed.
+        Contains high-risk, apex-level domains that are observed by DomainTools' global sensor network to be active within 24 hours.
+
+        domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"domain-hotlist-feed-({source})",
+            f"v1/{endpoint}/domainhotlist/",
             response_path=(),
             cls=FeedsResults,
             **kwargs,

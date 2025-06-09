@@ -1623,4 +1623,268 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.5.0
+  response:
+    body:
+      string: '{"timestamp":"2025-06-02T18:35:31Z","domain":"aurumbookseries.com"}
+
+        {"timestamp":"2025-06-02T18:35:32Z","domain":"ingridconliffe.com"}
+
+        {"timestamp":"2025-06-02T18:35:33Z","domain":"axelliantgoazure.com"}
+
+        {"timestamp":"2025-06-02T18:35:33Z","domain":"axelliantonsite.com"}
+
+        {"timestamp":"2025-06-02T18:35:33Z","domain":"formaworxllc.com"}
+
+        {"timestamp":"2025-06-02T18:35:33Z","domain":"quickvalid5125.pics"}
+
+        {"timestamp":"2025-06-02T18:35:34Z","domain":"sinalconfirmado.shop"}
+
+        {"timestamp":"2025-06-02T18:35:35Z","domain":"jinhecg.com"}
+
+        {"timestamp":"2025-06-02T18:35:36Z","domain":"snraspaygana.com"}
+
+        {"timestamp":"2025-06-02T18:35:36Z","domain":"whoislayla.com"}
+
+        {"timestamp":"2025-06-02T18:35:38Z","domain":"photographsbyemma.com"}
+
+        {"timestamp":"2025-06-02T18:35:38Z","domain":"yzzhtx.com"}
+
+        {"timestamp":"2025-06-02T18:35:39Z","domain":"mauoliving.com"}
+
+        {"timestamp":"2025-06-02T18:35:40Z","domain":"sottolapellelibro.it"}
+
+        {"timestamp":"2025-06-02T18:35:41Z","domain":"tcmland.net"}
+
+        {"timestamp":"2025-06-02T18:35:41Z","domain":"europe2japan.com"}
+
+        {"timestamp":"2025-06-02T18:35:41Z","domain":"oldfraggers.com"}
+
+        {"timestamp":"2025-06-02T18:35:41Z","domain":"expeditedfreighthaulers.net"}
+
+        {"timestamp":"2025-06-02T18:35:41Z","domain":"lucidbeautylounge.com"}
+
+        {"timestamp":"2025-06-02T18:35:42Z","domain":"saltandsliced.de"}
+
+        {"timestamp":"2025-06-02T18:35:42Z","domain":"wonderpath.world"}
+
+        {"timestamp":"2025-06-02T18:35:42Z","domain":"royaleboss-mobi1.com"}
+
+        {"timestamp":"2025-06-02T18:35:42Z","domain":"platformbookhouse.com"}
+
+        {"timestamp":"2025-06-02T18:35:43Z","domain":"campingfreila.com"}
+
+        {"timestamp":"2025-06-02T18:35:43Z","domain":"hexoarc.com"}
+
+        {"timestamp":"2025-06-02T18:35:44Z","domain":"echotribune.com"}
+
+        {"timestamp":"2025-06-02T18:35:44Z","domain":"insiderchronicle.com"}
+
+        {"timestamp":"2025-06-02T18:35:45Z","domain":"dorama.kim"}
+
+        {"timestamp":"2025-06-02T18:35:45Z","domain":"royaleboss-mobi2.com"}
+
+        {"timestamp":"2025-06-02T18:35:46Z","domain":"heka.services"}
+
+        {"timestamp":"2025-06-02T18:35:46Z","domain":"chatlie.com"}
+
+        {"timestamp":"2025-06-02T18:35:46Z","domain":"senioraccontmg.com.br"}
+
+        {"timestamp":"2025-06-02T18:35:47Z","domain":"articoksa.com"}
+
+        {"timestamp":"2025-06-02T18:35:47Z","domain":"maktabbd.com"}
+
+        {"timestamp":"2025-06-02T18:35:47Z","domain":"topadm.xyz"}
+
+        {"timestamp":"2025-06-02T18:35:49Z","domain":"eway8.com"}
+
+        {"timestamp":"2025-06-02T18:35:50Z","domain":"cnjinfa.com"}
+
+        {"timestamp":"2025-06-02T18:35:52Z","domain":"18chi.cn"}
+
+        {"timestamp":"2025-06-02T18:35:53Z","domain":"rsy6o1y.cn"}
+
+        {"timestamp":"2025-06-02T18:35:55Z","domain":"chroniclehorizon.com"}
+
+        {"timestamp":"2025-06-02T18:35:55Z","domain":"photochatai.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"emailappleidgetid.icu"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"savage-communications.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"axelliantlicensinghub.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"primecommunity.name.ng"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"optimalmindstudio.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"patisserieremyk.fr"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"com-mnvcxzfjev.info"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"finexgb.net"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"katt20.best"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"rollinloudnola.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"lerocherdestmichel.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"arondgarzalaw.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"vozvratdenegmvd.icu"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"speedfox.ae"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"eobicho.net.br"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"katt18.best"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"intentionaldesignconsultantsllc.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"fragranciamarket.com"}
+
+        {"timestamp":"2025-06-02T18:35:56Z","domain":"dm-ai.io"}
+
+        {"timestamp":"2025-06-02T18:35:57Z","domain":"dicklesstracyspis.com"}
+
+        {"timestamp":"2025-06-02T18:35:58Z","domain":"hosoo.com.cn"}
+
+        {"timestamp":"2025-06-02T18:35:58Z","domain":"ita-flynet.com"}
+
+        {"timestamp":"2025-06-02T18:35:58Z","domain":"dicklesstracyspi.com"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"mksignatureevents.com"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"technicalreport.org"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"pfotenslippers.de"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"innovationflooring.net"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"katt17.best"}
+
+        {"timestamp":"2025-06-02T18:35:59Z","domain":"boltsfrombrute.com"}
+
+        {"timestamp":"2025-06-02T18:36:00Z","domain":"clearwayprojects.com"}
+
+        {"timestamp":"2025-06-02T18:36:01Z","domain":"fragmarketar.com"}
+
+        {"timestamp":"2025-06-02T18:36:01Z","domain":"vesobytes.com"}
+
+        {"timestamp":"2025-06-02T18:36:02Z","domain":"policemanstillconsumer.digital"}
+
+        {"timestamp":"2025-06-02T18:36:03Z","domain":"arboldeaprendizajeacademy-edu-pa.com"}
+
+        {"timestamp":"2025-06-02T18:36:03Z","domain":"sany-s.icu"}
+
+        {"timestamp":"2025-06-02T18:36:03Z","domain":"hh462.com"}
+
+        {"timestamp":"2025-06-02T18:36:03Z","domain":"7figuresidegig.com"}
+
+        {"timestamp":"2025-06-02T18:36:03Z","domain":"byaranzaq.xyz"}
+
+        {"timestamp":"2025-06-02T18:36:04Z","domain":"cw-cxg.cn"}
+
+        {"timestamp":"2025-06-02T18:36:04Z","domain":"erectionondemand.com"}
+
+        {"timestamp":"2025-06-02T18:36:04Z","domain":"nexfloai.com"}
+
+        {"timestamp":"2025-06-02T18:36:05Z","domain":"mmarieart.com"}
+
+        {"timestamp":"2025-06-02T18:36:06Z","domain":"knockoutdemoremoval.com"}
+
+        {"timestamp":"2025-06-02T18:36:06Z","domain":"almastage.com"}
+
+        {"timestamp":"2025-06-02T18:36:07Z","domain":"depression-us-95872090.live"}
+
+        {"timestamp":"2025-06-02T18:36:09Z","domain":"infobot.it"}
+
+        {"timestamp":"2025-06-02T18:36:11Z","domain":"cdhtwg.com"}
+
+        {"timestamp":"2025-06-02T18:36:11Z","domain":"wnjyg.com"}
+
+        {"timestamp":"2025-06-02T18:36:12Z","domain":"iig.ie"}
+
+        {"timestamp":"2025-06-02T18:36:12Z","domain":"projecttrackday.com"}
+
+        {"timestamp":"2025-06-02T18:36:13Z","domain":"cashclicks.ru"}
+
+        {"timestamp":"2025-06-02T18:36:15Z","domain":"motorheadsmerchandise.com"}
+
+        {"timestamp":"2025-06-02T18:36:16Z","domain":"magnetfluss.ru"}
+
+        {"timestamp":"2025-06-02T18:36:16Z","domain":"amaelwkfdkfnwq.com"}
+
+        {"timestamp":"2025-06-02T18:36:17Z","domain":"s-ahl.com"}
+
+        {"timestamp":"2025-06-02T18:36:17Z","domain":"pepijnensheila.nl"}
+
+        {"timestamp":"2025-06-02T18:36:18Z","domain":"capital-a.eu"}
+
+        {"timestamp":"2025-06-02T18:36:19Z","domain":"thegardenvarietypodcast.net"}
+
+        {"timestamp":"2025-06-02T18:36:20Z","domain":"buildersseven.in"}
+
+        {"timestamp":"2025-06-02T18:36:21Z","domain":"palifi.co"}
+
+        {"timestamp":"2025-06-02T18:36:21Z","domain":"bladesgentsbarbers.com"}
+
+        {"timestamp":"2025-06-02T18:36:21Z","domain":"pvcfinance.com"}
+
+        {"timestamp":"2025-06-02T18:36:22Z","domain":"migezi.net"}
+
+        {"timestamp":"2025-06-02T18:36:22Z","domain":"doramy.kim"}
+
+        {"timestamp":"2025-06-02T18:36:22Z","domain":"eliteglassco.org"}
+
+        {"timestamp":"2025-06-02T18:36:24Z","domain":"wallprintz.co.uk"}
+
+        {"timestamp":"2025-06-02T18:36:25Z","domain":"peacebynoise.com"}
+
+        {"timestamp":"2025-06-02T18:36:27Z","domain":"tattoosatlanta.com"}
+
+        {"timestamp":"2025-06-02T18:36:27Z","domain":"06-04.click"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 02 Jun 2025 18:36:30 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=0gv0df5nngpj6t58ctle6e5prgtl9e3s9cavl9a6k79uap7i4d4c1ivt3rcbj18a6ee2gqpap636n7r97vpo7kfrhsu4svvju1e5ulv;
+        expires=Wed, 02-Jul-2025 18:36:30 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '73'
+    status:
+      code: 200
+      message: OK
 version: 1
