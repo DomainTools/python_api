@@ -533,4 +533,93 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=2.5.1&days_back=0&page=1&query=google.com
+  response:
+    content: '{"response":{"limit":1000,"date":"2025-09-05","name_server":"google.com","total":"70","page":1,"page_count":1,"alerts":[{"new_name_server":"google.com","old_name_server":"hostgator.com.br","action":"Transfer
+      In","domain":"ADVLUCIANONOVAIS.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"AIDROP-HOLO.COM"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"AIRDROP-DEBANK.INFO"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"AIRDROP-MIDNIGHT.WEBSITE"},{"new_name_server":"dns-parking.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"ARTDENTKLINIK.COM.TR"},{"new_name_server":"google.com","old_name_server":"dns-parking.com","action":"Transfer
+      In","domain":"ARTHURCAVICCHIOLI.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"BEAMLESS-GRIDWORK-VERIFY.COM"},{"new_name_server":"foundationapi.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"BFIA.INFO"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"BRIDGE-FABRIC.COM"},{"new_name_server":"foundationapi.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"CANAMAERICANRECRUITMENT.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"CEODM.COM.AR"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"CLAIM-MIDNIGHT.WEBSITE"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"CLUSTER-STRIPE-BEAM.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"COMPUTE-CIRCUIT.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"DOOMERS76.CFD"},{"new_name_server":"google.com","old_name_server":"namecheaphosting.com","action":"Transfer
+      In","domain":"DUVALLSTUDIO.NET"},{"new_name_server":"google.com","old_name_server":"namebrightdns.com","action":"Transfer
+      In","domain":"E2VE.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"EARN-WORLDLIBERTYFINANCIAL.COM"},{"new_name_server":"google.com","old_name_server":"namecheaphosting.com","action":"Transfer
+      In","domain":"FESLD.CO.UK"},{"new_name_server":"google.com","old_name_server":"namecheaphosting.com","action":"Transfer
+      In","domain":"G5PETRO.MY"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"GIFLOG.COM"},{"new_name_server":"google.com","old_name_server":"vercel-dns.com","action":"Transfer
+      In","domain":"HDMARIANI.SITE"},{"new_name_server":"namecheaphosting.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"HOLLANDHYDRAULICS.NET"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"HYPO-CLOUDEVA.SITE"},{"new_name_server":"google.com","old_name_server":"regxa.com","action":"Transfer
+      In","domain":"IDKPQ.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"IRANUPTIME.COM"},{"new_name_server":"atom.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"JEWELSMITH.IN"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"LEMUTRANS.CL"},{"new_name_server":"google.com","old_name_server":"rythost.com","action":"Transfer
+      In","domain":"METGROWTHTRADEFX.NET"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"MIDNIGHT-CHECKER.WEBSITE"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"MIDNIGHT-CLAIM.WEBSITE"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"MIXEROBTC.ORG"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"MODULAR-KERNEL-SCALAR.COM"},{"new_name_server":"google.com","old_name_server":"ntas-server.com","action":"Transfer
+      In","domain":"NGSCAMEROON.COM"},{"new_name_server":"ipage.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"OKNYC.ORG"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"OTECFUTUROEDUCA.CL"},{"new_name_server":"google.com","old_name_server":"worldbyte.net","action":"Transfer
+      In","domain":"P-WORKS.RU"},{"new_name_server":"google.com","old_name_server":"worldbyte.net","action":"Transfer
+      In","domain":"P-WORKS.STORE"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PILLOWCHAIR.NYC"},{"new_name_server":"judns.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PKMLZ.CN"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"PNGREWARDS.EXCHANGE"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PORNODRIFT.CLICK"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PORNORAPID.CLICK"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PORNORUSH.CLICK"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PORNOSNAP.CLICK"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"PORNOSTACK.CLICK"},{"new_name_server":"seekahost.net","old_name_server":"google.com","action":"Transfer
+      Out","domain":"RAJAGAMES24.SITE"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"ROAKETPOOL.NET"},{"new_name_server":"google.com","old_name_server":"dns-parking.com","action":"Transfer
+      In","domain":"ROBERTHALF-RECRUITMENT.COM"},{"new_name_server":"google.com","old_name_server":"cloudflare.com","action":"Transfer
+      In","domain":"ROBL-OX.COM"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"ROOKETPOOL.NET"},{"new_name_server":"google.com","old_name_server":"regxa.com","action":"Transfer
+      In","domain":"S-ADL.COM"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"SENCILLITAS.CL"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"SIGNAL-LINKAGE.COM"},{"new_name_server":"judns.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"SIPVC.CN"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"STABLECURVEFIROUTE.XYZ"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"TABIO-AIRDROP.WEBSITE"},{"new_name_server":"google.com","old_name_server":"domaincontrol.com","action":"Transfer
+      In","domain":"THELIFESTYLEBIRD.CO.IN"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"THEOLAF.COM"},{"new_name_server":"google.com","old_name_server":"worldbyte.net","action":"Transfer
+      In","domain":"TOPLOGSOL.STORE"},{"new_name_server":"foundationapi.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"UA-ID207551.WORLD"},{"new_name_server":"foundationapi.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"UA-ID608271.WORLD"},{"new_name_server":"google.com","old_name_server":"cpanelhost.cl","action":"Transfer
+      In","domain":"UPSUSHI.CL"},{"new_name_server":"ui-dns.biz","old_name_server":"google.com","action":"Transfer
+      Out","domain":"VERLAS.COM.VE"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"VISUALQ.MX"},{"new_name_server":"google.com","old_name_server":"","action":"New","domain":"XN--I3CDF1AVINBL8CNX0CUBUH7STI.COM"},{"new_name_server":"cloudflare.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"XN--MIPRIMERAITOLIVER-NXB.COM.AR"},{"new_name_server":"google.com","old_name_server":"","action":"Deleted","domain":"YACIN3TV.EU"},{"new_name_server":"aki.cloud","old_name_server":"google.com","action":"Transfer
+      Out","domain":"YARLAND.RU"},{"new_name_server":"judns.com","old_name_server":"google.com","action":"Transfer
+      Out","domain":"ZFMXUG.CN"}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:07 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=i07o3jrt9ppe0hdc3n2d33jpaqbe8lu51vbun2me28vbncjug0s459j671dbctevr9q12qqbs8gnj8c8qlvavt5k2a8gn9iehh0ho5d;
+        expires=Sun, 05-Oct-2025 15:13:07 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '45852'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

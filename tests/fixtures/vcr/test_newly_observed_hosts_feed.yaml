@@ -313,4 +313,70 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"timestamp":"2025-09-05T15:13:40Z","domain":"70-167-145-222_s-23-32-45-43_ts-1757085164-clienttons-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"eaaqk6lrmqjeajqacqdtyaaaznulv7pm-f-b13a71888-clienttons-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"i2tzdxqxfypdk2f27xwa-pcet48-60d71cf65-clientnsv4-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"vrmbd53io5pw6zqazxzq-f-268346be4-clientnsv4-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"coop.spreadshirt.biz"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"irxbq5yxbqhf62f27xvq-f-4bde744fd-clientnsv4-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"eaaqk6lrmqjeajqacqdtyaaaznulv7pn-f-5e407a487-clienttons-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"jdkrl2yxfypc42f27xwq-pw7ghs-6345663a9-clientnsv4-s.akamaihd.net"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"a9215-4531306.cluster21.canvas-user-content.com"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"a9697-11164440.cluster61.canvas-user-content.com"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"32faa336-3348-4e11-9023-3adc6f5820da.darnuid.netflix.com"}
+
+      {"timestamp":"2025-09-05T15:13:40Z","domain":"csnfws8l3u8.ztaoyun.com"}
+
+      '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Fri, 05 Sep 2025 15:14:40 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=3qslhn2s4f5l1e8b1aus87o5mhabqud3v6mt09palus4avl2p26d0tchebb9de8kqrsrv2fgpf6915nec9lq1396i0uqapbre40eckb;
+        expires=Sun, 05-Oct-2025 15:14:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '1073'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

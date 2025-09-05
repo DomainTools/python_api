@@ -674,4 +674,91 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.5.1&include_domain_data=false&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazon-us53.com","status":"active","discovered_date":"2025-08-11T10:20:38.064000Z","changed_date":"2025-08-14T11:54:06.000000Z","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":97,"spam":93,"evidence":["domain
+      name","registrar","registrant"]}},"mx_exists":false,"tld":"com","id":"Ya5krAADYP","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-08-11T13:35:10.000000+00:00"},{"state":"ignored","domain":"googleegaz.icu","status":"active","discovered_date":"2025-08-01T14:06:54.497000Z","changed_date":"2025-08-01T14:08:49.000000Z","risk_score":90,"risk_score_status":"full","risk_score_components":{"proximity":60,"threat_profile":{"phishing":90,"malware":72,"spam":40,"evidence":["domain
+      name","registrant","registrar"]}},"mx_exists":false,"tld":"icu","id":"zPyL08AkZE","escalations":[],"monitor_ids":["nAwmQg2pqg"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-08-04T16:56:17.000000+00:00"},{"state":"ignored","domain":"victoramazonasadv.com.br","status":"active","discovered_date":"2025-07-27T06:27:20.198000Z","changed_date":"2025-07-27T06:34:06.000000Z","risk_score":40,"risk_score_status":"full","risk_score_components":{"proximity":31,"threat_profile":{"phishing":40,"malware":27,"spam":1,"evidence":[]}},"mx_exists":true,"tld":"com.br","id":"Ya5k2q9GYP","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-28T15:51:44.000000+00:00"},{"state":"ignored","domain":"jambuamazonia.com.br","status":"active","discovered_date":"2025-07-25T15:26:25.777000Z","changed_date":"2025-07-25T15:28:35.000000Z","risk_score":39,"risk_score_status":"full","risk_score_components":{"proximity":13,"threat_profile":{"phishing":39,"malware":9,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com.br","id":"Va7r3zVQpW","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-25T15:53:16.000000+00:00"},{"state":"ignored","domain":"amazonsproject-eu.com","status":"active","discovered_date":"2025-07-25T14:14:49.767000Z","changed_date":"2025-07-25T14:20:29.000000Z","risk_score":19,"risk_score_status":"full","risk_score_components":{"proximity":3,"threat_profile":{"phishing":19,"malware":6,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com","id":"MWpKr6YN5P","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-25T16:09:59.000000+00:00"},{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":0,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":86}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":6,"count":6,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 15:14:34 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=19hh2a720ah5nlk7hanrunv4eh9s66damm17alkub89493m7hpl447nj3fko54htarkjmqbg5qehp9v8q206d145nr0lrqog6ggjdc5;
+        expires=Sun, 05-Oct-2025 15:14:33 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.5.1&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    content: '{"watchlist_domains":[{"state":"ignored","domain":"amazon-us53.com","status":"active","discovered_date":"2025-08-11T10:20:38.064000Z","changed_date":"2025-08-14T11:54:06.000000Z","risk_score":100,"risk_score_status":"full","risk_score_components":{"proximity":100,"threat_profile":{"phishing":99,"malware":97,"spam":93,"evidence":["domain
+      name","registrar","registrant"]}},"mx_exists":false,"tld":"com","id":"Ya5krAADYP","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-08-11T13:35:10.000000+00:00"},{"state":"ignored","domain":"victoramazonasadv.com.br","status":"active","discovered_date":"2025-07-27T06:27:20.198000Z","changed_date":"2025-07-27T06:34:06.000000Z","risk_score":40,"risk_score_status":"full","risk_score_components":{"proximity":31,"threat_profile":{"phishing":40,"malware":27,"spam":1,"evidence":[]}},"mx_exists":true,"tld":"com.br","id":"Ya5k2q9GYP","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-28T15:51:44.000000+00:00"},{"state":"ignored","domain":"jambuamazonia.com.br","status":"active","discovered_date":"2025-07-25T15:26:25.777000Z","changed_date":"2025-07-25T15:28:35.000000Z","risk_score":39,"risk_score_status":"full","risk_score_components":{"proximity":13,"threat_profile":{"phishing":39,"malware":9,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com.br","id":"Va7r3zVQpW","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-25T15:53:16.000000+00:00"},{"state":"ignored","domain":"amazonsproject-eu.com","status":"active","discovered_date":"2025-07-25T14:14:49.767000Z","changed_date":"2025-07-25T14:20:29.000000Z","risk_score":19,"risk_score_status":"full","risk_score_components":{"proximity":3,"threat_profile":{"phishing":19,"malware":6,"spam":1,"evidence":[]}},"mx_exists":false,"tld":"com","id":"MWpKr6YN5P","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2025-07-25T16:09:59.000000+00:00"},{"state":"ignored","domain":"amazonfreevee.ae","status":"active","discovered_date":"2022-06-11T01:02:34.923000Z","changed_date":"2023-09-16T22:53:32.000000Z","risk_score":0,"risk_score_status":"full","risk_score_components":{"proximity":0,"threat_profile":{"phishing":86}},"mx_exists":false,"tld":"ae","id":"3ENBZ6w6EX","escalations":[],"monitor_ids":["DKObxJVjYJ"],"assigned_by":"integrations+test1@domaintools.com","assigned_date":"2022-06-16T15:08:00.000000+00:00"}],"total_count":5,"count":5,"offset":0,"limit":100}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 15:14:36 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=5dbvgbevatgt9l0lpq4osljq1q7vlth2mor0e1k88drd6kpgr52thfo615jv83k70tfhnpheb9nejv0fhjkkce7gvjfnh7lvdpn9l5n;
+        expires=Sun, 05-Oct-2025 15:14:35 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

@@ -332,4 +332,52 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=2.5.1&days_back=0&page=1&query=65.55.53.233
+  response:
+    content: '{"response":{"limit":1000,"date":"2025-09-05","ip_address":"65.55.53.233","total":"0","page":1,"page_count":0,"alerts":[]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:06 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=hkbmgt5rfd9ddnhkoj37q92j40e8qhmoasaiqat9uf3jdjuae2itl5eopabkdva1eh3nof5g25qu05281fvq3h5imto9kp3kpo79heo;
+        expires=Sun, 05-Oct-2025 15:13:06 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '98949'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

@@ -2666,4 +2666,78 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"timestamp":"2025-09-05T15:15:48Z","domain":"zendrop.cc","phishing_risk":82,"malware_risk":89,"spam_risk":10,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T10:30:14Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"26200855.vip","phishing_risk":98,"malware_risk":97,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T09:43:34Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"02vtgl7.yachts","phishing_risk":14,"malware_risk":72,"spam_risk":59,"proximity_risk":82,"overall_risk":82,"expires":"2025-09-06T09:44:28Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"zdcyd.sbs","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":82,"overall_risk":99,"expires":"2025-09-06T10:05:29Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"xj466.top","phishing_risk":99,"malware_risk":98,"spam_risk":98,"proximity_risk":89,"overall_risk":99,"expires":"2025-09-06T11:14:34Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"nieuws-decemberplmx116.sbs","phishing_risk":22,"malware_risk":77,"spam_risk":1,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T06:00:05Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"496954.top","phishing_risk":97,"malware_risk":96,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T07:03:01Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"441wg.top","phishing_risk":99,"malware_risk":94,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T10:39:00Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"fchafa.top","phishing_risk":66,"malware_risk":54,"spam_risk":47,"proximity_risk":75,"overall_risk":75,"expires":"2025-09-06T08:24:18Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"cq250.top","phishing_risk":97,"malware_risk":81,"spam_risk":98,"proximity_risk":87,"overall_risk":98,"expires":"2025-09-06T10:05:05Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"iohoih.com","phishing_risk":99,"malware_risk":97,"spam_risk":99,"proximity_risk":89,"overall_risk":99,"expires":"2025-09-06T10:13:52Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"zcw939.com","phishing_risk":null,"malware_risk":null,"spam_risk":null,"proximity_risk":86,"overall_risk":86,"expires":"2025-09-06T14:08:17Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"932ku.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-09-06T13:44:25Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"kadherbs.co.il","phishing_risk":1,"malware_risk":91,"spam_risk":12,"proximity_risk":19,"overall_risk":91,"expires":"2025-09-05T18:25:40Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"37875.my","phishing_risk":99,"malware_risk":98,"spam_risk":99,"proximity_risk":94,"overall_risk":99,"expires":"2025-09-06T09:56:49Z"}
+
+      {"timestamp":"2025-09-05T15:15:48Z","domain":"fw89.top","phishing_risk":81,"malware_risk":48,"spam_risk":98,"proximity_risk":94,"overall_risk":98,"expires":"2025-09-05T18:54:25Z"}
+
+      '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Fri, 05 Sep 2025 15:16:48 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=coc6inri3rgtije9nk6ru6dakcard5l38925okrnoejg6jvl7gelpmb98bf7nurlju8no73a1dh7c2h6drrslb5gkb9cap82aejq22c;
+        expires=Sun, 05-Oct-2025 15:16:47 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Envoy-Upstream-Service-Time:
+      - '21'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

@@ -452,4 +452,74 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/whois?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"registrant":"Google LLC","registration":{"created":"1997-09-15","expires":"2028-09-14","updated":"2019-09-09","registrar":"MarkMonitor
+      Inc.","statuses":["clientDeleteProhibited","clientTransferProhibited","clientUpdateProhibited","serverDeleteProhibited","serverTransferProhibited","serverUpdateProhibited"]},"name_servers":["NS1.GOOGLE.COM","NS2.GOOGLE.COM","NS3.GOOGLE.COM","NS4.GOOGLE.COM"],"whois":{"date":"2025-09-04","record":"Domain
+      Name: google.com\nRegistry Domain ID: 2138514_DOMAIN_COM-VRSN\nRegistrar WHOIS
+      Server: whois.markmonitor.com\nRegistrar URL: http:\/\/www.markmonitor.com\nUpdated
+      Date: 2024-08-02T02:17:33+0000\nCreation Date: 1997-09-15T07:00:00+0000\nRegistrar
+      Registration Expiration Date: 2028-09-13T07:00:00+0000\nRegistrar: MarkMonitor,
+      Inc.\nRegistrar IANA ID: 292\nRegistrar Abuse Contact Email: abusecomplaints@markmonitor.com\nRegistrar
+      Abuse Contact Phone: +1.2086851750\nDomain Status: clientUpdateProhibited (https:\/\/www.icann.org\/epp#clientUpdateProhibited)\nDomain
+      Status: clientTransferProhibited (https:\/\/www.icann.org\/epp#clientTransferProhibited)\nDomain
+      Status: clientDeleteProhibited (https:\/\/www.icann.org\/epp#clientDeleteProhibited)\nDomain
+      Status: serverUpdateProhibited (https:\/\/www.icann.org\/epp#serverUpdateProhibited)\nDomain
+      Status: serverTransferProhibited (https:\/\/www.icann.org\/epp#serverTransferProhibited)\nDomain
+      Status: serverDeleteProhibited (https:\/\/www.icann.org\/epp#serverDeleteProhibited)\nRegistrant
+      Organization: Google LLC\nRegistrant Country: US\nRegistrant Email: Select Request
+      Email Form at https:\/\/domains.markmonitor.com\/whois\/google.com\nTech Email:
+      Select Request Email Form at https:\/\/domains.markmonitor.com\/whois\/google.com\nName
+      Server: ns4.google.com\nName Server: ns1.google.com\nName Server: ns3.google.com\nName
+      Server: ns2.google.com\nDNSSEC: unsigned\nURL of the ICANN WHOIS Data Problem
+      Reporting System: http:\/\/wdprs.internic.net\/\n\nFor more information on WHOIS
+      status codes, please visit:\n  https:\/\/www.icann.org\/resources\/pages\/epp-status-codes\n\nMarkMonitor
+      Domain Management(TM)\nProtecting companies and consumers in a digital world.\n\nVisit
+      MarkMonitor at https:\/\/www.markmonitor.com\nContact us at +1.8007459229\nIn
+      Europe, at +44.02032062220\n--\n"},"record_source":"google.com"}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:33 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=26fstt1lnrli6u8a91piftbc190ah4ms9im32lcniodc907bcbrtf9019nise2p1b93h5i9eqo147cubgi0vm20hi6nu20vu5a29pj3;
+        expires=Sun, 05-Oct-2025 15:13:33 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '34605'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

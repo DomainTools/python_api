@@ -491,4 +491,52 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/reverse-ip?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"ip_addresses":[{"ip_address":"142.250.189.206","domain_count":10,"domain_names":["broccoli.holdings","dragic.no","rbavrentals.com","xno-app.click","lulufou.com","hansen-haas.com","sinaredu.com.my","apenewsnet.com","my-lens.ca","style4future.it"]},{"ip_address":"142.250.73.100","domain_count":99,"domain_names":["starart-development.com","zenter.com","51456.cc","peteryjxia.com","youxi.box","akwan.com.br","kevinrcurtis.com","justsecuritythings.com","bazinv.com","hyattnet.org","mesorian.net","acticketguys.com","zaresir.us","e-harvey.com","carboniteblows.com","genecurate.xyz","lbjvigoder.com","measuremap.com","pblouin.ca","tech52.com","xucai666.com","endoxon.ch","mavsec.net","heterjag.com","toeshoth4x.com","xkid.ro","bet98.info","mkbnetworks.eu","maalakker.nl","jimenco.com","cncma.com","tcow.app","matthewmackes.com","atheon.dev","060444.com","hanso.ee","madronio.net","billobridal.com","nunez.ca","ulrikehamischart.net","geektech.net","chupacushion.com","heaneylents.com","selanderdev.com","akshun.io","caglarcelik.com","idleslouch.com","yuri.ms","lazerblade.net","topbroker.ch","richmondfamilyfarm.com","buonviaggio.jp","fieldmail.co.uk","bonemlaw.com","googlevideo.com","we-are-kernel.com","felixkung.com","holdfastproperty.com","twotreeislandprod.com","lacraque.ca","fsat-cloud.co.uk","onurbaran.com","jefftestblockchain.space","mail23.eu","3911.cn","d3d.tech","deblauwetak.nl","pamflets.ca","aib.co.ma","oooh.icu","dashanghai.xyz","calmettes.org","iaquaculture.net","neplo.com","bleslie.com","zaoxiangyuan.com","speldafamily.com","vidfreud.com","cc7.us","adtrafficquality.google","yakamikaze.top","myoriginalevent.com","winterpoint.com","wufamily.net","synn.com","novanap.net","enterprisedemo-google.com","hotels-and-resorts.com","kumunetworks.com","dietzpro.com","google.com","sors.se","juegoseguros.com","cxpc.date","hcsu.io","52aw.com","shanghai-gr.com","skorpidi.com","urchin.com"]}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:13 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=maikv5v65tefaq8qi4jhit0v9of1ekcdjgqf3sok58v28a5fmheojuu1d6a1h7cuq4pkenira8q59erfu0bc2ihsutch0319bqnloi9;
+        expires=Sun, 05-Oct-2025 15:13:12 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '85659'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

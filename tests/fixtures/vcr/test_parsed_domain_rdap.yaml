@@ -512,4 +512,91 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com/rdap/parsed/?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"domain_rdap":[{"source":"registrar","timestamp":"2025-07-31T17:59:24Z","link":"https://rdap.markmonitor.com/rdap/domain/GOOGLE.COM","record":"{\u0022ldhName\u0022:\u0022google.com\u0022,\u0022objectClassName\u0022:\u0022domain\u0022,\u0022handle\u0022:\u00222138514_DOMAIN_COM-VRSN\u0022,\u0022events\u0022:[{\u0022eventAction\u0022:\u0022expiration\u0022,\u0022eventDate\u0022:\u00222028-09-13T07:00:00.000+00:00\u0022},{\u0022eventAction\u0022:\u0022registration\u0022,\u0022eventDate\u0022:\u00221997-09-15T07:00:00.000+00:00\u0022},{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222024-08-02T02:17:33.000+00:00\u0022},{\u0022eventAction\u0022:\u0022last
+      update of RDAP database\u0022,\u0022eventDate\u0022:\u00222025-07-31T17:53:33.000+00:00\u0022}],\u0022status\u0022:[\u0022client
+      update prohibited\u0022,\u0022client transfer prohibited\u0022,\u0022client
+      delete prohibited\u0022,\u0022server update prohibited\u0022,\u0022server transfer
+      prohibited\u0022,\u0022server delete prohibited\u0022],\u0022nameservers\u0022:[{\u0022objectClassName\u0022:\u0022nameserver\u0022,\u0022ldhName\u0022:\u0022ns1.google.com\u0022,\u0022status\u0022:[\u0022active\u0022],\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222008-06-08T04:46:18.000+00:00\u0022}]},{\u0022objectClassName\u0022:\u0022nameserver\u0022,\u0022ldhName\u0022:\u0022ns2.google.com\u0022,\u0022status\u0022:[\u0022active\u0022],\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222008-06-08T04:46:18.000+00:00\u0022}]},{\u0022objectClassName\u0022:\u0022nameserver\u0022,\u0022ldhName\u0022:\u0022ns3.google.com\u0022,\u0022status\u0022:[\u0022active\u0022],\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222008-06-08T04:46:18.000+00:00\u0022}]},{\u0022objectClassName\u0022:\u0022nameserver\u0022,\u0022ldhName\u0022:\u0022ns4.google.com\u0022,\u0022status\u0022:[\u0022active\u0022],\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222008-06-08T04:46:19.000+00:00\u0022}]}],\u0022secureDNS\u0022:{\u0022delegationSigned\u0022:false},\u0022entities\u0022:[{\u0022objectClassName\u0022:\u0022entity\u0022,\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222017-12-11T15:40:13.000+00:00\u0022}],\u0022roles\u0022:[\u0022registrant\u0022],\u0022remarks\u0022:[{\u0022title\u0022:\u0022REDACTED
+      FOR PRIVACY\u0022,\u0022type\u0022:\u0022object redacted due to authorization\u0022,\u0022description\u0022:[\u0022Some
+      of the data in this object has been removed.\u0022]}],\u0022vcardArray\u0022:[\u0022vcard\u0022,[[\u0022version\u0022,{},\u0022text\u0022,\u00224.0\u0022],[\u0022contact-uri\u0022,{},\u0022uri\u0022,\u0022https://domains.markmonitor.com/whois/contact/google.com\u0022],[\u0022fn\u0022,{},\u0022text\u0022,\u0022REDACTED
+      REGISTRANT\u0022],[\u0022org\u0022,{\u0022type\u0022:\u0022work\u0022},\u0022text\u0022,\u0022Google
+      LLC\u0022],[\u0022adr\u0022,{\u0022cc\u0022:\u0022US\u0022},\u0022text\u0022,[\u0022\u0022,\u0022\u0022,\u0022\u0022,\u0022\u0022,\u0022\u0022,\u0022\u0022,\u0022\u0022]]]]},{\u0022objectClassName\u0022:\u0022entity\u0022,\u0022events\u0022:[{\u0022eventAction\u0022:\u0022last
+      changed\u0022,\u0022eventDate\u0022:\u00222017-12-11T15:40:13.000+00:00\u0022}],\u0022roles\u0022:[\u0022technical\u0022],\u0022remarks\u0022:[{\u0022title\u0022:\u0022REDACTED
+      FOR PRIVACY\u0022,\u0022type\u0022:\u0022object redacted due to authorization\u0022,\u0022description\u0022:[\u0022Some
+      of the data in this object has been removed.\u0022]}],\u0022vcardArray\u0022:[\u0022vcard\u0022,[[\u0022version\u0022,{},\u0022text\u0022,\u00224.0\u0022],[\u0022contact-uri\u0022,{},\u0022uri\u0022,\u0022https://domains.markmonitor.com/whois/contact/google.com\u0022]]]},{\u0022objectClassName\u0022:\u0022entity\u0022,\u0022handle\u0022:\u0022292\u0022,\u0022events\u0022:[{\u0022eventAction\u0022:\u0022registrar
+      expiration\u0022,\u0022eventDate\u0022:\u00222020-09-14T04:00:00.000+00:00\u0022}],\u0022roles\u0022:[\u0022registrar\u0022],\u0022entities\u0022:[{\u0022objectClassName\u0022:\u0022entity\u0022,\u0022vcardArray\u0022:[\u0022vcard\u0022,[[\u0022version\u0022,{},\u0022text\u0022,\u00224.0\u0022],[\u0022email\u0022,{\u0022type\u0022:\u0022work\u0022},\u0022text\u0022,\u0022abusecomplaints@markmonitor.com\u0022],[\u0022tel\u0022,{\u0022type\u0022:\u0022voice\u0022},\u0022text\u0022,\u0022+1.2086851750\u0022],[\u0022fn\u0022,{},\u0022text\u0022,\u0022Markmonitor
+      Inc.\u0022]]],\u0022roles\u0022:[\u0022abuse\u0022]}],\u0022publicIds\u0022:[{\u0022type\u0022:\u0022IANA
+      Registrar ID\u0022,\u0022identifier\u0022:\u0022292\u0022}],\u0022vcardArray\u0022:[\u0022vcard\u0022,[[\u0022version\u0022,{},\u0022text\u0022,\u00224.0\u0022],[\u0022org\u0022,{\u0022type\u0022:\u0022work\u0022},\u0022text\u0022,\u0022Markmonitor
+      Inc.\u0022],[\u0022adr\u0022,{\u0022cc\u0022:\u0022US\u0022},\u0022text\u0022,[\u0022\u0022,\u0022\u0022,\u00223540
+      E Longwing Ln\u0022,\u0022Meridian\u0022,\u0022ID\u0022,\u002283646\u0022,\u0022\u0022]],[\u0022contact-uri\u0022,{},\u0022uri\u0022,\u0022https://www.markmonitor.com/contact-us/\u0022],[\u0022fn\u0022,{},\u0022text\u0022,\u0022Markmonitor
+      Inc.\u0022]]],\u0022links\u0022:[{\u0022value\u0022:\u0022https://rdap.markmonitor.com/rdap/domain/google.com\u0022,\u0022rel\u0022:\u0022self\u0022,\u0022href\u0022:\u0022https://rdap.markmonitor.com/rdap/domain/google.com\u0022,\u0022type\u0022:\u0022application/rdap+json\u0022}]}],\u0022notices\u0022:[{\u0022title\u0022:\u0022Terms
+      of Use\u0022,\u0022description\u0022:[\u0022By submitting an RDAP query, you
+      agree that you will use this data only for\u0022,\u0022lawful purposes and that,
+      under no circumstances will you use this data to:\u0022,\u0022(1) allow, enable,
+      or otherwise support the transmission by email, telephone,\u0022,\u0022or facsimile
+      of mass, unsolicited, commercial advertising, or spam; or\u0022,\u0022(2) enable
+      high volume, automated, or electronic processes that send queries,\u0022,\u0022data,
+      or email to Markmonitor (or its systems) or the domain name contacts (or\u0022,\u0022its
+      systems).\u0022,\u0022Markmonitor reserves the right to modify these terms at
+      any time.\u0022,\u0022By submitting this query, you agree to abide by this policy.\u0022,\u0022Markmonitor
+      Domain Management(TM)\u0022,\u0022Protecting companies and consumers in a digital
+      world.\u0022,\u0022Visit Markmonitor at https://www.markmonitor.com\u0022,\u0022Contact
+      us at +1.8007459229\u0022,\u0022In Europe, at +44.02032062220\u0022],\u0022links\u0022:[{\u0022value\u0022:\u0022https://www.markmonitor.com/legal/domain-management-terms-and-conditions\u0022,\u0022rel\u0022:\u0022related\u0022,\u0022href\u0022:\u0022https://www.markmonitor.com/legal/domain-management-terms-and-conditions\u0022,\u0022type\u0022:\u0022text/html\u0022}]},{\u0022title\u0022:\u0022Status
+      Codes\u0022,\u0022description\u0022:[\u0022For more information on domain status
+      codes, please visit https://icann.org/epp\u0022],\u0022links\u0022:[{\u0022value\u0022:\u0022https://rdap.markmonitor.com/rdap/domain/GOOGLE.COM\u0022,\u0022rel\u0022:\u0022glossary\u0022,\u0022href\u0022:\u0022https://icann.org/epp\u0022,\u0022type\u0022:\u0022text/html\u0022}]},{\u0022title\u0022:\u0022RDDS
+      Inaccuracy Complaint Form\u0022,\u0022description\u0022:[\u0022URL of the ICANN
+      RDDS Inaccuracy Complaint Form: https://icann.org/wicf\u0022],\u0022links\u0022:[{\u0022value\u0022:\u0022https://rdap.markmonitor.com/rdap/domain/GOOGLE.COM\u0022,\u0022rel\u0022:\u0022help\u0022,\u0022href\u0022:\u0022https://icann.org/wicf\u0022,\u0022type\u0022:\u0022text/html\u0022}]}],\u0022rdapConformance\u0022:[\u0022rdap_level_0\u0022,\u0022icann_rdap_technical_implementation_guide_0\u0022,\u0022icann_rdap_technical_implementation_guide_1\u0022,\u0022icann_rdap_response_profile_0\u0022,\u0022icann_rdap_response_profile_1\u0022],\u0022port43\u0022:\u0022whois.markmonitor.com\u0022}"}],"parsed_domain_rdap":{"domain":"google.com","handle":"2138514_DOMAIN_COM-VRSN","domain_statuses":["client
+      update prohibited","client transfer prohibited","client delete prohibited","server
+      update prohibited","server transfer prohibited","server delete prohibited"],"creation_date":"1997-09-15T07:00:00+00:00","last_changed_date":"2024-08-02T02:17:33+00:00","expiration_date":"2028-09-13T07:00:00+00:00","registrar":{"name":"Markmonitor
+      Inc.","iana_id":"292","contacts":[{"name":"Markmonitor Inc.","email":"abusecomplaints@markmonitor.com","phone":"+1.2086851750","roles":["abuse"]}]},"contacts":[{"name":"REDACTED
+      REGISTRANT","org":"Google LLC","email":"REDACTED FOR PRIVACY","street":"","city":"","postal":"","region":"","country":"US","roles":["registrant"]},{"name":"REDACTED
+      FOR PRIVACY","email":"REDACTED FOR PRIVACY","roles":["technical"]}],"dnssec":{"signed":false},"nameservers":["ns1.google.com","ns2.google.com","ns3.google.com","ns4.google.com"],"conformance":["rdap_level_0","icann_rdap_technical_implementation_guide_0","icann_rdap_technical_implementation_guide_1","icann_rdap_response_profile_0","icann_rdap_response_profile_1"],"emails":["abusecomplaints@markmonitor.com","redacted
+      for privacy"],"email_domains":["markmonitor.com"],"unclassified_emails":[]},"record_source":"google.com"}}'
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 15:13:09 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=4nu21r769f74ttua8mqlmrq4l0i62ml0tignr1lodt4co50nct816adbgun5t9l5rr86jgotr6p2oi6c02bupl6kuvkkn9uqg131q1c;
+        expires=Sun, 05-Oct-2025 15:13:09 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1
