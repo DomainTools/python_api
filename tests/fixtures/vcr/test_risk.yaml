@@ -660,4 +660,100 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=2.5.1&domain=google.com
+  response:
+    content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:14:11 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=cljtvmr8msoul6lrqsd3kh3hhnm69ug78ngsu1748qcitml52k3m6jaeid08tiur8d19vrenuag11fghu6op68tss2h2hdmek1t0kdg;
+        expires=Sun, 05-Oct-2025 15:14:11 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '37259'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/risk?app_name=python_wrapper&app_version=2.5.1&domain=hug.rest
+  response:
+    content: '{"response":{"domain":"hug.rest","risk_score":75,"components":[{"name":"proximity","risk_score":75},{"name":"threat_profile","risk_score":64},{"name":"threat_profile_phishing","risk_score":3},{"name":"threat_profile_malware","risk_score":40},{"name":"threat_profile_spam","risk_score":64}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:14:13 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=nhhu4chl61elm3dhf4lh3r52f6u0ncfcsvp6veeds8h3f3efph0anl9bj5m82qabk48qh4uje98p623fb2f0dhlokstuh4k1ri7p41m;
+        expires=Sun, 05-Oct-2025 15:14:12 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '45447'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

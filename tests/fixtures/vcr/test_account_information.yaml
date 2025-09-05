@@ -563,4 +563,52 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"account":{"api_username":"integrations_testing","active":true},"products":[{"id":"account-information","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"106","month":"1378"},"expiration_date":null},{"id":"iris-investigate","per_month_limit":"10000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"16","month":"81"},"expiration_date":null},{"id":"iris-enrich","per_month_limit":"20000","per_hour_limit":null,"per_minute_limit":"60","absolute_limit":null,"usage":{"today":"175","month":"3046"},"expiration_date":null},{"id":"iris-detect-escalate-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-ignored-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-manage-watchlist-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-monitors","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"8"},"expiration_date":null},{"id":"iris-detect-new-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-watched-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-profile","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-search","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"500","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"hosting-history","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-registrant-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reputation","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"risk","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"37"},"expiration_date":null},{"id":"risk-evidence","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"3"},"expiration_date":null},{"id":"reverse-name-server","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"mark-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"name-server-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois-history","per_month_limit":"5000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois-live","per_month_limit":"120","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"registrant-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3309"},"expiration_date":null},{"id":"newly-observed-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3310"},"expiration_date":null},{"id":"parsed-domain-rdap","per_month_limit":"50000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3307"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"261","month":"3307"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"204","month":"2582"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-hotlist-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"2"},"expiration_date":null},{"id":"real-time-domain-hotlist-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-risk-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"158"},"expiration_date":null},{"id":"real-time-domain-risk-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:12:56 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=crp5djoac6ct1b17koc7iv14b6bgmad8q6pr6t1um0v26g3svsad9g0er6oh0a1d269p1b0p2hfldu2a31maio3a7iu42n3fgc5ot9m;
+        expires=Sun, 05-Oct-2025 15:12:56 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '193804'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

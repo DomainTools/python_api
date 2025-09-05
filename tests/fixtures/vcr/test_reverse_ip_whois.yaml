@@ -891,4 +891,157 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.5.1&include_total_count=false&page=1&query=DomainTools
+  response:
+    content: '{"response":{"records":[{"ip_from":"199.30.228.0","ip_to":"199.30.231.255","record_ip":"199.30.228.133","record_date":"2025-09-03","country":"US","range":"199.30.228.0\/22","organization":"DomainTools,
+      LLC","server":"whois.arin.net","short_record_ip":"199.30.228.133"},{"ip_from":"192.153.154.0","ip_to":"192.153.154.255","record_ip":"192.153.154.0","record_date":"2025-08-09","country":"US","range":"192.153.154.0\/24","organization":"Farsight
+      Security, Inc","server":"whois.arin.net","short_record_ip":"192.153.154.0"},{"ip_from":"38.102.147.80","ip_to":"38.102.147.83","record_ip":"38.102.147.80","record_date":"2025-08-20","country":"US","range":"38.102.147.80\/30","organization":"DomainTools
+      LLC","server":"whois.arin.net","short_record_ip":"38.102.147.80"},{"ip_from":"38.88.50.184","ip_to":"38.88.50.191","record_ip":"38.88.50.184","record_date":"2025-08-08","country":"US","range":"38.88.50.184\/29","organization":"DomainTools
+      LLC","server":"whois.arin.net","short_record_ip":"38.88.50.184"},{"ip_from":"38.102.150.24","ip_to":"38.102.150.31","record_ip":"38.102.150.27","record_date":"2025-08-28","country":"US","range":"38.102.150.24\/29","organization":"DomainTools
+      LLC","server":"whois.arin.net","short_record_ip":"38.102.150.27"},{"ip_from":"66.249.16.0","ip_to":"66.249.17.255","record_ip":"66.249.17.251","record_date":"2025-07-30","country":"US","range":"66.249.16.0\/23","organization":"Name
+      Intelligence, Inc.","server":"whois.arin.net","short_record_ip":"66.249.17.251"},{"ip_from":"216.218.254.36","ip_to":"216.218.254.39","record_ip":"216.218.254.38","record_date":"2025-07-21","country":"US","range":"216.218.254.36\/30","organization":"Hurricane
+      Electric LLC","server":"whois.arin.net","short_record_ip":"216.218.254.38"}],"record_count":7,"page":1,"has_more_pages":false}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:20 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=nf4j2khqgq29tvk5b4ioclni6rq9s9gisc7gkqfpus351f2keuq962h863p2o93tiinb0kife0onkph7bitl859is0jdln913ich25a;
+        expires=Sun, 05-Oct-2025 15:13:19 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '311351'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.5.1&include_total_count=false&ip=65.55.53.233&page=1
+  response:
+    content: '{"response":{"whois_record":"NetRange:       65.52.0.0 - 65.55.255.255\nCIDR:           65.52.0.0\/14\nNetName:        MICROSOFT-1BLK\nNetHandle:      NET-65-52-0-0-1\nParent:         NET65
+      (NET-65-0-0-0-0)\nNetType:        Direct Allocation\nOriginAS:       \nOrganization:   Microsoft
+      Corporation (MSFT)\nRegDate:        2001-02-14\nUpdated:        2021-12-14\nRef:            https:\/\/rdap.arin.net\/registry\/ip\/65.52.0.0\n\nOrgName:        Microsoft
+      Corporation\nOrgId:          MSFT\nAddress:        One Microsoft Way\nCity:           Redmond\nStateProv:      WA\nPostalCode:     98052\nCountry:        US\nRegDate:        1998-07-10\nUpdated:        2025-06-10\nComment:        To
+      report suspected security issues specific to traffic emanating from Microsoft
+      online services, including the distribution of malicious content or other illicit
+      or illegal material through a Microsoft online service, please submit reports
+      to:\nComment:        * https:\/\/cert.microsoft.com.  \nComment:        \nComment:        For
+      SPAM and other abuse issues, such as Microsoft Accounts, please contact:\nComment:        *
+      abuse@microsoft.com.  \nComment:        \nComment:        To report security
+      vulnerabilities in Microsoft products and services, please contact:\nComment:        *
+      secure@microsoft.com.  \nComment:        \nComment:        For legal and law
+      enforcement-related requests, please contact:\nComment:        * msndcc@microsoft.com\nComment:        \nComment:        For
+      routing, peering or DNS issues, please \nComment:        contact:\nComment:        *
+      IOC@microsoft.com\nRef:            https:\/\/rdap.arin.net\/registry\/entity\/MSFT\n\nOrgTechHandle:
+      BEDAR6-ARIN\nOrgTechName:   Bedard, Dawn \nOrgTechPhone:  +1-425-538-6637 \nOrgTechEmail:  dabedard@microsoft.com\nOrgTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/BEDAR6-ARIN\n\nOrgRoutingHandle:
+      CHATU3-ARIN\nOrgRoutingName:   Chaturmohta, Somesh \nOrgRoutingPhone:  +1-425-882-8080
+      \nOrgRoutingEmail:  someshch@microsoft.com\nOrgRoutingRef:    https:\/\/rdap.arin.net\/registry\/entity\/CHATU3-ARIN\n\nOrgTechHandle:
+      IPHOS5-ARIN\nOrgTechName:   IPHostmaster, IPHostmaster \nOrgTechPhone:  +1-425-538-6637
+      \nOrgTechEmail:  iphostmaster@microsoft.com\nOrgTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/IPHOS5-ARIN\n\nOrgTechHandle:
+      MRPD-ARIN\nOrgTechName:   Microsoft Routing, Peering, and DNS\nOrgTechPhone:  +1-425-882-8080
+      \nOrgTechEmail:  IOC@microsoft.com\nOrgTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/MRPD-ARIN\n\nOrgTechHandle:
+      SINGH683-ARIN\nOrgTechName:   Singh, Prachi \nOrgTechPhone:  +1-425-707-5601
+      \nOrgTechEmail:  pracsin@microsoft.com\nOrgTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/SINGH683-ARIN\n\nOrgAbuseHandle:
+      MAC74-ARIN\nOrgAbuseName:   Microsoft Abuse Contact\nOrgAbusePhone:  +1-425-882-8080
+      \nOrgAbuseEmail:  abuse@microsoft.com\nOrgAbuseRef:    https:\/\/rdap.arin.net\/registry\/entity\/MAC74-ARIN\n\nOrgName:        Microsoft
+      Corporation\nOrgId:          MSFT\nAddress:        One Microsoft Way\nCity:           Redmond\nStateProv:      WA\nPostalCode:     98052\nCountry:        US\nRegDate:        1998-07-10\nUpdated:        2025-06-10\nComment:        To
+      report suspected security issues specific to traffic emanating from Microsoft
+      online services, including the distribution of malicious content or other illicit
+      or illegal material through a Microsoft online service, please submit reports
+      to:\nComment:        * https:\/\/cert.microsoft.com.  \nComment:        \nComment:        For
+      SPAM and other abuse issues, such as Microsoft Accounts, please contact:\nComment:        *
+      abuse@microsoft.com.  \nComment:        \nComment:        To report security
+      vulnerabilities in Microsoft products and services, please contact:\nComment:        *
+      secure@microsoft.com.  \nComment:        \nComment:        For legal and law
+      enforcement-related requests, please contact:\nComment:        * msndcc@microsoft.com\nComment:        \nComment:        For
+      routing, peering or DNS issues, please \nComment:        contact:\nComment:        *
+      IOC@microsoft.com\nRef:            https:\/\/rdap.arin.net\/registry\/entity\/MSFT\n\nTechHandle:
+      SINGH683-ARIN\nTechName:   Singh, Prachi \nTechPhone:  +1-425-707-5601 \nTechEmail:  pracsin@microsoft.com\nTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/SINGH683-ARIN\n\nTechHandle:
+      IPHOS5-ARIN\nTechName:   IPHostmaster, IPHostmaster \nTechPhone:  +1-425-538-6637
+      \nTechEmail:  iphostmaster@microsoft.com\nTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/IPHOS5-ARIN\n\nAbuseHandle:
+      MAC74-ARIN\nAbuseName:   Microsoft Abuse Contact\nAbusePhone:  +1-425-882-8080
+      \nAbuseEmail:  abuse@microsoft.com\nAbuseRef:    https:\/\/rdap.arin.net\/registry\/entity\/MAC74-ARIN\n\nTechHandle:
+      BEDAR6-ARIN\nTechName:   Bedard, Dawn \nTechPhone:  +1-425-538-6637 \nTechEmail:  dabedard@microsoft.com\nTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/BEDAR6-ARIN\n\nAdminHandle:
+      IPHOS5-ARIN\nAdminName:   IPHostmaster, IPHostmaster \nAdminPhone:  +1-425-538-6637
+      \nAdminEmail:  iphostmaster@microsoft.com\nAdminRef:    https:\/\/rdap.arin.net\/registry\/entity\/IPHOS5-ARIN\n\nRoutingHandle:
+      CHATU3-ARIN\nRoutingName:   Chaturmohta, Somesh \nRoutingPhone:  +1-425-882-8080
+      \nRoutingEmail:  someshch@microsoft.com\nRoutingRef:    https:\/\/rdap.arin.net\/registry\/entity\/CHATU3-ARIN\n\nTechHandle:
+      MRPD-ARIN\nTechName:   Microsoft Routing, Peering, and DNS\nTechPhone:  +1-425-882-8080
+      \nTechEmail:  IOC@microsoft.com\nTechRef:    https:\/\/rdap.arin.net\/registry\/entity\/MRPD-ARIN\n","ip_from":"65.52.0.0","ip_to":"65.55.255.255","record_ip":"65.54.190.19","short_record_ip":"65.54.190.19","ip_from_alloc":"65.52.0.0","ip_to_alloc":"65.55.255.255","organization":"Microsoft
+      Corporation","server":"whois.arin.net","country":"US","record_date":"2025-09-03","range":"65.52.0.0\/14"}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:21 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=kl98u6qpj17ndmc0v04fojboncou2ck44a4rgfu4sv1fjv7d8t6avcb7kpmol84pvqhjraoboi5r6onlu9g69epd6g5vjttpus50gr2;
+        expires=Sun, 05-Oct-2025 15:13:21 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '271875'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

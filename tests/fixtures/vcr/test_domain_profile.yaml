@@ -369,4 +369,53 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"registrant":{"name":"Google LLC","domains":24664,"product_url":"https:\/\/reversewhois.domaintools.com\/?all[]=Google+LLC&none[]="},"server":{"ip_address":"142.250.73.100","other_domains":99,"product_url":"https:\/\/reverseip.domaintools.com\/search\/?q=google.com"},"registration":{"created":"1997-09-15","expires":"2028-09-14","updated":"2019-09-09","registrar":"MarkMonitor
+      Inc.","statuses":["clientDeleteProhibited","clientTransferProhibited","clientUpdateProhibited","serverDeleteProhibited","serverTransferProhibited","serverUpdateProhibited"]},"name_servers":[{"server":"NS1.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS1.GOOGLE.COM"},{"server":"NS2.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS2.GOOGLE.COM"},{"server":"NS3.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS3.GOOGLE.COM"},{"server":"NS4.GOOGLE.COM","product_url":"https:\/\/reversens.domaintools.com\/search\/?q=NS4.GOOGLE.COM"}],"history":{"registrar":{"earliest_event":"","events":0,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"name_server":{"events":0,"timespan_in_years":"","product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"ip_address":{"events":1142,"timespan_in_years":22,"product_url":"https:\/\/research.domaintools.com\/research\/hosting-history\/?q=google.com"},"whois":{"records":8293,"earliest_event":"2001-05-03","product_url":"https:\/\/research.domaintools.com\/research\/whois-history\/search\/?q=google.com"}},"seo":{"score":"","product_url":""},"website_data":{"response_code":"","title":"","server":"","meta":[],"product_url":"https:\/\/whois.domaintools.com\/google.com"}}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:13:00 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=o86f1ibbl8gkla1pbgo75nonoph27vlg6ncubfv83g98ae1o926ercgcmf3a5eb0jk8tt7au2qt1uqiglsvfgjmp5ns02blkgqg5blp;
+        expires=Sun, 05-Oct-2025 15:13:00 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '103628'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

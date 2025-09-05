@@ -797,4 +797,100 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.5.1
+  response:
+    content: '{"response":{"account":{"api_username":"integrations_testing","active":true},"products":[{"id":"account-information","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"107","month":"1379"},"expiration_date":null},{"id":"iris-investigate","per_month_limit":"10000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"16","month":"81"},"expiration_date":null},{"id":"iris-enrich","per_month_limit":"20000","per_hour_limit":null,"per_minute_limit":"60","absolute_limit":null,"usage":{"today":"175","month":"3046"},"expiration_date":null},{"id":"iris-detect-escalate-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-ignored-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-manage-watchlist-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-monitors","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"8"},"expiration_date":null},{"id":"iris-detect-new-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-watched-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-profile","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-search","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"500","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"hosting-history","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-registrant-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reputation","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"risk","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"37"},"expiration_date":null},{"id":"risk-evidence","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"3"},"expiration_date":null},{"id":"reverse-name-server","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"mark-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"name-server-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois-history","per_month_limit":"5000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois-live","per_month_limit":"120","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"registrant-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3309"},"expiration_date":null},{"id":"newly-observed-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3310"},"expiration_date":null},{"id":"parsed-domain-rdap","per_month_limit":"50000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":null,"absolute_limit":null,"usage":{"today":"261","month":"3307"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"261","month":"3307"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"204","month":"2582"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-hotlist-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"2"},"expiration_date":null},{"id":"real-time-domain-hotlist-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-risk-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"158"},"expiration_date":null},{"id":"real-time-domain-risk-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:12:58 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=ng766r8iamnq5jhklitpugt5qepj2qsphf959ke8o0iuhhvqit2fqkqbs8n2ve8mav61ejvsbsdd965a5bp1qmk647j77ritspvseqo;
+        expires=Sun, 05-Oct-2025 15:12:58 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '174909'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/mark-alert?app_name=python_wrapper&app_version=2.5.1&query=google
+  response:
+    content: '{"response":{"query":"google","limit":1000,"total":122,"exclude":[],"new":true,"on-hold":true,"utf8":false,"date":"2025-09-05","alerts":[{"domain":"102415google.com","status":"new"},{"domain":"adwordsforgoogle.com","status":"on-hold"},{"domain":"allaboutgoogle.ca","status":"on-hold"},{"domain":"ankaragooglereklam.com.tr","status":"on-hold"},{"domain":"anunciarnogoogleads.com.br","status":"on-hold"},{"domain":"aunclickengoogle.com","status":"on-hold"},{"domain":"cs-google.com","status":"on-hold"},{"domain":"digitalgoogle.online","status":"on-hold"},{"domain":"driveaigoogle.com","status":"on-hold"},{"domain":"gamegoogle.com","status":"on-hold"},{"domain":"gogoogleless.info","status":"on-hold"},{"domain":"gogoogleless.org","status":"on-hold"},{"domain":"gogoogleless.us","status":"on-hold"},{"domain":"google-77f.com","status":"new"},{"domain":"google-axel.top","status":"on-hold"},{"domain":"google-bate.top","status":"on-hold"},{"domain":"google-call.com","status":"on-hold"},{"domain":"google-ctui.top","status":"on-hold"},{"domain":"google-download.xyz","status":"on-hold"},{"domain":"google-finance-ai.digital","status":"new"},{"domain":"google-mcp.com","status":"new"},{"domain":"google-site-verificationjswcx7m6japnvl23nwvc3tbjno43yqhlzyc.com","status":"new"},{"domain":"google.biz.np","status":"on-hold"},{"domain":"google.co.ag","status":"on-hold"},{"domain":"google.edu.gm","status":"new"},{"domain":"google.jobs.np","status":"on-hold"},{"domain":"google008.vip","status":"new"},{"domain":"google33.vip","status":"new"},{"domain":"google36.vip","status":"new"},{"domain":"google4.top","status":"on-hold"},{"domain":"google456.vip","status":"new"},{"domain":"google567.vip","status":"new"},{"domain":"google666.vip","status":"new"},{"domain":"google78.vip","status":"new"},{"domain":"google89.vip","status":"new"},{"domain":"google8xbet.com","status":"new"},{"domain":"google999.vip","status":"new"},{"domain":"googleaccountmanagement.com","status":"new"},{"domain":"googleadsindian.com","status":"on-hold"},{"domain":"googleaed.com","status":"new"},{"domain":"googleaijobs.com","status":"on-hold"},{"domain":"googleantitrust.org","status":"on-hold"},{"domain":"googlearab.com","status":"on-hold"},{"domain":"googleconnect.ru","status":"on-hold"},{"domain":"googleegav.icu","status":"on-hold"},{"domain":"googleegax.icu","status":"on-hold"},{"domain":"googleez555.com","status":"new"},{"domain":"googleez556.com","status":"new"},{"domain":"googleez557.com","status":"new"},{"domain":"googleez558.com","status":"new"},{"domain":"googlefix.online","status":"new"},{"domain":"googleflux.ru","status":"on-hold"},{"domain":"googlehj.com","status":"on-hold"},{"domain":"googleht.ru","status":"on-hold"},{"domain":"googlehz.com","status":"on-hold"},{"domain":"googleinfo.ir","status":"on-hold"},{"domain":"googleip.vip","status":"new"},{"domain":"googlejn.com","status":"on-hold"},{"domain":"googlelq.com","status":"on-hold"},{"domain":"googlemarketing.eu","status":"on-hold"},{"domain":"googleme.cc","status":"new"},{"domain":"googlemh.ru","status":"on-hold"},{"domain":"googlemkpg777app.com","status":"new"},{"domain":"googlemybusines.com","status":"on-hold"},{"domain":"googlenet.org","status":"new"},{"domain":"googlenet.vip","status":"new"},{"domain":"googlenk.com","status":"on-hold"},{"domain":"googlenow.club","status":"new"},{"domain":"googleorg.vip","status":"new"},{"domain":"googlepalcy.com","status":"new"},{"domain":"googlepaldy.com","status":"new"},{"domain":"googlepalgy.com","status":"new"},{"domain":"googlepaljy.com","status":"new"},{"domain":"googlepalky.com","status":"new"},{"domain":"googlepalmy.com","status":"new"},{"domain":"googlepalny.com","status":"new"},{"domain":"googlepalpy.com","status":"new"},{"domain":"googlepalqy.com","status":"new"},{"domain":"googlepalsy.com","status":"new"},{"domain":"googlepalty.com","status":"new"},{"domain":"googlepalvy.com","status":"new"},{"domain":"googlepalwy.com","status":"new"},{"domain":"googlepalxy.com","status":"new"},{"domain":"googlepalzy.com","status":"new"},{"domain":"googlepicasa2.org.cn","status":"on-hold"},{"domain":"googlepixel-design.com","status":"new"},{"domain":"googleplay-gamingdemo48182491.pro","status":"new"},{"domain":"googleqv.com","status":"on-hold"},{"domain":"googleqy.com","status":"on-hold"},{"domain":"googler.ro","status":"new"},{"domain":"googlern.com","status":"on-hold"},{"domain":"googles.pro","status":"on-hold"},{"domain":"googlesfyz.com","status":"new"},{"domain":"googlesfyzq.com","status":"new"},{"domain":"googlesite48h.com.br","status":"new"},{"domain":"googlesitemap.cn","status":"on-hold"},{"domain":"googlesupports.com","status":"on-hold"},{"domain":"googletraicay777.com","status":"new"},{"domain":"googletraicay999.com","status":"new"},{"domain":"googlevf.com","status":"on-hold"},{"domain":"googlevq.com","status":"on-hold"},{"domain":"googlevz.com","status":"on-hold"},{"domain":"googlewu.com","status":"on-hold"},{"domain":"googlexn.com","status":"on-hold"},{"domain":"googleyzq.com","status":"new"},{"domain":"googlezb.com","status":"on-hold"},{"domain":"httpswwwgooglecomsearchqwacogoldbuyers.com","status":"new"},{"domain":"internalgooglesitescrubbedbyus.com","status":"on-hold"},{"domain":"milanogooglestudio.eu","status":"on-hold"},{"domain":"mygoogles.biz","status":"on-hold"},{"domain":"nogoogle.in","status":"new"},{"domain":"okgoogle.info","status":"on-hold"},{"domain":"okgoogle.org","status":"on-hold"},{"domain":"okgoogle.world","status":"on-hold"},{"domain":"playgooglego.com","status":"on-hold"},{"domain":"rankingoogle.com.au","status":"new"},{"domain":"scriptasyncsrchttpswwwgoogle.com","status":"new"},{"domain":"searchgoogle.in","status":"on-hold"},{"domain":"shop4google.com","status":"new"},{"domain":"sitesgoogle.org","status":"new"},{"domain":"to-google.cn","status":"new"},{"domain":"trust-google.com","status":"new"}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:12:59 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=omurp3j2mko6g7f11k5tf2co58ijp18i8mq50fanmommntm5s4fqj1jta1mgjpgcforn3pqjl3pcfrg17fu49sdrq1u90bo07jlh3nf;
+        expires=Sun, 05-Oct-2025 15:12:59 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '126164'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

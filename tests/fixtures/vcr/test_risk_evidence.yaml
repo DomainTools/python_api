@@ -327,4 +327,52 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/risk/evidence/?app_name=python_wrapper&app_version=2.5.1&domain=google.com
+  response:
+    content: '{"response":{"domain":"google.com","risk_score":0,"components":[{"name":"zerolist","risk_score":0}]}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 05 Sep 2025 15:14:13 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=mfbh8ge3ujn70j3rv775c2luunp9ugb6upke8cdrqama1m8vp21a8uvoi85ratnq7crdshokmg500d78rmdtq9s6aq4gmpmp1fcoed5;
+        expires=Sun, 05-Oct-2025 15:14:13 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '33183'
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

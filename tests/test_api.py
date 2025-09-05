@@ -473,10 +473,10 @@ def test_iris_detect_watched_domains():
     assert detect_results["count"] >= 0
 
     detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
-    assert len(detect_results["watchlist_domains"]) == 2
+    assert len(detect_results["watchlist_domains"]) == 3
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results["count"] == 1
+    assert detect_results["count"] == 2
 
 
 @vcr.use_cassette
