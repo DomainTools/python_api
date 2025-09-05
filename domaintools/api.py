@@ -1217,7 +1217,7 @@ class API(object):
             kwargs.pop("headers", None)
 
         return self._results(
-            f"domain-risk-({source})",
+            f"domain-risk-feed-({source})",
             f"v1/{endpoint}/domainrisk/",
             response_path=(),
             cls=FeedsResults,
