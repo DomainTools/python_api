@@ -521,7 +521,6 @@ class API(object):
 
         results["results"] = filtered_results
         results["results_count"] = len(filtered_results)
-        results["total_count"] = len(filtered_results)
 
         return results
 
@@ -657,7 +656,6 @@ class API(object):
 
         results["results"] = filtered_results
         results["results_count"] = len(filtered_results)
-        results["total_count"] = len(filtered_results)
 
         return results
 
