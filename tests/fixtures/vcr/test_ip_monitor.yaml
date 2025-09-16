@@ -380,4 +380,57 @@ interactions:
       - '98949'
     http_version: HTTP/1.1
     status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=2.5.2&days_back=0&page=1&query=65.55.53.233
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAyWMQQqFMBBD7zJrlWlLBb2KfGSwRQrVFjt/Jd7dgJBFyOPlpiu2Ws4Wab4ppyMp
+        zYaZOwqiGMmy9T1PvRmpo1RXCQFKAxn94BE3WOfAtKhkzIxeZYdrvrJu5X/iFp+S46Vwl9/zvDDD
+        R0J7AAAA
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 16 Sep 2025 13:33:07 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=oe9q74cgks27q96df3g66g7dkqobvb9bodskcjo19id56qvdbbigsca8rtslh93bps5g8isvugvf79dr0iol3r9u4n5i2n0o77c9cv9;
+        expires=Thu, 16-Oct-2025 13:33:07 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '269824'
+    status:
+      code: 200
+      message: OK
 version: 1

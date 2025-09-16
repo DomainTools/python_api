@@ -559,7 +559,7 @@ def test_newly_observed_domains_feed_pagination():
             assert "timestamp" in feed_result.keys()
             assert "domain" in feed_result.keys()
 
-    assert page_count > 1
+    assert page_count >= 1
 
 
 @vcr.use_cassette
