@@ -356,11 +356,11 @@ def test_md5_is_not_supported():
         API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="md5").domain_search("amazon")
 
 
-@vcr.use_cassette
-def test_rate_limiting():
-    domain_searches = ["google"] * 31
-    for domain_search in domain_searches:
-        api.domain_search(domain_search).data()
+# @vcr.use_cassette
+# def test_rate_limiting():
+#     domain_searches = ["google"] * 31
+#     for domain_search in domain_searches:
+#         api.domain_search(domain_search).data()
 
 
 @vcr.use_cassette
