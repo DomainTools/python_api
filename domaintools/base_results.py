@@ -75,7 +75,7 @@ class Results(MutableMapping, MutableSequence):
 
         return wait_for
 
-    def _get_session_params_and_headers_and_headers(self):
+    def _get_session_params_and_headers(self):
         headers = {}
         parameters = deepcopy(self.kwargs)
         is_rttf_product = self.product in RTTF_PRODUCTS_LIST
@@ -97,7 +97,7 @@ class Results(MutableMapping, MutableSequence):
     def _make_request(self):
 
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
-            session_params_and_headers = self._get_session_params_and_headers_and_headers()
+            session_params_and_headers = self._get_session_params_and_headers()
             headers = session_params_and_headers.get("headers")
             if self.product in [
                 "iris-investigate",

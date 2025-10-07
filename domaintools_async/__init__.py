@@ -43,7 +43,7 @@ class AsyncResults(Results):
         return self.__awaitable__().__await__()
 
     async def _make_async_request(self, session):
-        session_params_and_headers = self._get_session_params_and_headers_and_headers()
+        session_params_and_headers = self._get_session_params_and_headers()
         headers = session_params_and_headers.get("headers")
         if self.product in ["iris-investigate", "iris-enrich", "iris-detect-escalate-domains"]:
             post_data = self.kwargs.copy()
