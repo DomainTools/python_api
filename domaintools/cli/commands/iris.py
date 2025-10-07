@@ -18,19 +18,11 @@ from domaintools.cli import constants as c
 def iris_investigate(
     ctx: typer.Context,
     domains: str = typer.Option(None, "-d", "--domains", help="Domains to use."),
-    data_updated_after: str = typer.Option(
-        None, "--data-updated-after", help="The data updated after."
-    ),
-    expiration_date: str = typer.Option(
-        None, "--expiration-date", help="The expiration date."
-    ),
+    data_updated_after: str = typer.Option(None, "--data-updated-after", help="The data updated after."),
+    expiration_date: str = typer.Option(None, "--expiration-date", help="The expiration date."),
     create_date: str = typer.Option(None, "--create-date", help="The create date."),
-    active: bool = typer.Option(
-        None, "--active", help="The domains that are in active state"
-    ),
-    search_hash: str = typer.Option(
-        None, "--search-hash", help="The search hash to use"
-    ),
+    active: bool = typer.Option(None, "--active", help="The domains that are in active state"),
+    search_hash: str = typer.Option(None, "--search-hash", help="The search hash to use"),
     src_file: str = typer.Option(
         None,
         "-s",
@@ -59,13 +51,16 @@ def iris_investigate(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
 ):
 
@@ -74,9 +69,7 @@ def iris_investigate(
     if "ssl_hash" in kwargs:
         # silently remove the ':' if present.
         ssl_hash_value = kwargs["ssl_hash"]
-        kwargs["ssl_hash"] = remove_special_char_in_string(
-            ssl_hash_value, special_char=":"
-        )
+        kwargs["ssl_hash"] = remove_special_char_in_string(ssl_hash_value, special_char=":")
 
     DTCLICommand.run(name=c.IRIS_INVESTIGATE, params=ctx.params, **kwargs)
 
@@ -117,13 +110,16 @@ def iris_enrich(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
 ):
     DTCLICommand.run(name=c.IRIS_ENRICH, params=ctx.params)
@@ -142,9 +138,7 @@ def iris(
     nameserver: str = typer.Option(None, "--nameserver", help="Nameserver to use."),
     registrar: str = typer.Option(None, "--registrar", help="Registrar to use."),
     registrant: str = typer.Option(None, "--registrant", help="Registrant to use."),
-    registrant_org: str = typer.Option(
-        None, "--registrant-org", help="Registrant Org to use."
-    ),
+    registrant_org: str = typer.Option(None, "--registrant-org", help="Registrant Org to use."),
     user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
     key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
     creds_file: str = typer.Option(
@@ -166,13 +160,16 @@ def iris(
         help="Output format in {'list', 'json', 'xml', 'html'}",
         callback=DTCLICommand.validate_format_input,
     ),
-    out_file: typer.FileTextWrite = typer.Option(
-        sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"
-    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
     no_verify_ssl: bool = typer.Option(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
 ):
     params = ctx.params.copy()

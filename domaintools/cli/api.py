@@ -180,6 +180,7 @@ class DTCLICommand:
             out_file = params.pop("out_file", sys.stdout)
             verify_ssl = params.pop("no_verify_ssl", False)
             always_sign_api_key = params.pop("no_sign_api_key", False)
+            header_authentication = params.pop("no_header_authentication", False)
             source = None
 
             if "src_file" in params:
@@ -214,6 +215,7 @@ class DTCLICommand:
                     verify_ssl=verify_ssl,
                     rate_limit=rate_limit,
                     always_sign_api_key=always_sign_api_key,
+                    header_authentication=header_authentication,
                 )
                 dt_api_func = getattr(dt_api, name)
 

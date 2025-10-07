@@ -27,6 +27,16 @@ def feeds_nad(
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
     output_format: str = typer.Option(
         "jsonl",
         "-f",
@@ -96,6 +106,16 @@ def feeds_nod(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
     output_format: str = typer.Option(
         "jsonl",
@@ -167,6 +187,16 @@ def feeds_domainrdap(
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
     endpoint: str = typer.Option(
         Endpoint.FEED.value,
         "-e",
@@ -224,6 +254,16 @@ def feeds_domaindiscovery(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
     output_format: str = typer.Option(
         "jsonl",
@@ -295,6 +335,16 @@ def feeds_noh(
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
     output_format: str = typer.Option(
         "jsonl",
         "-f",
@@ -365,6 +415,16 @@ def feeds_domainhotlist(
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
     ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
+    ),
     output_format: str = typer.Option(
         "jsonl",
         "-f",
@@ -434,6 +494,16 @@ def feeds_realtime_domain_risk(
         False,
         "--no-verify-ssl",
         help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+    no_sign_api_key: bool = typer.Option(
+        False,
+        "--no-sign-api-key",
+        help="Skip signing of api key",
+    ),
+    no_header_authentication: bool = typer.Option(
+        False,
+        "--no-header-auth",
+        help="Don't use header authentication",
     ),
     output_format: str = typer.Option(
         "jsonl",
