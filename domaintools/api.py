@@ -147,15 +147,12 @@ class API(object):
 
     def handle_api_key(self, is_rttf_product, path, parameters):
         if self.https and not self.always_sign_api_key:
-            if self.header_authentication:
-                parameters["X-Api-Key"] = self.key
-            else:
-                parameters["api_key"] = self.key
+            parameters["api_key"] = self.key
         else:
             if is_rttf_product:
                 # As per requirement in IDEV-2272, raise this error when the user explicitly sets signing of API key for RTTF endpoints
                 raise ValueError("Real Time Threat Feeds do not support signed API keys.")
-            elif self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
+            if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
                 signing_hash = eval(self.key_sign_hash)
             else:
                 raise ValueError(
