@@ -12527,4 +12527,64 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.5.2&header_authentication=false
+  response:
+    body:
+      string: '{"timestamp":"2025-10-06T16:30:35Z","domain":"futatriton.ddns.net"}
+
+        {"timestamp":"2025-10-06T16:30:35Z","domain":"saetaproyectos.com"}
+
+        {"timestamp":"2025-10-06T16:30:35Z","domain":"francepoulet.com"}
+
+        {"timestamp":"2025-10-06T16:30:36Z","domain":"avoid.25u.com"}
+
+        {"timestamp":"2025-10-06T16:30:36Z","domain":"olwb7g1m.com"}
+
+        {"timestamp":"2025-10-06T16:30:36Z","domain":"vquno.cc"}
+
+        {"timestamp":"2025-10-06T16:30:36Z","domain":"afuhara.top"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 06 Oct 2025 16:31:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=ri6pn0o9dg9gdbaaci29a6fa3si5jur3n3i4p7jagu7po2ul3aa1iinhj3dot8uru6og1bipdkqqur4hgvpotr3ngqb60umv57gbu15;
+        expires=Wed, 05-Nov-2025 16:31:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=297dfe9cd5e97958ae6e2e417daaac62; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
 version: 1

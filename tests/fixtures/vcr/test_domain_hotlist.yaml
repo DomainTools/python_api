@@ -11482,4 +11482,74 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.5.2&header_authentication=false
+  response:
+    body:
+      string: '{"timestamp":"2025-10-06T16:41:00Z","domain":"cnt72.top","phishing_risk":39,"malware_risk":1,"spam_risk":42,"proximity_risk":71,"overall_risk":71,"expires":"2025-10-06T18:09:38Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"lkzmqwf.cn","phishing_risk":88,"malware_risk":52,"spam_risk":96,"proximity_risk":65,"overall_risk":96,"expires":"2025-10-07T10:50:46Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"f64751857.com","phishing_risk":91,"malware_risk":97,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-10-07T11:18:36Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"7n6rzvnn.top","phishing_risk":98,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-10-07T10:27:18Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"renyixinxi.com","phishing_risk":null,"malware_risk":null,"spam_risk":null,"proximity_risk":82,"overall_risk":82,"expires":"2025-10-07T13:41:56Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"446gq.top","phishing_risk":98,"malware_risk":98,"spam_risk":98,"proximity_risk":100,"overall_risk":100,"expires":"2025-10-06T20:12:15Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"tergeo.top","phishing_risk":90,"malware_risk":49,"spam_risk":60,"proximity_risk":91,"overall_risk":91,"expires":"2025-10-07T10:38:09Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"greenw10.store","phishing_risk":85,"malware_risk":98,"spam_risk":71,"proximity_risk":91,"overall_risk":98,"expires":"2025-10-07T09:19:14Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"fjz524373.cn","phishing_risk":87,"malware_risk":1,"spam_risk":88,"proximity_risk":100,"overall_risk":100,"expires":"2025-10-07T16:14:10Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"huanonglv.com","phishing_risk":60,"malware_risk":36,"spam_risk":84,"proximity_risk":82,"overall_risk":84,"expires":"2025-10-07T16:13:19Z"}
+
+        {"timestamp":"2025-10-06T16:41:00Z","domain":"antikeric.com","phishing_risk":99,"malware_risk":96,"spam_risk":72,"proximity_risk":89,"overall_risk":99,"expires":"2025-10-07T08:55:43Z"}
+
+        {"timestamp":"2025-10-06T16:41:59Z","domain":"iu03f.shop","phishing_risk":12,"malware_risk":5,"spam_risk":5,"proximity_risk":72,"overall_risk":72,"expires":"2025-10-07T08:55:56Z"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Mon, 06 Oct 2025 16:42:00 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=etn9r27mg5psd4tiso4sco74m45e0skqeolu6ko6f7eg7kr5ksmk8cfi6dojhpqdqj1f5g6844vvvtpat1clnfl6qa2d7hdaqeq06l1;
+        expires=Wed, 05-Nov-2025 16:41:59 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=297dfe9cd5e97958ae6e2e417daaac62; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
 version: 1
