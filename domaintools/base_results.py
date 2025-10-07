@@ -9,7 +9,7 @@ from copy import deepcopy
 from datetime import datetime
 from httpx import Client
 
-from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import RTTF_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -107,7 +107,7 @@ class Results(MutableMapping, MutableSequence):
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
                 return session.patch(url=self.url, json=patch_data)
-            elif self.product in FEEDS_PRODUCTS_LIST:
+            elif self.product in RTTF_PRODUCTS_LIST:
                 session_params = self._get_session_params()
                 parameters = session_params.get("parameters")
                 headers = session_params.get("headers")
@@ -170,7 +170,7 @@ class Results(MutableMapping, MutableSequence):
 
     def setStatus(self, code, response=None):
         self._status = code
-        if code == 200 or (self.product in FEEDS_PRODUCTS_LIST and code == 206):
+        if code == 200 or (self.product in RTTF_PRODUCTS_LIST and code == 206):
             return
 
         reason = None

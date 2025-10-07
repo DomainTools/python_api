@@ -9,7 +9,7 @@ from typing import Optional, Dict, Tuple
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from domaintools.api import API
-from domaintools.constants import Endpoint, FEEDS_PRODUCTS_LIST, OutputFormat
+from domaintools.constants import Endpoint, RTTF_PRODUCTS_LIST, OutputFormat
 from domaintools.cli.utils import get_file_extension
 from domaintools.exceptions import ServiceException
 from domaintools._version import current as version
@@ -110,7 +110,7 @@ class DTCLICommand:
     def _get_formatted_output(cls, cmd_name: str, response, out_format: str = "json"):
         if cmd_name in ("available_api_calls",):
             return "\n".join(response)
-        if response.product in FEEDS_PRODUCTS_LIST:
+        if response.product in RTTF_PRODUCTS_LIST:
             return "\n".join([data for data in response.response()])
         return str(getattr(response, out_format) if out_format != "list" else response.as_list())
 
@@ -229,7 +229,7 @@ class DTCLICommand:
 
                 if isinstance(out_file, _io.TextIOWrapper):
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    if response.product in FEEDS_PRODUCTS_LIST:
+                    if response.product in RTTF_PRODUCTS_LIST:
                         print(output)
                     else:
                         print(response)

@@ -23,7 +23,7 @@ ENDPOINT_TO_SOURCE_MAP = {
     Endpoint.DOWNLOAD.value: Source.S3,
 }
 
-FEEDS_PRODUCTS_LIST = [
+RTTF_PRODUCTS_LIST = [
     "newly-active-domains-feed-(api)",
     "newly-active-domains-feed-(s3)",
     "newly-observed-domains-feed-(api)",
