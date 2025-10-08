@@ -90,7 +90,7 @@ class Results(MutableMapping, MutableSequence):
 
         if self.api.header_authentication:
             header_key_for_api_key = "X-Api-Key" if is_rttf_product else "X-API-Key"
-            headers[header_key_for_api_key] = parameters.pop("api_key", None)
+            headers[header_key_for_api_key] = self.api.key
 
         return {"parameters": parameters, "headers": headers}
 
