@@ -32,8 +32,8 @@ def feeds_nad(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -112,8 +112,8 @@ def feeds_nod(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -192,8 +192,8 @@ def feeds_domainrdap(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -260,8 +260,8 @@ def feeds_domaindiscovery(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -340,8 +340,8 @@ def feeds_noh(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -420,8 +420,8 @@ def feeds_domainhotlist(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),
@@ -500,8 +500,8 @@ def feeds_realtime_domain_risk(
         "--no-sign-api-key",
         help="Skip signing of api key",
     ),
-    header_authentication: bool = typer.Option(
-        True,
+    no_header_authentication: bool = typer.Option(
+        False,
         "--no-header-auth",
         help="Don't use header authentication",
     ),

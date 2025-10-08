@@ -513,7 +513,7 @@ def test_limit_exceeded():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
-    results = feeds_api.nod(after="-60", header_authentication=False)
+    results = feeds_api.nod(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -529,7 +529,7 @@ def test_newly_observed_domains_feed():
 
 @vcr.use_cassette
 def test_newly_observed_hosts_feed():
-    results = feeds_api.noh(after="-60", header_authentication=False)
+    results = feeds_api.noh(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -564,7 +564,7 @@ def test_newly_observed_domains_feed_pagination():
 
 @vcr.use_cassette
 def test_newly_active_domains_feed():
-    results = feeds_api.nad(after="-60", header_authentication=False)
+    results = feeds_api.nad(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -601,7 +601,7 @@ def test_domainrdap_feed():
 
 @vcr.use_cassette
 def test_domain_discovery_feed():
-    results = feeds_api.domaindiscovery(after="-60", header_authentication=False)
+    results = feeds_api.domaindiscovery(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -677,7 +677,7 @@ def test_feeds_endpoint_should_raise_error_if_asked_csv_format_for_download_api(
 
 @vcr.use_cassette
 def test_realtime_domain_risk():
-    results = feeds_api.realtime_domain_risk(after="-60", header_authentication=False)
+    results = feeds_api.realtime_domain_risk(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -697,7 +697,7 @@ def test_realtime_domain_risk():
 
 @vcr.use_cassette
 def test_domain_hotlist():
-    results = feeds_api.domainhotlist(after="-60", header_authentication=False)
+    results = feeds_api.domainhotlist(after="-60")
     for response in results.response():
         assert results.status == 200
 
@@ -713,3 +713,12 @@ def test_domain_hotlist():
             assert "malware_risk" in feed_result.keys()
             assert "proximity_risk" in feed_result.keys()
             assert "overall_risk" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
+    feeds_api.always_sign_api_key = True
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery(after="-60")
+
+    assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."

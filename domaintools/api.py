@@ -6,7 +6,7 @@ from typing import Union
 import re
 import ssl
 
-from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, FEEDS_PRODUCTS_LIST, OutputFormat
+from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, RTTF_PRODUCTS_LIST, OutputFormat
 from domaintools._version import current as version
 from domaintools.results import (
     GroupedIterable,
@@ -63,7 +63,8 @@ class API(object):
         verify_ssl=True,
         rate_limit=True,
         proxy_url=None,
-        always_sign_api_key=True,
+        always_sign_api_key=None,
+        header_authentication=None,
         key_sign_hash="sha256",
         app_name="python_wrapper",
         app_version=version,
@@ -83,6 +84,7 @@ class API(object):
         self.proxy_url = proxy_url
         self.extra_request_params = {}
         self.always_sign_api_key = always_sign_api_key
+        self.header_authentication = header_authentication
         self.key_sign_hash = key_sign_hash
         self.default_parameters["app_name"] = app_name
         self.default_parameters["app_version"] = app_version
@@ -129,19 +131,27 @@ class API(object):
         uri = "/".join((self._rest_api_url, path.lstrip("/")))
         parameters = self.default_parameters.copy()
         parameters["api_username"] = self.username
-        header_authentication = kwargs.pop("header_authentication", True)  # Used only by Real-Time Threat Intelligence Feeds endpoints for now
-        self.handle_api_key(product, path, parameters, header_authentication)
+        is_rttf_product = product in RTTF_PRODUCTS_LIST
+        self._handle_api_key_parameters(is_rttf_product)
+        self.handle_api_key(is_rttf_product, path, parameters)
         parameters.update({key: str(value).lower() if value in (True, False) else value for key, value in kwargs.items() if value is not None})
 
         return cls(self, product, uri, **parameters)
 
-    def handle_api_key(self, product, path, parameters, header_authentication):
+    def _handle_api_key_parameters(self, is_rttf_product):
+        if self.always_sign_api_key is None:
+            self.always_sign_api_key = not is_rttf_product
+
+        if self.header_authentication is None:
+            self.header_authentication = is_rttf_product
+
+    def handle_api_key(self, is_rttf_product, path, parameters):
         if self.https and not self.always_sign_api_key:
-            if product in FEEDS_PRODUCTS_LIST and header_authentication:
-                parameters["X-Api-Key"] = self.key
-            else:
-                parameters["api_key"] = self.key
+            parameters["api_key"] = self.key
         else:
+            if is_rttf_product:
+                # As per requirement in IDEV-2272, raise this error when the user explicitly sets signing of API key for RTTF endpoints
+                raise ValueError("Real Time Threat Feeds do not support signed API keys.")
             if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
                 signing_hash = eval(self.key_sign_hash)
             else:

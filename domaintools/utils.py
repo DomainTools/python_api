@@ -183,7 +183,3 @@ def validate_feeds_parameters(params):
     endpoint = params.get("endpoint")
     if endpoint == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
-
-    if endpoint == Endpoint.DOWNLOAD.value and params.get("header_authentication", True):
-        # For download endpoint, header_authentication will be False by default
-        params["header_authentication"] = False

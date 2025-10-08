@@ -9,7 +9,7 @@ from copy import deepcopy
 from datetime import datetime
 from httpx import Client
 
-from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import RTTF_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -75,26 +75,30 @@ class Results(MutableMapping, MutableSequence):
 
         return wait_for
 
-    def _get_session_params(self):
-        parameters = deepcopy(self.kwargs)
-        parameters.pop("output_format", None)
-        parameters.pop(
-            "format", None
-        )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+    def _get_session_params_and_headers(self):
         headers = {}
-        if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
-            parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
-            headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
+        parameters = deepcopy(self.kwargs)
+        is_rttf_product = self.product in RTTF_PRODUCTS_LIST
+        if is_rttf_product:
+            parameters.pop("output_format", None)
+            parameters.pop(
+                "format", None
+            )  # For some unknownn reasons, even if "format" is not included in the cli params for feeds endpoint, it is being populated thus we need to remove it. Happens only if using CLI.
+            if self.kwargs.get("output_format", OutputFormat.JSONL.value) == OutputFormat.CSV.value:
+                parameters["headers"] = int(bool(self.kwargs.get("headers", False)))
+                headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
 
-        header_api_key = parameters.pop("X-Api-Key", None)
-        if header_api_key:
-            headers["X-Api-Key"] = header_api_key
+        if self.api.header_authentication:
+            header_key_for_api_key = "X-Api-Key" if is_rttf_product else "X-API-Key"
+            headers[header_key_for_api_key] = parameters.pop("api_key", None)
 
         return {"parameters": parameters, "headers": headers}
 
     def _make_request(self):
 
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
+            session_params_and_headers = self._get_session_params_and_headers()
+            headers = session_params_and_headers.get("headers")
             if self.product in [
                 "iris-investigate",
                 "iris-enrich",
@@ -102,18 +106,14 @@ class Results(MutableMapping, MutableSequence):
             ]:
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
-                return session.post(url=self.url, data=post_data)
+                return session.post(url=self.url, data=post_data, headers=headers)
             elif self.product in ["iris-detect-manage-watchlist-domains"]:
                 patch_data = self.kwargs.copy()
                 patch_data.update(self.api.extra_request_params)
-                return session.patch(url=self.url, json=patch_data)
-            elif self.product in FEEDS_PRODUCTS_LIST:
-                session_params = self._get_session_params()
-                parameters = session_params.get("parameters")
-                headers = session_params.get("headers")
-                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
+                return session.patch(url=self.url, json=patch_data, headers=headers)
             else:
-                return session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
+                parameters = session_params_and_headers.get("parameters")
+                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
 
     def _get_results(self):
         wait_for = self._wait_time()
@@ -170,7 +170,7 @@ class Results(MutableMapping, MutableSequence):
 
     def setStatus(self, code, response=None):
         self._status = code
-        if code == 200 or (self.product in FEEDS_PRODUCTS_LIST and code == 206):
+        if code == 200 or (self.product in RTTF_PRODUCTS_LIST and code == 206):
             return
 
         reason = None

@@ -6,7 +6,7 @@ from copy import deepcopy
 from httpx import AsyncClient
 
 from domaintools.base_results import Results
-from domaintools.constants import FEEDS_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import RTTF_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
 from domaintools.exceptions import ServiceUnavailableException
 
 
@@ -43,21 +43,19 @@ class AsyncResults(Results):
         return self.__awaitable__().__await__()
 
     async def _make_async_request(self, session):
+        session_params_and_headers = self._get_session_params_and_headers()
+        headers = session_params_and_headers.get("headers")
         if self.product in ["iris-investigate", "iris-enrich", "iris-detect-escalate-domains"]:
             post_data = self.kwargs.copy()
             post_data.update(self.api.extra_request_params)
-            results = await session.post(url=self.url, data=post_data)
+            results = await session.post(url=self.url, data=post_data, headers=headers)
         elif self.product in ["iris-detect-manage-watchlist-domains"]:
             patch_data = self.kwargs.copy()
-            patch_data.update(self.api.extra_request_params)
+            patch_data.update(self.api.extra_request_params, headers=headers)
             results = await session.patch(url=self.url, json=patch_data)
-        elif self.product in FEEDS_PRODUCTS_LIST:
-            session_params = self._get_session_params()
-            parameters = session_params.get("parameters")
-            headers = session_params.get("headers")
-            results = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
         else:
-            results = await session.get(url=self.url, params=self.kwargs, **self.api.extra_request_params)
+            parameters = session_params_and_headers.get("parameters")
+            results = await session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
         if results:
             self.setStatus(results.status_code, results)
             if self.kwargs.get("format", "json") == "json":
