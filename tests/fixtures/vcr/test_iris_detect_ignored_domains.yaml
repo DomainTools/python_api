@@ -876,4 +876,116 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.5.3&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WV227iMBCGX6XybSGykzgHX22lSiu12pOEqNiqikxiwDSJWduhtIh375hAl1Yt
+        lPaiiAtrZuwZ/v/DXqI7bvNJKY3NClVxWRvErpfIWG4FYkiOa6VFgTqozUKIV/xB1d3G0MDLVQUp
+        V9wYl8qtnAtXLE2u5gJ2ZkV7kI992sVJl5AewczHLEg8HIUY479Qn094PX6lOOwRwmjIcOTh9ccV
+        a2luMzhfQynBeDeQPY0yasryWW0Gs85ULWoL6SWaabWQlbT3mzPsRAtuMwiPZCnWFRNpJrIeI5Ym
+        HVTx8o67jmkMP3jGK8SSsIPEXBaiziF+vVHopOaVk0CLMYiquYa1C50YoUERdLNawWmLTCwgDaOM
+        eGkE9C8LmLrVU7rlgNNbfXZ2PvgNEWFyXnIr1dqeGzhA1dIqncnCBdD55a/h4qI/HVwgSHJjwDeQ
+        c3jvLKytGOt286kVxpJv7aRWqdJsLHza8opdAQsoiLRx4BRjhjFadfZCMpc5jNeiwg0v5q6PN9RH
+        0RJ3/biHI+bHAIxH0mQfLdviYA8twedhCQ6wQqIdVvxkywp5hspLBqxudhFodXqiwP+Xfv9KCkDZ
+        pEcoo4SF4VEUTHk1bFoIJP8gAdS19gEC6sVxfICAtjgBYN+6L+jnrwt6gACyQ0D8PgBeXgI7BPR5
+        rIOH/p/Z1ZcSsFaWBsD3UQS05hsQaipy2xXN0U9G2ztk8A1TL47egUDo3hc/fQOBzxMQ7AeA7vgf
+        fMz/rfk/rmaXOhr8pF/79wdNI4ZTRtMX5kMfqywvQaumtojBi/h/pUYjI2AJN2bplFu/tKtH0hWG
+        7XIIAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 12:55:27 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=74ijidbleig5s1qnsgbl76e9n4eknsbhet6g338keo7569ciunm3789ep1luqjiatfh0glpqds95nl6l8thduoa5gq89bff7hhav7it;
+        expires=Fri, 07-Nov-2025 12:55:26 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.5.3&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WV227iMBCGX6XybSGykzgHX22lSiu12pOEqNiqikxiwDSJWduhtIh375hAl1Yt
+        lPaiiAtrZuwZ/v/DXqI7bvNJKY3NClVxWRvErpfIWG4FYkiOa6VFgTqozUKIV/xB1d3G0MDLVQUp
+        V9wYl8qtnAtXLE2u5gJ2ZkV7kI992sVJl5AewczHLEg8HIUY479Qn094PX6lOOwRwmjIcOTh9ccV
+        a2luMzhfQynBeDeQPY0yasryWW0Gs85ULWoL6SWaabWQlbT3mzPsRAtuMwiPZCnWFRNpJrIeI5Ym
+        HVTx8o67jmkMP3jGK8SSsIPEXBaiziF+vVHopOaVk0CLMYiquYa1C50YoUERdLNawWmLTCwgDaOM
+        eGkE9C8LmLrVU7rlgNNbfXZ2PvgNEWFyXnIr1dqeGzhA1dIqncnCBdD55a/h4qI/HVwgSHJjwDeQ
+        c3jvLKytGOt286kVxpJv7aRWqdJsLHza8opdAQsoiLRx4BRjhjFadfZCMpc5jNeiwg0v5q6PN9RH
+        0RJ3/biHI+bHAIxH0mQfLdviYA8twedhCQ6wQqIdVvxkywp5hspLBqxudhFodXqiwP+Xfv9KCkDZ
+        pEcoo4SF4VEUTHk1bFoIJP8gAdS19gEC6sVxfICAtjgBYN+6L+jnrwt6gACyQ0D8PgBeXgI7BPR5
+        rIOH/p/Z1ZcSsFaWBsD3UQS05hsQaipy2xXN0U9G2ztk8A1TL47egUDo3hc/fQOBzxMQ7AeA7vgf
+        fMz/rfk/rmaXOhr8pF/79wdNI4ZTRtMX5kMfqywvQaumtojBi/h/pUYjI2AJN2bplFu/tKtH0hWG
+        7XIIAAA=
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 08 Oct 2025 12:55:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=rcsb477r1cnvke3r319777be6ghgnjpbkhct71eu362l7sahv5fm0sa0hqc060i2k1qt4gd2f59cm0nld7n2ehmdvgvh95infa17so9;
+        expires=Fri, 07-Nov-2025 12:55:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
 version: 1

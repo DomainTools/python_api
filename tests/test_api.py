@@ -5,6 +5,7 @@ from os import environ
 import json
 import pytest
 
+from datetime import datetime, timedelta, timezone
 from inspect import isgenerator
 
 from domaintools import API, exceptions
@@ -476,7 +477,7 @@ def test_iris_detect_watched_domains():
     assert len(detect_results["watchlist_domains"]) == 3
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results["count"] == 2
+    assert detect_results["count"] == 1
 
 
 @vcr.use_cassette
@@ -513,7 +514,7 @@ def test_limit_exceeded():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
-    results = feeds_api.nod(after="-60")
+    results = feeds_api.nod(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -529,7 +530,7 @@ def test_newly_observed_domains_feed():
 
 @vcr.use_cassette
 def test_newly_observed_hosts_feed():
-    results = feeds_api.noh(after="-60")
+    results = feeds_api.noh(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -545,7 +546,10 @@ def test_newly_observed_hosts_feed():
 
 @vcr.use_cassette
 def test_newly_observed_domains_feed_pagination():
-    results = feeds_api.nod(sessionID="integrations-testing", after="2025-01-16T10:20:00Z")
+    now_utc = datetime.now(timezone.utc)
+    two_days_ago = now_utc - timedelta(days=2)
+    after = two_days_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
+    results = feeds_api.nod(sessionID="integrations-testing", after=after)
     page_count = 0
     for response in results.response():
         rows = response.strip().split("\n")
@@ -564,7 +568,7 @@ def test_newly_observed_domains_feed_pagination():
 
 @vcr.use_cassette
 def test_newly_active_domains_feed():
-    results = feeds_api.nad(after="-60")
+    results = feeds_api.nad(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -580,7 +584,7 @@ def test_newly_active_domains_feed():
 
 @vcr.use_cassette
 def test_domainrdap_feed():
-    results = feeds_api.domainrdap(after="-60", top=2, header_authenticationn=False)
+    results = feeds_api.domainrdap(after="-60", top=2)
     for response in results.response():
         assert results.status == 200
 
@@ -601,7 +605,7 @@ def test_domainrdap_feed():
 
 @vcr.use_cassette
 def test_domain_discovery_feed():
-    results = feeds_api.domaindiscovery(after="-60")
+    results = feeds_api.domaindiscovery(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -617,7 +621,7 @@ def test_domain_discovery_feed():
 
 @vcr.use_cassette
 def test_domainrdap_feed_not_api_header_auth():
-    results = feeds_api.domainrdap(after="-60", sessiondID="integrations-testing", top=5, header_authenticationn=False)
+    results = feeds_api.domainrdap(after="-60", sessiondID="integrations-testing", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -638,14 +642,14 @@ def test_domainrdap_feed_not_api_header_auth():
 
 @vcr.use_cassette
 def test_verify_response_is_a_generator():
-    results = feeds_api.domaindiscovery(after="-60", header_authenticationn=False)
+    results = feeds_api.domaindiscovery(after="-60")
 
     assert isgenerator(results.response())
 
 
 @vcr.use_cassette
 def test_feeds_endpoint_should_non_header_auth_be_the_default():
-    results = feeds_api.domaindiscovery(after="-60", endpoint="download")
+    results = feeds_api.domaindiscovery(after="-60", endpoint="download", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -677,7 +681,7 @@ def test_feeds_endpoint_should_raise_error_if_asked_csv_format_for_download_api(
 
 @vcr.use_cassette
 def test_realtime_domain_risk():
-    results = feeds_api.realtime_domain_risk(after="-60")
+    results = feeds_api.realtime_domain_risk(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 
@@ -697,7 +701,7 @@ def test_realtime_domain_risk():
 
 @vcr.use_cassette
 def test_domain_hotlist():
-    results = feeds_api.domainhotlist(after="-60")
+    results = feeds_api.domainhotlist(after="-60", top=5)
     for response in results.response():
         assert results.status == 200
 

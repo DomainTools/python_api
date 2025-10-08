@@ -3035,4 +3035,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.5.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-08T13:34:20Z","domain":"ordalab.com"}
+
+        {"timestamp":"2025-10-08T13:34:20Z","domain":"shopwert.online"}
+
+        {"timestamp":"2025-10-08T13:34:20Z","domain":"ryaparts.fr"}
+
+        {"timestamp":"2025-10-08T13:34:20Z","domain":"21637.cn"}
+
+        {"timestamp":"2025-10-08T13:34:19Z","domain":"15054.cn"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '298'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 08 Oct 2025 13:34:21 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=osvoe5vbplha77upcr3sdbhdchlemr0uacv0ar7rp6uecprl0hbcq89ooqvh6osi5ud5blhpl367lvlunomgar40tknvp4i8h9s66dr;
+        expires=Fri, 07-Nov-2025 13:34:21 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=0335edaf1718dccec7bc612e6dd71941; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
 version: 1

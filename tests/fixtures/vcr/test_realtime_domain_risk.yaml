@@ -25066,4 +25066,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.5.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-08T13:43:06Z","domain":"7pw1cs.cc","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-08T13:43:10Z","domain":"1wpwzu.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-08T13:43:06Z","domain":"jzqbyykjorveb.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-08T13:43:10Z","domain":"lkjinoil.shop","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-08T13:43:12Z","domain":"petrovodkaquest.shop","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '774'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 08 Oct 2025 13:43:30 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=q51796ecdcea8np0rq7o7g9i5fsh1ieqgkrg3av1vfvjddv0hcn4j4rndr8140c4chok5ul66ek8vg2dv3rsmrsqh97pqsgruq68pra;
+        expires=Fri, 07-Nov-2025 13:43:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=297dfe9cd5e97958ae6e2e417daaac62; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
 version: 1

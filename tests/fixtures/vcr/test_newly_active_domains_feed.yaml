@@ -46131,4 +46131,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.5.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-08T13:34:18Z","domain":"berlin-direktversicherung.ag"}
+
+        {"timestamp":"2025-10-08T13:34:18Z","domain":"naszsurvival.pl"}
+
+        {"timestamp":"2025-10-08T13:34:18Z","domain":"homeinstallations.ca"}
+
+        {"timestamp":"2025-10-08T13:34:18Z","domain":"ihcgm.org"}
+
+        {"timestamp":"2025-10-08T13:34:18Z","domain":"friseur-sieunder.de"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '336'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 08 Oct 2025 13:34:18 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=e5jkkebr6uevhamfn4ubod7ps615heankfja925ehejunrgoh3d9l3n481aabhfq3j0s4h1vo5ai9k0d1er7kn8oc9ni8170000pf80;
+        expires=Fri, 07-Nov-2025 13:34:18 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=da9b98176bbb72d0ca7886ae363d40d4; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -1174,4 +1174,134 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.5.3&include_total_count=false&page=1&query=DomainTools
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WUX2vCMBTFv4rkucb8aWvr68ZgIHtxe9pGCTVqQBNJ4oYTv/tuHdNEq8OBD4Vy
+        Tm7u+TU33SAr3dJoJ9FgA++1sWOHBq8bpJbVxJoFGiBalpgTzFiBCUoaw5tA5hSzLAPjp7pSy7iG
+        Un4wx8JDJ8QIy7qUdEkOVm1W2ts1yC+jZqXQU3nU9q3HGFjGToVWX8Iro2HFvVkIpZ+NmbukMxze
+        wQon7Ye04H3OjHJYWKWxlr5xZsb66kLGbRJC8wIXBc4IpkUaQB/kkh4hH1W0AJOyy/h54HADAC4v
+        Av+DNwoY09KSYZpxeNKjMz7obYccV12PHO0AzOkp84OwTk1nvjOS9coqv046j7q++qjDpDF7nmOW
+        lpjmEfmv2m/hDj16lpv2z3MHPYGan1I/iYUETi/nczWVupY7anwldhz0ZMApga+S9nFB4gnf6/x0
+        xKOaNvCiy8jFGT/s8Nbj5AZDHkRsR4YrwNIWZNB5y63e1/TPIxd/I++63uheBxG37/uQu0BokCdo
+        KZooNEEz4aqFsbJqFPjRT8Tcye32G2UNPV4HBgAA
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 08 Oct 2025 12:54:40 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=qlkbljhdc0kq4kffl4gsagvfqi16d9nlc58la04voaouq01d8nb7vms59othdkn5nnmv5708sjkleaq3lou52v5qjh83oclj5qd1vst;
+        expires=Fri, 07-Nov-2025 12:54:40 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '54659'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/reverse-ip-whois?app_name=python_wrapper&app_version=2.5.3&include_total_count=false&ip=65.55.53.233&page=1
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+1Y32/iOBD+Vyye9u4ITehCKU+XQntFe/wQodqXSJWbGGIpsXO206q32v/9xg4h
+        AQJlES8ntahS8EzG3zefmZnkR0MQmXImSaP/o/EWcSqfBQm4CBv9xoSoOWYr0kf5X7fT6rRbdstG
+        lrnutNr5v88Go+G8cNty9a+crz6DSBOcbAKh8Wgwn3rTh4Xl3P39zdgfMQvjwmNyv7C6HavTtmz4
+        OD6bYUGYKncAh24HfVn72fnnNxNo8Z6WGw0psFHIjWMeYEU589lU0BVlrlf46JUVZvRfY9erYxoI
+        LvlSoQEXKRfGgL6MvYcFbDEnqyFW5RZt23Ysu21pnk9pCKawYms7lpPb5mRZzRCKlEpl37/yr0SI
+        0xYWlLUYUfCVrKhU4t2/oql/VWbSYF9t57EOqXEbhZXNNHKfuWEIYsvN+pSRSoDv+B1kpOq9CnJO
+        woSz0GeeAl4zwV/X1u8uaMKlwvGAh2s8tz2704YYPGOAfhPmydvPmXN727PsG8uxa3MGinaNbcCT
+        pKr7giNBgKdCMpMpKEtCJEmQCcCNqJQZkUiv0yUNkOJICbzUlyTBDHLDVmgpeFJhzVlMIQ2SiFca
+        ENlElAVxFmpPFREUaiHoS2YOAF+iBMc0oDyTKOBMATLEBeLgKRCNtckswCVZ4Ri8FREULlQkeLaK
+        ED64cxOlMcESvmcvCUTJWUrg0N/Pwu+VsxMQoVpJEbUV8KSlj/TuLfsrDwDUm7ljBL+7NQX8kgGC
+        PI1NQBIAYlmB7AaB1lZuwOok4EDVQjTB/jwHWUXkQtrXLGZE4BcaU0VBY8oqsFLBwyyAZGkmpZIn
+        YDTxzwOp05errHeN8RsibMlFQLSXJUiszzTw+AdyeWLGEsnCINhGcyoUOF/6eMM+BI4cnF5YG068
+        jZjr7fdvPgZoNB3sojmjiEFMkNC/youQKU7zHG1R8geP7uLp2nLno0nVXFS6QYRVJhIeKdxEHk+I
+        jFDVbxZxph3/cKyvUDp6vbbVs3v2ls99gmkMPtLcHkS7vErPguEvMNvCb2ItSBAV7O7uh+68W7LT
+        toLaHQmxCJtoiN8Y2lh3CHWue1a3e31TOhRsQvxiAtSw0W5nUNkCu0dlNHucep16KmCDfpBgCTWv
+        ufXtDGI0jTa3X47cFvw9ct5o8tdjt3ddT8+DoxE10UzgIKIHGd1AT+t0bWefUQo3SsouR2YHrgnl
+        6ppb8Bm7g5uvJRljK9hUarqp+YO8CpSOR39TxqMgVlPnS6czeFVh72k0ns+G9fqUjOZFKZzlpbBp
+        KjQUw0OibZOrilZTAM8XrIL9c5D7HOTyFvs5yH0Ocv/XQe7gkHNkwjk+BZwy21xmsDnYKU9rkx/0
+        yI8b5GW648HZ7OTB7HQ9jo1kl5nHDjT6X+7yx1v8B/39Es3dDRPKanUxlpOEMZ6HlTHmU6QxjpfV
+        ZmfyPDYlHx+RT5iPLzUcH3viPOlx88NnzRMfNC/0lNloNmj6rGegRr+xeUWYryq+Xtu8n4X1/KXu
+        M01Lm2OD7RpsMoIe/XzMY73XM9bvUet23LJU9+WVd6tgrp1zNQTo9kSAg3kFvckDWIJ8CgXTk1fy
+        0JMmLJkR07EtW4MU+l11FZx+99z4+fM/AFdiVeQWAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 08 Oct 2025 12:54:41 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=iq7t22m28kvecvevku5bm4bapdsqnek0k2jmmjk08iilj76lri5tmibjc2v8dt779emhbssnnhi7hk25m0ss0j709ptc0ure5cfm02l;
+        expires=Fri, 07-Nov-2025 12:54:41 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '121585'
+    status:
+      code: 200
+      message: OK
 version: 1

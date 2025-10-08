@@ -2970,4 +2970,253 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.5.3&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-08T13:34:22Z","domain":"appeeter.com","raw_record":{"first_request_timestamp":"2025-10-08T13:34:19Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"1730546929_DOMAIN_COM-VRSN\",\"ldhName\":\"APPEETER.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/APPEETER.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/APPEETER.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap.ionos.com\\/domain\\/APPEETER.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap.ionos.com\\/domain\\/APPEETER.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"client
+        transfer prohibited\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"83\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/www.ionos.com\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.ionos.com\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"83\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"IONOS
+        SE\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.6105601459\"],[\"email\",{},\"text\",\"abuse@ionos.com\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2012-06-29T20:03:27Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-06-29T20:03:27Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-06-30T07:35:55Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:07Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS1.SEDOPARKING.COM\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS2.SEDOPARKING.COM\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/appeeter.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/appeeter.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2025-10-08T13:34:19Z","url":"https://rdap.verisign.com/com/v1/domain/appeeter.com"},{"data":"{\"objectClassName\":\"domain\",\"ldhName\":\"appeeter.com\",\"handle\":\"1730546929_DOMAIN_COM-VRSN\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2012-06-29T20:03:27.000Z\"},{\"eventAction\":\"transfer\",\"eventDate\":\"2021-05-09T18:23:08.134Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2021-05-09T19:10:34.000Z\"},{\"eventAction\":\"registrar
+        expiration\",\"eventDate\":\"2026-06-29T20:03:27.000Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:22.256Z\"}],\"status\":[\"client
+        transfer prohibited\"],\"port43\":\"whois.ionos.com\",\"lang\":\"en\",\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"registrant\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"contact-uri\",{},\"uri\",\"mailto:dataprivacyprotected@ionos.de\"],[\"adr\",{\"cc\":\"ES\"},\"text\",[\"\",\"\",\"\",\"\",\"B\",\"\",\"\"]]]],\"status\":[\"removed\"],\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"Some
+        of the data in this object has been removed\"]},{\"title\":\"EMAIL REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"This
+        email has been redacted for privacy. You could use the ''contact-uri'' to
+        contact the registrant of the domain.\"]}]},{\"objectClassName\":\"entity\",\"handle\":\"83\",\"roles\":[\"registrar\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"IONOS
+        SE\"],[\"org\",{\"type\":\"work\"},\"text\",\"IONOS SE\"],[\"url\",{},\"uri\",\"https://ionos.com\"]]],\"publicIds\":[{\"identifier\":\"83\",\"type\":\"IANA
+        Registrar ID\"}],\"links\":[{\"value\":\"https://rdap.ionos.com/\",\"rel\":\"about\",\"href\":\"https://rdap.ionos.com/\",\"type\":\"application/rdap+json\"}],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"IONOS
+        SE\"],[\"org\",{\"type\":\"work\"},\"text\",\"IONOS SE\"],[\"url\",{},\"uri\",\"https://ionos.com\"],[\"email\",{},\"text\",\"abuse@ionos.com\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.8774612631\"]]]}]}],\"remarks\":[],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns1.sedoparking.com\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns2.sedoparking.com\"}],\"secureDNS\":{\"delegationSigned\":false},\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"redacted\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap.ionos.com/domain/appeeter.com\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"value\":\"https://rdap.ionos.com/domain/appeeter.com\",\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Service\",\"description\":[\"Terms of service for the RDAP service.\"],\"links\":[{\"value\":\"https://rdap.ionos.com/domain/appeeter.com\",\"rel\":\"terms-of-service\",\"href\":\"https://rdap.ionos.com/tos\",\"type\":\"text/html\"}]}],\"redacted\":[{\"name\":{\"type\":\"Registry
+        Registrant ID\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].handle\",\"method\":\"removal\"},{\"name\":{\"type\":\"Registrant
+        Name\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][1]\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Organization\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\"method\":\"removal\"},{\"name\":{\"type\":\"Registrant
+        Street\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        City\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Postal Code\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Phone\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"method\":\"removal\"},{\"name\":{\"type\":\"Registrant
+        Email\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')]\",\"replacementPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''contact-uri'')]\",\"method\":\"replacementValue\"}]}","source_type":"registrar","timestamp":"2025-10-08T13:34:20Z","url":"https://rdap.ionos.com/domain/APPEETER.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1","redacted"],"contacts":[{"city":"","country":"ES","email":"dataprivacyprotected@ionos.de","name":"REDACTED
+        FOR PRIVACY","postal":"","region":"B","roles":["registrant"],"street":""}],"creation_date":"2012-06-29T20:03:27+00:00","dnssec":{"signed":false},"domain":"appeeter.com","domain_statuses":["client
+        transfer prohibited"],"email_domains":["ionos.com","ionos.de"],"emails":["abuse@ionos.com","dataprivacyprotected@ionos.de"],"expiration_date":"2026-06-29T20:03:27+00:00","handle":"1730546929_DOMAIN_COM-VRSN","last_changed_date":"2021-05-09T19:10:34+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/APPEETER.COM","rel":"self"},{"href":"https://rdap.ionos.com/domain/APPEETER.COM","rel":"related"}],"nameservers":["ns1.sedoparking.com","ns2.sedoparking.com"],"registrar":{"contacts":[{"email":"abuse@ionos.com","name":"IONOS
+        SE","org":"IONOS SE","phone":"tel:+1.8774612631","roles":["abuse"]}],"iana_id":"83","name":"IONOS
+        SE"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.ionos.com/domain/APPEETER.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/appeeter.com"}}
+
+        {"timestamp":"2025-10-08T13:34:22Z","domain":"sports-training-knowledge.com","raw_record":{"first_request_timestamp":"2025-10-08T13:34:15Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"2969725723_DOMAIN_COM-VRSN\",\"ldhName\":\"SPORTS-TRAINING-KNOWLEDGE.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/SPORTS-TRAINING-KNOWLEDGE.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/SPORTS-TRAINING-KNOWLEDGE.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap.gmo-onamae.com\\/rdap\\/v1\\/domain\\/SPORTS-TRAINING-KNOWLEDGE.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap.gmo-onamae.com\\/rdap\\/v1\\/domain\\/SPORTS-TRAINING-KNOWLEDGE.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"active\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"49\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/gmo.jp\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.gmo-onamae.com\\/rdap\\/v1\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"49\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GMO
+        Internet Group, Inc. d\\/b\\/a Onamae.com\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+81.337709199\"],[\"email\",{},\"text\",\"abuse@internet.gmo\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2025-03-25T06:13:59Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-03-25T06:13:59Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-03-25T06:13:59Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:07Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS1.XSERVER.JP\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS2.XSERVER.JP\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS3.XSERVER.JP\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS4.XSERVER.JP\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS5.XSERVER.JP\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/sports-training-knowledge.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/sports-training-knowledge.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2025-10-08T13:34:15Z","url":"https://rdap.verisign.com/com/v1/domain/sports-training-knowledge.com"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_technical_implementation_guide_1","icann_rdap_response_profile_1"],"contacts":[],"creation_date":"2025-03-25T06:13:59+00:00","dnssec":{"signed":false},"domain":"SPORTS-TRAINING-KNOWLEDGE.COM","domain_statuses":["active"],"email_domains":["internet.gmo"],"emails":["abuse@internet.gmo"],"expiration_date":"2026-03-25T06:13:59+00:00","handle":"2969725723_DOMAIN_COM-VRSN","last_changed_date":"2025-03-25T06:13:59+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/SPORTS-TRAINING-KNOWLEDGE.COM","rel":"self"},{"href":"https://rdap.gmo-onamae.com/rdap/v1/domain/SPORTS-TRAINING-KNOWLEDGE.COM","rel":"related"}],"nameservers":["NS1.XSERVER.JP","NS2.XSERVER.JP","NS3.XSERVER.JP","NS4.XSERVER.JP","NS5.XSERVER.JP"],"registrar":{"contacts":[{"email":"abuse@internet.gmo","name":"","phone":"tel:+81.337709199","roles":["abuse"]}],"iana_id":"49","name":"GMO
+        Internet Group, Inc. d/b/a Onamae.com"},"unclassified_emails":[]},"registrar_request_url":null,"registry_request_url":"https://rdap.verisign.com/com/v1/domain/sports-training-knowledge.com"}}
+
+        {"timestamp":"2025-10-08T13:34:22Z","domain":"ilmaleproduction.com","raw_record":{"first_request_timestamp":"2025-10-08T13:34:16Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"1984246911_DOMAIN_COM-VRSN\",\"ldhName\":\"ILMALEPRODUCTION.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/ILMALEPRODUCTION.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/ILMALEPRODUCTION.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap-register.info\\/domain\\/ILMALEPRODUCTION.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap-register.info\\/domain\\/ILMALEPRODUCTION.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"active\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"168\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/www.register.it\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap-register.info\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"168\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Register
+        SPA\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+39.05520021555\"],[\"email\",{},\"text\",\"abuse@register.it\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2015-11-27T12:35:42Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-11-27T12:35:42Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2015-11-27T12:35:42Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:07Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS1.REGISTER.IT\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS2.REGISTER.IT\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/ilmaleproduction.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/ilmaleproduction.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2025-10-08T13:34:16Z","url":"https://rdap.verisign.com/com/v1/domain/ilmaleproduction.com"},{"data":"{\"rdapConformance\":[\"redacted\",\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"objectClassName\":\"domain\",\"links\":[{\"value\":\"https://rdap-register.info/domain/ilmaleproduction.com\",\"rel\":\"self\",\"href\":\"https://rdap-register.info/domain/ilmaleproduction.com\",\"type\":\"application/rdap+json\"}],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Terms of Service\"],\"links\":[{\"value\":\"https://rdap-register.info/domain/ilmaleproduction.com\",\"rel\":\"terms-of-service\",\"href\":\"https://www.register.it/domains/whois.html?chglng=eng\",\"type\":\"text/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap-register.info/domain/ilmaleproduction.com\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"application/rdap+json\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"value\":\"https://rdap-register.info/domain/ilmaleproduction.com\",\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"application/rdap+json\"}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2015-11-27T00:00:00+01:00\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2015-11-27T00:00:00+01:00\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-11-27T00:00:00+01:00\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T15:34:22+02:00\"}],\"status\":[\"active\"],\"ldhName\":\"ilmaleproduction.com\",\"unicodeName\":\"ilmaleproduction.com\",\"secureDNS\":{\"zoneSigned\":false,\"delegationSigned\":false},\"entities\":[{\"objectClassName\":\"entity\",\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"The
+        object contains redacted data due to lack of authorization.\"],\"links\":[{\"value\":\"https://www.register.it/company/privacy-policy-domain-name-registration/?lang=en\",\"rel\":\"privacy-policy\",\"href\":\"https://www.register.it/company/privacy-policy-domain-name-registration/?lang=en\"}]}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"adr\",{\"cc\":\"IT\"},\"text\",[\"\",\"\",\"REDACTED FOR
+        PRIVACY\",\"REDACTED FOR PRIVACY\",\"BO\",\"REDACTED FOR PRIVACY\",\"\"]],[\"org\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"email\",{},\"text\",\"https://domaincontact.register.it/contact-domain\"]]],\"roles\":[\"registrant\"]},{\"objectClassName\":\"entity\",\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"The
+        object contains redacted data due to lack of authorization.\"],\"links\":[{\"value\":\"https://www.register.it/company/privacy-policy-domain-name-registration/?lang=en\",\"rel\":\"privacy-policy\",\"href\":\"https://www.register.it/company/privacy-policy-domain-name-registration/?lang=en\"}]}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"adr\",{},\"text\",[\"\",\"\",\"REDACTED FOR PRIVACY\",\"REDACTED
+        FOR PRIVACY\",\"REDACTED FOR PRIVACY\",\"REDACTED FOR PRIVACY\",\"\"]],[\"org\",{},\"text\",\"REDACTED
+        FOR PRIVACY\"],[\"email\",{},\"text\",\"https://domaincontact.register.it/contact-domain\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"links\":[{\"value\":\"https://rdap-register.info/\",\"rel\":\"about\",\"href\":\"https://rdap-register.info/\",\"type\":\"application/rdap+json\"}],\"port43\":\"whois.register.it\",\"handle\":\"168\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Register
+        S.p.A.\"],[\"adr\",{\"cc\":\"IT\"},\"text\",[\"\",\"\",\"Viale Giovine Italia,
+        17\",\"Firenze\",\"FI\",\"50122\",\"\"]],[\"org\",{},\"text\",\"Register S.p.A.\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+39.05520021555\"],[\"email\",{},\"text\",\"abuse@register.it\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"168\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Register
+        S.p.A.\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+39.05520021555\"],[\"email\",{},\"text\",\"abuse@register.it\"]]],\"roles\":[\"abuse\"]}]}],\"redacted\":[{\"name\":{\"type\":\"Registry
+        Domain ID\"},\"prePath\":\"$.handle\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"},{\"name\":{\"type\":\"Registry
+        Registrant ID\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].handle\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"},{\"name\":{\"type\":\"Administrative
+        Contact\"},\"method\":\"removal\"}],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns1.register.it\",\"unicodeName\":\"ns1.register.it\",\"ipAddresses\":{\"v4\":[\"107.162.197.144\"]}},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns2.register.it\",\"unicodeName\":\"ns2.register.it\",\"ipAddresses\":{\"v4\":[\"195.7.227.1\"]}}]}","source_type":"registrar","timestamp":"2025-10-08T13:34:18Z","url":"https://rdap-register.info/domain/ILMALEPRODUCTION.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["redacted","rdap_level_0","icann_rdap_technical_implementation_guide_1","icann_rdap_response_profile_1"],"contacts":[{"city":"REDACTED
+        FOR PRIVACY","country":"IT","email":"https://domaincontact.register.it/contact-domain","name":"REDACTED
+        FOR PRIVACY","org":"REDACTED FOR PRIVACY","postal":"REDACTED FOR PRIVACY","region":"BO","roles":["registrant"],"street":"REDACTED
+        FOR PRIVACY"},{"city":"REDACTED FOR PRIVACY","country":"","email":"https://domaincontact.register.it/contact-domain","name":"REDACTED
+        FOR PRIVACY","org":"REDACTED FOR PRIVACY","postal":"REDACTED FOR PRIVACY","region":"REDACTED
+        FOR PRIVACY","roles":["technical"],"street":"REDACTED FOR PRIVACY"}],"creation_date":"2015-11-27T00:00:00+01:00","dnssec":{"signed":false},"domain":"ilmaleproduction.com","domain_statuses":["active"],"email_domains":["register.it"],"emails":["abuse@register.it","https://domaincontact.register.it/contact-domain"],"expiration_date":"2025-11-27T00:00:00+01:00","handle":"1984246911_DOMAIN_COM-VRSN","last_changed_date":"2015-11-27T00:00:00+01:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/ILMALEPRODUCTION.COM","rel":"self"},{"href":"https://rdap-register.info/domain/ILMALEPRODUCTION.COM","rel":"related"},{"href":"https://rdap-register.info/domain/ilmaleproduction.com","rel":"self"}],"nameservers":["ns1.register.it","ns2.register.it"],"registrar":{"contacts":[{"email":"abuse@register.it","name":"Register
+        S.p.A.","phone":"tel:+39.05520021555","roles":["abuse"]}],"iana_id":"168","name":"Register
+        S.p.A."},"unclassified_emails":[]},"registrar_request_url":"https://rdap-register.info/domain/ILMALEPRODUCTION.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/ilmaleproduction.com"}}
+
+        {"timestamp":"2025-10-08T13:34:22Z","domain":"pamperinggifts.com","raw_record":{"first_request_timestamp":"2025-10-08T13:34:11Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"109341183_DOMAIN_COM-VRSN\",\"ldhName\":\"pamperinggifts.com\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns37.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2023-03-31T09:29:18Z\"}]},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns38.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2023-03-31T09:29:18Z\"}]}],\"secureDNS\":{\"delegationSigned\":false},\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/pamperinggifts.com\",\"rel\":\"self\",\"href\":\"https://rdap.godaddy.com/v1/domain/pamperinggifts.com\",\"type\":\"application/rdap+json\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"pamperinggiftscom-reg\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"Domain
+        Administrator\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2150 E Warner
+        Rd\",\"Tempe\",\"Arizona\",\"85284\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.7813736856\"],[\"contact-uri\",{},\"uri\",\"mailto:admin@namefind.com\"]]],\"roles\":[\"registrant\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-05-05T19:41:31Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"pamperinggiftscom-tech\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"individual\"],[\"fn\",{},\"text\",\"Domain
+        Administrator\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2150 E Warner
+        Rd\",\"Tempe\",\"Arizona\",\"85284\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.7813736856\"],[\"contact-uri\",{},\"uri\",\"mailto:admin@namefind.com\"]]],\"roles\":[\"technical\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-05-05T19:41:31Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"146\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2155 E Godaddy Way\",\"Tempe\",\"AZ\",\"85284\",\"\"]],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"146\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:480-624-2505\"],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"abuse\"]}],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1\",\"rel\":\"about\",\"href\":\"https://rdap.godaddy.com/v1\",\"type\":\"application/rdap+json\"}],\"port43\":\"whois.godaddy.com\"}],\"events\":[{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:22Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-01-05T07:00:14Z\"},{\"eventAction\":\"registration\",\"eventDate\":\"2004-01-05T07:00:14Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2024-12-16T09:10:06Z\"}],\"status\":[\"delete prohibited\",\"transfer
+        prohibited\",\"renew prohibited\",\"update prohibited\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Use\",\"description\":[\"By submitting an inquiry, you agree to these Universal
+        Terms of Service\",\"and limitations of warranty. In particular, you agree
+        not to use this\",\"data to allow, enable, or otherwise make possible, dissemination
+        or\",\"collection of this data, in part or in its entirety, for any purpose,\",\"such
+        as the transmission of unsolicited advertising and solicitations of\",\"any
+        kind, including spam. You further agree not to use this data to enable\",\"high
+        volume, automated or robotic electronic processes designed to collect\",\"or
+        compile this data for any purpose, including mining this data for your\",\"own
+        personal or commercial purposes, or use this data in any way that violates\",\"applicable
+        laws and regulations.\"],\"links\":[{\"rel\":\"terms-of-service\",\"href\":\"https://www.godaddy.com/agreements/showdoc?pageid=5403\",\"type\":\"text/html\"}]}],\"rdapConformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"port43\":\"whois.godaddy.com\"}","source_type":"registrar","timestamp":"2025-10-08T13:34:13Z","url":"https://rdap.godaddy.com/v1/domain/PAMPERINGGIFTS.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","redacted","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1"],"contacts":[{"city":"Tempe","country":"US","email":"admin@namefind.com","handle":"pamperinggiftscom-reg","name":"Domain
+        Administrator","phone":"tel:+1.7813736856","postal":"85284","region":"Arizona","roles":["registrant"],"street":"2150
+        E Warner Rd"},{"city":"Tempe","country":"US","email":"admin@namefind.com","handle":"pamperinggiftscom-tech","name":"Domain
+        Administrator","phone":"tel:+1.7813736856","postal":"85284","region":"Arizona","roles":["technical"],"street":"2150
+        E Warner Rd"}],"creation_date":"2004-01-05T07:00:14+00:00","dnssec":{"signed":false},"domain":"pamperinggifts.com","domain_statuses":["delete
+        prohibited","transfer prohibited","renew prohibited","update prohibited"],"email_domains":["godaddy.com","namefind.com"],"emails":["abuse@godaddy.com","admin@namefind.com"],"expiration_date":"2026-01-05T07:00:14+00:00","handle":"109341183_DOMAIN_COM-VRSN","last_changed_date":"2024-12-16T09:10:06+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/PAMPERINGGIFTS.COM","rel":"self"},{"href":"https://rdap.godaddy.com/v1/domain/PAMPERINGGIFTS.COM","rel":"related"},{"href":"https://rdap.godaddy.com/v1/domain/pamperinggifts.com","rel":"self"}],"nameservers":["ns37.domaincontrol.com","ns38.domaincontrol.com"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:480-624-2505","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com,
+        LLC"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.godaddy.com/v1/domain/PAMPERINGGIFTS.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/pamperinggifts.com"}}
+
+        {"timestamp":"2025-10-08T13:34:22Z","domain":"mymedinagrouphq.biz","raw_record":{"first_request_timestamp":"2025-10-08T13:34:17Z","requests":[{"data":"{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"redacted\"],\"objectClassName\":\"domain\",\"ldhName\":\"mymedinagrouphq.biz\",\"status\":[\"client
+        transfer prohibited\"],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2025-06-30T11:05:49Z\",\"eventActor\":\"NameCheap,
+        Inc.\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-06-30T11:05:49Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-07-05T11:05:49Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-10-08T13:34:22Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"adr\",{\"cc\":\"IS\"},\"text\",[\"\",\"\",[\"\",\"\",\"\"],\"\",\"Capital
+        Region\",\"\",\"\"]]]],\"roles\":[\"registrant\"]},{\"objectClassName\":\"entity\",\"handle\":\"1068\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"NameCheap,
+        Inc.\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",[\"11400 W. Olympic Blvd.\",\"\",\"\"],\"Los
+        Angeles\",\"\",\"90064\",\"\"]],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.3103129573\"],[\"email\",{},\"text\",\"support@namecheap.com\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"NameCheap,
+        Inc.\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.6613102107\"],[\"email\",{},\"text\",\"abuse@namecheap.com\"]]],\"roles\":[\"abuse\"]}],\"roles\":[\"registrar\"],\"publicIds\":[{\"identifier\":\"1068\",\"type\":\"IANA
+        Registrar ID\"}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2016-09-01T02:06:23Z\",\"eventActor\":\"REGISTRY\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-04-16T19:12:46Z\",\"eventActor\":\"REGISTRY\"}],\"links\":[{\"title\":\"Authoritative
+        Registry object record\",\"rel\":\"self\",\"value\":\"https://rdap.nic.biz/entity/1068\",\"href\":\"https://rdap.nic.biz/entity/1068\",\"type\":\"application/rdap+json\"},{\"title\":\"Registrar
+        Details object record\",\"rel\":\"about\",\"value\":\"https://rdap.namecheap.com/\",\"href\":\"http://www.namecheap.com\",\"type\":\"application/rdap+json\"}]}],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"H297A5117A7E84F2FBCE79D3D3F26EDBF-ARI\",\"ldhName\":\"dns1.registrar-servers.com\",\"status\":[\"associated\"],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-03-05T21:54:05Z\",\"eventActor\":\"Tucows
+        Domains Inc.\"}],\"links\":[{\"title\":\"Authoritative Registry object record\",\"rel\":\"self\",\"value\":\"https://rdap.nic.biz/nameserver/dns1.registrar-servers.com\",\"href\":\"https://rdap.nic.biz/nameserver/dns1.registrar-servers.com\",\"type\":\"application/rdap+json\"}]},{\"objectClassName\":\"nameserver\",\"handle\":\"HB0B45A2F63414CE38A07622827B6C382-ARI\",\"ldhName\":\"dns2.registrar-servers.com\",\"status\":[\"associated\"],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-03-05T21:54:23Z\",\"eventActor\":\"Tucows
+        Domains Inc.\"}],\"links\":[{\"title\":\"Authoritative Registry object record\",\"rel\":\"self\",\"value\":\"https://rdap.nic.biz/nameserver/dns2.registrar-servers.com\",\"href\":\"https://rdap.nic.biz/nameserver/dns2.registrar-servers.com\",\"type\":\"application/rdap+json\"}]}],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"rel\":\"glossary\",\"value\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"rel\":\"help\",\"value\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"RDAP
+        Terms of Service\",\"description\":[\"The RDAP service (the Service) offered
+        by Registry Services LLC, or our designated representatives (GoDaddy Registry),
+        is provided for informational purposes only and is designed to assist a user
+        (you) to look up certain information related to the registration records of
+        existing domain names.\",\"The information provided by the Service is \\u2018as
+        is\\u2019 and we make no guarantee of its accuracy. Registry Services LLC
+        cannot, under any circumstances, be held liable in such instances where the
+        stored information would prove to be wrong, incomplete, or not accurate in
+        any sense.\",\"By submitting a query, you agree that you will not use this
+        data\",\"(i)            to allow, enable or otherwise support in any way the
+        transmission of unsolicited, commercial advertising or other solicitations
+        whether via direct mail, email, telephone or otherwise;\",\"(ii)           to
+        enable high volume, automated, electronic processes that apply to the Service
+        or associated systems;\",\"(iii)          for targeted advertising in any
+        possible way;\",\"(iv)         to cause nuisance in any possible way to individuals
+        by sending (whether by automated, electronic processes capable of enabling
+        high volumes or other possible means) messages to them;\",\"(v)          in
+        a way that is inconsistent with any applicable laws rule, regulation or statute
+        or any policy issued by Registry Services LLC; and/or\",\"(vi)         in
+        contravention of any applicable data and privacy protection acts.\",\"Without
+        prejudice to the above, the copying, compilation, repackaging, dissemination
+        or other use of the information provided by the Service is explicitly forbidden
+        without prior and explicit permission by Registry Services LLC.\",\"By your
+        use of the Service you agree to abide by these Terms of Service and accept
+        that Registry Services LLC can take measures to limit the use of the Service
+        in order to protect the privacy of registrants or the integrity of the Service.
+        Registry Services LLC may restrict, suspend or terminate your access to the
+        Service at any time. Registry Services LLC reserve the right to make changes
+        to the Service and these Terms of Service at any time without prior notice
+        to you. It is your responsibility to review these Terms of Service each time
+        you access or use the Service to keep apprised of any changes. If you do not
+        agree to the changes implemented by Registry Services LLC, your sole and exclusive
+        remedy is to terminate your use of the Service.\",\"By executing a query,
+        in any manner whatsoever, you agree to abide by these Terms of Service.\"],\"links\":[{\"rel\":\"terms-of-service\",\"value\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"href\":\"https://www.registry.godaddy/rdap\",\"type\":\"text/html\"}]}],\"links\":[{\"title\":\"Registrar
+        RDAP server object record\",\"rel\":\"related\",\"value\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"href\":\"https://rdap.namecheap.com/domain/mymedinagrouphq.biz\",\"type\":\"application/rdap+json\"},{\"title\":\"Authoritative
+        Registry object record\",\"rel\":\"self\",\"value\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"href\":\"https://rdap.nic.biz/domain/mymedinagrouphq.biz\",\"type\":\"application/rdap+json\"}],\"redacted\":[{\"name\":{\"type\":\"Registry
+        Domain ID\"},\"prePath\":\"$.handle\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registry Registrant ID\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].handle\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Name\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Organization\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Street\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant City\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Postal Code\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Email\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Phone\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Phone Ext\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Fax\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''fax'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}},{\"name\":{\"type\":\"Registrant Fax Ext\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''fax'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        policy\"}}]}","source_type":"registrar","timestamp":"2025-10-08T13:34:20Z","url":"https://rdap.nic.biz/domain/mymedinagrouphq.biz"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1","redacted"],"contacts":[{"city":"","country":"IS","name":"","postal":"","region":"Capital
+        Region","roles":["registrant"],"street":""}],"creation_date":"2025-06-30T11:05:49+00:00","dnssec":{"signed":false},"domain":"mymedinagrouphq.biz","domain_statuses":["client
+        transfer prohibited"],"email_domains":["namecheap.com"],"emails":["abuse@namecheap.com","support@namecheap.com"],"expiration_date":"2026-06-30T11:05:49+00:00","last_changed_date":"2025-07-05T11:05:49+00:00","links":[{"href":"https://rdap.namecheap.com/domain/mymedinagrouphq.biz","rel":"related"},{"href":"https://rdap.nic.biz/domain/mymedinagrouphq.biz","rel":"self"},{"href":"https://rdap.namecheap.com/domain/mymedinagrouphq.biz","rel":"related"},{"href":"https://rdap.nic.biz/domain/mymedinagrouphq.biz","rel":"self"}],"nameservers":["dns1.registrar-servers.com","dns2.registrar-servers.com"],"registrar":{"contacts":[{"email":"abuse@namecheap.com","name":"NameCheap,
+        Inc.","phone":"tel:+1.6613102107","roles":["abuse"]}],"iana_id":"1068","name":"NameCheap,
+        Inc."},"unclassified_emails":["support@namecheap.com"]},"registrar_request_url":"https://rdap.nic.biz/domain/mymedinagrouphq.biz","registry_request_url":"https://rdap.nic.biz/domain/mymedinagrouphq.biz"}}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 08 Oct 2025 13:34:23 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=42kvn4onq5jolevuvcclnnchv27dvhhi464tg6fm0eh9a9j4lp0iqr4tcb6278ccec3evme8a711b8ljfch0goffv5le8258iqk9k79;
+        expires=Fri, 07-Nov-2025 13:34:22 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=841380fca7b1c25fac64154c78da320b; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
 version: 1

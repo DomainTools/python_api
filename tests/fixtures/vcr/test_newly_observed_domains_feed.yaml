@@ -12587,4 +12587,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.5.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-08T13:38:47Z","domain":"8b8a86.cn"}
+
+        {"timestamp":"2025-10-08T13:38:47Z","domain":"thesuccessrewire.com"}
+
+        {"timestamp":"2025-10-08T13:38:47Z","domain":"tasteuphk.com"}
+
+        {"timestamp":"2025-10-08T13:38:47Z","domain":"supercartolamanager.com.br"}
+
+        {"timestamp":"2025-10-08T13:38:46Z","domain":"x5vj44.cn"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '322'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 08 Oct 2025 13:38:47 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=q36g20s8mkejtk76k4m1bkg83404c33g2pv8v3824i58n350v8vpggr3clsn9m9014118k1h6tnjvjkd8gik71pjaffoevi9l7r3toe;
+        expires=Fri, 07-Nov-2025 13:38:47 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=841380fca7b1c25fac64154c78da320b; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
 version: 1
