@@ -126,7 +126,12 @@ class API(object):
     def _results(self, product, path, cls=Results, **kwargs):
         """Returns _results for the specified API path with the specified **kwargs parameters"""
         if product != "account-information" and self.rate_limit and not self.limits_set and not self.limits:
+            always_sign_api_key_previous_value = self.always_sign_api_key
+            header_authentication_previous_value = self.header_authentication
             self._rate_limit()
+            # Reset always_sign_api_key and header_authentication to its original User-set values as these might be affected when self.account_information() was executed
+            self.always_sign_api_key = always_sign_api_key_previous_value
+            self.header_authentication = header_authentication_previous_value
 
         uri = "/".join((self._rest_api_url, path.lstrip("/")))
         parameters = self.default_parameters.copy()
