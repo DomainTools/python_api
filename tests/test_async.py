@@ -1,64 +1,50 @@
 """Tests async interaction support for DomainTools APIs"""
+
 import asyncio
+import pytest
 
 from tests.settings import api, vcr
 
 
-def run_async(future):
-    return asyncio.get_event_loop().run_until_complete(future)
-
-
 @vcr.use_cassette
-def test_async_iteration():
-    async def async_iter_test():
-        domains = []
-        async for domain in api.domain_search('google'):
-            domains += domain
-        return domains
+@pytest.mark.asyncio
+async def test_async_iteration():
+    results = await api.domain_search("google")
+    assert results
 
-    domains = run_async(async_iter_test())
-    assert domains
-    for domain in domains:
+    list_of_domains = []
+    for domain in results:
+        list_of_domains += domain
+
+    for domain in list_of_domains:
         assert type(domain) == str
 
 
 @vcr.use_cassette
-def test_async_context_manager():
-    async def async_context_manager_test():
-        async with api.domain_search('google') as results:
-            return results
-
-    results = run_async(async_context_manager_test())
+@pytest.mark.asyncio
+async def test_async_context_manager():
+    results = await api.domain_search("google")
     assert results
 
 
 @vcr.use_cassette
-def test_async_simple_await():
-    async def simple_await():
-        results = await api.domain_search('google')
-        return results
-
-    results = run_async(simple_await())
+@pytest.mark.asyncio
+async def test_async_simple_await():
+    results = await api.domain_search("google")
     assert results
 
 
 @vcr.use_cassette
-def test_async_simple_await_post():
-    async def simple_await():
-        results = await api.iris_investigate(domains=['amazon.com', 'google.com'])
-        return results
-
-    investigation_results = run_async(simple_await())
-    assert investigation_results['results_count']
+@pytest.mark.asyncio
+async def test_async_simple_await_post():
+    investigation_results = await api.iris_investigate(domains=["amazon.com", "google.com"])
+    assert investigation_results["results_count"]
     for result in investigation_results:
-        assert result['domain'] in ['amazon.com', 'google.com']
+        assert result["domain"] in ["amazon.com", "google.com"]
 
 
 @vcr.use_cassette
-def test_async_simple_await_patch():
-    async def simple_await():
-        results = await api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
-        return results
-
-    detect_results = run_async(simple_await())
-    assert detect_results['watchlist_domains'][0]['state'] == "watched"
+@pytest.mark.asyncio
+async def test_async_simple_await_patch():
+    detect_results = await api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
+    assert detect_results["watchlist_domains"][0]["state"] == "watched"

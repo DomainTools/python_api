@@ -545,11 +545,11 @@ def test_newly_observed_hosts_feed():
 
 
 @vcr.use_cassette
-@pytest.mark.skip(reason="Failing test due to unknown reason. Still investigating the root-cause.")
+# @pytest.mark.skip(reason="Failing test due to unknown reason. Still investigating the root-cause.")
 def test_newly_observed_domains_feed_pagination():
     now_utc = datetime.now(timezone.utc)
-    two_days_ago = now_utc - timedelta(days=2)
-    after = two_days_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
+    one_hour_ago = now_utc - timedelta(hours=1)
+    after = one_hour_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
     results = feeds_api.nod(sessionID="integrations-testing", after=after)
     page_count = 0
     for response in results.response():
