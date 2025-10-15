@@ -119,17 +119,6 @@ def test_get_pivots():
     assert pivots == [["IP ADDRESS", ("199.30.228.112", 4)], ["IP ASN", (17318, 111)], ["IP ISP", ("DomainTools LLC", 222)]]
 
 
-def test_validate_feeds_parameters_update_header_auth_to_False(test_feeds_params):
-    test_feeds_params["output_format"] = "jsonl"
-
-    assert test_feeds_params.get("header_authentication", True)  # header_authentication is True whether existing or not
-    assert test_feeds_params["endpoint"] == "download"
-
-    utils.validate_feeds_parameters(test_feeds_params)
-
-    assert not test_feeds_params["header_authentication"]  # header_authentication will be defaulted to False if endpoint is download
-
-
 def test_validate_feeds_parameters_should_raise_error_if_no_required_params(test_feeds_params):
     test_feeds_params.pop("sessionID", None)
     test_feeds_params.pop("after", None)

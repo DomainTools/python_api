@@ -215,25 +215,25 @@ Please see the [supported versions](https://github.com/DomainTools/python_api/ra
 for the DomainTools Python support policy.
 
 
-Real-Time Threat Intelligence Feeds
+Real-Time Threat Feeds
 ===================
 
-Real-Time Threat Intelligence Feeds provide data on the different stages of the domain lifecycle: from first-observed in the wild, to newly re-activated after a period of quiet. Access current feed data in real-time or retrieve historical feed data through separate APIs.
+Real-Time Threat Feeds provide data on the different stages of the domain lifecycle: from first-observed in the wild, to newly re-activated after a period of quiet. Access current feed data in real-time or retrieve historical feed data through separate APIs.
 
 Custom parameters aside from the common `GET` Request parameters:
 - `endpoint` (choose either `download` or `feed` API endpoint - default is `feed`)
     ```python
-    api = API(USERNAME, KEY, always_sign_api_key=False)
+    api = API(USERNAME, KEY)
     api.nod(endpoint="feed", **kwargs)
     ```
 - `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so this will be defaulted to `False` even without explicitly setting it.
     ```python
-    api = API(USERNAME, KEY, always_sign_api_key=False)
-    api.nod(header_authentication=False, **kwargs)
+    api = API(USERNAME, KEY, header_authentication=False)
+    api.nod(**kwargs)
     ```
 - `output_format`: (choose either `csv` or `jsonl` - default is `jsonl`). Cannot be used in `domainrdap` feeds. Additionally, `csv` is not available for `download` endpoints.
     ```python
-    api = API(USERNAME, KEY, always_sign_api_key=False)
+    api = API(USERNAME, KEY)
     api.nod(output_format="csv", **kwargs)
     ```
 
@@ -254,7 +254,7 @@ Since we may dealing with large feeds datasets, the python wrapper uses `generat
 ```python
 from domaintools import API
 
-api = API(USERNAME, KEY, always_sign_api_key=False)
+api = API(USERNAME, KEY)
 results = api.nod(sessionID="my-session-id", after=-60)
 
 for result in results.response() # generator that holds NOD feeds data for the past 60 seconds and is expected to request only once
@@ -265,7 +265,7 @@ for result in results.response() # generator that holds NOD feeds data for the p
 ```python
 from domaintools import API
 
-api = API(USERNAME, KEY, always_sign_api_key=False)
+api = API(USERNAME, KEY)
 results = api.nod(sessionID="my-session-id", after=-7200)
 
 for partial_result in results.response() # generator that holds NOD feeds data for the past 2 hours and is expected to request multiple times
