@@ -57,6 +57,7 @@ class Results(MutableMapping, MutableSequence):
         self._response = None
         self._items_list = None
         self._data = None
+        self._status = None
 
     def _wait_time(self):
         if not self.api.rate_limit or not self.product in self.api.limits:
@@ -174,7 +175,7 @@ class Results(MutableMapping, MutableSequence):
 
     @property
     def status(self):
-        if not getattr(self, "_status", None):
+        if not getattr(self, "_status", None) and not self.product in RTTF_PRODUCTS_LIST:
             self._status = self._get_results().status_code
 
         return self._status

@@ -473,7 +473,9 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains()
     assert detect_results["count"] >= 0
 
-    detect_results = api.iris_detect_watched_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
+    detect_results = api.iris_detect_watched_domains(
+        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
+    )
     assert len(detect_results["watchlist_domains"]) == 3
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
@@ -482,17 +484,23 @@ def test_iris_detect_watched_domains():
 
 @vcr.use_cassette
 def test_iris_detect_manage_watchlist_domains():
-    detect_results = api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
+    detect_results = api.iris_detect_manage_watchlist_domains(
+        watchlist_domain_ids=["gae08rdVWG"], state="watched"
+    )
     assert detect_results["watchlist_domains"][0]["state"] == "watched"
 
 
 @vcr.use_cassette
 def test_iris_detect_escalate_domains():
     # If you rerun this test without VCR, it will fail because the domain is already escalated
-    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked")
+    detect_results = api.iris_detect_escalate_domains(
+        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="blocked"
+    )
     assert detect_results["escalations"][0]["escalation_type"] == "blocked"
 
-    detect_results = api.iris_detect_escalate_domains(watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe")
+    detect_results = api.iris_detect_escalate_domains(
+        watchlist_domain_ids=["OWxzqKqQEY"], escalation_type="google_safe"
+    )
     assert detect_results["escalations"][0]["escalation_type"] == "google_safe"
 
 
@@ -515,33 +523,39 @@ def test_limit_exceeded():
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
     results = feeds_api.nod(after="-60", top=5)
+    total_count = 0
     for response in results.response():
         assert results.status == 200
 
         rows = response.strip().split("\n")
         assert response is not None
-        assert len(rows) >= 1
+        total_count += 1
 
         for row in rows:
             feed_result = json.loads(row)
             assert "timestamp" in feed_result.keys()
             assert "domain" in feed_result.keys()
+
+    assert total_count == 5
 
 
 @vcr.use_cassette
 def test_newly_observed_hosts_feed():
     results = feeds_api.noh(after="-60", top=5)
+    total_count = 0
     for response in results.response():
         assert results.status == 200
 
         rows = response.strip().split("\n")
         assert response is not None
-        assert len(rows) >= 1
+        total_count += 1
 
         for row in rows:
             feed_result = json.loads(row)
             assert "timestamp" in feed_result.keys()
             assert "domain" in feed_result.keys()
+
+    assert total_count == 5
 
 
 @vcr.use_cassette
@@ -553,16 +567,14 @@ def test_newly_observed_domains_feed_pagination():
     results = feeds_api.nod(sessionID="integrations-testing", after=after)
     page_count = 0
     for response in results.response():
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
         page_count += 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
 
     assert page_count >= 1
 
@@ -573,14 +585,12 @@ def test_newly_active_domains_feed():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
 
 
 @vcr.use_cassette
@@ -589,19 +599,17 @@ def test_domainrdap_feed():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
 
         assert response is not None
-        assert len(rows) == 2
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
-            assert "parsed_record" in feed_result.keys()
-            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
-            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
-            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "parsed_record" in feed_result.keys()
+        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
 
 
 @vcr.use_cassette
@@ -610,14 +618,12 @@ def test_domain_discovery_feed():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
 
 
 @vcr.use_cassette
@@ -626,19 +632,17 @@ def test_domainrdap_feed_not_api_header_auth():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
 
         assert response is not None
-        assert len(rows) == 5
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
-            assert "parsed_record" in feed_result.keys()
-            assert "domain" in feed_result["parsed_record"]["parsed_fields"]
-            assert "emails" in feed_result["parsed_record"]["parsed_fields"]
-            assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "parsed_record" in feed_result.keys()
+        assert "domain" in feed_result["parsed_record"]["parsed_fields"]
+        assert "emails" in feed_result["parsed_record"]["parsed_fields"]
+        assert "contacts" in feed_result["parsed_record"]["parsed_fields"]
 
 
 @vcr.use_cassette
@@ -654,14 +658,12 @@ def test_feeds_endpoint_should_non_header_auth_be_the_default():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "download_name" in feed_result["response"].keys()
-            assert "files" in feed_result["response"].keys()
+        feed_result = json.loads(response)
+        assert "download_name" in feed_result["response"].keys()
+        assert "files" in feed_result["response"].keys()
 
 
 @vcr.use_cassette
@@ -686,18 +688,16 @@ def test_realtime_domain_risk():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
-            assert "phishing_risk" in feed_result.keys()
-            assert "malware_risk" in feed_result.keys()
-            assert "proximity_risk" in feed_result.keys()
-            assert "overall_risk" in feed_result.keys()
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "phishing_risk" in feed_result.keys()
+        assert "malware_risk" in feed_result.keys()
+        assert "proximity_risk" in feed_result.keys()
+        assert "overall_risk" in feed_result.keys()
 
 
 @vcr.use_cassette
@@ -706,18 +706,16 @@ def test_domain_hotlist():
     for response in results.response():
         assert results.status == 200
 
-        rows = response.strip().split("\n")
+        response = response.strip()
         assert response is not None
-        assert len(rows) >= 1
 
-        for row in rows:
-            feed_result = json.loads(row)
-            assert "timestamp" in feed_result.keys()
-            assert "domain" in feed_result.keys()
-            assert "phishing_risk" in feed_result.keys()
-            assert "malware_risk" in feed_result.keys()
-            assert "proximity_risk" in feed_result.keys()
-            assert "overall_risk" in feed_result.keys()
+        feed_result = json.loads(response)
+        assert "timestamp" in feed_result.keys()
+        assert "domain" in feed_result.keys()
+        assert "phishing_risk" in feed_result.keys()
+        assert "malware_risk" in feed_result.keys()
+        assert "proximity_risk" in feed_result.keys()
+        assert "overall_risk" in feed_result.keys()
 
 
 @vcr.use_cassette

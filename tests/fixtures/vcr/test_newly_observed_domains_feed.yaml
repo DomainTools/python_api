@@ -12643,4 +12643,62 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-22T10:52:14Z","domain":"id789online.com"}
+
+        {"timestamp":"2025-10-22T10:52:14Z","domain":"marbely-sa.com"}
+
+        {"timestamp":"2025-10-22T10:52:13Z","domain":"globalpartszone.com.ua"}
+
+        {"timestamp":"2025-10-22T10:52:13Z","domain":"triustori.co.kr"}
+
+        {"timestamp":"2025-10-22T10:52:13Z","domain":"1xlite-88894.pro"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '327'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 22 Oct 2025 10:52:14 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=9ocra50f0m0qci30qguh1811f0osgi9cikuma4ei4virl82nb0u6v0iaqmba805buhh6t1uni1m9u6cnhm8qk3birtiv0210alk0a3v;
+        expires=Fri, 21-Nov-2025 10:52:14 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=3e5d7bffc21e07086b7390d78d864096; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - c64b6db5-a054-4163-85c3-a61ef6f39a4b
+    status:
+      code: 200
+      message: OK
 version: 1

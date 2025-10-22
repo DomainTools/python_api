@@ -243,11 +243,7 @@ class FeedsResults(Results):
 
                 for line in response.iter_lines():
                     if line:
-                        try:
-                            yield json.loads(line)
-                        except json.JSONDecodeError as e:
-                            log.error(f"JSON Decode Error: {e}")
-                            continue
+                        yield line
         except Exception as e:
             self.latest_feeds_status_code = 500
             yield {"status_ready": True, "error": str(e)}
@@ -259,6 +255,8 @@ class FeedsResults(Results):
             feeds_generator = self._make_request()
 
             next(feeds_generator)  # to start the generator process
+            self.setStatus(self.latest_feeds_status_code)  # set the status already
+
             should_wait = (
                 wait_for
                 and wait_for > 0
@@ -287,8 +285,7 @@ class FeedsResults(Results):
                 feed_response_generator = self.data()
 
                 yield from feed_response_generator
-
-                status_code = self.latest_feeds_status_code
+                status_code = self.status
                 self._data = None  # clear the data here
 
                 if not self.kwargs.get("sessionID"):
@@ -299,3 +296,6 @@ class FeedsResults(Results):
                 self.latest_feeds_status_code = 500
                 self.setStatus(500, reason_text=f"Reason: {e}")
                 break  # safely close the while loop if there's any error above
+
+    def __str__(self):
+        return f"{self.__class__.__name__} - {self.product}"

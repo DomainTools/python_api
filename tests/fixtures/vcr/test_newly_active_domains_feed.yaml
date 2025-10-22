@@ -46187,4 +46187,62 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-22T10:52:24Z","domain":"pentestkingemail.com"}
+
+        {"timestamp":"2025-10-22T10:52:24Z","domain":"pqccertificates.com"}
+
+        {"timestamp":"2025-10-22T10:52:24Z","domain":"drdaddyvip.com"}
+
+        {"timestamp":"2025-10-22T10:52:24Z","domain":"mapodcasts.com"}
+
+        {"timestamp":"2025-10-22T10:52:24Z","domain":"epeto.me"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '320'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 22 Oct 2025 10:52:24 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=q9vc3ft514kmd9ko9obq9lt4335q35ftr986nj5dkbbvsvqdkupqk9jss0ho7auciharb01cg0k47v67df4sob1ii0okd3p2mqqqo60;
+        expires=Fri, 21-Nov-2025 10:52:24 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=7665a85ef812d18e60e39033260b1f44; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 38e1b0c7-1b6b-4654-9a78-a05d1ba21cbe
+    status:
+      code: 200
+      message: OK
 version: 1

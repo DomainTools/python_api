@@ -493,4 +493,62 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-22T10:52:15Z","domain":"mail.annmarienaples.com"}
+
+        {"timestamp":"2025-10-22T10:52:15Z","domain":"konomi-sgs.jp.cafe24.com"}
+
+        {"timestamp":"2025-10-22T10:52:15Z","domain":"jdpll7qxh3rmk2hyw3vq-ph5gap-c36d89412-clientnsv4-s.akamaihd.net"}
+
+        {"timestamp":"2025-10-22T10:52:15Z","domain":"app.xo92.mobi"}
+
+        {"timestamp":"2025-10-22T10:52:15Z","domain":"api.xn--119-iu6o.com"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '388'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 22 Oct 2025 10:52:23 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=jfgngpsjm7isi44h5ncr2vckcpb4c6rktk39c39rcvsj9hg7o6nl91dd5m8a4nls53pvvsmf5mb4uhhtsirfjvh3bvkdiu9g48klu7d;
+        expires=Fri, 21-Nov-2025 10:52:15 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - add990f8-b9cb-46c2-abbf-be5ac67f44c5
+    status:
+      code: 200
+      message: OK
 version: 1

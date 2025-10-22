@@ -25122,4 +25122,62 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-10-22T10:52:33Z","domain":"shoreflarejp.sbs","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-22T10:52:09Z","domain":"myship-711-com-tw-vasji.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-22T10:52:33Z","domain":"rithmg218.vip","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-22T10:52:33Z","domain":"ueszvyb1674.vip","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2025-10-22T10:52:43Z","domain":"paragonixearntech.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '797'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 22 Oct 2025 10:52:46 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=4j4u5p3ka7g9v2qnj97essdfa3t5b1rukkqocg3olp7r83bhckd7qdot6fo8paai97vcbleeh83dldfmqpnp3gikjhkh61roilhff7m;
+        expires=Fri, 21-Nov-2025 10:52:45 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=7665a85ef812d18e60e39033260b1f44; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - b65c563d-d5cb-40dd-8793-bbf5b5a590cf
+    status:
+      code: 200
+      message: OK
 version: 1
