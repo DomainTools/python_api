@@ -49,3 +49,6 @@ packages = [
 
 [tool.setuptools.dynamic]
 version = { "file" = "VERSION" }
+
+[tool.black]
+line-length = 110

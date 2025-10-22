@@ -1698,4 +1698,229 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - 4b02d-a4719-e33e7-93128-5a5ff
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=2
+  response:
+    body:
+      string: "{\"timestamp\":\"2025-10-22T10:52:25Z\",\"domain\":\"akaursingh.com\",\"raw_record\":{\"first_request_timestamp\":\"2025-10-22T10:52:20Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2920456641_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"AKAURSINGH.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/AKAURSINGH.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/AKAURSINGH.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.wix.com\\\\/domain\\\\/AKAURSINGH.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.wix.com\\\\/domain\\\\/AKAURSINGH.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\",\\\"client update prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"3817\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.wix.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.wix.com\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"3817\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Wix.com
+        Ltd.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+14154291173\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"domain-abuse@wix.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-09-27T00:51:57Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-09-27T00:51:57Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-09-27T00:51:57Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-10-22T10:52:00Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS6.WIXDNS.NET\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS7.WIXDNS.NET\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/akaursingh.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/akaursingh.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2025-10-22T10:52:20Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/akaursingh.com\"},{\"data\":\"{\\n
+        \ \\\"rdapConformance\\\" : [ \\\"rdap_level_0\\\", \\\"icann_rdap_technical_implementation_guide_1\\\",
+        \\\"icann_rdap_response_profile_1\\\", \\\"redacted\\\" ],\\n  \\\"objectClassName\\\"
+        : \\\"domain\\\",\\n  \\\"ldhName\\\" : \\\"akaursingh.com\\\",\\n  \\\"unicodeName\\\"
+        : \\\"akaursingh.com\\\",\\n  \\\"nameservers\\\" : [ {\\n    \\\"objectClassName\\\"
+        : \\\"nameserver\\\",\\n    \\\"ldhName\\\" : \\\"ns7.wixdns.net\\\",\\n    \\\"unicodeName\\\"
+        : \\\"ns7.wixdns.net\\\",\\n    \\\"lang\\\" : \\\"en\\\"\\n  }, {\\n    \\\"objectClassName\\\"
+        : \\\"nameserver\\\",\\n    \\\"ldhName\\\" : \\\"ns6.wixdns.net\\\",\\n    \\\"unicodeName\\\"
+        : \\\"ns6.wixdns.net\\\",\\n    \\\"lang\\\" : \\\"en\\\"\\n  } ],\\n  \\\"secureDNS\\\"
+        : {\\n    \\\"zoneSigned\\\" : false,\\n    \\\"delegationSigned\\\" : false\\n
+        \ },\\n  \\\"entities\\\" : [ {\\n    \\\"objectClassName\\\" : \\\"entity\\\",\\n
+        \   \\\"vcardArray\\\" : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\",
+        \\\"4.0\\\" ], [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ], [ \\\"adr\\\",
+        {\\n      \\\"cc\\\" : \\\"US\\\"\\n    }, \\\"text\\\", [ \\\"\\\", \\\"\\\",
+        \\\"\\\", \\\"\\\", \\\"CA\\\", \\\"\\\", \\\"\\\" ] ], [ \\\"contact-uri\\\",
+        { }, \\\"uri\\\", \\\"https://tieredaccess.com/contact/071469c2-8e45-4a8a-b703-ebf3fcc5c55c\\\"
+        ] ] ],\\n    \\\"roles\\\" : [ \\\"registrant\\\" ]\\n  }, {\\n    \\\"objectClassName\\\"
+        : \\\"entity\\\",\\n    \\\"handle\\\" : \\\"3817\\\",\\n    \\\"vcardArray\\\"
+        : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ],
+        [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ] ] ],\\n    \\\"roles\\\" : [ \\\"registrar\\\"
+        ],\\n    \\\"publicIds\\\" : [ {\\n      \\\"type\\\" : \\\"IANA Registrar
+        ID\\\",\\n      \\\"identifier\\\" : \\\"3817\\\"\\n    } ],\\n    \\\"entities\\\"
+        : [ {\\n      \\\"objectClassName\\\" : \\\"entity\\\",\\n      \\\"vcardArray\\\"
+        : [ \\\"vcard\\\", [ [ \\\"version\\\", { }, \\\"text\\\", \\\"4.0\\\" ],
+        [ \\\"fn\\\", { }, \\\"text\\\", \\\"\\\" ], [ \\\"tel\\\", {\\n        \\\"type\\\"
+        : [ \\\"voice\\\" ]\\n      }, \\\"uri\\\", \\\"tel:+1.4154291173\\\" ], [
+        \\\"email\\\", { }, \\\"text\\\", \\\"domain-abuse@wix.com\\\" ] ] ],\\n      \\\"roles\\\"
+        : [ \\\"abuse\\\" ]\\n    } ],\\n    \\\"links\\\" : [ {\\n      \\\"value\\\"
+        : \\\"https://rdap.wix.com/\\\",\\n      \\\"rel\\\" : \\\"about\\\",\\n      \\\"href\\\"
+        : \\\"http://wix.com\\\"\\n    } ]\\n  } ],\\n  \\\"status\\\" : [ \\\"client
+        transfer prohibited\\\", \\\"client update prohibited\\\" ],\\n  \\\"events\\\"
+        : [ {\\n    \\\"eventAction\\\" : \\\"registration\\\",\\n    \\\"eventDate\\\"
+        : \\\"2024-09-27T00:51:57Z\\\"\\n  }, {\\n    \\\"eventAction\\\" : \\\"expiration\\\",\\n
+        \   \\\"eventDate\\\" : \\\"\\\"\\n  }, {\\n    \\\"eventAction\\\" : \\\"last
+        update of RDAP database\\\",\\n    \\\"eventDate\\\" : \\\"2024-09-27T00:53:21Z\\\"\\n
+        \ }, {\\n    \\\"eventAction\\\" : \\\"last changed\\\",\\n    \\\"eventDate\\\"
+        : \\\"2024-09-27T00:53:21Z\\\"\\n  } ],\\n  \\\"notices\\\" : [ {\\n    \\\"title\\\"
+        : \\\"Status Codes\\\",\\n    \\\"description\\\" : [ \\\"For more information
+        on domain status codes, please visit https://icann.org/epp\\\" ],\\n    \\\"links\\\"
+        : [ {\\n      \\\"value\\\" : \\\"https://rdap.wix.com/domain/akaursingh.com\\\",\\n
+        \     \\\"rel\\\" : \\\"glossary\\\",\\n      \\\"href\\\" : \\\"https://icann.org/epp\\\",\\n
+        \     \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  }, {\\n    \\\"title\\\"
+        : \\\"RDDS Inaccuracy Complaint Form\\\",\\n    \\\"description\\\" : [ \\\"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\\\" ],\\n
+        \   \\\"links\\\" : [ {\\n      \\\"value\\\" : \\\"https://rdap.wix.com/domain/akaursingh.com\\\",\\n
+        \     \\\"rel\\\" : \\\"help\\\",\\n      \\\"href\\\" : \\\"https://icann.org/wicf\\\",\\n
+        \     \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  }, {\\n    \\\"title\\\"
+        : \\\"Terms of Service\\\",\\n    \\\"description\\\" : [ \\\"The data provided
+        by the Registration Data Access Protocol (\u201CRDAP\u201D or \u201CWhois\u201D)
+        is provided to you by Tucows for information purposes only and may be used
+        to assist you in obtaining information about or related to a domain name's
+        registration record. These terms govern your use of this service and access
+        to this database. We reserve the right to modify these terms at any time.\\\",
+        \\\"This information is provided as is and does not guarantee its accuracy.\\\",
+        \\\"By submitting a query, you certify that you have a legitimate purpose
+        for requesting the data, that you will use this data only for lawful purposes
+        and delete the data immediately when the data are no longer necessary for
+        your lawful or legitimate purpose, and that, under no circumstances, will
+        you use this data to: a) allow, enable, or otherwise support the transmission
+        of mass, unsolicited, commercial advertising, or solicitations to entities
+        other than the data recipient\u2019s own existing customers; or (b) enable
+        high volume, automated, electronic processes that send queries or data to
+        the systems of any registry operator or ICANN-accredited registrar, except
+        as reasonably necessary to register domain names or modify existing registrations.\\\",
+        \\\"The compilation, repackaging, dissemination, or other use of these data
+        is expressly prohibited.\\\", \\\"Your access to the database may be terminated
+        at any time in our sole discretion including, without limitation, for excessive
+        querying of the database or for failure to otherwise abide by this policy.\\\",
+        \\\"Your IP address, the queried domain, the response, and a timestamp is
+        stored for the purposes of maintaining the service and to ensure adherence
+        with these terms.\\\", \\\"By submitting this query, you agree to these terms.\\\",
+        \\\"NOTE: THIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN RECORD
+        DOES NOT SIGNIFY DOMAIN AVAILABILITY.\\\" ],\\n    \\\"links\\\" : [ {\\n
+        \     \\\"value\\\" : \\\"https://rdap.wix.com/domain/akaursingh.com\\\",\\n
+        \     \\\"rel\\\" : \\\"terms-of-service\\\",\\n      \\\"href\\\" : \\\"http://www.tucowsdomains.com/rdap/tos\\\",\\n
+        \     \\\"type\\\" : \\\"text/html\\\"\\n    } ]\\n  } ],\\n  \\\"redacted\\\"
+        : [ {\\n    \\\"name\\\" : {\\n      \\\"type\\\" : \\\"Registry Domain ID\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\",\\n    \\\"reason\\\" : { }\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"publicIds\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\",\\n    \\\"reason\\\" : { }\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"port43\\\"\\n
+        \   },\\n    \\\"method\\\" : \\\"removal\\\",\\n    \\\"reason\\\" : { }\\n
+        \ }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Event expiration\\\"\\n
+        \   },\\n    \\\"postPath\\\" : \\\"$.events[?(@.eventAction=='expiration')].eventDate\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Reseller Contact\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Abuse kind\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n    \\\"reason\\\"
+        : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Abuse
+        lang\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n    \\\"reason\\\"
+        : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\" : \\\"Abuse
+        Name\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrar')].entities[?(@.roles[0]=='abuse')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registrar kind\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registrar lang\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registrar Name\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrar')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registrant kind\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"description\\\"
+        : \\\"Registrant lang\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Name\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Organization\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Phone\\\"\\n    },\\n    \\\"method\\\" : \\\"removal\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Email\\\"\\n    },\\n    \\\"method\\\" : \\\"replacementValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Street\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][:3]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant City\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][3]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  }, {\\n    \\\"name\\\" : {\\n      \\\"type\\\"
+        : \\\"Registrant Postal Code\\\"\\n    },\\n    \\\"postPath\\\" : \\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][5]\\\",\\n
+        \   \\\"pathLang\\\" : \\\"jsonpath\\\",\\n    \\\"method\\\" : \\\"emptyValue\\\",\\n
+        \   \\\"reason\\\" : { }\\n  } ]\\n}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-10-22T10:52:22Z\",\"url\":\"https://rdap.wix.com/domain/AKAURSINGH.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\",\"redacted\"],\"contacts\":[{\"city\":\"\",\"country\":\"US\",\"email\":\"https://tieredaccess.com/contact/071469c2-8e45-4a8a-b703-ebf3fcc5c55c\",\"name\":\"\",\"postal\":\"\",\"region\":\"CA\",\"roles\":[\"registrant\"],\"street\":\"\"}],\"creation_date\":\"2024-09-27T00:51:57+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"akaursingh.com\",\"domain_statuses\":[\"client
+        transfer prohibited\",\"client update prohibited\"],\"email_domains\":[\"wix.com\"],\"emails\":[\"domain-abuse@wix.com\",\"https://tieredaccess.com/contact/071469c2-8e45-4a8a-b703-ebf3fcc5c55c\"],\"expiration_date\":\"2026-09-27T00:51:57+00:00\",\"handle\":\"2920456641_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2024-09-27T00:53:21+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/AKAURSINGH.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.wix.com/domain/AKAURSINGH.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns7.wixdns.net\",\"ns6.wixdns.net\"],\"registrar\":{\"contacts\":[{\"email\":\"domain-abuse@wix.com\",\"name\":\"\",\"phone\":\"tel:+14154291173\",\"roles\":[\"abuse\"]}],\"iana_id\":\"3817\",\"name\":\"Wix.com
+        Ltd.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.wix.com/domain/AKAURSINGH.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/akaursingh.com\"}}\n{\"timestamp\":\"2025-10-22T10:52:25Z\",\"domain\":\"naturewalktales.sbs\",\"raw_record\":{\"first_request_timestamp\":\"2025-10-22T10:52:20Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_technical_implementation_guide_0\\\",\\\"rdap_level_0\\\"],\\\"lang\\\":\\\"en\\\",\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"D515703954-CNIC\\\",\\\"ldhName\\\":\\\"naturewalktales.sbs\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ndns1.cosmotown.com\\\",\\\"handle\\\":\\\"H35466582-CNIC\\\",\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        URL for this resource\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/nameserver\\\\/ndns1.cosmotown.com\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ndns2.cosmotown.com\\\",\\\"handle\\\":\\\"H35466588-CNIC\\\",\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        URL for this resource\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/nameserver\\\\/ndns2.cosmotown.com\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1509\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",[],\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",[],\\\"text\\\",\\\"Cosmotown
+        Inc\\\"]]],\\\"links\\\":[{\\\"title\\\":\\\"Authoritative URL for this resource\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/entity\\\\/1509\\\"},{\\\"title\\\":\\\"Registrar's
+        Website\\\",\\\"rel\\\":\\\"about\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.cosmotown.com\\\\/v1\\\\/\\\",\\\"href\\\":\\\"https:\\\\/\\\\/www.cosmotown.com\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"not
+        applicable\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",[],\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",[],\\\"text\\\",\\\"Abuse
+        Contact\\\"],[\\\"org\\\",[],\\\"text\\\",\\\"Cosmotown Inc\\\"],[\\\"email\\\",[],\\\"text\\\",\\\"abuse@cosmotown.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.6504739500\\\"]]]}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1509\\\"}]}],\\\"status\\\":[\\\"client
+        renew prohibited\\\",\\\"client transfer prohibited\\\",\\\"client update
+        prohibited\\\",\\\"client delete prohibited\\\"],\\\"port43\\\":\\\"whois.nic.sbs\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2024-12-31T17:38:03.0Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2025-12-31T23:59:59.0Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-10-22T10:52:22.0Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-01-05T17:40:55.0Z\\\"}],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"title\\\":\\\"More
+        information on domain status codes\\\",\\\"rel\\\":\\\"glossary\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"For more information on Whois status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"\\\",\\\"\\u003e\\u003e\\u003e
+        IMPORTANT INFORMATION ABOUT THE DEPLOYMENT OF RDAP: please visit\\\",\\\"https:\\\\/\\\\/www.centralnicregistry.com\\\\/support\\\\/information\\\\/rdap
+        \\u003c\\u003c\\u003c\\\",\\\"\\\",\\\"The registration data available in
+        this service is limited. Additional\\\",\\\"data may be available at https:\\\\/\\\\/lookup.icann.org\\\",\\\"\\\",\\\"The
+        Whois and RDAP services are provided by CentralNic, and contain\\\",\\\"information
+        pertaining to Internet domain names registered by our\\\",\\\"our customers.
+        By using this service you are agreeing (1) not to use any\\\",\\\"information
+        presented here for any purpose other than determining\\\",\\\"ownership of
+        domain names, (2) not to store or reproduce this data in\\\",\\\"any way,
+        (3) not to use any high-volume, automated, electronic processes\\\",\\\"to
+        obtain data from this service. Abuse of this service is monitored and\\\",\\\"actions
+        in contravention of these terms will result in being permanently\\\",\\\"blacklisted.
+        All data is (c) CentralNic Ltd (https:\\\\/\\\\/www.centralnicregistry.com)\\\",\\\"\\\",\\\"Access
+        to the Whois and RDAP services is rate limited. For more\\\",\\\"information,
+        visit https:\\\\/\\\\/centralnicregistry.com\\\\/policies\\\\/whois-guidance.\\\"],\\\"links\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/www.centralnicregistry.com\\\\/\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"title\\\":\\\"ICANN
+        RDDS Inaccuracy Complaint Form\\\",\\\"rel\\\":\\\"help\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\"}]}],\\\"links\\\":[{\\\"title\\\":\\\"Authoritative
+        URL for this resource\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\"},{\\\"title\\\":\\\"RDAP
+        Service Help\\\",\\\"rel\\\":\\\"help\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/whois.nic.sbs\\\\/rdap\\\"},{\\\"title\\\":\\\"Shortdot
+        SA\\\",\\\"rel\\\":\\\"related\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"http:\\\\/\\\\/nic.icu\\\\/\\\"},{\\\"title\\\":\\\"URL
+        of Sponsoring Registrar's RDAP Record\\\",\\\"rel\\\":\\\"related\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.centralnic.com\\\\/sbs\\\\/domain\\\\/naturewalktales.sbs\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.cosmotown.com\\\\/v1\\\\/domain\\\\/naturewalktales.sbs\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2025-10-22T10:52:22Z\",\"url\":\"https://rdap.centralnic.com/sbs/domain/naturewalktales.sbs\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"icann_rdap_response_profile_1\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_technical_implementation_guide_0\",\"rdap_level_0\"],\"contacts\":[],\"creation_date\":\"2024-12-31T17:38:03+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"naturewalktales.sbs\",\"domain_statuses\":[\"client
+        renew prohibited\",\"client transfer prohibited\",\"client update prohibited\",\"client
+        delete prohibited\"],\"email_domains\":[\"cosmotown.com\"],\"emails\":[\"abuse@cosmotown.com\"],\"expiration_date\":\"2025-12-31T23:59:59+00:00\",\"handle\":\"D515703954-CNIC\",\"last_changed_date\":\"2025-01-05T17:40:55+00:00\",\"links\":[{\"href\":\"https://rdap.centralnic.com/sbs/domain/naturewalktales.sbs\",\"rel\":\"self\"},{\"href\":\"https://whois.nic.sbs/rdap\",\"rel\":\"help\"},{\"href\":\"http://nic.icu/\",\"rel\":\"related\"},{\"href\":\"https://rdap.cosmotown.com/v1/domain/naturewalktales.sbs\",\"rel\":\"related\"},{\"href\":\"https://rdap.centralnic.com/sbs/domain/naturewalktales.sbs\",\"rel\":\"self\"},{\"href\":\"https://whois.nic.sbs/rdap\",\"rel\":\"help\"},{\"href\":\"http://nic.icu/\",\"rel\":\"related\"},{\"href\":\"https://rdap.cosmotown.com/v1/domain/naturewalktales.sbs\",\"rel\":\"related\"}],\"nameservers\":[\"ndns1.cosmotown.com\",\"ndns2.cosmotown.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@cosmotown.com\",\"handle\":\"not
+        applicable\",\"name\":\"Abuse Contact\",\"org\":\"Cosmotown Inc\",\"phone\":\"tel:+1.6504739500\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1509\",\"name\":\"Cosmotown
+        Inc\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.centralnic.com/sbs/domain/naturewalktales.sbs\",\"registry_request_url\":\"https://rdap.centralnic.com/sbs/domain/naturewalktales.sbs\"}}\n"
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Wed, 22 Oct 2025 10:52:25 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=clgimfpl5soqb4tkk5q5t0n8hn9t2fdvlfsc53i0l36j8jde28lv0qaor49vlm3d55buuafne7mds82git538me2hgcsqf9nudnsrmm;
+        expires=Fri, 21-Nov-2025 10:52:25 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=3e5d7bffc21e07086b7390d78d864096; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Request-Id:
+      - 1f3c5338-2279-4c43-bf32-68ac86ee6893
+    status:
+      code: 200
+      message: OK
 version: 1

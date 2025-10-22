@@ -92,7 +92,9 @@ class API(object):
         self._build_api_url(api_url, api_port)
 
         if not https:
-            raise Exception("The DomainTools API endpoints no longer support http traffic. Please make sure https=True.")
+            raise Exception(
+                "The DomainTools API endpoints no longer support http traffic. Please make sure https=True."
+            )
         if proxy_url and not isinstance(proxy_url, str):
             raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 
@@ -129,7 +131,8 @@ class API(object):
             always_sign_api_key_previous_value = self.always_sign_api_key
             header_authentication_previous_value = self.header_authentication
             self._rate_limit()
-            # Reset always_sign_api_key and header_authentication to its original User-set values as these might be affected when self.account_information() was executed
+            # Reset always_sign_api_key and header_authentication to its original
+            # User-set values as these might be affected when self.account_information() was executed
             self.always_sign_api_key = always_sign_api_key_previous_value
             self.header_authentication = header_authentication_previous_value
 
@@ -139,7 +142,13 @@ class API(object):
         is_rttf_product = product in RTTF_PRODUCTS_LIST
         self._handle_api_key_parameters(is_rttf_product)
         self.handle_api_key(is_rttf_product, path, parameters)
-        parameters.update({key: str(value).lower() if value in (True, False) else value for key, value in kwargs.items() if value is not None})
+        parameters.update(
+            {
+                key: str(value).lower() if value in (True, False) else value
+                for key, value in kwargs.items()
+                if value is not None
+            }
+        )
 
         return cls(self, product, uri, **parameters)
 
@@ -189,8 +198,20 @@ class API(object):
                 string[1:],
             )
 
-        api_calls = tuple((api_call for api_call in dir(API) if not api_call.startswith("_") and callable(getattr(API, api_call, None))))
-        return sorted([snakecase(p["id"]) for p in self.account_information()["products"] if snakecase(p["id"]) in api_calls])
+        api_calls = tuple(
+            (
+                api_call
+                for api_call in dir(API)
+                if not api_call.startswith("_") and callable(getattr(API, api_call, None))
+            )
+        )
+        return sorted(
+            [
+                snakecase(p["id"])
+                for p in self.account_information()["products"]
+                if snakecase(p["id"]) in api_calls
+            ]
+        )
 
     def brand_monitor(self, query, exclude=None, domain_status=None, days_back=None, **kwargs):
         """Pass in one or more terms as a list or separated by the pipe character ( | )"""
@@ -445,7 +466,16 @@ class API(object):
         """Performs a search for the provided search terms ANDed together,
         returning the pivot engine row data for the resulting domains.
         """
-        if not domain and not ip and not email and not nameserver and not registrar and not registrant and not registrant_org and not kwargs:
+        if (
+            not domain
+            and not ip
+            and not email
+            and not nameserver
+            and not registrar
+            and not registrant
+            and not registrant_org
+            and not kwargs
+        ):
             raise ValueError("At least one search term must be specified")
 
         return self._results(
@@ -1069,7 +1099,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
@@ -1101,7 +1134,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
@@ -1162,7 +1198,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
@@ -1194,7 +1233,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
@@ -1225,7 +1267,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
@@ -1256,7 +1301,10 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if endpoint == Endpoint.DOWNLOAD.value or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
             # headers param is allowed only in Feed API and CSV format
             kwargs.pop("headers", None)
 
