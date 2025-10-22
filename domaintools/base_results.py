@@ -9,7 +9,11 @@ from copy import deepcopy
 from datetime import datetime
 from httpx import Client
 
-from domaintools.constants import RTTF_PRODUCTS_LIST, OutputFormat, HEADER_ACCEPT_KEY_CSV_FORMAT
+from domaintools.constants import (
+    RTTF_PRODUCTS_LIST,
+    OutputFormat,
+    HEADER_ACCEPT_KEY_CSV_FORMAT,
+)
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
@@ -92,10 +96,10 @@ class Results(MutableMapping, MutableSequence):
             header_key_for_api_key = "X-Api-Key" if is_rttf_product else "X-API-Key"
             headers[header_key_for_api_key] = self.api.key
 
-        return {"parameters": parameters, "headers": headers}
+        session_param_and_headers = {"parameters": parameters, "headers": headers}
+        return session_param_and_headers
 
     def _make_request(self):
-
         with Client(verify=self.api.verify_ssl, proxy=self.api.proxy_url, timeout=None) as session:
             session_params_and_headers = self._get_session_params_and_headers()
             headers = session_params_and_headers.get("headers")
@@ -113,7 +117,12 @@ class Results(MutableMapping, MutableSequence):
                 return session.patch(url=self.url, json=patch_data, headers=headers)
             else:
                 parameters = session_params_and_headers.get("parameters")
-                return session.get(url=self.url, params=parameters, headers=headers, **self.api.extra_request_params)
+                return session.get(
+                    url=self.url,
+                    params=parameters,
+                    headers=headers,
+                    **self.api.extra_request_params,
+                )
 
     def _get_results(self):
         wait_for = self._wait_time()
@@ -152,7 +161,9 @@ class Results(MutableMapping, MutableSequence):
     def check_limit_exceeded(self):
         limit_exceeded, reason = False, ""
         if isinstance(self._data, dict) and (
-            "response" in self._data and "limit_exceeded" in self._data["response"] and self._data["response"]["limit_exceeded"] is True
+            "response" in self._data
+            and "limit_exceeded" in self._data["response"]
+            and self._data["response"]["limit_exceeded"] is True
         ):
             limit_exceeded, reason = True, self._data["response"]["message"]
         elif "response" in self._data and "limit_exceeded" in self._data:
@@ -168,7 +179,7 @@ class Results(MutableMapping, MutableSequence):
 
         return self._status
 
-    def setStatus(self, code, response=None):
+    def setStatus(self, code, response=None, reason_text=None):
         self._status = code
         if code == 200 or (self.product in RTTF_PRODUCTS_LIST and code == 206):
             return
@@ -181,6 +192,9 @@ class Results(MutableMapping, MutableSequence):
                 reason = response.text
                 if callable(reason):
                     reason = reason()
+        else:  # optionally pass a customize reason of error for better traceback
+            if reason_text is not None:
+                reason = reason_text
 
         if code in (400, 422):
             raise BadRequestException(code, reason)
@@ -330,4 +344,8 @@ class Results(MutableMapping, MutableSequence):
         return "\n".join([json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()])
 
     def __str__(self):
-        return str(json.dumps(self.data(), indent=4, separators=(",", ": ")) if self.kwargs.get("format", "json") == "json" else self.data())
+        return str(
+            json.dumps(self.data(), indent=4, separators=(",", ": "))
+            if self.kwargs.get("format", "json") == "json"
+            else self.data()
+        )
