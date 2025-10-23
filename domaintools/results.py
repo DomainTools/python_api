@@ -247,13 +247,7 @@ class FeedsResults(Results):
 
     def _get_results(self) -> Generator:
         try:
-            wait_for = self._wait_time()
-            if wait_for:
-                log.info(f"Sleeping for {wait_for}s BEFORE REQUEST.")
-                time.sleep(wait_for)
-
             feeds_generator = self._make_request()
-
             next(feeds_generator)  # to start the generator process
             self.setStatus(self.latest_feeds_status_code)  # set the status already
 

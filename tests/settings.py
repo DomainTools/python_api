@@ -41,6 +41,7 @@ vcr = VCR(
     before_record_request=filter_patch_parameters,
     filter_query_parameters=["timestamp", "signature", "api_username", "api_key"],
     filter_post_data_parameters=["timestamp", "signature", "api_username", "api_key"],
+    filter_headers=["x-api-key"],
     cassette_library_dir="tests/fixtures/vcr/",
     path_transformer=VCR.ensure_suffix(".yaml"),
     record_mode="new_episodes",

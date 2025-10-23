@@ -2990,162 +2990,46 @@ interactions:
       - api.domaintools.com
       user-agent:
       - python-httpx/0.28.1
-      x-api-key:
-      - 4b02d-a4719-e33e7-93128-5a5ff
-    method: GET
-    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.5.2&header_authentication=false
-  response:
-    body:
-      string: '{"timestamp":"2025-10-06T16:40:38Z","domain":"albrologistics.com"}
-
-        {"timestamp":"2025-10-06T16:40:39Z","domain":"datablog.co.uk"}
-
-        {"timestamp":"2025-10-06T16:40:39Z","domain":"stelapratas.com"}
-
-        {"timestamp":"2025-10-06T16:40:39Z","domain":"donasveganasymas.com"}
-
-        {"timestamp":"2025-10-06T16:40:39Z","domain":"rdstore.shop"}
-
-        {"timestamp":"2025-10-06T16:40:39Z","domain":"basopbafep.at"}
-
-        '
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Content-Security-Policy:
-      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
-      Content-Type:
-      - application/x-ndjson
-      Date:
-      - Mon, 06 Oct 2025 16:41:37 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - dtsession=mjnphs9kpucpipg5t5mksdvmchdrtomgf49bb5mnu64c971099658j14c65q5jhrh2f9pu589th4rt89d7lj2jq96p71d9m0fd854dm;
-        expires=Wed, 05-Nov-2025 16:41:37 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-        secure; HttpOnly
-      - 0566fae076d9b6615cd8f47a9e9500f2=da9b98176bbb72d0ca7886ae363d40d4; path=/;
-        HttpOnly
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-    status:
-      code: 200
-      message: OK
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.28.1
-      x-api-key:
-      - 4b02d-a4719-e33e7-93128-5a5ff
-    method: GET
-    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.5.3&top=5
-  response:
-    body:
-      string: '{"timestamp":"2025-10-08T13:34:20Z","domain":"ordalab.com"}
-
-        {"timestamp":"2025-10-08T13:34:20Z","domain":"shopwert.online"}
-
-        {"timestamp":"2025-10-08T13:34:20Z","domain":"ryaparts.fr"}
-
-        {"timestamp":"2025-10-08T13:34:20Z","domain":"21637.cn"}
-
-        {"timestamp":"2025-10-08T13:34:19Z","domain":"15054.cn"}
-
-        '
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Content-Length:
-      - '298'
-      Content-Security-Policy:
-      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
-      Content-Type:
-      - application/x-ndjson
-      Date:
-      - Wed, 08 Oct 2025 13:34:21 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - dtsession=osvoe5vbplha77upcr3sdbhdchlemr0uacv0ar7rp6uecprl0hbcq89ooqvh6osi5ud5blhpl367lvlunomgar40tknvp4i8h9s66dr;
-        expires=Fri, 07-Nov-2025 13:34:21 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
-        secure; HttpOnly
-      - 0566fae076d9b6615cd8f47a9e9500f2=0335edaf1718dccec7bc612e6dd71941; path=/;
-        HttpOnly
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
-    status:
-      code: 200
-      message: OK
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.28.1
-      x-api-key:
-      - 4b02d-a4719-e33e7-93128-5a5ff
     method: GET
     uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.6.0&top=5
   response:
     body:
-      string: '{"timestamp":"2025-10-22T10:52:26Z","domain":"campredemption.com"}
+      string: '{"timestamp":"2025-10-23T18:32:45Z","domain":"lahntonaci.de"}
 
-        {"timestamp":"2025-10-22T10:52:26Z","domain":"mahkota77.sbs"}
+        {"timestamp":"2025-10-23T18:32:45Z","domain":"wildeland-ventures.com"}
 
-        {"timestamp":"2025-10-22T10:52:25Z","domain":"kylothedogebnb.fun"}
+        {"timestamp":"2025-10-23T18:32:45Z","domain":"elartesanal.com.gt"}
 
-        {"timestamp":"2025-10-22T10:52:25Z","domain":"schwab-secure93.wiki"}
+        {"timestamp":"2025-10-23T18:32:45Z","domain":"5movierulz2.blue"}
 
-        {"timestamp":"2025-10-22T10:52:25Z","domain":"ok08.cc"}
+        {"timestamp":"2025-10-23T18:32:45Z","domain":"airplanepilotsupport.com"}
 
         '
     headers:
       Cache-Control:
       - no-store, no-cache, must-revalidate
       Content-Length:
-      - '321'
+      - '338'
       Content-Security-Policy:
       - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
       Content-Type:
       - application/x-ndjson
       Date:
-      - Wed, 22 Oct 2025 10:52:27 GMT
+      - Thu, 23 Oct 2025 18:32:45 GMT
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Pragma:
       - no-cache
       Set-Cookie:
-      - dtsession=nd7k8vjf050qnsmprlcu9iedq156h2slia8fg4qa2d72h2bsfrvgd22qufudnh9u02233jg6k0k3lrmec2klf0rhg8ingdt9v2vs7fr;
-        expires=Fri, 21-Nov-2025 10:52:27 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      - dtsession=qe90675g75jckqeks6pbr4su7h2i0iul83l3r7gqcoi7jmlt6cj909gha30fmcajg3avge6ao00usmpdd7h6lsvqe22j6cv4n0vemts;
+        expires=Sat, 22-Nov-2025 18:32:45 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
-      - 0566fae076d9b6615cd8f47a9e9500f2=acfc58822336225f812eb799691c0d9e; path=/;
+      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
         HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       X-Request-Id:
-      - a88466ad-c0e4-420c-ae51-7aebc8c97deb
+      - 4fbb1620-8c58-49f3-8f25-9523323808f8
     status:
       code: 200
       message: OK

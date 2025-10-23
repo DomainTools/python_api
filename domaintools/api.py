@@ -112,8 +112,12 @@ class API(object):
 
         self._rest_api_url = rest_api_url
 
-    def _rate_limit(self):
+    def _rate_limit(self, product):
         """Pulls in and enforces the latest rate limits for the specified user"""
+        if product in RTTF_PRODUCTS_LIST:
+            self.limits_set = False
+            return
+
         self.limits_set = True
         for product in self.account_information():
             limit_minutes = product["per_minute_limit"] or None
@@ -130,7 +134,7 @@ class API(object):
         if product != "account-information" and self.rate_limit and not self.limits_set and not self.limits:
             always_sign_api_key_previous_value = self.always_sign_api_key
             header_authentication_previous_value = self.header_authentication
-            self._rate_limit()
+            self._rate_limit(product)
             # Reset always_sign_api_key and header_authentication to its original
             # User-set values as these might be affected when self.account_information() was executed
             self.always_sign_api_key = always_sign_api_key_previous_value
