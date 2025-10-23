@@ -3,7 +3,6 @@
 Additionally, defines any custom result objects that may be used to enable more Pythonic interaction with endpoints.
 """
 
-import json
 import logging
 import httpx
 import time
@@ -15,7 +14,6 @@ except ImportError:  # pragma: no cover
 
 from itertools import zip_longest, chain
 from typing import Generator
-from httpx import Client
 
 from domaintools_async import AsyncResults as Results
 
@@ -210,7 +208,7 @@ class FeedsResults(Results):
 
     Highlevel process:
 
-    httpx stream -> yield each json line -> check status code -> yield back data to client
+    httpx stream -> check status code -> yield back data to client -> repeat if 206
 
     Returns the generator object for feeds results.
     """
