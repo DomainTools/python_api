@@ -246,32 +246,24 @@ class FeedsResults(Results):
                         yield line
         except Exception as e:
             self.latest_feeds_status_code = 500
-            yield {"status_ready": True, "error": str(e)}
-            raise
+            raise e
 
     def _get_results(self) -> Generator:
         try:
             wait_for = self._wait_time()
+            if wait_for:
+                log.info(f"Sleeping for {wait_for}s BEFORE REQUEST.")
+                time.sleep(wait_for)
+
             feeds_generator = self._make_request()
 
             next(feeds_generator)  # to start the generator process
             self.setStatus(self.latest_feeds_status_code)  # set the status already
 
-            should_wait = (
-                wait_for
-                and wait_for > 0
-                and not (self.api.rate_limit and (self.product == "account-information"))
-            )
-            if should_wait:
-                log.info(f"Sleeping for {wait_for}s.")
-                time.sleep(wait_for)
-
             # yield the rest of the feeds
             yield from feeds_generator
         except Exception as e:
-            log.error(f"FATAL: Failed to start the feed generator in _make_request. Reason: {e}")
-            self.latest_feeds_status_code = 500
-            self.setStatus(500, reason_text=f"Reason: {e}")
+            self.setStatus(500, reason_text=e)
             return
 
     def data(self) -> Generator:
@@ -293,8 +285,7 @@ class FeedsResults(Results):
                     # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
                     break
             except Exception as e:
-                self.latest_feeds_status_code = 500
-                self.setStatus(500, reason_text=f"Reason: {e}")
+                self.setStatus(500, reason_text=e)
                 break  # safely close the while loop if there's any error above
 
     def __str__(self):
