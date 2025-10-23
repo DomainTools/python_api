@@ -242,8 +242,7 @@ class FeedsResults(Results):
                 yield {"status_ready": True}
 
                 for line in response.iter_lines():
-                    if line:
-                        yield line
+                    yield line
         except Exception as e:
             self.latest_feeds_status_code = 500
             raise e
