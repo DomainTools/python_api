@@ -1,22 +1,21 @@
-"""Defines the used Result object based on the current versions and/or features available to Python runtime
-
+"""
+Defines the used Result object based on the current versions and/or features available to Python runtime
 Additionally, defines any custom result objects that may be used to enable more Pythonic interaction with endpoints.
 """
 
 import logging
+from itertools import zip_longest, chain
+from typing import Generator
+
 import httpx
-import time
 
 try:  # pragma: no cover
     from collections import OrderedDict
 except ImportError:  # pragma: no cover
     from ordereddict import OrderedDict
 
-from itertools import zip_longest, chain
-from typing import Generator
 
 from domaintools_async import AsyncResults as Results
-
 
 log = logging.getLogger(__name__)
 
@@ -243,16 +242,8 @@ class FeedsResults(Results):
             for line in response.iter_lines():
                 yield line
 
-    def _get_results(self) -> Generator:
-        try:
-            feeds_generator = self._make_request()
-            yield from feeds_generator
-        except Exception as e:
-            self.setStatus(500, reason_text=e)
-            return
-
     def data(self) -> Generator:
-        self._data = self._get_results()
+        self._data = self._make_request()
         return self._data
 
     def response(self) -> Generator:
@@ -261,7 +252,8 @@ class FeedsResults(Results):
 
             if not self.kwargs.get("sessionID"):
                 # we'll only do iterative request for queries that has sessionID.
-                # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
+                # Otherwise, we will have an infinite request if sessionID was not provided
+                # but the required data asked is more than the maximum (1 hour of data)
                 break
         self._status = None
 
