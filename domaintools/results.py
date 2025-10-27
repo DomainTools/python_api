@@ -213,8 +213,6 @@ class FeedsResults(Results):
     Returns the generator object for feeds results.
     """
 
-    latest_feeds_status_code = None
-
     def _make_request(self) -> Generator:
         """
         Creates and manages the httpx stream request, yielding data line by line.
@@ -224,34 +222,30 @@ class FeedsResults(Results):
         headers = session_info.get("headers")
         parameters = session_info.get("parameters")
 
-        try:
-            with httpx.stream(
-                "GET",
-                self.url,
-                headers=headers,
-                params=parameters,
-                verify=self.api.verify_ssl,
-                proxy=self.api.proxy_url,
-                timeout=None,
-            ) as response:
-                self.latest_feeds_status_code = response.status_code
-                # assigned the status code to `latest_feeds_status_code`
-                # started the process
-                yield {"status_ready": True}
+        with httpx.stream(
+            "GET",
+            self.url,
+            headers=headers,
+            params=parameters,
+            verify=self.api.verify_ssl,
+            proxy=self.api.proxy_url,
+            timeout=None,
+        ) as response:
+            # set the status already
+            error_text = ""
+            status_code = response.status_code
+            if status_code not in [200, 206]:
+                response.read()
+                error_text = response.text
 
-                for line in response.iter_lines():
-                    yield line
-        except Exception as e:
-            self.latest_feeds_status_code = 500
-            raise e
+            self.setStatus(status_code, reason_text=error_text)
+
+            for line in response.iter_lines():
+                yield line
 
     def _get_results(self) -> Generator:
         try:
             feeds_generator = self._make_request()
-            next(feeds_generator)  # to start the generator process
-            self.setStatus(self.latest_feeds_status_code)  # set the status already
-
-            # yield the rest of the feeds
             yield from feeds_generator
         except Exception as e:
             self.setStatus(500, reason_text=e)
@@ -262,22 +256,14 @@ class FeedsResults(Results):
         return self._data
 
     def response(self) -> Generator:
-        status_code = None
-        while status_code != 200:
-            try:
-                feed_response_generator = self.data()
+        while self.status != 200:
+            yield from self.data()
 
-                yield from feed_response_generator
-                status_code = self.status
-                self._data = None  # clear the data here
-
-                if not self.kwargs.get("sessionID"):
-                    # we'll only do iterative request for queries that has sessionID.
-                    # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
-                    break
-            except Exception as e:
-                self.setStatus(500, reason_text=e)
-                break  # safely close the while loop if there's any error above
+            if not self.kwargs.get("sessionID"):
+                # we'll only do iterative request for queries that has sessionID.
+                # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
+                break
+        self._status = None
 
     def __str__(self):
         return f"{self.__class__.__name__} - {self.product}"
