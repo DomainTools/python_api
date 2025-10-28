@@ -304,6 +304,10 @@ To add more e2e tests, put these in the `../tests/e2e` folder.
         export TEST_USER=<user-key>
         export TEST_KEY=<api-key>
     ```
+- Run unit tests.
+    ```bash
+        tox -e
+    ```
 
 ## Run the end-to-end test script
 - Before running the test, be sure that docker is running.
