@@ -222,7 +222,6 @@ class DTCLICommand:
                     header_authentication=header_authentication,
                 )
                 dt_api_func = getattr(dt_api, name)
-
                 params = params | kwargs
 
                 response = dt_api_func(**params)
@@ -241,7 +240,7 @@ class DTCLICommand:
                         description=f"Printing the results with format of {response_format}...",
                     )
                     # use rich `print` command to prettify the ouput in sys.stdout
-                    if response.product in RTTF_PRODUCTS_LIST:
+                    if name not in ("available_api_calls",) and response.product in RTTF_PRODUCTS_LIST:
                         for feeds in response.response():
                             print(feeds)
                     else:

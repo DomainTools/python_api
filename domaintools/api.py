@@ -6,7 +6,13 @@ from typing import Union
 import re
 import ssl
 
-from domaintools.constants import Endpoint, ENDPOINT_TO_SOURCE_MAP, RTTF_PRODUCTS_LIST, OutputFormat
+from domaintools.constants import (
+    Endpoint,
+    OutputFormat,
+    ENDPOINT_TO_SOURCE_MAP,
+    RTTF_PRODUCTS_LIST,
+    RTTF_PRODUCTS_CMD_MAPPING,
+)
 from domaintools._version import current as version
 from domaintools.results import (
     GroupedIterable,
@@ -209,13 +215,23 @@ class API(object):
                 if not api_call.startswith("_") and callable(getattr(API, api_call, None))
             )
         )
-        return sorted(
-            [
-                snakecase(p["id"])
-                for p in self.account_information()["products"]
-                if snakecase(p["id"]) in api_calls
-            ]
-        )
+
+        account_information = self.account_information()
+
+        available_calls = set()
+        for product in self.account_information():
+            product_id = product["id"]
+            # for RTUF endpoints as we use different func name in our wrapper
+            if product_id in RTTF_PRODUCTS_LIST:
+                if rttf_api_command := RTTF_PRODUCTS_CMD_MAPPING.get(product_id):
+                    available_calls.add(rttf_api_command)
+
+            # for IRIS endpoints
+            snakecase_pid = snakecase(product_id)
+            if snakecase_pid in api_calls:
+                available_calls.add(snakecase_pid)
+
+        return sorted(available_calls)
 
     def brand_monitor(self, query, exclude=None, domain_status=None, days_back=None, **kwargs):
         """Pass in one or more terms as a list or separated by the pipe character ( | )"""
@@ -1279,7 +1295,7 @@ class API(object):
             kwargs.pop("headers", None)
 
         return self._results(
-            f"domain-risk-feed-({source})",
+            f"real-time-domain-risk-({source})",
             f"v1/{endpoint}/domainrisk/",
             response_path=(),
             cls=FeedsResults,
@@ -1313,7 +1329,7 @@ class API(object):
             kwargs.pop("headers", None)
 
         return self._results(
-            f"domain-hotlist-feed-({source})",
+            f"real-time-domain-hotlist-({source})",
             f"v1/{endpoint}/domainhotlist/",
             response_path=(),
             cls=FeedsResults,
