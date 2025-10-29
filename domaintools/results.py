@@ -1,19 +1,23 @@
-"""Defines the used Result object based on the current versions and/or features available to Python runtime
-
+"""
+Defines the used Result object based on the current versions and/or features available to Python runtime
 Additionally, defines any custom result objects that may be used to enable more Pythonic interaction with endpoints.
 """
 
-from itertools import chain
+import logging
+from itertools import zip_longest, chain
+from typing import Generator
+
+import httpx
 
 try:  # pragma: no cover
     from collections import OrderedDict
 except ImportError:  # pragma: no cover
     from ordereddict import OrderedDict
 
-from itertools import zip_longest
-from typing import Generator
 
 from domaintools_async import AsyncResults as Results
+
+log = logging.getLogger(__name__)
 
 
 class Reputation(Results):
@@ -32,7 +36,11 @@ class GroupedIterable(Results):
     def _items(self):
         if self._items_list is None:
             self._items_list = chain(
-                *[zip_longest([], value, fillvalue=key) for key, value in self.response().items() if type(value) in (list, tuple)]
+                *[
+                    zip_longest([], value, fillvalue=key)
+                    for key, value in self.response().items()
+                    if type(value) in (list, tuple)
+                ]
             )
 
         return self._items_list
@@ -45,13 +53,27 @@ class ParsedWhois(Results):
         """Returns a flattened version of the parsed whois data"""
         parsed = self["parsed_whois"]
         flat = OrderedDict()
-        for key in ("domain", "created_date", "updated_date", "expired_date", "statuses", "name_servers"):
+        for key in (
+            "domain",
+            "created_date",
+            "updated_date",
+            "expired_date",
+            "statuses",
+            "name_servers",
+        ):
             if key in parsed:
                 value = parsed[key]
                 flat[key] = " | ".join(value) if type(value) in (list, tuple) else value
 
         registrar = parsed.get("registrar", {})
-        for key in ("name", "abuse_contact_phone", "abuse_contact_email", "iana_id", "url", "whois_server"):
+        for key in (
+            "name",
+            "abuse_contact_phone",
+            "abuse_contact_email",
+            "iana_id",
+            "url",
+            "whois_server",
+        ):
             if key in registrar:
                 flat["registrar_{0}".format(key)] = registrar[key]
 
@@ -59,10 +81,24 @@ class ParsedWhois(Results):
             networks = parsed.get("networks")
             for network in networks:
                 id = network.get("id")
-                for key in ("range", "asn", "org", "parent", "customer", "country", "phone", "status", "source", "updated_date", "created_date"):
+                for key in (
+                    "range",
+                    "asn",
+                    "org",
+                    "parent",
+                    "customer",
+                    "country",
+                    "phone",
+                    "status",
+                    "source",
+                    "updated_date",
+                    "created_date",
+                ):
                     if key in network:
                         value = network[key]
-                        flat["network_{0}".format(id)] = " ".join(value) if type(value) in (list, tuple) else value
+                        flat["network_{0}".format(id)] = (
+                            " ".join(value) if type(value) in (list, tuple) else value
+                        )
 
         if "contacts" in parsed:
             contacts = parsed.get("contacts")
@@ -86,15 +122,30 @@ class ParsedWhois(Results):
                     ):
                         if key in contact:
                             value = contact[key]
-                            flat["{0}_{1}".format(contact_type, key)] = " ".join(value) if type(value) in (list, tuple) else value
+                            flat["{0}_{1}".format(contact_type, key)] = (
+                                " ".join(value) if type(value) in (list, tuple) else value
+                            )
 
             elif type(contacts) is dict:
                 for contact_type in ("registrant", "admin", "tech", "billing"):
                     contact = contacts.get(contact_type, {})
-                    for key in ("name", "email", "org", "street", "city", "state", "postal", "country", "phone", "fax"):
+                    for key in (
+                        "name",
+                        "email",
+                        "org",
+                        "street",
+                        "city",
+                        "state",
+                        "postal",
+                        "country",
+                        "phone",
+                        "fax",
+                    ):
                         if key in contact:
                             value = contact[key]
-                            flat["{0}_{1}".format(contact_type, key)] = " ".join(value) if type(value) in (list, tuple) else value
+                            flat["{0}_{1}".format(contact_type, key)] = (
+                                " ".join(value) if type(value) in (list, tuple) else value
+                            )
 
         return flat
 
@@ -130,7 +181,9 @@ class ParsedDomainRdap(Results):
                 for i, contact in enumerate(registrar_value, start=1):
                     for contact_key, contact_value in contact.items():
                         flat[f"registrar_contacts_{contact_key}"] = (
-                            " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
+                            " | ".join(contact_value)
+                            if type(contact_value) in (list, tuple)
+                            else contact_value
                         )
 
                 continue
@@ -140,31 +193,69 @@ class ParsedDomainRdap(Results):
         if contacts:
             for i, contact in enumerate(contacts, start=1):
                 for contact_key, contact_value in contact.items():
-                    flat[f"contact_{contact_key}_{i}"] = " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
+                    flat[f"contact_{contact_key}_{i}"] = (
+                        " | ".join(contact_value) if type(contact_value) in (list, tuple) else contact_value
+                    )
 
         return flat
 
 
 class FeedsResults(Results):
-    """Returns the generator for feeds results"""
+    """
+    Real Time Threat Feeds (RTTF) returns an application/ndjson stream.
+    With this we use httpx stream to process each JSON object efficiently.
+
+    Highlevel process:
+
+    httpx stream -> check status code -> yield back data to client -> repeat if 206
+
+    Returns the generator object for feeds results.
+    """
+
+    def _make_request(self) -> Generator:
+        """
+        Creates and manages the httpx stream request, yielding data line by line.
+        This is the core generator that communicates with the DT frontend API server.
+        """
+        session_info = self._get_session_params_and_headers()
+        headers = session_info.get("headers")
+        parameters = session_info.get("parameters")
+
+        with httpx.stream(
+            "GET",
+            self.url,
+            headers=headers,
+            params=parameters,
+            verify=self.api.verify_ssl,
+            proxy=self.api.proxy_url,
+            timeout=None,
+        ) as response:
+            # set the status already
+            error_text = ""
+            status_code = response.status_code
+            if status_code not in [200, 206]:
+                response.read()
+                error_text = response.text
+
+            self.setStatus(status_code, reason_text=error_text)
+
+            for line in response.iter_lines():
+                yield line
+
+    def data(self) -> Generator:
+        self._data = self._make_request()
+        return self._data
 
     def response(self) -> Generator:
-        status_code = None
-        while status_code != 200:
-            resp_data = self.data()
-            status_code = self.status
-            yield resp_data
+        while self.status != 200:
+            yield from self.data()
 
-            self._data = None  # clear the data here
             if not self.kwargs.get("sessionID"):
                 # we'll only do iterative request for queries that has sessionID.
-                # Otherwise, we will have an infinite request if sessionID was not provided but the required data asked is more than the maximum (1 hour of data)
+                # Otherwise, we will have an infinite request if sessionID was not provided
+                # but the required data asked is more than the maximum (1 hour of data)
                 break
+        self._status = None
 
-    def data(self):
-        results = self._get_results()
-        self.setStatus(results.status_code, results)
-        self._data = results.text
-        self.check_limit_exceeded()
-
-        return self._data
+    def __str__(self):
+        return f"{self.__class__.__name__} - {self.product}"
