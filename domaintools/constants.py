@@ -56,3 +56,8 @@ RTTF_PRODUCTS_CMD_MAPPING = {
     "real-time-domain-discovery-feed-(api)": "domaindiscovery",
     "real-time-domain-discovery-feed-(s3)": "domaindiscovery",
 }
+
+SPECS_MAPPING = {
+    "iris": "domaintools/specs/iris-openapi.yaml",
+    # "rttf": "domaintools/specs/feeds-openapi.yaml",
+}

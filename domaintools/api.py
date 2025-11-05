@@ -5,6 +5,7 @@ from typing import Union
 
 import re
 import ssl
+import yaml
 
 from domaintools.constants import (
     Endpoint,
@@ -12,6 +13,7 @@ from domaintools.constants import (
     ENDPOINT_TO_SOURCE_MAP,
     RTTF_PRODUCTS_LIST,
     RTTF_PRODUCTS_CMD_MAPPING,
+    SPECS_MAPPING,
 )
 from domaintools._version import current as version
 from domaintools.results import (
@@ -29,7 +31,11 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
-from domaintools.utils import validate_feeds_parameters
+from domaintools.utils import (
+    api_endpoint,
+    auto_patch_docstrings,
+    validate_feeds_parameters,
+)
 
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256"]
@@ -40,6 +46,7 @@ def delimited(items, character="|"):
     return character.join(items) if type(items) in (list, tuple, set) else items
 
 
+@auto_patch_docstrings
 class API(object):
     """Enables interacting with the DomainTools API via Python:
 
@@ -94,8 +101,10 @@ class API(object):
         self.key_sign_hash = key_sign_hash
         self.default_parameters["app_name"] = app_name
         self.default_parameters["app_version"] = app_version
+        self.specs = {}
 
         self._build_api_url(api_url, api_port)
+        self._initialize_specs()
 
         if not https:
             raise Exception(
@@ -104,8 +113,25 @@ class API(object):
         if proxy_url and not isinstance(proxy_url, str):
             raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 
+    def _initialize_specs(self):
+        for spec_name, file_path in SPECS_MAPPING.items():
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    spec_content = yaml.safe_load(f)
+                if not spec_content:
+                    raise ValueError("Spec file is empty or invalid.")
+
+                self.specs[spec_name] = spec_content
+
+            except Exception as e:
+                print(f"Error loading {file_path}: {e}")
+
     def _get_ssl_default_context(self, verify_ssl: Union[str, bool]):
-        return ssl.create_default_context(cafile=verify_ssl) if isinstance(verify_ssl, str) else verify_ssl
+        return (
+            ssl.create_default_context(cafile=verify_ssl)
+            if isinstance(verify_ssl, str)
+            else verify_ssl
+        )
 
     def _build_api_url(self, api_url=None, api_port=None):
         """Build the API url based on the given url and port. Defaults to `https://api.domaintools.com`"""
@@ -133,11 +159,18 @@ class API(object):
             hours = limit_hours and 3600 / float(limit_hours)
             minutes = limit_minutes and 60 / float(limit_minutes)
 
-            self.limits[product["id"]] = {"interval": timedelta(seconds=minutes or hours or default)}
+            self.limits[product["id"]] = {
+                "interval": timedelta(seconds=minutes or hours or default)
+            }
 
     def _results(self, product, path, cls=Results, **kwargs):
         """Returns _results for the specified API path with the specified **kwargs parameters"""
-        if product != "account-information" and self.rate_limit and not self.limits_set and not self.limits:
+        if (
+            product != "account-information"
+            and self.rate_limit
+            and not self.limits_set
+            and not self.limits
+        ):
             always_sign_api_key_previous_value = self.always_sign_api_key
             header_authentication_previous_value = self.header_authentication
             self._rate_limit(product)
@@ -181,7 +214,9 @@ class API(object):
             else:
                 raise ValueError(
                     "Invalid value '{0}' for 'key_sign_hash'. "
-                    "Values available are {1}".format(self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES))
+                    "Values available are {1}".format(
+                        self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES)
+                    )
                 )
 
             parameters["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -193,7 +228,9 @@ class API(object):
 
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
-        return self._results("account-information", "/v1/account", items_path=("products",), **kwargs)
+        return self._results(
+            "account-information", "/v1/account", items_path=("products",), **kwargs
+        )
 
     def available_api_calls(self):
         """Provides a list of api calls that you can use based on your account information."""
@@ -396,7 +433,9 @@ class API(object):
 
     def reverse_ip(self, domain=None, limit=None, **kwargs):
         """Pass in a domain name."""
-        return self._results("reverse-ip", "/v1/{0}/reverse-ip".format(domain), limit=limit, **kwargs)
+        return self._results(
+            "reverse-ip", "/v1/{0}/reverse-ip".format(domain), limit=limit, **kwargs
+        )
 
     def host_domains(self, ip=None, limit=None, **kwargs):
         """Pass in an IP address."""
@@ -570,8 +609,12 @@ class API(object):
         younger_than_date = kwargs.pop("younger_than_date", {}) or None
         older_than_date = kwargs.pop("older_than_date", {}) or None
         updated_after = kwargs.pop("updated_after", {}) or None
-        include_domains_with_missing_field = kwargs.pop("include_domains_with_missing_field", {}) or None
-        exclude_domains_with_missing_field = kwargs.pop("exclude_domains_with_missing_field", {}) or None
+        include_domains_with_missing_field = (
+            kwargs.pop("include_domains_with_missing_field", {}) or None
+        )
+        exclude_domains_with_missing_field = (
+            kwargs.pop("exclude_domains_with_missing_field", {}) or None
+        )
 
         filtered_results = DTResultFilter(result_set=results).by(
             [
@@ -624,6 +667,7 @@ class API(object):
             **kwargs,
         )
 
+    @api_endpoint(spec_name="iris", path="/v1/iris-investigate/")
     def iris_investigate(
         self,
         domains=None,
@@ -641,29 +685,6 @@ class API(object):
         **kwargs,
     ):
         """Returns back a list of domains based on the provided filters.
-        The following filters are available beyond what is parameterized as kwargs:
-
-            - ip: Search for domains having this IP.
-            - email: Search for domains with this email in their data.
-            - email_domain: Search for domains where the email address uses this domain.
-            - nameserver_host: Search for domains with this nameserver.
-            - nameserver_domain: Search for domains with a nameserver that has this domain.
-            - nameserver_ip: Search for domains with a nameserver on this IP.
-            - registrar: Search for domains with this registrar.
-            - registrant: Search for domains with this registrant name.
-            - registrant_org: Search for domains with this registrant organization.
-            - mailserver_host: Search for domains with this mailserver.
-            - mailserver_domain: Search for domains with a mailserver that has this domain.
-            - mailserver_ip: Search for domains with a mailserver on this IP.
-            - redirect_domain: Search for domains which redirect to this domain.
-            - ssl_hash: Search for domains which have an SSL certificate with this hash.
-            - ssl_subject: Search for domains which have an SSL certificate with this subject string.
-            - ssl_email: Search for domains which have an SSL certificate with this email in it.
-            - ssl_org: Search for domains which have an SSL certificate with this organization in it.
-            - google_analytics: Search for domains which have this Google Analytics code.
-            - adsense: Search for domains which have this AdSense code.
-            - tld: Filter by TLD. Must be combined with another parameter.
-            - search_hash: Use search hash from Iris to bring back domains.
 
         You can loop over results of your investigation as if it was a native Python list:
 

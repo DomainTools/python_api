@@ -1,9 +1,11 @@
+import functools
+import re
+
 from datetime import datetime
 from typing import Optional
 
 from domaintools.constants import Endpoint, OutputFormat
-
-import re
+from domaintools.docstring_patcher import DocstringPatcher
 
 
 def get_domain_age(create_date):
@@ -109,7 +111,9 @@ def prune_data(data_obj):
             prune_data(item)
             if not isinstance(item, int) and not item:
                 items_to_prune.append(index)
-        data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
+        data_obj[:] = [
+            item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)
+        ]
 
 
 def find_emails(data_str):
@@ -183,3 +187,39 @@ def validate_feeds_parameters(params):
     endpoint = params.get("endpoint")
     if endpoint == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
+
+
+def api_endpoint(spec_name: str, path: str):
+    """Decorator to tag a method as a GET API endpoint."""
+
+    def decorator(func):
+        func._api_spec_name = spec_name
+        func._api_path = path
+
+        @functools.wraps(func)
+        def wrapper(self, *args, **kwargs):
+            return func(*args, **kwargs)
+
+        wrapper._api_spec_name = spec_name
+        wrapper._api_path = path
+        return wrapper
+
+    return decorator
+
+
+def auto_patch_docstrings(cls):
+    original_init = cls.__init__
+
+    @functools.wraps(original_init)
+    def new_init(self, *args, **kwargs):
+        original_init(self, *args, **kwargs)
+        try:
+            # We instantiate our patcher and run it
+            patcher = DocstringPatcher()
+            patcher.patch(self)
+        except Exception as e:
+            print(f"Auto-patching failed: {e}")
+
+    cls.__init__ = new_init
+
+    return cls
