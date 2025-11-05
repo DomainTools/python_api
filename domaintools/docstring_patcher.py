@@ -12,11 +12,11 @@ class DocstringPatcher:
         method_names = []
         for attr_name in dir(api_instance):
             attr = getattr(api_instance, attr_name)
-            # Look for the new decorator's tags
             if (
                 inspect.ismethod(attr)
                 and hasattr(attr, "_api_spec_name")
                 and hasattr(attr, "_api_path")
+                and hasattr(attr, "_api_methods")
             ):
                 method_names.append(attr_name)
 
@@ -26,6 +26,7 @@ class DocstringPatcher:
 
             spec_name = original_function._api_spec_name
             path = original_function._api_path
+            http_methods_to_check = original_function._api_methods
 
             spec_to_use = api_instance.specs.get(spec_name)
             original_doc = inspect.getdoc(original_function) or ""
@@ -34,20 +35,17 @@ class DocstringPatcher:
             if spec_to_use:
                 path_item = spec_to_use.get("paths", {}).get(path, {})
 
-                # Loop over all HTTP methods defined for this path
-                for http_method in ["get", "post", "put", "delete", "patch"]:
+                for http_method in http_methods_to_check:
                     if http_method in path_item:
-                        # Generate a doc section for this specific operation
                         api_doc = self._generate_api_doc_string(spec_to_use, path, http_method)
                         all_doc_sections.append(api_doc)
 
             if not all_doc_sections:
                 all_doc_sections.append(
                     f"\n--- API Details Error ---"
-                    f"\n  (Could not find any operations for path '{path}')"
+                    f"\n  (Could not find operations {http_methods_to_check} for path '{path}')"
                 )
 
-            # Combine the original doc with all operation docs
             new_doc = textwrap.dedent(original_doc) + "\n\n" + "\n\n".join(all_doc_sections)
 
             @functools.wraps(original_function)
@@ -68,10 +66,11 @@ class DocstringPatcher:
         # Add a clear title for this specific method
         lines = [f"--- Operation: {method.upper()} {path} ---"]
 
-        # Render Query Params
         lines.append(f"\n  Summary: {details.get('summary')}")
         lines.append(f"  Description: {details.get('description')}")
         lines.append(f"  External Doc: {details.get('external_doc')}")
+
+        # Render Query Params
         lines.append("\n  Query Parameters:")
         if not details["query_params"]:
             lines.append("    (No query parameters)")
@@ -102,16 +101,36 @@ class DocstringPatcher:
             operation = path_item.get(method.lower(), {})
             if not operation:
                 return details
-            all_param_defs = path_item.get("parameters", []) + operation.get("parameters", [])
+
+            # Get params defined at the path level (shared by all)
+            path_level_params = path_item.get("parameters", [])
+
+            # Get params defined at the operation level (specific to this method)
+            operation_level_params = operation.get("parameters", [])
+
+            # If this operation has no params, AND it's not GET,
+            # AND a GET operation exists, then borrow GET's params.
+            if (
+                not operation_level_params
+                and method.lower() in ["post", "put", "patch", "delete"]
+                and "get" in path_item
+            ):
+                get_operation = path_item.get("get", {})
+                operation_level_params = get_operation.get("parameters", [])
+
+            all_param_defs = path_level_params + operation_level_params
+
             details["summary"] = operation.get("summary")
             details["description"] = operation.get("description")
             details["external_doc"] = operation.get("externalDocs", {}).get("url", "N/A")
+
             resolved_params = []
             for param_def in all_param_defs:
                 if "$ref" in param_def:
                     resolved_params.append(self._resolve_ref(spec, param_def["$ref"]))
                 else:
                     resolved_params.append(param_def)
+
             for p in [p for p in resolved_params if p.get("in") == "query"]:
                 details["query_params"].append(
                     {
@@ -121,6 +140,7 @@ class DocstringPatcher:
                         "type": self._get_param_type(spec, p.get("schema")),
                     }
                 )
+
             body_def = operation.get("requestBody")
             if body_def:
                 if "$ref" in body_def:

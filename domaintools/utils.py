@@ -2,7 +2,7 @@ import functools
 import re
 
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional, Union
 
 from domaintools.constants import Endpoint, OutputFormat
 from domaintools.docstring_patcher import DocstringPatcher
@@ -189,19 +189,35 @@ def validate_feeds_parameters(params):
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
 
 
-def api_endpoint(spec_name: str, path: str):
-    """Decorator to tag a method as a GET API endpoint."""
+def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
+    """
+    Decorator to tag a method as an API endpoint.
+
+    Args:
+        spec_name: The key for the spec in api_instance.specs
+        path: The API path (e.g., "/users")
+        methods: A single method ("get") or list of methods (["get", "post"])
+                 that this function handles.
+    """
 
     def decorator(func):
         func._api_spec_name = spec_name
         func._api_path = path
 
+        # Always store the methods as a list
+        if isinstance(methods, str):
+            func._api_methods = [methods]
+        else:
+            func._api_methods = methods
+
         @functools.wraps(func)
         def wrapper(self, *args, **kwargs):
             return func(*args, **kwargs)
 
-        wrapper._api_spec_name = spec_name
-        wrapper._api_path = path
+        # Copy all tags to the wrapper
+        wrapper._api_spec_name = func._api_spec_name
+        wrapper._api_path = func._api_path
+        wrapper._api_methods = func._api_methods
         return wrapper
 
     return decorator

@@ -667,7 +667,7 @@ class API(object):
             **kwargs,
         )
 
-    @api_endpoint(spec_name="iris", path="/v1/iris-investigate/")
+    @api_endpoint(spec_name="iris", path="/v1/iris-investigate/", methods="post")
     def iris_investigate(
         self,
         domains=None,
