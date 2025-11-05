@@ -94,8 +94,7 @@ class Results(MutableMapping, MutableSequence):
                 headers["accept"] = HEADER_ACCEPT_KEY_CSV_FORMAT
 
         if self.api.header_authentication:
-            header_key_for_api_key = "X-Api-Key" if is_rttf_product else "X-API-Key"
-            headers[header_key_for_api_key] = self.api.key
+            headers["X-Api-Key"] = self.api.key
 
         session_param_and_headers = {"parameters": parameters, "headers": headers}
         return session_param_and_headers
@@ -342,7 +341,9 @@ class Results(MutableMapping, MutableSequence):
         )
 
     def as_list(self):
-        return "\n".join([json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()])
+        return "\n".join(
+            [json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()]
+        )
 
     def __str__(self):
         return str(
