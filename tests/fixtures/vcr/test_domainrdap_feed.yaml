@@ -411,4 +411,152 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=2
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:52Z","domain":"wallysfishchickenlansing.com","raw_record":{"first_request_timestamp":"2025-11-06T01:52:48Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"2690894449_DOMAIN_COM-VRSN\",\"ldhName\":\"wallysfishchickenlansing.com\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"pdns07.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-04-21T09:23:58Z\"}]},{\"objectClassName\":\"nameserver\",\"ldhName\":\"pdns08.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-04-21T09:23:58Z\"}]}],\"secureDNS\":{\"delegationSigned\":false},\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/wallysfishchickenlansing.com\",\"rel\":\"self\",\"href\":\"https://rdap.godaddy.com/v1/domain/wallysfishchickenlansing.com\",\"type\":\"application/rdap+json\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"wallysfishchickenlansingcom-reg\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"organization\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=wallysfishchickenlansing.com\\u0026action=contactDomainOwner\"]]],\"roles\":[\"registrant\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-04-21T09:23:59Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"wallysfishchickenlansingcom-tech\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"organization\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=wallysfishchickenlansing.com\\u0026action=contactDomainOwner\"]]],\"roles\":[\"technical\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2022-04-21T09:23:59Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"146\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2155 E Godaddy Way\",\"Tempe\",\"AZ\",\"85284\",\"\"]],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"146\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":[\"voice\"]},\"uri\",\"tel:480-624-2505\"],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"abuse\"]}],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1\",\"rel\":\"about\",\"href\":\"https://rdap.godaddy.com/v1\",\"type\":\"application/rdap+json\"}],\"port43\":\"whois.godaddy.com\"}],\"events\":[{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-11-06T01:52:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-04-21T11:23:57Z\"},{\"eventAction\":\"registration\",\"eventDate\":\"2022-04-21T11:23:57Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-04-22T06:32:46Z\"}],\"status\":[\"delete prohibited\",\"transfer
+        prohibited\",\"renew prohibited\",\"update prohibited\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Use\",\"description\":[\"By submitting an inquiry, you agree to these Universal
+        Terms of Service\",\"and limitations of warranty. In particular, you agree
+        not to use this\",\"data to allow, enable, or otherwise make possible, dissemination
+        or\",\"collection of this data, in part or in its entirety, for any purpose,\",\"such
+        as the transmission of unsolicited advertising and solicitations of\",\"any
+        kind, including spam. You further agree not to use this data to enable\",\"high
+        volume, automated or robotic electronic processes designed to collect\",\"or
+        compile this data for any purpose, including mining this data for your\",\"own
+        personal or commercial purposes, or use this data in any way that violates\",\"applicable
+        laws and regulations.\"],\"links\":[{\"rel\":\"terms-of-service\",\"href\":\"https://www.godaddy.com/agreements/showdoc?pageid=5403\",\"type\":\"text/html\"}]}],\"rdapConformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"port43\":\"whois.godaddy.com\"}","source_type":"registrar","timestamp":"2025-11-06T01:52:50Z","url":"https://rdap.godaddy.com/v1/domain/WALLYSFISHCHICKENLANSING.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","redacted","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1"],"contacts":[{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=wallysfishchickenlansing.com\u0026action=contactDomainOwner","handle":"wallysfishchickenlansingcom-reg","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["registrant"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"},{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=wallysfishchickenlansing.com\u0026action=contactDomainOwner","handle":"wallysfishchickenlansingcom-tech","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["technical"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"}],"creation_date":"2022-04-21T11:23:57+00:00","dnssec":{"signed":false},"domain":"wallysfishchickenlansing.com","domain_statuses":["delete
+        prohibited","transfer prohibited","renew prohibited","update prohibited"],"email_domains":["godaddy.com"],"emails":["abuse@godaddy.com","https://www.godaddy.com/whois/results.aspx?domain=wallysfishchickenlansing.com\u0026action=contactdomainowner"],"expiration_date":"2026-04-21T11:23:57+00:00","handle":"2690894449_DOMAIN_COM-VRSN","last_changed_date":"2025-04-22T06:32:46+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/WALLYSFISHCHICKENLANSING.COM","rel":"self"},{"href":"https://rdap.godaddy.com/v1/domain/WALLYSFISHCHICKENLANSING.COM","rel":"related"},{"href":"https://rdap.godaddy.com/v1/domain/wallysfishchickenlansing.com","rel":"self"}],"nameservers":["pdns07.domaincontrol.com","pdns08.domaincontrol.com"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:480-624-2505","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com,
+        LLC"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.godaddy.com/v1/domain/WALLYSFISHCHICKENLANSING.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/wallysfishchickenlansing.com"}}
+
+        {"timestamp":"2025-11-06T01:52:52Z","domain":"thewrightapproach-physiotherapy.co.uk","raw_record":{"first_request_timestamp":"2025-11-06T01:52:51Z","requests":[{"data":"{\"rdapConformance\":[\"redacted\",\"rdap_level_0\"],\"objectClassName\":\"domain\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk\",\"type\":\"application/rdap+json\"}],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"The Registry Operator, offers this Registration
+        Data Access Protocol (RDAP) service and provides access to the records in
+        the RDAP database for information purposes only, to assist you in obtaining
+        information about the registration records of existing domain names. The stored
+        information in the RDAP database is provided as is. We do not guarantee its
+        accuracy or completeness, and cannot be held liable if the stored information
+        in the RDAP database is wrong, incomplete, or inaccurate in any way. By querying
+        the RDAP database in any way, you agree that you will not use this data: (i)
+        to allow, enable or otherwise support the transmission of unsolicited, commercial
+        advertising or other solicitations in any form or by any means; (ii) to enable
+        high volume, automated, electronic processes that query or send data to the
+        Registry Operator or any registrar or registrant; (iii) for target advertising;
+        (iv) to cause nuisance to registrants by sending (by any means) messages to
+        or contacting them; (v) to violate any law, rule, regulation or statute; and/or
+        (vi) in violation of applicable data and privacy protection acts. You are
+        explicitly prohibited from extracting, copying and/or using or re-using in
+        any form and by any means (electronically or not) all or part (quantitatively
+        or qualitatively) of the contents of the RDAP database without prior and explicit
+        permission from the Registry Operator. Any copying or transmission of data
+        for commercial purposes violates this prohibition. You agree that we can take
+        measures to limit the use of the RDAP service to protect the privacy of registrants
+        or the integrity of the database. We reserve the right to make changes to
+        this website, the RDAP service, and these Terms and Conditions at any time
+        without prior notice to you. You should review these Terms and Conditions
+        each time you access or use the RDAP database and the RDAP service to learn
+        of any changes. If you do not agree to the changes we have made, your only
+        remedy is to stop your use of the RDAP database and the RDAP service. By executing
+        a query, in any means whatsoever, you agree to these Terms of Service.\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk\",\"rel\":\"terms-of-service\",\"href\":\"https://nominet.uk/rdap-tos\",\"type\":\"text/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the Nominet WHOIS data
+        complaint process: https://www.nominet.uk/complaints/#complaining-about-incorrect-whois-data\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk\",\"rel\":\"help\",\"href\":\"https://www.nominet.uk/complaints/#complaining-about-incorrect-whois-data\",\"type\":\"text/html\"}]}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"PDR-IN\",\"eventDate\":\"2017-11-01T14:33:07Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-10-27T08:12:41.959459Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2026-11-01T14:33:07Z\"},{\"eventAction\":\"transfer\",\"eventDate\":\"2020-04-06T11:51:13Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2025-11-06T01:52:51.931Z\"}],\"status\":[\"renew
+        period\"],\"handle\":\"D_64109212-UK\",\"ldhName\":\"thewrightapproach-physiotherapy.co.uk\",\"unicodeName\":\"thewrightapproach-physiotherapy.co.uk\",\"secureDNS\":{\"delegationSigned\":false,\"maxSigLife\":3024000},\"entities\":[{\"objectClassName\":\"entity\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/entity/BIGWETFISH\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/entity/BIGWETFISH\",\"type\":\"application/rdap+json\"}],\"handle\":\"BIGWETFISH\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"BWF
+        Hosting Ltd\"],[\"adr\",{},\"text\",[\"\",\"\",\"Unit 1G, Kilroot Business
+        Park, Carrickfergus, BT38 7PR\",\"\",\"\",\"\",\"\"]],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+442895072311\"],[\"email\",{},\"text\",\"support@bigwetfish.co.uk\"],[\"url\",{},\"uri\",\"https://bigwetfish.hosting\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"Registry
+        Identifier\",\"identifier\":\"BIGWETFISH\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Abuse
+        contact\"],[\"tel\",{\"type\":\"voice\"},\"text\",\"02895072311\"],[\"email\",{},\"text\",\"sk@bwf.co\"]]],\"roles\":[\"abuse\"]}]},{\"objectClassName\":\"entity\",\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"Some
+        of the data in this object has been removed\"]},{\"title\":\"EMAIL REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"This
+        data is not generally available, if you have legitimate reason to request
+        access please review Nominets data release process.\"]},{\"title\":\"Data
+        Quality\",\"description\":[\"Name validated.\",\"Address validated.\",\"Nominet
+        responsible for validation.\"]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-06T11:51:13Z\"}],\"status\":[\"validated\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"email\",{},\"text\",\"redacted@nominet.uk\"]]],\"roles\":[\"registrant\"]}],\"publicIds\":[{\"type\":\"Registry
+        Identifier\",\"identifier\":\"D_64109212-UK\"}],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/nameserver/ns1.bigwetfish.co.uk.\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/nameserver/ns1.bigwetfish.co.uk.\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"ENOM\",\"eventDate\":\"2012-12-13T04:11:36Z\"},{\"eventAction\":\"last
+        changed\",\"eventActor\":\"BIGWETFISH\",\"eventDate\":\"2021-10-29T07:23:00Z\"}],\"status\":[\"active\",\"associated\"],\"handle\":\"H_374632-UK\",\"ldhName\":\"ns1.bigwetfish.co.uk.\",\"unicodeName\":\"ns1.bigwetfish.co.uk.\",\"ipAddresses\":{\"v4\":[\"185.17.150.96\"]}},{\"objectClassName\":\"nameserver\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/nameserver/ns2.bigwetfish.co.uk.\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/nameserver/ns2.bigwetfish.co.uk.\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"123-REG\",\"eventDate\":\"2011-03-22T09:47:05Z\"},{\"eventAction\":\"last
+        changed\",\"eventActor\":\"BIGWETFISH\",\"eventDate\":\"2021-10-29T07:23:17Z\"}],\"status\":[\"active\",\"associated\"],\"handle\":\"H_254740-UK\",\"ldhName\":\"ns2.bigwetfish.co.uk.\",\"unicodeName\":\"ns2.bigwetfish.co.uk.\",\"ipAddresses\":{\"v4\":[\"159.69.2.176\"]}},{\"objectClassName\":\"nameserver\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/nameserver/ns3.bigwetfish.co.uk.\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/nameserver/ns3.bigwetfish.co.uk.\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"ENOM\",\"eventDate\":\"2012-12-13T04:12:48Z\"},{\"eventAction\":\"last
+        changed\",\"eventActor\":\"BIGWETFISH\",\"eventDate\":\"2021-10-29T07:24:47Z\"}],\"status\":[\"active\",\"associated\"],\"handle\":\"H_381352-UK\",\"ldhName\":\"ns3.bigwetfish.co.uk.\",\"unicodeName\":\"ns3.bigwetfish.co.uk.\",\"ipAddresses\":{\"v4\":[\"185.17.150.112\"]}}],\"redacted\":[{\"name\":{\"type\":\"Registrant
+        Name\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Organization\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Organisation Type\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Identifier Label\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Organisation Identifier\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"type\":\"Registrant
+        Street\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Postal Code\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        City\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"description\":\"Registrant
+        Country\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"emptyValue\"},{\"name\":{\"description\":\"Registrant
+        Region\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Email\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')]\",\"replacementPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"replacementValue\"},{\"name\":{\"type\":\"Registrant
+        Phone\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"}]}","source_type":"registry","timestamp":"2025-11-06T01:52:51Z","url":"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk"}]},"parsed_record":{"parsed_fields":{"conformance":["redacted","rdap_level_0"],"contacts":[{"email":"redacted@nominet.uk","name":"REDACTED
+        FOR PRIVACY","roles":["registrant"]}],"creation_date":"2017-11-01T14:33:07+00:00","dnssec":{"signed":false},"domain":"thewrightapproach-physiotherapy.co.uk","domain_statuses":["renew
+        period"],"email_domains":["bigwetfish.co.uk","bwf.co","nominet.uk"],"emails":["redacted@nominet.uk","sk@bwf.co","support@bigwetfish.co.uk"],"expiration_date":"2026-11-01T14:33:07+00:00","handle":"D_64109212-UK","last_changed_date":"2025-10-27T08:12:41.959459+00:00","links":[{"href":"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk","rel":"self"}],"nameservers":["ns1.bigwetfish.co.uk.","ns2.bigwetfish.co.uk.","ns3.bigwetfish.co.uk."],"registrar":{"contacts":[{"email":"sk@bwf.co","name":"Abuse
+        contact","phone":"02895072311","roles":["abuse"]}],"name":"BWF Hosting Ltd"},"unclassified_emails":["support@bigwetfish.co.uk"]},"registrar_request_url":null,"registry_request_url":"https://rdap.nominet.uk/uk/domain/thewrightapproach-physiotherapy.co.uk"}}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:52:54 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=np9sc4mvoa3s2irb9s0j62u4ierflggefacosugt2v5gdn6i4gmbq8hdeqn4437udnp0b3lr190g082ctrt6otsi9smncisalnte3lr;
+        expires=Sat, 06-Dec-2025 01:52:52 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=acfc58822336225f812eb799691c0d9e; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      X-Request-Id:
+      - 46b9de3c-bf1f-4dad-9628-27a6cd2f4d50
+    status:
+      code: 200
+      message: OK
 version: 1

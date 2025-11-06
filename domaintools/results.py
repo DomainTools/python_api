@@ -219,6 +219,7 @@ class FeedsResults(Results):
         """
         session_info = self._get_session_params_and_headers()
         headers = session_info.get("headers")
+        headers["Accept-Encoding"] = "identity"
         parameters = session_info.get("parameters")
 
         with httpx.stream(

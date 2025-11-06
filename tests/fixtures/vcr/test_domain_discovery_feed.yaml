@@ -3033,4 +3033,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:55Z","domain":"s8he5g.top"}
+
+        {"timestamp":"2025-11-06T01:52:55Z","domain":"pvlrbw.top"}
+
+        {"timestamp":"2025-11-06T01:52:55Z","domain":"sesegod.link"}
+
+        {"timestamp":"2025-11-06T01:52:55Z","domain":"qcru.shop"}
+
+        {"timestamp":"2025-11-06T01:52:54Z","domain":"nowdyes.online"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '300'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:52:55 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=66e2f95jkv7d1gchfbledf6l09pc1jqa58ak2s25f7piukbqbl4ombrbagtgic3fs7dq9mhj0p08kjfonnf03i27a6n1mtvp64ad6p8;
+        expires=Sat, 06-Dec-2025 01:52:55 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 1a8fa707-808b-4e20-add9-97550aa4f3c5
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -8660,4 +8660,122 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/woot.com/whois/history?app_name=python_wrapper&app_version=2.6.1
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 06 Nov 2025 01:51:58 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=vm0olhr5e58rrafqps6271psdkl1r2cp317fqhf6i4qvb2k2ikmhja630n7mksr6sforq0o3tiqjj7k3hvek0hkfvg70pb1ra0ug34v;
+        expires=Sat, 06-Dec-2025 01:51:55 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-TIME:
+      - '2502310'
+    status:
+      code: 200
+      message: OK
 version: 1
