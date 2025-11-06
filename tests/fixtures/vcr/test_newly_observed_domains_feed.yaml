@@ -12583,4 +12583,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:30Z","domain":"sogt.shop"}
+
+        {"timestamp":"2025-11-06T01:52:29Z","domain":"finlanzeraria.click"}
+
+        {"timestamp":"2025-11-06T01:52:29Z","domain":"37fcc887-f4d1-4f4a-bf2a-2223dda86b28.aquila.it"}
+
+        {"timestamp":"2025-11-06T01:52:29Z","domain":"kaprites.co.in"}
+
+        {"timestamp":"2025-11-06T01:52:28Z","domain":"fundationalathleticsportstraining.com"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '370'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:52:30 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=m1h2tdr0aot8m4tek69gu5sog31meh698rk26feh56gpojh0n07h6irr11gkh2bv158edg8tc3pbcl9fpg8gjrh9mrjgkih3d2btduv;
+        expires=Sat, 06-Dec-2025 01:52:30 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 1f40c4e9-334d-4dd6-9c13-9e4670c65e0b
+    status:
+      code: 200
+      message: OK
 version: 1
