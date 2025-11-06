@@ -46125,4 +46125,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:51Z","domain":"detectiveluz.com"}
+
+        {"timestamp":"2025-11-06T01:52:51Z","domain":"seeyou.pics"}
+
+        {"timestamp":"2025-11-06T01:52:51Z","domain":"personalinformationadvisors.com"}
+
+        {"timestamp":"2025-11-06T01:52:51Z","domain":"aoras.ca"}
+
+        {"timestamp":"2025-11-06T01:52:51Z","domain":"stom-optima.site"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '327'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:52:51 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=07l1t44idpr3dflenh3nrqci9fcq0c9a0al8gn9mbr62om3cj008eibug6qdn1fg916e5hvsgk0dret6792kc87tjic48k80u731k79;
+        expires=Sat, 06-Dec-2025 01:52:51 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=acfc58822336225f812eb799691c0d9e; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - facc8245-dda6-4d2a-af4a-53bda8e889a1
+    status:
+      code: 200
+      message: OK
 version: 1

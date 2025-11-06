@@ -493,4 +493,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:31Z","domain":"italomanzi.dot.mercadoshops.com.br"}
+
+        {"timestamp":"2025-11-06T01:52:31Z","domain":"ivanmatos.updress.mercadoshops.com.br"}
+
+        {"timestamp":"2025-11-06T01:52:31Z","domain":"oemporio.istinformatica.mercadoshops.com.br"}
+
+        {"timestamp":"2025-11-06T01:52:31Z","domain":"ingryddd.nagayshop.mercadoshops.com.br"}
+
+        {"timestamp":"2025-11-06T01:52:31Z","domain":"loja3d-com-br.lojadecompras.mercadoshops.com.br"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '444'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:52:50 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=l6vf68mifmqefeoq3dv93ag8eh8rnhu2ldml1g6rju4rcob6g0h1dl7ll2su9ed9hakl16jfp1fs99itiiaoh89rorq97nqtsadv9sr;
+        expires=Sat, 06-Dec-2025 01:52:31 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=7665a85ef812d18e60e39033260b1f44; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 27b503ca-b25e-408f-9856-7baaca4dd77e
+    status:
+      code: 200
+      message: OK
 version: 1

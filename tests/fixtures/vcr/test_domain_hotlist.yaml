@@ -115,4 +115,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.6.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-11-06T01:52:36Z","domain":"hotbwusata.today","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-11-07T01:45:36Z"}
+
+        {"timestamp":"2025-11-06T01:52:30Z","domain":"hotbkofusa.today","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-11-07T01:45:33Z"}
+
+        {"timestamp":"2025-11-06T01:52:25Z","domain":"luanlunshequluan-lun.wiki","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-11-07T01:43:13Z"}
+
+        {"timestamp":"2025-11-06T01:52:44Z","domain":"hotbpebato.today","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-11-06T10:01:30Z"}
+
+        {"timestamp":"2025-11-06T01:52:49Z","domain":"frqf9cbsha.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2025-11-06T18:34:22Z"}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '957'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 06 Nov 2025 01:53:19 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=ujspj7pcsaeu71k12m3fe184f3vdu16vr353ubbr8itlar6ma8f8vi1pl31nkaqbq8lca9b1u7b3bp3fk77teqlh0can0oondgccasn;
+        expires=Sat, 06-Dec-2025 01:53:18 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=acfc58822336225f812eb799691c0d9e; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 2c918d7a-782b-45c6-a9df-242accddfee2
+    status:
+      code: 200
+      message: OK
 version: 1

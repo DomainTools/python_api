@@ -1100,4 +1100,120 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.6.1&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WV207jMBCGXwX5FhrZSZyDrxYJaSXQnqQK1EUochO3dUniru2UAuq77zhpq1JB
+        oXDRqhfWzMQz+f8v9jN64DaflNLYrFAVl7VB7PYZGcutQAzJca20KNAZ6rIQ4hV/UnWvMTTwclVB
+        yhU3xqVyK+fCFUuTq7mAJ7Oi28jHPu3hpEdIn2DmYxYkHo5CjPFfqM8nvB6/Uhz2CWE0ZDjycPtz
+        xVqa+wz211BKMN4OZJtRRk1ZvqjNYNaZqkVtIf2MZlotZCXt42oPO9GC2wzCI1mKtmIizUTWY8TS
+        5AxVvHzgrmMawQvPeIVYAmExl4Woc4jfrhQ6qXnlJNBiDKJqrmHtQidGaFAE3S2XsNsiEwtIwygj
+        XhoB/csCpu70lG454PRen59fDH5DRJicl9xK1dpzBxuoWlqlM1m4ALq4+jVcXF5PB5cIktwY8A3k
+        HD46C2srxrp7+NQKY8m3blKrVGlWFm4eecUunwUURFo5cIoxwxgtz/ZCMpc5jNehwg0v5q6PN9QH
+        0RL3/LiPI+bHAIxH0mQfLeviYA8tfvplWPxkPysk2mLF9etYIS9Q2WXA6mYbgU6nDQX+v/T7MSkA
+        ZZM+CRklLAwPomDKq2HTQSD5JwmgfUKZDxBQL47jdwjoihMA9q3zIvr6cREcQAD9GAC7h8AWAdc8
+        1sHT9Z/ZzVEJoC0BAbzdQQR05hsQaipy2xPNwVfGujf8w9SLow8gELr7xU/fQCD+MgHvABBvnwCf
+        839t/o+b2ZWOBj/pcT//9rPCKaPpjvnQxyrLS9CqqS1iIfiyWanRyAhYwu1aOuXam3b5H6VCNxxy
+        CAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 06 Nov 2025 01:52:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=n4bn6gf365h5v76f20rq39cmu4bfgsg6fn3edf0aj25iaut8tofbu01svjc8urhuirub7vi7nl78bbie7ptrh5jetr11t2fbl8v52c0;
+        expires=Sat, 06-Dec-2025 01:52:28 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.6.1&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WV207jMBCGXwX5FhrZSZyDrxYJaSXQnqQK1EUochO3dUniru2UAuq77zhpq1JB
+        oXDRqhfWzMQz+f8v9jN64DaflNLYrFAVl7VB7PYZGcutQAzJca20KNAZ6rIQ4hV/UnWvMTTwclVB
+        yhU3xqVyK+fCFUuTq7mAJ7Oi28jHPu3hpEdIn2DmYxYkHo5CjPFfqM8nvB6/Uhz2CWE0ZDjycPtz
+        xVqa+wz211BKMN4OZJtRRk1ZvqjNYNaZqkVtIf2MZlotZCXt42oPO9GC2wzCI1mKtmIizUTWY8TS
+        5AxVvHzgrmMawQvPeIVYAmExl4Woc4jfrhQ6qXnlJNBiDKJqrmHtQidGaFAE3S2XsNsiEwtIwygj
+        XhoB/csCpu70lG454PRen59fDH5DRJicl9xK1dpzBxuoWlqlM1m4ALq4+jVcXF5PB5cIktwY8A3k
+        HD46C2srxrp7+NQKY8m3blKrVGlWFm4eecUunwUURFo5cIoxwxgtz/ZCMpc5jNehwg0v5q6PN9QH
+        0RL3/LiPI+bHAIxH0mQfLeviYA8tfvplWPxkPysk2mLF9etYIS9Q2WXA6mYbgU6nDQX+v/T7MSkA
+        ZZM+CRklLAwPomDKq2HTQSD5JwmgfUKZDxBQL47jdwjoihMA9q3zIvr6cREcQAD9GAC7h8AWAdc8
+        1sHT9Z/ZzVEJoC0BAbzdQQR05hsQaipy2xPNwVfGujf8w9SLow8gELr7xU/fQCD+MgHvABBvnwCf
+        839t/o+b2ZWOBj/pcT//9rPCKaPpjvnQxyrLS9CqqS1iIfiyWanRyAhYwu1aOuXam3b5H6VCNxxy
+        CAAA
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 06 Nov 2025 01:52:29 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=a7oevbh16suu4ap6ju1psogjse54v1tdm23f2dom1bcqtsr937gd2o3qie15ob9psr3jtfg0v5tbd3rj519kci7el4asjfhhkuuf94t;
+        expires=Sat, 06-Dec-2025 01:52:29 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1
