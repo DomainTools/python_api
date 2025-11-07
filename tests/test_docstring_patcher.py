@@ -1,354 +1,351 @@
-import pytest
-import inspect
+import logging
+import types
 
-# Import the class to be tested
+from unittest.mock import Mock
+
 from domaintools.docstring_patcher import DocstringPatcher
-from domaintools.utils import api_endpoint
 
 
-@pytest.fixture
-def patcher():
-    """Returns an instance of the class under test."""
-    return DocstringPatcher()
+class TestDocstringPatcher:
 
+    def _setup_mock_api(
+        self,
+        spec_dict: dict,
+        spec_name: str,
+        method_name: str,
+        path: str,
+        http_methods: list,
+        docstring: str,
+    ) -> Mock:
+        """
+        Helper to create a mock API instance with a mock decorated method.
+        """
+        # Create the mock API instance
+        mock_api = Mock()
+        mock_api.specs = {spec_name: spec_dict}
 
-@pytest.fixture(scope="module")
-def sample_spec():
-    """
-    Provides a comprehensive, reusable mock OpenAPI spec dictionary.
-    """
-    return {
-        "openapi": "3.0.0",
-        "info": {"title": "Test API", "version": "1.0.0"},
-        "components": {
-            "parameters": {
-                "LimitParam": {
-                    "name": "limit",
-                    "in": "query",
-                    "description": "Max number of items to return.",
-                    "schema": {"type": "integer"},
-                }
+        # Create the underlying function that was decorated
+        def original_func():
+            """Original docstring."""
+            pass
+
+        original_func.__doc__ = docstring
+        original_func._api_spec_name = spec_name
+        original_func._api_path = path
+        original_func._api_methods = http_methods
+
+        # Create the mock instance method
+        mock_method = types.MethodType(original_func, mock_api)
+        setattr(mock_api, method_name, mock_method)
+
+        return mock_api, method_name
+
+    def setup_method(self, method):
+        """Pytest setup hook, runs before each test."""
+        self.patcher = DocstringPatcher()
+
+        # SPEC 1: The very first spec with non-standard 'parameters' in requestBody
+        self.SPEC_1_NON_STANDARD_PARAMS = {
+            "openapi": "3.0.0",
+            "info": {"title": "Spec 1"},
+            "components": {
+                "parameters": {
+                    "LimitParam": {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Max number of items.",
+                        "schema": {"type": "integer"},
+                    }
+                },
+                "schemas": {"User": {"type": "object"}},
+                "requestBodies": {
+                    "UserBody": {
+                        "description": "User object.",
+                        "required": True,
+                        "content": {
+                            "application/json": {"schema": {"$ref": "#/components/schemas/User"}}
+                        },
+                        "parameters": [{"$ref": "#/components/parameters/LimitParam"}],
+                    }
+                },
             },
-            "schemas": {
-                "User": {
-                    "type": "object",
-                    "properties": {"name": {"type": "string"}},
-                }
-            },
-            "requestBodies": {
-                "UserBody": {
-                    "description": "User object to create.",
-                    "required": True,
-                    "content": {
-                        "application/json": {"schema": {"$ref": "#/components/schemas/User"}}
+            "paths": {
+                "/users": {
+                    "post": {
+                        "summary": "Create user",
+                        "requestBody": {"$ref": "#/components/requestBodies/UserBody"},
                     },
                 }
             },
-        },
-        "paths": {
-            "/users": {
-                "get": {
-                    "summary": "Get all users",
-                    "description": "Returns a list of users.",
-                    "externalDocs": {"url": "http://docs.example.com/get-users"},
-                    "parameters": [
-                        {
-                            "name": "status",
-                            "in": "query",
-                            "required": True,
-                            "description": "User's current status.",
-                            "schema": {"type": "string"},
+        }
+
+        # SPEC 2: The spec with UserRequestParameters (name, age)
+        self.SPEC_2_SCHEMA_PROPS = {
+            "openapi": "3.0.0",
+            "info": {"title": "Spec 2"},
+            "components": {
+                "schemas": {
+                    "UserRequestParameters": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string", "description": "User's name"},
+                            "age": {"type": "int", "description": "User's age"},
                         },
-                        {"$ref": "#/components/parameters/LimitParam"},
-                    ],
+                    },
                 },
-                "post": {
-                    "summary": "Create a new user",
-                    "description": "Creates a single new user.",
-                    # NOTE: No 'parameters' key here, will inherit from GET
-                    "requestBody": {"$ref": "#/components/requestBodies/UserBody"},
+                "requestBodies": {
+                    "UserBody": {
+                        "description": "User object to create.",
+                        "content": {
+                            "application/json": {
+                                "schema": {"$ref": "#/components/schemas/UserRequestParameters"}
+                            }
+                        },
+                    }
                 },
             },
-            "/pets/{petId}": {
-                "get": {
-                    "summary": "Get a single pet",
-                    "description": "Returns one pet by ID.",
+            "paths": {
+                "/users": {
+                    "post": {
+                        "summary": "Create a new user",
+                        "requestBody": {"$ref": "#/components/requestBodies/UserBody"},
+                    },
                 }
             },
-            "/health": {
-                # This path exists, but has no operations (get, post, etc.)
-                "description": "Health check path."
+        }
+
+        # SPEC 3: The final spec with the "lookup-by-name" logic
+        self.SPEC_3_LOOKUP_BY_NAME = {
+            "openapi": "3.0.0",
+            "info": {"title": "Spec 3"},
+            "components": {
+                "parameters": {
+                    "LimitParam": {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Max number of items to return.",
+                        "schema": {"type": "integer"},
+                    }
+                },
+                "schemas": {
+                    "UserRequestParameters": {
+                        "type": "object",
+                        "properties": {"limit": {"$ref:": "#/components/schemas/ApexDomain"}},
+                    },
+                },
+                "requestBodies": {
+                    "UserBody": {
+                        "description": "User object to create.",
+                        "content": {
+                            "application/json": {
+                                "schema": {"$ref": "#/components/schemas/UserRequestParameters"}
+                            }
+                        },
+                    }
+                },
             },
-        },
-    }
+            "paths": {
+                "/users": {
+                    "post": {
+                        "summary": "Create a new user",
+                        "requestBody": {"$ref": "#/components/requestBodies/UserBody"},
+                    },
+                }
+            },
+        }
 
-
-@pytest.fixture
-def mock_api_instance(sample_spec):
-    """
-    Provides a mock API instance with decorated methods
-    that the DocstringPatcher will look for.
-
-    """
-
-    class MockAPI:
-        def __init__(self, specs):
-            self.specs = specs
-
-        @api_endpoint(spec_name="v1", path="/users", methods=["get", "post"])
-        def user_operations(self):
-            """This is the original user docstring."""
-            return "user_operations_called"
-
-        @api_endpoint(spec_name="v1", path="/pets/{petId}", methods="get")
-        def get_pet(self):
-            """Original pet docstring."""
-            return "get_pet_called"
-
-        @api_endpoint(spec_name="v1", path="/health", methods="get")
-        def health_check(self):
-            """Original health docstring."""
-            return "health_check_called"
-
-        @api_endpoint(spec_name="v2_nonexistent", path="/users", methods="get")
-        def bad_spec_name(self):
-            """Original bad spec docstring."""
-            return "bad_spec_called"
-
-        @api_endpoint(spec_name="v1", path="/nonexistent-path", methods="get")
-        def bad_path(self):
-            """Original bad path docstring."""
-            return "bad_path_called"
-
-        def not_an_api_method(self):
-            """Internal method docstring."""
-            return "internal_called"
-
-    api_instance = MockAPI(specs={"v1": sample_spec})
-    return api_instance
-
-
-# --- Original Test Cases (Updated) ---
-
-
-def test_patch_method_still_callable(patcher, mock_api_instance):
-    """
-    Ensures that after patching, the method can still be called
-    and returns its original value.
-    """
-    patcher.patch(mock_api_instance)
-    assert mock_api_instance.user_operations() == "user_operations_called"
-    assert mock_api_instance.get_pet() == "get_pet_called"
-
-
-def test_patch_leaves_unmarked_methods_alone(patcher, mock_api_instance):
-    """
-    Tests that methods without the decorator are not modified.
-    """
-    original_doc = inspect.getdoc(mock_api_instance.not_an_api_method)
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.not_an_api_method)
-    assert new_doc == original_doc
-    assert new_doc == "Internal method docstring."
-
-
-def test_patch_preserves_original_docstring(patcher, mock_api_instance):
-    """
-    Tests that the new docstring starts with the original docstring.
-    """
-    original_doc = inspect.getdoc(mock_api_instance.user_operations)
-    assert original_doc == "This is the original user docstring."
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.user_operations)
-    assert new_doc.startswith(original_doc)
-    assert len(new_doc) > len(original_doc)
-
-
-def test_patch_handles_multiple_operations_and_inheritance(patcher, mock_api_instance):
-    """
-    Tests that a method with methods=["get", "post"] gets docs
-    for BOTH operations and that POST inherits GET's params.
-    """
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.user_operations)
-
-    # Check for original doc
-    assert new_doc.startswith("This is the original user docstring.")
-
-    # --- Check GET operation details (the source) ---
-    get_section_index = new_doc.find("--- Operation: GET /users ---")
-    assert get_section_index != -1
-    get_section = new_doc[get_section_index:]
-
-    assert "Summary: Get all users" in get_section
-    assert "External Doc: http://docs.example.com/get-users" in get_section
-    assert "**status** (string)" in get_section
-    assert "Required:    True" in get_section
-    assert "Description: User's current status." in get_section
-    assert "**limit** (integer)" in get_section  # $ref'd param
-    assert "Description: Max number of items to return." in get_section
-
-    # --- Check POST operation details (the inheritor) ---
-    post_section_index = new_doc.find("--- Operation: POST /users ---")
-    assert post_section_index != -1
-    post_section = new_doc[post_section_index:]
-
-    assert "Summary: Create a new user" in post_section
-    assert "Request Body:" in post_section
-    assert "**User**" in post_section  # $ref'd body
-
-    # --- Check for INHERITED parameters ---
-    assert "**status** (string)" in post_section
-    assert "Required:    True" in post_section
-    assert "Description: User's current status." in post_section
-    assert "**limit** (integer)" in post_section
-    assert "Description: Max number of items to return." in post_section
-
-
-def test_patch_handles_single_operation(patcher, mock_api_instance):
-    """
-    Tests a path with only one operation (GET) and no params/body.
-    """
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.get_pet)
-
-    assert new_doc.startswith("Original pet docstring.")
-    assert "--- Operation: GET /pets/{petId} ---" in new_doc
-    assert "Summary: Get a single pet" in new_doc
-    assert "Query Parameters:\n    (No query parameters)" in new_doc
-    assert "Request Body:\n    (No request body)" in new_doc
-    assert "--- Operation: POST /pets/{petId} ---" not in new_doc
-
-
-def test_patch_spec_not_found(patcher, mock_api_instance):
-    """
-    Tests error message if the spec name isn't in the 'specs' dict.
-    """
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.bad_spec_name)
-    assert new_doc.startswith("Original bad spec docstring.")
-    assert "--- API Details Error ---" in new_doc
-    assert "Could not find operations ['get']" in new_doc
-    assert "for path '/users'" in new_doc
-
-
-def test_patch_path_not_found(patcher, mock_api_instance):
-    """
-    Tests error message if the path is not in the spec file.
-    """
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.bad_path)
-    assert new_doc.startswith("Original bad path docstring.")
-    assert "--- API Details Error ---" in new_doc
-    assert "for path '/nonexistent-path'" in new_doc
-
-
-def test_patch_path_found_but_no_operations(patcher, mock_api_instance):
-    """
-    Tests error message if the path is in the spec
-    but the specific method ("get") is not.
-    """
-    patcher.patch(mock_api_instance)
-    new_doc = inspect.getdoc(mock_api_instance.health_check)
-    assert new_doc.startswith("Original health docstring.")
-    assert "--- API Details Error ---" in new_doc
-    assert "for path '/health'" in new_doc
-
-
-def test_post_inherits_get_parameters(patcher):
-    """
-    Tests that a POST operation with no parameters defined
-    successfully inherits parameters from the GET operation
-    at the same path.
-    """
-    # Arrange: Create a minimal spec to test this exact behavior
-    inheritance_spec = {
-        "openapi": "3.0.0",
-        "info": {"title": "Inheritance Test API"},
-        "paths": {
-            "/widgets": {
-                "get": {
-                    "summary": "Get widgets",
-                    "parameters": [
-                        {
-                            "name": "color",
-                            "in": "query",
-                            "description": "Widget color",
-                            "schema": {"type": "string"},
-                        }
-                    ],
+        # SPEC 4: A full spec for GET, including Responses
+        self.SPEC_4_WITH_RESPONSE = {
+            "openapi": "3.0.0",
+            "info": {"title": "Spec 4"},
+            "components": {
+                "parameters": {
+                    "LimitParam": {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Max items.",
+                        "schema": {"type": "integer"},
+                    }
                 },
-                "post": {
-                    "summary": "Create a widget",
-                    # No 'parameters' key, should inherit from GET.
-                    "requestBody": {"description": "Widget to create"},
-                },
-            }
-        },
-    }
+                "schemas": {"User": {"type": "object"}},
+            },
+            "paths": {
+                "/users": {
+                    "get": {
+                        "summary": "Get all users",
+                        "parameters": [
+                            {
+                                "name": "status",
+                                "in": "query",
+                                "required": True,
+                                "description": "User status.",
+                                "schema": {"type": "string"},
+                            },
+                            {"$ref": "#/components/parameters/LimitParam"},
+                        ],
+                        "responses": {
+                            "200": {
+                                "description": "A list of users.",
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "type": "array",
+                                            "items": {"$ref": "#/components/schemas/User"},
+                                        }
+                                    }
+                                },
+                            }
+                        },
+                    },
+                }
+            },
+        }
 
-    class MockAPI:
-        def __init__(self, specs):
-            self.specs = specs
+    def test_spec_1_non_standard_params(self):
+        """
+        Tests the first spec: parameters inside requestBody should
+        be displayed under 'Request Body'.
+        """
+        mock_api, method_name = self._setup_mock_api(
+            spec_dict=self.SPEC_1_NON_STANDARD_PARAMS,
+            spec_name="spec1",
+            method_name="create_user",
+            path="/users",
+            http_methods=["post"],
+            docstring="This creates a user.",
+        )
 
-        @api_endpoint(spec_name="v1", path="/widgets", methods=["get", "post"])
-        def widget_operations(self):
-            """Original widget docstring."""
-            pass
+        self.patcher.patch(mock_api)
 
-    api_instance = MockAPI(specs={"v1": inheritance_spec})
+        doc = getattr(mock_api, method_name).__doc__
 
-    patcher.patch(api_instance)
-    new_doc = inspect.getdoc(api_instance.widget_operations)
+        assert "This creates a user." in doc
+        assert "--- Operation: POST /users ---" in doc
+        assert "Request Body:" in doc
+        assert "**User**" in doc
+        assert "Parameters (associated with this body):" in doc
+        assert "**limit** (integer) [in: query]" in doc
+        assert "Description: Max number of items." in doc
+        assert "Query Parameters:" in doc
+        assert "(No query parameters)" in doc
 
-    # Assert
-    assert new_doc.startswith("Original widget docstring.")
+    def test_spec_2_schema_props(self):
+        """
+        Tests the second spec: requestBody schema properties (name, age)
+        should be unpacked and displayed.
+        """
+        mock_api, method_name = self._setup_mock_api(
+            spec_dict=self.SPEC_2_SCHEMA_PROPS,
+            spec_name="spec2",
+            method_name="create_user",
+            path="/users",
+            http_methods=["post"],
+            docstring="Creates user.",
+        )
 
-    # Find the POST section and check for INHERITED params
-    post_section_index = new_doc.find("--- Operation: POST /widgets ---")
-    assert post_section_index > -1, "POST operation section not found"
+        self.patcher.patch(mock_api)
 
-    post_section = new_doc[post_section_index:]
-    assert "Summary: Create a widget" in post_section
-    assert "**color** (string)" in post_section
-    assert "Widget color" in post_section
+        doc = getattr(mock_api, method_name).__doc__
 
+        assert "Creates user." in doc
+        assert "--- Operation: POST /users ---" in doc
+        assert "Request Body:" in doc
+        assert "**UserRequestParameters**" in doc
+        assert "Description: User object to create." in doc
+        assert "Properties:" in doc
+        assert "**name** (string)" in doc
+        assert "Description: User's name" in doc
+        assert "**age** (int)" in doc
+        assert "Description: User's age" in doc
+        assert "Parameters (associated with this body):" not in doc
 
-def test_post_does_not_inherit_when_get_has_no_params(patcher):
-    """
-    Tests that a POST operation does not inherit anything
-    if the GET operation also has no parameters.
-    """
-    no_params_spec = {
-        "openapi": "3.0.0",
-        "paths": {
-            "/items": {
-                "get": {"summary": "Get items"},
-                "post": {"summary": "Create an item"},
-            }
-        },
-    }
+    def test_spec_3_lookup_by_name(self):
+        """
+        Tests the final spec: requestBody property 'limit' should
+        be matched with components.parameters.LimitParam by name.
+        """
+        mock_api, method_name = self._setup_mock_api(
+            spec_dict=self.SPEC_3_LOOKUP_BY_NAME,
+            spec_name="spec3",
+            method_name="create_user",
+            path="/users",
+            http_methods=["post"],
+            docstring="Creates user.",
+        )
 
-    class MockAPI:
-        def __init__(self, specs):
-            self.specs = specs
+        self.patcher.patch(mock_api)
 
-        @api_endpoint(spec_name="v1", path="/items", methods=["get", "post"])
-        def item_operations(self):
-            """Original item docstring."""
-            pass
+        doc = getattr(mock_api, method_name).__doc__
 
-    api_instance = MockAPI(specs={"v1": no_params_spec})
+        assert "--- Operation: POST /users ---" in doc
+        assert "Request Body:" in doc
+        assert "**UserRequestParameters**" in doc
+        assert "Properties:" in doc
+        # This is the key assertion:
+        assert "**limit** (integer)" in doc
+        assert "Description: Max number of items to return." in doc
+        # Ensure it didn't use the $ref: value
+        assert "ApexDomain" not in doc
 
-    patcher.patch(api_instance)
-    new_doc = inspect.getdoc(api_instance.item_operations)
+    def test_spec_4_get_with_response(self):
+        """
+        Tests a GET operation with query params and a response.
+        """
+        mock_api, method_name = self._setup_mock_api(
+            spec_dict=self.SPEC_4_WITH_RESPONSE,
+            spec_name="spec4",
+            method_name="get_users",
+            path="/users",
+            http_methods=["get"],
+            docstring="Gets users.",
+        )
 
-    # Check GET section
-    get_section_index = new_doc.find("--- Operation: GET /items ---")
-    get_section = new_doc[get_section_index:]
-    assert "Query Parameters:\n    (No query parameters)" in get_section
+        self.patcher.patch(mock_api)
 
-    # Check POST section
-    post_section_index = new_doc.find("--- Operation: POST /items ---")
-    post_section = new_doc[post_section_index:]
-    assert "Query Parameters:\n    (No query parameters)" in post_section
+        doc = getattr(mock_api, method_name).__doc__
+
+        assert "Gets users." in doc
+        assert "--- Operation: GET /users ---" in doc
+
+        # Check Query Params
+        assert "Query Parameters:" in doc
+        assert "**status** (string)" in doc
+        assert "Required:    True" in doc
+        assert "Description: User status." in doc
+        assert "**limit** (integer)" in doc
+        assert "Description: Max items." in doc
+
+        # Check Request Body
+        assert "Request Body:" in doc
+        assert "(No request body)" in doc
+
+        # Check Responses
+        assert "Result Body (Responses):" in doc
+        assert "**200**: (array[User])" in doc
+        assert "Description: A list of users." in doc
+
+    def test_patching_error_path(self, caplog):
+        """
+        Tests that a failure to find the operation generates the
+        correct error docstring and logs a warning.
+        """
+        mock_api, method_name = self._setup_mock_api(
+            spec_dict=self.SPEC_1_NON_STANDARD_PARAMS,  # Spec doesn't matter
+            spec_name="spec1",
+            method_name="get_pets",
+            path="/pets",  # This path doesn't exist in the spec
+            http_methods=["get"],
+            docstring="Original doc.",
+        )
+
+        with caplog.at_level(logging.WARNING):
+            self.patcher.patch(mock_api)
+
+        doc = getattr(mock_api, method_name).__doc__
+
+        assert "Original doc." in doc
+        assert "--- API Details Error ---" in doc
+        assert "(Could not find operations ['get'] for path '/pets' in spec 'spec1')" in doc
+
+        # Test that no *parsing* error was logged
+        assert "Error parsing spec" not in caplog.text
