@@ -24,6 +24,7 @@ from domaintools.results import (
     Results,
     FeedsResults,
 )
+from domaintools.decorators import api_endpoint, auto_patch_docstrings
 from domaintools.filters import (
     filter_by_riskscore,
     filter_by_expire_date,
@@ -31,11 +32,7 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
-from domaintools.utils import (
-    api_endpoint,
-    auto_patch_docstrings,
-    validate_feeds_parameters,
-)
+from domaintools.utils import validate_feeds_parameters
 
 
 AVAILABLE_KEY_SIGN_HASHES = ["sha1", "sha256"]
