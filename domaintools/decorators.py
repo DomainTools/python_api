@@ -1,4 +1,5 @@
 import functools
+import inspect
 
 from typing import List, Union
 
@@ -24,8 +25,26 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
         normalized_methods = [methods] if isinstance(methods, str) else methods
         func._api_methods = normalized_methods
 
+        # Get the signature of the original function ONCE
+        sig = inspect.signature(func)
+
         @functools.wraps(func)
         def wrapper(self, *args, **kwargs):
+
+            try:
+                bound_args = sig.bind(*args, **kwargs)
+            except TypeError:
+                # If arguments don't match signature, let the actual func raise the error
+                return func(*args, **kwargs)
+
+            arguments = bound_args.arguments
+
+            # Robustly find 'self' (it's usually the first argument in bound_args)
+            # We look for the first value in arguments, or try to get 'self' explicitly.
+            instance = arguments.get("self")
+            if not instance and args:
+                instance = args[0]
+
             # Retrieve the Spec from the instance
             # We assume 'self' has a .specs attribute (like DocstringPatcher expects)
             spec = getattr(self, "specs", {}).get(spec_name)
@@ -43,14 +62,13 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
                         spec=spec,
                         path=path,
                         method=current_method,
-                        parameters=kwargs,
+                        parameters=arguments,
                     )
                 except ValueError as e:
-                    # Optional: Log the error or re-raise custom exception
                     print(f"[Validation Error] {e}")
                     raise e
 
-            # 5. Proceed with the original function call
+            # Proceed with the original function call
             return func(*args, **kwargs)
 
         # Copy tags to wrapper for the DocstringPatcher to find

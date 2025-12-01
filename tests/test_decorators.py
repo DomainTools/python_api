@@ -195,3 +195,25 @@ class TestApiEndpointDecorator:
 
             assert result == "Ran Safe"
             mock_validate.assert_not_called()
+
+    def test_positional_arguments_are_mapped(self, mock_client):
+        """
+        Test that passing arguments positionally (args) instead of via keywords (kwargs)
+        still triggers validation correctly.
+        """
+
+        # Define function with explicit parameter names
+        @api_endpoint(spec_name="v1", path="/users", methods="POST")
+        def create_user(name=None, body=None):
+            return "Success"
+
+        with patch("domaintools.request_validator.RequestValidator.validate") as mock_validate:
+            # CALL POSITIONALLY: passing client and body as args
+            # (Note: we pass mock_client manually because create_user is just a function here)
+            create_user(mock_client, "test-name")
+
+            # Verify validator received the data mapped to 'body_data'
+            mock_validate.assert_called_once()
+            call_kwargs = mock_validate.call_args[1]
+
+            assert call_kwargs.get("parameters") == {"name": "test-name"}
