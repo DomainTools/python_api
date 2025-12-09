@@ -671,7 +671,6 @@ class API(object):
         data_updated_after=None,
         expiration_date=None,
         create_date=None,
-        active=None,
         search_hash=None,
         risk_score=None,
         younger_than_date=None,
@@ -701,9 +700,6 @@ class API(object):
         if search_hash:
             kwargs["search_hash"] = search_hash
 
-        if not (kwargs or domains):
-            raise ValueError("Need to define investigation using kwarg filters or domains")
-
         if isinstance(domains, (list, tuple)):
             domains = ",".join(domains)
         if hasattr(data_updated_after, "strftime"):
@@ -712,8 +708,6 @@ class API(object):
             expiration_date = expiration_date.strftime("%Y-%m-%d")
         if hasattr(create_date, "strftime"):
             create_date = create_date.strftime("%Y-%m-%d")
-        if isinstance(active, bool):
-            kwargs["active"] = str(active).lower()
 
         results = self._results(
             "iris-investigate",
