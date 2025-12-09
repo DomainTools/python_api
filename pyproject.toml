@@ -46,6 +46,10 @@ packages = [
     "domaintools.cli.commands",
     "domaintools_async",
 ]
+include-package-data = true
+
+[tool.setuptools.package-data]
+domaintools = ["specs/*.yaml"]
 
 [tool.setuptools.dynamic]
 version = { "file" = "VERSION" }
