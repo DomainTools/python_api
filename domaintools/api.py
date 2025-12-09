@@ -671,7 +671,6 @@ class API(object):
         data_updated_after=None,
         expiration_date=None,
         create_date=None,
-        active=None,
         search_hash=None,
         risk_score=None,
         younger_than_date=None,
