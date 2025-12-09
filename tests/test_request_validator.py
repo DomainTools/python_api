@@ -102,20 +102,6 @@ class TestRequestValidator:
         assert "Missing required request body" in str(exc.value)
 
     @patch("domaintools.docstring_patcher.DocstringPatcher.get_operation_details")
-    def test_validate_body_optional_body_missing(self, mock_get_details):
-        """Test success when body is optional and missing."""
-        mock_get_details.return_value = {
-            "query_params": [],
-            "request_body": {
-                "required": False,  # <--- Body is optional
-                "properties": [{"name": "foo", "type": "string"}],
-            },
-        }
-
-        # Should not raise error
-        RequestValidator.validate(spec={}, path="/users", method="POST", parameters=None)
-
-    @patch("domaintools.docstring_patcher.DocstringPatcher.get_operation_details")
     def test_validate_body_property_wrong_type(self, mock_get_details):
         """Test failure when a specific body property has the wrong type."""
         mock_get_details.return_value = {

@@ -28,11 +28,11 @@ class RequestValidator:
         """
         method = method.upper()
 
-        # 1. GET requests: Validate Query Parameters only
+        # GET requests: Validate Query Parameters only
         if method == "GET":
             RequestValidator.validate_query_params(spec, path, method, parameters)
 
-        # 2. POST/PUT/PATCH: Validate Request Body
+        # POST/PUT/PATCH: Validate Request Body
         elif method in ["POST", "PUT", "PATCH"]:
             RequestValidator.validate_body(spec, path, method, parameters)
 
@@ -79,10 +79,9 @@ class RequestValidator:
             return
 
         body_rules = details["request_body"]
-        is_body_required = body_rules["required"]
 
         # Check Body Existence
-        if is_body_required and not body_data:
+        if not body_data:
             raise ValueError("Validation Failed: Missing required request body.")
 
         # Check Body Properties

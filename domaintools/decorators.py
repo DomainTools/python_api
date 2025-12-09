@@ -41,7 +41,7 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
 
             # Robustly find 'self' (it's usually the first argument in bound_args)
             # We look for the first value in arguments, or try to get 'self' explicitly.
-            instance = arguments.get("self")
+            instance = arguments.pop("self", None)
             if not instance and args:
                 instance = args[0]
 
