@@ -49,6 +49,12 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
             # We assume 'self' has a .specs attribute (like DocstringPatcher expects)
             spec = getattr(self, "specs", {}).get(spec_name)
 
+            if "domains" in arguments.keys():
+                domains = arguments.pop("domains")
+                arguments["domain"] = (
+                    ",".join(domains) if isinstance(domains, (list, tuple)) else domains
+                )
+
             if spec:
                 # Determine which HTTP method is currently being executed.
                 # If the function allows dynamic methods (e.g. method="POST"), use that.
