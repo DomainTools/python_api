@@ -1,9 +1,9 @@
+import re
+
 from datetime import datetime
 from typing import Optional
 
 from domaintools.constants import Endpoint, OutputFormat
-
-import re
 
 
 def get_domain_age(create_date):
@@ -109,7 +109,9 @@ def prune_data(data_obj):
             prune_data(item)
             if not isinstance(item, int) and not item:
                 items_to_prune.append(index)
-        data_obj[:] = [item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)]
+        data_obj[:] = [
+            item for index, item in enumerate(data_obj) if index not in items_to_prune and len(item)
+        ]
 
 
 def find_emails(data_str):
