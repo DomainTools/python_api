@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha1, sha256
 from hmac import new as hmac
+from pathlib import Path
 from typing import Union
 
 import re
 import ssl
 import yaml
+
 
 from domaintools.constants import (
     Endpoint,
@@ -111,9 +113,11 @@ class API(object):
             raise Exception("Proxy URL must be a string. For example: '127.0.0.1:8888'")
 
     def _initialize_specs(self):
+        package_root = Path(__file__).parent
         for spec_name, file_path in SPECS_MAPPING.items():
+            specs_file_path = f"{package_root}/specs/{file_path}"
             try:
-                with open(file_path, "r", encoding="utf-8") as f:
+                with open(specs_file_path, "r", encoding="utf-8") as f:
                     spec_content = yaml.safe_load(f)
                 if not spec_content:
                     raise ValueError("Spec file is empty or invalid.")
@@ -121,7 +125,7 @@ class API(object):
                 self.specs[spec_name] = spec_content
 
             except Exception as e:
-                print(f"Error loading {file_path}: {e}")
+                print(f"Error loading {specs_file_path}: {e}")
 
     def _get_ssl_default_context(self, verify_ssl: Union[str, bool]):
         return (
