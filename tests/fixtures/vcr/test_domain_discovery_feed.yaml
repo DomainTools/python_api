@@ -3145,4 +3145,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.7.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-01-16T10:20:12Z","domain":"livuanshuan.com"}
+
+        {"timestamp":"2026-01-16T10:20:11Z","domain":"elwhth.id.vn"}
+
+        {"timestamp":"2026-01-16T10:20:10Z","domain":"scalableoperationsnetwork.bond"}
+
+        {"timestamp":"2026-01-16T10:20:09Z","domain":"thinhnd12.id.vn"}
+
+        {"timestamp":"2026-01-16T10:20:08Z","domain":"hadiwaqar.com.pk"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '333'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 16 Jan 2026 10:20:12 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=vbotr5094ubi678vu26pqp3i80b0cibnblha8vq5m8sur3r0ue3tq2i0sddhnpcqg1bem31cga9nr809q9jgr70tdgq6kkpor23m31a;
+        expires=Sun, 15-Feb-2026 10:20:12 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=12f5a56b0bad58613a955a0c1ddf954b; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - a9278d6c-3876-470b-86de-1e8d3c110e6a
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -645,4 +645,57 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/ip-monitor?app_name=python_wrapper&app_version=2.7.1&days_back=0&page=1&query=65.55.53.233
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAyWMwQqAIBBE/2XPFauSh34lIpaUECwlt1P07w0Ecxjm8eahK7ZazhZpeiinIylN
+        hpk7CqIYybL1PZveeOoo1VVCgNJA/DiMiBusc2BaVDJmRq+ywzV/Wbdyn7jFp+R4Kdx5ed8PPzQU
+        BXsAAAA=
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 16 Jan 2026 10:15:45 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=is6miqblj64u8sp6n0a8t47upb2deinl670pqj1oj2tbl2d2h4lfdico3gs8u43a1eoelb7nrma3bltvgvltvlk754qkttleuegt1f9;
+        expires=Sun, 15-Feb-2026 10:15:45 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '73309'
+    status:
+      code: 200
+      message: OK
 version: 1

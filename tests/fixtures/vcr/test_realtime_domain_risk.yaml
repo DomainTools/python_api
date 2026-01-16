@@ -25224,4 +25224,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.7.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-01-16T10:20:30Z","domain":"yqvtsabcs7.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-01-16T10:20:14Z","domain":"cartaocontinente-ptrzst.cfd","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-01-16T10:20:09Z","domain":"virtez.pro","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-01-16T10:20:24Z","domain":"744983.cc","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-01-16T10:20:32Z","domain":"puzzled-revenue.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '784'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 16 Jan 2026 10:20:56 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=812fposnta6kdbf58vmci0qibjcfl9uh0diig040en646qonoo49hcp7819m3r97akm1foo0s81hc808v5j0moq6pudoii0vsvt58bs;
+        expires=Sun, 15-Feb-2026 10:20:55 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=12f5a56b0bad58613a955a0c1ddf954b; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 446d514d-60cd-4fd6-b719-2215336abfc9
+    status:
+      code: 200
+      message: OK
 version: 1

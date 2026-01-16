@@ -12695,4 +12695,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.7.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-01-16T10:18:58Z","domain":"concentraspark.website"}
+
+        {"timestamp":"2026-01-16T10:18:58Z","domain":"zana-auto.ch"}
+
+        {"timestamp":"2026-01-16T10:18:58Z","domain":"oidhelp.com"}
+
+        {"timestamp":"2026-01-16T10:18:58Z","domain":"zsda8.shop"}
+
+        {"timestamp":"2026-01-16T10:18:58Z","domain":"qorz37entavilo.guru"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '319'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 16 Jan 2026 10:18:58 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=6a0u9dgk2l9n622i5te89cofgud0ht4ptg1q1s42stualcr4pudkbpqiitm618hv1pms7na5i1dep4tuidslvr0sikf6d3j2t85o4nh;
+        expires=Sun, 15-Feb-2026 10:18:58 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=e150185fc92342e0a08c3558fcec2943; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 3bd0a86d-686b-4a6e-acf8-b3dcd7969502
+    status:
+      code: 200
+      message: OK
 version: 1
