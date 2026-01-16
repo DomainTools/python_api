@@ -605,4 +605,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.7.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-01-16T10:31:25Z","domain":"0-00-0000010zp-4-10p-be2ser-cdotale-ge-ct1022-4-eac0014-ge-ge.apps.westspdev.cable.comcast.com"}
+
+        {"timestamp":"2026-01-16T10:31:25Z","domain":"ggvpenamedream.zamppbi.cn"}
+
+        {"timestamp":"2026-01-16T10:31:25Z","domain":"nhotcqhphv7.518jpvo.com"}
+
+        {"timestamp":"2026-01-16T10:31:25Z","domain":"0-00-0000001ppp-1zapi8-10p-a1p-cdotale-ge-zapi-4-97-tps-tps.apps.westspdev.cable.comcast.com"}
+
+        {"timestamp":"2026-01-16T10:31:25Z","domain":"soqywvaccaflm2lkcnrq-ps5h5s-2b62e0c20-clientnsv4-s.akamaihd.net"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '542'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 16 Jan 2026 10:31:34 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=09c50mqkb69ed9bud9bji6obu05nppn9b6b6fdjikbb9f2hi1d153j51kiq2ehrh16fo2ajc56aeni30mb4p7a742a1m70d07plcs4h;
+        expires=Sun, 15-Feb-2026 10:31:25 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=273e90bb0b3e52e3738cddfd3312a3d1; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - e38bd97a-fa9c-42e5-8591-12d95475b9e3
+    status:
+      code: 200
+      message: OK
 version: 1

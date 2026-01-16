@@ -58,6 +58,6 @@ RTTF_PRODUCTS_CMD_MAPPING = {
 }
 
 SPECS_MAPPING = {
-    "iris": "domaintools/specs/iris-openapi.yaml",
-    # "rttf": "domaintools/specs/feeds-openapi.yaml",
+    "iris": "iris-openapi.yaml",
+    # "rttf": "feeds-openapi.yaml",
 }

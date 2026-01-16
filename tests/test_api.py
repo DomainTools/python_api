@@ -345,7 +345,9 @@ def test_exception_handling():
         ValueError,
         match=r"Invalid value 'notahash' for 'key_sign_hash'. Values available are sha1,sha256",
     ):
-        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash").domain_search("amazon")
+        API(
+            "notauser", "notakey", always_sign_api_key=True, key_sign_hash="notahash"
+        ).domain_search("amazon")
 
 
 @vcr.use_cassette
@@ -354,7 +356,9 @@ def test_md5_is_not_supported():
         ValueError,
         match=r"Invalid value 'md5' for 'key_sign_hash'. Values available are sha1,sha256",
     ):
-        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="md5").domain_search("amazon")
+        API("notauser", "notakey", always_sign_api_key=True, key_sign_hash="md5").domain_search(
+            "amazon"
+        )
 
 
 # @vcr.use_cassette
@@ -464,7 +468,9 @@ def test_iris_detect_monitors():
 
 @vcr.use_cassette
 def test_iris_detect_new_domains():
-    detect_results = api.iris_detect_new_domains(monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc")
+    detect_results = api.iris_detect_new_domains(
+        monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
+    )
     assert detect_results["watchlist_domains"][0]["risk_score"] == 100
 
 
@@ -476,7 +482,7 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains(
         monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
     )
-    assert len(detect_results["watchlist_domains"]) == 3
+    assert len(detect_results["watchlist_domains"]) == 5
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
     assert detect_results["count"] == 1
