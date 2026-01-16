@@ -3201,4 +3201,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.7.2&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-01-16T13:51:34Z","domain":"hnlytsg.cn"}
+
+        {"timestamp":"2026-01-16T13:51:33Z","domain":"wallsgroup.co"}
+
+        {"timestamp":"2026-01-16T13:51:33Z","domain":"kangyu576.com"}
+
+        {"timestamp":"2026-01-16T13:51:33Z","domain":"bankonbet-canada.online"}
+
+        {"timestamp":"2026-01-16T13:51:33Z","domain":"bavugarigroup.com"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '321'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 16 Jan 2026 13:51:34 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=077fasc848puf935c3gni77rrcq310uo068cr5jcn1kd4mc12ol03ic10ji072op5hq2fd88ll2mkm8o91lm3bjcn6e4m5co9o4greu;
+        expires=Sun, 15-Feb-2026 13:51:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=e150185fc92342e0a08c3558fcec2943; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - e4718c2f-0f36-4d20-9a0f-da174547bc3b
+    status:
+      code: 200
+      message: OK
 version: 1
