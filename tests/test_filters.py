@@ -16,20 +16,17 @@ class DTFiltersTest(unittest.TestCase):
         domaintools_iris_result = iris_investigate_data.domaintools()
         int_chase_iris_result = iris_investigate_data.int_chase()
 
-        test_results = {
-            "results": domaintools_iris_result["results"]
-            + int_chase_iris_result["results"]
-        }
+        test_results = {"results": domaintools_iris_result["results"] + int_chase_iris_result["results"]}
 
         self.dt_res_filter = DTResultFilter(result_set=test_results)
 
     def test_filter_by_riskscore(self):
         """Test domaintools filter by riskcore"""
-        risk_score = 69
+        risk_score_threshold = 69
 
         result = self.dt_res_filter.by(
             [
-                filter_by_riskscore(threshold=risk_score),
+                filter_by_riskscore(threshold=risk_score_threshold),
             ]
         )
 
@@ -77,9 +74,7 @@ class DTFiltersTest(unittest.TestCase):
 
         results = self.dt_res_filter.by(
             [
-                filter_by_field(
-                    field=include_domains_with_missing_field, filter_type="include"
-                ),
+                filter_by_field(field=include_domains_with_missing_field, filter_type="include"),
             ]
         )
 
@@ -90,9 +85,7 @@ class DTFiltersTest(unittest.TestCase):
 
         results = self.dt_res_filter.by(
             [
-                filter_by_field(
-                    field=exclude_domains_with_missing_field, filter_type="exclude"
-                ),
+                filter_by_field(field=exclude_domains_with_missing_field, filter_type="exclude"),
             ]
         )
 
