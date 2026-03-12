@@ -128,11 +128,7 @@ class API(object):
                 print(f"Error loading {specs_file_path}: {e}")
 
     def _get_ssl_default_context(self, verify_ssl: Union[str, bool]):
-        return (
-            ssl.create_default_context(cafile=verify_ssl)
-            if isinstance(verify_ssl, str)
-            else verify_ssl
-        )
+        return ssl.create_default_context(cafile=verify_ssl) if isinstance(verify_ssl, str) else verify_ssl
 
     def _build_api_url(self, api_url=None, api_port=None):
         """Build the API url based on the given url and port. Defaults to `https://api.domaintools.com`"""
@@ -160,18 +156,11 @@ class API(object):
             hours = limit_hours and 3600 / float(limit_hours)
             minutes = limit_minutes and 60 / float(limit_minutes)
 
-            self.limits[product["id"]] = {
-                "interval": timedelta(seconds=minutes or hours or default)
-            }
+            self.limits[product["id"]] = {"interval": timedelta(seconds=minutes or hours or default)}
 
     def _results(self, product, path, cls=Results, **kwargs):
         """Returns _results for the specified API path with the specified **kwargs parameters"""
-        if (
-            product != "account-information"
-            and self.rate_limit
-            and not self.limits_set
-            and not self.limits
-        ):
+        if product != "account-information" and self.rate_limit and not self.limits_set and not self.limits:
             always_sign_api_key_previous_value = self.always_sign_api_key
             header_authentication_previous_value = self.header_authentication
             self._rate_limit(product)
@@ -215,9 +204,7 @@ class API(object):
             else:
                 raise ValueError(
                     "Invalid value '{0}' for 'key_sign_hash'. "
-                    "Values available are {1}".format(
-                        self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES)
-                    )
+                    "Values available are {1}".format(self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES))
                 )
 
             parameters["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -229,9 +216,7 @@ class API(object):
 
     def account_information(self, **kwargs):
         """Provides a snapshot of your accounts current API usage"""
-        return self._results(
-            "account-information", "/v1/account", items_path=("products",), **kwargs
-        )
+        return self._results("account-information", "/v1/account", items_path=("products",), **kwargs)
 
     def available_api_calls(self):
         """Provides a list of api calls that you can use based on your account information."""
@@ -434,9 +419,7 @@ class API(object):
 
     def reverse_ip(self, domain=None, limit=None, **kwargs):
         """Pass in a domain name."""
-        return self._results(
-            "reverse-ip", "/v1/{0}/reverse-ip".format(domain), limit=limit, **kwargs
-        )
+        return self._results("reverse-ip", "/v1/{0}/reverse-ip".format(domain), limit=limit, **kwargs)
 
     def host_domains(self, ip=None, limit=None, **kwargs):
         """Pass in an IP address."""
@@ -610,12 +593,8 @@ class API(object):
         younger_than_date = kwargs.pop("younger_than_date", {}) or None
         older_than_date = kwargs.pop("older_than_date", {}) or None
         updated_after = kwargs.pop("updated_after", {}) or None
-        include_domains_with_missing_field = (
-            kwargs.pop("include_domains_with_missing_field", {}) or None
-        )
-        exclude_domains_with_missing_field = (
-            kwargs.pop("exclude_domains_with_missing_field", {}) or None
-        )
+        include_domains_with_missing_field = kwargs.pop("include_domains_with_missing_field", {}) or None
+        exclude_domains_with_missing_field = kwargs.pop("exclude_domains_with_missing_field", {}) or None
 
         filtered_results = DTResultFilter(result_set=results).by(
             [
@@ -677,7 +656,7 @@ class API(object):
         create_date=None,
         active=None,
         search_hash=None,
-        risk_score=None,
+        risk_score_threshold=None,
         younger_than_date=None,
         older_than_date=None,
         updated_after=None,
@@ -732,7 +711,7 @@ class API(object):
 
         filtered_results = DTResultFilter(result_set=results).by(
             [
-                filter_by_riskscore(threshold=risk_score),
+                filter_by_riskscore(threshold=risk_score_threshold),
                 filter_by_expire_date(date=younger_than_date, lookup_type="before"),
                 filter_by_expire_date(date=older_than_date, lookup_type="after"),
                 filter_by_date_updated_after(date=updated_after),
