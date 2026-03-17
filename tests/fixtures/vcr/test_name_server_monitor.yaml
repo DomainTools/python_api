@@ -1164,4 +1164,72 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=2.7.3&days_back=0&page=1&query=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8VZbXPiNhD+Kx1/jj28lKTNt8WW7S2yRCUZAp1OxgcK9RyxM8b0ZprJf698STOh
+        PXwktc03vIZ99Kz2nUer0LuHPNtp6/rR2qb3aWld93u93oW1TkojtAa9waXdG9r9K+vCypJ7fbvT
+        xZ+6MK82eb7ZameV35tXZV4mWyO8HJmHh2Rjftt//nC7yvdZ+fUx2eqi3FnXvz1amf5yW6Mu367/
+        9brQm3RXFklWOsXefCNZlWmemRfKyHZ3uvgBMyNe5/dJWon7c2SOiK2niw+AvdXv6a0u9fqt7kEP
+        mBczjwhHKi7IEZCHpPi8zTfp6ijOwTH+y4jvywNYTynH5dERuCxd6XT30BDYj1fDn0aj0bAGcLXN
+        9+u7bVIcN+T7MEcRnyERMV06Lkhk/AzAgQCFsivgMXiE2c9kbc4oMlJj8Hd4LdNfDnHwBoSKPQ6/
+        xujcLJbdMZSEvjDs0pfGRJxu2GZDp0Id86g/HAzOgNlpxL4YGLwIBVA7IswTKLHTm345gwklW0AA
+        yzNguwKYtCPOFDD4vru1dQwaB3CKu7eFL5WxgUDV7RVQkKGcojuRraROz6ifCu6GgEzWZM5m49lD
+        c4VCjDmdT2kzvL7RyJAZRES6C+UQL3a8zuqtL0yyikVwhroQEGZYn1wZmsc3qcKzX3NWVRzPfQhT
+        KVuJnEDEU04wgptKvQOiK3oh96gKScR5O8TCBTACjhKme+uKEzJFBIXJa7vYCjOcAZvyZaW8K2K/
+        xFKhiyBiqCVVTVPVPOmkWQOoE6AYkEg6yI7gpUmWOHmxaQCMArqO35n7U+6CqLqSzpMrjV2TTMhZ
+        kL+2Pu1PUhEE6BKPkv+RWj5tk+yzXcmeRUdJHq40IhKYwhWCcrgIujLsa0t/hkutGmpB4ptGM943
+        2qCqULhiIRVQxyBB805jAKRrZgSH4uxYyVhnO7tKcmm2ach+DMU4BNFKHJg+P6DMIz46EtUxTo3o
+        P95zN6Cetqb+e4dvPFymPvg+TvgJHULz2Gb+ZyHMTJsCQTuZVxAPBXGV/XO/V7dY+TiChGqNUS0z
+        2OWVg50VbGmSuu+HEMt3LAObnTclcYeXI8qDLp1GEoE8lhGPDHHZ6QQkIxDKpnw8XiDrlrSiwhQB
+        4aJaVLsLaXrDDztzbkA2+o98V57YQ8g5+sqG6ZQiMJfYgkwB6ypE8/znKOU/Xv7W8892iGUs0A3r
+        Rg9d3OlVaQp0Q/AKJxQnRIWArSQyhdGYL+qn7rtCa8NorddpY6wit0rSyq+7y6b/FVPU69cuvfep
+        Xd3cp/SvBtDmhFJmfKfDce7ZPQ9q+u9PT38DQlzWibsdAAA=
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 17 Mar 2026 13:05:04 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=mgg3vgf4e2jhtqmvd90lmme0bdnbqsvkoshghvs4790ij2tlgfakl28tlsvmsu3u4ehp0urjglnef3akoe0p123mjm24ckm35cebc7b;
+        expires=Thu, 16-Apr-2026 13:05:04 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '69780'
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -717,4 +717,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.7.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-03-17T13:06:03Z","domain":"0xemrnppze4r.festivalif3.com"}
+
+        {"timestamp":"2026-03-17T13:06:03Z","domain":"help.trend-first.com"}
+
+        {"timestamp":"2026-03-17T13:06:03Z","domain":"phjnjhevq5keq2nsbwbq-prcwcp-b033d6bd3-clientnsv4-s.akamaihd.net"}
+
+        {"timestamp":"2026-03-17T13:06:03Z","domain":"6yjx3gkut942wfvqesyzhelatform-secrets-qa.dev-branch.sitecore-staging.cloud"}
+
+        {"timestamp":"2026-03-17T13:06:03Z","domain":"pherculestform-secrets-qa.dev-branch.sitecore-staging.cloud"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '489'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 17 Mar 2026 13:06:03 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=l255d4f8fl2kdb4os2knnhqk1ddrqb0i34dsq6ne56mpd5a6j8va8abd2k7aljr0uqatt0ir22e34fn5btdaq8desoe050f8ceknhau;
+        expires=Thu, 16-Apr-2026 13:06:03 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=26261e9e381b746d1b1890e30bb3b9ef; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 32cbde5b-bfa3-4f7a-8ca9-0519b67e5c6d
+    status:
+      code: 200
+      message: OK
 version: 1

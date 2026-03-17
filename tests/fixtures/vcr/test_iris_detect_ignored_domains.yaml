@@ -1564,4 +1564,116 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.7.3&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8VUTU/jMBT8L77SRo7z1fi0h5VWAu2XVBV1EYpeE7d1ceKu7ZRC1f++zwmwBamo
+        wIEoh/h5PM+eGWdHbsGVSyWtKypdg2ws4Vc7Yh04QTiRi0YbUZEB6WextJGl0wZquNcNWKg2Qanr
+        YGYQ41e1SECgdHIj/CppS70RSFFUPSOjLBnSbMiyMU05yzijQZiPKKV/EF8uoVk8A6dDGg4ZHTPG
+        acRZFNDu8WAj7U2B/AahETscF087mbdKPYMWuNu1bkTjcHpH1kZvZS3dXU/hlkaAK7A6l0p0gKW0
+        S9ksCM8HpAZ1C74dy/C0a6gJDwdEbGQlmhLLV9f7PaK2hdiiotjAmVYgq6pwK08yST+aQnLD/ubf
+        pr+wImwJCpzUnfzXSKEbiSoXsvIF8vXi52x7PllNzwlOgrXoC6o0u/MWNU4sTL/4zAnrwi+9V05r
+        Zb055GDJSxdG4zDhScjj+EHYM0o5pWQ/eDUEK6hnbZ8BCe8MQOJbM8xAEmRZdjQAh+ARj5IjAWD0
+        wwHwFK8FIGQHCQjpaQmYg7JHIjCBzET3k9/ry0+NQCdtEvEwfVMEevctKrUSpRuK9qHPWzMQc3zj
+        PMjSEzIQo0mc5UcykH84AvHpv4Doff4/mv/9cn1h0umP5HPvP2qacprzJH9hPvZx2oFCrdrGdcf9
+        /6XncyvwE++A8sr560D3/wAO/Ij5TQYAAA==
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Tue, 17 Mar 2026 13:06:00 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=umb1i3tpu01f1fajmkdkkt69mjsclngl1vhedai7cjitcvsmtvhmess7equls2sjghamheuf8173fsu5j9a3pplofb2jvan1cvbh0aa;
+        expires=Thu, 16-Apr-2026 13:06:00 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/ignored/?app_name=python_wrapper&app_version=2.7.3&include_domain_data=false&monitor_id=DKObxJVjYJ&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8VUTU/jMBT8L77SRo7z1fi0h5VWAu2XVBV1EYpeE7d1ceKu7ZRC1f++zwmwBamo
+        wIEoh/h5PM+eGWdHbsGVSyWtKypdg2ws4Vc7Yh04QTiRi0YbUZEB6WextJGl0wZquNcNWKg2Qanr
+        YGYQ41e1SECgdHIj/CppS70RSFFUPSOjLBnSbMiyMU05yzijQZiPKKV/EF8uoVk8A6dDGg4ZHTPG
+        acRZFNDu8WAj7U2B/AahETscF087mbdKPYMWuNu1bkTjcHpH1kZvZS3dXU/hlkaAK7A6l0p0gKW0
+        S9ksCM8HpAZ1C74dy/C0a6gJDwdEbGQlmhLLV9f7PaK2hdiiotjAmVYgq6pwK08yST+aQnLD/ubf
+        pr+wImwJCpzUnfzXSKEbiSoXsvIF8vXi52x7PllNzwlOgrXoC6o0u/MWNU4sTL/4zAnrwi+9V05r
+        Zb055GDJSxdG4zDhScjj+EHYM0o5pWQ/eDUEK6hnbZ8BCe8MQOJbM8xAEmRZdjQAh+ARj5IjAWD0
+        wwHwFK8FIGQHCQjpaQmYg7JHIjCBzET3k9/ry0+NQCdtEvEwfVMEevctKrUSpRuK9qHPWzMQc3zj
+        PMjSEzIQo0mc5UcykH84AvHpv4Doff4/mv/9cn1h0umP5HPvP2qacprzJH9hPvZx2oFCrdrGdcf9
+        /6XncyvwE++A8sr560D3/wAO/Ij5TQYAAA==
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Tue, 17 Mar 2026 13:06:02 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=12qc11hb1ciudinulk51att2st2cima5tjtpp4autim8v2qgk8jtpmaj4jc2dbgjcgdk622pd994lpiu9vrpmjgkuup8o1ak9ulcdtf;
+        expires=Thu, 16-Apr-2026 13:06:02 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1
