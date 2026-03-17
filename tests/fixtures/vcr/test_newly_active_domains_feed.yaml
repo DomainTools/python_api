@@ -46349,4 +46349,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.7.3&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-03-17T13:06:02Z","domain":"spoonrebellion.fr"}
+
+        {"timestamp":"2026-03-17T13:06:02Z","domain":"thriveforwardtherapy.ca"}
+
+        {"timestamp":"2026-03-17T13:06:02Z","domain":"luxurysocalrealty.yolasite.com"}
+
+        {"timestamp":"2026-03-17T13:06:02Z","domain":"slunezahrady.cz"}
+
+        {"timestamp":"2026-03-17T13:06:02Z","domain":"streamliner47.de"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '346'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 17 Mar 2026 13:06:04 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=ln721u55mf4dhcnl2ivcmstm9am8e7er9clk62rvn42lh0o7artjn2n4kl4jdie6d5vlcdg45t7i8kp7243a0vk7lnb3asskqf8kfi1;
+        expires=Thu, 16-Apr-2026 13:06:04 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c28bd7cda40b4f149dcd2c6ee60494ea; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 66102aa9-968e-4a61-93cd-d7b5213b2b4c
+    status:
+      code: 200
+      message: OK
 version: 1

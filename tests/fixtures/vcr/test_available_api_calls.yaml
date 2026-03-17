@@ -871,4 +871,67 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.7.3
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WZYW+bMBCG/wufNimWCBS69q9MU+TCBU41NrJNsijKf99BYGJaqCAlFOdTEtv4
+        ufOb1/bl7GkwpZIGvNezx5NEVdI2b0vcVQa05AU1eSgtZJpbpK47C8aizLwNDbB4oHarK7hsvFKr
+        tEqs8V5/nj1MaVz7RIZyr3TRjKdhJehdoaTNdwILpPm8rV+/2qZcVbprkZUQ7QCUlYW/I6J6+jej
+        RO/La+fK8KwJx6qUn6hrsKW+zXz1THH84hEr/C7xGtAu5Raugy+blhs1GoI+1JFmdfMg9BTmwB8P
+        HfeZ/WAkMkiNSX6TNphKG0+g3QY93OdobIZTsJBYBibhgrqwVBUcpbmd7WgafjgB3+/R+9PYMZNK
+        Q3oPOq2r92n05x56GEbT4Asu6XHsyG2SCzR21gXYTpF7fwXGir0LQkm0Sn8B9D+5f4qnYUs4uima
+        Ri0uKf4Kymh32qP4wMqXUfcIf2mBDXA9YOZ37Jf+43hz1RwIWE4WovTJgQxj2dnG8seR6agaMsqs
+        5tI6Q62hrOyc571HqkHDAbQBhuVcsEuwsmOucMB+15VeNO+OYDI4YAoycWGX6JRQX9For9D0yR35
+        zqrdx+EWXL8zLkDb1TtuySmvqTOm0FOtM5uaK7ltOD88jUVL0f54mqZcJuqC0s0UBytRQe805oYz
+        0E1TnNi1Vtfd2tgeKOXfeInfZ+K/VyHh2ADUW2MX6TpCoBtuL4iXOBxv0e31Tqf89nkzWsxLRhUW
+        O9xW9nU3Rt04KSoBY+p7tVWJEuuR1IhKjAYumMWi+0GwFE2iaDM63R1Gz6HmWp85AjHhXMuxQMlj
+        rMjcCOoD450vgIfzD/iuixHUhar7943hH/hye18/AidW4D9/ypVt/mpYh8NuPxPBjC604AI0dY51
+        ZH9E8X4Af9Wp/3W5/AEpFEIjWR8AAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 17 Mar 2026 13:04:57 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=uvep7q49o2nt5tom4spo920v2oq091duhe3n242bvvcf4drt77gfr46hp5tedh58l87ojuc8ts8k2ke6t6ckgs3u7bm0326n92r0a3t;
+        expires=Thu, 16-Apr-2026 13:04:57 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '134305'
+    status:
+      code: 200
+      message: OK
 version: 1

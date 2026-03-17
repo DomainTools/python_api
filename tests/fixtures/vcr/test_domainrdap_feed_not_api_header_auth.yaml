@@ -1605,4 +1605,356 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.7.3&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: "{\"timestamp\":\"2026-03-17T13:06:05Z\",\"domain\":\"berbersepeti.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-03-17T13:06:00Z\",\"requests\":[{\"data\":\"{\\r\\n
+        \ \\\"objectClassName\\\": \\\"domain\\\",\\r\\n  \\\"handle\\\": \\\"2820684178_DOMAIN_COM-VRSN\\\",\\r\\n
+        \ \\\"ldhName\\\": \\\"BERBERSEPETI.COM\\\",\\r\\n  \\\"links\\\": [\\r\\n
+        \   {\\r\\n      \\\"value\\\": \\\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\\\",\\r\\n
+        \     \\\"rel\\\": \\\"self\\\",\\r\\n      \\\"href\\\": \\\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\\\"\\r\\n
+        \   }\\r\\n  ],\\r\\n  \\\"status\\\": [\\r\\n    \\\"active\\\"\\r\\n  ],\\r\\n
+        \ \\\"entities\\\": [\\r\\n    {\\r\\n      \\\"objectClassName\\\": \\\"entity\\\",\\r\\n
+        \     \\\"handle\\\": \\\"1454\\\",\\r\\n      \\\"roles\\\": [\\r\\n        \\\"registrar\\\"\\r\\n
+        \     ],\\r\\n      \\\"publicIds\\\": [\\r\\n        {\\r\\n          \\\"type\\\":
+        \\\"IANA Registrar ID\\\",\\r\\n          \\\"identifier\\\": \\\"1454\\\"\\r\\n
+        \       }\\r\\n      ],\\r\\n      \\\"vcardArray\\\": [\\r\\n        \\\"vcard\\\",\\r\\n
+        \       [\\r\\n          [\\r\\n            \\\"version\\\",\\r\\n            {},\\r\\n
+        \           \\\"text\\\",\\r\\n            \\\"4.0\\\"\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"fn\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"NICS Telekomunikasyon A.S.\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"adr\\\",\\r\\n            {\\r\\n              \\\"cc\\\":
+        \\\"TR\\\"\\r\\n            },\\r\\n            \\\"text\\\",\\r\\n            [\\r\\n
+        \             \\\"\\\",\\r\\n              \\\"\\\",\\r\\n              \\\"Mecidiyekoy
+        Yolu Cad. Trump Tower No:12 I\xE7 Kapi No: 470\\\",\\r\\n              \\\"Sisli\\\",\\r\\n
+        \             \\\"Istanbul\\\",\\r\\n              \\\"34387\\\",\\r\\n              \\\"\\\"\\r\\n
+        \           ]\\r\\n          ],\\r\\n          [\\r\\n            \\\"tel\\\",\\r\\n
+        \           {\\r\\n              \\\"type\\\": \\\"voice\\\"\\r\\n            },\\r\\n
+        \           \\\"uri\\\",\\r\\n            \\\"tel:+90.2122132963\\\"\\r\\n
+        \         ],\\r\\n          [\\r\\n            \\\"email\\\",\\r\\n            {},\\r\\n
+        \           \\\"text\\\",\\r\\n            \\\"abuse@nicproxy.com\\\"\\r\\n
+        \         ]\\r\\n        ]\\r\\n      ],\\r\\n      \\\"entities\\\": [\\r\\n
+        \       {\\r\\n          \\\"objectClassName\\\": \\\"entity\\\",\\r\\n          \\\"roles\\\":
+        [\\r\\n            \\\"abuse\\\"\\r\\n          ],\\r\\n          \\\"vcardArray\\\":
+        [\\r\\n            \\\"vcard\\\",\\r\\n            [\\r\\n              [\\r\\n
+        \               \\\"version\\\",\\r\\n                {},\\r\\n                \\\"text\\\",\\r\\n
+        \               \\\"4.0\\\"\\r\\n              ],\\r\\n              [\\r\\n
+        \               \\\"fn\\\",\\r\\n                {},\\r\\n                \\\"text\\\",\\r\\n
+        \               \\\"NICS Telekomunikasyon A.S.\\\"\\r\\n              ],\\r\\n
+        \             [\\r\\n                \\\"tel\\\",\\r\\n                {\\r\\n
+        \                 \\\"type\\\": \\\"voice\\\"\\r\\n                },\\r\\n
+        \               \\\"uri\\\",\\r\\n                \\\"tel:+90.2122132963\\\"\\r\\n
+        \             ],\\r\\n              [\\r\\n                \\\"email\\\",\\r\\n
+        \               {},\\r\\n                \\\"text\\\",\\r\\n                \\\"abuse@nicproxy.com\\\"\\r\\n
+        \             ]\\r\\n            ]\\r\\n          ]\\r\\n        }\\r\\n      ],\\r\\n
+        \     \\\"links\\\": [\\r\\n        {\\r\\n          \\\"value\\\": \\\"https://nicproxy.com\\\",\\r\\n
+        \         \\\"rel\\\": \\\"about\\\",\\r\\n          \\\"href\\\": \\\"https://nicproxy.com\\\"\\r\\n
+        \       }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n      \\\"objectClassName\\\":
+        \\\"entity\\\",\\r\\n      \\\"handle\\\": \\\"NICS-registrant\\\",\\r\\n
+        \     \\\"roles\\\": [\\r\\n        \\\"registrant\\\"\\r\\n      ],\\r\\n
+        \     \\\"vcardArray\\\": [\\r\\n        \\\"vcard\\\",\\r\\n        [\\r\\n
+        \         [\\r\\n            \\\"version\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"4.0\\\"\\r\\n          ],\\r\\n          [\\r\\n            \\\"fn\\\",\\r\\n
+        \           {},\\r\\n            \\\"text\\\",\\r\\n            \\\"REDACTED
+        FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n            \\\"org\\\",\\r\\n
+        \           {},\\r\\n            \\\"text\\\",\\r\\n            \\\"REDACTED
+        FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n            \\\"adr\\\",\\r\\n
+        \           {\\r\\n              \\\"cc\\\": \\\"TR\\\"\\r\\n            },\\r\\n
+        \           \\\"text\\\",\\r\\n            [\\r\\n              \\\"\\\",\\r\\n
+        \             \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"\\\"\\r\\n
+        \           ]\\r\\n          ],\\r\\n          [\\r\\n            \\\"contact-uri\\\",\\r\\n
+        \           {},\\r\\n            \\\"uri\\\",\\r\\n            \\\"https://whoisshelter.nicproxy.com/?d=BERBERSEPETI.COM\\\"\\r\\n
+        \         ]\\r\\n        ]\\r\\n      ],\\r\\n      \\\"remarks\\\": [\\r\\n
+        \       {\\r\\n          \\\"description\\\": [\\r\\n            \\\"Some
+        of the data in this object has been removed\\\"\\r\\n          ],\\r\\n          \\\"title\\\":
+        \\\"REDACTED FOR PRIVACY\\\",\\r\\n          \\\"type\\\": \\\"object redacted
+        due to authorization\\\"\\r\\n        }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n
+        \     \\\"objectClassName\\\": \\\"entity\\\",\\r\\n      \\\"handle\\\":
+        \\\"NICS-administrative\\\",\\r\\n      \\\"roles\\\": [\\r\\n        \\\"administrative\\\"\\r\\n
+        \     ],\\r\\n      \\\"vcardArray\\\": [\\r\\n        \\\"vcard\\\",\\r\\n
+        \       [\\r\\n          [\\r\\n            \\\"version\\\",\\r\\n            {},\\r\\n
+        \           \\\"text\\\",\\r\\n            \\\"4.0\\\"\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"fn\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"org\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"adr\\\",\\r\\n            {\\r\\n              \\\"cc\\\":
+        \\\"TR\\\"\\r\\n            },\\r\\n            \\\"text\\\",\\r\\n            [\\r\\n
+        \             \\\"\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n
+        \             \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"\\\"\\r\\n            ]\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"contact-uri\\\",\\r\\n            {},\\r\\n
+        \           \\\"uri\\\",\\r\\n            \\\"https://whoisshelter.nicproxy.com/?d=BERBERSEPETI.COM\\\"\\r\\n
+        \         ]\\r\\n        ]\\r\\n      ],\\r\\n      \\\"remarks\\\": [\\r\\n
+        \       {\\r\\n          \\\"description\\\": [\\r\\n            \\\"Some
+        of the data in this object has been removed\\\"\\r\\n          ],\\r\\n          \\\"title\\\":
+        \\\"REDACTED FOR PRIVACY\\\",\\r\\n          \\\"type\\\": \\\"object redacted
+        due to authorization\\\"\\r\\n        }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n
+        \     \\\"objectClassName\\\": \\\"entity\\\",\\r\\n      \\\"handle\\\":
+        \\\"NICS-technical\\\",\\r\\n      \\\"roles\\\": [\\r\\n        \\\"technical\\\"\\r\\n
+        \     ],\\r\\n      \\\"vcardArray\\\": [\\r\\n        \\\"vcard\\\",\\r\\n
+        \       [\\r\\n          [\\r\\n            \\\"version\\\",\\r\\n            {},\\r\\n
+        \           \\\"text\\\",\\r\\n            \\\"4.0\\\"\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"fn\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"org\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"adr\\\",\\r\\n            {\\r\\n              \\\"cc\\\":
+        \\\"TR\\\"\\r\\n            },\\r\\n            \\\"text\\\",\\r\\n            [\\r\\n
+        \             \\\"\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n
+        \             \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"\\\"\\r\\n            ]\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"contact-uri\\\",\\r\\n            {},\\r\\n
+        \           \\\"uri\\\",\\r\\n            \\\"https://whoisshelter.nicproxy.com/?d=BERBERSEPETI.COM\\\"\\r\\n
+        \         ]\\r\\n        ]\\r\\n      ],\\r\\n      \\\"remarks\\\": [\\r\\n
+        \       {\\r\\n          \\\"description\\\": [\\r\\n            \\\"Some
+        of the data in this object has been removed\\\"\\r\\n          ],\\r\\n          \\\"title\\\":
+        \\\"REDACTED FOR PRIVACY\\\",\\r\\n          \\\"type\\\": \\\"object redacted
+        due to authorization\\\"\\r\\n        }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n
+        \     \\\"objectClassName\\\": \\\"entity\\\",\\r\\n      \\\"handle\\\":
+        \\\"NICS-billing\\\",\\r\\n      \\\"roles\\\": [\\r\\n        \\\"billing\\\"\\r\\n
+        \     ],\\r\\n      \\\"vcardArray\\\": [\\r\\n        \\\"vcard\\\",\\r\\n
+        \       [\\r\\n          [\\r\\n            \\\"version\\\",\\r\\n            {},\\r\\n
+        \           \\\"text\\\",\\r\\n            \\\"4.0\\\"\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"fn\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"org\\\",\\r\\n            {},\\r\\n            \\\"text\\\",\\r\\n
+        \           \\\"REDACTED FOR PRIVACY\\\"\\r\\n          ],\\r\\n          [\\r\\n
+        \           \\\"adr\\\",\\r\\n            {\\r\\n              \\\"cc\\\":
+        \\\"TR\\\"\\r\\n            },\\r\\n            \\\"text\\\",\\r\\n            [\\r\\n
+        \             \\\"\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n
+        \             \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"REDACTED FOR PRIVACY\\\",\\r\\n              \\\"REDACTED
+        FOR PRIVACY\\\",\\r\\n              \\\"\\\"\\r\\n            ]\\r\\n          ],\\r\\n
+        \         [\\r\\n            \\\"contact-uri\\\",\\r\\n            {},\\r\\n
+        \           \\\"uri\\\",\\r\\n            \\\"https://whoisshelter.nicproxy.com/?d=BERBERSEPETI.COM\\\"\\r\\n
+        \         ]\\r\\n        ]\\r\\n      ],\\r\\n      \\\"remarks\\\": [\\r\\n
+        \       {\\r\\n          \\\"description\\\": [\\r\\n            \\\"Some
+        of the data in this object has been removed\\\"\\r\\n          ],\\r\\n          \\\"title\\\":
+        \\\"REDACTED FOR PRIVACY\\\",\\r\\n          \\\"type\\\": \\\"object redacted
+        due to authorization\\\"\\r\\n        }\\r\\n      ]\\r\\n    }\\r\\n  ],\\r\\n
+        \ \\\"events\\\": [\\r\\n    {\\r\\n      \\\"eventAction\\\": \\\"registration\\\",\\r\\n
+        \     \\\"eventDate\\\": \\\"2023-10-10T14:20:03.0000000Z\\\"\\r\\n    },\\r\\n
+        \   {\\r\\n      \\\"eventAction\\\": \\\"expiration\\\",\\r\\n      \\\"eventDate\\\":
+        \\\"2026-10-10T14:20:03.0000000Z\\\"\\r\\n    },\\r\\n    {\\r\\n      \\\"eventAction\\\":
+        \\\"last changed\\\",\\r\\n      \\\"eventDate\\\": \\\"2025-10-13T16:42:33.1900000Z\\\"\\r\\n
+        \   },\\r\\n    {\\r\\n      \\\"eventAction\\\": \\\"last update of RDAP
+        database\\\",\\r\\n      \\\"eventDate\\\": \\\"2026-03-17T13:06:03.4335636Z\\\"\\r\\n
+        \   }\\r\\n  ],\\r\\n  \\\"secureDNS\\\": {\\r\\n    \\\"delegationSigned\\\":
+        false\\r\\n  },\\r\\n  \\\"nameservers\\\": [\\r\\n    {\\r\\n      \\\"objectClassName\\\":
+        \\\"nameserver\\\",\\r\\n      \\\"ldhName\\\": \\\"NS1.NATROHOST.COM\\\",\\r\\n
+        \     \\\"status\\\": [\\r\\n        \\\"active\\\"\\r\\n      ]\\r\\n    },\\r\\n
+        \   {\\r\\n      \\\"objectClassName\\\": \\\"nameserver\\\",\\r\\n      \\\"ldhName\\\":
+        \\\"NS2.NATROHOST.COM\\\",\\r\\n      \\\"status\\\": [\\r\\n        \\\"active\\\"\\r\\n
+        \     ]\\r\\n    }\\r\\n  ],\\r\\n  \\\"rdapConformance\\\": [\\r\\n    \\\"rdap_level_0\\\",\\r\\n
+        \   \\\"icann_rdap_technical_implementation_guide_1\\\",\\r\\n    \\\"icann_rdap_response_profile_1\\\"\\r\\n
+        \ ],\\r\\n  \\\"notices\\\": [\\r\\n    {\\r\\n      \\\"title\\\": \\\"Status
+        Codes\\\",\\r\\n      \\\"description\\\": [\\r\\n        \\\"For more information
+        on domain status codes, please visit https://icann.org/epp\\\"\\r\\n      ],\\r\\n
+        \     \\\"links\\\": [\\r\\n        {\\r\\n          \\\"value\\\": \\\"https://icann.org/epp\\\",\\r\\n
+        \         \\\"rel\\\": \\\"glossary\\\",\\r\\n          \\\"href\\\": \\\"https://icann.org/epp\\\"\\r\\n
+        \       }\\r\\n      ]\\r\\n    },\\r\\n    {\\r\\n      \\\"title\\\": \\\"RDDS
+        Inaccuracy Complaint Form\\\",\\r\\n      \\\"description\\\": [\\r\\n        \\\"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\\\"\\r\\n
+        \     ],\\r\\n      \\\"links\\\": [\\r\\n        {\\r\\n          \\\"value\\\":
+        \\\"https://icann.org/wicf\\\",\\r\\n          \\\"rel\\\": \\\"help\\\",\\r\\n
+        \         \\\"href\\\": \\\"https://icann.org/wicf\\\"\\r\\n        }\\r\\n
+        \     ]\\r\\n    }\\r\\n  ]\\r\\n}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-03-17T13:06:01Z\",\"url\":\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"contacts\":[{\"city\":\"REDACTED
+        FOR PRIVACY\",\"country\":\"TR\",\"email\":\"REDACTED FOR PRIVACY\",\"handle\":\"NICS-registrant\",\"name\":\"REDACTED
+        FOR PRIVACY\",\"org\":\"REDACTED FOR PRIVACY\",\"postal\":\"REDACTED FOR PRIVACY\",\"region\":\"REDACTED
+        FOR PRIVACY\",\"roles\":[\"registrant\"],\"street\":\"REDACTED FOR PRIVACY\"},{\"city\":\"REDACTED
+        FOR PRIVACY\",\"country\":\"TR\",\"email\":\"REDACTED FOR PRIVACY\",\"handle\":\"NICS-administrative\",\"name\":\"REDACTED
+        FOR PRIVACY\",\"org\":\"REDACTED FOR PRIVACY\",\"postal\":\"REDACTED FOR PRIVACY\",\"region\":\"REDACTED
+        FOR PRIVACY\",\"roles\":[\"administrative\"],\"street\":\"REDACTED FOR PRIVACY\"},{\"city\":\"REDACTED
+        FOR PRIVACY\",\"country\":\"TR\",\"email\":\"REDACTED FOR PRIVACY\",\"handle\":\"NICS-technical\",\"name\":\"REDACTED
+        FOR PRIVACY\",\"org\":\"REDACTED FOR PRIVACY\",\"postal\":\"REDACTED FOR PRIVACY\",\"region\":\"REDACTED
+        FOR PRIVACY\",\"roles\":[\"technical\"],\"street\":\"REDACTED FOR PRIVACY\"},{\"city\":\"REDACTED
+        FOR PRIVACY\",\"country\":\"TR\",\"email\":\"REDACTED FOR PRIVACY\",\"handle\":\"NICS-billing\",\"name\":\"REDACTED
+        FOR PRIVACY\",\"org\":\"REDACTED FOR PRIVACY\",\"postal\":\"REDACTED FOR PRIVACY\",\"region\":\"REDACTED
+        FOR PRIVACY\",\"roles\":[\"billing\"],\"street\":\"REDACTED FOR PRIVACY\"}],\"creation_date\":\"2023-10-10T14:20:03+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"BERBERSEPETI.COM\",\"domain_statuses\":[\"active\"],\"email_domains\":[\"nicproxy.com\"],\"emails\":[\"abuse@nicproxy.com\",\"redacted
+        for privacy\"],\"expiration_date\":\"2026-10-10T14:20:03+00:00\",\"handle\":\"2820684178_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-10-13T16:42:33.190000+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/BERBERSEPETI.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\",\"rel\":\"self\"}],\"nameservers\":[\"NS1.NATROHOST.COM\",\"NS2.NATROHOST.COM\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@nicproxy.com\",\"name\":\"NICS
+        Telekomunikasyon A.S.\",\"phone\":\"tel:+90.2122132963\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1454\",\"name\":\"NICS
+        Telekomunikasyon A.S.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.nicproxy.com/domain/BERBERSEPETI.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/berbersepeti.com\"}}\n{\"timestamp\":\"2026-03-17T13:06:05Z\",\"domain\":\"bodegasgirolpareja.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-03-17T13:05:58Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"1867836352_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"BODEGASGIROLPAREJA.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/BODEGASGIROLPAREJA.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/BODEGASGIROLPAREJA.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.dinahosting.com\\\\/domain\\\\/BODEGASGIROLPAREJA.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.dinahosting.com\\\\/domain\\\\/BODEGASGIROLPAREJA.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        delete prohibited\\\",\\\"client transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1262\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.dinahosting.com\\\\/dominios\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.dinahosting.com\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1262\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Dinahosting
+        s.l.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+34.981040200\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse-domains@dinahosting.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-07-21T20:32:07Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-07-21T20:32:07Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-06-30T08:58:38Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:05:45Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS.DINAHOSTING.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2.DINAHOSTING.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS3.DINAHOSTING.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS4.DINAHOSTING.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-03-17T13:05:58Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/bodegasgirolpareja.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\",\\\"redacted\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of use\\\",\\\"description\\\":[\\\"Service subject to Terms of Use\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"type\\\":\\\"text/html\\\",\\\"href\\\":\\\"https://rdap.dinahosting.com/terms-of-service\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"help\\\",\\\"type\\\":\\\"text/html\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"glossary\\\",\\\"type\\\":\\\"text/html\\\",\\\"href\\\":\\\"https://icann.org/epp\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"ldhName\\\":\\\"bodegasgirolpareja.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns.dinahosting.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.dinahosting.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns3.dinahosting.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns4.dinahosting.com\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"ES\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"Badajoz\\\",\\\"\\\",\\\"\\\"]],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://dinahosting.com/dominios/contacto-whois/dominio/bodegasgirolpareja.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://dinahosting.com/dominios/contacto-whois/dominio/bodegasgirolpareja.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1262\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Dinahosting
+        S.L. \\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1262\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1262\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Dinahosting
+        S.L.\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+34.981040200\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@dinahosting.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.dinahosting.com/\\\",\\\"rel\\\":\\\"about\\\",\\\"type\\\":\\\"text/html\\\",\\\"href\\\":\\\"https://rdap.dinahosting.com/\\\"}]}],\\\"status\\\":[\\\"delete
+        prohibited\\\",\\\"transfer prohibited\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"href\\\":\\\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\\\"}],\\\"redacted\\\":[{\\\"name\\\":{\\\"type\\\":\\\"Registry
+        Domain ID\\\"},\\\"prePath\\\":\\\"$.handle\\\",\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registry
+        Registrant ID\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].handle\\\",\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Name\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Organization\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='org')]\\\",\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Street\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][2]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        City\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][3]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Postal Code\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][:5]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Email\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='email')]\\\",\\\"replacementPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='contact-uri')]\\\",\\\"method\\\":\\\"replacementValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Phone\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[1]=='voice')]\\\",\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registry
+        Tech ID\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='technical')].handle\\\",\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Name\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Email\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='email')]\\\",\\\"replacementPath\\\":\\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='contact-uri')]\\\",\\\"method\\\":\\\"replacementValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Phone\\\"},\\\"prePath\\\":\\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[1]=='voice')]\\\",\\\"method\\\":\\\"removal\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2014-07-21T20:32:07Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-06-30T10:58:38Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2026-07-21T20:32:07Z\\\"},{\\\"eventAction\\\":\\\"transfer\\\",\\\"eventDate\\\":\\\"2022-03-27T04:18:08Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T14:06:01Z\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-03-17T13:05:59Z\",\"url\":\"https://rdap.dinahosting.com/domain/BODEGASGIROLPAREJA.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\",\"redacted\"],\"contacts\":[{\"city\":\"\",\"country\":\"ES\",\"email\":\"https://dinahosting.com/dominios/contacto-whois/dominio/bodegasgirolpareja.com\",\"name\":\"\",\"postal\":\"\",\"region\":\"Badajoz\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"email\":\"https://dinahosting.com/dominios/contacto-whois/dominio/bodegasgirolpareja.com\",\"name\":\"\",\"roles\":[\"technical\"]}],\"creation_date\":\"2014-07-21T20:32:07+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"bodegasgirolpareja.com\",\"domain_statuses\":[\"delete
+        prohibited\",\"transfer prohibited\"],\"email_domains\":[\"dinahosting.com\"],\"emails\":[\"abuse-domains@dinahosting.com\",\"abuse@dinahosting.com\",\"https://dinahosting.com/dominios/contacto-whois/dominio/bodegasgirolpareja.com\"],\"expiration_date\":\"2026-07-21T20:32:07+00:00\",\"handle\":\"1867836352_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-06-30T10:58:38+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/BODEGASGIROLPAREJA.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.dinahosting.com/domain/BODEGASGIROLPAREJA.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.dinahosting.com/domain/bodegasgirolpareja.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns.dinahosting.com\",\"ns2.dinahosting.com\",\"ns3.dinahosting.com\",\"ns4.dinahosting.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@dinahosting.com\",\"handle\":\"1262\",\"name\":\"Dinahosting
+        S.L.\",\"phone\":\"tel:+34.981040200\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1262\",\"name\":\"Dinahosting
+        S.L. \"},\"unclassified_emails\":[\"abuse-domains@dinahosting.com\"]},\"registrar_request_url\":\"https://rdap.dinahosting.com/domain/BODEGASGIROLPAREJA.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/bodegasgirolpareja.com\"}}\n{\"timestamp\":\"2026-03-17T13:06:05Z\",\"domain\":\"oomerror.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-03-17T13:06:01Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"3028220655_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"OOMERROR.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/OOMERROR.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/OOMERROR.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.godaddy.com\\\\/v1\\\\/domain\\\\/OOMERROR.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.godaddy.com\\\\/v1\\\\/domain\\\\/OOMERROR.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        delete prohibited\\\",\\\"client renew prohibited\\\",\\\"client transfer
+        prohibited\\\",\\\"client update prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.godaddy.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.godaddy.com\\\\/v1\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"146\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:480-624-2505\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2025-10-12T00:12:06Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2028-10-12T00:12:06Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-10-12T00:12:06Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:05:45Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS49.DOMAINCONTROL.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS50.DOMAINCONTROL.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/oomerror.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/oomerror.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-03-17T13:06:01Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/oomerror.com\"},{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"3028220655_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"oomerror.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns49.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-10-11T17:12:07Z\\\"}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns50.domaincontrol.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-10-11T17:12:07Z\\\"}]}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/oomerror.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/domain/oomerror.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"oomerrorcom-reg\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"kind\\\",{},\\\"text\\\",\\\"org\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Registration
+        Private\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Domains
+        By Proxy, LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\\\",\\\"Tempe\\\",\\\"Arizona\\\",\\\"85281\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.4806242599\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.godaddy.com/whois/results.aspx?domain=oomerror.com\\\\u0026action=contactDomainOwner\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-10-11T17:11:39Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"146\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GoDaddy.com,
+        LLC\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"2155
+        E Godaddy Way\\\",\\\"Tempe\\\",\\\"AZ\\\",\\\"85284\\\",\\\"\\\"]],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"146\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.480-624-2505\\\"],[\\\"email\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"abuse@godaddy.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://rdap.godaddy.com/v1/\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.godaddy.com\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:06:04Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2028-10-11T19:12:06Z\\\"},{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2025-10-11T19:12:06Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-10-11T19:12:06Z\\\"}],\\\"status\\\":[\\\"delete
+        prohibited\\\",\\\"transfer prohibited\\\",\\\"renew prohibited\\\",\\\"update
+        prohibited\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status Codes\\\",\\\"description\\\":[\\\"For
+        more information on domain status codes, please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/oomerror.com\\\",\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/oomerror.com\\\",\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree to
+        these Universal Terms of Service\\\",\\\"and limitations of warranty. In particular,
+        you agree not to use this\\\",\\\"data to allow, enable, or otherwise make
+        possible, dissemination or\\\",\\\"collection of this data, in part or in
+        its entirety, for any purpose,\\\",\\\"such as the transmission of unsolicited
+        advertising and solicitations of\\\",\\\"any kind, including spam. You further
+        agree not to use this data to enable\\\",\\\"high volume, automated or robotic
+        electronic processes designed to collect\\\",\\\"or compile this data for
+        any purpose, including mining this data for your\\\",\\\"own personal or commercial
+        purposes, or use this data in any way that violates\\\",\\\"applicable laws
+        and regulations.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.godaddy.com/v1/domain/oomerror.com\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.godaddy.com/agreements/showdoc?pageid=5403\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"port43\\\":\\\"whois.godaddy.com\\\"}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-03-17T13:06:02Z\",\"url\":\"https://rdap.godaddy.com/v1/domain/OOMERROR.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"Tempe\",\"country\":\"US\",\"email\":\"https://www.godaddy.com/whois/results.aspx?domain=oomerror.com\\u0026action=contactDomainOwner\",\"handle\":\"oomerrorcom-reg\",\"name\":\"Registration
+        Private\",\"org\":\"Domains By Proxy, LLC\",\"phone\":\"tel:+1.4806242599\",\"postal\":\"85281\",\"region\":\"Arizona\",\"roles\":[\"registrant\"],\"street\":\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\"}],\"creation_date\":\"2025-10-11T19:12:06+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"oomerror.com\",\"domain_statuses\":[\"delete
+        prohibited\",\"transfer prohibited\",\"renew prohibited\",\"update prohibited\"],\"email_domains\":[\"godaddy.com\"],\"emails\":[\"abuse@godaddy.com\",\"https://www.godaddy.com/whois/results.aspx?domain=oomerror.com\\u0026action=contactdomainowner\"],\"expiration_date\":\"2028-10-12T00:12:06+00:00\",\"handle\":\"3028220655_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-10-11T19:12:06+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/OOMERROR.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/OOMERROR.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.godaddy.com/v1/domain/oomerror.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns49.domaincontrol.com\",\"ns50.domaincontrol.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@godaddy.com\",\"name\":\"\",\"phone\":\"tel:+1.480-624-2505\",\"roles\":[\"abuse\"]}],\"iana_id\":\"146\",\"name\":\"GoDaddy.com,
+        LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.godaddy.com/v1/domain/OOMERROR.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/oomerror.com\"}}\n{\"timestamp\":\"2026-03-17T13:06:05Z\",\"domain\":\"puretintsolution.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-03-17T13:05:59Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2971054120_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"PURETINTSOLUTION.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/PURETINTSOLUTION.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/PURETINTSOLUTION.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdapserver.net\\\\/domain\\\\/PURETINTSOLUTION.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdapserver.net\\\\/domain\\\\/PURETINTSOLUTION.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"303\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.publicdomainregistry.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdapserver.net\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"303\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"PDR
+        Ltd. d\\\\/b\\\\/a PublicDomainRegistry.com\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.2013775952\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse-contact@publicdomainregistry.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2025-03-30T02:50:57Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2026-03-30T02:50:57Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-03-30T02:50:57Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:05:45Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS1.DNS-PARKING.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2.DNS-PARKING.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/puretintsolution.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/puretintsolution.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-03-17T13:05:59Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/puretintsolution.com\"},{\"data\":\"{\\\"handle\\\":\\\"2971054120_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"puretintsolution.com\\\",\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Domain
+        Admin\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Privacy
+        Protect, LLC (PrivacyProtect.org)\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",[\\\"\\\",\\\"\\\",\\\"10
+        Corporate Drive\\\"],\\\"Burlington\\\",\\\"MA\\\",\\\"01803\\\",\\\"\\\"]],[\\\"email\\\",{},\\\"text\\\",\\\"contact@privacyprotect.org\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.8022274003\\\"]]],\\\"handle\\\":\\\"PP-SP-001\\\",\\\"status\\\":[\\\"active\\\"],\\\"roles\\\":[\\\"registrant\\\"],\\\"objectClassName\\\":\\\"entity\\\",\\\"lang\\\":\\\"en\\\"},{\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Domain
+        Admin\\\"],[\\\"org\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",\\\"Privacy
+        Protect, LLC (PrivacyProtect.org)\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",[\\\"\\\",\\\"\\\",\\\"10
+        Corporate Drive\\\"],\\\"Burlington\\\",\\\"MA\\\",\\\"01803\\\",\\\"\\\"]],[\\\"email\\\",{},\\\"text\\\",\\\"contact@privacyprotect.org\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.8022274003\\\"]]],\\\"handle\\\":\\\"PP-SP-001\\\",\\\"status\\\":[\\\"active\\\"],\\\"roles\\\":[\\\"technical\\\",\\\"administrative\\\"],\\\"objectClassName\\\":\\\"entity\\\",\\\"lang\\\":\\\"en\\\"},{\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\\\"]]],\\\"handle\\\":\\\"303\\\",\\\"status\\\":[\\\"active\\\"],\\\"roles\\\":[\\\"registrar\\\"],\\\"entities\\\":[{\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"tel:+1.2013775952\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse-contact@publicdomainregistry.com\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\\\"]]],\\\"status\\\":[\\\"active\\\"],\\\"roles\\\":[\\\"abuse\\\"],\\\"objectClassName\\\":\\\"entity\\\",\\\"lang\\\":\\\"en\\\"}],\\\"links\\\":[{\\\"value\\\":\\\"https://rdapserver.net/\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://www.publicdomainregistry.com\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"303\\\"}],\\\"objectClassName\\\":\\\"entity\\\",\\\"lang\\\":\\\"en\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2025-03-30T02:50:54Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2026-03-30T02:50:57Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-05-30T00:05:13.978768Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:06:06.825Z\\\"}],\\\"notices\\\":[{\\\"title\\\":\\\"Data
+        Policy\\\",\\\"type\\\":\\\"object truncated due to authorization\\\",\\\"description\\\":[\\\"The
+        contact information for one or more entities associated with this domain has
+        been redacted in accordance with the entity's disclosure preferences.\\\"]},{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdapserver.net/domain/puretintsolution.com\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://rdapserver.net/terms-of-use/\\\"}],\\\"description\\\":[\\\"URL
+        for Terms of Use https://rdapserver.net/terms-of-use/\\\"]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdapserver.net/domain/puretintsolution.com\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\"}],\\\"description\\\":[\\\"For
+        more information on domain status codes, please visit https://icann.org/epp\\\"]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdapserver.net/domain/puretintsolution.com\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\"}],\\\"description\\\":[\\\"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\\\"]}],\\\"rdapConformance\\\":[\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"rdap_level_0\\\",\\\"redacted\\\"],\\\"objectClassName\\\":\\\"domain\\\",\\\"lang\\\":\\\"en\\\",\\\"nameservers\\\":[{\\\"ldhName\\\":\\\"ns1.dns-parking.com\\\",\\\"unicodeName\\\":\\\"ns1.dns-parking.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"objectClassName\\\":\\\"nameserver\\\",\\\"lang\\\":\\\"en\\\"},{\\\"ldhName\\\":\\\"ns2.dns-parking.com\\\",\\\"unicodeName\\\":\\\"ns2.dns-parking.com\\\",\\\"status\\\":[\\\"active\\\"],\\\"objectClassName\\\":\\\"nameserver\\\",\\\"lang\\\":\\\"en\\\"}],\\\"redacted\\\":[{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Email\\\"},\\\"reason\\\":{\\\"description\\\":\\\"Data redacted due to Privacy.\\\"},\\\"method\\\":\\\"replacementValue\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='email')][3]\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Email\\\"},\\\"reason\\\":{\\\"description\\\":\\\"Data redacted due to Privacy.\\\"},\\\"method\\\":\\\"replacementValue\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='technical')].vcardArray[1][?(@[0]=='email')][3]\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-03-17T13:06:00Z\",\"url\":\"https://rdapserver.net/domain/PURETINTSOLUTION.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"rdap_level_0\",\"redacted\"],\"contacts\":[{\"city\":\"Burlington\",\"country\":\"US\",\"email\":\"contact@privacyprotect.org\",\"handle\":\"PP-SP-001\",\"name\":\"Domain
+        Admin\",\"org\":\"Privacy Protect, LLC (PrivacyProtect.org)\",\"phone\":\"tel:+1.8022274003\",\"postal\":\"01803\",\"region\":\"MA\",\"roles\":[\"registrant\"],\"street\":\"10
+        Corporate Drive\"},{\"city\":\"Burlington\",\"country\":\"US\",\"email\":\"contact@privacyprotect.org\",\"handle\":\"PP-SP-001\",\"name\":\"Domain
+        Admin\",\"org\":\"Privacy Protect, LLC (PrivacyProtect.org)\",\"phone\":\"tel:+1.8022274003\",\"postal\":\"01803\",\"region\":\"MA\",\"roles\":[\"technical\",\"administrative\"],\"street\":\"10
+        Corporate Drive\"}],\"creation_date\":\"2025-03-30T02:50:54+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"puretintsolution.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"privacyprotect.org\",\"publicdomainregistry.com\"],\"emails\":[\"abuse-contact@publicdomainregistry.com\",\"contact@privacyprotect.org\"],\"expiration_date\":\"2026-03-30T02:50:57+00:00\",\"handle\":\"2971054120_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-05-30T00:05:13.978768+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/PURETINTSOLUTION.COM\",\"rel\":\"self\"},{\"href\":\"https://rdapserver.net/domain/PURETINTSOLUTION.COM\",\"rel\":\"related\"}],\"nameservers\":[\"ns1.dns-parking.com\",\"ns2.dns-parking.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse-contact@publicdomainregistry.com\",\"name\":\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\",\"org\":\"PDR Ltd. d/b/a PublicDomainRegistry.com\",\"phone\":\"tel:+1.2013775952\",\"roles\":[\"abuse\"]}],\"iana_id\":\"303\",\"name\":\"PDR
+        Ltd. d/b/a PublicDomainRegistry.com\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdapserver.net/domain/PURETINTSOLUTION.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/puretintsolution.com\"}}\n{\"timestamp\":\"2026-03-17T13:06:05Z\",\"domain\":\"kendellphoto.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-03-17T13:05:53Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2086506723_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"KENDELLPHOTO.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/KENDELLPHOTO.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/KENDELLPHOTO.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/domain\\\\/KENDELLPHOTO.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/domain\\\\/KENDELLPHOTO.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"886\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.domain.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"886\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Domain.com
+        - Network Solutions, LLC\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.8003337680\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"domain.operations@web.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2017-01-01T06:21:09Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-01-01T06:21:09Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2025-12-17T12:05:03Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-03-17T13:05:45Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS1.IPOWER.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2.IPOWER.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/kendellphoto.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/kendellphoto.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-03-17T13:05:53Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/kendellphoto.com\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"contacts\":[],\"creation_date\":\"2017-01-01T06:21:09+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"KENDELLPHOTO.COM\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"web.com\"],\"emails\":[\"domain.operations@web.com\"],\"expiration_date\":\"2027-01-01T06:21:09+00:00\",\"handle\":\"2086506723_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2025-12-17T12:05:03+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/KENDELLPHOTO.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.snapnames.com/rdap/domain/KENDELLPHOTO.COM\",\"rel\":\"related\"}],\"nameservers\":[\"NS1.IPOWER.COM\",\"NS2.IPOWER.COM\"],\"registrar\":{\"contacts\":[{\"email\":\"domain.operations@web.com\",\"name\":\"\",\"phone\":\"tel:+1.8003337680\",\"roles\":[\"abuse\"]}],\"iana_id\":\"886\",\"name\":\"Domain.com
+        - Network Solutions, LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/kendellphoto.com\"}}\n"
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 17 Mar 2026 13:06:06 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=2von7oe28lsk04ia4de6qtrbuvicfhr15hua71fb42c395m6jhpuho3a3j3a9tmgbmckqovspdnoicee7g4n471b2mcij9vvk4gr2ij;
+        expires=Thu, 16-Apr-2026 13:06:06 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c28bd7cda40b4f149dcd2c6ee60494ea; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - 2ed64ef7-2409-4123-b6e4-adce40cfb667
+    status:
+      code: 200
+      message: OK
 version: 1

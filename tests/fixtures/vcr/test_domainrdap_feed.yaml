@@ -970,4 +970,190 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.7.3&top=2
+  response:
+    body:
+      string: '{"timestamp":"2026-03-17T13:06:04Z","domain":"aglogi.com","raw_record":{"first_request_timestamp":"2026-03-17T13:05:58Z","requests":[{"data":"  \n{\r\n  \"rdapConformance\":
+        [\r\n    \"rdap_level_0\",\r\n    \"icann_rdap_technical_implementation_guide_1\",\r\n    \"icann_rdap_response_profile_1\",\r\n    \"redacted\"\r\n  ],\r\n  \"objectClassName\":
+        \"domain\",\r\n  \"handle\": \"2994366008_DOMAIN_COM-VRSN\",\r\n  \"ldhName\":
+        \"aglogi.com\",\r\n  \"unicodeName\": \"aglogi.com\",\r\n  \"status\": [\"active\"],\r\n  \"port43\":
+        \"whois.inames.co.kr\",\r\n  \"links\": [\r\n    {\r\n      \"value\": \"https://rdap.inames.io.kr/rdap/domain/aglogi.com\",\r\n      \"rel\":
+        \"self\",\r\n      \"href\": \"https://rdap.inames.io.kr/rdap/domain/aglogi.com\",\r\n      \"type\":
+        \"application/rdap+json\"\r\n    }\r\n  ],\r\n  \"events\": [{\"eventAction\":\"expiration\",\"eventDate\":\"2028-06-24T04:41:29Z\"},{\"eventAction\":\"registrar
+        expiration\",\"eventDate\":\"2028-06-24T00:00:00+00:00\"},{\"eventAction\":\"registration\",\"eventDate\":\"2025-06-24T00:00:00+00:00\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-07-02T00:00:00+00:00\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-03-17T13:06:03+00:00\"}],\r\n  \"nameservers\":
+        [{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns1.uhost.co.kr\",\"unicodeName\":\"ns1.uhost.co.kr\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns2.uhost.co.kr\",\"unicodeName\":\"ns2.uhost.co.kr\"}],\r\n  \"secureDNS\":
+        { \"delegationSigned\": false },\r\n  \"entities\": [\r\n    {\r\n      \"objectClassName\":
+        \"entity\",\r\n      \"handle\": \"444\",\r\n      \"roles\": [\"registrar\"],\r\n      \"publicIds\":
+        [\r\n        { \"type\": \"IANA Registrar ID\", \"identifier\": \"444\" }\r\n      ],\r\n      \"vcardArray\":
+        [\r\n        \"vcard\",\r\n        [\r\n          [\"version\", {}, \"text\",
+        \"4.0\"],\r\n          [\"fn\", {}, \"text\", \"Inames Co., Ltd.\"]\r\n        ]\r\n      ],\r\n      \"links\":
+        [\r\n        {\r\n          \"value\": \"https://rdap.inames.io.kr/rdap/\",\r\n          \"rel\":
+        \"about\",\r\n          \"href\": \"https://www.inames.co.kr\",\r\n          \"type\":
+        \"text/html\"\r\n        }\r\n      ],\r\n      \"entities\": [\r\n        {\r\n          \"objectClassName\":
+        \"entity\",\r\n          \"roles\": [\"abuse\"],\r\n          \"vcardArray\":
+        [\r\n            \"vcard\",\r\n            [\r\n              [\"version\",
+        {}, \"text\", \"4.0\"],\r\n              [\"fn\", {}, \"text\", \"Inames Co.,
+        Ltd. Abuse Contact\"],\r\n              [\"tel\", { \"type\": \"voice\" },
+        \"text\", \"+82-2-1588-5829\"],\r\n              [\"email\", { \"type\": \"work\"
+        }, \"text\", \"abuse@inames.co.kr\"]\r\n            ]\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"objectClassName\":
+        \"entity\",\r\n      \"roles\": [\"registrant\"],\r\n      \"vcardArray\":
+        [\r\n        \"vcard\",\r\n        [\r\n          [\"version\", {}, \"text\",
+        \"4.0\"],\r\n          [\"fn\", {}, \"text\", \"\"],\r\n          [\"adr\",
+        {\"cc\": \"KR\"}, \"text\", [\"\", \"\", \"\", \"\", \"\", \"\", \"\"]],\r\n          [\"contact-uri\",
+        {}, \"uri\", \"https://rdap.inames.io.kr/contact/registrant/INAMES444R13500000043-VRSN\"]\r\n        ]\r\n      ]\r\n    }\r\n  ],\r\n  \"redacted\":
+        [\r\n    {\r\n      \"name\": { \"type\": \"Registrant Name\" },\r\n      \"pathLang\":
+        \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][3]\",\r\n      \"method\":
+        \"emptyValue\",\r\n      \"reason\": { \"description\": \"Redacted for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registry Registrant
+        ID\" },\r\n      \"pathLang\": \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].handle\",\r\n      \"method\":
+        \"removal\",\r\n      \"reason\": { \"description\": \"Removed for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant Organization\"
+        },\r\n      \"pathLang\": \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\r\n      \"method\":
+        \"removal\",\r\n      \"reason\": { \"description\": \"Removed for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant Street\"
+        },\r\n      \"pathLang\": \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\r\n      \"method\":
+        \"emptyValue\",\r\n      \"reason\": { \"description\": \"Redacted for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant City\" },\r\n      \"pathLang\":
+        \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\r\n      \"method\":
+        \"emptyValue\",\r\n      \"reason\": { \"description\": \"Redacted for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant Postal Code\"
+        },\r\n      \"pathLang\": \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\r\n      \"method\":
+        \"emptyValue\",\r\n      \"reason\": { \"description\": \"Redacted for privacy.\"
+        }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant Email\" },\r\n      \"pathLang\":
+        \"jsonpath\",\r\n      \"replacementPath\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''contact-uri'')][3]\",\r\n      \"method\":
+        \"replacementValue\",\r\n      \"reason\": { \"description\": \"Use contact-uri
+        per policy.\" }\r\n    },\r\n    {\r\n      \"name\": { \"type\": \"Registrant
+        Phone\" },\r\n      \"pathLang\": \"jsonpath\",\r\n      \"path\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\r\n      \"method\":
+        \"removal\",\r\n      \"reason\": { \"description\": \"Removed for privacy.\"
+        }\r\n    }\r\n  ],\r\n  \"notices\": [\r\n    {\r\n      \"title\": \"Terms
+        of Use\",\r\n      \"description\": [\r\n        \"The data in this RDAP database
+        is provided for information purposes only, and may not be used for any purpose
+        other than accessing registration data.\"\r\n      ],\r\n      \"links\":
+        [\r\n        {\r\n          \"value\": \"https://rdap.inames.io.kr/rdap/domain/aglogi.com\",\r\n          \"href\":
+        \"https://rdap.inames.io.kr/terms\",\r\n          \"rel\": \"terms-of-service\",\r\n          \"type\":
+        \"text/html\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"title\":
+        \"Status Codes\",\r\n      \"description\": [\r\n        \"For more information
+        on domain status codes, please visit https://icann.org/epp\"\r\n      ],\r\n      \"links\":
+        [\r\n        {\r\n          \"value\": \"https://rdap.inames.io.kr/rdap/domain/aglogi.com\",\r\n          \"href\":
+        \"https://icann.org/epp\",\r\n          \"rel\": \"glossary\",\r\n          \"type\":
+        \"text/html\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"title\":
+        \"RDDS Inaccuracy Complaint Form\",\r\n      \"description\": [\r\n        \"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\"\r\n      ],\r\n      \"links\":
+        [\r\n        {\r\n          \"value\": \"https://rdap.inames.io.kr/rdap/domain/aglogi.com\",\r\n          \"href\":
+        \"https://icann.org/wicf\",\r\n          \"rel\": \"help\",\r\n          \"type\":
+        \"text/html\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"lang\": \"en-US\"\r\n}","source_type":"registrar","timestamp":"2026-03-17T13:06:00Z","url":"https://rdap.inames.io.kr/rdap/domain/AGLOGI.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_technical_implementation_guide_1","icann_rdap_response_profile_1","redacted"],"contacts":[{"city":"","country":"KR","email":"https://rdap.inames.io.kr/contact/registrant/INAMES444R13500000043-VRSN","name":"","postal":"","region":"","roles":["registrant"],"street":""}],"creation_date":"2025-06-24T00:00:00+00:00","dnssec":{"signed":false},"domain":"aglogi.com","domain_statuses":["active"],"email_domains":["inames.co.kr"],"emails":["abuse@inames.co.kr","https://rdap.inames.io.kr/contact/registrant/inames444r13500000043-vrsn"],"expiration_date":"2028-06-24T04:41:29+00:00","handle":"2994366008_DOMAIN_COM-VRSN","last_changed_date":"2025-07-02T00:00:00+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/AGLOGI.COM","rel":"self"},{"href":"https://rdap.inames.io.kr/rdap/domain/AGLOGI.COM","rel":"related"},{"href":"https://rdap.inames.io.kr/rdap/domain/aglogi.com","rel":"self"}],"nameservers":["ns1.uhost.co.kr","ns2.uhost.co.kr"],"registrar":{"contacts":[{"email":"abuse@inames.co.kr","name":"Inames
+        Co., Ltd. Abuse Contact","phone":"+82-2-1588-5829","roles":["abuse"]}],"iana_id":"444","name":"Inames
+        Co., Ltd."},"unclassified_emails":[]},"registrar_request_url":"https://rdap.inames.io.kr/rdap/domain/AGLOGI.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/aglogi.com"}}
+
+        {"timestamp":"2026-03-17T13:06:04Z","domain":"londonice.co.uk","raw_record":{"first_request_timestamp":"2026-03-17T13:05:58Z","requests":[{"data":"{\"rdapConformance\":[\"redacted\",\"rdap_level_0\"],\"objectClassName\":\"domain\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/londonice.co.uk\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/domain/londonice.co.uk\",\"type\":\"application/rdap+json\"}],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"The Registry Operator, offers this Registration
+        Data Access Protocol (RDAP) service and provides access to the records in
+        the RDAP database for information purposes only, to assist you in obtaining
+        information about the registration records of existing domain names. The stored
+        information in the RDAP database is provided as is. We do not guarantee its
+        accuracy or completeness, and cannot be held liable if the stored information
+        in the RDAP database is wrong, incomplete, or inaccurate in any way. By querying
+        the RDAP database in any way, you agree that you will not use this data: (i)
+        to allow, enable or otherwise support the transmission of unsolicited, commercial
+        advertising or other solicitations in any form or by any means; (ii) to enable
+        high volume, automated, electronic processes that query or send data to the
+        Registry Operator or any registrar or registrant; (iii) for target advertising;
+        (iv) to cause nuisance to registrants by sending (by any means) messages to
+        or contacting them; (v) to violate any law, rule, regulation or statute; and/or
+        (vi) in violation of applicable data and privacy protection acts. You are
+        explicitly prohibited from extracting, copying and/or using or re-using in
+        any form and by any means (electronically or not) all or part (quantitatively
+        or qualitatively) of the contents of the RDAP database without prior and explicit
+        permission from the Registry Operator. Any copying or transmission of data
+        for commercial purposes violates this prohibition. You agree that we can take
+        measures to limit the use of the RDAP service to protect the privacy of registrants
+        or the integrity of the database. We reserve the right to make changes to
+        this website, the RDAP service, and these Terms and Conditions at any time
+        without prior notice to you. You should review these Terms and Conditions
+        each time you access or use the RDAP database and the RDAP service to learn
+        of any changes. If you do not agree to the changes we have made, your only
+        remedy is to stop your use of the RDAP database and the RDAP service. By executing
+        a query, in any means whatsoever, you agree to these Terms of Service.\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/londonice.co.uk\",\"rel\":\"terms-of-service\",\"href\":\"https://nominet.uk/rdap-tos\",\"type\":\"text/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/londonice.co.uk\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the Nominet WHOIS data
+        complaint process: https://www.nominet.uk/complaints/#complaining-about-incorrect-whois-data\"],\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/domain/londonice.co.uk\",\"rel\":\"help\",\"href\":\"https://www.nominet.uk/complaints/#complaining-about-incorrect-whois-data\",\"type\":\"text/html\"}]}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"PDR-IN\",\"eventDate\":\"2013-10-12T12:27:08Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2025-10-13T09:50:13.52671Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2027-10-12T12:27:08Z\"},{\"eventAction\":\"transfer\",\"eventDate\":\"2019-09-22T17:44:15Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-03-17T13:06:00.525Z\"}],\"status\":[\"client
+        update prohibited\",\"client delete prohibited\",\"client renew prohibited\",\"client
+        transfer prohibited\"],\"handle\":\"D_54024385-UK\",\"ldhName\":\"londonice.co.uk\",\"unicodeName\":\"londonice.co.uk\",\"secureDNS\":{\"delegationSigned\":false,\"maxSigLife\":3024000},\"entities\":[{\"objectClassName\":\"entity\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/entity/GODADDY\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/entity/GODADDY\",\"type\":\"application/rdap+json\"}],\"handle\":\"GODADDY\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC.\"],[\"tel\",{\"type\":\"voice\"},\"text\",\"020-7084-1810\"],[\"url\",{},\"uri\",\"http://uk.godaddy.com\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"Registry
+        Identifier\",\"identifier\":\"GODADDY\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Abuse
+        contact\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.4806242505\"],[\"email\",{},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"abuse\"]}]},{\"objectClassName\":\"entity\",\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"Some
+        of the data in this object has been removed\"]},{\"title\":\"EMAIL REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"This
+        data is not generally available, if you have legitimate reason to request
+        access please review Nominets data release process.\"]},{\"title\":\"Data
+        Quality\",\"description\":[\"Name validated.\",\"Address validated.\",\"Nominet
+        responsible for validation.\"]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-07-26T00:49:47Z\"}],\"status\":[\"validated\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"email\",{},\"text\",\"redacted@nominet.uk\"]]],\"roles\":[\"registrant\"]}],\"publicIds\":[{\"type\":\"Registry
+        Identifier\",\"identifier\":\"D_54024385-UK\"}],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/nameserver/ns1.cloudns.io.\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/nameserver/ns1.cloudns.io.\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"PDR-IN\",\"eventDate\":\"2017-07-08T22:22:32Z\"}],\"status\":[\"active\",\"associated\"],\"handle\":\"H_1008089-UK\",\"ldhName\":\"ns1.cloudns.io.\",\"unicodeName\":\"ns1.cloudns.io.\"},{\"objectClassName\":\"nameserver\",\"links\":[{\"value\":\"https://rdap.nominet.uk/uk/nameserver/ns2.cloudns.io.\",\"rel\":\"self\",\"href\":\"https://rdap.nominet.uk/uk/nameserver/ns2.cloudns.io.\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"PDR-IN\",\"eventDate\":\"2017-07-08T22:22:33Z\"}],\"status\":[\"active\",\"associated\"],\"handle\":\"H_1013877-UK\",\"ldhName\":\"ns2.cloudns.io.\",\"unicodeName\":\"ns2.cloudns.io.\"}],\"redacted\":[{\"name\":{\"type\":\"Registrant
+        Name\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Organization\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Organisation Type\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Identifier Label\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"description\":\"Registrant
+        Organisation Identifier\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"removal\"},{\"name\":{\"type\":\"Registrant
+        Street\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Postal Code\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        City\"},\"reason\":{\"description\":\"Server policy\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\"},{\"name\":{\"description\":\"Registrant
+        Country\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"emptyValue\"},{\"name\":{\"description\":\"Registrant
+        Region\"},\"reason\":{\"description\":\"Server policy\"},\"method\":\"emptyValue\"},{\"name\":{\"type\":\"Registrant
+        Email\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')]\",\"replacementPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"replacementValue\"},{\"name\":{\"type\":\"Registrant
+        Phone\"},\"reason\":{\"description\":\"Server policy\"},\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\"}]}","source_type":"registry","timestamp":"2026-03-17T13:05:58Z","url":"https://rdap.nominet.uk/uk/domain/londonice.co.uk"}]},"parsed_record":{"parsed_fields":{"conformance":["redacted","rdap_level_0"],"contacts":[{"email":"redacted@nominet.uk","name":"REDACTED
+        FOR PRIVACY","roles":["registrant"]}],"creation_date":"2013-10-12T12:27:08+00:00","dnssec":{"signed":false},"domain":"londonice.co.uk","domain_statuses":["client
+        update prohibited","client delete prohibited","client renew prohibited","client
+        transfer prohibited"],"email_domains":["godaddy.com","nominet.uk"],"emails":["abuse@godaddy.com","redacted@nominet.uk"],"expiration_date":"2027-10-12T12:27:08+00:00","handle":"D_54024385-UK","last_changed_date":"2025-10-13T09:50:13.526710+00:00","links":[{"href":"https://rdap.nominet.uk/uk/domain/londonice.co.uk","rel":"self"}],"nameservers":["ns1.cloudns.io.","ns2.cloudns.io."],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"Abuse
+        contact","phone":"tel:+1.4806242505","roles":["abuse"]}],"name":"GoDaddy.com,
+        LLC."},"unclassified_emails":[]},"registrar_request_url":null,"registry_request_url":"https://rdap.nominet.uk/uk/domain/londonice.co.uk"}}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 17 Mar 2026 13:06:05 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=74e73daor249b8gscjdgv5opkrh1p153tcorr1u0ho59jh7m9gor72pih21tgjsptvn8ng7665o0fusgptl3t3geb5jalj0pij9l3gj;
+        expires=Thu, 16-Apr-2026 13:06:05 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=46559e13d5117075493ab5c55a529fbb; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - 4cf2e4d5-f893-483f-98d9-d13f4117837d
+    status:
+      code: 200
+      message: OK
 version: 1
