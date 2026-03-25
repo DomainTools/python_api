@@ -4,9 +4,16 @@ info:
   version: 1.0.0
   description: |
     The OpenAPI spec for DomainTools Iris endpoints.
+  contact:
+    name: DomainTools Support
+    url: https://www.domaintools.com/support
+    email: enterprisesupport@domaintools.com
+  license:
+    name: MIT
+  termsOfService: https://www.domaintools.com/company/terms-of-service/
 servers:
-  - url: https://api.domaintools.com
-    description: DomainTools APIs
+  - description: DomainTools APIs
+    url: https://api.domaintools.com
 security:
   - header_auth: []
   - open_key_auth: []
@@ -50,6 +57,8 @@ paths:
           $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/DetectUnprocessableEntity'
       externalDocs:
         url: https://docs.domaintools.com/api/iris/detect/reference/#add-remove-from-watchlist
   /v1/iris-detect/domains/ignored/:
@@ -205,6 +214,8 @@ paths:
           $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/DetectUnprocessableEntity'
       externalDocs:
         url: https://docs.domaintools.com/api/iris/detect/reference/#escalate
   /v1/iris-detect/monitors/:
@@ -236,6 +247,109 @@ paths:
           $ref: '#/components/responses/NotFound'
       externalDocs:
         url: https://docs.domaintools.com/api/iris/detect/reference/#monitor-list
+    post:
+      operationId: postDetectMonitor
+      summary: Create a new monitor to track lookalike domains for a specific term.
+      description: |
+        Creates a monitor that begins discovering matching domains immediately.
+        The monitor `status` is `pending` after creation and changes to `completed`
+        once initial domain discovery finishes.
+
+        Requires the "manage monitors" permission.
+      tags:
+        - Iris Detect
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMonitorRequest'
+      responses:
+        '200':
+          description: Monitor created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateMonitorResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '422':
+          $ref: '#/components/responses/DetectUnprocessableEntity'
+      externalDocs:
+        url: https://docs.domaintools.com/api/iris/detect/guide/#create-monitor
+    put:
+      operationId: putDetectMonitor
+      summary: Update the configuration of an existing monitor.
+      description: |
+        Modifies match settings and exclusions for an existing monitor.
+        Include only the fields you want to change; omitted fields retain their current values.
+
+        A recently created monitor may not be immediately available for updates.
+        Wait until the monitor's `status` changes from `pending` to `completed`
+        before sending update requests.
+
+        Requires the "manage monitors" permission.
+      tags:
+        - Iris Detect
+      parameters:
+        - $ref: '#/components/parameters/monitorIdRequired'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateMonitorRequest'
+      responses:
+        '200':
+          description: Monitor updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateMonitorResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/DetectUnprocessableEntity'
+      externalDocs:
+        url: https://docs.domaintools.com/api/iris/detect/guide/#update-monitor
+    delete:
+      operationId: deleteDetectMonitor
+      summary: Permanently delete a monitor and stop tracking its associated domains.
+      description: |
+        Deletes the specified monitor. This action is permanent and can't be undone.
+
+        Requires the "manage monitors" permission.
+      tags:
+        - Iris Detect
+      parameters:
+        - $ref: '#/components/parameters/monitorIdRequired'
+      responses:
+        '200':
+          description: Monitor deleted successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteMonitorResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+      externalDocs:
+        url: https://docs.domaintools.com/api/iris/detect/guide/#delete-monitor
   /v1/iris-enrich/:
     get:
       operationId: getIrisEnrich
@@ -345,6 +459,7 @@ paths:
         - $ref: '#/components/parameters/sslHash'
         - $ref: '#/components/parameters/sslOrg'
         - $ref: '#/components/parameters/sslSubject'
+        - $ref: '#/components/parameters/sslIssuerCommonName'
         - $ref: '#/components/parameters/statCounterProjectCode'
         - $ref: '#/components/parameters/statCounterSecurityCode'
         - $ref: '#/components/parameters/taggedWithAll'
@@ -359,8 +474,13 @@ paths:
         - $ref: '#/components/parameters/expirationDate'
         - $ref: '#/components/parameters/firstSeenSince'
         - $ref: '#/components/parameters/firstSeenWithin'
+        - $ref: '#/components/parameters/ipCountryCode'
         - $ref: '#/components/parameters/notTaggedWithAll'
         - $ref: '#/components/parameters/notTaggedWithAny'
+        - $ref: '#/components/parameters/rank'
+        - $ref: '#/components/parameters/riskScore'
+        - $ref: '#/components/parameters/sslNotAfter'
+        - $ref: '#/components/parameters/sslNotBefore'
         - $ref: '#/components/parameters/topLevelDomain'
         - $ref: '#/components/parameters/parsedDomainRdapFlag'
         - $ref: '#/components/parameters/parsedWhoisFlag'
@@ -391,13 +511,21 @@ paths:
         '503':
           $ref: '#/components/responses/ServiceUnavailable'
       externalDocs:
-        url: https://docs.domaintools.com/api/iris/investigate/
+        url: https://docs.domaintools.com/api/iris/
     post:
       operationId: postIrisInvestigate
       summary: Returns data from a POST request.
       tags:
         - Iris Investigate
-      description: The GET method is available for simple queries.
+      description: |
+        The GET method is available for simple queries.
+
+        The POST method supports two request formats:
+
+        - **Form parameters** (application/x-www-form-urlencoded): Traditional parameter-based searches
+        - **IrisQL** (text/plain): Complex queries using IrisQL query language for advanced filtering and OR logic
+
+        For IrisQL usage and syntax, see the [IrisQL API Guide](https://docs.domaintools.com/api/iris/investigate/irisql/).
       requestBody:
         $ref: '#/components/requestBodies/Investigate'
       responses:
@@ -418,7 +546,7 @@ paths:
         '503':
           $ref: '#/components/responses/ServiceUnavailable'
       externalDocs:
-        url: https://docs.domaintools.com/api/iris/investigate/
+        url: https://docs.domaintools.com/api/iris/
   /v1/account/:
     get:
       operationId: getAccountInfo
@@ -704,6 +832,51 @@ components:
         Returns only those domains first discovered within the last N seconds.
       schema:
         $ref: '#/components/schemas/TimeWindowSeconds'
+    ipCountryCode:
+      in: query
+      name: ip_country_code
+      description: |
+        Search filter parameter.
+        Country code for IP A-record.
+      schema:
+        type: string
+        pattern: ^[A-Z]{2}$
+        description: Two-letter ISO country code (uppercase)
+    rank:
+      in: query
+      name: rank
+      description: |
+        Search filter parameter.
+        Popularity rank (replaces Alexa ranking).
+      schema:
+        type: integer
+        minimum: 1
+    riskScore:
+      in: query
+      name: risk_score
+      description: |
+        Search filter parameter.
+        Domain Risk Score. See [Domain Risk Scores](https://docs.domaintools.com/riskscore/).
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+    sslNotAfter:
+      in: query
+      name: ssl_not_after
+      description: |
+        Search filter parameter.
+        Validity end date for a certificate (YYYY-MM-DD).
+      schema:
+        $ref: '#/components/schemas/DateFilter'
+    sslNotBefore:
+      in: query
+      name: ssl_not_before
+      description: |
+        Search filter parameter.
+        Validity begin date for a certificate (YYYY-MM-DD).
+      schema:
+        $ref: '#/components/schemas/DateFilter'
     googleAnalyticsCode:
       in: query
       name: google_analytics
@@ -714,7 +887,7 @@ components:
         $ref: '#/components/schemas/IdentifierString'
     googleAnalytics4Code:
       in: query
-      name: google_analytics_4
+      name: ga4
       description: |
         Base search parameter.
         Domains with a Google Analytics tracking code.
@@ -773,11 +946,11 @@ components:
       name: limit
       description: |
         Specifies the maximum number of monitors to retrieve.
-        The maximum value is 100, but this may be further restricted if `include_counts=true`.
+        The default is 500. The maximum is restricted to 100 if `include_counts=true`.
       schema:
         type: integer
         minimum: 1
-        maximum: 100
+        maximum: 500
     mailserverDomain:
       in: query
       name: mailserver_domain
@@ -815,6 +988,15 @@ components:
       in: query
       name: monitor_id
       description: Monitor ID from the monitors response - only used when requesting domains for specific monitors.
+      schema:
+        type: string
+    monitorIdRequired:
+      in: query
+      name: monitor_id
+      required: true
+      description: |
+        The ID of the monitor to operate on.
+        Retrieve monitor IDs from the monitor list endpoint (`GET /v1/iris-detect/monitors/`).
       schema:
         type: string
     mxExists:
@@ -884,7 +1066,7 @@ components:
     preview:
       in: query
       name: preview
-      description: Use during API implementation and testing. Will limit results to 10 but not be limited by hourly restrictions.
+      description: Use during API implementation and testing. Will limit results to 2 but not be limited by hourly restrictions. Use for development and testing only. Sustained usage violates Terms of Service and can result in service suspension.
       required: false
       schema:
         $ref: '#/components/schemas/BooleanOptInFlag'
@@ -936,7 +1118,7 @@ components:
       required: false
       schema:
         $ref: '#/components/schemas/PositionToken'
-    dzzzzzzz:
+    resultsSortBy:
       in: query
       name: sort_by
       description: |
@@ -1081,6 +1263,14 @@ components:
         Exact match to the Subject distinguished name (DN) string from the SSL certificate.
       schema:
         $ref: '#/components/schemas/SslSubjectDnString'
+    sslIssuerCommonName:
+      in: query
+      name: ssl_issuer_common_name
+      description: |
+        Base search parameter.
+        Certificate issuer Common Name.
+      schema:
+        $ref: '#/components/schemas/GenericString'
     statCounterProjectCode:
       in: query
       name: statcounter_project
@@ -1180,12 +1370,31 @@ components:
           schema:
             $ref: '#/components/schemas/EnrichRequestParameters'
     Investigate:
-      description: A request to the Iris Investigate endpoint.
+      description: |
+        A request to the Iris Investigate endpoint.
+
+        Supports two request formats:
+
+        - **Form parameters** (application/x-www-form-urlencoded): Standard parameter-based search
+        - **IrisQL** (text/plain): IrisQL query language for complex searches with OR logic
+
+        For IrisQL usage, see the [IrisQL API Guide](https://docs.domaintools.com/api/iris/investigate/irisql/).
       required: true
       content:
         application/x-www-form-urlencoded:
           schema:
             $ref: '#/components/schemas/InvestigateRequestParameters'
+        text/plain:
+          schema:
+            type: string
+            description: |
+              An IrisQL query for complex domain searches.
+              Must begin with '# IrisQL-1.0' version comment.
+            example: |
+              # IrisQL-1.0
+              DOMAIN CONTAINS "example"
+              AND
+              RISK_SCORE GREATER_THAN 70
   responses:
     DetectMonitorSuccess:
       description: OK. A list of monitors was successfully retrieved.
@@ -1253,6 +1462,15 @@ components:
                     type: array
                     items:
                       $ref: '#/components/schemas/ApexDomain'
+    DetectUnprocessableEntity:
+      description: |
+        422: Unprocessable Entity. The request is syntactically valid JSON but
+        contains values that fail validation. The response includes per-field
+        error messages.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DetectValidationError'
     IrisBadRequest:
       $ref: '#/components/responses/BadRequest'
     IrisForbidden:
@@ -1360,43 +1578,6 @@ components:
         - xml
       description: |
         The desired response format.
-    AccountInformation:
-      type: object
-      description: Contains the account details and a list of product subscriptions.
-      properties:
-        response:
-          type: object
-          properties:
-            account:
-              $ref: '#/components/schemas/AccountInfoAccount'
-            products:
-              type: array
-              description: A list of product subscriptions including usage limits and expiration dates.
-              items:
-                type: object
-                description: Details for a single product subscription. Keys include id, rate limits, usage, and expiration_date.
-                example:
-                  id: domain-profile
-                  per_month_limit: '50000'
-                  per_hour_limit: null
-                  per_minute_limit: '120'
-                  absolute_limit: null
-                  usage:
-                    today: '0'
-                    month: '1'
-                  expiration_date: '2027-12-30'
-    AccountInfoAccount:
-      type: object
-      description: Basic details about the API account.
-      properties:
-        api_username:
-          type: string
-          description: The username associated with the account.
-          example: bdfidler
-        active:
-          type: boolean
-          description: Indicates if the account is currently active.
-          example: true
     ApexDomainList:
       type: string
       pattern: ^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(,([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})*$
@@ -1404,13 +1585,13 @@ components:
     CommaSeparatedTags:
       type: string
       description: |
-        A comma-separated list of tag names.  Tags are matched exactly and compared case-insensitively unless otherwise specified.
+        A comma-separated list of tag names. Tags are matched exactly and compared case-insensitively unless otherwise specified.
       maxLength: 512
     DateFilter:
       type: string
       format: date
       description: |
-        A calendar date in the format YYYY-MM-DD, per RFC 3339 (full-date).  Does not include a time or timezone.
+        A calendar date in the format YYYY-MM-DD, per RFC 3339 (full-date). Does not include a time or timezone.
     DateOperatorsFilter:
       type: string
       description: |
@@ -1571,7 +1752,7 @@ components:
       type: string
       format: hostname
       description: |
-        A Fully Qualified Domain Name (FQDN), including subdomains (e.g., www.example.com).  Must be a valid DNS hostname per RFC 1123, excluding trailing dot.
+        A Fully Qualified Domain Name (FQDN), including subdomains (e.g., www.example.com). Must be a valid DNS hostname per RFC 1123, excluding trailing dot.
       minLength: 1
       maxLength: 253
       pattern: ^(?=.{1,253}$)(?:(?!-)[a-zA-Z0-9-]{1,63}(?<!-)\.)+[a-zA-Z]{2,63}$
@@ -1595,10 +1776,6 @@ components:
         An opaque string token used for cursor-based pagination.
         Returned in the `position` field of a paginated response when `has_more_results` is true, and used as a query parameter to retrieve the next result set.
         Example: `2c056abadfb64b67ba18896af2c5b900`
-    RiskScoreValue:
-      type: integer
-      minimum: 0
-      maximum: 99
     SearchHashToken:
       type: string
       description: |
@@ -1619,16 +1796,36 @@ components:
         Typically includes components like CN, O, C, ST, and L in a comma-separated format.
         Example: `C=US, ST=California, L=San Francisco, O=Example Corp, CN=example.com`
     TimestampFilter:
-      type: string
-      format: date-time
+      title: Timestamp filter
       description: |
-        An RFC 3339-compliant timestamp (e.g., `2025-01-01T00:00:00Z`)  used to filter results by datetime thresholds.
+        Defines a point in time for filtering results.
+
+        Accepts one of:
+
+          - relative time, in negative seconds
+
+          - absolute time, in an ISO 8601 timestamp
+      oneOf:
+        - type: integer
+          minimum: -432000
+          maximum: -1
+          description: |
+            Relative offset in seconds before the current UTC time.
+
+            Must be between -1 (1 second ago) and -432000 (5 days ago).
+        - type: string
+          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$
+          format: date-time
+          description: |
+            ISO 8601 datetime in UTC format with no milliseconds or timezone offset. Format: `YYYY-MM-DDTHH:MM:SSZ`.
+
+            The timestamp must represent a point between *1 second ago* and *5 days ago*, relative to the current UTC time.
     TimeWindowSeconds:
       type: integer
       format: int64
       minimum: 1
       description: |
-        A positive integer representing a time window, in seconds.  Used to filter results based on how recently an event occurred.
+        A positive integer representing a time window, in seconds. Used to filter results based on how recently an event occurred.
     TopLevelDomain:
       type: string
       minLength: 2
@@ -1825,6 +2022,7 @@ components:
         duration: {}
     DomainRisk:
       type: object
+      description: Domain risk assessment including overall score and contributing components.
       properties:
         risk_score:
           $ref: '#/components/schemas/RiskScoreValue'
@@ -1851,24 +2049,13 @@ components:
           threat_profile_phishing: '#/components/schemas/ThreatProfilePhishing'
           threat_profile_spam: '#/components/schemas/ThreatProfileSpam'
           zerolist: '#/components/schemas/ZeroListedScore'
-    EnrichValue:
-      type: object
-      properties:
-        value:
-          type: string
-    EnrichTracker:
-      type: object
-      description: A tracker identifier.
-      properties:
-        value:
-          $ref: '#/components/schemas/IdentifierString'
     EnrichRequestParameters:
       type: object
       required:
         - domain
       properties:
         domain:
-          $ref: '#/components/parameters/domainsQueryRequired/schema'
+          $ref: '#/components/schemas/ApexDomainList'
         app_partner:
           $ref: '#/components/schemas/IdentifierString'
         app_name:
@@ -1881,189 +2068,6 @@ components:
           $ref: '#/components/schemas/BooleanOptInFlag'
         parsed_domain_rdap:
           $ref: '#/components/schemas/BooleanOptInFlag'
-    EnrichResult:
-      allOf:
-        - $ref: '#/components/schemas/DomainProfileTemplate'
-      properties:
-        adsense:
-          $ref: '#/components/schemas/EnrichTracker'
-        google_analytics:
-          $ref: '#/components/schemas/EnrichTracker'
-        ga4:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        gtm_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        fb_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        hotjar_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        baidu_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        yandex_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        matomo_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        statcounter_project_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        statcounter_security_codes:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichTracker'
-        admin_contact:
-          $ref: '#/components/schemas/EnrichContact'
-        billing_contact:
-          $ref: '#/components/schemas/EnrichContact'
-        registrant_contact:
-          $ref: '#/components/schemas/EnrichContact'
-        technical_contact:
-          $ref: '#/components/schemas/EnrichContact'
-        create_date:
-          $ref: '#/components/schemas/EnrichValue'
-        expiration_date:
-          $ref: '#/components/schemas/EnrichValue'
-        email_domain:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichValue'
-        soa_email:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichValue'
-        ssl_email:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichValue'
-        additional_whois_email:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichValue'
-        ip:
-          type: array
-          items:
-            type: object
-            properties:
-              address:
-                $ref: '#/components/schemas/EnrichValue'
-              asn:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EnrichValue'
-              country_code:
-                $ref: '#/components/schemas/EnrichValue'
-              isp:
-                $ref: '#/components/schemas/EnrichValue'
-        mx:
-          type: array
-          items:
-            type: object
-            properties:
-              host:
-                $ref: '#/components/schemas/EnrichValue'
-              domain:
-                $ref: '#/components/schemas/EnrichValue'
-              ip:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EnrichValue'
-              priority:
-                type: number
-        name_server:
-          type: array
-          items:
-            type: object
-            properties:
-              host:
-                $ref: '#/components/schemas/EnrichValue'
-              domain:
-                $ref: '#/components/schemas/EnrichValue'
-              ip:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EnrichValue'
-        redirect:
-          $ref: '#/components/schemas/EnrichValue'
-        redirect_domain:
-          $ref: '#/components/schemas/EnrichValue'
-        registrant_name:
-          $ref: '#/components/schemas/EnrichValue'
-        registrant_org:
-          $ref: '#/components/schemas/EnrichValue'
-        registrar:
-          $ref: '#/components/schemas/EnrichValue'
-        server_type:
-          $ref: '#/components/schemas/EnrichValue'
-        first_seen:
-          $ref: '#/components/schemas/EnrichValue'
-        website_title:
-          $ref: '#/components/schemas/EnrichValue'
-        ssl_info:
-          type: array
-          items:
-            allOf:
-              - $ref: '#/components/schemas/BaseSslInfo'
-            properties:
-              hash:
-                $ref: '#/components/schemas/EnrichValue'
-              subject:
-                $ref: '#/components/schemas/EnrichValue'
-              organization:
-                $ref: '#/components/schemas/EnrichValue'
-              alt_names:
-                type: array
-                items:
-                  $ref: '#/components/schemas/EnrichValue'
-              common_name:
-                $ref: '#/components/schemas/EnrichValue'
-              issuer_common_name:
-                $ref: '#/components/schemas/EnrichValue'
-              not_after:
-                type: integer
-              not_before:
-                type: integer
-              duration:
-                type: integer
-    EnrichContact:
-      allOf:
-        - $ref: '#/components/schemas/BaseContact'
-      properties:
-        name:
-          $ref: '#/components/schemas/EnrichValue'
-        org:
-          $ref: '#/components/schemas/EnrichValue'
-        street:
-          $ref: '#/components/schemas/EnrichValue'
-        city:
-          $ref: '#/components/schemas/EnrichValue'
-        state:
-          $ref: '#/components/schemas/EnrichValue'
-        postal:
-          $ref: '#/components/schemas/EnrichValue'
-        country:
-          $ref: '#/components/schemas/EnrichValue'
-        phone:
-          $ref: '#/components/schemas/EnrichValue'
-        fax:
-          $ref: '#/components/schemas/EnrichValue'
-        email:
-          type: array
-          items:
-            $ref: '#/components/schemas/EnrichValue'
     PivotedValue:
       type: object
       properties:
@@ -2305,6 +2309,123 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Monitor'
+    CreateMonitorRequest:
+      type: object
+      description: Request body for creating a new Iris Detect monitor.
+      required:
+        - term
+      properties:
+        term:
+          type: string
+          description: The keyword to monitor for domain variations.
+        match_substring_variations:
+          type: boolean
+          default: false
+          description: |
+            When `true`, includes domains where variations of the term appear
+            as substrings within matched domains.
+        nameserver_exclusions:
+          type: array
+          items:
+            type: string
+          description: |
+            Nameserver patterns to exclude. Wildcards (`*`) are accepted.
+            A domain is excluded only when all of its nameservers match an exclusion pattern.
+        text_exclusions:
+          type: array
+          items:
+            type: string
+          description: |
+            Text strings to exclude from results.
+            Domains containing any of these strings are excluded.
+    UpdateMonitorRequest:
+      type: object
+      description: |
+        Request body for updating an existing Iris Detect monitor.
+        Include only the fields you want to change.
+      properties:
+        match_substring_variations:
+          type: boolean
+          description: Enable or disable substring variation matching.
+        nameserver_exclusions:
+          type: array
+          items:
+            type: string
+          description: Replace the current nameserver exclusion list. Wildcards (`*`) are accepted.
+        text_exclusions:
+          type: array
+          items:
+            type: string
+          description: Replace the current text exclusion list.
+    CreateMonitorResponse:
+      type: object
+      description: Response returned after successfully creating a monitor.
+      properties:
+        status:
+          type: string
+          description: The result of the operation (for example, `created`).
+        monitor:
+          $ref: '#/components/schemas/Monitor'
+    UpdateMonitorResponse:
+      type: object
+      description: Response returned after successfully updating a monitor.
+      properties:
+        status:
+          type: string
+          description: The result of the operation (for example, `updated`).
+        monitor:
+          $ref: '#/components/schemas/Monitor'
+    DetectValidationError:
+      type: object
+      description: |
+        Validation error returned by Iris Detect endpoints when the request body
+        is syntactically valid JSON but contains values that fail server-side
+        validation rules.
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: The HTTP status code.
+              example: 422
+            summary:
+              type: string
+              description: A human-readable summary of the error.
+              example: The given data was invalid.
+            messages:
+              type: object
+              description: |
+                A map of field names to arrays of validation error messages.
+                Each key is the name of a request body field that failed validation.
+              additionalProperties:
+                type: array
+                items:
+                  type: string
+              example:
+                term:
+                  - The term field is required.
+        resources:
+          type: object
+          properties:
+            support:
+              type: string
+              description: A link to the DomainTools documentation.
+              example: https://docs.domaintools.com
+    DeleteMonitorResponse:
+      type: object
+      description: Response returned after successfully deleting a monitor.
+      properties:
+        status:
+          type: string
+          description: The result of the operation (for example, `deleted`).
+        monitor:
+          type: object
+          description: The deleted monitor.
+          properties:
+            id:
+              type: string
+              description: The ID of the deleted monitor.
     PivotedContact:
       allOf:
         - $ref: '#/components/schemas/BaseContact'
@@ -2339,26 +2460,26 @@ components:
         baidu_analytics:
           $ref: '#/components/schemas/IdentifierString'
         contact_name:
-          $ref: '#/components/parameters/contactName/schema'
+          $ref: '#/components/schemas/GenericString'
         contact_phone:
-          $ref: '#/components/parameters/contactPhone/schema'
+          $ref: '#/components/schemas/GenericString'
         contact_street:
-          $ref: '#/components/parameters/contactStreet/schema'
+          $ref: '#/components/schemas/GenericString'
         ip:
           $ref: '#/components/schemas/IPv4Address'
         domain:
-          $ref: '#/components/parameters/domainsQuery/schema'
+          $ref: '#/components/schemas/ApexDomainList'
         email:
-          $ref: '#/components/parameters/emailAny/schema'
+          $ref: '#/components/schemas/EmailAddress'
         email_dns_soa:
-          $ref: '#/components/parameters/emailDnsSoa/schema'
+          $ref: '#/components/schemas/EmailAddress'
         email_domain:
           $ref: '#/components/schemas/ApexDomain'
         historical_free_text:
-          $ref: '#/components/parameters/whoisHistoricalFreeText/schema'
+          $ref: '#/components/schemas/GenericString'
         facebook:
           $ref: '#/components/schemas/IdentifierString'
-        google_analytics_4:
+        ga4:
           $ref: '#/components/schemas/IdentifierString'
         google_analytics:
           $ref: '#/components/schemas/IdentifierString'
@@ -2371,7 +2492,7 @@ components:
         mailserver_domain:
           $ref: '#/components/schemas/ApexDomain'
         mailserver_host:
-          $ref: '#/components/parameters/mailserverHost/schema'
+          $ref: '#/components/schemas/Fqdn'
         mailserver_ip:
           $ref: '#/components/schemas/IPv4Address'
         matomo:
@@ -2383,65 +2504,82 @@ components:
         nameserver_ip:
           $ref: '#/components/schemas/IPv4Address'
         redirect_domain:
-          $ref: '#/components/parameters/redirectDomain/schema'
+          $ref: '#/components/schemas/GenericString'
         registrant:
-          $ref: '#/components/parameters/registrant/schema'
+          $ref: '#/components/schemas/OrgNameString'
         historical_registrant:
-          $ref: '#/components/parameters/registrantHistoricalWhois/schema'
+          $ref: '#/components/schemas/OrgNameString'
         registrant_org:
-          $ref: '#/components/parameters/registrantOrg/schema'
+          $ref: '#/components/schemas/OrgNameString'
         registrar:
-          $ref: '#/components/parameters/registrar/schema'
+          $ref: '#/components/schemas/OrgNameString'
         search_hash:
-          $ref: '#/components/parameters/searchHash/schema'
+          $ref: '#/components/schemas/SearchHashToken'
         server_type:
           $ref: '#/components/schemas/BasicString'
         ssl_alt_names:
-          $ref: '#/components/parameters/sslAltNames/schema'
+          $ref: '#/components/schemas/GenericString'
         ssl_common_name:
-          $ref: '#/components/parameters/sslCommonName/schema'
+          $ref: '#/components/schemas/GenericString'
         ssl_duration:
-          $ref: '#/components/parameters/sslDuration/schema'
+          type: integer
+          minimum: 1
         ssl_email:
-          $ref: '#/components/parameters/sslEmail/schema'
+          $ref: '#/components/schemas/EmailAddress'
         ssl_hash:
-          $ref: '#/components/parameters/sslHash/schema'
+          $ref: '#/components/schemas/Sha1HexString'
         ssl_org:
-          $ref: '#/components/parameters/sslOrg/schema'
+          $ref: '#/components/schemas/OrgNameString'
         ssl_subject:
-          $ref: '#/components/parameters/sslSubject/schema'
+          $ref: '#/components/schemas/SslSubjectDnString'
+        ssl_issuer_common_name:
+          $ref: '#/components/schemas/GenericString'
         statcounter_project:
           $ref: '#/components/schemas/IdentifierString'
         statcounter_security:
           $ref: '#/components/schemas/IdentifierString'
         tagged_with_all:
-          $ref: '#/components/parameters/taggedWithAll/schema'
+          $ref: '#/components/schemas/GenericString'
         tagged_with_any:
-          $ref: '#/components/parameters/taggedWithAny/schema'
+          $ref: '#/components/schemas/GenericString'
         website_title:
-          $ref: '#/components/parameters/websiteTitle/schema'
+          $ref: '#/components/schemas/WebsiteTitleString'
         whois:
-          $ref: '#/components/parameters/whoisFreeText/schema'
+          $ref: '#/components/schemas/GenericString'
         yandex_metrica:
           $ref: '#/components/schemas/IdentifierString'
         active:
-          $ref: '#/components/parameters/active/schema'
+          type: boolean
         create_date:
-          $ref: '#/components/parameters/createDate/schema'
+          $ref: '#/components/schemas/DateOperatorsFilter'
         create_date_within:
-          $ref: '#/components/parameters/createDateWithin/schema'
+          $ref: '#/components/schemas/MaxDaysSince'
         expiration_date:
-          $ref: '#/components/parameters/expirationDate/schema'
+          $ref: '#/components/schemas/DateFilter'
         first_seen_since:
-          $ref: '#/components/parameters/firstSeenSince/schema'
+          $ref: '#/components/schemas/TimestampFilter'
         first_seen_within:
-          $ref: '#/components/parameters/firstSeenWithin/schema'
+          $ref: '#/components/schemas/TimeWindowSeconds'
+        ip_country_code:
+          type: string
+          pattern: ^[A-Z]{2}$
+        rank:
+          type: integer
+          minimum: 1
+        risk_score:
+          type: integer
+          minimum: 0
+          maximum: 100
+        ssl_not_after:
+          $ref: '#/components/schemas/DateFilter'
+        ssl_not_before:
+          $ref: '#/components/schemas/DateFilter'
         not_tagged_with_all:
-          $ref: '#/components/parameters/notTaggedWithAll/schema'
+          $ref: '#/components/schemas/CommaSeparatedTags'
         not_tagged_with_any:
-          $ref: '#/components/parameters/notTaggedWithAny/schema'
+          $ref: '#/components/schemas/CommaSeparatedTags'
         tld:
-          $ref: '#/components/parameters/topLevelDomain/schema'
+          $ref: '#/components/schemas/TopLevelDomain'
         parsed_domain_rdap:
           $ref: '#/components/schemas/BooleanOptInFlag'
         parsed_whois:
@@ -2451,13 +2589,23 @@ components:
         format:
           $ref: '#/components/schemas/ResponseFormat'
         page_size:
-          $ref: '#/components/schemas/schema'
+          type: integer
+          minimum: 1
+          maximum: 500
         position:
-          $ref: '#/components/parameters/resultsPosition/schema'
+          $ref: '#/components/schemas/PositionToken'
         sort_by:
-          $ref: '#/components/parameters/resultsSortBy/schema'
+          type: string
+          enum:
+            - first_seen_since
+            - create_date
+            - domain
+            - risk_score
         sort_direction:
-          $ref: '#/components/parameters/resultsSortDirection/schema'
+          type: string
+          enum:
+            - asc
+            - dsc
         app_name:
           $ref: '#/components/schemas/IdentifierString'
         app_partner:
@@ -2524,19 +2672,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PivotedValue'
-    Proximity:
-      type: object
-      required:
-        - name
-        - risk_score
-      properties:
-        name:
-          type: string
-          description: The type of risk component.
-          enum:
-            - proximity
-        risk_score:
-          $ref: '#/components/schemas/RiskScoreValue'
     RdapContact:
       type: object
       description: Contact details from an RDAP record.
@@ -2563,62 +2698,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PivotedValue'
-    ThreatProfile:
-      type: object
-      required:
-        - name
-        - risk_score
-      properties:
-        name:
-          type: string
-          description: The type of risk component.
-          enum:
-            - threat_profile
-        risk_score:
-          $ref: '#/components/schemas/RiskScoreValue'
-      description: Indicates risk based on machine-learning models.
-    ThreatProfileMalware:
-      type: object
-      required:
-        - name
-        - risk_score
-      properties:
-        name:
-          type: string
-          description: The type of risk component.
-          enum:
-            - threat_profile_malware
-        risk_score:
-          $ref: '#/components/schemas/RiskScoreValue'
-      description: Indicates risk based on a machine-learning model that classifies domains as malware-related.
-    ThreatProfilePhishing:
-      type: object
-      required:
-        - name
-        - risk_score
-      properties:
-        name:
-          type: string
-          description: The type of risk component.
-          enum:
-            - threat_profile_phishing
-        risk_score:
-          $ref: '#/components/schemas/RiskScoreValue'
-      description: Indicates risk based on a machine-learning model that classifies domains as phishing-related.
-    ThreatProfileSpam:
-      type: object
-      required:
-        - name
-        - risk_score
-      properties:
-        name:
-          type: string
-          description: The type of risk component.
-          enum:
-            - threat_profile_spam
-        risk_score:
-          $ref: '#/components/schemas/RiskScoreValue'
-      description: Indicates risk based on a machine-learning model that classifies domains as spam-related.
     Watchlist:
       type: object
       properties:
@@ -2700,6 +2779,363 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PivotedValue'
+    EnrichTracker:
+      type: object
+      description: A tracker identifier.
+      properties:
+        value:
+          $ref: '#/components/schemas/IdentifierString'
+    EnrichValue:
+      type: object
+      properties:
+        value:
+          type: string
+    EnrichContact:
+      type: object
+      properties:
+        name:
+          $ref: '#/components/schemas/EnrichValue'
+        org:
+          $ref: '#/components/schemas/EnrichValue'
+        street:
+          $ref: '#/components/schemas/EnrichValue'
+        city:
+          $ref: '#/components/schemas/EnrichValue'
+        state:
+          $ref: '#/components/schemas/EnrichValue'
+        postal:
+          $ref: '#/components/schemas/EnrichValue'
+        country:
+          $ref: '#/components/schemas/EnrichValue'
+        phone:
+          $ref: '#/components/schemas/EnrichValue'
+        fax:
+          $ref: '#/components/schemas/EnrichValue'
+        email:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichValue'
+    EnrichResult:
+      type: object
+      description: A comprehensive domain profile result from Iris Enrich API.
+      properties:
+        domain:
+          type: string
+        whois_url:
+          type: string
+        adsense:
+          $ref: '#/components/schemas/EnrichTracker'
+        alexa:
+          type: integer
+        popularity_rank:
+          type: number
+        active:
+          type: boolean
+        google_analytics:
+          $ref: '#/components/schemas/EnrichTracker'
+        ga4:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        gtm_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        fb_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        hotjar_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        baidu_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        yandex_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        matomo_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        statcounter_project_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        statcounter_security_codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichTracker'
+        admin_contact:
+          $ref: '#/components/schemas/EnrichContact'
+        billing_contact:
+          $ref: '#/components/schemas/EnrichContact'
+        registrant_contact:
+          $ref: '#/components/schemas/EnrichContact'
+        technical_contact:
+          $ref: '#/components/schemas/EnrichContact'
+        create_date:
+          $ref: '#/components/schemas/EnrichValue'
+        expiration_date:
+          $ref: '#/components/schemas/EnrichValue'
+        email_domain:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichValue'
+        soa_email:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichValue'
+        ssl_email:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichValue'
+        additional_whois_email:
+          type: array
+          items:
+            $ref: '#/components/schemas/EnrichValue'
+        ip:
+          type: array
+          items:
+            type: object
+            properties:
+              address:
+                $ref: '#/components/schemas/EnrichValue'
+              asn:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EnrichValue'
+              country_code:
+                $ref: '#/components/schemas/EnrichValue'
+              isp:
+                $ref: '#/components/schemas/EnrichValue'
+        mx:
+          type: array
+          items:
+            type: object
+            properties:
+              host:
+                $ref: '#/components/schemas/EnrichValue'
+              domain:
+                $ref: '#/components/schemas/EnrichValue'
+              ip:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EnrichValue'
+              priority:
+                type: number
+        name_server:
+          type: array
+          items:
+            type: object
+            properties:
+              host:
+                $ref: '#/components/schemas/EnrichValue'
+              domain:
+                $ref: '#/components/schemas/EnrichValue'
+              ip:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EnrichValue'
+        domain_risk:
+          type: object
+          properties:
+            risk_score:
+              type: integer
+              minimum: 0
+              maximum: 99
+            components:
+              type: array
+              description: A list of risk components and their individual scores that contribute to the overall domain risk.
+              items:
+                type: object
+        redirect:
+          $ref: '#/components/schemas/EnrichValue'
+        redirect_domain:
+          $ref: '#/components/schemas/EnrichValue'
+        registrant_name:
+          $ref: '#/components/schemas/EnrichValue'
+        registrant_org:
+          $ref: '#/components/schemas/EnrichValue'
+        registrar:
+          $ref: '#/components/schemas/EnrichValue'
+        registrar_status:
+          type: array
+          items:
+            type: string
+        spf_info:
+          type: string
+        ssl_info:
+          type: array
+          items:
+            type: object
+            properties:
+              hash:
+                $ref: '#/components/schemas/EnrichValue'
+              subject:
+                $ref: '#/components/schemas/EnrichValue'
+              organization:
+                $ref: '#/components/schemas/EnrichValue'
+              email:
+                type: array
+                items:
+                  type: string
+              alt_names:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EnrichValue'
+              sources:
+                type: object
+                properties:
+                  active:
+                    type: integer
+                  passive:
+                    type: integer
+              common_name:
+                $ref: '#/components/schemas/EnrichValue'
+              issuer_common_name:
+                $ref: '#/components/schemas/EnrichValue'
+              not_after:
+                type: integer
+              not_before:
+                type: integer
+              duration:
+                type: integer
+        tld:
+          type: string
+        website_response:
+          type: number
+        data_updated_timestamp:
+          type: string
+          format: date-time
+        website_title:
+          $ref: '#/components/schemas/EnrichValue'
+        server_type:
+          $ref: '#/components/schemas/EnrichValue'
+        first_seen:
+          $ref: '#/components/schemas/EnrichValue'
+        tags:
+          type: array
+          items:
+            type: object
+            properties:
+              label:
+                type: string
+              scope:
+                type: string
+              tagged_at:
+                type: string
+        parsed_whois:
+          type: object
+          description: Parsed data from the domain's WHOIS record. Present only when the request includes `parsed_whois=true`.
+        parsed_domain_rdap:
+          type: object
+          description: Parsed data from the domain's RDAP record. Present only when the request includes `parsed_domain_rdap=true`.
+    RiskScoreValue:
+      type: integer
+      minimum: 0
+      maximum: 100
+      description: A domain risk score value ranging from 0 (lowest risk) to 100 (highest risk).
+    Proximity:
+      type: object
+      required:
+        - name
+        - risk_score
+      properties:
+        name:
+          type: string
+          description: The type of risk component.
+          enum:
+            - proximity
+        risk_score:
+          $ref: '#/components/schemas/RiskScoreValue'
+        evidence:
+          type: array
+          description: Optional array of evidence types supporting the risk score for this component.
+          items:
+            type: string
+          example:
+            - dns
+      description: Indicates risk based on proximity to known threats or suspicious infrastructure.
+    ThreatProfile:
+      type: object
+      required:
+        - name
+        - risk_score
+      properties:
+        name:
+          type: string
+          description: The type of risk component.
+          enum:
+            - threat_profile
+        risk_score:
+          $ref: '#/components/schemas/RiskScoreValue'
+        evidence:
+          type: array
+          description: Optional array of evidence types supporting the risk score for this component.
+          items:
+            type: string
+      description: Indicates risk based on machine-learning models.
+    ThreatProfileMalware:
+      type: object
+      required:
+        - name
+        - risk_score
+      properties:
+        name:
+          type: string
+          description: The type of risk component.
+          enum:
+            - threat_profile_malware
+        risk_score:
+          $ref: '#/components/schemas/RiskScoreValue'
+        evidence:
+          type: array
+          description: Optional array of evidence types supporting the risk score for this component.
+          items:
+            type: string
+      description: Indicates risk based on a machine-learning model that classifies domains as malware-related.
+    ThreatProfilePhishing:
+      type: object
+      required:
+        - name
+        - risk_score
+      properties:
+        name:
+          type: string
+          description: The type of risk component.
+          enum:
+            - threat_profile_phishing
+        risk_score:
+          $ref: '#/components/schemas/RiskScoreValue'
+        evidence:
+          type: array
+          description: Optional array of evidence types supporting the risk score for this component.
+          items:
+            type: string
+      description: Indicates risk based on a machine-learning model that classifies domains as phishing-related.
+    ThreatProfileSpam:
+      type: object
+      required:
+        - name
+        - risk_score
+      properties:
+        name:
+          type: string
+          description: The type of risk component.
+          enum:
+            - threat_profile_spam
+        risk_score:
+          $ref: '#/components/schemas/RiskScoreValue'
+        evidence:
+          type: array
+          description: Optional array of evidence types supporting the risk score for this component.
+          items:
+            type: string
+      description: Indicates risk based on a machine-learning model that classifies domains as spam-related.
     ZeroListedScore:
       type: object
       required:
@@ -2717,6 +3153,41 @@ components:
           enum:
             - 0
       description: Indicates the domain is on a known-good 'zero list' and is not considered a threat.
+    AccountInformation:
+      type: object
+      description: Contains the account details and a list of product subscriptions.
+      properties:
+        response:
+          type: object
+          properties:
+            account:
+              type: object
+              description: Basic details about the API account.
+              properties:
+                api_username:
+                  type: string
+                  description: The username associated with the account.
+                  example: api_user
+                active:
+                  type: boolean
+                  description: Indicates if the account is currently active.
+                  example: true
+            products:
+              type: array
+              description: A list of product subscriptions including usage limits and expiration dates.
+              items:
+                type: object
+                description: Details for a single product subscription. Keys include id, rate limits, usage, and expiration_date.
+                example:
+                  id: domain-profile
+                  per_month_limit: '50000'
+                  per_hour_limit: null
+                  per_minute_limit: '120'
+                  absolute_limit: null
+                  usage:
+                    today: '0'
+                    month: '1'
+                  expiration_date: '2027-12-30'
   securitySchemes:
     header_auth:
       type: apiKey
