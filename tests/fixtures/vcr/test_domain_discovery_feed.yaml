@@ -3313,4 +3313,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.7.4&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-05-15T15:31:39Z","domain":"liveperson-ai.com"}
+
+        {"timestamp":"2026-05-15T15:31:39Z","domain":"reset-renaitre.fr"}
+
+        {"timestamp":"2026-05-15T15:31:39Z","domain":"e-4ztke.garden"}
+
+        {"timestamp":"2026-05-15T15:31:39Z","domain":"vanhorn.co"}
+
+        {"timestamp":"2026-05-15T15:31:39Z","domain":"willowbrookspa.us"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '320'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 15 May 2026 15:31:39 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=eo0q3bt6b7ncf0ra7t83g2usror006lfskpvub8dge70tlecufquts5rkng5ttkk9437ovqa7j140v19opfvgq3kguflicsrl1nbe1d;
+        expires=Sun, 14-Jun-2026 15:31:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=0544d088dd78b7e9c2b88f576fce2331; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 3ab1a36d-16fb-48c6-b2be-a68e3c736462
+    status:
+      code: 200
+      message: OK
 version: 1

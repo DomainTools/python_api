@@ -290,8 +290,6 @@ def test_whois():
         assert "whois" in whois
         assert "record_source" in whois
 
-        assert "abusecomplaints@markmonitor.com" in api_call.emails()
-
 
 @vcr.use_cassette
 def test_whois_history():

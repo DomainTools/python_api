@@ -1118,4 +1118,67 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.7.4
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WZYY+iMBCG/wuf7hKbCCyr7l/ZXEwXRpgstKQtesb4329AuHA5McAiS/0ktoVn
+        pi/vtPXiKNC5FBqct4vDw1AWwlRfc9wXGpTgGTU5KAzEihukrnsD2qCInRUNMHikdqMKuK6cXMmo
+        CI123t4vDkY0rr4jQ3GQKqvG07Ac1D6TwiT7FDOk5znuuvzUTYksVNMiijStB6AoDPwdEZSP/9Ay
+        bf1461xoHlfhGBnxM3X1fepbPY8udq7rECr8zvEWzz7iBm5jr6saGxVqYj6WgcZlcyfzEGRv3Z95
+        20be9SQGoTBM7sJ6Q2FfR8L6vWkjMBAaBjrkKXVhkcw4Cn0/18Ewen8A/bpFvx7GjrGQCqIx6CQf
+        58vou3biX4Jh8BkXdDt24iZMUtRm0glwh4j9CzNAw9BI9Q3Q/+Z+OwxbwMlO0VRqsUnxN1BGpemA
+        6QMjX4y6a2ANXHV4+YhiuX4ebyKr1QBLyEKkOluQYcwb25h/LTIcVUFMmVVcGGuoFeSFmXKx90w1
+        KDiC0sAwnwp2DlZ2SiR22O+y0ov60xJMBkeMQIQ2VIlGCeX+jGqFoit75Dupdp+Hm3H1yXgKyize
+        cXNOeY2sMYWWaq0parbktuJ8uBoL5qJ1X7xh0mVpeZx0N8feQmTQWo7ZYQ201UzP7HZS12zb2AEo
+        5T94jj8n4h8rEb9vAPKj8otoGSF4bvtMcRsEm95Cr/d3KuL3F5zBbGay6ZH8hrZWfdmNUTdOggpB
+        63JfbWQo0+UoqoflKOApM5g17wOLUIeSitF5dBgtg5pqeqYIRPtTTccMRx59RWZHUA98d7oAns7f
+        Ybs2RlAeVI0vG90v+Hylrx2BFTPwnz8l0lR/NXyfw7YPkDc9Tu27Q5jQhmacgeqgYxnp99zX0QEs
+        Ovm/rtc/kmOYlFkfAAA=
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 15 May 2026 15:29:52 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=6n7lmstljtnc5s6efrrv4kvou7h6idpth0mtcdafcgenjan1r0c2qfduol62f2e61goqkosl2e19d70g6qek7mctvupoe0aklqoc38n;
+        expires=Sun, 14-Jun-2026 15:29:52 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '148401'
+    status:
+      code: 200
+      message: OK
 version: 1

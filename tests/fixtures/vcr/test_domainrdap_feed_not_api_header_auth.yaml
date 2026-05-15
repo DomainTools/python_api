@@ -1957,4 +1957,384 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.7.4&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: "{\"timestamp\":\"2026-05-15T15:31:39Z\",\"domain\":\"nwprt.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-05-15T15:31:29Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"924635383_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"NWPRT.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/NWPRT.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/NWPRT.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.gmo-onamae.com\\\\/rdap\\\\/v1\\\\/domain\\\\/NWPRT.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.gmo-onamae.com\\\\/rdap\\\\/v1\\\\/domain\\\\/NWPRT.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"49\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/internet.gmo\\\\/\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.gmo-onamae.com\\\\/rdap\\\\/v1\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"49\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GMO
+        Internet Group, Inc. d\\\\/b\\\\/a Onamae.com\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+81.337709199\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@internet.gmo\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-13T15:28:55Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-04-13T15:28:55Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T17:12:29Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:20Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS1.GM111.PARKLOGIC.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"NS2.GM111.PARKLOGIC.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/nwprt.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/nwprt.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-05-15T15:31:29Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/nwprt.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_0\\\",\\\"icann_rdap_technical_implementation_guide_0\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Data
+        Policy\\\",\\\"description\\\":[\\\"result set truncated due to authorization\\\"]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://www.icann.org/wicf/\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://www.icann.org/wicf/\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://www.icann.org/wicf/\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Please query the RDAP service of the
+        Registrar of Record identified in this output for information on how to contact
+        the Registrar, Registrant, Admin, or Tech contact of the queried domain name.\\\",\\\"\\\",\\\"This
+        RDAP service is provided by GMO Internet and only contains information pertaining
+        to Internet domain names we have registered for our customers.\\\",\\\"GMO
+        Internet does not guarantee the accuracy of this data.\\\",\\\"\\\",\\\"By
+        using this service you are agreeing;\\\",\\\"\\\",\\\"(1) only to use the
+        data for lawful purposes.\\\",\\\"(2) not to use any information presented
+        here for any purpose other than determining ownership of domain names.\\\",\\\"...\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.gmo-onamae.com/tos\\\",\\\"rel\\\":\\\"alternate\\\",\\\"href\\\":\\\"https://rdap.gmo-onamae.com/tos\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"924635383_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"nwprt.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns1.gm111.parklogic.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns2.gm111.parklogic.com\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"49\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"GMO
+        Internet, Inc.\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"49\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+81.337709199\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@internet.gmo\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"111EB8FB04C\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"domain
+        expired\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"domain expired\\\"],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",[\\\"Cerulean
+        Tower 11F\\\",\\\"26-1 Sakuragaoka-cho\\\",\\\"Shibuya-ku\\\",\\\"Tokyo\\\",\\\"150-8512\\\",\\\"JP\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+81.354562555\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\"+81.354562556\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"admin@onamae.com\\\"]]],\\\"roles\\\":[\\\"registrant\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-13T15:28:53Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T17:12:29Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:36Z\\\"}]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"empty\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"domain
+        expired\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"domain expired\\\"],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",[\\\"Cerulean
+        Tower 11F\\\",\\\"26-1 Sakuragaoka-cho\\\",\\\"Shibuya-ku\\\",\\\"Tokyo\\\",\\\"150-8512\\\",\\\"JP\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+81.354562555\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\"+81.354562556\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"admin@onamae.com\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-14T20:09:04Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T17:12:29Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:36Z\\\"}]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"empty\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"domain
+        expired\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"domain expired\\\"],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",[\\\"Cerulean
+        Tower 11F\\\",\\\"26-1 Sakuragaoka-cho\\\",\\\"Shibuya-ku\\\",\\\"Tokyo\\\",\\\"150-8512\\\",\\\"JP\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+81.354562555\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\"+81.354562556\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"admin@onamae.com\\\"]]],\\\"roles\\\":[\\\"billing\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-14T20:09:04Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T17:12:29Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:36Z\\\"}]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"empty\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"domain
+        expired\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"domain expired\\\"],[\\\"adr\\\",{\\\"type\\\":\\\"work\\\"},\\\"text\\\",[\\\"Cerulean
+        Tower 11F\\\",\\\"26-1 Sakuragaoka-cho\\\",\\\"Shibuya-ku\\\",\\\"Tokyo\\\",\\\"150-8512\\\",\\\"JP\\\"]],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+81.354562555\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"text\\\",\\\"+81.354562556\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"admin@onamae.com\\\"]]],\\\"roles\\\":[\\\"administrative\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-15T02:41:03Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T17:12:29Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:36Z\\\"}]}]}],\\\"status\\\":[\\\"validated\\\",\\\"active\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.gmo-onamae.com/rdap/v1/domain/nwprt.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.gmo-onamae.com/rdap/v1/domain/nwprt.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"port43\\\":\\\"whois.discount-domain.com\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2007-04-13T15:28:56Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2026-04-13T06:28:55Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-04-13T22:31:56Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:36Z\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-05-15T15:31:31Z\",\"url\":\"https://rdap.gmo-onamae.com/rdap/v1/domain/NWPRT.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"contacts\":[],\"creation_date\":\"2007-04-13T15:28:56+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"nwprt.com\",\"domain_statuses\":[\"validated\",\"active\"],\"email_domains\":[\"internet.gmo\",\"onamae.com\"],\"emails\":[\"abuse@internet.gmo\",\"admin@onamae.com\"],\"expiration_date\":\"2027-04-13T15:28:55+00:00\",\"handle\":\"924635383_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2026-04-13T22:31:56+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/NWPRT.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.gmo-onamae.com/rdap/v1/domain/NWPRT.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.gmo-onamae.com/rdap/v1/domain/nwprt.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns1.gm111.parklogic.com\",\"ns2.gm111.parklogic.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@internet.gmo\",\"phone\":\"tel:+81.337709199\",\"roles\":[\"abuse\"]}],\"iana_id\":\"49\",\"name\":\"GMO
+        Internet, Inc.\"},\"unclassified_emails\":[\"admin@onamae.com\"]},\"registrar_request_url\":\"https://rdap.gmo-onamae.com/rdap/v1/domain/NWPRT.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/nwprt.com\"}}\n{\"timestamp\":\"2026-05-15T15:31:39Z\",\"domain\":\"esferasanta.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-05-15T15:31:34Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"3099212255_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"ESFERASANTA.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/ESFERASANTA.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/ESFERASANTA.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.spaceship.com\\\\/domain\\\\/ESFERASANTA.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.spaceship.com\\\\/domain\\\\/ESFERASANTA.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"3862\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.spaceship.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.spaceship.com\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"3862\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Spaceship,
+        Inc.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.9854014545\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@spaceship.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:21Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-05-13T21:50:21Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:27Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:20Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":true,\\\"dsData\\\":[{\\\"keyTag\\\":44147,\\\"algorithm\\\":13,\\\"digestType\\\":2,\\\"digest\\\":\\\"702D03F4EAAF688999D69A20482FE6352245F8E45E7588BE2057D702DBEFB640\\\"}]},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"LAUNCH1.SPACESHIP.NET\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"LAUNCH2.SPACESHIP.NET\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/esferasanta.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/esferasanta.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-05-15T15:31:34Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/esferasanta.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"redacted\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\"],\\\"lang\\\":\\\"en\\\",\\\"notices\\\":[{\\\"title\\\":\\\"RDAP
+        Terms of Service\\\",\\\"description\\\":[\\\"By querying Spaceship\u2019s
+        RDAP Domain Database, you agree to comply with Spaceship\u2019s RDAP Terms
+        of Service, including but not limited to the terms herein,  and you acknowledge
+        and agree that your information will be used in accordance with Spaceship
+        Privacy Policy (https://www.spaceship.com/legal/privacy-policy/), including
+        that Spaceship may retain certain details about queries to our RDAP Domain
+        Database for the purposes of detecting and preventing misuse.  If you do not
+        agree to any of these terms, do not access or use ,the RDAP Domain Database.\\\",\\\"Although
+        Spaceship believes the data to be reliable, you agree and acknowledge that
+        any information provided is 'as is' without any guarantee of accuracy.\\\",\\\"You
+        further agree that you will:\\\",\\\"1) Not misuse the RDAP Domain Database.
+        It is intended solely for query-based access and should not be used for or
+        relied upon for any other purpose.\\\",\\\"2) Not use the RDAP Domain Database
+        to allow, enable, or otherwise support the transmission of unsolicited, commercial
+        advertising or solicitations.\\\",\\\"3) Not access the RDAP Domain Database
+        through the use of high volume, automated electronic processes that send queries
+        or data to the systems of Spaceship, any other ICANN-accredited registrar,
+        or any registry operator.\\\",\\\"4) Not compile, repackage, disseminate,
+        or otherwise use the information contained in the RDAP Domain Database in
+        its entirety, or in any substantial portion, without our prior written permission.\\\",\\\"5)
+        You will only use the information contained in the RDAP Domain Database for
+        lawful purposes.\\\",\\\"We reserve the right to restrict or deny your access
+        to the RDAP Domain Database if we suspect that you have failed to comply with
+        these terms.\\\",\\\"We reserve the right to modify this agreement at any
+        time.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://www.spaceship.com/legal/registration-data-access-protocol-terms-of-service-agreement/\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"rel\\\":\\\"glossary\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"rel\\\":\\\"help\\\",\\\"type\\\":\\\"text/html\\\",\\\"value\\\":\\\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\\\"}]}],\\\"ldhName\\\":\\\"esferasanta.com\\\",\\\"objectClassName\\\":\\\"domain\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:21Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2027-05-13T21:50:21Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:27Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:37Z\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"launch2.spaceship.net\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2022-05-23T18:46:04Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-10-15T12:15:50Z\\\"}],\\\"remarks\\\":[]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"launch1.spaceship.net\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2022-05-23T18:46:05Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2025-10-15T12:15:50Z\\\"}],\\\"remarks\\\":[]}],\\\"secureDNS\\\":{\\\"zoneSigned\\\":true,\\\"delegationSigned\\\":true,\\\"dsData\\\":[{\\\"keyTag\\\":44147,\\\"algorithm\\\":13,\\\"digest\\\":\\\"702d03f4eaaf688999d69a20482fe6352245f8e45e7588be2057d702dbefb640\\\",\\\"digestType\\\":2}]},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"3862\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"3862\\\"}],\\\"links\\\":[{\\\"href\\\":\\\"https://spaceship.com\\\",\\\"rel\\\":\\\"about\\\",\\\"value\\\":\\\"https://rdap.spaceship.com/\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Spaceship,
+        Inc.\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"fax\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"support@spaceship.com\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"status\\\":[\\\"active\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Spaceship,
+        Inc.\\\"],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@spaceship.com\\\"]]]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2020-05-05T00:00:00Z\\\"}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"019e2351c01e751580f1213fb40c141d-SPACESH\\\",\\\"roles\\\":[\\\"registrant\\\",\\\"technical\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"Privacy
+        service provided by Withheld for Privacy ehf\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"IS\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kalkofnsvegur
+        2\\\",\\\"Reykjavik\\\",\\\"Capital Region\\\",\\\"101\\\",\\\"\\\"]],[\\\"tel\\\",{\\\"type\\\":[\\\"voice\\\"]},\\\"uri\\\",\\\"tel:+354.4212434\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://www.spaceship.com/domains/whois/contact/?d=esferasanta.com\\\"]]],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:21Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-13T21:50:27Z\\\"}]}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.spaceship.com/domain/esferasanta.com\\\",\\\"rel\\\":\\\"self\\\",\\\"type\\\":\\\"application/rdap+json\\\",\\\"value\\\":\\\"https://rdap.spaceship.com/domain/esferasanta.com\\\"}],\\\"redacted\\\":[{\\\"name\\\":{\\\"type\\\":\\\"Registry
+        Domain ID\\\"},\\\"method\\\":\\\"removal\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Name\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Email\\\"},\\\"replacementPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='contact-uri')]\\\",\\\"method\\\":\\\"replacementValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Name\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[1]=='technical')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\\"method\\\":\\\"emptyValue\\\"},{\\\"name\\\":{\\\"type\\\":\\\"Tech
+        Email\\\"},\\\"replacementPath\\\":\\\"$.entities[?(@.roles[1]=='technical')].vcardArray[1][?(@[0]=='contact-uri')]\\\",\\\"method\\\":\\\"replacementValue\\\"}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-05-15T15:31:36Z\",\"url\":\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"contacts\":[{\"city\":\"Reykjavik\",\"country\":\"IS\",\"email\":\"https://www.spaceship.com/domains/whois/contact/?d=esferasanta.com\",\"handle\":\"019e2351c01e751580f1213fb40c141d-SPACESH\",\"name\":\"\",\"org\":\"Privacy
+        service provided by Withheld for Privacy ehf\",\"phone\":\"tel:+354.4212434\",\"postal\":\"101\",\"region\":\"Capital
+        Region\",\"roles\":[\"registrant\",\"technical\"],\"street\":\"Kalkofnsvegur
+        2\"}],\"creation_date\":\"2026-05-13T21:50:21+00:00\",\"dnssec\":{\"signed\":true},\"domain\":\"esferasanta.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"spaceship.com\"],\"emails\":[\"abuse@spaceship.com\",\"https://www.spaceship.com/domains/whois/contact/?d=esferasanta.com\",\"support@spaceship.com\"],\"expiration_date\":\"2027-05-13T21:50:21+00:00\",\"handle\":\"3099212255_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2026-05-13T21:50:27+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/ESFERASANTA.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.spaceship.com/domain/esferasanta.com\",\"rel\":\"self\"}],\"nameservers\":[\"launch2.spaceship.net\",\"launch1.spaceship.net\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@spaceship.com\",\"name\":\"Spaceship,
+        Inc.\",\"phone\":\"tel:+1.6613102107\",\"roles\":[\"abuse\"]}],\"iana_id\":\"3862\",\"name\":\"Spaceship,
+        Inc.\"},\"unclassified_emails\":[\"support@spaceship.com\"]},\"registrar_request_url\":\"https://rdap.spaceship.com/domain/ESFERASANTA.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/esferasanta.com\"}}\n{\"timestamp\":\"2026-05-15T15:31:39Z\",\"domain\":\"theperfectfit-tt.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-05-15T15:31:34Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\",\\\"redacted\\\"],\\\"objectClassName\\\":\\\"domain\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"notices\\\":[{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\\\",\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\\\",\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"By submitting an inquiry, you agree
+        to the Squarespace Terms of Service (including without limitation our Acceptable
+        Use Policy) and the limitations of warranty set forth therein. This service
+        is intended only for query-based access. You agree that you will use this
+        data only for lawful purposes and will not to use this data to allow, enable,
+        or otherwise make possible, dissemination or collection of this data in part
+        or in its entirety for any purpose such as the transmission of unsolicited
+        advertising and solicitations of any kind, including spam. You further agree
+        not to use this data to enable high volume, automated or robotic electronic
+        processes designed to collect or compile this data for any purpose, including
+        mining this data for your own personal or commercial purposes, or use this
+        data in any way that violates applicable laws and regulations. We reserve
+        the right to restrict or deny your access to this service if we suspect that
+        you have failed to comply with these terms. We reserve the right to modify
+        this agreement at any time.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://www.squarespace.com/terms-of-service\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"lang\\\":\\\"en-US\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventActor\\\":\\\"Squarespace
+        Domains II LLC\\\",\\\"eventDate\\\":\\\"2025-05-13T17:26:55Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventActor\\\":\\\"Squarespace Domains II LLC\\\",\\\"eventDate\\\":\\\"2026-04-28T20:37:20Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventActor\\\":\\\"Squarespace
+        Domains II LLC\\\",\\\"eventDate\\\":\\\"2027-05-13T17:26:55Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventActor\\\":\\\"Squarespace Domains II LLC\\\",\\\"eventDate\\\":\\\"2027-05-13T17:26:55Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventActor\\\":\\\"Squarespace Domains II
+        LLC\\\",\\\"eventDate\\\":\\\"2026-04-28T20:37:20Z\\\"}],\\\"status\\\":[\\\"client
+        delete prohibited\\\",\\\"client transfer prohibited\\\"],\\\"port43\\\":\\\"whois.squarespace.domains\\\",\\\"handle\\\":\\\"2983008500_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"theperfectfit-tt.com\\\",\\\"unicodeName\\\":\\\"theperfectfit-tt.com\\\",\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"SQSP_CONTACT_04988dba-ac70-4cec-b9d3-3eabcc48b5f1\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"contact-uri\\\",{},\\\"uri\\\",\\\"https://domains.squarespace.com/whois-contact-form\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"TT\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"]],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"]]],\\\"roles\\\":[\\\"registrant\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Google
+        Workspace\\\"]]],\\\"roles\\\":[\\\"reseller\\\"]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.squarespace.domains/\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://domains.squarespace.com/\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"handle\\\":\\\"895\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Squarespace
+        Domains II LLC\\\"]]],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"895\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Abuse
+        Contact\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.6466935324\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse-complaints@squarespace.com\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}]}],\\\"redacted\\\":[{\\\"name\\\":{\\\"type\\\":\\\"Registrant
+        Name\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='fn')][3]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"emptyValue\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Street\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][:3]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"emptyValue\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant City\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][3]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"emptyValue\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Postal Code\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='adr')][3][5]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"emptyValue\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Organization\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='org')]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"removal\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Phone\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[1].type=='voice')]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"removal\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Fax\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[1].type=='fax')]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"removal\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registrant Email\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].vcardArray[1][?(@[0]=='contact-uri')][3]\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"replacementValue\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        Policy\\\"}}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns-cloud-e4.googledomains.com\\\",\\\"unicodeName\\\":\\\"ns-cloud-e4.googledomains.com\\\",\\\"ipAddresses\\\":{\\\"v4\\\":[],\\\"v6\\\":[]}},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns-cloud-e3.googledomains.com\\\",\\\"unicodeName\\\":\\\"ns-cloud-e3.googledomains.com\\\",\\\"ipAddresses\\\":{\\\"v4\\\":[],\\\"v6\\\":[]}},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns-cloud-e2.googledomains.com\\\",\\\"unicodeName\\\":\\\"ns-cloud-e2.googledomains.com\\\",\\\"ipAddresses\\\":{\\\"v4\\\":[],\\\"v6\\\":[]}},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"ns-cloud-e1.googledomains.com\\\",\\\"unicodeName\\\":\\\"ns-cloud-e1.googledomains.com\\\",\\\"ipAddresses\\\":{\\\"v4\\\":[],\\\"v6\\\":[]}}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-05-15T15:31:35Z\",\"url\":\"https://rdap.squarespace.domains/domain/THEPERFECTFIT-TT.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\",\"redacted\"],\"contacts\":[{\"city\":\"\",\"country\":\"TT\",\"email\":\"https://domains.squarespace.com/whois-contact-form\",\"handle\":\"SQSP_CONTACT_04988dba-ac70-4cec-b9d3-3eabcc48b5f1\",\"name\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"registrant\"],\"street\":\"\"},{\"name\":\"Google
+        Workspace\",\"roles\":[\"reseller\"]}],\"creation_date\":\"2025-05-13T17:26:55+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"theperfectfit-tt.com\",\"domain_statuses\":[\"client
+        delete prohibited\",\"client transfer prohibited\"],\"email_domains\":[\"squarespace.com\"],\"emails\":[\"abuse-complaints@squarespace.com\",\"https://domains.squarespace.com/whois-contact-form\"],\"expiration_date\":\"2027-05-13T17:26:55+00:00\",\"handle\":\"2983008500_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2026-04-28T20:37:20+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/THEPERFECTFIT-TT.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.squarespace.domains/domain/THEPERFECTFIT-TT.COM\",\"rel\":\"related\"},{\"href\":\"https://rdap.squarespace.domains/domain/theperfectfit-tt.com\",\"rel\":\"self\"}],\"nameservers\":[\"ns-cloud-e4.googledomains.com\",\"ns-cloud-e3.googledomains.com\",\"ns-cloud-e2.googledomains.com\",\"ns-cloud-e1.googledomains.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse-complaints@squarespace.com\",\"name\":\"Abuse
+        Contact\",\"phone\":\"tel:+1.6466935324\",\"roles\":[\"abuse\"]}],\"iana_id\":\"895\",\"name\":\"Squarespace
+        Domains II LLC\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.squarespace.domains/domain/THEPERFECTFIT-TT.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/theperfectfit-tt.com\"}}\n{\"timestamp\":\"2026-05-15T15:31:39Z\",\"domain\":\"sexgay69.com\",\"raw_record\":{\"first_request_timestamp\":\"2026-05-15T15:31:33Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2780691975_DOMAIN_COM-VRSN\\\",\\\"ldhName\\\":\\\"SEXGAY69.COM\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/SEXGAY69.COM\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/SEXGAY69.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/domain\\\\/SEXGAY69.COM\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/domain\\\\/SEXGAY69.COM\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"2278\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.networksolutions.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.snapnames.com\\\\/rdap\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"2278\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Wild
+        Bunch Domains, LLC\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.8003337680\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@web.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2023-05-13T18:32:09Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-05-13T18:32:09Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-15T07:14:23Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T15:31:20Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"SK.S5.ANS1.NS148.ZTOMY.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"SK.S5.ANS2.NS148.ZTOMY.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/sexgay69.com\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/com\\\\/v1\\\\/domain\\\\/sexgay69.com\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-05-15T15:31:33Z\",\"url\":\"https://rdap.verisign.com/com/v1/domain/sexgay69.com\"},{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_response_profile_1\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"redacted\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https://icann.org/epp\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\\\",\\\"rel\\\":\\\"glossary\\\",\\\"href\\\":\\\"https://icann.org/epp\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https://icann.org/wicf\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\\\",\\\"rel\\\":\\\"help\\\",\\\"href\\\":\\\"https://icann.org/wicf\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"The data provided by the Registration
+        Data Access Protocol (\u201CRDAP\u201D) and use of our RDAP service is governed
+        by the RDAP terms below. We reserve the right to modify these RDAP terms at
+        any time.\\\",\\\"The information in the RDAP database is provided to you
+        for informational purposes only, on an \\\\\\\"as is\\\\\\\" basis without
+        any guarantee of accuracy.\\\",\\\"By submitting a query, you certify that
+        you have a legitimate purpose for requesting the data, that you will only
+        use this data for lawful purposes and delete the data immediately when the
+        data is no longer necessary for your lawful or legitimate purpose, and that,
+        under no circumstances, will you use this data to: a) allow, enable, or otherwise
+        support the transmission of unsolicited, commercial advertising or solicitations;
+        or (b) enable high volume, automated electronic processes that send queries
+        or data to the systems of any registry operator or ICANN-accredited registrar,
+        except as reasonably necessary to register domain names or modify existing
+        registrations.\\\",\\\"The compilation, repackaging, dissemination, or other
+        use of this data is expressly prohibited.\\\",\\\"We reserve the right to
+        restrict or terminate access to the database at any time in our sole discretion
+        including, without limitation, for excessive querying of the database or for
+        failure to otherwise abide by these RDAP terms.\\\",\\\"Your IP address, the
+        queried domain, the response, and a timestamp is stored for the purposes of
+        maintaining the RDAP service and to ensure adherence with these RDAP terms.\\\",\\\"By
+        submitting this query, you agree to these RDAP terms.\\\",\\\"NOTE: THIS RDAP
+        DATABASE IS A CONTACT DATABASE ONLY. LACK OF A DOMAIN RECORD DOES NOT SIGNIFY
+        DOMAIN AVAILABILITY.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\\\",\\\"rel\\\":\\\"terms-of-service\\\",\\\"href\\\":\\\"https://legal.newfold.com\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"2780691975_DOMAIN_COM-VRSN\\\",\\\"remarks\\\":[{\\\"title\\\":\\\"Terms
+        of Use\\\",\\\"description\\\":[\\\"The data in Wild Bunch Domains, LLC's
+        WHOIS database is provided to you byWild Bunch Domains, LLC for information
+        purposes only, that is, to assist you in\\\\nobtaining information about or
+        related to a domain name registration\\\\nrecord.  Wild Bunch Domains, LLC
+        makes this information available \\\\\\\"as is,\\\\\\\" and\\\\ndoes not guarantee
+        its accuracy.  By submitting a WHOIS query, you\\\\nagree that you will use
+        this data only for lawful purposes and that,\\\\nunder no circumstances will
+        you use this data to: (1) allow, enable,\\\\nor otherwise support the transmission
+        of mass unsolicited, commercial\\\\nadvertising or solicitations via direct
+        mail, electronic mail, or by\\\\ntelephone; or (2) enable high volume, automated,
+        electronic processes\\\\nthat apply to Wild Bunch Domains, LLC (or its systems).
+        \ The compilation,\\\\nrepackaging, dissemination or other use of this data
+        is expressly\\\\nprohibited without the prior written consent of Wild Bunch
+        Domains, LLC.\\\\nWild Bunch Domains, LLC reserves the right to modify these
+        terms at any time.\\\\nBy submitting this query, you agree to abide by these
+        terms.\\\"]},{\\\"title\\\":\\\"ICANN WHOIS Data Inaccuracy\\\",\\\"description\\\":[\\\"URL
+        of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/\\\"],\\\"links\\\":[{\\\"value\\\":\\\"http://wdprs.internic.net/\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"http://wdprs.internic.net/\\\",\\\"type\\\":\\\"text/html\\\"}]},{\\\"title\\\":\\\"Whois
+        status codes\\\",\\\"description\\\":[\\\"For more information on Whois status
+        codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\"],\\\"links\\\":[{\\\"value\\\":\\\"https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.\\\",\\\"type\\\":\\\"text/html\\\"}]}],\\\"links\\\":[{\\\"value\\\":\\\"http://rdap.snapnames.com/rdap/domain/sexgay69.com.\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"http://rdap.snapnames.com/rdap/domain/sexgay69.com.\\\",\\\"type\\\":\\\"application/rdap+json\\\"}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2023-05-13T18:32:09Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-05-15T07:14:24Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-05-15T07:14:24Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-05-13T18:32:09Z\\\"},{\\\"eventAction\\\":\\\"registrar
+        expiration\\\",\\\"eventDate\\\":\\\"2027-05-13T18:32:09Z\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"port43\\\":\\\"whois.web.com\\\",\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"2278\\\",\\\"links\\\":[{\\\"value\\\":\\\"https://rdap.snapnames.com/rdap/\\\",\\\"rel\\\":\\\"about\\\",\\\"href\\\":\\\"https://www.networksolutions.com\\\",\\\"type\\\":\\\"text/html\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Wild
+        Bunch Domains, LLC\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"domain.operations@web.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.8773812449\\\"]]]}],\\\"roles\\\":[\\\"registrar\\\"],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"2278\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Wild
+        Bunch Domains, LLC\\\"]]]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"technical\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"PERFECT
+        PRIVACY, LLC\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"74c3nouhd0hvs8k91ueal51nsp@domaindiscreet.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.9027492701\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"]]]]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"registrant\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"PERFECT
+        PRIVACY, LLC\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"74c3nouhd0hvs8k91ueal51nsp@domaindiscreet.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"text\\\",\\\"+1.9027492701\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"US\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"5335
+        Gate Parkway\\\",\\\"Jacksonville\\\",\\\"FL\\\",\\\"32256\\\",\\\"\\\"]]]]}],\\\"lang\\\":\\\"en\\\",\\\"ldhName\\\":\\\"sexgay69.com\\\",\\\"unicodeName\\\":\\\"sexgay69.com\\\",\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"sk.s5.ans1.ns148.ztomy.com\\\",\\\"unicodeName\\\":\\\"sk.s5.ans1.ns148.ztomy.com\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"sk.s5.ans2.ns148.ztomy.com\\\",\\\"unicodeName\\\":\\\"sk.s5.ans2.ns148.ztomy.com\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"redacted\\\":[{\\\"name\\\":{\\\"type\\\":\\\"Registry
+        Tech ID\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='technical')].handle\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"removal\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        policy\\\"}},{\\\"name\\\":{\\\"type\\\":\\\"Registry Registrant ID\\\"},\\\"postPath\\\":\\\"$.entities[?(@.roles[0]=='registrant')].handle\\\",\\\"pathLang\\\":\\\"jsonpath\\\",\\\"method\\\":\\\"removal\\\",\\\"reason\\\":{\\\"description\\\":\\\"Server
+        policy\\\"}}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-05-15T15:31:34Z\",\"url\":\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"redacted\"],\"contacts\":[{\"city\":\"\",\"country\":\"\",\"email\":\"74c3nouhd0hvs8k91ueal51nsp@domaindiscreet.com\",\"name\":\"PERFECT
+        PRIVACY, LLC\",\"phone\":\"+1.9027492701\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"technical\"],\"street\":\"\"},{\"city\":\"Jacksonville\",\"country\":\"US\",\"email\":\"74c3nouhd0hvs8k91ueal51nsp@domaindiscreet.com\",\"name\":\"PERFECT
+        PRIVACY, LLC\",\"phone\":\"+1.9027492701\",\"postal\":\"32256\",\"region\":\"FL\",\"roles\":[\"registrant\"],\"street\":\"5335
+        Gate Parkway\"}],\"creation_date\":\"2023-05-13T18:32:09+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"sexgay69.com\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"domaindiscreet.com\",\"web.com\"],\"emails\":[\"74c3nouhd0hvs8k91ueal51nsp@domaindiscreet.com\",\"abuse@web.com\",\"domain.operations@web.com\"],\"expiration_date\":\"2027-05-13T18:32:09+00:00\",\"handle\":\"2780691975_DOMAIN_COM-VRSN\",\"last_changed_date\":\"2026-05-15T07:14:24+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/com/v1/domain/SEXGAY69.COM\",\"rel\":\"self\"},{\"href\":\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\",\"rel\":\"related\"},{\"href\":\"http://rdap.snapnames.com/rdap/domain/sexgay69.com.\",\"rel\":\"self\"}],\"nameservers\":[\"sk.s5.ans1.ns148.ztomy.com\",\"sk.s5.ans2.ns148.ztomy.com\"],\"registrar\":{\"contacts\":[{\"email\":\"domain.operations@web.com\",\"name\":\"Wild
+        Bunch Domains, LLC\",\"phone\":\"+1.8773812449\",\"roles\":[\"abuse\"]}],\"iana_id\":\"2278\",\"name\":\"Wild
+        Bunch Domains, LLC\"},\"unclassified_emails\":[\"abuse@web.com\"]},\"registrar_request_url\":\"https://rdap.snapnames.com/rdap/domain/SEXGAY69.COM\",\"registry_request_url\":\"https://rdap.verisign.com/com/v1/domain/sexgay69.com\"}}\n{\"timestamp\":\"2026-05-15T15:31:39Z\",\"domain\":\"dartmoorarchive.org\",\"raw_record\":{\"first_request_timestamp\":\"2026-05-15T15:31:34Z\",\"requests\":[{\"data\":\"{\\n
+        \ \\\"rdapConformance\\\": [\\n    \\\"rdap_level_0\\\",\\n    \\\"icann_rdap_response_profile_1\\\",\\n
+        \   \\\"icann_rdap_technical_implementation_guide_1\\\",\\n    \\\"redacted\\\"\\n
+        \ ],\\n  \\\"notices\\\": [\\n    {\\n      \\\"title\\\": \\\"Terms of Service\\\",\\n
+        \     \\\"description\\\": [\\n        \\\"Public Interest Registry provides
+        this RDAP service for informational purposes only, and to assist persons in
+        obtaining information about or related to a domain name registration record.
+        Public Interest Registry does not guarantee its accuracy. Users accessing
+        the Public Interest Registry RDAP service agree to use the data only for lawful
+        purposes, and under no circumstances may this data be used to: a) allow, enable,
+        or otherwise support the transmission by e-mail, telephone, or facsimile of
+        mass unsolicited, commercial advertising or solicitations to entities other
+        than the registrar's own existing customers and b) enable high volume, automated,
+        electronic processes that send queries or data to the systems of Public Interest
+        Registry or any ICANN-accredited registrar, except as reasonably necessary
+        to register domain names or modify existing registrations. When using the
+        Public Interest Registry RDAP service, please consider the following: the
+        RDAP service is not a replacement for standard EPP commands to the SRS service.
+        RDAP is not considered authoritative for registered domain objects. The RDAP
+        service may be scheduled for downtime during production or OT\\u0026E maintenance
+        periods. Queries to the RDAP services are throttled. If too many queries are
+        received from a single IP address within a specified time, the service will
+        begin to reject further queries for a period of time to prevent disruption
+        of RDAP service access. Abuse of the RDAP system through data mining is mitigated
+        by detecting and limiting bulk query access from single sources. Where applicable,
+        the presence of a [Non-Public Data] tag indicates that such data is not made
+        publicly available due to applicable data privacy laws or requirements. Should
+        you wish to contact the registrant, please refer to the RDAP records available
+        through the registrar URL listed above. Access to non-public data may be provided,
+        upon request, where it can be reasonably confirmed that the requester holds
+        a specific legitimate interest and a proper legal basis for accessing the
+        withheld data. Access to this data can be requested by submitting a request
+        to WHOISrequest@pir.org. Public Interest Registry Inc. reserves the right
+        to modify these terms at any time. By submitting this query, you agree to
+        abide by this policy.\\\"\\n      ],\\n      \\\"links\\\": [\\n        {\\n
+        \         \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \         \\\"rel\\\": \\\"terms-of-service\\\",\\n          \\\"href\\\":
+        \\\"https://thenew.org/org-people/about-pir/policies/\\\",\\n          \\\"type\\\":
+        \\\"text/html\\\"\\n        }\\n      ]\\n    },\\n    {\\n      \\\"title\\\":
+        \\\"Status Codes\\\",\\n      \\\"description\\\": [\\n        \\\"For more
+        information on domain status codes, please visit https://icann.org/epp\\\"\\n
+        \     ],\\n      \\\"links\\\": [\\n        {\\n          \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \         \\\"rel\\\": \\\"glossary\\\",\\n          \\\"href\\\": \\\"https://icann.org/epp\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   },\\n    {\\n      \\\"title\\\": \\\"RDDS Inaccuracy Complaint Form\\\",\\n
+        \     \\\"description\\\": [\\n        \\\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\\\"\\n      ],\\n      \\\"links\\\":
+        [\\n        {\\n          \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \         \\\"rel\\\": \\\"help\\\",\\n          \\\"href\\\": \\\"https://icann.org/wicf\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   }\\n  ],\\n  \\\"ldhName\\\": \\\"dartmoorarchive.org\\\",\\n  \\\"unicodeName\\\":
+        \\\"dartmoorarchive.org\\\",\\n  \\\"nameservers\\\": [\\n    {\\n      \\\"ldhName\\\":
+        \\\"mark.ns.cloudflare.com\\\",\\n      \\\"unicodeName\\\": \\\"mark.ns.cloudflare.com\\\",\\n
+        \     \\\"objectClassName\\\": \\\"nameserver\\\",\\n      \\\"handle\\\":
+        \\\"f5e7cae045e9408197f3abba2d6e606e-LROR\\\",\\n      \\\"status\\\": [\\n
+        \       \\\"associated\\\"\\n      ]\\n    },\\n    {\\n      \\\"ldhName\\\":
+        \\\"riya.ns.cloudflare.com\\\",\\n      \\\"unicodeName\\\": \\\"riya.ns.cloudflare.com\\\",\\n
+        \     \\\"objectClassName\\\": \\\"nameserver\\\",\\n      \\\"handle\\\":
+        \\\"ea40cf463f7743b7b9326f065172800c-LROR\\\",\\n      \\\"status\\\": [\\n
+        \       \\\"associated\\\"\\n      ]\\n    }\\n  ],\\n  \\\"secureDNS\\\":
+        {\\n    \\\"delegationSigned\\\": false,\\n    \\\"maxSigLife\\\": 1\\n  },\\n
+        \ \\\"redacted\\\": [\\n    {\\n      \\\"name\\\": {\\n        \\\"type\\\":
+        \\\"Registry Domain ID\\\"\\n      },\\n      \\\"prePath\\\": \\\"$.handle\\\",\\n
+        \     \\\"pathLang\\\": \\\"jsonpath\\\",\\n      \\\"method\\\": \\\"removal\\\"\\n
+        \   }\\n  ],\\n  \\\"objectClassName\\\": \\\"domain\\\",\\n  \\\"status\\\":
+        [\\n    \\\"client transfer prohibited\\\"\\n  ],\\n  \\\"events\\\": [\\n
+        \   {\\n      \\\"eventAction\\\": \\\"transfer\\\",\\n      \\\"eventDate\\\":
+        \\\"2023-09-10T08:28:28.131Z\\\"\\n    },\\n    {\\n      \\\"eventAction\\\":
+        \\\"expiration\\\",\\n      \\\"eventDate\\\": \\\"2026-10-05T11:45:15.553Z\\\"\\n
+        \   },\\n    {\\n      \\\"eventAction\\\": \\\"registration\\\",\\n      \\\"eventDate\\\":
+        \\\"2006-10-05T11:45:15.553Z\\\"\\n    },\\n    {\\n      \\\"eventAction\\\":
+        \\\"last changed\\\",\\n      \\\"eventDate\\\": \\\"2025-09-10T04:19:28.474Z\\\"\\n
+        \   },\\n    {\\n      \\\"eventAction\\\": \\\"last update of RDAP database\\\",\\n
+        \     \\\"eventDate\\\": \\\"2026-05-15T15:31:37.338Z\\\"\\n    }\\n  ],\\n
+        \ \\\"entities\\\": [\\n    {\\n      \\\"vcardArray\\\": [\\n        \\\"vcard\\\",\\n
+        \       [\\n          [\\n            \\\"version\\\",\\n            {},\\n
+        \           \\\"text\\\",\\n            \\\"4.0\\\"\\n          ],\\n          [\\n
+        \           \\\"fn\\\",\\n            {},\\n            \\\"text\\\",\\n            \\\"Cloudflare,
+        Inc.\\\"\\n          ]\\n        ]\\n      ],\\n      \\\"roles\\\": [\\n
+        \       \\\"registrar\\\"\\n      ],\\n      \\\"publicIds\\\": [\\n        {\\n
+        \         \\\"type\\\": \\\"IANA Registrar ID\\\",\\n          \\\"identifier\\\":
+        \\\"1910\\\"\\n        }\\n      ],\\n      \\\"objectClassName\\\": \\\"entity\\\",\\n
+        \     \\\"handle\\\": \\\"1910\\\",\\n      \\\"entities\\\": [\\n        {\\n
+        \         \\\"vcardArray\\\": [\\n            \\\"vcard\\\",\\n            [\\n
+        \             [\\n                \\\"version\\\",\\n                {},\\n
+        \               \\\"text\\\",\\n                \\\"4.0\\\"\\n              ],\\n
+        \             [\\n                \\\"fn\\\",\\n                {},\\n                \\\"text\\\",\\n
+        \               \\\"\\\"\\n              ],\\n              [\\n                \\\"tel\\\",\\n
+        \               {\\n                  \\\"type\\\": \\\"voice\\\"\\n                },\\n
+        \               \\\"uri\\\",\\n                \\\"tel:+1.6503198930\\\"\\n
+        \             ],\\n              [\\n                \\\"email\\\",\\n                {},\\n
+        \               \\\"text\\\",\\n                \\\"registrar-abuse@cloudflare.com\\\"\\n
+        \             ]\\n            ]\\n          ],\\n          \\\"roles\\\":
+        [\\n            \\\"abuse\\\"\\n          ],\\n          \\\"objectClassName\\\":
+        \\\"entity\\\"\\n        }\\n      ],\\n      \\\"links\\\": [\\n        {\\n
+        \         \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/entity/1910\\\",\\n
+        \         \\\"rel\\\": \\\"self\\\",\\n          \\\"href\\\": \\\"https://rdap.publicinterestregistry.org/rdap/entity/1910\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        },\\n        {\\n
+        \         \\\"value\\\": \\\"https://rdap.cloudflare.com/rdap/v1\\\",\\n          \\\"rel\\\":
+        \\\"about\\\",\\n          \\\"href\\\": \\\"https://rdap.cloudflare.com/rdap/v1\\\",\\n
+        \         \\\"type\\\": \\\"application/rdap+json\\\"\\n        }\\n      ]\\n
+        \   }\\n  ],\\n  \\\"links\\\": [\\n    {\\n      \\\"value\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \     \\\"rel\\\": \\\"related\\\",\\n      \\\"href\\\": \\\"https://rdap.cloudflare.com/rdap/v1/domain/dartmoorarchive.org\\\",\\n
+        \     \\\"type\\\": \\\"application/rdap+json\\\"\\n    },\\n    {\\n      \\\"value\\\":
+        \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \     \\\"rel\\\": \\\"self\\\",\\n      \\\"href\\\": \\\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\\\",\\n
+        \     \\\"type\\\": \\\"application/rdap+json\\\"\\n    }\\n  ]\\n}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-05-15T15:31:36Z\",\"url\":\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"redacted\"],\"contacts\":[],\"creation_date\":\"2006-10-05T11:45:15.553000+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"dartmoorarchive.org\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"cloudflare.com\",\"pir.org\"],\"emails\":[\"registrar-abuse@cloudflare.com\",\"whoisrequest@pir.org\"],\"expiration_date\":\"2026-10-05T11:45:15.553000+00:00\",\"last_changed_date\":\"2025-09-10T04:19:28.474000+00:00\",\"links\":[{\"href\":\"https://rdap.cloudflare.com/rdap/v1/domain/dartmoorarchive.org\",\"rel\":\"related\"},{\"href\":\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\",\"rel\":\"self\"},{\"href\":\"https://rdap.cloudflare.com/rdap/v1/domain/dartmoorarchive.org\",\"rel\":\"related\"},{\"href\":\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\",\"rel\":\"self\"}],\"nameservers\":[\"mark.ns.cloudflare.com\",\"riya.ns.cloudflare.com\"],\"registrar\":{\"contacts\":[{\"email\":\"registrar-abuse@cloudflare.com\",\"name\":\"\",\"phone\":\"tel:+1.6503198930\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1910\",\"name\":\"Cloudflare,
+        Inc.\"},\"unclassified_emails\":[\"whoisrequest@pir.org\"]},\"registrar_request_url\":\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\",\"registry_request_url\":\"https://rdap.publicinterestregistry.org/rdap/domain/dartmoorarchive.org\"}}\n"
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 15 May 2026 15:31:40 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=atlav8u2onq1pc2nu67a1jd1d5lh4ppun33bqrn8kt39i625obfk3ojittdj4jcnhg01niu2obd59b2b5c25k4c8dm1200qs76ot8b9;
+        expires=Sun, 14-Jun-2026 15:31:40 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=0544d088dd78b7e9c2b88f576fce2331; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - bbb67a02-acb5-4279-b45c-70ede32c489e
+    status:
+      code: 200
+      message: OK
 version: 1
