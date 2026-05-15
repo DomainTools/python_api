@@ -1156,4 +1156,194 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.7.4&top=2
+  response:
+    body:
+      string: '{"timestamp":"2026-05-15T15:31:38Z","domain":"ascendglobal.com.au","raw_record":{"first_request_timestamp":"2026-05-15T15:31:34Z","requests":[{"data":"{\n  \"rdapConformance\":
+        [\n    \"rdap_level_0\",\n    \"auda_rdap_response_profile_0\",\n    \"auData_level_0\",\n    \"redacted\"\n  ],\n  \"notices\":
+        [\n    {\n      \"title\": \"Terms of Service\",\n      \"description\": [\n        \"Access
+        to RDAP information is provided to assist persons in determining the contents
+        of a domain name registration record in the registry database. The data in
+        this record is provided by Identity Digital Australia Pty Ltd on behalf of
+        .au Domain Administration Limited (auDA) for informational purposes only,
+        and neither Identity Digital nor .au Domain Administration Limited (auDA)
+        guarantee its accuracy. This service is intended only for query-based access.
+        You agree that you will use this data only for lawful purposes and that, under
+        no circumstances will you use this data to (a) allow, enable, or otherwise
+        support the transmission by e-mail, telephone, facsimile, or any other electronic
+        means of communication, of mass unsolicited communications, including commercial
+        advertising or solicitations to entities other than the data recipient''s
+        own existing customers or for the collection of data sets to which the data
+        recipient has no other legal source of access; or (b) enable high volume,
+        automated, electronic processes that send queries or data to the systems of
+        Identity Digital, a Registrar, or Registry Operator except as reasonably necessary
+        to register domain names or modify existing registrations. When using the
+        RDAP service, please consider the following: the RDAP service is not a replacement
+        for standard EPP commands to the SRS service. RDAP is not considered authoritative
+        for registered domain objects. The RDAP service may be scheduled for downtime
+        during production or OT\u0026E maintenance periods. Queries to the RDAP services
+        are throttled. If too many queries are received from a single IP address within
+        a specified time, the service will begin to reject further queries for a period
+        of time to prevent disruption of RDAP service access. Abuse of the RDAP system
+        through data mining is mitigated by detecting and limiting bulk query access
+        from single sources. Where applicable, the presence of a [Non-Public Data]
+        tag indicates that such data is not made publicly available due to applicable
+        data privacy laws or requirements. Should you wish to contact the registrant,
+        please refer to the RDAP records available through the registrar URL listed
+        above. Access to non-public data may be provided, upon request, where it can
+        be confirmed that the requester holds a legal entitlement to access the withheld
+        data. The RDAP Service is provided for information purposes only. By using
+        the RDAP Service, you agree to be bound by these terms and conditions. The
+        RDAP Service is operated in accordance with the auDA Policy available at:
+        https://www.auda.org.au/whois-policy\"\n      ],\n      \"links\": [\n        {\n          \"value\":
+        \"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au\",\n          \"rel\":
+        \"terms-of-service\",\n          \"href\": \"https://www.auda.org.au/whois-policy\",\n          \"type\":
+        \"text/html\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Status
+        Codes\",\n      \"description\": [\n        \"For more information on domain
+        status codes, please visit https://www.identitydigital.au/whois-status-codes/\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au\",\n          \"rel\":
+        \"glossary\",\n          \"href\": \"https://www.identitydigital.au/whois-status-codes/\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    },\n    {\n      \"title\":
+        \"RDDS Inaccuracy Complaint Form\",\n      \"description\": [\n        \"URL
+        of the auDA RDDS Inaccuracy Complaint Form: https://www.auda.org.au/au-domain-names/complaints-and-disputes/au-complaints/submit-a-complaint/\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au\",\n          \"rel\":
+        \"help\",\n          \"href\": \"https://www.auda.org.au/au-domain-names/complaints-and-disputes/au-complaints/submit-a-complaint/\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"ldhName\":
+        \"ascendglobal.com.au\",\n  \"unicodeName\": \"ascendglobal.com.au\",\n  \"auData_statusReasons\":
+        [\n    {\n      \"auData_status\": \"server renew prohibited\",\n      \"auData_statusReason\":
+        [\n        \"Not Currently Eligible For Renewal\"\n      ]\n    }\n  ],\n  \"auData_eligibility\":
+        [\n    {\n      \"name\": \"registrant name\",\n      \"value\": \"ASCEND
+        GLOBAL PTY LTD\"\n    },\n    {\n      \"name\": \"registrant id\",\n      \"value\":
+        \"ABN 34638767209\"\n    },\n    {\n      \"name\": \"eligibility type\",\n      \"value\":
+        \"Company\"\n    }\n  ],\n  \"nameservers\": [\n    {\n      \"ldhName\":
+        \"ns67.domaincontrol.com\",\n      \"unicodeName\": \"ns67.domaincontrol.com\",\n      \"objectClassName\":
+        \"nameserver\",\n      \"handle\": \"3531fb28f71340b68429d7ca970aafee-AU\",\n      \"status\":
+        [\n        \"associated\"\n      ]\n    },\n    {\n      \"ldhName\": \"ns68.domaincontrol.com\",\n      \"unicodeName\":
+        \"ns68.domaincontrol.com\",\n      \"objectClassName\": \"nameserver\",\n      \"handle\":
+        \"fe491f51c0194bdfaf27ad735918e185-AU\",\n      \"status\": [\n        \"associated\"\n      ]\n    }\n  ],\n  \"secureDNS\":
+        {\n    \"delegationSigned\": false,\n    \"maxSigLife\": 1\n  },\n  \"redacted\":
+        [\n    {\n      \"name\": {\n        \"type\": \"Registry Domain Registration
+        Date\"\n      },\n      \"prePath\": \"$.events[?(@.eventAction==''registration'')]\",\n      \"pathLang\":
+        \"jsonpath\",\n      \"method\": \"removal\"\n    },\n    {\n      \"name\":
+        {\n        \"type\": \"Registry Domain Expiration Date\"\n      },\n      \"prePath\":
+        \"$.events[?(@.eventAction==''expiration'')]\",\n      \"pathLang\": \"jsonpath\",\n      \"method\":
+        \"removal\"\n    },\n    {\n      \"name\": {\n        \"description\": \"Registrant\"\n      },\n      \"method\":
+        \"removal\"\n    },\n    {\n      \"name\": {\n        \"description\": \"Technical
+        Contact\"\n      },\n      \"method\": \"removal\"\n    },\n    {\n      \"name\":
+        {\n        \"description\": \"Administrative Contact\"\n      },\n      \"method\":
+        \"removal\"\n    },\n    {\n      \"name\": {\n        \"type\": \"AU Eligibility
+        Policy Reason\"\n      },\n      \"prePath\": \"$.auData_eligibility[?(@.name==''policy
+        reason'')]\",\n      \"pathLang\": \"jsonpath\",\n      \"method\": \"removal\"\n    }\n  ],\n  \"objectClassName\":
+        \"domain\",\n  \"handle\": \"637015f57c794d65b3281951e31a2ea6-AU\",\n  \"status\":
+        [\n    \"client delete prohibited\",\n    \"server renew prohibited\",\n    \"client
+        update prohibited\"\n  ],\n  \"events\": [\n    {\n      \"eventAction\":
+        \"last changed\",\n      \"eventDate\": \"2024-06-02T21:28:08.772Z\"\n    },\n    {\n      \"eventAction\":
+        \"last update of RDAP database\",\n      \"eventDate\": \"2026-05-15T15:31:36.479Z\"\n    }\n  ],\n  \"entities\":
+        [\n    {\n      \"vcardArray\": [\n        \"vcard\",\n        [\n          [\n            \"version\",\n            {},\n            \"text\",\n            \"4.0\"\n          ],\n          [\n            \"fn\",\n            {},\n            \"text\",\n            \"GoDaddy.com
+        LLC trading as GoDaddy.com\"\n          ]\n        ]\n      ],\n      \"roles\":
+        [\n        \"registrar\"\n      ],\n      \"publicIds\": [\n        {\n          \"type\":
+        \"Registrar ID\",\n          \"identifier\": \"146\"\n        }\n      ],\n      \"objectClassName\":
+        \"entity\",\n      \"handle\": \"146\",\n      \"entities\": [\n        {\n          \"vcardArray\":
+        [\n            \"vcard\",\n            [\n              [\n                \"version\",\n                {},\n                \"text\",\n                \"4.0\"\n              ],\n              [\n                \"fn\",\n                {},\n                \"text\",\n                \"\"\n              ],\n              [\n                \"tel\",\n                {\n                  \"type\":
+        \"voice\"\n                },\n                \"uri\",\n                \"tel:+1.4805058800\"\n              ],\n              [\n                \"email\",\n                {},\n                \"text\",\n                \"abuse@godaddy.com\"\n              ]\n            ]\n          ],\n          \"roles\":
+        [\n            \"abuse\"\n          ],\n          \"objectClassName\": \"entity\"\n        }\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.cctld.au/rdap/entity/146\",\n          \"rel\":
+        \"self\",\n          \"href\": \"https://rdap.cctld.au/rdap/entity/146\",\n          \"type\":
+        \"application/rdap+json\"\n        },\n        {\n          \"value\": \"https://www.godaddy.com/en-au/contact-us\",\n          \"rel\":
+        \"related\",\n          \"href\": \"https://www.godaddy.com/en-au/contact-us\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"value\":
+        \"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au\",\n      \"rel\":
+        \"self\",\n      \"href\": \"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au\",\n      \"type\":
+        \"application/rdap+json\"\n    }\n  ]\n}","source_type":"registry","timestamp":"2026-05-15T15:31:34Z","url":"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","auda_rdap_response_profile_0","auData_level_0","redacted"],"contacts":[],"dnssec":{"signed":false},"domain":"ascendglobal.com.au","domain_statuses":["client
+        delete prohibited","server renew prohibited","client update prohibited"],"email_domains":["godaddy.com"],"emails":["abuse@godaddy.com"],"handle":"637015f57c794d65b3281951e31a2ea6-AU","last_changed_date":"2024-06-02T21:28:08.772000+00:00","links":[{"href":"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au","rel":"self"}],"nameservers":["ns67.domaincontrol.com","ns68.domaincontrol.com"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:+1.4805058800","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com
+        LLC trading as GoDaddy.com"},"unclassified_emails":[]},"registrar_request_url":null,"registry_request_url":"https://rdap.cctld.au/rdap/domain/ascendglobal.com.au"}}
+
+        {"timestamp":"2026-05-15T15:31:38Z","domain":"iassureph.com","raw_record":{"first_request_timestamp":"2026-05-15T15:31:21Z","requests":[{"data":"{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\",\"redacted\"],\"objectClassName\":\"domain\",\"links\":[{\"value\":\"https://rdap.squarespace.domains/domain/iassureph.com\",\"rel\":\"self\",\"href\":\"https://rdap.squarespace.domains/domain/iassureph.com\",\"type\":\"application/rdap+json\"}],\"notices\":[{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"value\":\"https://rdap.squarespace.domains/domain/iassureph.com\",\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap.squarespace.domains/domain/iassureph.com\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Service\",\"description\":[\"By submitting an inquiry, you agree to the
+        Squarespace Terms of Service (including without limitation our Acceptable
+        Use Policy) and the limitations of warranty set forth therein. This service
+        is intended only for query-based access. You agree that you will use this
+        data only for lawful purposes and will not to use this data to allow, enable,
+        or otherwise make possible, dissemination or collection of this data in part
+        or in its entirety for any purpose such as the transmission of unsolicited
+        advertising and solicitations of any kind, including spam. You further agree
+        not to use this data to enable high volume, automated or robotic electronic
+        processes designed to collect or compile this data for any purpose, including
+        mining this data for your own personal or commercial purposes, or use this
+        data in any way that violates applicable laws and regulations. We reserve
+        the right to restrict or deny your access to this service if we suspect that
+        you have failed to comply with these terms. We reserve the right to modify
+        this agreement at any time.\"],\"links\":[{\"value\":\"https://rdap.squarespace.domains/domain/iassureph.com\",\"rel\":\"terms-of-service\",\"href\":\"https://www.squarespace.com/terms-of-service\",\"type\":\"text/html\"}]}],\"lang\":\"en-US\",\"events\":[{\"eventAction\":\"registration\",\"eventActor\":\"Squarespace
+        Domains II LLC\",\"eventDate\":\"2024-05-13T07:10:31Z\"},{\"eventAction\":\"last
+        changed\",\"eventActor\":\"Squarespace Domains II LLC\",\"eventDate\":\"2026-04-28T20:16:22Z\"},{\"eventAction\":\"expiration\",\"eventActor\":\"Squarespace
+        Domains II LLC\",\"eventDate\":\"2027-05-13T07:10:31Z\"},{\"eventAction\":\"registrar
+        expiration\",\"eventActor\":\"Squarespace Domains II LLC\",\"eventDate\":\"2027-05-13T07:10:31Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventActor\":\"Squarespace Domains II LLC\",\"eventDate\":\"2026-04-28T20:16:22Z\"}],\"status\":[\"client
+        delete prohibited\",\"client transfer prohibited\"],\"port43\":\"whois.squarespace.domains\",\"handle\":\"2880804741_DOMAIN_COM-VRSN\",\"ldhName\":\"iassureph.com\",\"unicodeName\":\"iassureph.com\",\"secureDNS\":{\"delegationSigned\":false},\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"SQSP_CONTACT_27eae358-9c69-4291-ab60-a372d6593e96\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"contact-uri\",{},\"uri\",\"https://domains.squarespace.com/whois-contact-form\"],[\"adr\",{\"cc\":\"PH\"},\"text\",[\"\",\"\",\"\",\"\",\"Metro
+        Manila\",\"\",\"\"]],[\"fn\",{},\"text\",\"\"]]],\"roles\":[\"registrant\"]},{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Google
+        Workspace\"]]],\"roles\":[\"reseller\"]},{\"objectClassName\":\"entity\",\"links\":[{\"value\":\"https://rdap.squarespace.domains/\",\"rel\":\"about\",\"href\":\"https://domains.squarespace.com/\",\"type\":\"application/rdap+json\"}],\"handle\":\"895\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Squarespace
+        Domains II LLC\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"895\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Abuse
+        Contact\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.6466935324\"],[\"email\",{},\"text\",\"abuse-complaints@squarespace.com\"]]],\"roles\":[\"abuse\"]}]}],\"redacted\":[{\"name\":{\"type\":\"Registrant
+        Name\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Street\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant City\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Postal Code\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"pathLang\":\"jsonpath\",\"method\":\"emptyValue\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Organization\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''org'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Phone\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Fax\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[1].type==''fax'')]\",\"pathLang\":\"jsonpath\",\"method\":\"removal\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"type\":\"Registrant Email\"},\"postPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''contact-uri'')][3]\",\"pathLang\":\"jsonpath\",\"method\":\"replacementValue\",\"reason\":{\"description\":\"Server
+        Policy\"}}],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns-cloud-e3.googledomains.com\",\"unicodeName\":\"ns-cloud-e3.googledomains.com\",\"ipAddresses\":{\"v4\":[],\"v6\":[]}},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns-cloud-e1.googledomains.com\",\"unicodeName\":\"ns-cloud-e1.googledomains.com\",\"ipAddresses\":{\"v4\":[],\"v6\":[]}},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns-cloud-e2.googledomains.com\",\"unicodeName\":\"ns-cloud-e2.googledomains.com\",\"ipAddresses\":{\"v4\":[],\"v6\":[]}},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns-cloud-e4.googledomains.com\",\"unicodeName\":\"ns-cloud-e4.googledomains.com\",\"ipAddresses\":{\"v4\":[],\"v6\":[]}}]}","source_type":"registrar","timestamp":"2026-05-15T15:31:36Z","url":"https://rdap.squarespace.domains/domain/IASSUREPH.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_technical_implementation_guide_1","icann_rdap_response_profile_1","redacted"],"contacts":[{"city":"","country":"PH","email":"https://domains.squarespace.com/whois-contact-form","handle":"SQSP_CONTACT_27eae358-9c69-4291-ab60-a372d6593e96","name":"","postal":"","region":"Metro
+        Manila","roles":["registrant"],"street":""},{"name":"Google Workspace","roles":["reseller"]}],"creation_date":"2024-05-13T07:10:31+00:00","dnssec":{"signed":false},"domain":"iassureph.com","domain_statuses":["client
+        delete prohibited","client transfer prohibited"],"email_domains":["squarespace.com"],"emails":["abuse-complaints@squarespace.com","https://domains.squarespace.com/whois-contact-form"],"expiration_date":"2027-05-13T07:10:31+00:00","handle":"2880804741_DOMAIN_COM-VRSN","last_changed_date":"2026-04-28T20:16:22+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/IASSUREPH.COM","rel":"self"},{"href":"https://rdap.squarespace.domains/domain/IASSUREPH.COM","rel":"related"},{"href":"https://rdap.squarespace.domains/domain/iassureph.com","rel":"self"}],"nameservers":["ns-cloud-e3.googledomains.com","ns-cloud-e1.googledomains.com","ns-cloud-e2.googledomains.com","ns-cloud-e4.googledomains.com"],"registrar":{"contacts":[{"email":"abuse-complaints@squarespace.com","name":"Abuse
+        Contact","phone":"tel:+1.6466935324","roles":["abuse"]}],"iana_id":"895","name":"Squarespace
+        Domains II LLC"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.squarespace.domains/domain/IASSUREPH.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/iassureph.com"}}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 15 May 2026 15:31:38 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=n9gkqsormjm0uhahg7rkkrlg3bk6idou8288tjg73ulbuu0o5ucorub5vhb492d02bqnk3c6bd28tevblri7pav4nmqtc3n50f3fh75;
+        expires=Sun, 14-Jun-2026 15:31:38 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=0544d088dd78b7e9c2b88f576fce2331; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - bb41e40c-9641-4af3-bb60-abe04d4b459b
+    status:
+      code: 200
+      message: OK
 version: 1

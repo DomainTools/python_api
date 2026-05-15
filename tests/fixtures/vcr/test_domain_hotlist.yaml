@@ -395,4 +395,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.7.4&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-05-15T15:31:19Z","domain":"leiti.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-05-16T14:11:18Z"}
+
+        {"timestamp":"2026-05-15T15:31:18Z","domain":"ysux64.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-05-16T09:14:22Z"}
+
+        {"timestamp":"2026-05-15T15:31:13Z","domain":"e9eq8e.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-05-15T17:25:57Z"}
+
+        {"timestamp":"2026-05-15T15:31:14Z","domain":"b5486.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-05-16T07:58:54Z"}
+
+        {"timestamp":"2026-05-15T15:31:08Z","domain":"j7mh1e.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-05-15T21:25:05Z"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '918'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 15 May 2026 15:31:58 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=apnk6nkv8mkngo27su3pjuuf8ec85a51fvatejqitamatujlsgnpp4vverhu3pmabcgo7pfpe9mqv4i3gmafnct0qc9fg0fl651s7qf;
+        expires=Sun, 14-Jun-2026 15:31:58 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=0544d088dd78b7e9c2b88f576fce2331; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - d4c156e7-f4a8-46bc-bc80-dc81e8e365dc
+    status:
+      code: 200
+      message: OK
 version: 1

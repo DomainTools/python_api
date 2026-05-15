@@ -773,4 +773,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.7.4&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-05-15T15:31:36Z","domain":"tsqa.mabeng.com"}
+
+        {"timestamp":"2026-05-15T15:31:36Z","domain":"foka.afaire.com"}
+
+        {"timestamp":"2026-05-15T15:31:36Z","domain":"liberace.security-check.com"}
+
+        {"timestamp":"2026-05-15T15:31:36Z","domain":"cornet.xn--6dbnakwe.com"}
+
+        {"timestamp":"2026-05-15T15:31:36Z","domain":"qanloadbalancercdopic01inzstore.fwebproxy.ruleustore.f.obs.myhuaweicloud.com"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '401'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 15 May 2026 15:31:36 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=2i8iu56feck3fiiltd1d5hphckjn2q7t1939gejau0o57jca2uiotbi3b4b5c836vsbc6am1iosen78221sd51c2nmgknojtu4lst1e;
+        expires=Sun, 14-Jun-2026 15:31:36 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c5d3f10a080c0a94be4ab1e50402842c; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 1aefce62-8f88-4d22-9300-5c3db6c208fd
+    status:
+      code: 200
+      message: OK
 version: 1
