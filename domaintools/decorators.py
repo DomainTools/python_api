@@ -51,15 +51,15 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
 
             if "domains" in arguments.keys():
                 domains = arguments.pop("domains")
-                arguments["domain"] = (
-                    ",".join(domains) if isinstance(domains, (list, tuple)) else domains
-                )
+                arguments["domain"] = ",".join(domains) if isinstance(domains, (list, tuple)) else domains
 
             if spec:
                 # Determine which HTTP method is currently being executed.
                 # If the function allows dynamic methods (e.g. method="POST"), use that.
                 # Otherwise, default to the first method defined in the decorator.
                 current_method = kwargs.get("method", normalized_methods[0])
+
+                filtered_arguments = {k: v for k, v in arguments.items() if v is not None}
 
                 # Run Validation
                 # This will raise a ValueError and stop execution if validation fails.
@@ -68,7 +68,7 @@ def api_endpoint(spec_name: str, path: str, methods: Union[str, List[str]]):
                         spec=spec,
                         path=path,
                         method=current_method,
-                        parameters=arguments,
+                        parameters=filtered_arguments,
                     )
                 except ValueError as e:
                     print(f"[Validation Error] {e}")
