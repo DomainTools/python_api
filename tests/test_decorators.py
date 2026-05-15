@@ -217,3 +217,35 @@ class TestApiEndpointDecorator:
             call_kwargs = mock_validate.call_args[1]
 
             assert call_kwargs.get("parameters") == {"name": "test-name"}
+
+    def test_none_arguments_are_filtered_before_validation(self, mock_client):
+        """
+        Test that parameters with None values are excluded from the arguments
+        passed to the validator.
+        """
+
+        @api_endpoint(spec_name="v1", path="/users", methods="POST")
+        def create_user(name=None, status=None):
+            return "Success"
+
+        with patch("domaintools.request_validator.RequestValidator.validate") as mock_validate:
+            create_user(mock_client, name="Alice", status=None)
+
+            call_kwargs = mock_validate.call_args[1]
+            assert call_kwargs.get("parameters") == {"name": "Alice"}
+            assert "status" not in call_kwargs.get("parameters", {})
+
+    def test_all_none_arguments_passes_empty_parameters(self, mock_client):
+        """
+        Test that when all arguments are None, an empty dict is passed to the validator.
+        """
+
+        @api_endpoint(spec_name="v1", path="/users", methods="POST")
+        def create_user(name=None, body=None):
+            return "Success"
+
+        with patch("domaintools.request_validator.RequestValidator.validate") as mock_validate:
+            create_user(mock_client, name=None, body=None)
+
+            call_kwargs = mock_validate.call_args[1]
+            assert call_kwargs.get("parameters") == {}
