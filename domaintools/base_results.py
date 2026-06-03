@@ -108,6 +108,17 @@ class Results(MutableMapping, MutableSequence):
                 "iris-enrich",
                 "iris-detect-escalate-domains",
             ]:
+                if self.product == "iris-investigate" and "irisql" in self.kwargs:
+                    irisql_query = self.kwargs["irisql"]
+                    auth_keys = {"api_username", "timestamp", "signature", "api_key"}
+                    query_params = {k: v for k, v in self.kwargs.items() if k != "irisql" and k not in auth_keys}
+                    query_params.update(self.api.extra_request_params)
+                    return session.post(
+                        url=self.url,
+                        content=irisql_query,
+                        params=query_params,
+                        headers={**headers, "Content-Type": "text/plain", "X-Api-Key": self.api.key},
+                    )
                 post_data = self.kwargs.copy()
                 post_data.update(self.api.extra_request_params)
                 return session.post(url=self.url, data=post_data, headers=headers)
@@ -277,6 +288,8 @@ class Results(MutableMapping, MutableSequence):
 
     @property
     def json(self):
+        if self._data is not None:
+            return self
         self.kwargs.pop("format", None)
         return self.__class__(
             format="json",

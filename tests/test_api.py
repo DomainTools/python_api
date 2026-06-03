@@ -1,6 +1,7 @@
 """Tests the Python interface for DomainTools APIs"""
 
 from os import environ
+from unittest.mock import MagicMock, patch, call
 
 import json
 import pytest
@@ -10,6 +11,7 @@ from inspect import isgenerator
 
 from domaintools import API, exceptions
 from tests.settings import api, feeds_api, vcr
+from tests.responses.iris_investigate_data import domaintools as iris_investigate_fixture
 
 
 @vcr.use_cassette
@@ -445,6 +447,73 @@ def test_iris_investigate():
     assert investigation_results["results_count"]
     for result in investigation_results:
         assert result["domain"] in ["amazon.com", "google.com"]
+
+
+def test_iris_investigate_irisql_calls_results_with_irisql():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    with patch.object(api, "_results") as mock_results:
+        api.iris_investigate(irisql=query)
+        mock_results.assert_called_once_with(
+            "iris-investigate",
+            "/v1/iris-investigate/",
+            items_path=("results",),
+            irisql=query,
+        )
+
+
+def test_iris_investigate_irisql_with_pagination_kwargs():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    with patch.object(api, "_results") as mock_results:
+        api.iris_investigate(irisql=query, page_size=50, sort_by="risk_score", position=0)
+        mock_results.assert_called_once_with(
+            "iris-investigate",
+            "/v1/iris-investigate/",
+            items_path=("results",),
+            irisql=query,
+            page_size=50,
+            sort_by="risk_score",
+            position=0,
+        )
+
+
+def test_iris_investigate_irisql_warns_and_ignores_domains(capsys):
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    with patch.object(api, "_results"):
+        api.iris_investigate(irisql=query, domains=["google.com"])
+    captured = capsys.readouterr()
+    assert "Warning" in captured.out
+    assert "irisql" in captured.out
+
+
+def test_iris_investigate_irisql_does_not_require_other_params():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    with patch.object(api, "_results"):
+        api.iris_investigate(irisql=query)
+
+
+def test_iris_investigate_irisql_request_uses_raw_body():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"response": {"results": [], "results_count": 0}}
+
+    with patch("domaintools.base_results.Client") as mock_client:
+        mock_session = MagicMock()
+        mock_client.return_value.__enter__.return_value = mock_session
+        mock_session.post.return_value = mock_response
+
+        result = api.iris_investigate(irisql=query)
+        result.data()
+
+        _, kwargs = mock_session.post.call_args
+        assert kwargs.get("content") == query
+        assert "data" not in kwargs
+        assert kwargs.get("headers", {}).get("Content-Type") == "text/plain"
+        assert kwargs.get("headers", {}).get("X-Api-Key") == api.key
+        for auth_key in ("api_username", "timestamp", "signature", "api_key"):
+            assert auth_key not in kwargs.get("params", {})
+
+
 
 
 @vcr.use_cassette

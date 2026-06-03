@@ -145,6 +145,32 @@ You can get the status code of a response outside of exception handling by doing
 api.domain_profile('google.com').status == 200
 ```
 
+IrisQL
+===================
+
+IrisQL is a query language for Iris Investigate that lets you express complex, multi-field searches in a single request. Pass the query as a raw string via the `irisql` parameter. The query must begin with `# IrisQL-1.0`.
+
+```python
+query = """# IrisQL-1.0
+DOMAIN CONTAINS "phishing"
+AND
+RISK_SCORE GREATER_THAN 85
+"""
+
+results = api.iris_investigate(irisql=query)
+print(results["results_count"])
+for domain in results:
+    print(domain["domain"])
+```
+
+Pagination parameters (`page_size`, `sort_by`, `position`) are supported alongside IrisQL via `**kwargs`:
+
+```python
+results = api.iris_investigate(irisql=query, page_size=50, sort_by="risk_score", position=0)
+```
+
+When `irisql` is set, any domain or filter parameters passed alongside it are silently ignored. IrisQL uses header-based authentication (`X-Api-Key`) automatically.
+
 Using the API Asynchronously
 ===================
 
@@ -199,6 +225,18 @@ Optionally, you can specify the desired format (html, xml, json, or list) of the
 
 ```bash
 domaintools domain_search google --max_length 10 -u $TEST_USER -k $TEST_KEY -f html
+```
+
+IrisQL queries are supported via the `--irisql` flag on `iris_investigate`. The query must begin with `# IrisQL-1.0` on its own line:
+
+```bash
+domaintools iris_investigate --irisql $'# IrisQL-1.0\nDOMAIN CONTAINS "phishing"' -u $TEST_USER -k $TEST_KEY
+```
+
+Pagination parameters can be passed alongside the IrisQL query:
+
+```bash
+domaintools iris_investigate --irisql $'# IrisQL-1.0\nDOMAIN CONTAINS "phishing"' --page-size 50 --sort-by risk_score -u $TEST_USER -k $TEST_KEY
 ```
 
 To avoid having to type in your API key repeatedly, you can specify them in `~/.dtapi` separated by a new line:
@@ -289,12 +327,11 @@ To add more e2e tests, put these in the `../tests/e2e` folder.
         source venv/bin/activate
     ```
 
-- Install dependencies.
+- Install dependencies (with test extras):
     ```bash
-        pip install -r requirements/development.txt
+        pip install -e ".[test]"
     ```
-
-- From the python_api project root directory, install the package.
+    Or without test dependencies:
     ```bash
         pip install -e .
     ```
