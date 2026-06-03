@@ -23,6 +23,11 @@ def iris_investigate(
     create_date: str = typer.Option(None, "--create-date", help="The create date."),
     active: bool = typer.Option(None, "--active", help="The domains that are in active state"),
     search_hash: str = typer.Option(None, "--search-hash", help="The search hash to use"),
+    irisql: str = typer.Option(
+        None,
+        "--irisql",
+        help="IrisQL query string (must begin with '# IrisQL-1.0'). Mutually exclusive with domain/filter params. Pagination kwargs (--page-size, --sort-by, --position) are still supported.",
+    ),
     src_file: str = typer.Option(
         None,
         "-s",

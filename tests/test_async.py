@@ -2,6 +2,7 @@
 
 import asyncio
 import pytest
+from unittest.mock import MagicMock, AsyncMock, patch
 
 from tests.settings import api, vcr
 
@@ -48,3 +49,43 @@ async def test_async_simple_await_post():
 async def test_async_simple_await_patch():
     detect_results = await api.iris_detect_manage_watchlist_domains(watchlist_domain_ids=["gae08rdVWG"], state="watched")
     assert detect_results["watchlist_domains"][0]["state"] == "watched"
+
+
+@pytest.mark.asyncio
+async def test_async_irisql_uses_raw_body():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"response": {"results": [], "results_count": 0}}
+
+    with patch("domaintools_async.AsyncClient") as mock_client:
+        mock_session = AsyncMock()
+        mock_client.return_value.__aenter__.return_value = mock_session
+        mock_session.post.return_value = mock_response
+
+        result = await api.iris_investigate(irisql=query)
+
+        _, kwargs = mock_session.post.call_args
+        assert kwargs.get("content") == query
+        assert "data" not in kwargs
+        assert kwargs.get("headers", {}).get("Content-Type") == "text/plain"
+
+
+@pytest.mark.asyncio
+async def test_async_irisql_with_pagination_kwargs():
+    query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"response": {"results": [], "results_count": 0}}
+
+    with patch("domaintools_async.AsyncClient") as mock_client:
+        mock_session = AsyncMock()
+        mock_client.return_value.__aenter__.return_value = mock_session
+        mock_session.post.return_value = mock_response
+
+        result = await api.iris_investigate(irisql=query, page_size=50, sort_by="risk_score")
+
+        _, kwargs = mock_session.post.call_args
+        assert kwargs.get("content") == query
+        assert "page_size" in kwargs.get("params", {})
+        assert "sort_by" in kwargs.get("params", {})

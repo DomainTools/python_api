@@ -33,3 +33,10 @@ def test_invalid_command():
 def test_no_creds_file_not_found():
     result = runner.invoke(dt_cli, ["iris_investigate", "--domain", "domaintools.com"])
     assert "No such file or directory" in result.stdout
+
+
+def test_iris_investigate_irisql_flag_accepted():
+    result = runner.invoke(dt_cli, ["iris_investigate", "--irisql", "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\"", "--help"])
+    assert "--irisql" in result.stdout
+
+

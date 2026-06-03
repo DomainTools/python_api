@@ -58,5 +58,8 @@ domaintools = ["specs/*.yaml"]
 [tool.setuptools.dynamic]
 version = { "file" = "VERSION" }
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
 [tool.black]
 line-length = 110

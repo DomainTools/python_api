@@ -46,9 +46,21 @@ class AsyncResults(Results):
         session_params_and_headers = self._get_session_params_and_headers()
         headers = session_params_and_headers.get("headers")
         if self.product in ["iris-investigate", "iris-enrich", "iris-detect-escalate-domains"]:
-            post_data = self.kwargs.copy()
-            post_data.update(self.api.extra_request_params)
-            results = await session.post(url=self.url, data=post_data, headers=headers)
+            if self.product == "iris-investigate" and "irisql" in self.kwargs:
+                irisql_query = self.kwargs["irisql"]
+                auth_keys = {"api_username", "timestamp", "signature", "api_key"}
+                query_params = {k: v for k, v in self.kwargs.items() if k != "irisql" and k not in auth_keys}
+                query_params.update(self.api.extra_request_params)
+                results = await session.post(
+                    url=self.url,
+                    content=irisql_query,
+                    params=query_params,
+                    headers={**headers, "Content-Type": "text/plain", "X-Api-Key": self.api.key},
+                )
+            else:
+                post_data = self.kwargs.copy()
+                post_data.update(self.api.extra_request_params)
+                results = await session.post(url=self.url, data=post_data, headers=headers)
         elif self.product in ["iris-detect-manage-watchlist-domains"]:
             patch_data = self.kwargs.copy()
             patch_data.update(self.api.extra_request_params, headers=headers)

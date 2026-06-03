@@ -662,13 +662,14 @@ class API(object):
         updated_after=None,
         include_domains_with_missing_field=None,
         exclude_domains_with_missing_field=None,
+        irisql=None,
         **kwargs,
     ):
         """Returns back a list of domains based on the provided filters.
 
         You can loop over results of your investigation as if it was a native Python list:
 
-            for result in api.iris_investigate(ip='199.30.228.112'):  # Enables looping over all related results
+            for result in api.iris_investigate(ip='199.30.228.112'):
 
         api.iris_investigate(QUERY)['results_count'] Returns the number of results returned with this request
         api.iris_investigate(QUERY)['total_count'] Returns the number of results available within Iris
@@ -677,9 +678,27 @@ class API(object):
         api.iris_investigate(QUERY)['position'] Returns the position key that can be used to retrieve the next page:
             next_page = api.iris_investigate(QUERY, position=api.iris_investigate(QUERY)['position'])
 
-        for enrichment in api.iris_enrich(i):  # Enables looping over all returned enriched domains
+        IrisQL mode (mutually exclusive with all other search parameters):
+
+        irisql: str: A raw IrisQL query string. Must begin with '# IrisQL-1.0'.
+            Sent as a raw POST body (text/plain). When set, all domain/filter params are ignored.
+            Pagination params (page_size, sort_by, position) are still supported via **kwargs.
+
+            Example:
+                api.iris_investigate(irisql='# IrisQL-1.0\\nDOMAIN CONTAINS "phishing"', page_size=50, sort_by='risk_score')
 
         """
+        if irisql is not None:
+            if domains:
+                print("Warning: irisql is set — ignoring 'domains' and other search parameters. IrisQL query takes precedence.")
+            return self._results(
+                "iris-investigate",
+                "/v1/iris-investigate/",
+                items_path=("results",),
+                irisql=irisql,
+                **kwargs,
+            )
+
         # We put search_hash in the signature definition so the CLI can see it as a valid arg
         if search_hash:
             kwargs["search_hash"] = search_hash
