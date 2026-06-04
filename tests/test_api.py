@@ -71,6 +71,22 @@ def test_domain_profile():
 
 
 @vcr.use_cassette
+def test_domain_history():
+    api_call = api.domain_history("chat.com", include_fields="registrar")
+    with api_call as result:
+        assert "domain" in result
+        assert "count" in result
+        assert "registration_source" in result
+        assert "changes" in result
+
+        for change in api_call:
+            assert "timestamp" in change
+            assert "field" in change
+            assert "before" in change
+            assert "after" in change
+
+
+@vcr.use_cassette
 def test_domain_search():
     api_call = api.domain_search("google")
     with api_call as response:
