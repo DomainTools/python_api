@@ -275,6 +275,57 @@ class API(object):
         """Returns a profile for the specified domain name"""
         return self._results("domain-profile", "/v1/{0}".format(query))
 
+    def domain_history(
+        self,
+        query,
+        include_fields=None,
+        exclude_fields=None,
+        page_size=None,
+        offset=None,
+        next=None,
+        parsed_whois=None,
+        parsed_domain_rdap=None,
+        **kwargs,
+    ):
+        """Returns the history of changes for a given domain name.
+
+        Results are returned in reverse chronological order. Each change event includes
+        a timestamp, the field that changed, and the complete before/after domain state.
+
+        Args:
+            query: The apex domain name to retrieve history for (e.g. "domaintools.com").
+            include_fields: Comma-separated list of exact field names. Only change events
+                matching these fields appear in results. Cannot be combined with
+                exclude_fields. Supports aggregate prefixes (e.g. "all_ssl", "all_ip").
+                Example: "ip,registrar,all_ssl"
+            exclude_fields: Comma-separated list of exact field names. Change events
+                matching these fields are omitted. Cannot be combined with include_fields.
+                Example: "all_web_trackers,all_ssl"
+            page_size: Number of change events per page. Maximum and default is 100.
+            offset: 0-indexed starting point for pagination. Increment by page_size for
+                each subsequent page.
+            next: When True, includes a next URL in the response for cursor-based
+                pagination. Auth parameters must still be included when following it.
+            parsed_whois: When True, includes the full parsed WHOIS record in the
+                before/after objects of each change event.
+            parsed_domain_rdap: When True, includes the full parsed Domain RDAP record
+                in the before/after objects of each change event.
+        """
+        return self._results(
+            "domain-history",
+            "/v1/domain-history",
+            domain=query,
+            include_fields=include_fields,
+            exclude_fields=exclude_fields,
+            page_size=page_size,
+            offset=offset,
+            next=next,
+            parsed_whois=parsed_whois,
+            parsed_domain_rdap=parsed_domain_rdap,
+            items_path=("changes",),
+            **kwargs,
+        )
+
     def domain_search(
         self,
         query,
