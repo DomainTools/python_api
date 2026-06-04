@@ -35,6 +35,7 @@ _command_help_mapper = {
     c.IRIS_INVESTIGATE: _iris_investigate_helptext(),
     c.IRIS_ENRICH: "Returns back enriched data related to the specified domains using our Iris Enrich service.",
     c.BRAND_MONITOR: "Pass in one or more terms as a list or separated by the pipe character ( | )",
+    c.DOMAIN_HISTORY: "Returns the history of changes for a given domain name.",
     c.DOMAIN_PROFILE: "Returns a profile for the specified domain name",
     c.DOMAIN_SEARCH: """Each term in the query string must be at least three characters long. Pass in a list or use spaces to separate multiple terms.""",
     c.HOSTING_HISTORY: "Returns the hosting history from the given domain name.",

@@ -88,6 +88,51 @@ def domain_profile(
 
 
 @dt_cli.command(
+    name=c.DOMAIN_HISTORY,
+    help=get_cli_helptext_by_name(command_name=c.DOMAIN_HISTORY),
+)
+def domain_history(
+    ctx: typer.Context,
+    query: str = typer.Option(..., "-q", "--query", help="The apex domain name to retrieve history for (e.g. domaintools.com)."),
+    include_fields: str = typer.Option(None, "--include-fields", help="Comma-separated list of exact field names. Only change events matching these fields appear in results. Cannot be combined with --exclude-fields. Example: ip,registrar,all_ssl"),
+    exclude_fields: str = typer.Option(None, "--exclude-fields", help="Comma-separated list of exact field names. Change events matching these fields are omitted. Cannot be combined with --include-fields. Example: all_web_trackers,all_ssl"),
+    page_size: int = typer.Option(None, "--page-size", help="Number of change events per page. Maximum is 100 (default: 100)."),
+    offset: int = typer.Option(None, "--offset", help="0-indexed starting point for pagination. Increment by page-size for each subsequent page."),
+    next: bool = typer.Option(None, "--next", help="When true, includes a next URL in the response for cursor-based pagination."),
+    parsed_whois: bool = typer.Option(None, "--parsed-whois", help="When true, includes the full parsed WHOIS record in the before/after objects of each change event."),
+    parsed_domain_rdap: bool = typer.Option(None, "--parsed-domain-rdap", help="When true, includes the full parsed Domain RDAP record in the before/after objects of each change event."),
+    user: str = typer.Option(None, "-u", "--user", help="Domaintools API Username."),
+    key: str = typer.Option(None, "-k", "--key", help="DomainTools API key"),
+    creds_file: str = typer.Option(
+        "~/.dtapi",
+        "-c",
+        "--credfile",
+        help="Optional file with API username and API key, one per line.",
+    ),
+    rate_limit: bool = typer.Option(
+        False,
+        "-l",
+        "--rate-limit",
+        help="Rate limit API calls against the API based on per minute limits.",
+    ),
+    format: str = typer.Option(
+        "json",
+        "-f",
+        "--format",
+        help="Output format in {'list', 'json', 'xml', 'html'}",
+        callback=DTCLICommand.validate_format_input,
+    ),
+    out_file: typer.FileTextWrite = typer.Option(sys.stdout, "-o", "--out-file", help="Output file (defaults to stdout)"),
+    no_verify_ssl: bool = typer.Option(
+        False,
+        "--no-verify-ssl",
+        help="Skip verification of SSL certificate when making HTTPs API calls",
+    ),
+):
+    DTCLICommand.run(name=c.DOMAIN_HISTORY, params=ctx.params)
+
+
+@dt_cli.command(
     name=c.DOMAIN_SEARCH,
     help=get_cli_helptext_by_name(command_name=c.DOMAIN_SEARCH),
 )
@@ -666,6 +711,7 @@ def risk_evidence(
 
 __all__ = [
     "brand_monitor",
+    "domain_history",
     "domain_profile",
     "domain_search",
     "name_server_monitor",
