@@ -602,6 +602,34 @@ def test_limit_exceeded():
         response.response()
 
 
+def test_limit_exceeded_xml():
+    xml_response = """<response>
+    <error>
+      <code>413</code>
+      <message>Maximum 10000 returned - you may need to refine your query.</message>
+    </error>
+    <limit_exceeded>1</limit_exceeded>
+    <has_more_results>1</has_more_results>
+    <message>Maximum 10000 returned - you may need to refine your query.</message>
+    <missing_domains/>
+  </response>"""
+
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.text = xml_response
+
+    with patch("domaintools.base_results.Client") as mock_client:
+        mock_session = MagicMock()
+        mock_client.return_value.__enter__.return_value = mock_session
+        mock_session.post.return_value = mock_response
+
+        with pytest.raises(exceptions.ServiceException) as exc_info:
+            result = api.iris_investigate(ip="8.8.8.8", format="xml")
+            result.data()
+
+    assert "Maximum 10000 returned" in str(exc_info.value)
+
+
 @vcr.use_cassette
 def test_newly_observed_domains_feed():
     results = feeds_api.nod(after="-60", top=5)

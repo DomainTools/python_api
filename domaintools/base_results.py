@@ -25,7 +25,6 @@ from domaintools.exceptions import (
     RequestUriTooLongException,
 )
 
-
 try:  # pragma: no cover
     from collections.abc import MutableMapping, MutableSequence
 except ImportError:  # pragma: no cover
@@ -111,7 +110,9 @@ class Results(MutableMapping, MutableSequence):
                 if self.product == "iris-investigate" and "irisql" in self.kwargs:
                     irisql_query = self.kwargs["irisql"]
                     auth_keys = {"api_username", "timestamp", "signature", "api_key"}
-                    query_params = {k: v for k, v in self.kwargs.items() if k != "irisql" and k not in auth_keys}
+                    query_params = {
+                        k: v for k, v in self.kwargs.items() if k != "irisql" and k not in auth_keys
+                    }
                     query_params.update(self.api.extra_request_params)
                     return session.post(
                         url=self.url,
@@ -164,13 +165,13 @@ class Results(MutableMapping, MutableSequence):
                 self._data = results.json()
             else:
                 self._data = results.text
-
         self.check_limit_exceeded()
 
         return self._data
 
     def check_limit_exceeded(self):
         limit_exceeded, reason = False, ""
+
         if isinstance(self._data, dict) and (
             "response" in self._data
             and "limit_exceeded" in self._data["response"]
@@ -178,7 +179,13 @@ class Results(MutableMapping, MutableSequence):
         ):
             limit_exceeded, reason = True, self._data["response"]["message"]
         elif "response" in self._data and "limit_exceeded" in self._data:
-            limit_exceeded = True
+            # check for xml format, and return the actual error message
+            if self.kwargs.get("format") == "xml" and isinstance(self._data, str):
+                if re.search(r"<limit_exceeded>1</limit_exceeded>", self._data):
+                    msg = re.search(r"<message>(.*?)</message>", self._data)
+                    limit_exceeded, reason = True, msg.group(1) if msg else ""
+            else:
+                limit_exceeded = True
 
         if limit_exceeded:
             raise ServiceException(503, f"Limit Exceeded {reason}")
@@ -354,9 +361,7 @@ class Results(MutableMapping, MutableSequence):
         )
 
     def as_list(self):
-        return "\n".join(
-            [json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()]
-        )
+        return "\n".join([json.dumps(item, indent=4, separators=(",", ": ")) for item in self._items()])
 
     def __str__(self):
         return str(
