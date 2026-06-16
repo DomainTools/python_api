@@ -2803,4 +2803,190 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.8.0&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        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
+        /wc12/nFgCEAAA==
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Tue, 16 Jun 2026 13:21:25 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=iud6uu1551eiqhdv972g5sma3qg8f716noo96qecdhl3b4hg661b5na0j4phqdm74pnqbd6tb8qhh24eqa4sqo19pba5eg1amo2qp3o;
+        expires=Thu, 16-Jul-2026 13:21:25 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.8.0&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WWbW/aMBDHv0rlt4PITpwnv9qQ0KRVTGqFytaqitzEBI8QZ7Ep7RDffeeEUcoE
+        LWVaeUNyPt+d//fLyUu04CadFFKbJFMzLkuN2M0SacONQKxdFRnqoHYVTLlSeSFEzjNHpnNYsb5z
+        2IZ4auS9sL5Sp+pe1CJLsjaOi12/i6MuJkNCGQ6YHzoRoRjja/BPJ7zM9zpHjMYObn7WuZZ6mkD8
+        Glwjf/s92VQynhfFM9ckVbNKlaI0sLxEVa0e5EyaR8R80kFmUgtuErCOZSEah4nUE1nmbYoZLxbc
+        5vMpHLfiM8RI2EHiXmaiTMF+s5bnrOQzK4D9O9OiBg1sGSIHfWteo9vVCqI9JOIBDFDJmBdaQP4i
+        g6JbNaV9LEZfql+fr6JBHyxCp7zgRqqmN7cQQJXSqDqRmTWg8tNidpG71c8cwSLXWuYliHn3aGOW
+        RuR1u/mDEdqQj22lRqlCO6AK2tqyqz8dEugUZYSs9f+AMcMYrToHCSmFyFpKHKOqYwghbpdEQ+Iz
+        DzPfcwLq7yUk6GLw94ckYq4PRe0hJCQnE+K9QIhNsSGEBn8Isaz8Y0JaNRtCBv3v+dXl12wwejdC
+        1s2CzxOgiI8iJFfdNSClMG8ChFLmBQ4JXwIkGLoeo+BP9gASxKcDEh0GxKbYABJu+DiEh6zOeJbV
+        QusdVg7y0YrZ8FH1p4uri/K8934T5Bkf3pF8WDh4piuVpVybdZpXYuI2nY+HGNoeMj92XExewCQe
+        kpj5LnzrezAh3smY2BC7mNzcHmhne+imneHoXJHoPB5d/tXO5dZ7Yh4re667QqXTRtJmN/Xynh9O
+        e/3ASmArEFl7etrFQdeNmjnffCTUI0EQXj/5vZqC1f/haqdi9w1cperYsbO+jIQMsuLACaP4ME+u
+        OyQE5GTY3cMTPRknenjoeFszh2xuLc9mzmtnyQ8+CHrfKPbf9zZC7Cyxt5Fgp+eQxyjDC9BqXppm
+        sj49qfFYw1EY7qDCKgciYLz6DQQRGvX4CgAA
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Tue, 16 Jun 2026 13:21:27 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=tg81s089dovgsjpk1vhnjm37c3sov3ji6lp7k19omlsv4cng10c25su5tc063s1f73ib77vfbsjvphibbnhrk0l6gqjrorlbpq5ije1;
+        expires=Thu, 16-Jul-2026 13:21:27 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.8.0&escalation_types%5B%5D=blocked&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5VRy07DMBD8F19pKztp0jYnQOLECVSpEghZJnZSq443xNsHqvrvrJOqLdzIab07
+        M5ndObK9wnLtbECpoVHWB1a8H1lAhYYVw9RoNmLDlFo1QO2M0qEFXaqAkxIamkfGlshMlWh3JjJs
+        KGFnOqOlHtQSniRjno3FYsmzYjorssUk4YJz/kb4cq18/Qucn8FiUWRJkYoJ778I7mzYSNLvCCrS
+        27e8OKm2zv2CSrLagjceaXxkbQcH21j8HiRw3RmFkrqVdST7/nEaseYgzYGuQ4RKuWAI5jRpD0vb
+        WM5WzyDmz4vVK3VMKJVTaOF8yOtb4ncb9/p0UG76k/bsaVo/ZrPN41MeTxAdGD1sPx3zfJzMlyIv
+        MrqWmExTkeeztytOfpJ1Zj2auhv+eYcmoLgfwkIAF/p4Th+0CXiL0EmrozPmH/bNS520XzWjoQrB
+        1v4fijeUa15/HCfnvO44LzjvTSCgchTD1iMdnRa5VFBVwVDJR8zFUKjJ+ekH98mHp6ACAAA=
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Tue, 16 Jun 2026 13:21:29 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=4kvfunadjgdfpompqn9pedn7b92ta15mj2h13os4or9p0a8d3ecm60l29cjsq1834bu6dh1afs83cp84icq1oa508e3kfegionj6kht;
+        expires=Thu, 16-Jul-2026 13:21:29 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1

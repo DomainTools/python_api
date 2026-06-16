@@ -46461,4 +46461,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.8.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-06-16T13:21:38Z","domain":"pdicorp.dyndns.tv"}
+
+        {"timestamp":"2026-06-16T13:21:38Z","domain":"bettingten.xn--fiqz9s"}
+
+        {"timestamp":"2026-06-16T13:21:38Z","domain":"cabukyakala.com"}
+
+        {"timestamp":"2026-06-16T13:21:38Z","domain":"boblupo.org"}
+
+        {"timestamp":"2026-06-16T13:21:38Z","domain":"shareyourudhiyah.org"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '329'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 16 Jun 2026 13:21:39 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=osg9ijmfukgmtjqvfk0493oe0s5vn6kmpbldid468pko5kkhqcq5mp3npdsh119ttphqng2b5ed7094ao5qnmkib0c5f27t1auufuid;
+        expires=Thu, 16-Jul-2026 13:21:39 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c243a1dea27201a4d46fbfb63b8ddf74; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 33495372-dfdc-4309-b1bd-f4889e774d75
+    status:
+      code: 200
+      message: OK
 version: 1

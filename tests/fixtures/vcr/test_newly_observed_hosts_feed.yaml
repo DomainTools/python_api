@@ -829,4 +829,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.8.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-06-16T13:21:37Z","domain":"myqqka.redream1997.com"}
+
+        {"timestamp":"2026-06-16T13:21:37Z","domain":"i2zl4jqxzvxc42rrjwmq-pzdvgj-e920f2766-clientnsv4-s.akamaihd.net"}
+
+        {"timestamp":"2026-06-16T13:21:37Z","domain":"poppieelhw378580.dailyblogzz.com"}
+
+        {"timestamp":"2026-06-16T13:21:37Z","domain":"3fj5uayxaig3q2rrjwvq-pm7aoa-a40a7fafa-clientnsv4-s.akamaihd.net"}
+
+        {"timestamp":"2026-06-16T13:21:37Z","domain":"mizu8882.blog.cash4you.ca"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '450'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 16 Jun 2026 13:21:38 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=lncnspjsnqqkkh6hrt8iobsao9v6fg3ivul31enobqik15fr7mqh5a4i8gpcj4vptmc6h2pq2gt0adlshpn297lilhu12ong6p00251;
+        expires=Thu, 16-Jul-2026 13:21:38 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c243a1dea27201a4d46fbfb63b8ddf74; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 19b5fa1f-c87c-4445-b48a-e56d535fd2ac
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -20,4 +20,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 """
 
-current = "2.7.4"
+current = "2.8.0"

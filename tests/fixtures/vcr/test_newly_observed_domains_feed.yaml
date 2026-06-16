@@ -12919,4 +12919,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.8.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-06-16T13:21:35Z","domain":"8402b071-82bf-4915-a239-58f55bbe36fc.aquila.it"}
+
+        {"timestamp":"2026-06-16T13:21:35Z","domain":"frostrue.one"}
+
+        {"timestamp":"2026-06-16T13:21:35Z","domain":"p83ewxhh.org.ma"}
+
+        {"timestamp":"2026-06-16T13:21:35Z","domain":"vulcan-vegas.mt.it"}
+
+        {"timestamp":"2026-06-16T13:21:35Z","domain":"ck1c-865b202622-052df087.gov.az"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '367'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Tue, 16 Jun 2026 13:21:37 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=fjredojuk251hdhq5st09d8oi5pquejn5ks3hgqeh232vbn07s471r6l9r8fmrr5jrvurfnd6ucvh864pp6lil3nrheotoik7hhc7g3;
+        expires=Thu, 16-Jul-2026 13:21:37 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=6653851bf2a4ddcdab56cc424cfb8df2; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - e4dc0cdb-6ced-4103-93e2-d4fc6cc4582d
+    status:
+      code: 200
+      message: OK
 version: 1
