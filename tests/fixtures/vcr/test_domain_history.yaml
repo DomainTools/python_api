@@ -1,0 +1,192 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.22.0
+    method: GET
+    uri: https://api.domaintools.com/v1/domain-history?app_name=python_wrapper&app_version=2.1.0&domain=chat.com&include_fields=registrar
+  response:
+    content: '{"response":{"domain":"chat.com","count":3,"registration_source":"parsed_whois","changes":[{"timestamp":"2024-03-15T12:00:00Z","field":"registrar","active":true,"before":{"domain":"chat.com","registrar":"Old
+      Registrar Inc","active":true},"after":{"domain":"chat.com","registrar":"New
+      Registrar LLC","active":true}},{"timestamp":"2023-06-20T08:30:00Z","field":"registrar","active":true,"before":{"domain":"chat.com","registrar":"Original
+      Registrar Co","active":true},"after":{"domain":"chat.com","registrar":"Old Registrar
+      Inc","active":true}},{"timestamp":"2022-01-10T00:00:00Z","field":"registrar","active":true,"before":null,"after":{"domain":"chat.com","registrar":"Original
+      Registrar Co","active":true}}]}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 05 Jun 2025 12:00:00 GMT
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.7.4
+  response:
+    content: '{"response":{"account":{"api_username":"integrations_testing","active":true},"products":[{"id":"account-information","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"43","month":"236"},"expiration_date":null},{"id":"iris-investigate","per_month_limit":"10000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"7","month":"11"},"expiration_date":null},{"id":"iris-enrich","per_month_limit":"20000","per_hour_limit":null,"per_minute_limit":"60","absolute_limit":null,"usage":{"today":"9","month":"79"},"expiration_date":null},{"id":"iris-detect-escalate-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"30","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-ignored-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"11","month":"83"},"expiration_date":null},{"id":"iris-detect-manage-watchlist-domains","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris-detect-monitors","per_month_limit":"1500","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"2","month":"5"},"expiration_date":null},{"id":"iris-detect-new-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"11","month":"83"},"expiration_date":null},{"id":"iris-detect-watched-domains","per_month_limit":"1500","per_hour_limit":"10","per_minute_limit":"30","absolute_limit":null,"usage":{"today":"11","month":"83"},"expiration_date":null},{"id":"domain-profile","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-search","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"500","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"hosting-history","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"ip-registrant-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"iris","per_month_limit":"10000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"7","month":"11"},"expiration_date":null},{"id":"reputation","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-ip-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"risk","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"risk-evidence","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-name-server","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"reverse-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"mark-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"name-server-monitor","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"whois-history","per_month_limit":"5000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"parsed-whois-live","per_month_limit":"120","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"registrant-alert","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"5","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"19","month":"163"},"expiration_date":null},{"id":"newly-observed-domains-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"234","month":"2040"},"expiration_date":null},{"id":"parsed-domain-rdap","per_month_limit":"50000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"1","month":"16"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(api)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(api)","per_month_limit":"100000","per_hour_limit":"120","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-discovery-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-registration-data-access-protocol-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-active-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-domains-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(api)","per_month_limit":"100000","per_hour_limit":"120","per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"newly-observed-hosts-feed-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"20","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-hotlist-(api)","per_month_limit":"100000","per_hour_limit":"120","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"19","month":"163"},"expiration_date":null},{"id":"real-time-domain-hotlist-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-risk-(api)","per_month_limit":"100000","per_hour_limit":"120","per_minute_limit":"120","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"real-time-domain-risk-(s3)","per_month_limit":"100000","per_hour_limit":null,"per_minute_limit":"10","absolute_limit":null,"usage":{"today":"0","month":"0"},"expiration_date":null},{"id":"domain-history","per_month_limit":"1000","per_hour_limit":null,"per_minute_limit":"120","absolute_limit":null,"usage":{"today":"1","month":"1"},"expiration_date":null}]}}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 04 Jun 2026 16:33:19 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=u7uu2bjnp2e17nu0j1vfsktlc6qvlad61v16eodsukkkfgfk28m6r5dfda0eiqolvgfufbb5trv8qlsu5nkmm2tjd95ovg2k6htvv0c;
+        expires=Sat, 04-Jul-2026 16:33:19 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '195782'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/domain-history?app_name=python_wrapper&app_version=2.7.4&domain=chat.com&include_fields=registrar
+  response:
+    content: '{"response":{"domain":"chat.com","count":8,"registration_source":"parsed_whois","changes":[{"timestamp":"2025-04-02T18:35:11Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor, Inc."}}},{"timestamp":"2025-04-02T06:22:55Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor,
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor Inc."}}},{"timestamp":"2025-03-10T03:00:52Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor, Inc."}}},{"timestamp":"2025-03-08T02:03:00Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor,
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor Inc."}}},{"timestamp":"2025-02-25T23:09:51Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor, Inc."}}},{"timestamp":"2025-02-24T21:26:45Z","field":"registrar","before":{"registrar":{"value":"MarkMonitor,
+      Inc."}},"after":{"registrar":{"value":"MarkMonitor Inc."}}},{"timestamp":"2024-11-14T07:03:50Z","field":"registrar","before":{"registrar":{"value":"GoDaddy.com,
+      LLC"}},"after":{"registrar":{"value":"MarkMonitor, Inc."}}},{"timestamp":"2023-03-27T02:47:30Z","field":"registrar","before":{"registrar":{"value":"NET
+      TUNER CORP. DBA WEBMASTERS.COM"}},"after":{"registrar":{"value":"GoDaddy.com,
+      LLC"}}}]}}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 04 Jun 2026 16:33:20 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=oheuhpln3atkp1d8fcpsc7dtjf47ous1cv908vf6ta7jeuvbdr6dmvk2jj8rlb6kfpc2khifdve0l2o9fuefg0m2rgf0kic4nc73hoi;
+        expires=Sat, 04-Jul-2026 16:33:20 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '372678'
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/domain-history?app_name=python_wrapper&app_version=2.8.0&domain=chat.com&include_fields=registrar
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82UX0vDMBTFv0rJc1qStNnmfdufIsK6yYwIiozYZltxbUaSKTL63U0HwxeVMX3o
+        Y27OTX4595ADMsrudG0VggMqdCXLGgHKN9JFua4QRrne1w7BAHvlurTOSFfqemn13uS+Ce2ksapY
+        vm90aVv5RtZrZRE8HZArK2WdrHZexgjjIUlCwgQdQMyB0kcvX5VqW/jt09nG117USpsjz1fVL97k
+        dt9emEnzmum6dNoEN3UeoabBSK6cMue04FNPg38EJD1gDDj/OyC+gPB3wDikRJAYCAHOuuhgHJKB
+        IAyOjF10kIWMC+bproB3MoMeMBGMAutB0r0MJiGlIU0E6bcj5peO+FpPZFF8tJ8MDqbT8f85GLcZ
+        ZP02g0kf4ksBZ6kIxP0sXQTj+eI2CiajYfCQjrLhnUgXd9F4np2B/M0rm+em+QS3x86+dgUAAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 16 Jun 2026 13:20:35 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=g8kljfcu2tqaik2nkp5nc1aldvikq71o40vbed7cludc9deqpkvmlcjn5unccmvvh5lnb0i7ru19utv4p7iqcqsh1abucg789n7khpo;
+        expires=Thu, 16-Jul-2026 13:20:35 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '365504'
+    status:
+      code: 200
+      message: OK
+version: 1

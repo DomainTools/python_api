@@ -4,6 +4,7 @@ AVAILABLE_API_CALLS = "available_api_calls"
 
 # domains
 BRAND_MONITOR = "brand_monitor"
+DOMAIN_HISTORY = "domain_history"
 DOMAIN_PROFILE = "domain_profile"
 DOMAIN_SEARCH = "domain_search"
 HOSTING_HISTORY = "hosting_history"

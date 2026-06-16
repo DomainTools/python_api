@@ -230,28 +230,21 @@ class DTCLICommand:
                     description=f"Preparing results with format of {response_format}...",
                 )
 
+                if name not in ("available_api_calls",) and not getattr(response, "product", None) in RTTF_PRODUCTS_LIST:
+                    response.data()
+
                 output = cls._get_formatted_output(
                     cmd_name=name, response=response, out_format=response_format
                 )
 
-                if isinstance(out_file, _io.TextIOWrapper):
-                    progress.update(
-                        task_id,
-                        description=f"Printing the results with format of {response_format}...",
-                    )
-                    # use rich `print` command to prettify the ouput in sys.stdout
-                    if name not in ("available_api_calls",) and response.product in RTTF_PRODUCTS_LIST:
-                        for feeds in response.response():
-                            print(feeds)
-                    else:
-                        print(response)
+            if isinstance(out_file, _io.TextIOWrapper):
+                if name not in ("available_api_calls",) and response.product in RTTF_PRODUCTS_LIST:
+                    for feeds in response.response():
+                        print(feeds)
                 else:
-                    progress.update(
-                        task_id,
-                        description=f"Writing results to {out_file}",
-                    )
-                    # if it's a file then write
-                    out_file.write(output if output.endswith("\n") else output + "\n")
+                    print(output)
+            else:
+                out_file.write(output if output.endswith("\n") else output + "\n")
         except Exception as e:
             if isinstance(e, ServiceException):
                 code = typer.style(getattr(e, "code", 400), fg=typer.colors.BRIGHT_RED)

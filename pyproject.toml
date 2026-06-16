@@ -41,7 +41,7 @@ Homepage = "https://github.com/domaintools/python_api"
 domaintools = "domaintools.cli:run"
 
 [project.optional-dependencies]
-test = ["pytest", "mock"]
+test = ["pytest", "mock", "vcrpy", "pytest-asyncio", "pytest-cov", "yarl"]
 
 [tool.setuptools]
 packages = [
@@ -57,6 +57,9 @@ domaintools = ["specs/*.yaml"]
 
 [tool.setuptools.dynamic]
 version = { "file" = "VERSION" }
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
 
 [tool.black]
 line-length = 110
