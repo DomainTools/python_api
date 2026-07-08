@@ -34,6 +34,7 @@ from domaintools.filters import (
     filter_by_field,
     DTResultFilter,
 )
+from domaintools.exceptions import ServiceUnavailableException, ServiceException
 from domaintools.utils import validate_feeds_parameters
 
 
@@ -163,7 +164,12 @@ class API(object):
         if product != "account-information" and self.rate_limit and not self.limits_set and not self.limits:
             always_sign_api_key_previous_value = self.always_sign_api_key
             header_authentication_previous_value = self.header_authentication
-            self._rate_limit(product)
+            try:
+                self._rate_limit(product)
+            except (ServiceUnavailableException, ServiceException):
+                # If account_information fails (e.g. rate limited itself),
+                # skip client-side rate limiting and proceed with the original call.
+                self.limits_set = True
             # Reset always_sign_api_key and header_authentication to its original
             # User-set values as these might be affected when self.account_information() was executed
             self.always_sign_api_key = always_sign_api_key_previous_value
