@@ -140,7 +140,7 @@ class Results(MutableMapping, MutableSequence):
         wait_for = self._wait_time()
         if self.api.rate_limit and (wait_for is None or self.product == "account-information"):
             data = self._make_request()
-            if data.status_code == 503:  # pragma: no cover
+            if data.status_code == 503 and self.product != "account-information":  # pragma: no cover
                 sleeptime = 60
                 log.info(
                     "503 encountered for [%s] - sleeping [%s] seconds before retrying request.",
