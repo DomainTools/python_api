@@ -1018,4 +1018,64 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/google.com?app_name=python_wrapper&app_version=2.8.1
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WVTY/aMBCG/8rKh14agm1gS5BWPWwrVAlKpbYnQJE3mRKrwU5t03a14r/vOOaz
+        BPZQ9ubMxO/7xDOePBEDttLKAhk84XohrTNCOf+kxBKjZKj1ooSb0eieRCTXSyGVJQPe4d3biFRG
+        56vMpStT4quFc5UdzNqztoHfYCz8KbS0cdjktC5tnOnlrP1elOV0fheU36LyG6UVYISsI2LB4F4P
+        IKtU5DkCoh9hXR7zHotZj8aMJciiXQEm3RH1+uxFHlmdwlgQJisQ6tfdogbyYQ+yPQ0ntfI4mQHh
+        IPcsSfKuRZMW6yEG/K0kMmKYU96vw10Mr6p88zanLPFh6qG3oviBZCzMz7FW0mlz80llMaatE25l
+        vdqUZKUE5T5ACQ6+GF3IB+kFo03iG9bJ/gDTkPpeex8lwqk2iIVEo1hInYjN8Wx8b6Qh71mfdlUj
+        n7+yeDiZDEcf4/vJmLxYEtXQHwcl+UduHR1Z8eta8QtWnetadS5Yda9rdSS3nkekwA7U5vHwxtf3
+        DTdh+1iXorAfAcR3t19iiekljmB3irHNzNqFtk6qRWtj3XDbDjqqZtn7OrnEGSVUKlX6iHo2kL0u
+        zuHs2dMwnnQagTh/baB6lIaSZdrkuOzf0n50WjROKWvRXot2/vOQasc90Zk5WU9s7cEsckFTbWp8
+        eLA4PVKcJSJ8RfjtpJnON5ucdOVmubsMuF6C3zGdn/+YM3+ZI8r1M3L6fknqBgAA
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 17 Jul 2026 17:47:09 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=7ubeg66889qv2gq3so1cg69vdjlt2dqmuhogdsn465kps6epo4hq3nepli4gfkfk50bsgctihkgj5kt7esqqi3q1omihdtti701ehgh;
+        expires=Sun, 16-Aug-2026 17:47:09 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '111782'
+    status:
+      code: 200
+      message: OK
 version: 1

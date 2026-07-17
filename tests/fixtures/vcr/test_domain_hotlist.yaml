@@ -507,4 +507,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.8.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-17T17:48:07Z","domain":"cdn-whasapp.hl.cn","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-18T17:45:05Z"}
+
+        {"timestamp":"2026-07-17T17:48:06Z","domain":"bapl371.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-18T17:45:05Z"}
+
+        {"timestamp":"2026-07-17T17:48:06Z","domain":"17462.hk","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-18T17:45:05Z"}
+
+        {"timestamp":"2026-07-17T17:48:08Z","domain":"acyesislepismaunboxed.cyou","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-18T17:45:05Z"}
+
+        {"timestamp":"2026-07-17T17:48:06Z","domain":"dottiertonto.shop","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-18T17:45:05Z"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '949'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 17 Jul 2026 17:48:18 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=81mushbdvbvfraa4cnaudh2hgkairgdr3u8jk5oh9lgl9tk9vhs6cj3p54ep6opo5nqgg9b15a3so4c7eihtpvv9bhbe427boq2j6rv;
+        expires=Sun, 16-Aug-2026 17:48:18 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=abbae19e8815cf9164c3024c1c42ff89; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 77218c62-31c4-4417-a390-7afff16dc9b4
+    status:
+      code: 200
+      message: OK
 version: 1

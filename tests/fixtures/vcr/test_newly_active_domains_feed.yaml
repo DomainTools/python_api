@@ -46517,4 +46517,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nad/?after=-60&app_name=python_wrapper&app_version=2.8.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-17T17:47:56Z","domain":"ai-workspace.nl"}
+
+        {"timestamp":"2026-07-17T17:47:56Z","domain":"xn--snnhsr-ejc2858cdac.com.ph"}
+
+        {"timestamp":"2026-07-17T17:47:56Z","domain":"tryinpeaktime.info"}
+
+        {"timestamp":"2026-07-17T17:47:56Z","domain":"myspace-editors.vg"}
+
+        {"timestamp":"2026-07-17T17:47:56Z","domain":"alpes-courses.org"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '342'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 17 Jul 2026 17:47:59 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=ghpts155blqfbme9aufbk4aeg2l8n8j351qfabs753vfqen3pfmbo2e2qortntomvk1jlmr6u836s7amu9is2dgpls8uhnnp5lnn0pn;
+        expires=Sun, 16-Aug-2026 17:47:59 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=6653851bf2a4ddcdab56cc424cfb8df2; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 2d6ce2ac-dbd2-4796-85d0-d793272bd07f
+    status:
+      code: 200
+      message: OK
 version: 1

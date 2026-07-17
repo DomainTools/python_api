@@ -25484,4 +25484,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.8.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-17T17:48:07Z","domain":"cdn-whasapp.hl.cn","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-07-17T17:48:06Z","domain":"bapl371.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-07-17T17:48:07Z","domain":"17462.hk","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-07-17T17:48:08Z","domain":"acyesislepismaunboxed.cyou","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-07-17T17:48:06Z","domain":"dottiertonto.shop","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '784'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 17 Jul 2026 17:48:17 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=nt8hlrc4o020hu0ps825sa36a5ve79dunc0orimahjcui87jg7ccohi9km5ipqus4v84v8tv8gmegrll3eg896r052dnlh8peoukjv5;
+        expires=Sun, 16-Aug-2026 17:48:17 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=abbae19e8815cf9164c3024c1c42ff89; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - a8cceafd-53eb-452c-8ec1-6c830432b2c4
+    status:
+      code: 200
+      message: OK
 version: 1
