@@ -37,6 +37,7 @@ htmlcov
 .mr.developer.cfg
 .project
 .pydevproject
+tmp/
 
 # SQLite
 test_exp_framework

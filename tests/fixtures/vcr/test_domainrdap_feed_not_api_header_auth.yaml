@@ -2629,4 +2629,380 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.8.1&sessiondID=integrations-testing&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-17T17:48:00Z","domain":"toolsmonth.com","raw_record":{"first_request_timestamp":"2026-07-17T17:47:55Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"3000616940_DOMAIN_COM-VRSN\",\"ldhName\":\"TOOLSMONTH.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/TOOLSMONTH.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/TOOLSMONTH.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/TOOLSMONTH.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/TOOLSMONTH.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"client
+        transfer prohibited\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"1636\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/www.hostinger.com\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.hostinger.com\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"1636\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"HOSTINGER
+        operations, UAB\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+37064503378\"],[\"email\",{},\"text\",\"abuse-tracker@hostinger.com\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2025-07-15T04:40:00Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2027-07-15T04:40:00Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-16T08:02:36Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-17T17:47:47Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS1.DNS-EXPIRED.COM\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS2.DNS-EXPIRED.COM\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/toolsmonth.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/toolsmonth.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2026-07-17T17:47:55Z","url":"https://rdap.verisign.com/com/v1/domain/toolsmonth.com"},{"data":"{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\",\"redacted\"],\"objectClassName\":\"domain\",\"ldhName\":\"toolsmonth.com\",\"handle\":\"3000616940_DOMAIN_COM-VRSN\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2025-07-15T04:40:00+00:00\"},{\"eventAction\":\"registrar
+        expiration\",\"eventDate\":\"2026-07-15T04:40:00+00:00\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-15T05:30:21+00:00\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"1636\",\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"1636\"}],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registrar
+        Abuse Contact\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1-212-252-2172\"],[\"email\",{},\"text\",\"abuse@hostinger.com\"]]]}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"HOSTINGER
+        operations, UAB\"]]],\"links\":[{\"value\":\"https:\\/\\/rdap.hostinger.com\\/\",\"rel\":\"about\",\"href\":\"https:\\/\\/rdap.hostinger.com\\/\",\"type\":\"application\\/rdap+json\"}]},{\"objectClassName\":\"entity\",\"roles\":[\"registrant\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"contact-uri\",{},\"uri\",\"https:\\/\\/www.hostinger.com\\/whois?domain=toolsmonth.com\u0026view=contact\"],[\"adr\",{\"cc\":\"LT\"},\"text\",[\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]]],\"remarks\":[{\"title\":\"Privacy
+        Protection Provided by Hostinger\",\"description\":[\"Registrant contact data
+        has been redacted for privacy protection.\"]}]}],\"status\":[\"client transfer
+        prohibited\"],\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns1.dns-expired.com\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns2.dns-expired.com\"}],\"secureDNS\":{\"delegationSigned\":false,\"dsData\":[]},\"redacted\":[{\"name\":{\"type\":\"Registry
+        Registrant ID\"},\"method\":\"removal\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Organization\"},\"method\":\"removal\",\"prePath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''org'')]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Name\"},\"method\":\"emptyValue\",\"postPath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''fn'')][3]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Street\"},\"method\":\"emptyValue\",\"postPath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''adr'')][3][:3]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        City\"},\"method\":\"emptyValue\",\"postPath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''adr'')][3][3]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Postal Code\"},\"method\":\"emptyValue\",\"postPath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''adr'')][3][5]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Phone\"},\"method\":\"removal\",\"prePath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[1].type==''voice'')]\",\"pathLang\":\"jsonpath\"},{\"name\":{\"type\":\"Registrant
+        Email\"},\"method\":\"replacementValue\",\"prePath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''email'')]\",\"postPath\":\"$.entities[?(@.roles[?(@==''registrant'')])].vcardArray[1][?(@[0]==''contact-uri'')]\",\"pathLang\":\"jsonpath\"}],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"By using this RDAP service, you agree to Hostinger\\u2019s
+        applicable terms of service and privacy policy.\"],\"links\":[{\"value\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/toolsmonth.com\",\"rel\":\"terms-of-service\",\"href\":\"https:\\/\\/www.hostinger.com\\/legal\\/universal-terms-of-service-agreement\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"value\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/toolsmonth.com\",\"rel\":\"help\",\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"value\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/toolsmonth.com\",\"rel\":\"glossary\",\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]}],\"links\":[{\"value\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/toolsmonth.com\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.hostinger.com\\/domain\\/toolsmonth.com\",\"type\":\"application\\/rdap+json\"}]}","source_type":"registrar","timestamp":"2026-07-17T17:47:57Z","url":"https://rdap.hostinger.com/domain/TOOLSMONTH.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1","redacted"],"contacts":[{"city":"","country":"LT","email":"https://www.hostinger.com/whois?domain=toolsmonth.com\u0026view=contact","name":"","postal":"","region":"","roles":["registrant"],"street":""}],"creation_date":"2025-07-15T04:40:00+00:00","dnssec":{"signed":false},"domain":"toolsmonth.com","domain_statuses":["client
+        transfer prohibited"],"email_domains":["hostinger.com"],"emails":["abuse-tracker@hostinger.com","abuse@hostinger.com","https://www.hostinger.com/whois?domain=toolsmonth.com\u0026view=contact"],"expiration_date":"2027-07-15T04:40:00+00:00","handle":"3000616940_DOMAIN_COM-VRSN","last_changed_date":"2026-07-16T08:02:36+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/TOOLSMONTH.COM","rel":"self"},{"href":"https://rdap.hostinger.com/domain/TOOLSMONTH.COM","rel":"related"},{"href":"https://rdap.hostinger.com/domain/toolsmonth.com","rel":"self"}],"nameservers":["ns1.dns-expired.com","ns2.dns-expired.com"],"registrar":{"contacts":[{"email":"abuse@hostinger.com","name":"Registrar
+        Abuse Contact","phone":"tel:+1-212-252-2172","roles":["abuse"]}],"iana_id":"1636","name":"HOSTINGER
+        operations, UAB"},"unclassified_emails":["abuse-tracker@hostinger.com"]},"registrar_request_url":"https://rdap.hostinger.com/domain/TOOLSMONTH.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/toolsmonth.com"}}
+
+        {"timestamp":"2026-07-17T17:48:00Z","domain":"simplehappylove.org","raw_record":{"first_request_timestamp":"2026-07-17T17:47:54Z","requests":[{"data":"{\n  \"rdapConformance\":
+        [\n    \"rdap_level_0\",\n    \"icann_rdap_response_profile_1\",\n    \"icann_rdap_technical_implementation_guide_1\",\n    \"redacted\"\n  ],\n  \"notices\":
+        [\n    {\n      \"title\": \"Terms of Service\",\n      \"description\": [\n        \"Public
+        Interest Registry provides this RDAP service for informational purposes only,
+        and to assist persons in obtaining information about or related to a domain
+        name registration record. Public Interest Registry does not guarantee its
+        accuracy. Users accessing the Public Interest Registry RDAP service agree
+        to use the data only for lawful purposes, and under no circumstances may this
+        data be used to: a) allow, enable, or otherwise support the transmission by
+        e-mail, telephone, or facsimile of mass unsolicited, commercial advertising
+        or solicitations to entities other than the registrar''s own existing customers
+        and b) enable high volume, automated, electronic processes that send queries
+        or data to the systems of Public Interest Registry or any ICANN-accredited
+        registrar, except as reasonably necessary to register domain names or modify
+        existing registrations. When using the Public Interest Registry RDAP service,
+        please consider the following: the RDAP service is not a replacement for standard
+        EPP commands to the SRS service. RDAP is not considered authoritative for
+        registered domain objects. The RDAP service may be scheduled for downtime
+        during production or OT\u0026E maintenance periods. Queries to the RDAP services
+        are throttled. If too many queries are received from a single IP address within
+        a specified time, the service will begin to reject further queries for a period
+        of time to prevent disruption of RDAP service access. Abuse of the RDAP system
+        through data mining is mitigated by detecting and limiting bulk query access
+        from single sources. Where applicable, the presence of a [Non-Public Data]
+        tag indicates that such data is not made publicly available due to applicable
+        data privacy laws or requirements. Should you wish to contact the registrant,
+        please refer to the RDAP records available through the registrar URL listed
+        above. Access to non-public data may be provided, upon request, where it can
+        be reasonably confirmed that the requester holds a specific legitimate interest
+        and a proper legal basis for accessing the withheld data. Access to this data
+        can be requested by submitting a request to WHOISrequest@pir.org. Public Interest
+        Registry Inc. reserves the right to modify these terms at any time. By submitting
+        this query, you agree to abide by this policy.\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n          \"rel\":
+        \"terms-of-service\",\n          \"href\": \"https://thenew.org/org-people/about-pir/policies/\",\n          \"type\":
+        \"text/html\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Status
+        Codes\",\n      \"description\": [\n        \"For more information on domain
+        status codes, please visit https://icann.org/epp\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n          \"rel\":
+        \"glossary\",\n          \"href\": \"https://icann.org/epp\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    },\n    {\n      \"title\":
+        \"RDDS Inaccuracy Complaint Form\",\n      \"description\": [\n        \"URL
+        of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\"\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n          \"rel\":
+        \"help\",\n          \"href\": \"https://icann.org/wicf\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"ldhName\":
+        \"simplehappylove.org\",\n  \"unicodeName\": \"simplehappylove.org\",\n  \"nameservers\":
+        [\n    {\n      \"ldhName\": \"ns75.domaincontrol.com\",\n      \"unicodeName\":
+        \"ns75.domaincontrol.com\",\n      \"objectClassName\": \"nameserver\",\n      \"handle\":
+        \"a7aa0adc32ac43069b4ebf51356949b4-LROR\",\n      \"status\": [\n        \"associated\"\n      ]\n    },\n    {\n      \"ldhName\":
+        \"ns76.domaincontrol.com\",\n      \"unicodeName\": \"ns76.domaincontrol.com\",\n      \"objectClassName\":
+        \"nameserver\",\n      \"handle\": \"129339b676fa4e0a9abd8a324c915cca-LROR\",\n      \"status\":
+        [\n        \"associated\"\n      ]\n    }\n  ],\n  \"secureDNS\": {\n    \"delegationSigned\":
+        false,\n    \"maxSigLife\": 1\n  },\n  \"redacted\": [\n    {\n      \"name\":
+        {\n        \"type\": \"Registry Domain ID\"\n      },\n      \"prePath\":
+        \"$.handle\",\n      \"pathLang\": \"jsonpath\",\n      \"method\": \"removal\"\n    }\n  ],\n  \"objectClassName\":
+        \"domain\",\n  \"status\": [\n    \"client delete prohibited\",\n    \"client
+        renew prohibited\",\n    \"client transfer prohibited\",\n    \"client update
+        prohibited\"\n  ],\n  \"events\": [\n    {\n      \"eventAction\": \"expiration\",\n      \"eventDate\":
+        \"2027-09-02T14:17:35.433Z\"\n    },\n    {\n      \"eventAction\": \"registration\",\n      \"eventDate\":
+        \"2015-09-02T14:17:35.433Z\"\n    },\n    {\n      \"eventAction\": \"last
+        changed\",\n      \"eventDate\": \"2025-10-17T14:18:27.146Z\"\n    },\n    {\n      \"eventAction\":
+        \"last update of RDAP database\",\n      \"eventDate\": \"2026-07-17T17:47:58.236Z\"\n    }\n  ],\n  \"entities\":
+        [\n    {\n      \"vcardArray\": [\n        \"vcard\",\n        [\n          [\n            \"version\",\n            {},\n            \"text\",\n            \"4.0\"\n          ],\n          [\n            \"fn\",\n            {},\n            \"text\",\n            \"GoDaddy.com,
+        LLC\"\n          ]\n        ]\n      ],\n      \"roles\": [\n        \"registrar\"\n      ],\n      \"publicIds\":
+        [\n        {\n          \"type\": \"IANA Registrar ID\",\n          \"identifier\":
+        \"146\"\n        }\n      ],\n      \"objectClassName\": \"entity\",\n      \"handle\":
+        \"146\",\n      \"entities\": [\n        {\n          \"vcardArray\": [\n            \"vcard\",\n            [\n              [\n                \"version\",\n                {},\n                \"text\",\n                \"4.0\"\n              ],\n              [\n                \"fn\",\n                {},\n                \"text\",\n                \"\"\n              ],\n              [\n                \"tel\",\n                {\n                  \"type\":
+        \"voice\"\n                },\n                \"uri\",\n                \"tel:+1.4806242505\"\n              ],\n              [\n                \"email\",\n                {},\n                \"text\",\n                \"abuse@godaddy.com\"\n              ]\n            ]\n          ],\n          \"roles\":
+        [\n            \"abuse\"\n          ],\n          \"objectClassName\": \"entity\"\n        }\n      ],\n      \"links\":
+        [\n        {\n          \"value\": \"https://rdap.publicinterestregistry.org/rdap/entity/146\",\n          \"rel\":
+        \"self\",\n          \"href\": \"https://rdap.publicinterestregistry.org/rdap/entity/146\",\n          \"type\":
+        \"application/rdap+json\"\n        },\n        {\n          \"value\": \"https://rdap.godaddy.com/v1\",\n          \"rel\":
+        \"about\",\n          \"href\": \"https://rdap.godaddy.com/v1\",\n          \"type\":
+        \"application/rdap+json\"\n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"value\":
+        \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n      \"rel\":
+        \"related\",\n      \"href\": \"https://rdap.godaddy.com/v1/domain/simplehappylove.org\",\n      \"type\":
+        \"application/rdap+json\"\n    },\n    {\n      \"value\": \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n      \"rel\":
+        \"self\",\n      \"href\": \"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org\",\n      \"type\":
+        \"application/rdap+json\"\n    }\n  ]\n}","source_type":"registrar","timestamp":"2026-07-17T17:47:56Z","url":"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1","redacted"],"contacts":[],"creation_date":"2015-09-02T14:17:35.433000+00:00","dnssec":{"signed":false},"domain":"simplehappylove.org","domain_statuses":["client
+        delete prohibited","client renew prohibited","client transfer prohibited","client
+        update prohibited"],"email_domains":["godaddy.com","pir.org"],"emails":["abuse@godaddy.com","whoisrequest@pir.org"],"expiration_date":"2027-09-02T14:17:35.433000+00:00","last_changed_date":"2025-10-17T14:18:27.146000+00:00","links":[{"href":"https://rdap.godaddy.com/v1/domain/simplehappylove.org","rel":"related"},{"href":"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org","rel":"self"},{"href":"https://rdap.godaddy.com/v1/domain/simplehappylove.org","rel":"related"},{"href":"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org","rel":"self"}],"nameservers":["ns75.domaincontrol.com","ns76.domaincontrol.com"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:+1.4806242505","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com,
+        LLC"},"unclassified_emails":["whoisrequest@pir.org"]},"registrar_request_url":"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org","registry_request_url":"https://rdap.publicinterestregistry.org/rdap/domain/simplehappylove.org"}}
+
+        {"timestamp":"2026-07-17T17:48:00Z","domain":"apphiacoffee.com","raw_record":{"first_request_timestamp":"2026-07-17T17:47:51Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"3094895656_DOMAIN_COM-VRSN\",\"ldhName\":\"APPHIACOFFEE.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/APPHIACOFFEE.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/APPHIACOFFEE.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap.gandi.net\\/domain\\/APPHIACOFFEE.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap.gandi.net\\/domain\\/APPHIACOFFEE.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"client
+        transfer prohibited\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"81\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/www.gandi.net\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.gandi.net\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"81\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Gandi
+        SAS\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+33.170377661\"],[\"email\",{},\"text\",\"abuse@support.gandi.net\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2026-05-02T18:37:06Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2027-05-02T18:37:06Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-05-02T18:47:24Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-17T17:47:47Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS-1097.AWSDNS-09.ORG\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS-1575.AWSDNS-04.CO.UK\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS-516.AWSDNS-00.NET\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS-9.AWSDNS-01.COM\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/apphiacoffee.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/apphiacoffee.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2026-07-17T17:47:51Z","url":"https://rdap.verisign.com/com/v1/domain/apphiacoffee.com"},{"data":"{\"objectClassName\":
+        \"domain\", \"handle\": \"3094895656_DOMAIN_COM-VRSN\", \"ldhName\": \"apphiacoffee.com\",
+        \"nameservers\": [{\"objectClassName\": \"nameserver\", \"ldhName\": \"ns-1575.awsdns-04.co.uk\",
+        \"unicodeName\": \"ns-1575.awsdns-04.co.uk\", \"ipAddresses\": {\"v4\": [],
+        \"v6\": []}}, {\"objectClassName\": \"nameserver\", \"ldhName\": \"ns-9.awsdns-01.com\",
+        \"unicodeName\": \"ns-9.awsdns-01.com\", \"ipAddresses\": {\"v4\": [], \"v6\":
+        []}}, {\"objectClassName\": \"nameserver\", \"ldhName\": \"ns-516.awsdns-00.net\",
+        \"unicodeName\": \"ns-516.awsdns-00.net\", \"ipAddresses\": {\"v4\": [], \"v6\":
+        []}}], \"entities\": [{\"objectClassName\": \"entity\", \"roles\": [\"registrant\"],
+        \"handle\": \"REDACTED\", \"remarks\": [{\"description\": [\"Some of the data
+        in this object has been removed.\"], \"title\": \"REDACTED FOR PRIVACY\",
+        \"type\": \"object redacted due to authorization\"}], \"vcardArray\": [\"vcard\",
+        [[\"version\", {}, \"text\", \"4.0\"], [\"fn\", {}, \"text\", \"Redacted for
+        Privacy\"], [\"org\", {}, \"text\", \"STG Spread The Gospel Ltd\"], [\"adr\",
+        {\"cc\": \"CY\"}, \"text\", [\"\", \"\", \"\", \"\", \"\", \"\", \"\"]], [\"tel\",
+        {\"type\": \"voice\"}, \"text\", \"\"], [\"email\", {}, \"text\", \"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net\"]]]},
+        {\"objectClassName\": \"entity\", \"roles\": [\"administrative\"], \"handle\":
+        \"REDACTED\", \"remarks\": [{\"description\": [\"Some of the data in this
+        object has been removed.\"], \"title\": \"REDACTED FOR PRIVACY\", \"type\":
+        \"object redacted due to authorization\"}], \"vcardArray\": [\"vcard\", [[\"version\",
+        {}, \"text\", \"4.0\"], [\"fn\", {}, \"text\", \"Redacted for Privacy\"],
+        [\"adr\", {}, \"text\", [\"\", \"\", \"\", \"\", \"\", \"\", \"\"]], [\"tel\",
+        {\"type\": \"voice\"}, \"text\", \"\"], [\"email\", {}, \"text\", \"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net\"]]]},
+        {\"objectClassName\": \"entity\", \"roles\": [\"technical\"], \"handle\":
+        \"REDACTED\", \"remarks\": [{\"description\": [\"Some of the data in this
+        object has been removed.\"], \"title\": \"REDACTED FOR PRIVACY\", \"type\":
+        \"object redacted due to authorization\"}], \"vcardArray\": [\"vcard\", [[\"version\",
+        {}, \"text\", \"4.0\"], [\"fn\", {}, \"text\", \"Redacted for Privacy\"],
+        [\"adr\", {}, \"text\", [\"\", \"\", \"\", \"\", \"\", \"\", \"\"]], [\"tel\",
+        {\"type\": \"voice\"}, \"text\", \"\"], [\"email\", {}, \"text\", \"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net\"]]]},
+        {\"objectClassName\": \"entity\", \"roles\": [\"billing\"], \"handle\": \"REDACTED\",
+        \"remarks\": [{\"description\": [\"Some of the data in this object has been
+        removed.\"], \"title\": \"REDACTED FOR PRIVACY\", \"type\": \"object redacted
+        due to authorization\"}], \"vcardArray\": [\"vcard\", [[\"version\", {}, \"text\",
+        \"4.0\"], [\"fn\", {}, \"text\", \"Redacted for Privacy\"], [\"adr\", {},
+        \"text\", [\"\", \"\", \"\", \"\", \"\", \"\", \"\"]], [\"tel\", {\"type\":
+        \"voice\"}, \"text\", \"\"], [\"email\", {}, \"text\", \"\"]]]}, {\"handle\":
+        \"81\", \"roles\": [\"registrar\", \"sponsor\"], \"vcardArray\": [\"vcard\",
+        [[\"version\", {}, \"text\", \"4.0\"], [\"fn\", {}, \"text\", \"Gandi SAS\"]]],
+        \"links\": [{\"rel\": \"service\", \"href\": \"https://www.gandi.net/\", \"value\":
+        \"https://www.gandi.net/\"}, {\"rel\": \"about\", \"type\": \"application/rdap+json\",
+        \"href\": \"https://rdap.gandi.net/\", \"value\": \"https://rdap.gandi.net/\"}],
+        \"objectClassName\": \"entity\", \"publicIds\": [{\"identifier\": \"81\",
+        \"type\": \"IANA Registrar ID\"}], \"entities\": [{\"objectClassName\": \"entity\",
+        \"roles\": [\"abuse\"], \"handle\": \"81\", \"vcardArray\": [\"vcard\", [[\"version\",
+        {}, \"text\", \"4.0\"], [\"fn\", {}, \"text\", \"Gandi SAS\"], [\"tel\", {\"type\":
+        [\"voice\"]}, \"uri\", \"tel:+33.170377661\"], [\"email\", {\"type\": \"work\",
+        \"pref\": \"1\"}, \"text\", \"abuse@gandi.net\"]]]}]}], \"events\": [{\"eventAction\":
+        \"last update of RDAP database\", \"eventDate\": \"2026-05-02T18:47:26Z\"},
+        {\"eventAction\": \"registration\", \"eventDate\": \"2026-05-02T18:37:06Z\"},
+        {\"eventAction\": \"registrar expiration\", \"eventDate\": \"2027-05-02T18:37:06Z\"}],
+        \"unicodeName\": \"apphiacoffee.com\", \"status\": [\"client transfer prohibited\"],
+        \"secureDNS\": {\"delegationSigned\": false}, \"notices\": [{\"title\": \"Terms
+        of Use\", \"description\": [\"Service subject to Terms of Use.\"], \"links\":
+        [{\"href\": \"https://rdap.gandi.net/terms_of_use.html\", \"rel\": \"terms-of-service\",
+        \"type\": \"text/html\", \"value\": \"https://rdap.gandi.net/domain/apphiacoffee.com\"}]},
+        {\"title\": \"RDDS Inaccuracy Complaint Form\", \"description\": [\"URL of
+        the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf\"], \"links\":
+        [{\"href\": \"https://icann.org/wicf\", \"rel\": \"help\", \"type\": \"text/html\",
+        \"value\": \"https://rdap.gandi.net/domain/apphiacoffee.com\"}]}, {\"title\":
+        \"Status Codes\", \"description\": [\"For more information on domain status
+        codes, please visit https://icann.org/epp\"], \"links\": [{\"href\": \"https://icann.org/epp\",
+        \"rel\": \"glossary\", \"type\": \"text/html\", \"value\": \"https://rdap.gandi.net/domain/apphiacoffee.com\"}]}],
+        \"lang\": \"en\", \"port43\": \"whois.gandi.net\", \"links\": [{\"href\":
+        \"https://rdap.gandi.net/domain/apphiacoffee.com\", \"rel\": \"self\", \"type\":
+        \"application/rdap+json\", \"value\": \"https://rdap.gandi.net/domain/apphiacoffee.com\"},
+        {\"rel\": \"related\", \"href\": \"https://partners.gandi.net/nameservers/v1\",
+        \"type\": \"application/rdap+json\", \"value\": \"https://partners.gandi.net/nameservers/v1\"},
+        {\"rel\": \"related\", \"href\": \"https://cdscheck.gandi.net/v1/domains/apphiacoffee.com/cds\",
+        \"type\": \"application/rdap+json\", \"value\": \"https://cdscheck.gandi.net/v1/domains/apphiacoffee.com/cds\"}],
+        \"rdapConformance\": [\"rdap_level_0\", \"icann_rdap_response_profile_1\",
+        \"icann_rdap_technical_implementation_guide_1\", \"redacted\"], \"redacted\":
+        [{\"name\": {\"description\": \"Registrant Name\"}, \"postPath\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''fn'')][1]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registrant City\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registrant Street\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registrant Postal
+        Code\"}, \"postPath\": \"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registry Registrant
+        ID\"}, \"postPath\": \"$.entities[?(@.roles[0]==''registrant'')].handle\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Administrative
+        Name\"}, \"postPath\": \"$.entities[?(@.roles[0]==''administrative'')].vcardArray[1][?(@[0]==''fn'')][1]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Administrative
+        City\"}, \"postPath\": \"$.entities[?(@.roles[0]==''administrative'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Administrative
+        Street\"}, \"postPath\": \"$.entities[?(@.roles[0]==''administrative'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Administrative
+        Postal Code\"}, \"postPath\": \"$.entities[?(@.roles[0]==''administrative'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registry Administrative
+        ID\"}, \"postPath\": \"$.entities[?(@.roles[0]==''administrative'')].handle\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Technical Name\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''fn'')][1]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Technical City\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Technical Street\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Technical Postal
+        Code\"}, \"postPath\": \"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registry Technical
+        ID\"}, \"postPath\": \"$.entities[?(@.roles[0]==''technical'')].handle\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Billing Name\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''billing'')].vcardArray[1][?(@[0]==''fn'')][1]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Billing City\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''billing'')].vcardArray[1][?(@[0]==''adr'')][3][3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Billing Street\"},
+        \"postPath\": \"$.entities[?(@.roles[0]==''billing'')].vcardArray[1][?(@[0]==''adr'')][3][:3]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Billing Postal
+        Code\"}, \"postPath\": \"$.entities[?(@.roles[0]==''billing'')].vcardArray[1][?(@[0]==''adr'')][3][5]\",
+        \"method\": \"emptyValue\"}, {\"name\": {\"description\": \"Registry Billing
+        ID\"}, \"postPath\": \"$.entities[?(@.roles[0]==''billing'')].handle\", \"method\":
+        \"emptyValue\"}]}","source_type":"registrar","timestamp":"2026-07-17T17:47:57Z","url":"https://rdap.gandi.net/domain/APPHIACOFFEE.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1","redacted"],"contacts":[{"city":"","country":"CY","email":"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net","handle":"REDACTED","name":"Redacted
+        for Privacy","org":"STG Spread The Gospel Ltd","phone":"","postal":"","region":"","roles":["registrant"],"street":""},{"city":"","country":"","email":"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net","handle":"REDACTED","name":"Redacted
+        for Privacy","phone":"","postal":"","region":"","roles":["administrative"],"street":""},{"city":"","country":"","email":"9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net","handle":"REDACTED","name":"Redacted
+        for Privacy","phone":"","postal":"","region":"","roles":["technical"],"street":""},{"city":"","country":"","email":"","handle":"REDACTED","name":"Redacted
+        for Privacy","phone":"","postal":"","region":"","roles":["billing"],"street":""}],"creation_date":"2026-05-02T18:37:06+00:00","dnssec":{"signed":false},"domain":"apphiacoffee.com","domain_statuses":["client
+        transfer prohibited"],"email_domains":["contact.gandi.net","gandi.net","support.gandi.net"],"emails":["9f30098a96c75e49078e79f961509b23-59684324@contact.gandi.net","abuse@gandi.net","abuse@support.gandi.net"],"expiration_date":"2027-05-02T18:37:06+00:00","handle":"3094895656_DOMAIN_COM-VRSN","last_changed_date":"2026-05-02T18:47:24+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/APPHIACOFFEE.COM","rel":"self"},{"href":"https://rdap.gandi.net/domain/APPHIACOFFEE.COM","rel":"related"},{"href":"https://rdap.gandi.net/domain/apphiacoffee.com","rel":"self"},{"href":"https://partners.gandi.net/nameservers/v1","rel":"related"},{"href":"https://cdscheck.gandi.net/v1/domains/apphiacoffee.com/cds","rel":"related"}],"nameservers":["ns-1575.awsdns-04.co.uk","ns-9.awsdns-01.com","ns-516.awsdns-00.net"],"registrar":{"contacts":[{"email":"abuse@gandi.net","handle":"81","name":"Gandi
+        SAS","phone":"tel:+33.170377661","roles":["abuse"]}],"iana_id":"81","name":"Gandi
+        SAS"},"unclassified_emails":["abuse@support.gandi.net"]},"registrar_request_url":"https://rdap.gandi.net/domain/APPHIACOFFEE.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/apphiacoffee.com"}}
+
+        {"timestamp":"2026-07-17T17:48:00Z","domain":"nexuslinktech.com","raw_record":{"first_request_timestamp":"2026-07-17T17:47:55Z","requests":[{"data":"{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_response_profile_0\",\"icann_rdap_technical_implementation_guide_0\"],\"notices\":[{\"title\":\"Cloudflare
+        Registrar\",\"description\":[\"Cloudflare provides more than 13 million domains
+        with the tools to give their global users a faster, more secure, and more
+        reliable internet experience.\",\"Register your domain name at https://www.cloudflare.com/registrar/\"],\"links\":[{\"value\":\"https://www.cloudflare.com/registrar/\",\"rel\":\"related\",\"href\":\"https://www.cloudflare.com/registrar/\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Use\",\"description\":[\"Data in the Cloudflare Registrar WHOIS database
+        is provided to you by Cloudflare under the terms and conditions at https://www.cloudflare.com/domain-registration-agreement/.\",\"By
+        submitting this query, you agree to abide by these terms.\"],\"links\":[{\"value\":\"https://www.cloudflare.com/domain-registration-agreement/\",\"rel\":\"related\",\"href\":\"https://www.cloudflare.com/domain-registration-agreement/\",\"type\":\"text/html\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://icann.org/epp\",\"rel\":\"related\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"value\":\"https://icann.org/wicf\",\"rel\":\"related\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]}],\"lang\":\"en-US\",\"objectClassName\":\"domain\",\"handle\":\"3122441738_DOMAIN_COM-VRSN\",\"ldhName\":\"nexuslinktech.com\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"port43\":\"whois.cloudflare.com\",\"ldhName\":\"everton.ns.cloudflare.com\",\"status\":[\"active\"]},{\"objectClassName\":\"nameserver\",\"port43\":\"whois.cloudflare.com\",\"ldhName\":\"wally.ns.cloudflare.com\",\"status\":[\"active\"]}],\"secureDNS\":{\"delegationSigned\":false},\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"1910\",\"lang\":\"en-US\",\"port43\":\"whois.cloudflare.com\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Cloudflare,
+        Inc.\"],[\"adr\",{\"cc\":\"US\",\"type\":\"work\"},\"text\",[\"\",\"\",\"101
+        Townsend St\",\"San Francisco\",\"CA\",\"94107\",\"\"]],[\"email\",{\"type\":\"work\"},\"text\",\"registrar-admin@cloudflare.com\"],[\"tel\",{\"pref\":\"1\",\"type\":[\"work\",\"voice\"]},\"text\",\"+1.6503198930\"],[\"tel\",{\"pref\":\"1\",\"type\":[\"work\",\"fax\"]},\"text\",\"+1.6502307173\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"1910\"}],\"entities\":[{\"objectClassName\":\"entity\",\"port43\":\"whois.cloudflare.com\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Cloudflare
+        Registrar Abuse\"],[\"email\",{\"type\":\"work\"},\"text\",\"registrar-abuse@cloudflare.com\"],[\"tel\",{\"pref\":\"1\",\"type\":[\"work\",\"voice\"]},\"text\",\"+1.4153197517\"]]],\"roles\":[\"abuse\"]}]},{\"objectClassName\":\"entity\",\"port43\":\"whois.cloudflare.com\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"DATA
+        REDACTED\"],[\"adr\",{\"cc\":\"MO\",\"type\":\"work\"},\"text\",[\"\",\"\",\"DATA
+        REDACTED\",\"DATA REDACTED\",\"MACAU\",\"DATA REDACTED\",\"\"]],[\"contact-uri\",{},\"uri\",\"https://domaincontact.registrar.cloudflare.com/nexuslinktech.com\"],[\"tel\",{\"pref\":\"1\",\"type\":[\"work\",\"voice\"]},\"text\",\"+1.4153197517\"]]],\"roles\":[\"registrant\"],\"remarks\":[{\"title\":\"REDACTED
+        FOR PRIVACY\",\"type\":\"object redacted due to authorization\",\"description\":[\"Some
+        of the data in this object has been removed\"]}]}],\"status\":[\"client transfer
+        prohibited\",\"add period\"],\"links\":[{\"value\":\"https://rdap.cloudflare.com/rdap/v1/domain/nexuslinktech.com\",\"rel\":\"self\",\"href\":\"https://rdap.cloudflare.com/rdap/v1/domain/nexuslinktech.com\",\"type\":\"application/rdap+json\"}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2026-07-17T17:44:25Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-17T17:44:27Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2027-07-17T17:44:25Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-17T17:44:27Z\"}]}\n","source_type":"registrar","timestamp":"2026-07-17T17:47:58Z","url":"https://rdap.cloudflare.com/rdap/v1/domain/NEXUSLINKTECH.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","icann_rdap_response_profile_0","icann_rdap_technical_implementation_guide_0"],"contacts":[{"city":"DATA
+        REDACTED","country":"MO","email":"REDACTED FOR PRIVACY","name":"DATA REDACTED","phone":"+1.4153197517","postal":"DATA
+        REDACTED","region":"MACAU","roles":["registrant"],"street":"DATA REDACTED"}],"creation_date":"2026-07-17T17:44:25+00:00","dnssec":{"signed":false},"domain":"nexuslinktech.com","domain_statuses":["client
+        transfer prohibited","add period"],"email_domains":["cloudflare.com"],"emails":["redacted
+        for privacy","registrar-abuse@cloudflare.com","registrar-admin@cloudflare.com"],"expiration_date":"2027-07-17T17:44:25+00:00","handle":"3122441738_DOMAIN_COM-VRSN","last_changed_date":"2026-07-17T17:44:27+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/NEXUSLINKTECH.COM","rel":"self"},{"href":"https://rdap.cloudflare.com/rdap/v1/domain/NEXUSLINKTECH.COM","rel":"related"},{"href":"https://rdap.cloudflare.com/rdap/v1/domain/nexuslinktech.com","rel":"self"}],"nameservers":["everton.ns.cloudflare.com","wally.ns.cloudflare.com"],"registrar":{"contacts":[{"email":"registrar-abuse@cloudflare.com","name":"Cloudflare
+        Registrar Abuse","phone":"+1.4153197517","roles":["abuse"]}],"iana_id":"1910","name":"Cloudflare,
+        Inc."},"unclassified_emails":["registrar-admin@cloudflare.com"]},"registrar_request_url":"https://rdap.cloudflare.com/rdap/v1/domain/NEXUSLINKTECH.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/nexuslinktech.com"}}
+
+        {"timestamp":"2026-07-17T17:48:00Z","domain":"norvek.com","raw_record":{"first_request_timestamp":"2026-07-17T17:47:53Z","requests":[{"data":"{\"objectClassName\":\"domain\",\"handle\":\"1877223808_DOMAIN_COM-VRSN\",\"ldhName\":\"NORVEK.COM\",\"links\":[{\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/NORVEK.COM\",\"rel\":\"self\",\"href\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/NORVEK.COM\",\"type\":\"application\\/rdap+json\"},{\"value\":\"https:\\/\\/rdap.godaddy.com\\/v1\\/domain\\/NORVEK.COM\",\"rel\":\"related\",\"href\":\"https:\\/\\/rdap.godaddy.com\\/v1\\/domain\\/NORVEK.COM\",\"type\":\"application\\/rdap+json\"}],\"status\":[\"client
+        delete prohibited\",\"client renew prohibited\",\"client transfer prohibited\",\"client
+        update prohibited\"],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"146\",\"roles\":[\"registrar\"],\"links\":[{\"href\":\"http:\\/\\/www.godaddy.com\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.godaddy.com\\/v1\\/\",\"rel\":\"about\"}],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"146\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC\"]]],\"entities\":[{\"objectClassName\":\"entity\",\"roles\":[\"abuse\"],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:480-624-2505\"],[\"email\",{},\"text\",\"abuse@godaddy.com\"]]]}]}],\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-09-24T00:06:13Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2027-09-24T00:06:13Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T13:02:32Z\"},{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-17T17:47:47Z\"}],\"secureDNS\":{\"delegationSigned\":false},\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS35.DOMAINCONTROL.COM\"},{\"objectClassName\":\"nameserver\",\"ldhName\":\"NS36.DOMAINCONTROL.COM\"}],\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"notices\":[{\"title\":\"Terms
+        of Service\",\"description\":[\"Service subject to Terms of Use.\"],\"links\":[{\"href\":\"https:\\/\\/www.verisign.com\\/domain-names\\/registration-data-access-protocol\\/terms-service\\/index.xhtml\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/norvek.com\",\"rel\":\"terms-of-service\"}]},{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https:\\/\\/icann.org\\/epp\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/epp\",\"type\":\"text\\/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https:\\/\\/icann.org\\/wicf\"],\"links\":[{\"href\":\"https:\\/\\/icann.org\\/wicf\",\"type\":\"text\\/html\",\"value\":\"https:\\/\\/rdap.verisign.com\\/com\\/v1\\/domain\\/norvek.com\",\"rel\":\"help\"}]}]}","source_type":"registry","timestamp":"2026-07-17T17:47:53Z","url":"https://rdap.verisign.com/com/v1/domain/norvek.com"},{"data":"{\"objectClassName\":\"domain\",\"handle\":\"1877223808_DOMAIN_COM-VRSN\",\"ldhName\":\"norvek.com\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns35.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T06:02:33Z\"}]},{\"objectClassName\":\"nameserver\",\"ldhName\":\"ns36.domaincontrol.com\",\"status\":[\"active\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T06:02:33Z\"}]}],\"secureDNS\":{\"delegationSigned\":false},\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/norvek.com\",\"rel\":\"self\",\"href\":\"https://rdap.godaddy.com/v1/domain/norvek.com\",\"type\":\"application/rdap+json\"}],\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"norvekcom-reg\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"org\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=norvek.com\\u0026action=contactDomainOwner\"]]],\"roles\":[\"registrant\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T05:21:30Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"norvekcom-tech\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"kind\",{},\"text\",\"org\"],[\"fn\",{},\"text\",\"Registration
+        Private\"],[\"org\",{\"type\":\"work\"},\"text\",\"Domains By Proxy, LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600\",\"Tempe\",\"Arizona\",\"85281\",\"\"]],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.4806242599\"],[\"contact-uri\",{},\"uri\",\"https://www.godaddy.com/whois/results.aspx?domain=norvek.com\\u0026action=contactDomainOwner\"]]],\"roles\":[\"technical\"],\"events\":[{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T05:24:59Z\"}]},{\"objectClassName\":\"entity\",\"handle\":\"146\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"GoDaddy.com,
+        LLC\"],[\"adr\",{\"cc\":\"US\"},\"text\",[\"\",\"\",\"2155 E Godaddy Way\",\"Tempe\",\"AZ\",\"85284\",\"\"]],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"registrar\"],\"publicIds\":[{\"type\":\"IANA
+        Registrar ID\",\"identifier\":\"146\"}],\"entities\":[{\"objectClassName\":\"entity\",\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"\"],[\"tel\",{\"type\":\"voice\"},\"uri\",\"tel:+1.480-624-2505\"],[\"email\",{\"type\":\"work\"},\"text\",\"abuse@godaddy.com\"]]],\"roles\":[\"abuse\"]}],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/\",\"rel\":\"about\",\"href\":\"https://www.godaddy.com\",\"type\":\"application/rdap+json\"}],\"port43\":\"whois.godaddy.com\"}],\"events\":[{\"eventAction\":\"last
+        update of RDAP database\",\"eventDate\":\"2026-07-17T17:47:58Z\"},{\"eventAction\":\"registrar
+        expiration\",\"eventDate\":\"2027-09-23T19:06:13Z\"},{\"eventAction\":\"registration\",\"eventDate\":\"2014-09-23T19:06:13Z\"},{\"eventAction\":\"last
+        changed\",\"eventDate\":\"2026-07-15T07:25:06Z\"}],\"status\":[\"delete prohibited\",\"transfer
+        prohibited\",\"renew prohibited\",\"update prohibited\"],\"notices\":[{\"title\":\"Status
+        Codes\",\"description\":[\"For more information on domain status codes, please
+        visit https://icann.org/epp\"],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/norvek.com\",\"rel\":\"glossary\",\"href\":\"https://icann.org/epp\",\"type\":\"text/html\"}]},{\"title\":\"RDDS
+        Inaccuracy Complaint Form\",\"description\":[\"URL of the ICANN RDDS Inaccuracy
+        Complaint Form: https://icann.org/wicf\"],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/norvek.com\",\"rel\":\"help\",\"href\":\"https://icann.org/wicf\",\"type\":\"text/html\"}]},{\"title\":\"Terms
+        of Use\",\"description\":[\"By submitting an inquiry, you agree to these Universal
+        Terms of Service\",\"and limitations of warranty. In particular, you agree
+        not to use this\",\"data to allow, enable, or otherwise make possible, dissemination
+        or\",\"collection of this data, in part or in its entirety, for any purpose,\",\"such
+        as the transmission of unsolicited advertising and solicitations of\",\"any
+        kind, including spam. You further agree not to use this data to enable\",\"high
+        volume, automated or robotic electronic processes designed to collect\",\"or
+        compile this data for any purpose, including mining this data for your\",\"own
+        personal or commercial purposes, or use this data in any way that violates\",\"applicable
+        laws and regulations.\"],\"links\":[{\"value\":\"https://rdap.godaddy.com/v1/domain/norvek.com\",\"rel\":\"terms-of-service\",\"href\":\"https://www.godaddy.com/agreements/showdoc?pageid=5403\",\"type\":\"text/html\"}]}],\"rdapConformance\":[\"rdap_level_0\",\"redacted\",\"icann_rdap_response_profile_1\",\"icann_rdap_technical_implementation_guide_1\"],\"port43\":\"whois.godaddy.com\",\"redacted\":[{\"name\":{\"description\":\"Registrant
+        Email\"},\"method\":\"replacementValue\",\"prePath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''email'')]\",\"replacementPath\":\"$.entities[?(@.roles[0]==''registrant'')].vcardArray[1][?(@[0]==''contact-uri'')]\",\"pathLang\":\"jsonpath\",\"reason\":{\"description\":\"Server
+        Policy\"}},{\"name\":{\"description\":\"Technical Email\"},\"method\":\"replacementValue\",\"prePath\":\"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''email'')]\",\"replacementPath\":\"$.entities[?(@.roles[0]==''technical'')].vcardArray[1][?(@[0]==''contact-uri'')]\",\"pathLang\":\"jsonpath\",\"reason\":{\"description\":\"Server
+        Policy\"}}]}","source_type":"registrar","timestamp":"2026-07-17T17:47:55Z","url":"https://rdap.godaddy.com/v1/domain/NORVEK.COM"}]},"parsed_record":{"parsed_fields":{"conformance":["rdap_level_0","redacted","icann_rdap_response_profile_1","icann_rdap_technical_implementation_guide_1"],"contacts":[{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=norvek.com\u0026action=contactDomainOwner","handle":"norvekcom-reg","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["registrant"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"},{"city":"Tempe","country":"US","email":"https://www.godaddy.com/whois/results.aspx?domain=norvek.com\u0026action=contactDomainOwner","handle":"norvekcom-tech","name":"Registration
+        Private","org":"Domains By Proxy, LLC","phone":"tel:+1.4806242599","postal":"85281","region":"Arizona","roles":["technical"],"street":"DomainsByProxy.com
+        100 S. Mill Ave, Suite 1600"}],"creation_date":"2014-09-23T19:06:13+00:00","dnssec":{"signed":false},"domain":"norvek.com","domain_statuses":["delete
+        prohibited","transfer prohibited","renew prohibited","update prohibited"],"email_domains":["godaddy.com"],"emails":["abuse@godaddy.com","https://www.godaddy.com/whois/results.aspx?domain=norvek.com\u0026action=contactdomainowner"],"expiration_date":"2027-09-24T00:06:13+00:00","handle":"1877223808_DOMAIN_COM-VRSN","last_changed_date":"2026-07-15T07:25:06+00:00","links":[{"href":"https://rdap.verisign.com/com/v1/domain/NORVEK.COM","rel":"self"},{"href":"https://rdap.godaddy.com/v1/domain/NORVEK.COM","rel":"related"},{"href":"https://rdap.godaddy.com/v1/domain/norvek.com","rel":"self"}],"nameservers":["ns35.domaincontrol.com","ns36.domaincontrol.com"],"registrar":{"contacts":[{"email":"abuse@godaddy.com","name":"","phone":"tel:+1.480-624-2505","roles":["abuse"]}],"iana_id":"146","name":"GoDaddy.com,
+        LLC"},"unclassified_emails":[]},"registrar_request_url":"https://rdap.godaddy.com/v1/domain/NORVEK.COM","registry_request_url":"https://rdap.verisign.com/com/v1/domain/norvek.com"}}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Fri, 17 Jul 2026 17:48:00 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=1hh6echqv5pjuhnfbj44qljm2e7888c16aduorjou76np6bfn6gj27ebgnc6etfcofl5boqh7d2vid30alq0o04pj33s9rfj8vg1ceb;
+        expires=Sun, 16-Aug-2026 17:48:00 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=f7c09ce1d927aa67f98074764a6f9202; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - f897ac88-dc03-4e7c-ac61-8b4521e74b0f
+    status:
+      code: 200
+      message: OK
 version: 1

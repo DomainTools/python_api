@@ -1371,4 +1371,66 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/name-server-monitor?app_name=python_wrapper&app_version=2.8.1&days_back=0&page=1&query=google.com
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA72WXW+bMBSG/8rEdbHSal203jnETdxgzPwx2k1TRcBNUYmNDGkqVfnvM+lNuimo
+        pah3cGzOw3mP3wPPnlV1ZXStvItnryzWReNdnI5GoxMvTxsX9M5GZ9/80dg/HXsnnk7X6rZW9lFZ
+        t7QyZlUqkJm1W2pMk5bt/nZfla7cs6cvF7eZ2ehmf5uWyja1d/H72dNqe9uRzpT5P8u1MvembkBV
+        uuU0awqjXVTYVNd3yn7B2oVzs06LNgwDIfkEQSluQBx6u5MewENMpLav0iecEhwFIKBk8OQBxVGb
+        GAh2JHdWmk1+V6b2eP5X+P/VopvmEDmlIRKCguCYVFu11EUGsmwA2IzJmE4gDmkEKJv1069K7UNp
+        Vu07HaG+PhDz+TXt3616UymbVW9l0RglKAwXMMKLBMYc8ADIY4UO3sz5TYzYJZXRFArsNI6Q+ByN
+        MYEzNEHT/jq3Bi/0Slk/tW+FRjMUokDsHQOPOaa/G6/oFZ0g4Wbi+df+hb1XyquYzyFDHcB0aR7V
+        y/56oIOzwCEU4zGXoYAfsOYhaqpK1aj8kEIg4zBBkAHcs1vvcyMhAQ1DNEMJxAwuYKcZB24joeiH
+        jDq6OLj5Y1erswSni+sO7FKtVDMYkQnpNAZMDm4+hoL2Oyv2RgDk+gjAbh58lx0UGjT3A5TEMFnM
+        6eQS+pJNYMQQdzV+rhcZlQJdUjanpGsKDH5+uCQEsb3m05jyrqr7t1UK4gtHGX13Q/X886bqTyEn
+        iCV4gTuYplK6suaxyJUFuhxA0ySOCZpi6MM4dv92gqDoA7pqtVmaJ6BV84aKbyDnmHe7J9e1r56q
+        wqp8oEP0i/I5wJG3+7Pb/QXNEowNYgwAAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 17 Jul 2026 17:47:12 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=s1joqe7gek57mpdafmu3dus7h0cb4td45efdcg3rui2ev7riohimpiqikier8h6u9sg4sbhcbv4tgrime788j8t8rk2i57i4bfo3hjk;
+        expires=Sun, 16-Aug-2026 17:47:12 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '73201'
+    status:
+      code: 200
+      message: OK
 version: 1
