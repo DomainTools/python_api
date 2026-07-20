@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.8.1
+  response:
+    body:
+      string: '{"timestamp":"2025-01-06T15:30:42Z","ip":"192.0.2.1","asn":12345,"organization":"Example
+        Hosting LLC","city":"Amsterdam","country":"NL","latitude":52.3676,"longitude":4.9041,"pdns_resolutions":47,"bad_pdns_resolutions":42,"total_domains":183,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":38,"all_threats_combined_count":45,"all_threats_combined_percent":91.2,"all_threats_percent":91.2,"combined_phishing_percent":72.1,"combined_malware_percent":85.3,"combined_spam_percent":61.4,"malicious_phishing":28,"malicious_malware":33,"malicious_spam":22,"percent_phishing":57.4,"percent_malware":67.8,"percent_spam":45.2,"compromised_phishing":6,"compromised_malware":8,"compromised_spam":4,"predicted_phishing":7,"predicted_malware":9,"predicted_spam":5}
+
+        {"timestamp":"2025-01-06T15:30:45Z","ip":"192.0.2.2","asn":67890,"organization":"Bulletproof
+        Networks Inc","city":"Moscow","country":"RU","latitude":55.7558,"longitude":37.6173,"pdns_resolutions":31,"bad_pdns_resolutions":29,"total_domains":94,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":25,"all_threats_combined_count":30,"all_threats_combined_percent":88.7,"all_threats_percent":88.7,"combined_phishing_percent":65.9,"combined_malware_percent":79.4,"combined_spam_percent":55.3,"malicious_phishing":19,"malicious_malware":24,"malicious_spam":15,"percent_phishing":48.9,"percent_malware":61.7,"percent_spam":38.3,"compromised_phishing":4,"compromised_malware":5,"compromised_spam":3,"predicted_phishing":6,"predicted_malware":7,"predicted_spam":4}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 28 Apr 2025 18:00:47 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=fsli3ccledtncc8l0agq08ceif; expires=Wed, 28-May-2025 18:00:47 GMT;
+        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-API-USERNAME:
+      - jbabac
+      X-GROUP-ID:
+      - '1117'
+      X-Powered-By:
+      - PHP/7.1.33
+      X-TIME:
+      - '49818'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/iphotlist/?after=-60&app_name=python_wrapper&app_version=2.8.1&top=5
+  response:
+    body:
+      string: '{"timestamp":"2025-01-06T15:30:42Z","ip":"192.0.2.1","asn":12345,"organization":"Example
+        Hosting LLC","city":"Amsterdam","country":"NL","latitude":52.3676,"longitude":4.9041,"pdns_resolutions":47,"bad_pdns_resolutions":42,"total_domains":183,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":38,"all_threats_combined_count":45,"all_threats_combined_percent":91.2,"all_threats_percent":91.2,"combined_phishing_percent":72.1,"combined_malware_percent":85.3,"combined_spam_percent":61.4,"malicious_phishing":28,"malicious_malware":33,"malicious_spam":22,"percent_phishing":57.4,"percent_malware":67.8,"percent_spam":45.2,"compromised_phishing":6,"compromised_malware":8,"compromised_spam":4,"predicted_phishing":7,"predicted_malware":9,"predicted_spam":5}
+
+        {"timestamp":"2025-01-06T15:30:45Z","ip":"192.0.2.2","asn":67890,"organization":"Bulletproof
+        Networks Inc","city":"Moscow","country":"RU","latitude":55.7558,"longitude":37.6173,"pdns_resolutions":31,"bad_pdns_resolutions":29,"total_domains":94,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":25,"all_threats_combined_count":30,"all_threats_combined_percent":88.7,"all_threats_percent":88.7,"combined_phishing_percent":65.9,"combined_malware_percent":79.4,"combined_spam_percent":55.3,"malicious_phishing":19,"malicious_malware":24,"malicious_spam":15,"percent_phishing":48.9,"percent_malware":61.7,"percent_spam":38.3,"compromised_phishing":4,"compromised_malware":5,"compromised_spam":3,"predicted_phishing":6,"predicted_malware":7,"predicted_spam":4}
+
+        '
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Content-Length:
+      - '932'
+      Content-Security-Policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      Content-Type:
+      - application/x-ndjson
+      Date:
+      - Thu, 23 Oct 2025 18:33:09 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - dtsession=41acrdm0r445tr0kqd8rsdu121jfg5tv05s572e3qtcn424ii0lpg6cm7gn5lliuk3fgk7dpflgr6potnis2mefki53adjcits91k1g;
+        expires=Sat, 22-Nov-2025 18:33:08 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 68211925-a5bb-4487-90d0-9ed3887f3728
+    status:
+      code: 200
+      message: OK
+version: 1
