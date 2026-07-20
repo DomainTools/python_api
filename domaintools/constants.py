@@ -38,6 +38,10 @@ RTTF_PRODUCTS_LIST = [
     "real-time-domain-risk-(s3)",
     "real-time-domain-discovery-feed-(api)",
     "real-time-domain-discovery-feed-(s3)",
+    "real-time-ip-hotlist-(api)",
+    "real-time-ip-hotlist-(s3)",
+    "real-time-ip-risk-(api)",
+    "real-time-ip-risk-(s3)",
 ]
 
 RTTF_PRODUCTS_CMD_MAPPING = {
@@ -55,6 +59,10 @@ RTTF_PRODUCTS_CMD_MAPPING = {
     "real-time-domain-risk-(s3)": "realtime_domain_risk",
     "real-time-domain-discovery-feed-(api)": "domaindiscovery",
     "real-time-domain-discovery-feed-(s3)": "domaindiscovery",
+    "real-time-ip-hotlist-(api)": "iphotlist",
+    "real-time-ip-hotlist-(s3)": "iphotlist",
+    "real-time-ip-risk-(api)": "iprisk",
+    "real-time-ip-risk-(s3)": "iprisk",
 }
 
 SPECS_MAPPING = {
