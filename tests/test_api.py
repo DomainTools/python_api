@@ -827,16 +827,6 @@ def test_domain_hotlist():
         assert "proximity_risk" in feed_result.keys()
         assert "overall_risk" in feed_result.keys()
 
-
-@vcr.use_cassette
-def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
-    feeds_api.always_sign_api_key = True
-    with pytest.raises(ValueError) as excinfo:
-        feeds_api.domaindiscovery(after="-60")
-
-    assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
-
-
 @vcr.use_cassette
 def test_ip_hotlist():
     results = feeds_api.iphotlist(after="-60", top=5)
@@ -873,3 +863,13 @@ def test_ip_risk():
         assert "total_domains" in feed_result.keys()
         assert "all_threats_combined_count" in feed_result.keys()
         assert "all_threats_combined_percent" in feed_result.keys()
+
+
+@vcr.use_cassette
+def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
+    feeds_api.always_sign_api_key = True
+    with pytest.raises(ValueError) as excinfo:
+        feeds_api.domaindiscovery(after="-60")
+
+    assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
+
