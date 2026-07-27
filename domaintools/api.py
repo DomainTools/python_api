@@ -1426,6 +1426,10 @@ class API(object):
         sessionID: str: A custom string to distinguish between different sessions
 
         fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
+
+        ip: str: Filter for a specific IPv4 address.
+
+        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
@@ -1458,6 +1462,10 @@ class API(object):
         sessionID: str: A custom string to distinguish between different sessions
 
         fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
+        
+        ip: str: Filter for a specific IPv4 address.
+        
+        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)

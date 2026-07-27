@@ -79,7 +79,7 @@ def feeds_nad(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -159,7 +159,7 @@ def feeds_nod(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -227,7 +227,7 @@ def feeds_domainrdap(
         "--domain",
         help="A string value used to filter feed results",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload",
@@ -307,7 +307,7 @@ def feeds_domaindiscovery(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -387,7 +387,7 @@ def feeds_noh(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -467,7 +467,7 @@ def feeds_domainhotlist(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -547,7 +547,7 @@ def feeds_realtime_domain_risk(
         "--headers",
         help="Adds a header to the first line of response when text/csv is set in header parameters",
     ),
-    top: str = typer.Option(
+    top: int = typer.Option(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
@@ -621,6 +621,17 @@ def feeds_iphotlist(
         "-fb",
         "--frombeginning",
         help="Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists",
+    ),
+    ip: str = typer.Option(
+        None,
+        "-ip",
+        "--ipaddr",
+        help="Filter for a specific IPv4 address.",
+    ),
+    top: int = typer.Option(
+        None,
+        "--top",
+        help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
     headers: bool = typer.Option(
         False,
@@ -696,6 +707,17 @@ def feeds_iprisk(
         "-fb",
         "--frombeginning",
         help="Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists",
+    ),
+    ip: str = typer.Option(
+        None,
+        "-ip",
+        "--ipaddr",
+        help="Filter for a specific IPv4 address.",
+    ),
+    top: int = typer.Option(
+        None,
+        "--top",
+        help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
     headers: bool = typer.Option(
         False,
