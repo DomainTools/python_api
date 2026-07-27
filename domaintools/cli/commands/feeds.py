@@ -622,12 +622,6 @@ def feeds_iphotlist(
         "--frombeginning",
         help="Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists",
     ),
-    ip: str = typer.Option(
-        None,
-        "-ip",
-        "--ipaddr",
-        help="Filter for a specific IPv4 address.",
-    ),
     top: int = typer.Option(
         None,
         "--top",
@@ -707,12 +701,6 @@ def feeds_iprisk(
         "-fb",
         "--frombeginning",
         help="Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists",
-    ),
-    ip: str = typer.Option(
-        None,
-        "-ip",
-        "--ipaddr",
-        help="Filter for a specific IPv4 address.",
     ),
     top: int = typer.Option(
         None,
