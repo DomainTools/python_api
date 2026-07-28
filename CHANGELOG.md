@@ -2,6 +2,7 @@
 
 ### 2.9.0
 - [NEW] Add support for querying real-time IP feeds (`iphotlist` and `iprisk`).
+- [FIX] Type hint used for `top` parameter in Feeds API from str to int.
 
 ### 2.8.1
 - [FIX] Update python wrapper with a patch that allows the wrapper to proceed with Iris Enrich call even if `account_information` returns a 503 error only (rate limit error).
