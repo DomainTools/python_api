@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/iprisk/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:56:20Z","ip":"3.5.254.69","pdns_resolutions":1118,"bad_pdns_resolutions":1,"total_domains":1328,"third_party_threats":1,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Data Services Northern Virginia","city":"Montreal","country":"CA","latitude":45.52,"longitude":-73.57,"all_threats_combined_count":1,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":1,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":5,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.131.191.235","pdns_resolutions":6,"bad_pdns_resolutions":0,"total_domains":7,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Technologies Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.136.89.54","pdns_resolutions":97,"bad_pdns_resolutions":0,"total_domains":97,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Technologies Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.160.5.118","pdns_resolutions":1,"bad_pdns_resolutions":0,"total_domains":1,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon.com
+        Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":1,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.163.158.15","pdns_resolutions":184,"bad_pdns_resolutions":5,"total_domains":221,"third_party_threats":5,"all_threats_combined_percent":2,"combined_phishing_percent":1,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon.com
+        Inc.","city":"Seattle","country":"US","latitude":47.6015,"longitude":-122.3304,"all_threats_combined_count":5,"malicious_phishing":4,"malicious_malware":0,"malicious_spam":1,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":2,"percent_phishing":1,"percent_malware":0,"percent_spam":0,"zerolist_domains":17,"zerolist_ip":true}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:57:20 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=uvfj11ikvdv0g4fas698st3ero3aag4f587jhp7f9hvin7351r8c8alh1a9n58k9f3r4ngaqev00ngrq0j2vh7fj29dfocg52fr88pk;
+        expires=Fri, 28-Aug-2026 14:57:18 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c243a1dea27201a4d46fbfb63b8ddf74; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - 12f32623-ca24-4c1b-8304-87be106c5350
+    status:
+      code: 200
+      message: OK
+version: 1

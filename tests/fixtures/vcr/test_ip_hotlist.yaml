@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/iphotlist/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:56:18Z","ip":"3.34.27.215","pdns_resolutions":7,"bad_pdns_resolutions":4,"total_domains":7,"third_party_threats":4,"all_threats_combined_percent":57,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":57,"asn":16509,"organization":"AWS
+        Asia Pacific (Seoul) Region","city":"Jung-gu (incheon)","country":"KR","latitude":37.474,"longitude":126.622,"all_threats_combined_count":4,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":4,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":57,"percent_phishing":0,"percent_malware":0,"percent_spam":57,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:18Z","ip":"34.54.243.149","pdns_resolutions":1,"bad_pdns_resolutions":1,"total_domains":1,"third_party_threats":1,"all_threats_combined_percent":100,"combined_phishing_percent":0,"combined_malware_percent":100,"combined_spam_percent":0,"asn":396982,"organization":"Google
+        Llc","city":"Kansas City","country":"US","latitude":39.10771,"longitude":-94.53961,"all_threats_combined_count":1,"malicious_phishing":0,"malicious_malware":1,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":100,"percent_phishing":0,"percent_malware":100,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:18Z","ip":"35.215.58.79","pdns_resolutions":1,"bad_pdns_resolutions":1,"total_domains":1,"third_party_threats":1,"all_threats_combined_percent":100,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":100,"asn":19527,"organization":"Google
+        Llc","city":"Montreal","country":"CA","latitude":45.52,"longitude":-73.57,"all_threats_combined_count":1,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":1,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":100,"percent_phishing":0,"percent_malware":0,"percent_spam":100,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:18Z","ip":"47.237.216.252","pdns_resolutions":31,"bad_pdns_resolutions":16,"total_domains":37,"third_party_threats":19,"all_threats_combined_percent":51,"combined_phishing_percent":29,"combined_malware_percent":21,"combined_spam_percent":0,"asn":45102,"organization":"Alibaba
+        Cloud Llc","city":"Singapore","country":"SG","latitude":1.28795,"longitude":103.85178,"all_threats_combined_count":19,"malicious_phishing":11,"malicious_malware":8,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":51,"percent_phishing":29,"percent_malware":21,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:18Z","ip":"4.194.46.11","pdns_resolutions":1,"bad_pdns_resolutions":1,"total_domains":1,"third_party_threats":1,"all_threats_combined_percent":100,"combined_phishing_percent":100,"combined_malware_percent":0,"combined_spam_percent":0,"asn":8075,"organization":"Microsoft
+        Corporation","city":"Singapore","country":"SG","latitude":1.28795,"longitude":103.85178,"all_threats_combined_count":1,"malicious_phishing":1,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":100,"percent_phishing":100,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:57:17 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=eb2qmm99kjl8nbaojh3fd6sd9jmfc0qtvee7092euiupv3i6ruqn6ogv8gcdgsr1s92ue1obc1b9u76ssvj52rt03aekqd61at6fbpa;
+        expires=Fri, 28-Aug-2026 14:57:17 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=c243a1dea27201a4d46fbfb63b8ddf74; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - ad8fd213-0580-40d5-ac2c-23598446fb37
+    status:
+      code: 200
+      message: OK
+version: 1

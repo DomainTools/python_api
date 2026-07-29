@@ -1412,3 +1412,71 @@ class API(object):
             cls=FeedsResults,
             **kwargs,
         )
+    
+    def iphotlist(self, **kwargs) -> FeedsResults:
+        """Returns back list of ip hotlist feed.
+        Captures IP addresses that meet strict criteria for both risk level and recent activity, making it ideal for immediate blocking and threat response.
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
+
+        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"real-time-ip-hotlist-({source})",
+            f"v1/{endpoint}/iphotlist/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )
+    
+    def iprisk(self, **kwargs) -> FeedsResults:
+        """Returns back list of domain hotlist feed.
+        Captures all IP addresses that actively host one or more domains, providing risk assessment and enrichment data for each IP address.
+
+        before: str: Filter for records before the given time value inclusive or time offset relative to now
+
+        after: str: Filter for records after the given time value inclusive or time offset relative to now
+
+        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
+
+        sessionID: str: A custom string to distinguish between different sessions
+
+        fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
+        
+        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
+        """
+        validate_feeds_parameters(kwargs)
+        endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
+        source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+        if (
+            endpoint == Endpoint.DOWNLOAD.value
+            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
+        ):
+            # headers param is allowed only in Feed API and CSV format
+            kwargs.pop("headers", None)
+
+        return self._results(
+            f"real-time-ip-risk-({source})",
+            f"v1/{endpoint}/iprisk/",
+            response_path=(),
+            cls=FeedsResults,
+            **kwargs,
+        )

@@ -3481,4 +3481,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domaindiscovery/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:47:05Z","domain":"messinaticos.com"}
+
+        {"timestamp":"2026-07-29T14:47:04Z","domain":"buhodeia.com"}
+
+        {"timestamp":"2026-07-29T14:47:04Z","domain":"ottocorporation.com.mx"}
+
+        {"timestamp":"2026-07-29T14:47:04Z","domain":"cocomasia.com"}
+
+        {"timestamp":"2026-07-29T14:47:04Z","domain":"fxjobs.site"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '319'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:47:05 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=f0nkoos937a9kdb3phu9na1ql7j2omcan1qi012h33u59sr7ts9jnkbe6cldqvlvhlen09c4cj0q125j8iacuu0q7vgddk86enr6cra;
+        expires=Fri, 28-Aug-2026 14:47:05 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=f7c09ce1d927aa67f98074764a6f9202; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 9bd1a7aa-3b9e-4b2a-883b-9bcdab5c1de7
+    status:
+      code: 200
+      message: OK
 version: 1

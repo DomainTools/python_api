@@ -563,4 +563,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:47:30Z","domain":"tiktok-jucai2.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-30T10:28:52Z"}
+
+        {"timestamp":"2026-07-29T14:46:45Z","domain":"ggcdnqw1350.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-30T04:46:29Z"}
+
+        {"timestamp":"2026-07-29T14:47:17Z","domain":"rnzjbe295.vip","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-30T04:35:10Z"}
+
+        {"timestamp":"2026-07-29T14:47:05Z","domain":"577633.my","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-30T14:44:11Z"}
+
+        {"timestamp":"2026-07-29T14:47:15Z","domain":"apzhah4557.vip","phishing_risk":99,"malware_risk":99,"spam_risk":98,"proximity_risk":100,"overall_risk":100,"expires":"2026-07-30T08:32:19Z"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '938'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:47:30 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=c4b54opbblgjplgnfhgapair8hkuetes54nig0vlgevdfqtoukq0ako20sdhhv6usoivf0784684isghpl89mhbl63u1rhs8q86g0vi;
+        expires=Fri, 28-Aug-2026 14:47:30 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=f7c09ce1d927aa67f98074764a6f9202; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 90cf63d9-edfc-45bf-a7e6-885174697cb3
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -941,4 +941,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:47:02Z","domain":"internal.employeeattorney.com"}
+
+        {"timestamp":"2026-07-29T14:47:02Z","domain":"customer.fit-und-vital-beverungen.de"}
+
+        {"timestamp":"2026-07-29T14:47:02Z","domain":"glebziyqqa.931333fj.app"}
+
+        {"timestamp":"2026-07-29T14:47:02Z","domain":"8biblioteca9-xm-cm5.dev-cloudml.mioffice.cn"}
+
+        {"timestamp":"2026-07-29T14:47:02Z","domain":"internal.override.cz"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '396'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:47:02 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=7d94t9mq787ip6lu8c0uqf5krp6b8g1fqjr84191483mnp3rr3q20s6g229vei8hkcq5uo9aq2j8h4od81uo6v09oovk7ej0619m0sg;
+        expires=Fri, 28-Aug-2026 14:47:02 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=abbae19e8815cf9164c3024c1c42ff89; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - ad7a11a1-e84f-4d34-a8a9-78889439c90c
+    status:
+      code: 200
+      message: OK
 version: 1

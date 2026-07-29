@@ -3175,4 +3175,189 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.9.0&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jul 2026 14:46:48 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=vjs984d4phqo9cb50gkrs2lk1257kps24el95b2pvblvr99ef91l1cftdj76hog15t95l1p0d3o6vg21st6gqfj7cirndmii3mciib5;
+        expires=Fri, 28-Aug-2026 14:46:48 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.9.0&include_domain_data=false&monitor_id=nAwmQg2pqg&offset=0&order=desc&sort%5B%5D=risk_score
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8WWbW/aMBDHv0rlt4XITpwnv9qQ0KRVTGqF2q1VFbmJCR4hzmJT2iG++84Jo5QN
+        Wsq08obkfL47/++XSxZozk06LqQ2SaamXJYasZsF0oYbgVi7KjLUQe0qmHKl8kKInGeOTGewYn1n
+        sA3x1Mh7YX2lTtW9qEWWZG0cF7t+F0ddTIaEMhwwP3QiQjHG1+CfjnmZ73SOGI0d3Pyscy31JIH4
+        NbhGweZ9sq5kNCuKZ65JqqaVKkVpYHmBqlo9yKk0j4j5pIPMuBbcJGAdyUI0DmOpx7LM2xRTXsy5
+        zUcpHLfiU8SI20HiXmaiTMF+s5LnpORTK4D9O9GiBg1sGSIHfWteo9vlEqI9JOIBDFDJiBdaQP4i
+        g6JbNaW9LK4+Vz8/XUaDPliETnnBjVRNb24hgCqlUXUiM2tA5cf59Dx3qx85gkWutcxLEPPu0cYs
+        jcjrdvOpEdqQD22lRqlCO6AK2tiyrT8dEugUZYSs9D/FmGGMlp29hJRCZC0ljlHVIYQQt0uiIfGZ
+        h5nvOQH1dxISdHHYdaMhdpnnM0J3EBL6RxPiBfsJsSmeCCG/CfH9f05Iq2ZDyKD/Lb+8+JINrt6N
+        kFWz4PEEKOKDCMlVdwVIKcybAKEU+uKQcC8g4B8MXY9R8Cc7AAm84wGJ9gNiU6wB8dZ87MNDVic8
+        y2qh9RYre/loxWz4qPqT+eV5edZ7vwnyjA/vQD4sHDzTlcpSrs0qzSsxcZvOx0MMbQ+ZHzsuJi9g
+        Eg9JzHwYJbswIfRoTGyIbUxubve0sz10087w6kyR6Cy+uvijnYuN+8Q8VvZcd4VKJ42kzW7q5T0/
+        nPT6gZXAViCy9vS0iwM7Re2cbx4S6pEgCK+f/F5NwfL/cLVVsfsGrlJ16NhZfYyEDLLiwAmj+IX3
+        UjgkhMHkwbt4Oh6nv9C0OXQ2Z876nUSezZzXzpLvfBD0vlLsv+/XCLGzxH6NBFs9hzxGGV6AVrPS
+        NJP16UqNRhqOwnAHFVY5EAHj5S9h5n/o+AoAAA==
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jul 2026 14:46:50 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=4iso0rarvqdp02ilb6cvont7recgf54sst88b705hdk5qlhdcu46cgejr68c5r2mhgum5aaqplilddeojaq9as4b1vvcp2kp5obp4td;
+        expires=Fri, 28-Aug-2026 14:46:50 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/domains/watched/?app_name=python_wrapper&app_version=2.9.0&escalation_types%5B%5D=blocked&include_domain_data=false&offset=0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5VRy07DMBD8F1/7kJ0mKc0JKnHqCVQJCYQsEzupVccb4m0pqvrvrJOKttzIab07
+        M5ndObIvheXG2YBSQ6OsD6x4O7KACg0rhqnRbMyGKbVqgNoZpUMLulQBpyU0NI+MHZGZKtHuTWTY
+        UMLedEZLPaglPEkmPJuIxZpnRTovssU04YJz/kr4cqN8fQPOz2CxKLKkmIkp778I7mzYStLvCCrS
+        67f8dVLtnLuBSrLagjceaXxkbQcH21j8HiRw0xmFkrqVdST79n4as+YgzYGuQ4RKuWAI5jRpD0vb
+        WM5fViDuVouXZ+qYUCqn0ML5kJe3xO827vXhoNz2J+3Z6axeZvPt8jGPJ4gOjB62Tyc8nyR3a5EX
+        GV1LTNOZyPP56wUnP8g6sx5N3Q3/HKEJKO6HsBDAhT6e0zttAt4idNLq6Iz5h6/mqU7az5rRUIVg
+        a/8PxSvKJa8/jpNzXiPOC857EwioHMWw80hHp0V+K6iqYKjkY+ZiKNTk/PQDaIfnoqACAAA=
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jul 2026 14:46:52 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=uq3ifd4j6dlodce5cnt8anokhggfgiov0j21ddjjade1346urmsduv4cu9lnhl4rflqpr0pmfikmiq8ql42u2lo9l6nfdkok6upgeu6;
+        expires=Fri, 28-Aug-2026 14:46:51 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1

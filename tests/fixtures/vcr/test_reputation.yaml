@@ -947,4 +947,56 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/reputation?app_name=python_wrapper&app_version=2.9.0&domain=google.com&include_reasons=false
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6tWKkotLsjPK05VsqpWSsnPTczMU7JSSs/PT89J1UvOz1XSUSrKLM6OL07OLwKq
+        MaitBQDniM1NMwAAAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 29 Jul 2026 14:45:58 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=f85249in6qtvcp86u4rulgdu86hsiblog4r4kenfo5d7mg6e2vsnkt59tbngmq9ghdrrou3dd2pm3tsi37ofgn636mmdjhiakeg0jd8;
+        expires=Fri, 28-Aug-2026 14:45:58 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '42395'
+    status:
+      code: 200
+      message: OK
 version: 1
