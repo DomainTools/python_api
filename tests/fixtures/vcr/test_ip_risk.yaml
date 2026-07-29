@@ -5,67 +5,6 @@ interactions:
       accept:
       - '*/*'
       accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.domaintools.com
-      user-agent:
-      - python-httpx/0.28.1
-    method: GET
-    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.8.1
-  response:
-    body:
-      string: '{"timestamp":"2025-01-06T15:30:42Z","ip":"192.0.2.10","asn":12345,"organization":"Example
-        Hosting LLC","city":"Amsterdam","country":"NL","latitude":52.3676,"longitude":4.9041,"pdns_resolutions":12,"bad_pdns_resolutions":3,"total_domains":47,"zerolist_domains":2,"zerolist_ip":false,"third_party_threats":2,"all_threats_combined_count":5,"all_threats_combined_percent":10.6,"all_threats_percent":10.6,"combined_phishing_percent":6.4,"combined_malware_percent":8.5,"combined_spam_percent":4.3,"malicious_phishing":1,"malicious_malware":2,"malicious_spam":1,"percent_phishing":2.1,"percent_malware":4.3,"percent_spam":2.1,"compromised_phishing":0,"compromised_malware":1,"compromised_spam":0,"predicted_phishing":1,"predicted_malware":2,"predicted_spam":1}
-
-        {"timestamp":"2025-01-06T15:30:45Z","ip":"192.0.2.11","asn":67890,"organization":"Cloud
-        Provider Corp","city":"Frankfurt","country":"DE","latitude":50.1109,"longitude":8.6821,"pdns_resolutions":5,"bad_pdns_resolutions":0,"total_domains":18,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":0,"all_threats_combined_count":1,"all_threats_combined_percent":5.6,"all_threats_percent":5.6,"combined_phishing_percent":0.0,"combined_malware_percent":5.6,"combined_spam_percent":0.0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"percent_phishing":0.0,"percent_malware":0.0,"percent_spam":0.0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":1,"predicted_spam":0}
-
-        '
-    headers:
-      Cache-Control:
-      - no-store, no-cache, must-revalidate
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Security-Policy:
-      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Mon, 28 Apr 2025 18:00:47 GMT
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - dtsession=fsli3ccledtncc8l0agq08ceif; expires=Wed, 28-May-2025 18:00:47 GMT;
-        Max-Age=2592000; path=/; domain=.domaintools.test; secure; HttpOnly
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-API-USERNAME:
-      - jbabac
-      X-GROUP-ID:
-      - '1117'
-      X-Powered-By:
-      - PHP/7.1.33
-      X-TIME:
-      - '49818'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
       - identity
       connection:
       - keep-alive
@@ -74,41 +13,50 @@ interactions:
       user-agent:
       - python-httpx/0.28.1
     method: GET
-    uri: https://api.domaintools.com/v1/feed/iprisk/?after=-60&app_name=python_wrapper&app_version=2.8.1&top=5
+    uri: https://api.domaintools.com/v1/feed/iprisk/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
   response:
     body:
-      string: '{"timestamp":"2025-01-06T15:30:42Z","ip":"192.0.2.10","asn":12345,"organization":"Example
-        Hosting LLC","city":"Amsterdam","country":"NL","latitude":52.3676,"longitude":4.9041,"pdns_resolutions":12,"bad_pdns_resolutions":3,"total_domains":47,"zerolist_domains":2,"zerolist_ip":false,"third_party_threats":2,"all_threats_combined_count":5,"all_threats_combined_percent":10.6,"all_threats_percent":10.6,"combined_phishing_percent":6.4,"combined_malware_percent":8.5,"combined_spam_percent":4.3,"malicious_phishing":1,"malicious_malware":2,"malicious_spam":1,"percent_phishing":2.1,"percent_malware":4.3,"percent_spam":2.1,"compromised_phishing":0,"compromised_malware":1,"compromised_spam":0,"predicted_phishing":1,"predicted_malware":2,"predicted_spam":1}
+      string: '{"timestamp":"2026-07-29T14:56:20Z","ip":"3.5.254.69","pdns_resolutions":1118,"bad_pdns_resolutions":1,"total_domains":1328,"third_party_threats":1,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Data Services Northern Virginia","city":"Montreal","country":"CA","latitude":45.52,"longitude":-73.57,"all_threats_combined_count":1,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":1,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":5,"zerolist_ip":false}
 
-        {"timestamp":"2025-01-06T15:30:45Z","ip":"192.0.2.11","asn":67890,"organization":"Cloud
-        Provider Corp","city":"Frankfurt","country":"DE","latitude":50.1109,"longitude":8.6821,"pdns_resolutions":5,"bad_pdns_resolutions":0,"total_domains":18,"zerolist_domains":0,"zerolist_ip":false,"third_party_threats":0,"all_threats_combined_count":1,"all_threats_combined_percent":5.6,"all_threats_percent":5.6,"combined_phishing_percent":0.0,"combined_malware_percent":5.6,"combined_spam_percent":0.0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"percent_phishing":0.0,"percent_malware":0.0,"percent_spam":0.0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":1,"predicted_spam":0}
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.131.191.235","pdns_resolutions":6,"bad_pdns_resolutions":0,"total_domains":7,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Technologies Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.136.89.54","pdns_resolutions":97,"bad_pdns_resolutions":0,"total_domains":97,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon
+        Technologies Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.160.5.118","pdns_resolutions":1,"bad_pdns_resolutions":0,"total_domains":1,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon.com
+        Inc.","city":"Columbus","country":"US","latitude":39.99558,"longitude":-82.99946,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":1,"zerolist_ip":false}
+
+        {"timestamp":"2026-07-29T14:56:20Z","ip":"3.163.158.15","pdns_resolutions":184,"bad_pdns_resolutions":5,"total_domains":221,"third_party_threats":5,"all_threats_combined_percent":2,"combined_phishing_percent":1,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon.com
+        Inc.","city":"Seattle","country":"US","latitude":47.6015,"longitude":-122.3304,"all_threats_combined_count":5,"malicious_phishing":4,"malicious_malware":0,"malicious_spam":1,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":2,"percent_phishing":1,"percent_malware":0,"percent_spam":0,"zerolist_domains":17,"zerolist_ip":true}
 
         '
     headers:
-      Cache-Control:
+      cache-control:
       - no-store, no-cache, must-revalidate
-      Content-Length:
-      - '932'
-      Content-Security-Policy:
+      content-security-policy:
       - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
-      Content-Type:
+      content-type:
       - application/x-ndjson
-      Date:
-      - Thu, 23 Oct 2025 18:33:09 GMT
-      Expires:
+      date:
+      - Wed, 29 Jul 2026 14:57:20 GMT
+      expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
+      pragma:
       - no-cache
-      Set-Cookie:
-      - dtsession=41acrdm0r445tr0kqd8rsdu121jfg5tv05s572e3qtcn424ii0lpg6cm7gn5lliuk3fgk7dpflgr6potnis2mefki53adjcits91k1g;
-        expires=Sat, 22-Nov-2025 18:33:08 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+      set-cookie:
+      - dtsession=uvfj11ikvdv0g4fas698st3ero3aag4f587jhp7f9hvin7351r8c8alh1a9n58k9f3r4ngaqev00ngrq0j2vh7fj29dfocg52fr88pk;
+        expires=Fri, 28-Aug-2026 14:57:18 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
         secure; HttpOnly
-      - 0566fae076d9b6615cd8f47a9e9500f2=4556b46b52fb2ae62de3b26ddc27dfa0; path=/;
+      - 0566fae076d9b6615cd8f47a9e9500f2=c243a1dea27201a4d46fbfb63b8ddf74; path=/;
         HttpOnly
-      Strict-Transport-Security:
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      X-Request-Id:
-      - 68211925-a5bb-4487-90d0-9ed3887f3728
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - 12f32623-ca24-4c1b-8304-87be106c5350
     status:
       code: 200
       message: OK

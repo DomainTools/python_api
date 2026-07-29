@@ -245,4 +245,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/domain-history?app_name=python_wrapper&app_version=2.9.0&domain=chat.com&include_fields=registrar
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82UX0vDMBTFv0rJc1qStNnmfdufIsK6yYwIiozYZltxbUaSKTL63U0HwxeVMX3o
+        Y27OTX4595ADMsrudG0VggMqdCXLGgHKN9JFua4QRrne1w7BAHvlurTOSFfqemn13uS+Ce2ksapY
+        vm90aVv5RtZrZRE8HZArK2WdrHZexgjjIUlCwgQdQMyB0kcvX5VqW/jt09nG117USpsjz1fVL97k
+        dt9emEnzmum6dNoEN3UeoabBSK6cMue04FNPg38EJD1gDDj/OyC+gPB3wDikRJAYCAHOuuhgHJKB
+        IAyOjF10kIWMC+bproB3MoMeMBGMAutB0r0MJiGlIU0E6bcj5peO+FpPZFF8tJ8MDqbT8f85GLcZ
+        ZP02g0kf4ksBZ6kIxP0sXQTj+eI2CiajYfCQjrLhnUgXd9F4np2B/M0rm+em+QS3x86+dgUAAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 29 Jul 2026 14:45:46 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=7gflqrfkhe679lp548tb7917vdd7evh2tokvsou9qrk9si09scph2n91c6hc9c3k4s731f9hho9indob6p879tbfqijgrb0o9pqhdml;
+        expires=Fri, 28-Aug-2026 14:45:45 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '389533'
+    status:
+      code: 200
+      message: OK
 version: 1

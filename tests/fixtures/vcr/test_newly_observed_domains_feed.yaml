@@ -13031,4 +13031,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.9.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-07-29T14:47:00Z","domain":"fxjobs.site"}
+
+        {"timestamp":"2026-07-29T14:47:00Z","domain":"novasecurity.work"}
+
+        {"timestamp":"2026-07-29T14:47:00Z","domain":"strongthroughchangewithholly.uk"}
+
+        {"timestamp":"2026-07-29T14:47:00Z","domain":"albasnowgallery.com"}
+
+        {"timestamp":"2026-07-29T14:47:00Z","domain":"juicypartydel.store"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '342'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Wed, 29 Jul 2026 14:47:01 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=3k3jobkb84v5dqhbcv19ht174m5bk4ib4clf0tqq70st717mtkt3g5rtdrfdisvl7rbmaunslod98ivoduoro85mbd3hvh6g1gloqmp;
+        expires=Fri, 28-Aug-2026 14:47:01 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=2435821b362fd7de7ee5a37e1711f31d; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - be87d6e3-296b-434b-bcdc-2384f7e83fb8
+    status:
+      code: 200
+      message: OK
 version: 1
