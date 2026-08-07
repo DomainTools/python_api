@@ -142,7 +142,12 @@ class filter_by_riskscore:
 
         filtered_result = []
         for result in self._results:
-            domain_risk_score = result.get("domain_risk", {}).get("risk_score")
+            domain_risk = result.get("domain_risk") or {}
+            domain_risk_score = domain_risk.get("risk_score")
+            if domain_risk_score is None:
+                # skip uncomparable risk score
+                continue
+
             if domain_risk_score > self._threshold:
                 filtered_result.append(result)
 

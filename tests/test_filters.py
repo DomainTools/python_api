@@ -16,7 +16,9 @@ class DTFiltersTest(unittest.TestCase):
         domaintools_iris_result = iris_investigate_data.domaintools()
         int_chase_iris_result = iris_investigate_data.int_chase()
 
-        test_results = {"results": domaintools_iris_result["results"] + int_chase_iris_result["results"]}
+        self.results = domaintools_iris_result["results"] + int_chase_iris_result["results"]
+
+        test_results = {"results": self.results}
 
         self.dt_res_filter = DTResultFilter(result_set=test_results)
 
@@ -25,6 +27,32 @@ class DTFiltersTest(unittest.TestCase):
         risk_score_threshold = 69
 
         result = self.dt_res_filter.by(
+            [
+                filter_by_riskscore(threshold=risk_score_threshold),
+            ]
+        )
+
+        assert len(result) == 1
+        assert result[0]["domain"] == "int-chase.com"
+
+    def test_filter_by_riskscore_skips_results_without_risk_score(self):
+        """Test that results carrying no usable risk score are skipped instead of raising"""
+        risk_score_threshold = 69
+
+        scoreless_results = {
+            "results": self.results
+            + [
+                {"domain": "no-domain-risk.com"},
+                {"domain": "null-domain-risk.com", "domain_risk": None},
+                {
+                    "domain": "no-risk-score.com",
+                    "domain_risk": {"components": [{"name": "zerolist", "risk_score": 0}]},
+                },
+                {"domain": "null-risk-score.com", "domain_risk": {"risk_score": None}},
+            ]
+        }
+
+        result = DTResultFilter(result_set=scoreless_results).by(
             [
                 filter_by_riskscore(threshold=risk_score_threshold),
             ]

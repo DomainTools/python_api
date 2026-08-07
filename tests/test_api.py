@@ -465,6 +465,32 @@ def test_iris_investigate():
         assert result["domain"] in ["amazon.com", "google.com"]
 
 
+def test_iris_investigate_risk_score_threshold_with_scoreless_result():
+    """A result without a `domain_risk` block must be skipped, not blow up the filtering."""
+    scored_domain = iris_investigate_fixture()["results"][0]
+    scored_domain["domain_risk"] = {"risk_score": 80}
+
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {
+        "response": {
+            "results": [{"domain": "no-domain-risk.com"}, scored_domain],
+            "results_count": 2,
+        }
+    }
+
+    with patch("domaintools.base_results.Client") as mock_client:
+        mock_client.return_value.__enter__.return_value.post.return_value = mock_response
+
+        investigation_results = api.iris_investigate(
+            domains=["no-domain-risk.com", scored_domain["domain"]],
+            risk_score_threshold=70,
+        )
+
+        assert investigation_results["results_count"] == 1
+        assert investigation_results["results"][0]["domain"] == scored_domain["domain"]
+
+
 def test_iris_investigate_irisql_calls_results_with_irisql():
     query = "# IrisQL-1.0\nDOMAIN CONTAINS \"phishing\""
     with patch.object(api, "_results") as mock_results:
