@@ -119,15 +119,23 @@ def test_get_pivots():
     assert pivots == [["IP ADDRESS", ("199.30.228.112", 4)], ["IP ASN", (17318, 111)], ["IP ISP", ("DomainTools LLC", 222)]]
 
 
-def test_validate_feeds_parameters_should_raise_error_if_no_required_params(test_feeds_params):
-    test_feeds_params.pop("sessionID", None)
-    test_feeds_params.pop("after", None)
-    test_feeds_params.pop("before", None)
-
+def test_validate_feeds_parameters_should_raise_error_if_no_required_params():
     with pytest.raises(ValueError) as excinfo:
-        utils.validate_feeds_parameters(test_feeds_params)
+        utils.validate_feeds_parameters({"endpoint": "feed"})
 
     assert str(excinfo.value) == "sessionID or after or before must be provided"
+
+
+def test_validate_feeds_parameters_download_does_not_require_time_params():
+    # download endpoint should not require sessionID / after / before
+    utils.validate_feeds_parameters({"endpoint": "download"})
+
+
+def test_validate_feeds_parameters_download_still_rejects_csv_format():
+    with pytest.raises(ValueError) as excinfo:
+        utils.validate_feeds_parameters({"endpoint": "download", "output_format": "csv"})
+
+    assert str(excinfo.value) == "csv format is not available in download API."
 
 
 def test_validate_feeds_parameters_should_raise_error_if_asked_csv_format_for_download_api(test_feeds_params):

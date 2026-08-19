@@ -93,6 +93,11 @@ def feeds_nad(
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_NAD, params=ctx.params)
 
@@ -182,6 +187,11 @@ def feeds_nod(
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_NOD, params=ctx.params)
 
@@ -259,6 +269,11 @@ def feeds_domainrdap(
         None,
         "--top",
         help="Number of results to return in the response payload",
+    ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_DOMAINRDAP, params=ctx.params)
@@ -349,6 +364,11 @@ def feeds_domaindiscovery(
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
     ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_DOMAINDISCOVERY, params=ctx.params)
 
@@ -437,6 +457,11 @@ def feeds_noh(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint",
+    ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_NOH, params=ctx.params)
@@ -552,6 +577,21 @@ def feeds_domainhotlist(
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint. For risk feeds, results are sorted by all_threats_combined_percent (descending)",
     ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
+    page: int = typer.Option(
+        None,
+        "--page",
+        help="Selects which page of results to return (0-indexed). Only applies to the download endpoint.",
+    ),
+    prefix: str = typer.Option(
+        None,
+        "--prefix",
+        help="Filters results by date using the file prefix. Only applies to the download endpoint.",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_DOMAINHOTLIST, params=ctx.params)
 
@@ -665,6 +705,21 @@ def feeds_realtime_domain_risk(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint. For risk feeds, results are sorted by all_threats_combined_percent (descending)",
+    ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
+    page: int = typer.Option(
+        None,
+        "--page",
+        help="Selects which page of results to return (0-indexed). Only applies to the download endpoint.",
+    ),
+    prefix: str = typer.Option(
+        None,
+        "--prefix",
+        help="Filters results by date using the file prefix. Only applies to the download endpoint.",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_REALTIME_DOMAIN_RISK, params=ctx.params)
@@ -824,6 +879,21 @@ def feeds_iphotlist(
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint. For risk feeds, results are sorted by all_threats_combined_percent (descending)",
     ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
+    page: int = typer.Option(
+        None,
+        "--page",
+        help="Selects which page of results to return (0-indexed). Only applies to the download endpoint.",
+    ),
+    prefix: str = typer.Option(
+        None,
+        "--prefix",
+        help="Filters results by date using the file prefix. Only applies to the download endpoint.",
+    ),
 ):
     DTCLICommand.run(name=c.FEEDS_IPHOTLIST, params=ctx.params)
 
@@ -981,6 +1051,21 @@ def feeds_iprisk(
         None,
         "--top",
         help="Number of results to return in the response payload. This is ignored in download endpoint. For risk feeds, results are sorted by all_threats_combined_percent (descending)",
+    ),
+    limit: int = typer.Option(
+        None,
+        "--limit",
+        help="Limits the number of files returned in the response. Only applies to the download endpoint.",
+    ),
+    page: int = typer.Option(
+        None,
+        "--page",
+        help="Selects which page of results to return (0-indexed). Only applies to the download endpoint.",
+    ),
+    prefix: str = typer.Option(
+        None,
+        "--prefix",
+        help="Filters results by date using the file prefix. Only applies to the download endpoint.",
     ),
 ):
     DTCLICommand.run(name=c.FEEDS_IPRISK, params=ctx.params)
