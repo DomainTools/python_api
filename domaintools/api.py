@@ -199,6 +199,8 @@ class API(object):
             self.header_authentication = is_rttf_product
 
     def handle_api_key(self, is_rttf_product, path, parameters):
+        if self.header_authentication and not self.always_sign_api_key:
+            return
         if self.https and not self.always_sign_api_key:
             parameters["api_key"] = self.key
         else:
@@ -1204,11 +1206,16 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-observed-domains-feed-({source.value})",
+                f"v1/{endpoint}/nod/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1247,11 +1254,16 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-active-domains-feed-({source})",
+                f"v1/{endpoint}/nad/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1291,6 +1303,14 @@ class API(object):
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
 
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"domain-registration-data-access-protocol-feed-({source})",
+                f"v1/{endpoint}/domainrdap/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
         return self._results(
             f"domain-registration-data-access-protocol-feed-({source})",
             f"v1/{endpoint}/domainrdap/",
@@ -1327,11 +1347,16 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-discovery-feed-({source})",
+                f"v1/{endpoint}/domaindiscovery/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1370,11 +1395,16 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-observed-hosts-feed-({source})",
+                f"v1/{endpoint}/noh/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1422,11 +1452,18 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-risk-({source})",
+                f"v1/{endpoint}/domainrisk/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1474,11 +1511,18 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-hotlist-({source})",
+                f"v1/{endpoint}/domainhotlist/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1544,11 +1588,18 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-ip-hotlist-({source})",
+                f"v1/{endpoint}/iphotlist/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1614,11 +1665,18 @@ class API(object):
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-ip-risk-({source})",
+                f"v1/{endpoint}/iprisk/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(

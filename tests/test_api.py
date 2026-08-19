@@ -788,18 +788,22 @@ def test_verify_response_is_a_generator():
     assert isgenerator(results.response())
 
 
-@vcr.use_cassette
 def test_feeds_endpoint_should_non_header_auth_be_the_default():
-    results = feeds_api.domaindiscovery(after="-60", endpoint="download", top=5)
-    for response in results.response():
-        assert results.status == 200
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"response": {"download_name": "domaindiscovery", "files": []}}
 
-        response = response.strip()
-        assert response is not None
+    with patch("domaintools.base_results.Client") as mock_client:
+        mock_session = MagicMock()
+        mock_client.return_value.__enter__.return_value = mock_session
+        mock_session.get.return_value = mock_response
 
-        feed_result = json.loads(response)
-        assert "download_name" in feed_result["response"].keys()
-        assert "files" in feed_result["response"].keys()
+        feeds_api.always_sign_api_key = False
+        feeds_api.header_authentication = True
+        results = feeds_api.domaindiscovery(endpoint="download")
+
+        assert results["download_name"] == "domaindiscovery"
+        assert "files" in results
 
 
 @vcr.use_cassette
@@ -894,8 +898,71 @@ def test_ip_risk():
 @vcr.use_cassette
 def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
     feeds_api.always_sign_api_key = True
-    with pytest.raises(ValueError) as excinfo:
-        feeds_api.domaindiscovery(after="-60")
+    try:
+        with pytest.raises(ValueError) as excinfo:
+            feeds_api.domaindiscovery(after="-60")
+        assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
+    finally:
+        feeds_api.always_sign_api_key = False
+        feeds_api.header_authentication = True
 
-    assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
+
+def test_rttf_api_key_not_leaked_as_query_param():
+    """api_key must not appear in query params when header_authentication is active (RTTF)."""
+    from domaintools.base_results import Results
+
+    mock_api = MagicMock()
+    mock_api.key = "secret_key"
+    mock_api.header_authentication = True
+
+    result = Results(
+        mock_api,
+        "newly-observed-domains-feed-(api)",
+        "https://api.domaintools.com",
+        api_username="testuser",
+        after="-60",
+    )
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" not in session_info["parameters"]
+    assert session_info["headers"]["X-Api-Key"] == "secret_key"
+
+
+def test_rttf_api_key_not_leaked_full_flow():
+    """handle_api_key guard: api_key must not reach request params for RTTF feeds end-to-end."""
+    test_api = API("testuser", "secret_key", rate_limit=False)
+    result = test_api.nod(after="-60")
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" not in session_info["parameters"]
+    assert session_info["headers"].get("X-Api-Key") == "secret_key"
+
+
+def test_standard_api_key_remains_in_query_params_without_header_auth():
+    """Standard (non-RTTF) endpoints keep api_key in query params when header_authentication is off."""
+    from domaintools.base_results import Results
+
+    mock_api = MagicMock()
+    mock_api.key = "secret_key"
+    mock_api.header_authentication = False
+
+    result = Results(
+        mock_api,
+        "whois",
+        "https://api.domaintools.com",
+        api_key="secret_key",
+        api_username="testuser",
+    )
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" in session_info["parameters"]
+    assert "X-Api-Key" not in session_info["headers"]
+
+
+def test_feeds_download_endpoint_does_not_require_time_params():
+    """endpoint='download' must not raise when no sessionID/after/before are given."""
+    feeds_api.always_sign_api_key = False
+    feeds_api.header_authentication = True
+    result = feeds_api.nod(endpoint="download")
+    assert result is not None
 

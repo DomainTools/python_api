@@ -264,7 +264,7 @@ Custom parameters aside from the common `GET` Request parameters:
     api = API(USERNAME, KEY)
     api.nod(endpoint="feed", **kwargs)
     ```
-- `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so this will be defaulted to `False` even without explicitly setting it.
+- `header_authentication`: by default, all RTTF endpoints (both `feed` and `download`) use API Header Authentication, sending the API key via the `X-Api-Key` header. Set this to `False` to pass the API key as a query parameter instead.
     ```python
     api = API(USERNAME, KEY, header_authentication=False)
     api.nod(**kwargs)
@@ -275,7 +275,7 @@ Custom parameters aside from the common `GET` Request parameters:
     api.nod(output_format="csv", **kwargs)
     ```
 
-The Feed API standard access pattern is to periodically request the most recent feed data, as often as every 60 seconds. Specify the range of data you receive in one of two ways:
+The `feed` endpoint streams live NDJSON data. The standard access pattern is to poll as often as every 60 seconds. Specify the range of data you receive in one of two ways:
 
 1. With `sessionID`: Make a call and provide a new `sessionID` parameter of your choosing. The API will return the last hour of data by default.
     - Each subsequent call to the API using your `sessionID` will return all data since the last.
@@ -283,6 +283,16 @@ The Feed API standard access pattern is to periodically request the most recent 
 2. Or, specify the time range in one of two ways:
     - Either an `after=-60` query parameter, where (in this example) -60 indicates the previous 60 seconds.
     - Or `after` and `before` query parameters for a time range, with each parameter accepting an ISO-8601 UTC formatted timestamp (a UTC date and time of the format YYYY-MM-DDThh:mm:ssZ)
+
+The `download` endpoint returns a standard JSON response (not a stream) listing available S3 batch files. Time parameters (`sessionID`, `after`, `before`) are **not** required for download calls.
+
+```python
+api = API(USERNAME, KEY)
+result = api.nod(endpoint="download", limit=5)
+print(result["download_name"])
+for f in result["files"]:
+    print(f["name"], f["url"])
+```
 
 ### Feed parameters
 
@@ -325,11 +335,24 @@ The feed methods accept the following parameters, grouped by purpose. Availabili
 
 - `output_format`: `csv` or `jsonl` (default `jsonl`). Not available on the `domainrdap` feed. `csv` is not available for `download` endpoints.
 - `headers`: When `csv` output is used, adds a header row to the first line of the response.
-- `top`: Positive integer from `1` to `1,000,000,000` limiting the number of results in the response payload. 
+- `top`: Positive integer from `1` to `1,000,000,000` limiting the number of results in the response payload. Ignored for the `download` endpoint.
 
-## Handling iterative response from RTUF endpoints:
+#### Download-only parameters
 
-Since we may dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
+These parameters are only accepted when `endpoint="download"`. They are ignored for the `feed` endpoint.
+
+- `limit`: Maximum number of files to return in the response.
+- `page`: Zero-indexed page of results to return. Available on `realtime_domain_risk`, `domainhotlist`, `iphotlist`, and `iprisk`.
+- `prefix`: Filter files by date prefix (e.g. `"2026-08-"`). Available on `realtime_domain_risk`, `domainhotlist`, `iphotlist`, and `iprisk`.
+
+```python
+api = API(USERNAME, KEY)
+api.iphotlist(endpoint="download", limit=10, page=0, prefix="2026-08-")
+```
+
+## Handling iterative response from RTTF endpoints:
+
+Since we may be dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
 
 ### Single request because the requested data is within the maximum result:
 ```python

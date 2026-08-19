@@ -175,13 +175,15 @@ def convert_str_to_dateobj(string_date: str, date_format: Optional[str] = "%Y-%m
 
 
 def validate_feeds_parameters(params):
-    sessionID = params.get("sessionID")
-    after = params.get("after")
-    before = params.get("before")
-    if not (sessionID or after or before):
-        raise ValueError("sessionID or after or before must be provided")
+    endpoint = params.get("endpoint")
+
+    if endpoint != Endpoint.DOWNLOAD.value:
+        sessionID = params.get("sessionID")
+        after = params.get("after")
+        before = params.get("before")
+        if not (sessionID or after or before):
+            raise ValueError("sessionID or after or before must be provided")
 
     format = params.get("output_format")
-    endpoint = params.get("endpoint")
     if endpoint == Endpoint.DOWNLOAD.value and format == OutputFormat.CSV.value:
         raise ValueError(f"{format} format is not available in {Endpoint.DOWNLOAD.value} API.")
