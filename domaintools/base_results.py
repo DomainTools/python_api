@@ -17,6 +17,7 @@ from domaintools.constants import (
 from domaintools.exceptions import (
     BadRequestException,
     InternalServerErrorException,
+    NotAcceptableException,
     NotAuthorizedException,
     NotFoundException,
     ServiceException,
@@ -220,6 +221,8 @@ class Results(MutableMapping, MutableSequence):
             raise NotAuthorizedException(code, reason)
         elif code == 404:
             raise NotFoundException(code, reason)
+        elif code == 406:
+            raise NotAcceptableException(code, reason)
         elif code == 500:  # pragma: no cover
             raise InternalServerErrorException(code, reason)
         elif code == 503:  # pragma: no cover
