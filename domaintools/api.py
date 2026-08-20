@@ -196,7 +196,9 @@ class API(object):
             self.always_sign_api_key = not is_rttf_product
 
         if self.header_authentication is None:
-            self.header_authentication = is_rttf_product
+            # When HMAC signing is explicitly requested for RTTF, disable header auth
+            # so both methods don't fire simultaneously
+            self.header_authentication = is_rttf_product and not self.always_sign_api_key
 
     def handle_api_key(self, is_rttf_product, path, parameters):
         if self.header_authentication and not self.always_sign_api_key:
@@ -204,9 +206,6 @@ class API(object):
         if self.https and not self.always_sign_api_key:
             parameters["api_key"] = self.key
         else:
-            if is_rttf_product:
-                # As per requirement in IDEV-2272, raise this error when the user explicitly sets signing of API key for RTTF endpoints
-                raise ValueError("Real Time Threat Feeds do not support signed API keys.")
             if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
                 signing_hash = eval(self.key_sign_hash)
             else:
@@ -215,10 +214,12 @@ class API(object):
                     "Values available are {1}".format(self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES))
                 )
 
+            # RTTF paths lack a leading slash; normalize before signing
+            sign_path = path if path.startswith("/") else f"/{path}"
             parameters["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             parameters["signature"] = hmac(
                 self.key.encode("utf8"),
-                "".join([self.username, parameters["timestamp"], path]).encode("utf8"),
+                "".join([self.username, parameters["timestamp"], sign_path]).encode("utf8"),
                 digestmod=signing_hash,
             ).hexdigest()
 
