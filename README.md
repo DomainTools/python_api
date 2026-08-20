@@ -269,6 +269,12 @@ Custom parameters aside from the common `GET` Request parameters:
     api = API(USERNAME, KEY, header_authentication=False)
     api.nod(**kwargs)
     ```
+- `always_sign_api_key`: set to `True` to use HMAC-SHA256 signed authentication instead of header auth. When set, `header_authentication` automatically defaults to `False` — both methods do not fire simultaneously. The signing algorithm is identical to the standard API: `HMAC-SHA256(key, username + timestamp + path)`, with `timestamp` and `signature` sent as query parameters.
+    ```python
+    api = API(USERNAME, KEY, always_sign_api_key=True)
+    api.nod(after="-60")
+    # sends: api_username, timestamp, signature — no X-Api-Key header
+    ```
 - `output_format`: (choose either `csv` or `jsonl` - default is `jsonl`). Cannot be used in `domainrdap` feeds. Additionally, `csv` is not available for `download` endpoints.
     ```python
     api = API(USERNAME, KEY)

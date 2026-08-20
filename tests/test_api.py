@@ -895,16 +895,56 @@ def test_ip_risk():
         assert "all_threats_combined_percent" in feed_result.keys()
 
 
-@vcr.use_cassette
-def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
-    feeds_api.always_sign_api_key = True
-    try:
-        with pytest.raises(ValueError) as excinfo:
-            feeds_api.domaindiscovery(after="-60")
-        assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
-    finally:
-        feeds_api.always_sign_api_key = False
-        feeds_api.header_authentication = True
+def test_rttf_hmac_produces_timestamp_and_signature_not_api_key():
+    """RTTF with always_sign_api_key=True must add timestamp+signature and omit api_key."""
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    result = hmac_api.nod(after="-60")
+    session_info = result._get_session_params_and_headers()
+    params = session_info["parameters"]
+
+    assert "timestamp" in params
+    assert "signature" in params
+    assert "api_key" not in params
+    assert "X-Api-Key" not in session_info["headers"]
+
+
+def test_rttf_hmac_auto_disables_header_authentication():
+    """When always_sign_api_key=True, header_authentication must default to False for RTTF."""
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    hmac_api.nod(after="-60")
+    assert hmac_api.header_authentication is False
+
+
+def test_rttf_hmac_signature_is_correct():
+    """RTTF HMAC signature must match manual calculation using the normalised /v1/feed/... path."""
+    from hashlib import sha256
+    from hmac import new as hmac_new
+
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    result = hmac_api.nod(after="-60")
+    params = result._get_session_params_and_headers()["parameters"]
+
+    ts = params["timestamp"]
+    expected = hmac_new(
+        "testkey".encode("utf8"),
+        f"testuser{ts}/v1/feed/nod/".encode("utf8"),
+        digestmod=sha256,
+    ).hexdigest()
+    assert params["signature"] == expected
+
+
+def test_rttf_hmac_explicit_header_auth_false_still_signs():
+    """Explicit header_authentication=False with always_sign_api_key=True must produce a signature."""
+    hmac_api = API(
+        "testuser", "testkey",
+        rate_limit=False,
+        always_sign_api_key=True,
+        header_authentication=False,
+    )
+    result = hmac_api.nod(after="-60")
+    params = result._get_session_params_and_headers()["parameters"]
+    assert "signature" in params
+    assert "api_key" not in params
 
 
 def test_rttf_api_key_not_leaked_as_query_param():
