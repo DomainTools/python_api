@@ -253,6 +253,19 @@ Please see the [supported versions](https://github.com/DomainTools/python_api/ra
 for the DomainTools Python support policy.
 
 
+Authentication
+===================
+
+The wrapper supports two authentication modes, selected automatically based on the product:
+
+| Product | Default method | Params sent |
+|---|---|---|
+| Standard API (Iris, Whois, etc.) | HMAC-SHA256 signed | `api_username`, `timestamp`, `signature` as query params |
+| Real-Time Threat Feeds (RTTF) | Header authentication | `X-Api-Key` header |
+
+RTTF feeds also support HMAC signing as an opt-in via `always_sign_api_key=True` — see the RTTF section below.
+
+
 Real-Time Threat Feeds
 ===================
 
