@@ -13087,4 +13087,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/nod/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:49Z","domain":"uxpyvlqc-980263-003623.firebaseapp.com"}
+
+        {"timestamp":"2026-09-07T19:10:49Z","domain":"rapidprism.xyz"}
+
+        {"timestamp":"2026-09-07T19:10:49Z","domain":"lchshqtt-427402-125248.firebaseapp.com"}
+
+        {"timestamp":"2026-09-07T19:10:49Z","domain":"riccourses.tech"}
+
+        {"timestamp":"2026-09-07T19:10:49Z","domain":"amos-1153.firebaseapp.com"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '375'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:10:52 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=0m55hnivearfe7j7fh8a068roedor48n4egkn4s9nht7du1rf26soub2818h0host4pgvacq39dpfmsdanejbpb7kr5dcc32kph4hn7;
+        expires=Wed, 07-Oct-2026 19:10:52 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=8f1708ebf7d2fabbc7d31c673a9752e9; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 7939869e-358a-4c8e-b3ba-f721ed9182b1
+    status:
+      code: 200
+      message: OK
 version: 1

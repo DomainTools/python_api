@@ -567,7 +567,7 @@ def test_iris_detect_monitors():
     assert detect_results["total_count"] >= 1
 
     detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
-    assert detect_results["monitors"][0]["term"] == "google"
+    assert detect_results["monitors"][0]["term"] == "etherium"
 
 
 @vcr.use_cassette
@@ -584,10 +584,10 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains(
         monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
     )
-    assert len(detect_results["watchlist_domains"]) == 5
+    assert len(detect_results["watchlist_domains"]) == 8
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results["count"] == 1
+    assert detect_results["count"] == 2
 
 
 @vcr.use_cassette

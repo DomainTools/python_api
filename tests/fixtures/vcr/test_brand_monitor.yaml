@@ -2525,4 +2525,133 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.10.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WZ226jMBCG34WrXamWwiFN21dZrSIXpmFUsJFt0o2qvPsOkHRdbQ42hRJylQQ7
+        /mb8e2Y8eQ8U6EoKDcHTe8DTVNbCtG8rXNcalOAlPQpQGNgobpCGrg1og2IT3NEEg1t6blQN+7ug
+        UjKrU6ODp1/vAWY07/CLDMWLVGU7n6ZVoNalFCZfF1girReEi+Z1eJTLWh2fiLooDhNQ1AY+Ziyb
+        5Z+1LKwvu8G15pvWHCMzvqOh0TKkwe2CzVLJw0NAsPCnws6idcYNdLP3dwdwVKiJetuYumken6X2
+        gY4W7tSJzbxyJAahMM1Pwka+sPcesLFNe0/ruOFmYCA1DHTKCxrCMllyFPq0s5d++LEH/sKi92TH
+        jZAKsj7opJ/gy+ih7fko9IMvuaCfY2/cpHmB2gy6AaGP2r+wAzQNjVQTQNOx/EcdR37YAt4mE83q
+        Uzz0427FMqXgl7bg76/Dd6CMktMLFhcC+Yg6iW1/x87IGrg6E817JMyFT/J5tIjpw1XiXLY1Acsp
+        iki1m8LLNrIDMVbHyPH9FYl9/lxSe8UUbMizigszHXWPGD1M2RSOWDYpqGozZGHqpVlPISjYgtLA
+        sBoK9jtY2VsuL0lhxMD7SQ0OiY4k+zoFaGSfrcjhcDWgDLaYgUgnyWk91dDcJymvKfo0HwkPqt/x
+        cEuuXhkvQJmbz2gVJ79mEwYG34rM0u1syob5hN2W9GLtuBy1ckwiGzhcOQjCVjArmi7YSUdHN1KM
+        WfXjPCIEXY+LHesajMe7JnsBcvkPXuHPgfh9VPJgu/wxcZB1Z4N8buNGdhtWRI+fmhar0KEZetD6
+        4VaqMn66/FyOG1TsJq7Hvf+o/GYYo2GcRJWC1k1DwMhUFtPuR2KrKo4d7FLAC2awPB4LlqFOJSWm
+        XW9LrDj1lS2K7dZMnDhE0au26HioTRmzHekptXkYdSECD2fA6Pxnou8cLWh6bP2zx/kzPuK174IF
+        s9iB/+JTLk37R8mEQdbOg3Ho0Ok8b8SAgegb96DtfUy3AYl9u0lWfTJ2Z8EsvH+UzJW+/q30mbD6
+        UPfQZV33fa9/2Fy65VWnipuhji54+/d+/xdZ3K7YOiIAAA==
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 07 Sep 2026 19:09:35 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=mj855nkpk2hek1da7hl4o873ov70s3l034gqarqqdmn9pf007voitm1b5tlkllh8lc8bhthnge387ioj7c5e3d1gu78iclu9lr8oafc;
+        expires=Wed, 07-Oct-2026 19:09:34 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '200191'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/mark-alert?app_name=python_wrapper&app_version=2.10.0&query=google
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5VX2W7qMBD9Fz8Ti0WUll+56sNgT4KF4wle2Kr++x2WVL30FiYSL5HOmX2Ohw8V
+        MXUUEqrlh9oWjEe1VA1R41GNlHety2o5GY/HI5Upg1fLl8VI4cH4Ypnz532kAu7VMseCI0WhWpO3
+        /WfJ9ata1uATf1jITFDT8fSlGr9V4wXbB48xJzbzoSy14AIDJtPZ1b82gSEpQy4M+bL9OfoGBtu6
+        cIWDoRLy2fz4TRtqv3PPIf7Ds65xnM2Vme7h/3VlyaTqFlnX6VgeOqghZYx9Ik+iaW64tKbuMfCC
+        q8CmChoM5qgT+ZIdN/Bp/DcutwEqCOCP2XFChhvgamfgbKQqSR+OJ6mphFThoWMLGLRFMW2NmDmB
+        zDQLwWCVifzzIl3ZOfIn9zxpF2qS+txh/MrS+9V2OvE7ak91ZdambPf1ISVsyvZg3nJ59fvTyaZU
+        bKOTyyiISq/cSQdJ7yazKf/uqvULdvYyPldFr6Iwzfl8rr3bSWzPX+/W6xccj1rCuHPmxxQ/iINJ
+        e4o8pKl0HfGGC5sLdncex8TtfbZfN4LrImm05dpZCaNzSYOTJlIyDUDvL+0S1XWFNUWOX1iZVeGi
+        YEqcbu08trzADcYBLTE28GjU0iU1nor9RxuEgV6ImcsWHcv+gABZXjXvJmcp8MLDCAJY08gb4qlx
+        TpplC5HDNSSBYjRrCOIdaHeuWywGFC5QHradHQTk1jipqnRw3EA6BtKdFyTQuQP6mRWm27Hwe2c2
+        IijkIeBjGoYeaJyVYSA+ignbAUoSIWxYMFu+AfJPSfiNhBsPbTmxkAyYHL4V0Utfar4Ohh8HO4f7
+        pJsosL93ccjU84O04T4YZAltyZAVnGUX4gHkvTiJBGdNGW+np0zCz9oUzg8p+P4CfRZ72wMD5sdA
+        cF9G7y+qn2BaOS+N4HgDUnjefdYkW6C/5K3s4bgOMVT9VczoAHpzehhWvMwYdX15/FM3PMh9fZ5L
+        5h5X55txTfw89/9MfnPy/vn5F7Sd/LKADQAA
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 07 Sep 2026 19:09:36 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=p1bsm79vh35na7qv05h57v1sfutqq503jo727fdh3ssp1t1sbl7uepun4fpfcb2jlm3si4es1mibp9tp4e3tc0fpe6rcnulu01e58ce;
+        expires=Wed, 07-Oct-2026 19:09:36 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '204632'
+    status:
+      code: 200
+      message: OK
 version: 1

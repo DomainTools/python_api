@@ -619,4 +619,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainhotlist/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:16Z","domain":"udg3ugdf2.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-09-07T19:58:43Z"}
+
+        {"timestamp":"2026-09-07T19:10:46Z","domain":"jzogljnoqmbnj.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-09-07T19:18:35Z"}
+
+        {"timestamp":"2026-09-07T19:10:47Z","domain":"h666oi.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-09-08T17:10:45Z"}
+
+        {"timestamp":"2026-09-07T19:10:47Z","domain":"jspink.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-09-07T20:22:24Z"}
+
+        {"timestamp":"2026-09-07T19:10:45Z","domain":"456ccoi.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100,"expires":"2026-09-07T20:09:52Z"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '931'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:11:01 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=8hg5p32tcgre08b6pae7fn3ptf3hab6fcsq3qcadcg1nlecvs7ac1bevufm6bdfm9u7f1plo7d6dd7tl4jsaron3d35ofgt4v19fm1b;
+        expires=Wed, 07-Oct-2026 19:11:01 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=d20075037a65a748e3b39c5600fba876; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 93e5146b-94db-4f07-9067-e5012bce2816
+    status:
+      code: 200
+      message: OK
 version: 1
