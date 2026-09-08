@@ -196,15 +196,16 @@ class API(object):
             self.always_sign_api_key = not is_rttf_product
 
         if self.header_authentication is None:
-            self.header_authentication = is_rttf_product
+            # When HMAC signing is explicitly requested for RTTF, disable header auth
+            # so both methods don't fire simultaneously
+            self.header_authentication = is_rttf_product and not self.always_sign_api_key
 
     def handle_api_key(self, is_rttf_product, path, parameters):
+        if self.header_authentication and not self.always_sign_api_key:
+            return
         if self.https and not self.always_sign_api_key:
             parameters["api_key"] = self.key
         else:
-            if is_rttf_product:
-                # As per requirement in IDEV-2272, raise this error when the user explicitly sets signing of API key for RTTF endpoints
-                raise ValueError("Real Time Threat Feeds do not support signed API keys.")
             if self.key_sign_hash and self.key_sign_hash in AVAILABLE_KEY_SIGN_HASHES:
                 signing_hash = eval(self.key_sign_hash)
             else:
@@ -213,10 +214,12 @@ class API(object):
                     "Values available are {1}".format(self.key_sign_hash, ",".join(AVAILABLE_KEY_SIGN_HASHES))
                 )
 
+            # RTTF paths lack a leading slash; normalize before signing
+            sign_path = path if path.startswith("/") else f"/{path}"
             parameters["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             parameters["signature"] = hmac(
                 self.key.encode("utf8"),
-                "".join([self.username, parameters["timestamp"], path]).encode("utf8"),
+                "".join([self.username, parameters["timestamp"], sign_path]).encode("utf8"),
                 digestmod=signing_hash,
             ).hexdigest()
 
@@ -1181,26 +1184,39 @@ class API(object):
         """Returns back list of the newly observed domains feed.
         Apex-level domains (e.g. example.com but not www.example.com) that we observe for the first time, and have not observed previously with our global DNS sensor network.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
-
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000.
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint)
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-observed-domains-feed-({source.value})",
+                f"v1/{endpoint}/nod/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1216,26 +1232,39 @@ class API(object):
         Apex-level domains (e.g. example.com but not www.example.com) that we observe based on the latest lifecycle of the domain. A domain may be seen either for the first time ever, or again after at least 10 days of inactivity (no observed resolutions in DNS).
         Populated with our global passive DNS (pDNS) sensor network.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
-
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000.
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-active-domains-feed-({source})",
+                f"v1/{endpoint}/nad/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1251,21 +1280,37 @@ class API(object):
         Compliments the 5-Minute WHOIS Feed as registries and registrars switch from Whois to RDAP.
         Contains parsed and raw RDAP-format domain registration data, emitted as soon as they are collected and parsed into a normalized structure.
 
+        NOTE: Unlike the other threat feeds, the Parsed Domain RDAP feed exclusively returns JSON and does not support CSV (text/csv). Requesting CSV or the headers parameter returns an HTTP 422 error.
+
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
+        # Result formatting parameters
 
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
-
-        headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
-
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000.
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"domain-registration-data-access-protocol-feed-({source})",
+                f"v1/{endpoint}/domainrdap/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
 
         return self._results(
             f"domain-registration-data-access-protocol-feed-({source})",
@@ -1280,26 +1325,39 @@ class API(object):
         Contains domains that are newly-discovered by Domain Tools in both passive and active DNS sources, emitted as soon as they are first observed.
         New domains as they are either discovered in domain registration information, observed by our global sensor network, or reported by trusted third parties.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
-
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000.
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-discovery-feed-({source})",
+                f"v1/{endpoint}/domaindiscovery/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1315,26 +1373,39 @@ class API(object):
         Contains fully qualified domain names (i.e. host names) that have never been seen before in passive DNS, emitted as soon as they are first observed.
         Hostname resolutions that we observe for the first time with our global DNS sensor network.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
-
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000.
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"newly-observed-hosts-feed-({source})",
+                f"v1/{endpoint}/noh/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1349,26 +1420,51 @@ class API(object):
         """Returns back list of the realtime domain risk feed.
         Contains realtime domain risk information for apex-level domains, regardless of observed traffic.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
+        overall_min: int: Minimum overall combined risk score (1 to 99). Optional. When combined with other risk filters, acts as a logical AND (a domain must meet ALL specified thresholds).
 
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        malware_min: int: Minimum malware risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        phishing_min: int: Minimum phishing risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        spam_min: int: Minimum spam risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        proximity_min: int: Minimum proximity risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000. For risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-risk-({source})",
+                f"v1/{endpoint}/domainrisk/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1383,26 +1479,51 @@ class API(object):
         """Returns back list of domain hotlist feed.
         Contains high-risk, apex-level domains that are observed by DomainTools' global sensor network to be active within 24 hours.
 
+        # Session Management Parameters
+
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
         domain: str: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with "*". Check the documentation for examples
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
+        overall_min: int: Minimum overall combined risk score (1 to 99). Optional. When combined with other risk filters, acts as a logical AND (a domain must meet ALL specified thresholds).
 
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        malware_min: int: Minimum malware risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        phishing_min: int: Minimum phishing risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        spam_min: int: Minimum spam risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        proximity_min: int: Minimum proximity risk score (1 to 99). Optional. Combined with other risk filters as a logical AND.
+
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        top: int: Limit the number of results to the top N, where N is the value of this parameter.
+        top: int: Limit the number of results to the top N, where N is a positive integer from 1 to 1,000,000,000. For risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-domain-hotlist-({source})",
+                f"v1/{endpoint}/domainhotlist/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1417,26 +1538,69 @@ class API(object):
         """Returns back list of ip hotlist feed.
         Captures IP addresses that meet strict criteria for both risk level and recent activity, making it ideal for immediate blocking and threat response.
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
+        # Session Management Parameters
 
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
+        pdns_resolutions_min: int: Return only IP addresses that have had at least this many distinct domains actively resolving to them within the last 24 hours (positive integer).
+
+        bad_pdns_resolutions_min: int: Return only IPs with at least this many confirmed bad (malicious) domains actively resolving within the last 24 hours (positive integer).
+
+        total_domains_max: int: Return only IPs hosting no more than this many total domains (positive integer). Useful for filtering out superhosters such as CDNs or large public hosting providers.
+
+        third_party_threats_min: int: Return only IPs with at least this many domains independently confirmed as threats on external, third-party intelligence feeds (positive integer).
+
+        all_threats_combined_percent_min: int: Return only IPs where at least this percentage (0-100) of total hosted domains are confirmed or predicted malicious across all threat types.
+
+        combined_phishing_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as phishing.
+
+        combined_malware_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as malware.
+
+        combined_spam_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as spam.
+
+        all_threats_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed with threats across all threat types.
+
+        percent_phishing_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as phishing.
+
+        percent_malware_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as malware.
+
+        percent_spam_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as spam.
+
+        asn: int: Restrict output to IPs belonging to a specific Autonomous System Number (digits only, e.g. 15169). No AS prefix and wildcards are not supported.
+
+        organization: str: Filter for IPs associated with a specific organization by its full exact name (e.g. Example Hosting Inc). Matches the exact string only; wildcards are not supported.
+
+        country_code: str: Filter results to IPs geolocated to a specific case-sensitive two-letter country code (e.g. CN, US, NL).
+
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
-
-        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
+        top: int: Limits the number of results in the response payload (a positive integer from 1 to 1,000,000,000). Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-ip-hotlist-({source})",
+                f"v1/{endpoint}/iphotlist/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(
@@ -1451,26 +1615,69 @@ class API(object):
         """Returns back list of domain hotlist feed.
         Captures all IP addresses that actively host one or more domains, providing risk assessment and enrichment data for each IP address.
 
-        before: str: Filter for records before the given time value inclusive or time offset relative to now
+        # Session Management Parameters
 
-        after: str: Filter for records after the given time value inclusive or time offset relative to now
+        sessionID: str: A custom string to distinguish between different sessions. Required when using fromBeginning.
+
+        after: str: Start of the query window. Either an integer offset relative to now in seconds, or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ).
+
+        before: str: End of the query window (inclusive). Either an integer from -1 to -432000 (seconds before now), or an absolute ISO 8601 UTC datetime (YYYY-MM-DDTHH:MM:SSZ). The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+
+        fromBeginning: bool: Requires a valid sessionID. When true on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing sessionID returns HTTP 406; using it without a sessionID or with a non-boolean value returns HTTP 422.
+
+        # Filter Parameters
+
+        pdns_resolutions_min: int: Return only IP addresses that have had at least this many distinct domains actively resolving to them within the last 24 hours (positive integer).
+
+        bad_pdns_resolutions_min: int: Return only IPs with at least this many confirmed bad (malicious) domains actively resolving within the last 24 hours (positive integer).
+
+        total_domains_max: int: Return only IPs hosting no more than this many total domains (positive integer). Useful for filtering out superhosters such as CDNs or large public hosting providers.
+
+        third_party_threats_min: int: Return only IPs with at least this many domains independently confirmed as threats on external, third-party intelligence feeds (positive integer).
+
+        all_threats_combined_percent_min: int: Return only IPs where at least this percentage (0-100) of total hosted domains are confirmed or predicted malicious across all threat types.
+
+        combined_phishing_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as phishing.
+
+        combined_malware_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as malware.
+
+        combined_spam_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are confirmed or predicted as spam.
+
+        all_threats_percent_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed with threats across all threat types.
+
+        percent_phishing_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as phishing.
+
+        percent_malware_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as malware.
+
+        percent_spam_min: int: Return only IPs where at least this percentage (0-100) of total domains are actively confirmed as spam.
+
+        asn: int: Restrict output to IPs belonging to a specific Autonomous System Number (digits only, e.g. 15169). No AS prefix and wildcards are not supported.
+
+        organization: str: Filter for IPs associated with a specific organization by its full exact name (e.g. Example Hosting Inc). Matches the exact string only; wildcards are not supported.
+
+        country_code: str: Filter results to IPs geolocated to a specific case-sensitive two-letter country code (e.g. CN, US, NL).
+
+        # Result formatting parameters
 
         headers: bool: Use in combination with Accept: text/csv headers to control if headers are sent or not
 
-        sessionID: str: A custom string to distinguish between different sessions
-
-        fromBeginning: bool: Requires a sessionID. When used with a new session ID, returns the first hour of data in the time window (rather than the last). Returns an error if the session ID already exists
-        
-        top: int: Limits the number of results in the response payload. Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
+        top: int: Limits the number of results in the response payload (a positive integer from 1 to 1,000,000,000). Primarily intended for testing. When you apply this parameter to risk feeds, results are sorted by all_threats_combined_percent (descending).
         """
         validate_feeds_parameters(kwargs)
         endpoint = kwargs.pop("endpoint", Endpoint.FEED.value)
         source = ENDPOINT_TO_SOURCE_MAP.get(endpoint).value
-        if (
-            endpoint == Endpoint.DOWNLOAD.value
-            or kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value
-        ):
-            # headers param is allowed only in Feed API and CSV format
+
+        if endpoint == Endpoint.DOWNLOAD.value:
+            return self._results(
+                f"real-time-ip-risk-({source})",
+                f"v1/{endpoint}/iprisk/",
+                response_path=("response",),
+                limit=kwargs.get("limit"),
+                page=kwargs.get("page"),
+                prefix=kwargs.get("prefix"),
+            )
+
+        if kwargs.get("output_format", OutputFormat.JSONL.value) != OutputFormat.CSV.value:
             kwargs.pop("headers", None)
 
         return self._results(

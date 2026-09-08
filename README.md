@@ -253,6 +253,19 @@ Please see the [supported versions](https://github.com/DomainTools/python_api/ra
 for the DomainTools Python support policy.
 
 
+Authentication
+===================
+
+The wrapper supports two authentication modes, selected automatically based on the product:
+
+| Product | Default method | Params sent |
+|---|---|---|
+| Standard API (Iris, Whois, etc.) | HMAC-SHA256 signed | `api_username`, `timestamp`, `signature` as query params |
+| Real-Time Threat Feeds (RTTF) | Header authentication | `X-Api-Key` header |
+
+RTTF feeds also support HMAC signing as an opt-in via `always_sign_api_key=True` — see the RTTF section below.
+
+
 Real-Time Threat Feeds
 ===================
 
@@ -264,10 +277,16 @@ Custom parameters aside from the common `GET` Request parameters:
     api = API(USERNAME, KEY)
     api.nod(endpoint="feed", **kwargs)
     ```
-- `header_authentication`: by default, we're using API Header Authentication. Set this False if you want to use API Key and Secret Authentication. Apparently, you can't use API Header Authentication for `download` endpoints so this will be defaulted to `False` even without explicitly setting it.
+- `header_authentication`: by default, all RTTF endpoints (both `feed` and `download`) use API Header Authentication, sending the API key via the `X-Api-Key` header. Set this to `False` to pass the API key as a query parameter instead.
     ```python
     api = API(USERNAME, KEY, header_authentication=False)
     api.nod(**kwargs)
+    ```
+- `always_sign_api_key`: set to `True` to use HMAC-SHA256 signed authentication instead of header auth. When set, `header_authentication` automatically defaults to `False` — both methods do not fire simultaneously. The signing algorithm is identical to the standard API: `HMAC-SHA256(key, username + timestamp + path)`, with `timestamp` and `signature` sent as query parameters.
+    ```python
+    api = API(USERNAME, KEY, always_sign_api_key=True)
+    api.nod(after="-60")
+    # sends: api_username, timestamp, signature — no X-Api-Key header
     ```
 - `output_format`: (choose either `csv` or `jsonl` - default is `jsonl`). Cannot be used in `domainrdap` feeds. Additionally, `csv` is not available for `download` endpoints.
     ```python
@@ -275,7 +294,7 @@ Custom parameters aside from the common `GET` Request parameters:
     api.nod(output_format="csv", **kwargs)
     ```
 
-The Feed API standard access pattern is to periodically request the most recent feed data, as often as every 60 seconds. Specify the range of data you receive in one of two ways:
+The `feed` endpoint streams live NDJSON data. The standard access pattern is to poll as often as every 60 seconds. Specify the range of data you receive in one of two ways:
 
 1. With `sessionID`: Make a call and provide a new `sessionID` parameter of your choosing. The API will return the last hour of data by default.
     - Each subsequent call to the API using your `sessionID` will return all data since the last.
@@ -284,9 +303,75 @@ The Feed API standard access pattern is to periodically request the most recent 
     - Either an `after=-60` query parameter, where (in this example) -60 indicates the previous 60 seconds.
     - Or `after` and `before` query parameters for a time range, with each parameter accepting an ISO-8601 UTC formatted timestamp (a UTC date and time of the format YYYY-MM-DDThh:mm:ssZ)
 
-## Handling iterative response from RTUF endpoints:
+The `download` endpoint returns a standard JSON response (not a stream) listing available S3 batch files. Time parameters (`sessionID`, `after`, `before`) are **not** required for download calls.
 
-Since we may dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
+```python
+api = API(USERNAME, KEY)
+result = api.nod(endpoint="download", limit=5)
+print(result["download_name"])
+for f in result["files"]:
+    print(f["name"], f["url"])
+```
+
+### Feed parameters
+
+The feed methods accept the following parameters, grouped by purpose. Availability depends on the feed (see the notes below the table).
+
+#### Session Management Parameters
+
+- `sessionID`: A custom string used to distinguish between different sessions. Required when using `fromBeginning`.
+- `after`: Start of the query window. Either an integer offset relative to now in seconds (e.g. `-60`), or an absolute ISO 8601 UTC datetime (`YYYY-MM-DDTHH:MM:SSZ`).
+- `before`: End of the query window (inclusive). Either an integer from `-1` to `-432000` (seconds before now), or an absolute ISO 8601 UTC datetime. The query window covers at most the most recent 5 days; a value older than 5 days returns no records.
+- `fromBeginning`: Boolean (`true`/`false`/`1`/`0`, default `false`). Requires a valid `sessionID`. When `true` on the first request of a new session, returns the first hour of data in the time window instead of the last. Using it with an existing `sessionID` returns an HTTP 406; using it without a `sessionID` or with a non-boolean value returns an HTTP 422.
+
+    ```python
+    api = API(USERNAME, KEY)
+    api.nod(sessionID="my-new-session-id", after=-3600, fromBeginning=True)
+    ```
+
+#### Filter Parameters
+
+- `domain`: Filter for an exact domain or a substring contained within a domain by prefixing or suffixing your substring with `*`.
+- `overall_min`, `malware_min`, `phishing_min`, `spam_min`, `proximity_min`: Integer risk score thresholds (range `1` to `99`, optional). Available on the `realtime_domain_risk` and `domainhotlist` feeds only. When multiple are supplied they act as a logical AND — a domain must meet ALL specified thresholds to be returned.
+
+    ```python
+    api = API(USERNAME, KEY)
+    api.domainhotlist(after=-3600, overall_min=70, phishing_min=50)
+    ```
+
+- IP feed filters (available on the `iprisk` and `iphotlist` feeds only). All are optional integers/strings and combine as a logical AND:
+    - Domain activity & volume: `pdns_resolutions_min`, `bad_pdns_resolutions_min` (positive integers, distinct/bad domains resolving to the IP in the last 24 hours) and `total_domains_max` (positive integer; caps total hosted domains to filter out superhosters like CDNs).
+    - Threat intelligence & combined risk percentages: `third_party_threats_min` (positive integer), plus `all_threats_combined_percent_min`, `combined_phishing_percent_min`, `combined_malware_percent_min`, `combined_spam_percent_min` (percentages `0` to `100` of hosted domains confirmed or predicted malicious).
+    - Confirmed threat percentages: `all_threats_percent_min`, `percent_phishing_min`, `percent_malware_min`, `percent_spam_min` (percentages `0` to `100` of hosted domains actively confirmed).
+    - Infrastructure & geolocation: `asn` (integer, digits only — no `AS` prefix or wildcards), `organization` (exact name, no wildcards) and `country_code` (case-sensitive two-letter code, e.g. `CN`, `US`, `NL`).
+
+    ```python
+    api = API(USERNAME, KEY)
+    api.iprisk(after=-3600, bad_pdns_resolutions_min=5, total_domains_max=1000, country_code="US")
+    ```
+
+#### Result formatting parameters
+
+- `output_format`: `csv` or `jsonl` (default `jsonl`). Not available on the `domainrdap` feed. `csv` is not available for `download` endpoints.
+- `headers`: When `csv` output is used, adds a header row to the first line of the response.
+- `top`: Positive integer from `1` to `1,000,000,000` limiting the number of results in the response payload. Ignored for the `download` endpoint.
+
+#### Download-only parameters
+
+These parameters are only accepted when `endpoint="download"`. They are ignored for the `feed` endpoint.
+
+- `limit`: Maximum number of files to return in the response.
+- `page`: Zero-indexed page of results to return. Available on `realtime_domain_risk`, `domainhotlist`, `iphotlist`, and `iprisk`.
+- `prefix`: Filter files by date prefix (e.g. `"2026-08-"`). Available on `realtime_domain_risk`, `domainhotlist`, `iphotlist`, and `iprisk`.
+
+```python
+api = API(USERNAME, KEY)
+api.iphotlist(endpoint="download", limit=10, page=0, prefix="2026-08-")
+```
+
+## Handling iterative response from RTTF endpoints:
+
+Since we may be dealing with large feeds datasets, the python wrapper uses `generator` for efficient memory handling. Therefore, we need to iterate through the `generator` if we're accessing the partial results of the feeds data.
 
 ### Single request because the requested data is within the maximum result:
 ```python

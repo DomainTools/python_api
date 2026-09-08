@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.10.0
+- [NEW] Support HMAC signature authentication for feed endpoints and CLI (`--no-sign-api-key`).
+- [UPDATE] Officially support all available feed parameters and CLI options across real-time threat feed endpoints (including `--frombeginning`, risk filters, and IP-specific filters).
+- [FIX] Prevent authentication credentials from being passed as plain-text query parameters when header or HMAC authentication is enabled.
+- [FIX] Remove incorrect requirement for `sessionID`, `after`, or `before` parameters when using the feed download endpoint.
+
 ### 2.9.0
 - [NEW] Add support for querying real-time IP feeds (`iphotlist` and `iprisk`).
 - [FIX] Type hint used for `top` parameter in Feeds API from str to int.

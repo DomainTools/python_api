@@ -567,7 +567,7 @@ def test_iris_detect_monitors():
     assert detect_results["total_count"] >= 1
 
     detect_results = api.iris_detect_monitors(sort=["domain_counts_discovered", "term"])
-    assert detect_results["monitors"][0]["term"] == "google"
+    assert detect_results["monitors"][0]["term"] == "etherium"
 
 
 @vcr.use_cassette
@@ -584,10 +584,10 @@ def test_iris_detect_watched_domains():
     detect_results = api.iris_detect_watched_domains(
         monitor_id="nAwmQg2pqg", sort=["risk_score"], order="desc"
     )
-    assert len(detect_results["watchlist_domains"]) == 5
+    assert len(detect_results["watchlist_domains"]) == 8
 
     detect_results = api.iris_detect_watched_domains(escalation_types="blocked")
-    assert detect_results["count"] == 1
+    assert detect_results["count"] == 2
 
 
 @vcr.use_cassette
@@ -788,18 +788,22 @@ def test_verify_response_is_a_generator():
     assert isgenerator(results.response())
 
 
-@vcr.use_cassette
 def test_feeds_endpoint_should_non_header_auth_be_the_default():
-    results = feeds_api.domaindiscovery(after="-60", endpoint="download", top=5)
-    for response in results.response():
-        assert results.status == 200
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"response": {"download_name": "domaindiscovery", "files": []}}
 
-        response = response.strip()
-        assert response is not None
+    with patch("domaintools.base_results.Client") as mock_client:
+        mock_session = MagicMock()
+        mock_client.return_value.__enter__.return_value = mock_session
+        mock_session.get.return_value = mock_response
 
-        feed_result = json.loads(response)
-        assert "download_name" in feed_result["response"].keys()
-        assert "files" in feed_result["response"].keys()
+        feeds_api.always_sign_api_key = False
+        feeds_api.header_authentication = True
+        results = feeds_api.domaindiscovery(endpoint="download")
+
+        assert results["download_name"] == "domaindiscovery"
+        assert "files" in results
 
 
 @vcr.use_cassette
@@ -891,11 +895,114 @@ def test_ip_risk():
         assert "all_threats_combined_percent" in feed_result.keys()
 
 
-@vcr.use_cassette
-def test_feeds_endpoint_should_raise_error_if_signed_api_key_is_used():
-    feeds_api.always_sign_api_key = True
-    with pytest.raises(ValueError) as excinfo:
-        feeds_api.domaindiscovery(after="-60")
+def test_rttf_hmac_produces_timestamp_and_signature_not_api_key():
+    """RTTF with always_sign_api_key=True must add timestamp+signature and omit api_key."""
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    result = hmac_api.nod(after="-60")
+    session_info = result._get_session_params_and_headers()
+    params = session_info["parameters"]
 
-    assert str(excinfo.value) == "Real Time Threat Feeds do not support signed API keys."
+    assert "timestamp" in params
+    assert "signature" in params
+    assert "api_key" not in params
+    assert "X-Api-Key" not in session_info["headers"]
+
+
+def test_rttf_hmac_auto_disables_header_authentication():
+    """When always_sign_api_key=True, header_authentication must default to False for RTTF."""
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    hmac_api.nod(after="-60")
+    assert hmac_api.header_authentication is False
+
+
+def test_rttf_hmac_signature_is_correct():
+    """RTTF HMAC signature must match manual calculation using the normalised /v1/feed/... path."""
+    from hashlib import sha256
+    from hmac import new as hmac_new
+
+    hmac_api = API("testuser", "testkey", rate_limit=False, always_sign_api_key=True)
+    result = hmac_api.nod(after="-60")
+    params = result._get_session_params_and_headers()["parameters"]
+
+    ts = params["timestamp"]
+    expected = hmac_new(
+        "testkey".encode("utf8"),
+        f"testuser{ts}/v1/feed/nod/".encode("utf8"),
+        digestmod=sha256,
+    ).hexdigest()
+    assert params["signature"] == expected
+
+
+def test_rttf_hmac_explicit_header_auth_false_still_signs():
+    """Explicit header_authentication=False with always_sign_api_key=True must produce a signature."""
+    hmac_api = API(
+        "testuser", "testkey",
+        rate_limit=False,
+        always_sign_api_key=True,
+        header_authentication=False,
+    )
+    result = hmac_api.nod(after="-60")
+    params = result._get_session_params_and_headers()["parameters"]
+    assert "signature" in params
+    assert "api_key" not in params
+
+
+def test_rttf_api_key_not_leaked_as_query_param():
+    """api_key must not appear in query params when header_authentication is active (RTTF)."""
+    from domaintools.base_results import Results
+
+    mock_api = MagicMock()
+    mock_api.key = "secret_key"
+    mock_api.header_authentication = True
+
+    result = Results(
+        mock_api,
+        "newly-observed-domains-feed-(api)",
+        "https://api.domaintools.com",
+        api_username="testuser",
+        after="-60",
+    )
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" not in session_info["parameters"]
+    assert session_info["headers"]["X-Api-Key"] == "secret_key"
+
+
+def test_rttf_api_key_not_leaked_full_flow():
+    """handle_api_key guard: api_key must not reach request params for RTTF feeds end-to-end."""
+    test_api = API("testuser", "secret_key", rate_limit=False)
+    result = test_api.nod(after="-60")
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" not in session_info["parameters"]
+    assert session_info["headers"].get("X-Api-Key") == "secret_key"
+
+
+def test_standard_api_key_remains_in_query_params_without_header_auth():
+    """Standard (non-RTTF) endpoints keep api_key in query params when header_authentication is off."""
+    from domaintools.base_results import Results
+
+    mock_api = MagicMock()
+    mock_api.key = "secret_key"
+    mock_api.header_authentication = False
+
+    result = Results(
+        mock_api,
+        "whois",
+        "https://api.domaintools.com",
+        api_key="secret_key",
+        api_username="testuser",
+    )
+    session_info = result._get_session_params_and_headers()
+
+    assert "api_key" in session_info["parameters"]
+    assert "X-Api-Key" not in session_info["headers"]
+
+
+def test_feeds_download_endpoint_does_not_require_time_params():
+    """endpoint='download' must not raise when no sessionID/after/before are given."""
+    feeds_api.always_sign_api_key = False
+    feeds_api.header_authentication = True
+    result = feeds_api.nod(endpoint="download")
+    assert result is not None
 

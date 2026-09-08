@@ -250,6 +250,7 @@ class FeedsResults(Results):
     def response(self) -> Generator:
         while self.status != 200:
             yield from self.data()
+            self.kwargs.pop("fromBeginning", None)
 
             if not self.kwargs.get("sessionID"):
                 # we'll only do iterative request for queries that has sessionID.

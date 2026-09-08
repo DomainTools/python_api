@@ -34,3 +34,7 @@ class IncompleteResponseException(ServiceException):
 
 class RequestUriTooLongException(ServiceException):
     pass
+
+
+class NotAcceptableException(ServiceException):
+    pass

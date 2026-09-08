@@ -997,4 +997,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/noh/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:53Z","domain":"8du-u6a3df6b1-c57-a0cf8-s1788808206-i00000000-0.eue.dashnxdomain.net"}
+
+        {"timestamp":"2026-09-07T19:10:53Z","domain":"h27cz4.wlmmqxgxb.cc"}
+
+        {"timestamp":"2026-09-07T19:10:53Z","domain":"cloudimage-devdog-ap-northeast-1ont-default.production-blue.us-east-2.services.aws.arkoselabs.com"}
+
+        {"timestamp":"2026-09-07T19:10:53Z","domain":"seneca-rocks-wv.galaxytreeservice.com"}
+
+        {"timestamp":"2026-09-07T19:10:53Z","domain":"beplus.flexdigitalhealth.com"}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '494'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:10:53 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=53mv4ub4nm021cpfj2h3bk7q5l0bq0ho29rnmjk1bbuatf439bfahm4r94r1aop7k5ie8q4917698sm6277sa573fn0gbbv645tj4el;
+        expires=Wed, 07-Oct-2026 19:10:53 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=d20075037a65a748e3b39c5600fba876; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - b49aac57-bd17-4640-8293-2174dd2875f7
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -1739,4 +1739,113 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrdap/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=2
+  response:
+    body:
+      string: "{\"timestamp\":\"2026-09-07T19:10:55Z\",\"domain\":\"pupuslotz.net\",\"raw_record\":{\"first_request_timestamp\":\"2026-09-07T19:10:50Z\",\"requests\":[{\"data\":\"{\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"3017105548_DOMAIN_NET-VRSN\\\",\\\"ldhName\\\":\\\"PUPUSLOTZ.NET\\\",\\\"links\\\":[{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"rel\\\":\\\"self\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"},{\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"rel\\\":\\\"related\\\",\\\"href\\\":\\\"https:\\\\/\\\\/rdap.namecheap.com\\\\/domain\\\\/PUPUSLOTZ.NET\\\",\\\"type\\\":\\\"application\\\\/rdap+json\\\"}],\\\"status\\\":[\\\"client
+        transfer prohibited\\\"],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"1068\\\",\\\"roles\\\":[\\\"registrar\\\"],\\\"links\\\":[{\\\"href\\\":\\\"http:\\\\/\\\\/www.namecheap.com\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.namecheap.com\\\\/\\\",\\\"rel\\\":\\\"about\\\"}],\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1068\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"NameCheap,
+        Inc.\\\"]]],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"roles\\\":[\\\"abuse\\\"],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+1.6613102107\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@namecheap.com\\\"]]]}]}],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2025-09-05T19:21:04Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2027-09-05T19:21:04Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-09-06T08:44:41Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-09-07T19:10:32Z\\\"}],\\\"secureDNS\\\":{\\\"delegationSigned\\\":false},\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"DNS101.REGISTRAR-SERVERS.COM\\\"},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"ldhName\\\":\\\"DNS102.REGISTRAR-SERVERS.COM\\\"}],\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"notices\\\":[{\\\"title\\\":\\\"Terms
+        of Service\\\",\\\"description\\\":[\\\"Service subject to Terms of Use.\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/www.verisign.com\\\\/domain-names\\\\/registration-data-access-protocol\\\\/terms-service\\\\/index.xhtml\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"rel\\\":\\\"terms-of-service\\\"}]},{\\\"title\\\":\\\"Status
+        Codes\\\",\\\"description\\\":[\\\"For more information on domain status codes,
+        please visit https:\\\\/\\\\/icann.org\\\\/epp\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/epp\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"rel\\\":\\\"glossary\\\"}]},{\\\"title\\\":\\\"RDDS
+        Inaccuracy Complaint Form\\\",\\\"description\\\":[\\\"URL of the ICANN RDDS
+        Inaccuracy Complaint Form: https:\\\\/\\\\/icann.org\\\\/wicf\\\"],\\\"links\\\":[{\\\"href\\\":\\\"https:\\\\/\\\\/icann.org\\\\/wicf\\\",\\\"type\\\":\\\"text\\\\/html\\\",\\\"value\\\":\\\"https:\\\\/\\\\/rdap.verisign.com\\\\/net\\\\/v1\\\\/domain\\\\/pupuslotz.net\\\",\\\"rel\\\":\\\"help\\\"}]}]}\",\"source_type\":\"registrar\",\"timestamp\":\"2026-09-07T19:10:52Z\",\"url\":\"https://rdap.verisign.com/net/v1/domain/pupuslotz.net\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"contacts\":[],\"creation_date\":\"2025-09-05T19:21:04+00:00\",\"dnssec\":{\"signed\":false},\"domain\":\"PUPUSLOTZ.NET\",\"domain_statuses\":[\"client
+        transfer prohibited\"],\"email_domains\":[\"namecheap.com\"],\"emails\":[\"abuse@namecheap.com\"],\"expiration_date\":\"2027-09-05T19:21:04+00:00\",\"handle\":\"3017105548_DOMAIN_NET-VRSN\",\"last_changed_date\":\"2026-09-06T08:44:41+00:00\",\"links\":[{\"href\":\"https://rdap.verisign.com/net/v1/domain/pupuslotz.net\",\"rel\":\"self\"},{\"href\":\"https://rdap.namecheap.com/domain/PUPUSLOTZ.NET\",\"rel\":\"related\"},{\"href\":\"https://rdap.verisign.com/net/v1/domain/pupuslotz.net\",\"rel\":\"self\"},{\"href\":\"https://rdap.namecheap.com/domain/PUPUSLOTZ.NET\",\"rel\":\"related\"}],\"nameservers\":[\"DNS101.REGISTRAR-SERVERS.COM\",\"DNS102.REGISTRAR-SERVERS.COM\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@namecheap.com\",\"name\":\"\",\"phone\":\"tel:+1.6613102107\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1068\",\"name\":\"NameCheap,
+        Inc.\"},\"unclassified_emails\":[]},\"registrar_request_url\":\"https://rdap.verisign.com/net/v1/domain/pupuslotz.net\",\"registry_request_url\":\"https://rdap.verisign.com/net/v1/domain/pupuslotz.net\"}}\n{\"timestamp\":\"2026-09-07T19:10:55Z\",\"domain\":\"les-motards.fr\",\"raw_record\":{\"first_request_timestamp\":\"2026-09-07T19:10:52Z\",\"requests\":[{\"data\":\"{\\\"rdapConformance\\\":[\\\"rdap_level_0\\\",\\\"icann_rdap_technical_implementation_guide_1\\\",\\\"icann_rdap_response_profile_1\\\"],\\\"objectClassName\\\":\\\"domain\\\",\\\"handle\\\":\\\"DOM000001853014-FRNIC\\\",\\\"ldhName\\\":\\\"les-motards.fr\\\",\\\"status\\\":[\\\"active\\\",\\\"transfer
+        period\\\"],\\\"whoisStatus\\\":\\\"ACTIVE\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2020-07-15T18:20:19Z\\\"},{\\\"eventAction\\\":\\\"expiration\\\",\\\"eventDate\\\":\\\"2028-07-15T18:20:19Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-09-05T12:37:51.116358Z\\\"},{\\\"eventAction\\\":\\\"transfer\\\",\\\"eventDate\\\":\\\"2026-09-05T12:37:46.291389Z\\\"},{\\\"eventAction\\\":\\\"last
+        update of RDAP database\\\",\\\"eventDate\\\":\\\"2026-09-07T19:10:53.624813458Z\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"RAR1123-FRNIC\\\",\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"1636\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"port43\\\":\\\"whois.nic.fr\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2023-07-18T13:58:05.256041Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2023-12-01T10:10:52.072517Z\\\"}],\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"links\\\":[],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Abuse
+        Team\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"abuse@hostinger.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+370.64503378\\\"]]],\\\"roles\\\":[\\\"abuse\\\"]}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/entity/RAR1123-FRNIC\\\",\\\"value\\\":\\\"https://rdap.nic.fr/entity/RAR1123-FRNIC\\\",\\\"rel\\\":\\\"self\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Hostinger
+        operations UAB\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+370.64503378\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"hostinger@hostinger.com\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"https://www.hostinger.fr\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"LT\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\u0160vitrigailos
+        str. 34\\\",\\\"Vilnius\\\",\\\"\\\",\\\"LT-03230\\\",\\\"\\\"]]]],\\\"roles\\\":[\\\"registrar\\\",\\\"sponsor\\\"],\\\"remarks\\\":[{\\\"type\\\":\\\"registrar
+        restricted publication\\\",\\\"description\\\":[\\\"No\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"ANO00-FRNIC\\\",\\\"status\\\":[\\\"associated\\\",\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2026-08-28T12:34:18.149359Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-09-05T12:45:21.648582Z\\\"}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/entity/ANO00-FRNIC\\\",\\\"value\\\":\\\"https://rdap.nic.fr/entity/ANO00-FRNIC\\\",\\\"rel\\\":\\\"self\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"Ano
+        Nymous\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"\\\"],[\\\"adr\\\",{},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"]]]],\\\"roles\\\":[\\\"administrative\\\",\\\"registrant\\\"],\\\"remarks\\\":[{\\\"type\\\":\\\"contact
+        restricted publication\\\",\\\"description\\\":[\\\"YES\\\"]},{\\\"type\\\":\\\"contact
+        obsolete\\\",\\\"description\\\":[\\\"NO\\\"]},{\\\"type\\\":\\\"contact type\\\",\\\"description\\\":[\\\"PERSON\\\"]},{\\\"type\\\":\\\"contact
+        remark privacy\\\",\\\"description\\\":[\\\"-------------- WARNING --------------\\\",\\\"While
+        the registrar knows him/her,\\\",\\\"this person chose to restrict access\\\",\\\"to
+        his/her personal data. So PLEASE,\\\",\\\"don't send emails to Ano Nymous.
+        This\\\",\\\"address is bogus and there is no hope\\\",\\\"of a reply.\\\",\\\"--------------
+        WARNING --------------\\\"]},{\\\"type\\\":\\\"reachable\\\",\\\"description\\\":[\\\"NO\\\"]},{\\\"type\\\":\\\"eligibility
+        status\\\",\\\"description\\\":[\\\"NotIdentified\\\"]},{\\\"type\\\":\\\"registrar
+        name\\\",\\\"description\\\":[\\\"Hostinger operations UAB\\\"]}]},{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"CTC2508113-FRNIC\\\",\\\"status\\\":[\\\"associated\\\",\\\"active\\\"],\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2023-11-28T08:57:47.58898Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2026-09-07T19:00:02.389008Z\\\"}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/entity/CTC2508113-FRNIC\\\",\\\"value\\\":\\\"https://rdap.nic.fr/entity/CTC2508113-FRNIC\\\",\\\"rel\\\":\\\"self\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"HOSTINGER\\\"],[\\\"org\\\",{},\\\"text\\\",\\\"HOSTINGER
+        operations, UAB\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"LT\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"\u0160vitrigailos
+        g. 34\\\",\\\"Vilnius\\\",\\\"\\\",\\\"03230\\\",\\\"\\\"]],[\\\"email\\\",{},\\\"text\\\",\\\"techsupport@hostinger.com\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+370.64503378\\\"]]],\\\"roles\\\":[\\\"technical\\\"],\\\"remarks\\\":[{\\\"type\\\":\\\"contact
+        restricted publication\\\",\\\"description\\\":[\\\"NO\\\"]},{\\\"type\\\":\\\"contact
+        obsolete\\\",\\\"description\\\":[\\\"NO\\\"]},{\\\"type\\\":\\\"contact type\\\",\\\"description\\\":[\\\"ORGANIZATION\\\"]},{\\\"type\\\":\\\"reachable\\\",\\\"description\\\":[\\\"NO\\\"]},{\\\"type\\\":\\\"eligibility
+        status\\\",\\\"description\\\":[\\\"NotIdentified\\\"]},{\\\"type\\\":\\\"registrar
+        name\\\",\\\"description\\\":[\\\"Hostinger operations UAB\\\"]}]}],\\\"nameservers\\\":[{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"handle\\\":\\\"HOST305102-FRNIC\\\",\\\"ldhName\\\":\\\"artemis.dns-parking.com\\\",\\\"status\\\":[\\\"associated\\\",\\\"active\\\"],\\\"ipAddresses\\\":{},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"RAR703-FRNIC\\\",\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"269\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"port43\\\":\\\"whois.rrpproxy.net\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2006-07-24T00:00:00Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-01-19T08:46:47.05285Z\\\"}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/entity/RAR703-FRNIC\\\",\\\"value\\\":\\\"https://rdap.nic.fr/entity/RAR703-FRNIC\\\",\\\"rel\\\":\\\"self\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"KEY-SYSTEMS
+        GmbH\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+49.68949396850\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"uri\\\",\\\"tel:+49.68949396851\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"info@key-systems.net\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.key-systems.net/tld/fr\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"DE\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kaiserstra\xDFe
+        172-174\\\",\\\"St. Ingbert\\\",\\\"\\\",\\\"DE-66386\\\",\\\"\\\"]]]],\\\"roles\\\":[\\\"registrar\\\",\\\"sponsor\\\"],\\\"remarks\\\":[{\\\"type\\\":\\\"registrar
+        restricted publication\\\",\\\"description\\\":[\\\"No\\\"]}]}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/nameserver/artemis.dns-parking.com\\\",\\\"value\\\":\\\"https://rdap.nic.fr/nameserver/artemis.dns-parking.com\\\",\\\"rel\\\":\\\"self\\\"}],\\\"remarks\\\":[{\\\"title\\\":\\\"result
+        set truncated due to authorization\\\",\\\"description\\\":[\\\"The list of
+        results does not contain all results due to lack of authorization.\\\",\\\"This
+        may indicate to some clients that proper authorization will yield a longer
+        result set.\\\"]}]},{\\\"objectClassName\\\":\\\"nameserver\\\",\\\"handle\\\":\\\"HOST305103-FRNIC\\\",\\\"ldhName\\\":\\\"hermes.dns-parking.com\\\",\\\"status\\\":[\\\"associated\\\",\\\"active\\\"],\\\"ipAddresses\\\":{},\\\"entities\\\":[{\\\"objectClassName\\\":\\\"entity\\\",\\\"handle\\\":\\\"RAR703-FRNIC\\\",\\\"publicIds\\\":[{\\\"type\\\":\\\"IANA
+        Registrar ID\\\",\\\"identifier\\\":\\\"269\\\"}],\\\"status\\\":[\\\"active\\\"],\\\"port43\\\":\\\"whois.rrpproxy.net\\\",\\\"events\\\":[{\\\"eventAction\\\":\\\"registration\\\",\\\"eventDate\\\":\\\"2006-07-24T00:00:00Z\\\"},{\\\"eventAction\\\":\\\"last
+        changed\\\",\\\"eventDate\\\":\\\"2024-01-19T08:46:47.05285Z\\\"}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/entity/RAR703-FRNIC\\\",\\\"value\\\":\\\"https://rdap.nic.fr/entity/RAR703-FRNIC\\\",\\\"rel\\\":\\\"self\\\"}],\\\"vcardArray\\\":[\\\"vcard\\\",[[\\\"version\\\",{},\\\"text\\\",\\\"4.0\\\"],[\\\"fn\\\",{},\\\"text\\\",\\\"KEY-SYSTEMS
+        GmbH\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"voice\\\"},\\\"uri\\\",\\\"tel:+49.68949396850\\\"],[\\\"tel\\\",{\\\"type\\\":\\\"fax\\\"},\\\"uri\\\",\\\"tel:+49.68949396851\\\"],[\\\"email\\\",{},\\\"text\\\",\\\"info@key-systems.net\\\"],[\\\"url\\\",{},\\\"uri\\\",\\\"http://www.key-systems.net/tld/fr\\\"],[\\\"adr\\\",{\\\"cc\\\":\\\"DE\\\"},\\\"text\\\",[\\\"\\\",\\\"\\\",\\\"Kaiserstra\xDFe
+        172-174\\\",\\\"St. Ingbert\\\",\\\"\\\",\\\"DE-66386\\\",\\\"\\\"]]]],\\\"roles\\\":[\\\"registrar\\\",\\\"sponsor\\\"],\\\"remarks\\\":[{\\\"type\\\":\\\"registrar
+        restricted publication\\\",\\\"description\\\":[\\\"No\\\"]}]}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/nameserver/hermes.dns-parking.com\\\",\\\"value\\\":\\\"https://rdap.nic.fr/nameserver/hermes.dns-parking.com\\\",\\\"rel\\\":\\\"self\\\"}],\\\"remarks\\\":[{\\\"title\\\":\\\"result
+        set truncated due to authorization\\\",\\\"description\\\":[\\\"The list of
+        results does not contain all results due to lack of authorization.\\\",\\\"This
+        may indicate to some clients that proper authorization will yield a longer
+        result set.\\\"]}]}],\\\"links\\\":[{\\\"href\\\":\\\"https://rdap.nic.fr/domain/les-motards.fr\\\",\\\"value\\\":\\\"https://rdap.nic.fr/domain/les-motards.fr\\\",\\\"rel\\\":\\\"self\\\"}]}\",\"source_type\":\"registry\",\"timestamp\":\"2026-09-07T19:10:52Z\",\"url\":\"https://rdap.nic.fr/domain/les-motards.fr\"}]},\"parsed_record\":{\"parsed_fields\":{\"conformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_1\",\"icann_rdap_response_profile_1\"],\"contacts\":[{\"city\":\"\",\"country\":\"\",\"handle\":\"ANO00-FRNIC\",\"name\":\"Ano
+        Nymous\",\"org\":\"\",\"postal\":\"\",\"region\":\"\",\"roles\":[\"administrative\",\"registrant\"],\"street\":\"\"},{\"city\":\"Vilnius\",\"country\":\"LT\",\"email\":\"techsupport@hostinger.com\",\"handle\":\"CTC2508113-FRNIC\",\"name\":\"HOSTINGER\",\"org\":\"HOSTINGER
+        operations, UAB\",\"phone\":\"tel:+370.64503378\",\"postal\":\"03230\",\"region\":\"\",\"roles\":[\"technical\"],\"street\":\"\u0160vitrigailos
+        g. 34\"}],\"creation_date\":\"2020-07-15T18:20:19+00:00\",\"domain\":\"les-motards.fr\",\"domain_statuses\":[\"active\",\"transfer
+        period\"],\"email_domains\":[\"hostinger.com\",\"key-systems.net\"],\"emails\":[\"abuse@hostinger.com\",\"hostinger@hostinger.com\",\"info@key-systems.net\",\"techsupport@hostinger.com\"],\"expiration_date\":\"2028-07-15T18:20:19+00:00\",\"handle\":\"DOM000001853014-FRNIC\",\"last_changed_date\":\"2026-09-05T12:37:51.116358+00:00\",\"links\":[{\"href\":\"https://rdap.nic.fr/domain/les-motards.fr\",\"rel\":\"self\"}],\"nameservers\":[\"artemis.dns-parking.com\",\"hermes.dns-parking.com\"],\"registrar\":{\"contacts\":[{\"email\":\"abuse@hostinger.com\",\"name\":\"Abuse
+        Team\",\"phone\":\"tel:+370.64503378\",\"roles\":[\"abuse\"]}],\"iana_id\":\"1636\",\"name\":\"Hostinger
+        operations UAB\"},\"unclassified_emails\":[\"hostinger@hostinger.com\",\"info@key-systems.net\"]},\"registrar_request_url\":null,\"registry_request_url\":\"https://rdap.nic.fr/domain/les-motards.fr\"}}\n"
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:10:56 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=kaknvefnvj14l0nq725l6lp94bpaej8dkengpbvhumjkuvm0r7iu3tbho2fagifko1p1s92t3r7jc48dtklcs2phf62hpsst11nhr79;
+        expires=Wed, 07-Oct-2026 19:10:56 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=bb334411c878338950000a2a4494dab9; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - 97f0b4ff-3260-434b-9ae7-fc2175050607
+    status:
+      code: 200
+      message: OK
 version: 1

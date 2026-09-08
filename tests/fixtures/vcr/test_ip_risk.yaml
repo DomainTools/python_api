@@ -60,4 +60,65 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/iprisk/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:04Z","ip":"27.50.93.167","pdns_resolutions":64,"bad_pdns_resolutions":0,"total_domains":79,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":45671,"organization":"Servers
+        Australia Pty Ltd","city":"Yarramalong","country":"AU","latitude":-33.223,"longitude":151.277,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:04Z","ip":"36.156.96.6","pdns_resolutions":327,"bad_pdns_resolutions":1,"total_domains":468,"third_party_threats":1,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":56046,"organization":"China
+        Mobile Communications Corporation","city":"Nanjing","country":"CN","latitude":32.04583,"longitude":118.78417,"all_threats_combined_count":1,"malicious_phishing":1,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":1,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:04Z","ip":"38.182.134.141","pdns_resolutions":1,"bad_pdns_resolutions":0,"total_domains":1,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":18186,"organization":"Starcloud
+        Global Pte. Ltd.","city":"Chongqing","country":"CN","latitude":29.57889,"longitude":106.56056,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:04Z","ip":"38.244.187.86","pdns_resolutions":1,"bad_pdns_resolutions":0,"total_domains":1,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":200088,"organization":"3NT
+        Solutions LLP","city":"Embsay","country":"GB","latitude":53.978,"longitude":-1.991,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:04Z","ip":"40.180.124.73","pdns_resolutions":5,"bad_pdns_resolutions":0,"total_domains":6,"third_party_threats":0,"all_threats_combined_percent":0,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":0,"asn":16509,"organization":"Amazon.com
+        Inc.","city":"Dublin","country":"IE","latitude":53.35389,"longitude":-6.24333,"all_threats_combined_count":0,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":0,"percent_phishing":0,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:11:05 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=6n0b94gl4eus44sr0en22u7bv34708d4vaf0ejv5uv4s4k1dartuq78fem3g6aravqcaudk7r8lk36ii2k2u6ddvvu82k4l0uj5uhkj;
+        expires=Wed, 07-Oct-2026 19:11:03 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=f72165302a74230224b95307d2f944b7; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - d580b46f-4697-47ec-897f-e321b1186bfb
+    status:
+      code: 200
+      message: OK
 version: 1

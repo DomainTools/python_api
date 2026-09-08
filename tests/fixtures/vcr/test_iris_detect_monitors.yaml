@@ -2000,4 +2000,112 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.10.0&offset=0&order=desc
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA72TUWvbMBDHv4te5whJlqxYTx3sqaMbhTBoSjGKfXHlWVYmyVm20u++WzPYRkv6
+        lL6I4/5/3Z1+6B5IDtmOTRvmKRMjCxK22wQYsoKMzjuMFMPYh8nlEBMxtw8kQ/TEEOvtzzARFG1u
+        75s0b1KObuqbvY3OZhcmtG/tmKAgk/WQIO4hNnBoxzkd1du7Aqsd8rOk67DBh4+fN4fLL8PNJTZp
+        I9gMXdPhiZpgQiyYWvB6xTXOaISgFWNclWs0z7vuhJkbKajWTJfstznlo8u22e3hT2LGQUgb/G4E
+        LPRP/80PFNyUoY/HN77LkDK/6IK3mA5hTBTvkcfiL6hofRvOCGoNg2Q39fCJvwiqWrB6wfiKV4aV
+        hmta1TVTy5dB/W8uNRW11MvqTUBBvofoZn9GVGE9qGt2NVx9fRWVMEJRqUol+OuohJGcllxJKd8E
+        VR9CP8IZQU3vv/vrXuy+9SeWT68EM5wbIWmFn0rrU8u3fDLX+K0oU1yU5RlB3T3+AuQqELTbBAAA
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Mon, 07 Sep 2026 19:10:35 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=3cm38mca82hrfah42tmtidh1eclekakd9qsqd719kvm9mrnpeunt8q339gaeh3rv7saor5fki7s7iutchp6b25mpar5lb6micg8qrel;
+        expires=Wed, 07-Oct-2026 19:10:35 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/iris-detect/monitors/?app_name=python_wrapper&app_version=2.10.0&offset=0&order=desc&sort%5B%5D=domain_counts_discovered&sort%5B%5D=term
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA73UTY+bMBAG4P/iawnyJw4+tVJPW22rlaJKm9UKOeAQU7BTbJK0Uf57J6FqU3WV
+        PaTpBQ32y4x5hNij6KNui9IPLiLFE+SXy2CgxAlqbWehEhjqzjsbfR+QetqjaPoOKWTiyvR26BBs
+        61iuijAsQuytq4uN7q2O1jt4YKnbYBLkdGeC6TemL8yubIcw7j49J9BvF/9atBWM8PNGPOD75v4L
+        DCl7o6OpigqusEcxzSY4n2AyI5nCVFGRcsEEJXMID+vqYpiTlBHBOT+GQxxTuox2Y34uDHAQVPpu
+        3RpoBIuV77R1oxXs7ZEzW+BJ0Pb49hA5oplQ6vY4+XRXrrSrT/Xh9/kX36CxddHU/Wj0JpoQydux
+        f/S+DSnMRYfkF7XudVf6G0LPTcPxY958JK9CM0VkmuU5FtPXoZliMqU5l9PsWmjyX6Rr7+vW3FDa
+        vdt2DzVdf61flKYTLCZEzihWhCjK0wyopXxZegxPT+EcsFMsCGXsWmmGRX6OPf0Dm55hsys/605/
+        9+6G2O8/fFrs7j43j3cXsPMZkfCXU5SmGcZEsEvYY5goTlMpsWT4amwmhDzDzv7tl/18+AHKUXFQ
+        5AUAAA==
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json
+      date:
+      - Mon, 07 Sep 2026 19:10:37 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=uc8pv7gbsvql5q5nqqjipglcjsopn85vaf9gq2dk2tt4h4bf95pje7hkfldk05dejcbnf5c124jh2e7rvv8aiepehk1uc3nssubee60;
+        expires=Wed, 07-Oct-2026 19:10:36 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
 version: 1

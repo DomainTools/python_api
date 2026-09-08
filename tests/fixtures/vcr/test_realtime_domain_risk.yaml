@@ -25596,4 +25596,60 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/domainrisk/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:05Z","domain":"holiganbet-trbul.cfd","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-09-07T19:10:07Z","domain":"595322.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-09-07T19:10:05Z","domain":"1xbet-1xb6.top","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-09-07T19:10:06Z","domain":"ezcrypt.icu","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        {"timestamp":"2026-09-07T19:10:07Z","domain":"bcpsrixchcd.com","phishing_risk":99,"malware_risk":99,"spam_risk":99,"proximity_risk":100,"overall_risk":100}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-length:
+      - '775'
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:11:00 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=ejlj1obqktqviqp4aior7otmhfsrbun843kv3qvfp1pnqb7rm9sf65vimr8v99401sf0fe6qketbd7fublbal0b1er12knn1qugvq8e;
+        expires=Wed, 07-Oct-2026 19:10:59 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=f72165302a74230224b95307d2f944b7; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-request-id:
+      - 97b2448d-7c31-457f-aa00-0f21914c5479
+    status:
+      code: 200
+      message: OK
 version: 1

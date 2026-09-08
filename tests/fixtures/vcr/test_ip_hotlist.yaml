@@ -60,4 +60,65 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - identity
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/feed/iphotlist/?after=-60&app_name=python_wrapper&app_version=2.10.0&top=5
+  response:
+    body:
+      string: '{"timestamp":"2026-09-07T19:10:03Z","ip":"20.51.114.81","pdns_resolutions":273,"bad_pdns_resolutions":166,"total_domains":478,"third_party_threats":293,"all_threats_combined_percent":61,"combined_phishing_percent":8,"combined_malware_percent":0,"combined_spam_percent":52,"asn":8075,"organization":"Microsoft
+        Corporation","city":"Quincy","country":"US","latitude":47.234,"longitude":-119.852,"all_threats_combined_count":293,"malicious_phishing":39,"malicious_malware":3,"malicious_spam":251,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":61,"percent_phishing":8,"percent_malware":0,"percent_spam":52,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:03Z","ip":"45.63.20.116","pdns_resolutions":1,"bad_pdns_resolutions":1,"total_domains":1,"third_party_threats":1,"all_threats_combined_percent":100,"combined_phishing_percent":100,"combined_malware_percent":0,"combined_spam_percent":0,"asn":20473,"organization":"Vultr
+        Holdings LLC","city":"Piscataway Township","country":"US","latitude":40.5465,"longitude":-74.4629,"all_threats_combined_count":1,"malicious_phishing":1,"malicious_malware":0,"malicious_spam":0,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":100,"percent_phishing":100,"percent_malware":0,"percent_spam":0,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:03Z","ip":"27.124.18.2","pdns_resolutions":195,"bad_pdns_resolutions":188,"total_domains":268,"third_party_threats":260,"all_threats_combined_percent":97,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":97,"asn":152194,"organization":"CTG
+        Server Ltd.","city":"Aberdeen","country":"HK","latitude":22.24831,"longitude":114.1524,"all_threats_combined_count":260,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":260,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":97,"percent_phishing":0,"percent_malware":0,"percent_spam":97,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:03Z","ip":"5.135.245.72","pdns_resolutions":3,"bad_pdns_resolutions":3,"total_domains":3,"third_party_threats":3,"all_threats_combined_percent":100,"combined_phishing_percent":0,"combined_malware_percent":0,"combined_spam_percent":100,"asn":16276,"organization":"OVH
+        Hosting Oy","city":"Helsinki Kunta","country":"FI","latitude":60.173,"longitude":24.941,"all_threats_combined_count":3,"malicious_phishing":0,"malicious_malware":0,"malicious_spam":3,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":100,"percent_phishing":0,"percent_malware":0,"percent_spam":100,"zerolist_domains":0,"zerolist_ip":false}
+
+        {"timestamp":"2026-09-07T19:10:03Z","ip":"74.179.57.126","pdns_resolutions":273,"bad_pdns_resolutions":166,"total_domains":470,"third_party_threats":287,"all_threats_combined_percent":61,"combined_phishing_percent":8,"combined_malware_percent":0,"combined_spam_percent":52,"asn":8075,"organization":"Bna
+        Adsl Cbb","city":"Quincy","country":"US","latitude":47.234,"longitude":-119.852,"all_threats_combined_count":287,"malicious_phishing":39,"malicious_malware":3,"malicious_spam":245,"compromised_phishing":0,"compromised_malware":0,"compromised_spam":0,"predicted_phishing":0,"predicted_malware":0,"predicted_spam":0,"all_threats_percent":61,"percent_phishing":8,"percent_malware":0,"percent_spam":52,"zerolist_domains":0,"zerolist_ip":false}
+
+        '
+    headers:
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/x-ndjson
+      date:
+      - Mon, 07 Sep 2026 19:11:02 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=st6e8vtnpf2lp277pljdho3g0i2mfmevl06e6l4igue5lbiesa7u59d3h3agbmcfvrkkasaev5ul3mo0hhjq3h70faatuf599t2mq6u;
+        expires=Wed, 07-Oct-2026 19:11:02 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      - 0566fae076d9b6615cd8f47a9e9500f2=d20075037a65a748e3b39c5600fba876; path=/;
+        HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      x-request-id:
+      - b86791d9-797b-4fcb-a48c-abcc01f9ebd9
+    status:
+      code: 200
+      message: OK
 version: 1

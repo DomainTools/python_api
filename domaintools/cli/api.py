@@ -10,6 +10,7 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from domaintools.api import API
 from domaintools.constants import Endpoint, RTTF_PRODUCTS_LIST, OutputFormat
+from domaintools.results import FeedsResults
 from domaintools.cli.utils import get_file_extension
 from domaintools.exceptions import ServiceException
 from domaintools._version import current as version
@@ -114,8 +115,10 @@ class DTCLICommand:
     def _get_formatted_output(cls, cmd_name: str, response, out_format: str = "json"):
         if cmd_name in ("available_api_calls",):
             return "\n".join(response)
-        if response.product in RTTF_PRODUCTS_LIST:
-            pass  # do nothing
+        if isinstance(response, FeedsResults):
+            pass  # do nothing — streaming output handled in run()
+        elif out_format not in ("json", "xml", "html", "list"):
+            out_format = "json"  # download endpoint returns standard JSON
         return str(getattr(response, out_format) if out_format != "list" else response.as_list())
 
     @classmethod
@@ -225,12 +228,14 @@ class DTCLICommand:
                 params = params | kwargs
 
                 response = dt_api_func(**params)
+                if not isinstance(response, FeedsResults):
+                    response_format = "json"
                 progress.update(
                     task_id,
                     description=f"Preparing results with format of {response_format}...",
                 )
 
-                if name not in ("available_api_calls",) and not getattr(response, "product", None) in RTTF_PRODUCTS_LIST:
+                if name not in ("available_api_calls",) and not isinstance(response, FeedsResults):
                     response.data()
 
                 output = cls._get_formatted_output(
@@ -238,7 +243,7 @@ class DTCLICommand:
                 )
 
             if isinstance(out_file, _io.TextIOWrapper):
-                if name not in ("available_api_calls",) and response.product in RTTF_PRODUCTS_LIST:
+                if name not in ("available_api_calls",) and isinstance(response, FeedsResults):
                     for feeds in response.response():
                         print(feeds)
                 else:

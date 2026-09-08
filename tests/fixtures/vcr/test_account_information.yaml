@@ -1373,4 +1373,69 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.domaintools.com
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.domaintools.com/v1/account?app_name=python_wrapper&app_version=2.10.0
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WZ226jMBCG34WrXamWyiFN21dZrSIXpmFUsJFt0o2qvPsOkHRdbQ42gRJ61QQb
+        fzP+PTOefAQKdCWFhuD5I+BpKmth2n8rXNUalOAlPQpQGFgrbpCGrgxog2Id3NEEgxt6blQNu7ug
+        UjKrU6OD518fAWY0b/9GhuJVqrKdT9MqUKtSCpOvCiyR1gvC++Zv/yiXtTo8EXVR7CegqA18zlg0
+        y79oWVhfdoNrzdetOUZmfEtDo0Xz5nbBZqnkcRkQLPypsLNolXED3ezd3R4cFWqi3jSmrpvHJ6l9
+        oKN7d+rEZnYlBqEwzY/CRr6wDx6wsU37QOu44WZgIDUMdMoLGsIyWXIU+rizF374sQe+rQ9PdlwL
+        qSDrg076Ca5GD23PR6EffMkFvY69c5PmBWoz6AaEPmq/YgdoGhqpJoCmY/mPOo78sAW8Tyaa5Zd4
+        6MfdimVKwS9swT9chu9AGSWnVyzOBPIRdRLb/o6dkTVwdSKa90iY9z7J58kipg8XiXPZ1gQspygi
+        1XYKL9vIDsRYHSLH91ck9vlzSe0VU7AmzyouzHTUPWL0MGVTOGLZpKCqzZCFqZdmPYWgYANKA8Nq
+        KNjvYGXvuTwnhRED7xc1OCQ6kuzbFKCRfbYih8PVgDLYYAYinSSn9VRDc5+kvKbo03wkPKh+x8Mt
+        uXpjvABlbj6jVZz8mk0YGHwrMku3sykb5hN2W9KzteNi1MoxiWzgcOkgCFvBrGi6YEcdHd1IMWbV
+        j/OIEHQ9LrasazAe7prsFcjlP3iFPwfi91HJo+3yp8RB1p0N8qWNG9ltWBE9fWlaLMNHZ63vb6Uq
+        48fLz8W4QSXsd+8/KL8ZxmgYJ1GloHXTEDAylcW0+5HYqopjB7sU8IIZLA/HgmWoU0mJadvbEitO
+        XbNFsd2aiROHKHrRFh0PtSljtiM9pTYPo85E4OEMGJ3/RPSdowVNj61/9jh9xke89p2xYBY78F98
+        yqVpfyiZMMjaeTAOHTqdp40YMBB94x60vY/pNiCxbzfJsk/G7iyYhfcPkrnQ17+VPhNWn+oeuqzr
+        vu/1C5tLt7zqVHEz1NEZb//e7f4Cfz1qvjoiAAA=
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - 'default-src * data: blob: ''unsafe-eval'' ''unsafe-inline'''
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Mon, 07 Sep 2026 19:09:32 GMT
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      pragma:
+      - no-cache
+      set-cookie:
+      - dtsession=6erq994rgtevn54kgngis90n3smg87s8u8im5pjh0b9utlcos99g0tui3ml1q9v58rqtc7klm5b2t2cnnd5aklafbiloq0lkkf29fr7;
+        expires=Wed, 07-Oct-2026 19:09:32 GMT; Max-Age=2592000; path=/; domain=.domaintools.com;
+        secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-time:
+      - '201535'
+    status:
+      code: 200
+      message: OK
 version: 1
