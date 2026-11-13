@@ -2,7 +2,7 @@
 ===================
 
 [![PyPI version](https://badge.fury.io/py/domaintools_api.svg)](http://badge.fury.io/py/domaintools_api)
-[![CI Status](https://github.com/domaintools/python_api/workflows/Tests/badge.svg)](https://github.com/domaintools/python_api/actions)
+[![CI Status](https://github.com/domaintools/python_api/actions/workflows/test-build-publish.yml/badge.svg)](https://github.com/domaintools/python_api/actions)
 [![Coverage Status](https://coveralls.io/repos/github/DomainTools/python_api/badge.svg?branch=main)](https://coveralls.io/github/DomainTools/python_api?branch=main)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/domaintools_api/)
 
@@ -10,7 +10,7 @@ DomainTools Official Python API
 
 ![domaintools Example](https://github.com/DomainTools/python_api/raw/main/artwork/example.gif)
 
-The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™, Iris Enrich™, and Iris Detect™ products. It is actively maintained and may be downloaded via <a href="https://github.com/DomainTools/python_api">GitHub</a> or <a href="https://pypi.org/project/domaintools-api/">PyPI</a>. See the included README file, the examples folder, and API documentation (https://app.swaggerhub.com/apis-docs/DomainToolsLLC/DomainTools_APIs/1.0#) for more info.
+The DomainTools Python API Wrapper provides an interface to work with our cybersecurity and related data tools provided by our Iris Investigate™, Iris Enrich™, and Iris Detect™ products. It is actively maintained and may be downloaded via <a href="https://github.com/DomainTools/python_api">GitHub</a> or <a href="https://pypi.org/project/domaintools-api/">PyPI</a>. See the included README file, the examples folder, and the [SDK](https://docs.domaintools.com/python-sdk/) and [API](https://docs.domaintools.com/api/) documentation for more info.
 
 Installing the DomainTools API
 ===================
@@ -66,8 +66,8 @@ for result in api.iris_enrich('domaintools.com').response().get('results', {}):
 You can also use a context manager to ensure processing on the results only occurs if the request is successfully made:
 
 ```python
-with api.iris_enrich('domaintools.com').response().get('results', {}) as results:
-    print(results)
+with api.iris_enrich('domaintools.com') as results:
+    print(results.response().get('results', {}))
 ```
 
 For API calls where a single item is expected to be returned, you can directly interact with the result:
@@ -92,11 +92,11 @@ api.iris_enrich('domaintools.com').data() == {'response': { ... }}
 api.iris_enrich('domaintools.com').response() == { ... }
 ```
 
-You can directly get the html, xml, or json version of the response by calling `.(html|xml|json)()` These only work with non AsyncResults:
+You can directly get the html, xml, or json version of the response with the `.html`, `.xml`, or `.json` properties:
 ```python
-json = str(api.domain_search('google').json())
-xml = str(api.domain_search('google').xml())
-html = str(api.domain_search('google').html())
+json = str(api.domain_search('google').json)
+xml = str(api.domain_search('google').xml)
+html = str(api.domain_search('google').html)
 ```
 
 If any API call is unsuccesfull, one of the exceptions defined in `domaintools.exceptions` will be raised:
@@ -104,28 +104,14 @@ If any API call is unsuccesfull, one of the exceptions defined in `domaintools.e
 ```python-traceback
 api.domain_profile('notvalid').data()
 
-
----------------------------------------------------------------------------
-BadRequestException                       Traceback (most recent call last)
-<ipython-input-3-f9e22e2cf09d> in <module>()
-----> 1 api.domain_profile('google').data()
-
-/home/tcrosley/projects/external/python_api/venv/lib/python3.5/site-packages/domaintools-0.0.1-py3.5.egg/domaintools/base_results.py in data(self)
-     25                 self.api._request_session = Session()
-     26             results = self.api._request_session.get(self.url, params=self.kwargs)
----> 27             self.status = results.status_code
-     28             if self.kwargs.get('format', 'json') == 'json':
-     29                 self._data = results.json()
-
-/home/tcrosley/projects/external/python_api/venv/lib/python3.5/site-packages/domaintools-0.0.1-py3.5.egg/domaintools/base_results.py in status(self, code)
-     44
-     45         elif code == 400:
----> 46             raise BadRequestException()
-     47         elif code == 403:
-     48             raise NotAuthorizedException()
-
-BadRequestException:
-
+Traceback (most recent call last):
+  File "example.py", line 1, in <module>
+    api.domain_profile('notvalid').data()
+  File ".../site-packages/domaintools/base_results.py", line 164, in data
+    self.setStatus(results.status_code, results)
+  File ".../site-packages/domaintools/base_results.py", line 219, in setStatus
+    raise BadRequestException(code, reason)
+domaintools.exceptions.BadRequestException: {'error': {'code': 400, 'message': 'We could not understand your request'}}
 ```
 
 the exception will contain the status code and the reason for the exception:
@@ -180,20 +166,20 @@ The DomainTools API automatically supports async usage:
 
 ```python
 
-search_results = await api.iris_enrich('domaintools.com').response().get('results', {})
+search_results = await api.iris_enrich('domaintools.com')
 ```
 
 There is built-in support for async context managers:
 
 ```python
-async with api.iris_enrich('domaintools.com').response().get('results', {}) as search_results:
-    # do things
+async with api.iris_enrich('domaintools.com') as search_results:
+    print(search_results.response().get('results', {}))
 ```
 
 And direct async for loops:
 
 ```python
-async for result in api.iris_enrich('domaintools.com').response().get('results', {}):
+async for result in api.iris_enrich('domaintools.com'):
     print(result)
 ```
 
@@ -249,7 +235,7 @@ API_KEY
 Python Version Support Policy
 ===================
 
-Please see the [supported versions](https://github.com/DomainTools/python_api/raw/main/PYTHON_SUPPORT.md) document
+Please see the [supported versions](https://github.com/DomainTools/python_api/blob/main/PYTHON_SUPPORT.md) document
 for the DomainTools Python support policy.
 
 
@@ -380,26 +366,26 @@ from domaintools import API
 api = API(USERNAME, KEY)
 results = api.nod(sessionID="my-session-id", after=-60)
 
-for result in results.response() # generator that holds NOD feeds data for the past 60 seconds and is expected to request only once
-    # do things to result
+for result in results.response():  # generator that holds NOD feeds data for the past 60 seconds and is expected to request only once
+    pass  # do things to result
 ```
 
-## Multiple requests because the requested data is more than the maximum result per request:
+### Multiple requests because the requested data is more than the maximum result per request:
 ```python
 from domaintools import API
 
 api = API(USERNAME, KEY)
 results = api.nod(sessionID="my-session-id", after=-7200)
 
-for partial_result in results.response() # generator that holds NOD feeds data for the past 2 hours and is expected to request multiple times
-    # do things to partial_result
+for partial_result in results.response():  # generator that holds NOD feeds data for the past 2 hours and is expected to request multiple times
+    pass  # do things to partial_result
 ```
 
 
 Running E2E Tests Locally
 ===================
 For now, e2e tests only covers proxy and ssl testing. We are expected to broaden our e2e tests to other scenarios moving forward.
-To add more e2e tests, put these in the `../tests/e2e` folder.
+To add more e2e tests, put these in the `tests/e2e` folder.
 
 ## Preparation
 - Create virtual environment.
@@ -423,12 +409,12 @@ To add more e2e tests, put these in the `../tests/e2e` folder.
 
 - Export api credentials to use.
     ```bash
-        export TEST_USER=<user-key>
+        export TEST_USER=<api-username>
         export TEST_KEY=<api-key>
     ```
 - Run unit tests.
     ```bash
-        tox -e
+        tox
     ```
 
 ## Run the end-to-end test script
